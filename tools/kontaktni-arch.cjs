@@ -28,17 +28,21 @@ figure{margin:0}.b{position:relative;overflow:hidden;border-radius:6px;backgroun
 .rub{position:absolute;top:8px;right:12px;background:#de1743;color:#fff;font-weight:700;font-size:12px;padding:2px 8px;border-radius:10px}
 figcaption{margin-top:6px;color:#4c4f8e;max-width:420px}
 .og-sq:after{content:'';position:absolute;top:0;bottom:0;left:${(285 / 1200) * 100}%;width:${(630 / 1200) * 100}%;outline:2px dashed rgba(222,23,67,.8)}
-.story:before,.story:after{content:'';position:absolute;left:0;right:0;background:rgba(222,23,67,.25);z-index:1}
-.story:before{top:0;height:${(250 / 1920) * 100}%}.story:after{bottom:0;height:${(340 / 1920) * 100}%}
-.zona:after{content:'';position:absolute;left:${(950 / 1500) * 100}%;top:0;right:0;height:${(280 / 1200) * 100}%;background:rgba(222,23,67,.25)}
+/* OG oříznutý na čtverec: vnitřní čárkovaný rámeček = vůle 35 px, ve které musí ležet všechny texty a logo */
+.og-crop img{width:${(1200 / 630) * 100}%;max-width:none;margin-left:${-(285 / 630) * 100}%;object-fit:fill}
+.og-crop:after{content:'';position:absolute;inset:${(35 / 630) * 100}%;border:2px dashed rgba(222,23,67,.8)}
+/* kontrolní zóny jen čárkovaným obrysem, nikdy výplní: barevná výplň vypadala jako součást coveru (Kateřina 27. 10. 2026) */
+.story:before,.story:after{content:'';position:absolute;left:0;right:0;z-index:1;box-sizing:border-box}
+.story:before{top:0;height:${(250 / 1920) * 100}%;border-bottom:2px dashed #de1743}.story:after{bottom:0;height:${(340 / 1920) * 100}%;border-top:2px dashed #de1743}
+.zona:after{content:'';position:absolute;left:${(950 / 1500) * 100}%;top:0;right:0;height:${(280 / 1200) * 100}%;border-left:2px dashed #de1743;border-bottom:2px dashed #de1743;box-sizing:border-box}
 </style></head><body>
 <h2>Celé formáty</h2>
-<div class="r">${box(hp, 375, 300, 'homepage 1500×1200 – červeně zóna štítku rubriky (x ≥ 950, y ≤ 280)', false, 'zona')}${box(og, 571, 300, `OG 1200×630 (${ogKb} kB) – čárkovaně střední čtverec 630`, false, 'og-sq')}${box(sq, 300, 300, 'čtverec 1080×1080')}</div>
-<div class="r" style="margin-top:22px">${box(ig, 300, 375, 'Instagram 4:5 (1080×1350)')}<figure><div class="b story" style="width:240px;height:427px"><img src="${st}"></div><figcaption>stories 9:16 – červeně zóny pod rozhraním</figcaption></figure></div>
+<div class="r">${box(hp, 375, 300, 'homepage 1500×1200 – čárkovaně zóna štítku rubriky (x ≥ 950, y ≤ 280; jen kontrola, v obrázku není)', false, 'zona')}${box(og, 571, 300, `OG 1200×630 (${ogKb} kB) – čárkovaně střední čtverec 630`, false, 'og-sq')}${box(sq, 300, 300, 'čtverec 1080×1080')}</div>
+<div class="r" style="margin-top:22px">${box(ig, 300, 375, 'Instagram 4:5 (1080×1350)')}<figure><div class="b story" style="width:240px;height:427px"><img src="${st}"></div><figcaption>stories 9:16 – čárkovaně zóny pod rozhraním Instagramu (jen kontrola, v obrázku nejsou)</figcaption></figure></div>
 <h2>Karty webu (5:4 ořez, štítek rubriky)</h2>
 <div class="r">${box(hp, 420, 336, 'velká karta 5:4', true)}${box(hp, 230, 184, 'boční karta 230 px', true)}${box(hp, 160, 128, 'mobilní seznam (45 % šířky)', true)}${box(hp, 120, 96, 'související články 120×96')}</div>
 <h2>Ořezy na sítích</h2>
-<div class="r">${box(og, 600, 315, 'OG – Facebook, X, LinkedIn')}${box(og, 315, 315, 'OG oříznutý na čtverec – WhatsApp, Bluesky, Messenger')}${box(og, 100, 100, 'WhatsApp náhled ~100 px')}${box(ig, 300, 400, 'mřížka profilu Instagramu 3:4')}</div>
+<div class="r">${box(og, 600, 315, 'OG – Facebook, X, LinkedIn')}${box(og, 420, 420, 'OG oříznutý na čtverec – WhatsApp, Signal, Messenger; čárkovaně vůle 35 px: žádné písmeno nesmí chybět ani sedět na hraně', false, 'og-crop')}${box(og, 100, 100, 'WhatsApp náhled ~100 px')}${box(ig, 300, 400, 'mřížka profilu Instagramu 3:4')}</div>
 </body></html>`;
 
 (async () => {

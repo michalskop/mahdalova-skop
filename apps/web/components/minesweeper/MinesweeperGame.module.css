@@ -1,0 +1,206 @@
+.gameCard {
+  background-color: var(--mantine-color-background-0);
+  border: 1px solid var(--mantine-color-background-4);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(16, 20, 50, 0.06);
+  padding: 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .gameCard {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+}
+
+.hudBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--mantine-color-background-2);
+  border: 1px solid var(--mantine-color-background-4);
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.digitalDisplay {
+  background-color: var(--mantine-color-brandNavy-9);
+  color: #ff4d70;
+  font-family: var(--mantine-font-family-headings), monospace;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.digitalIcon {
+  font-size: 0.95rem;
+}
+
+.faceButton {
+  background-color: var(--mantine-color-background-1);
+  border: 2px solid var(--mantine-color-background-5);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 0;
+}
+
+.faceButton:hover {
+  background-color: var(--mantine-color-background-3);
+  transform: scale(1.05);
+}
+
+.faceButton:active {
+  transform: scale(0.95);
+  background-color: var(--mantine-color-background-4);
+}
+
+.boardContainer {
+  background-color: var(--mantine-color-background-3);
+  border: 2px solid var(--mantine-color-background-5);
+  border-radius: 8px;
+  padding: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+.boardGrid {
+  display: grid;
+  gap: 3px;
+  width: 100%;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 4px;
+  font-family: var(--mantine-font-family-headings), sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  transition: background-color 0.1s ease;
+}
+
+/* Unrevealed cell styling: tactile pseudo-3D look */
+.cellUnrevealed {
+  background-color: #f1ede4;
+  border: 1px solid #d4d0c5;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.9), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.cellUnrevealed:hover {
+  background-color: #e8e3d8;
+}
+
+.cellUnrevealed:active {
+  background-color: #ded9cd;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Revealed cell styling */
+.cellRevealed {
+  background-color: #ffffff;
+  border: 1px solid #e7e4dc;
+  cursor: default;
+}
+
+.cellRevealed.cellChordable {
+  cursor: pointer;
+}
+
+.cellRevealed.cellChordable:hover {
+  background-color: #f9f8f5;
+}
+
+/* Exploded mine */
+.cellExploded {
+  background-color: #ffe0e6 !important;
+  border-color: var(--mantine-color-brand-6) !important;
+  animation: pulseExplosion 0.4s ease;
+}
+
+@keyframes pulseExplosion {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Number colors matching data journalism clarity */
+.num1 { color: #1a5fb4; }
+.num2 { color: #26a269; }
+.num3 { color: var(--mantine-color-brand-6); }
+.num4 { color: var(--mantine-color-brandRoyalBlue-6); }
+.num5 { color: #8b0e2b; }
+.num6 { color: var(--mantine-color-brandTeal-6); }
+.num7 { color: var(--mantine-color-brandNavy-9); }
+.num8 { color: #555555; }
+
+.statusBanner {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.statusBannerWin {
+  background-color: var(--mantine-color-brandTeal-0);
+  border: 1px solid var(--mantine-color-brandTeal-6);
+  color: var(--mantine-color-brandNavy-9);
+}
+
+.statusBannerLoss {
+  background-color: var(--mantine-color-brand-0);
+  border: 1px solid var(--mantine-color-brand-6);
+  color: var(--mantine-color-brandNavy-9);
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.metaInfo {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--mantine-color-background-4);
+  font-size: 0.825rem;
+  color: var(--mantine-color-brandNavy-9);
+  opacity: 0.85;
+}

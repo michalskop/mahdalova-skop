@@ -14,8 +14,6 @@ promoted: 1
 ---
 Brazílie v neděli 4. října volila prezidenta a první kolo vyhrává Flávio Bolsonaro, pětačtyřicetiletý senátor a nejstarší syn vězněného exprezidenta Jaira Bolsonara. Do voleb přitom šel jako mírný favorit úřadující prezident Lula. Ukazuje to datová predikce dvojice novinářů Mahdalová & Škop: vítězství Flávia Bolsonara v prvním kole předpovídala už od 0,8 procenta sečtených hlasů. Na vítězství už v prvním kole to ale stačit nebude: model mu po sečtení zhruba 72 procent hlasů přisuzuje 47,0 procenta platných hlasů, úřadujícímu prezidentovi Luizi Ináciu Lulovi da Silvovi 45,2 procenta. Oba se tak 25. října potkají ve druhém kole.
 
-<KeyNumbers yamlFile="key-stats.yaml" />
-
 ```infobox info
 Predikci jsme přepočítávali každou minutu od 22:21 SELČ (17:21 brazilského času) z průběžných dat brazilského Nejvyššího volebního soudu (TSE). Interval nejistoty a srovnání s průběžným součtem uvádíme ze stavu ve 23:44 SELČ, kdy bylo podle TSE sečteno 47,26 procenta okrsků. Oficiální konečný výsledek v době vydání textu ještě není k dispozici.
 ```

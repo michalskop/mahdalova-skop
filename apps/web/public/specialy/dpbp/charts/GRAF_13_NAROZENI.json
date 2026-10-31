@@ -1,0 +1,1122 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Ročníky narozené v letech 2006–2015 jsou o pětinu větší než ročníky 1996–2005",
+  "subtitle": "Živě narození v Česku podle roku, 1950–2025. V letech 1996–2005 se narodilo dohromady 929 080 dětí, v letech 2006–2015 1 120 158. Ženy z ročníků 1996–2005 budou v roce 2030 ve věku 25–34 let."
+ },
+ "_source": "[Počet obyvatel – dlouhodobé řady, roční data ČR (živě narození), ČSÚ](https://data.csu.gov.cz/opendata/sady/OBY01CR/distribuce/csv) · vlastní výpočet\nČerveně ročníky, z nichž budou v roce 2030 ženy ve věku 25–34 let; modře ročníky 2006–2015. Údaj za rok 2025 je předběžný.",
+ "height": 340,
+ "data": {
+  "values": [
+   {
+    "rok": 1950,
+    "narozeni": 188341,
+    "skupina": "ostatní",
+    "label": "188 341",
+    "hlavicka": "Rok 1950",
+    "Živě narozených": "188 341",
+    "Proti roku 1974": "97 %"
+   },
+   {
+    "rok": 1951,
+    "narozeni": 185570,
+    "skupina": "ostatní",
+    "label": "185 570",
+    "hlavicka": "Rok 1951",
+    "Živě narozených": "185 570",
+    "Proti roku 1974": "96 %"
+   },
+   {
+    "rok": 1952,
+    "narozeni": 180143,
+    "skupina": "ostatní",
+    "label": "180 143",
+    "hlavicka": "Rok 1952",
+    "Živě narozených": "180 143",
+    "Proti roku 1974": "93 %"
+   },
+   {
+    "rok": 1953,
+    "narozeni": 172547,
+    "skupina": "ostatní",
+    "label": "172 547",
+    "hlavicka": "Rok 1953",
+    "Živě narozených": "172 547",
+    "Proti roku 1974": "89 %"
+   },
+   {
+    "rok": 1954,
+    "narozeni": 168402,
+    "skupina": "ostatní",
+    "label": "168 402",
+    "hlavicka": "Rok 1954",
+    "Živě narozených": "168 402",
+    "Proti roku 1974": "87 %"
+   },
+   {
+    "rok": 1955,
+    "narozeni": 165874,
+    "skupina": "ostatní",
+    "label": "165 874",
+    "hlavicka": "Rok 1955",
+    "Živě narozených": "165 874",
+    "Proti roku 1974": "85 %"
+   },
+   {
+    "rok": 1956,
+    "narozeni": 162509,
+    "skupina": "ostatní",
+    "label": "162 509",
+    "hlavicka": "Rok 1956",
+    "Živě narozených": "162 509",
+    "Proti roku 1974": "84 %"
+   },
+   {
+    "rok": 1957,
+    "narozeni": 155429,
+    "skupina": "ostatní",
+    "label": "155 429",
+    "hlavicka": "Rok 1957",
+    "Živě narozených": "155 429",
+    "Proti roku 1974": "80 %"
+   },
+   {
+    "rok": 1958,
+    "narozeni": 141762,
+    "skupina": "ostatní",
+    "label": "141 762",
+    "hlavicka": "Rok 1958",
+    "Živě narozených": "141 762",
+    "Proti roku 1974": "73 %"
+   },
+   {
+    "rok": 1959,
+    "narozeni": 128982,
+    "skupina": "ostatní",
+    "label": "128 982",
+    "hlavicka": "Rok 1959",
+    "Živě narozených": "128 982",
+    "Proti roku 1974": "66 %"
+   },
+   {
+    "rok": 1960,
+    "narozeni": 128879,
+    "skupina": "ostatní",
+    "label": "128 879",
+    "hlavicka": "Rok 1960",
+    "Živě narozených": "128 879",
+    "Proti roku 1974": "66 %"
+   },
+   {
+    "rok": 1961,
+    "narozeni": 131019,
+    "skupina": "ostatní",
+    "label": "131 019",
+    "hlavicka": "Rok 1961",
+    "Živě narozených": "131 019",
+    "Proti roku 1974": "67 %"
+   },
+   {
+    "rok": 1962,
+    "narozeni": 133557,
+    "skupina": "ostatní",
+    "label": "133 557",
+    "hlavicka": "Rok 1962",
+    "Živě narozených": "133 557",
+    "Proti roku 1974": "69 %"
+   },
+   {
+    "rok": 1963,
+    "narozeni": 148840,
+    "skupina": "ostatní",
+    "label": "148 840",
+    "hlavicka": "Rok 1963",
+    "Živě narozených": "148 840",
+    "Proti roku 1974": "77 %"
+   },
+   {
+    "rok": 1964,
+    "narozeni": 154420,
+    "skupina": "ostatní",
+    "label": "154 420",
+    "hlavicka": "Rok 1964",
+    "Živě narozených": "154 420",
+    "Proti roku 1974": "80 %"
+   },
+   {
+    "rok": 1965,
+    "narozeni": 147438,
+    "skupina": "ostatní",
+    "label": "147 438",
+    "hlavicka": "Rok 1965",
+    "Živě narozených": "147 438",
+    "Proti roku 1974": "76 %"
+   },
+   {
+    "rok": 1966,
+    "narozeni": 141162,
+    "skupina": "ostatní",
+    "label": "141 162",
+    "hlavicka": "Rok 1966",
+    "Živě narozených": "141 162",
+    "Proti roku 1974": "73 %"
+   },
+   {
+    "rok": 1967,
+    "narozeni": 138448,
+    "skupina": "ostatní",
+    "label": "138 448",
+    "hlavicka": "Rok 1967",
+    "Živě narozených": "138 448",
+    "Proti roku 1974": "71 %"
+   },
+   {
+    "rok": 1968,
+    "narozeni": 137437,
+    "skupina": "ostatní",
+    "label": "137 437",
+    "hlavicka": "Rok 1968",
+    "Živě narozených": "137 437",
+    "Proti roku 1974": "71 %"
+   },
+   {
+    "rok": 1969,
+    "narozeni": 143165,
+    "skupina": "ostatní",
+    "label": "143 165",
+    "hlavicka": "Rok 1969",
+    "Živě narozených": "143 165",
+    "Proti roku 1974": "74 %"
+   },
+   {
+    "rok": 1970,
+    "narozeni": 147865,
+    "skupina": "ostatní",
+    "label": "147 865",
+    "hlavicka": "Rok 1970",
+    "Živě narozených": "147 865",
+    "Proti roku 1974": "76 %"
+   },
+   {
+    "rok": 1971,
+    "narozeni": 154180,
+    "skupina": "ostatní",
+    "label": "154 180",
+    "hlavicka": "Rok 1971",
+    "Živě narozených": "154 180",
+    "Proti roku 1974": "79 %"
+   },
+   {
+    "rok": 1972,
+    "narozeni": 163661,
+    "skupina": "ostatní",
+    "label": "163 661",
+    "hlavicka": "Rok 1972",
+    "Živě narozených": "163 661",
+    "Proti roku 1974": "84 %"
+   },
+   {
+    "rok": 1973,
+    "narozeni": 181750,
+    "skupina": "ostatní",
+    "label": "181 750",
+    "hlavicka": "Rok 1973",
+    "Živě narozených": "181 750",
+    "Proti roku 1974": "94 %"
+   },
+   {
+    "rok": 1974,
+    "narozeni": 194215,
+    "skupina": "ostatní",
+    "label": "194 215",
+    "hlavicka": "Rok 1974",
+    "Živě narozených": "194 215",
+    "Proti roku 1974": "100 %"
+   },
+   {
+    "rok": 1975,
+    "narozeni": 191776,
+    "skupina": "ostatní",
+    "label": "191 776",
+    "hlavicka": "Rok 1975",
+    "Živě narozených": "191 776",
+    "Proti roku 1974": "99 %"
+   },
+   {
+    "rok": 1976,
+    "narozeni": 187378,
+    "skupina": "ostatní",
+    "label": "187 378",
+    "hlavicka": "Rok 1976",
+    "Živě narozených": "187 378",
+    "Proti roku 1974": "96 %"
+   },
+   {
+    "rok": 1977,
+    "narozeni": 181763,
+    "skupina": "ostatní",
+    "label": "181 763",
+    "hlavicka": "Rok 1977",
+    "Živě narozených": "181 763",
+    "Proti roku 1974": "94 %"
+   },
+   {
+    "rok": 1978,
+    "narozeni": 178901,
+    "skupina": "ostatní",
+    "label": "178 901",
+    "hlavicka": "Rok 1978",
+    "Živě narozených": "178 901",
+    "Proti roku 1974": "92 %"
+   },
+   {
+    "rok": 1979,
+    "narozeni": 172112,
+    "skupina": "ostatní",
+    "label": "172 112",
+    "hlavicka": "Rok 1979",
+    "Živě narozených": "172 112",
+    "Proti roku 1974": "89 %"
+   },
+   {
+    "rok": 1980,
+    "narozeni": 153801,
+    "skupina": "ostatní",
+    "label": "153 801",
+    "hlavicka": "Rok 1980",
+    "Živě narozených": "153 801",
+    "Proti roku 1974": "79 %"
+   },
+   {
+    "rok": 1981,
+    "narozeni": 144438,
+    "skupina": "ostatní",
+    "label": "144 438",
+    "hlavicka": "Rok 1981",
+    "Živě narozených": "144 438",
+    "Proti roku 1974": "74 %"
+   },
+   {
+    "rok": 1982,
+    "narozeni": 141738,
+    "skupina": "ostatní",
+    "label": "141 738",
+    "hlavicka": "Rok 1982",
+    "Živě narozených": "141 738",
+    "Proti roku 1974": "73 %"
+   },
+   {
+    "rok": 1983,
+    "narozeni": 137431,
+    "skupina": "ostatní",
+    "label": "137 431",
+    "hlavicka": "Rok 1983",
+    "Živě narozených": "137 431",
+    "Proti roku 1974": "71 %"
+   },
+   {
+    "rok": 1984,
+    "narozeni": 136941,
+    "skupina": "ostatní",
+    "label": "136 941",
+    "hlavicka": "Rok 1984",
+    "Živě narozených": "136 941",
+    "Proti roku 1974": "71 %"
+   },
+   {
+    "rok": 1985,
+    "narozeni": 135881,
+    "skupina": "ostatní",
+    "label": "135 881",
+    "hlavicka": "Rok 1985",
+    "Živě narozených": "135 881",
+    "Proti roku 1974": "70 %"
+   },
+   {
+    "rok": 1986,
+    "narozeni": 133356,
+    "skupina": "ostatní",
+    "label": "133 356",
+    "hlavicka": "Rok 1986",
+    "Živě narozených": "133 356",
+    "Proti roku 1974": "69 %"
+   },
+   {
+    "rok": 1987,
+    "narozeni": 130921,
+    "skupina": "ostatní",
+    "label": "130 921",
+    "hlavicka": "Rok 1987",
+    "Živě narozených": "130 921",
+    "Proti roku 1974": "67 %"
+   },
+   {
+    "rok": 1988,
+    "narozeni": 132667,
+    "skupina": "ostatní",
+    "label": "132 667",
+    "hlavicka": "Rok 1988",
+    "Živě narozených": "132 667",
+    "Proti roku 1974": "68 %"
+   },
+   {
+    "rok": 1989,
+    "narozeni": 128356,
+    "skupina": "ostatní",
+    "label": "128 356",
+    "hlavicka": "Rok 1989",
+    "Živě narozených": "128 356",
+    "Proti roku 1974": "66 %"
+   },
+   {
+    "rok": 1990,
+    "narozeni": 130564,
+    "skupina": "ostatní",
+    "label": "130 564",
+    "hlavicka": "Rok 1990",
+    "Živě narozených": "130 564",
+    "Proti roku 1974": "67 %"
+   },
+   {
+    "rok": 1991,
+    "narozeni": 129354,
+    "skupina": "ostatní",
+    "label": "129 354",
+    "hlavicka": "Rok 1991",
+    "Živě narozených": "129 354",
+    "Proti roku 1974": "67 %"
+   },
+   {
+    "rok": 1992,
+    "narozeni": 121705,
+    "skupina": "ostatní",
+    "label": "121 705",
+    "hlavicka": "Rok 1992",
+    "Živě narozených": "121 705",
+    "Proti roku 1974": "63 %"
+   },
+   {
+    "rok": 1993,
+    "narozeni": 121025,
+    "skupina": "ostatní",
+    "label": "121 025",
+    "hlavicka": "Rok 1993",
+    "Živě narozených": "121 025",
+    "Proti roku 1974": "62 %"
+   },
+   {
+    "rok": 1994,
+    "narozeni": 106579,
+    "skupina": "ostatní",
+    "label": "106 579",
+    "hlavicka": "Rok 1994",
+    "Živě narozených": "106 579",
+    "Proti roku 1974": "55 %"
+   },
+   {
+    "rok": 1995,
+    "narozeni": 96097,
+    "skupina": "ostatní",
+    "label": "96 097",
+    "hlavicka": "Rok 1995",
+    "Živě narozených": "96 097",
+    "Proti roku 1974": "49 %"
+   },
+   {
+    "rok": 1996,
+    "narozeni": 90446,
+    "skupina": "1996–2005",
+    "label": "90 446",
+    "hlavicka": "Rok 1996",
+    "Živě narozených": "90 446",
+    "Proti roku 1974": "47 %"
+   },
+   {
+    "rok": 1997,
+    "narozeni": 90657,
+    "skupina": "1996–2005",
+    "label": "90 657",
+    "hlavicka": "Rok 1997",
+    "Živě narozených": "90 657",
+    "Proti roku 1974": "47 %"
+   },
+   {
+    "rok": 1998,
+    "narozeni": 90535,
+    "skupina": "1996–2005",
+    "label": "90 535",
+    "hlavicka": "Rok 1998",
+    "Živě narozených": "90 535",
+    "Proti roku 1974": "47 %"
+   },
+   {
+    "rok": 1999,
+    "narozeni": 89471,
+    "skupina": "1996–2005",
+    "label": "89 471",
+    "hlavicka": "Rok 1999",
+    "Živě narozených": "89 471",
+    "Proti roku 1974": "46 %"
+   },
+   {
+    "rok": 2000,
+    "narozeni": 90910,
+    "skupina": "1996–2005",
+    "label": "90 910",
+    "hlavicka": "Rok 2000",
+    "Živě narozených": "90 910",
+    "Proti roku 1974": "47 %"
+   },
+   {
+    "rok": 2001,
+    "narozeni": 90715,
+    "skupina": "1996–2005",
+    "label": "90 715",
+    "hlavicka": "Rok 2001",
+    "Živě narozených": "90 715",
+    "Proti roku 1974": "47 %"
+   },
+   {
+    "rok": 2002,
+    "narozeni": 92786,
+    "skupina": "1996–2005",
+    "label": "92 786",
+    "hlavicka": "Rok 2002",
+    "Živě narozených": "92 786",
+    "Proti roku 1974": "48 %"
+   },
+   {
+    "rok": 2003,
+    "narozeni": 93685,
+    "skupina": "1996–2005",
+    "label": "93 685",
+    "hlavicka": "Rok 2003",
+    "Živě narozených": "93 685",
+    "Proti roku 1974": "48 %"
+   },
+   {
+    "rok": 2004,
+    "narozeni": 97664,
+    "skupina": "1996–2005",
+    "label": "97 664",
+    "hlavicka": "Rok 2004",
+    "Živě narozených": "97 664",
+    "Proti roku 1974": "50 %"
+   },
+   {
+    "rok": 2005,
+    "narozeni": 102211,
+    "skupina": "1996–2005",
+    "label": "102 211",
+    "hlavicka": "Rok 2005",
+    "Živě narozených": "102 211",
+    "Proti roku 1974": "53 %"
+   },
+   {
+    "rok": 2006,
+    "narozeni": 105831,
+    "skupina": "2006–2015",
+    "label": "105 831",
+    "hlavicka": "Rok 2006",
+    "Živě narozených": "105 831",
+    "Proti roku 1974": "54 %"
+   },
+   {
+    "rok": 2007,
+    "narozeni": 114632,
+    "skupina": "2006–2015",
+    "label": "114 632",
+    "hlavicka": "Rok 2007",
+    "Živě narozených": "114 632",
+    "Proti roku 1974": "59 %"
+   },
+   {
+    "rok": 2008,
+    "narozeni": 119570,
+    "skupina": "2006–2015",
+    "label": "119 570",
+    "hlavicka": "Rok 2008",
+    "Živě narozených": "119 570",
+    "Proti roku 1974": "62 %"
+   },
+   {
+    "rok": 2009,
+    "narozeni": 118348,
+    "skupina": "2006–2015",
+    "label": "118 348",
+    "hlavicka": "Rok 2009",
+    "Živě narozených": "118 348",
+    "Proti roku 1974": "61 %"
+   },
+   {
+    "rok": 2010,
+    "narozeni": 117153,
+    "skupina": "2006–2015",
+    "label": "117 153",
+    "hlavicka": "Rok 2010",
+    "Živě narozených": "117 153",
+    "Proti roku 1974": "60 %"
+   },
+   {
+    "rok": 2011,
+    "narozeni": 108673,
+    "skupina": "2006–2015",
+    "label": "108 673",
+    "hlavicka": "Rok 2011",
+    "Živě narozených": "108 673",
+    "Proti roku 1974": "56 %"
+   },
+   {
+    "rok": 2012,
+    "narozeni": 108576,
+    "skupina": "2006–2015",
+    "label": "108 576",
+    "hlavicka": "Rok 2012",
+    "Živě narozených": "108 576",
+    "Proti roku 1974": "56 %"
+   },
+   {
+    "rok": 2013,
+    "narozeni": 106751,
+    "skupina": "2006–2015",
+    "label": "106 751",
+    "hlavicka": "Rok 2013",
+    "Živě narozených": "106 751",
+    "Proti roku 1974": "55 %"
+   },
+   {
+    "rok": 2014,
+    "narozeni": 109860,
+    "skupina": "2006–2015",
+    "label": "109 860",
+    "hlavicka": "Rok 2014",
+    "Živě narozených": "109 860",
+    "Proti roku 1974": "57 %"
+   },
+   {
+    "rok": 2015,
+    "narozeni": 110764,
+    "skupina": "2006–2015",
+    "label": "110 764",
+    "hlavicka": "Rok 2015",
+    "Živě narozených": "110 764",
+    "Proti roku 1974": "57 %"
+   },
+   {
+    "rok": 2016,
+    "narozeni": 112663,
+    "skupina": "ostatní",
+    "label": "112 663",
+    "hlavicka": "Rok 2016",
+    "Živě narozených": "112 663",
+    "Proti roku 1974": "58 %"
+   },
+   {
+    "rok": 2017,
+    "narozeni": 114405,
+    "skupina": "ostatní",
+    "label": "114 405",
+    "hlavicka": "Rok 2017",
+    "Živě narozených": "114 405",
+    "Proti roku 1974": "59 %"
+   },
+   {
+    "rok": 2018,
+    "narozeni": 114036,
+    "skupina": "ostatní",
+    "label": "114 036",
+    "hlavicka": "Rok 2018",
+    "Živě narozených": "114 036",
+    "Proti roku 1974": "59 %"
+   },
+   {
+    "rok": 2019,
+    "narozeni": 112231,
+    "skupina": "ostatní",
+    "label": "112 231",
+    "hlavicka": "Rok 2019",
+    "Živě narozených": "112 231",
+    "Proti roku 1974": "58 %"
+   },
+   {
+    "rok": 2020,
+    "narozeni": 110200,
+    "skupina": "ostatní",
+    "label": "110 200",
+    "hlavicka": "Rok 2020",
+    "Živě narozených": "110 200",
+    "Proti roku 1974": "57 %"
+   },
+   {
+    "rok": 2021,
+    "narozeni": 111793,
+    "skupina": "ostatní",
+    "label": "111 793",
+    "hlavicka": "Rok 2021",
+    "Živě narozených": "111 793",
+    "Proti roku 1974": "58 %"
+   },
+   {
+    "rok": 2022,
+    "narozeni": 101299,
+    "skupina": "ostatní",
+    "label": "101 299",
+    "hlavicka": "Rok 2022",
+    "Živě narozených": "101 299",
+    "Proti roku 1974": "52 %"
+   },
+   {
+    "rok": 2023,
+    "narozeni": 91149,
+    "skupina": "ostatní",
+    "label": "91 149",
+    "hlavicka": "Rok 2023",
+    "Živě narozených": "91 149",
+    "Proti roku 1974": "47 %"
+   },
+   {
+    "rok": 2024,
+    "narozeni": 84311,
+    "skupina": "ostatní",
+    "label": "84 311",
+    "hlavicka": "Rok 2024",
+    "Živě narozených": "84 311",
+    "Proti roku 1974": "43 %"
+   },
+   {
+    "rok": 2025,
+    "narozeni": 77636,
+    "skupina": "ostatní",
+    "label": "77 636",
+    "hlavicka": "Rok 2025",
+    "Živě narozených": "77 636",
+    "Proti roku 1974": "40 %"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 1,
+    "width": {
+     "band": 0.86
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "sort": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ],
+     "title": null,
+     "axis": {
+      "values": [
+       1950,
+       1960,
+       1970,
+       1980,
+       1990,
+       2000,
+       2010,
+       2020
+      ],
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0,
+      "labelPadding": 6,
+      "labelFontSize": 12
+     }
+    },
+    "y": {
+     "field": "narozeni",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       210000
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       50000,
+       100000,
+       150000,
+       200000
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, ','), ',', ' ')"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "1996–2005",
+       "2006–2015",
+       "ostatní"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c",
+       "#bcbcb0"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1974,
+      "narozeni": 194215,
+      "t": "194 215"
+     },
+     {
+      "rok": 1999,
+      "narozeni": 89471,
+      "t": "89 471"
+     },
+     {
+      "rok": 2008,
+      "narozeni": 119570,
+      "t": "119 570"
+     },
+     {
+      "rok": 2025,
+      "narozeni": 77636,
+      "t": "77 636"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "baseline": "bottom",
+    "dy": -4,
+    "fontSize": 12.5,
+    "fontWeight": "bold",
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "sort": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ]
+    },
+    "y": {
+     "field": "narozeni",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       210000
+      ]
+     }
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "sort": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ],
+     "title": null,
+     "axis": {
+      "values": [
+       1950,
+       1960,
+       1970,
+       1980,
+       1990,
+       2000,
+       2010,
+       2020
+      ],
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0,
+      "labelPadding": 6,
+      "labelFontSize": 12
+     }
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 210000
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "Živě narozených",
+      "title": "Živě narozených"
+     },
+     {
+      "field": "Proti roku 1974",
+      "title": "Proti roku 1974"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

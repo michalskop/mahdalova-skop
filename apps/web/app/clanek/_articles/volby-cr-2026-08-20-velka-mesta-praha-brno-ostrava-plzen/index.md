@@ -4,8 +4,11 @@ date: "2026-08-20"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "Ve čtyřech největších městech kandiduje 66 listin a přes tři tisíce lidí. Bohuslav Svoboda ani Markéta Vaňková na kandidátkách nejsou, Jan Dohnal v Ostravě a Roman Zarzycký v Plzni své strany vedou. Kdo kandiduje, jak dopadly volby 2022 a o čem se ve městech vede kampaň."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["kontext"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "Praha", "Brno", "Ostrava", "Plzeň", "města"]
 promoted: 1

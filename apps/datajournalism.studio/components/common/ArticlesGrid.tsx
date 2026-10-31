@@ -9,5 +9,5 @@ interface ArticlesGridProps {
 }
 
 export function ArticlesGrid({ articles }: ArticlesGridProps) {
-  return <_ArticlesGrid articles={articles} articleBasePath="/a" locale="en-US" />;
+  return <_ArticlesGrid articles={articles} articleBasePath="/a" locale="en-GB" />;
 }

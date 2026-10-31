@@ -19,6 +19,7 @@
 //   coverPro  { homepage: { logo: 'vlevo', … } } – úprava coveru jen pro jeden formát (homepage karta webu má logo
 //             dole a volný pravý horní roh kvůli štítku rubriky)
 //   gif       { format: 'square', sirka: 800, fps: 15, cil? } nebo pole takových; cil = vlastní cesta GIFu
+//             delka = délka GIFu v s (výchozí ≤ 8 s; delší jen výjimečně, např. pomalá smyčka na homepage)
 //             (např. images/ článku pro homepage kartu), jinak <vystup>/<nazev>.gif
 //   nahledy   [časy v s] pro --nahledy
 const fs = require('fs');
@@ -107,7 +108,7 @@ const kb = (p) => `${Math.round(fs.statSync(p).size / 1024)} kB`;
     const zdroj = path.join(cfg.vystup, `${cfg.nazev}-${g.format}.mp4`);
     const out = g.cil ?? path.join(cfg.vystup, `${cfg.nazev}.gif`);
     // ploché barvy palety se do 256 barev vejdou; dither jen jemný kvůli záři v pozadí
-    await ffmpeg(['-i', zdroj, '-t', String(Math.min(cfg.trvani, 8)), '-vf',
+    await ffmpeg(['-i', zdroj, '-t', String(g.delka ?? Math.min(cfg.trvani, 8)), '-vf',
       `fps=${g.fps},scale=${g.sirka}:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=full[p];[b][p]paletteuse=dither=bayer:bayer_scale=4`, '-loop', '0', out]);
     const mb = fs.statSync(out).size / 1024 / 1024;
     console.log(path.relative(REPO, out), `šířka ${g.sirka}`, kb(out), mb > 5 ? '– POZOR: nad 5 MB, zkrátit nebo zmenšit' : '');

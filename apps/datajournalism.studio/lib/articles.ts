@@ -118,6 +118,34 @@ export async function getArticleBySlug(directorySlug: string) {
     timelineData[yamlFile] = yaml.load(timelineFile) as TimelineContent;
   }
 
+  // Find and load data for KeyNumbers components (supports multiple instances)
+  const keyNumbersData: Record<string, any> = {};
+  const keyNumbersRegex = /<KeyNumbers[^>]*yamlFile="([^"]+)"[^>]*\/?>/g;
+  let keyNumbersMatch: RegExpExecArray | null;
+  while ((keyNumbersMatch = keyNumbersRegex.exec(content)) !== null) {
+    const yamlFile = keyNumbersMatch[1];
+    if (!yamlFile || keyNumbersData[yamlFile]) continue;
+    const yamlPath = path.join(articleDir, yamlFile);
+    if (!fs.existsSync(yamlPath)) {
+      throw new Error(`KeyNumbers yaml file not found: ${directorySlug}/${yamlFile}`);
+    }
+    keyNumbersData[yamlFile] = yaml.load(fs.readFileSync(yamlPath, 'utf8'));
+  }
+
+  // Find and load Vega-Lite spec JSON files for VegaChart components (path relative to the article folder)
+  const vegaChartData: Record<string, any> = {};
+  const vegaChartRegex = /<VegaChart[^>]*dataFile="([^"]+)"[^>]*\/?>/g;
+  let vegaChartMatch: RegExpExecArray | null;
+  while ((vegaChartMatch = vegaChartRegex.exec(content)) !== null) {
+    const dataFile = vegaChartMatch[1];
+    if (!dataFile || vegaChartData[dataFile]) continue;
+    const filePath = path.join(articleDir, dataFile);
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`VegaChart dataFile not found: ${directorySlug}/${dataFile}`);
+    }
+    vegaChartData[dataFile] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  }
+
   // Find and load data for StyledTable (CSV-backed tables; supports multiple instances)
   const styledTableData: Record<string, { headers: string[]; rows: Record<string, string>[] }> = {};
   const styledTableRegex = /<StyledTable[^>]*csvFile="([^"]+)"[^>]*\/?>/g;
@@ -176,8 +204,16 @@ export async function getArticleBySlug(directorySlug: string) {
   }
 
   // Pre-fetch article pool for RelatedArticles MDX component
-  const relatedArticlesPool = await getArticles(9999, undefined, true);
-  const filteredPool = relatedArticlesPool.filter(a => a.slug !== directorySlug);
+  // Only English site sections (work/blog); legacy Czech folders are left out.
+  // Ordered by relatedness: most shared tags first, otherwise the original order (stable sort).
+  const relatedArticlesPool = await getArticles(9999, ['work', 'blog'], true);
+  const ownTags = new Set<string>((data.tags || []).map((t: string) => String(t).toLowerCase()));
+  const shared = (a: { tags?: string[] }) => (a.tags || []).filter((t) => ownTags.has(String(t).toLowerCase())).length;
+  const filteredPool = relatedArticlesPool
+    .filter(a => a.slug !== directorySlug)
+    .map((a, i) => ({ a, i, s: shared(a) }))
+    .sort((x, y) => y.s - x.s || x.i - y.i)
+    .map(x => x.a);
 
   const mdxSource = await serialize(content, {
     scope: {
@@ -185,6 +221,8 @@ export async function getArticleBySlug(directorySlug: string) {
       timelineData: timelineData,
       styledTableData: styledTableData,
       htmlEmbedData: htmlEmbedData,
+      keyNumbersData: keyNumbersData,
+      vegaChartData: vegaChartData,
       relatedArticlesPool: filteredPool,
     },
     mdxOptions: {
@@ -204,6 +242,8 @@ export async function getArticleBySlug(directorySlug: string) {
     title: data.title || 'Untitled',
     date: data.date || '',
     author: data.author || 'Anonymous',
+    translator: typeof data.translator === 'string' ? data.translator : undefined,
+    original: typeof data.original === 'string' ? data.original : undefined,
     excerpt: data.excerpt || '',
     coverImage: data.coverImage || null,
   };

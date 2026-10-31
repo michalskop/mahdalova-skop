@@ -1,0 +1,5653 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "y": 61
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "color": "#101432",
+        "opacity": 0.6
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              66
+            ]
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "y": 61,
+            "x": 1,
+            "t": "majority 61"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 12,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:24",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:24",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:24",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:43",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:43",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:43",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:05",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:05",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:05",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:07",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:07",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:07",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:09",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:09",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:09",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:35",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:35",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:35",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:48",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:49",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:02",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:04",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:14",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:14",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:14",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:25",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:25",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:25",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 01:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 01:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 01:39",
+            "blok": "Arab parties",
+            "mandaty": 15,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:25",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:25",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:25",
+            "blok": "Arab parties",
+            "mandaty": 15,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:28",
+            "blok": "Arab parties",
+            "mandaty": 15,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:29",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:30",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 18.85,
+            "cas": "28 Oct 02:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 18.85,
+            "cas": "28 Oct 02:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 18.85,
+            "cas": "28 Oct 02:46",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:04",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:29",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:31",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:31",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:31",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 03:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 03:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 03:49",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:05",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:05",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:05",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:06",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:06",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:06",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:14",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:14",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:14",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:45",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:45",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:45",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:46",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:48",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 04:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 04:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 04:58",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:06",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:06",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:06",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:13",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:13",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:13",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:23",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:23",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:23",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:26",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:26",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:26",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:29",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:30",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:34",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:34",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:34",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:39",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:40",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:40",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:40",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:41",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:41",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:41",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:28",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:43",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:43",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:43",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:44",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:44",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:44",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:45",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:45",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:45",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:51",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:51",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:51",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:53",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:53",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:53",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:58",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 06:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 06:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 06:59",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:18",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:18",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:18",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 08:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 08:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 08:17",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 09:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 09:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 09:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 72.061,
+            "cas": "28 Oct 09:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 72.061,
+            "cas": "28 Oct 09:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 72.061,
+            "cas": "28 Oct 09:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 09:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 09:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 09:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:12",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:12",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:12",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:14",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:14",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:14",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:15",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:15",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:15",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:30",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:31",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:31",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:31",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:32",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:32",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:32",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:55",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:55",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:55",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:34",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:34",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:34",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:40",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:40",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:40",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:46",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:55",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:55",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:55",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:32",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:32",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:32",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:33",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:33",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:33",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 13:34",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 13:34",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 13:34",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:41",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:41",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:41",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:42",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:42",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:42",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:45",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:45",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:45",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:04",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:39",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 17:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 17:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 17:28",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 18:12",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 18:12",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 18:12",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:23",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:23",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:23",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 21:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 21:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 21:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:35",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:35",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:35",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:49",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:50",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:50",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:50",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:35",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:35",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:35",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:36",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:36",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:36",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:38",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:38",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:38",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:39",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.409,
+            "cas": "28 Oct 22:40",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.409,
+            "cas": "28 Oct 22:40",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.409,
+            "cas": "28 Oct 22:40",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "28 Oct 23:56",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "28 Oct 23:56",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "28 Oct 23:56",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "29 Oct 00:27",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "29 Oct 00:27",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "29 Oct 00:27",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.797,
+            "cas": "29 Oct 00:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.797,
+            "cas": "29 Oct 00:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.797,
+            "cas": "29 Oct 00:28",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:01",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:01",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:01",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:16",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:16",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:16",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:17",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:19",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:50",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:50",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:50",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 03:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 03:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 03:04",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:29",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:32",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:32",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:32",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:00",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:00",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:00",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:01",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:01",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:01",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.472,
+            "cas": "29 Oct 05:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.472,
+            "cas": "29 Oct 05:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.472,
+            "cas": "29 Oct 05:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 05:57",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 05:57",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 05:57",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:46",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:48",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:49",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:50",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:50",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:50",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:55",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:55",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:55",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:57",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:57",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:57",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "interpolate": "step-after",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "secteno",
+          "type": "quantitative",
+          "title": "votes counted (%)",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "grid": false,
+            "domain": false,
+            "tickSize": 4,
+            "labelFontSize": 12,
+            "titleFontSize": 12,
+            "titleFontWeight": 400
+          }
+        },
+        "y": {
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [
+              0,
+              66
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              20,
+              40,
+              61
+            ],
+            "grid": true,
+            "gridColor": "#e6e4dc",
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12
+          },
+          "field": "mandaty"
+        },
+        "detail": {
+          "field": "blok"
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:24",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:24",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:24",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:43",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:43",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.048,
+            "cas": "27 Oct 23:43",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:05",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:05",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:05",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:07",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:07",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:07",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:09",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:09",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.27,
+            "cas": "28 Oct 00:09",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:35",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:35",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:35",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:48",
+            "blok": "Arab parties",
+            "mandaty": 13,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 00:49",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:02",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 58,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 0.572,
+            "cas": "28 Oct 01:04",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:14",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:14",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:14",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:25",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:25",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 1.921,
+            "cas": "28 Oct 01:25",
+            "blok": "Arab parties",
+            "mandaty": 14,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 01:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 01:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 01:39",
+            "blok": "Arab parties",
+            "mandaty": 15,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:25",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:25",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:25",
+            "blok": "Arab parties",
+            "mandaty": 15,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 57,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 6.502,
+            "cas": "28 Oct 02:28",
+            "blok": "Arab parties",
+            "mandaty": 15,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:29",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 12.607,
+            "cas": "28 Oct 02:30",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 18.85,
+            "cas": "28 Oct 02:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 18.85,
+            "cas": "28 Oct 02:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 18.85,
+            "cas": "28 Oct 02:46",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:04",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:29",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 55,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:30",
+            "blok": "Arab parties",
+            "mandaty": 16,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:31",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:31",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 23.885,
+            "cas": "28 Oct 03:31",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 03:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 03:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 03:49",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:05",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:05",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:05",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:06",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:06",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 31.337,
+            "cas": "28 Oct 04:06",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:14",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:14",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:14",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:45",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:45",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:45",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:46",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 34.473,
+            "cas": "28 Oct 04:48",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 04:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 04:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 04:58",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:06",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:06",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:06",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:13",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:13",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:13",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:23",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:23",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:23",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:26",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:26",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:26",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:29",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:30",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:34",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:34",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:34",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:39",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:40",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:40",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:40",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:41",
+            "blok": "Netanyahu bloc",
+            "mandaty": 54,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:41",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 41.018,
+            "cas": "28 Oct 05:41",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:28",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:43",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:43",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 53.108,
+            "cas": "28 Oct 06:43",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:44",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:44",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:44",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:45",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:45",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:45",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:51",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:51",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:51",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:53",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:53",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:53",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 54.855,
+            "cas": "28 Oct 06:58",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 06:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 06:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 06:59",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:17",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:18",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:18",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:18",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 49,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 56.749,
+            "cas": "28 Oct 07:19",
+            "blok": "Arab parties",
+            "mandaty": 18,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 08:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 08:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 08:17",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 09:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 09:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 65.836,
+            "cas": "28 Oct 09:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 72.061,
+            "cas": "28 Oct 09:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 72.061,
+            "cas": "28 Oct 09:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 72.061,
+            "cas": "28 Oct 09:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 09:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 09:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 09:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:12",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:12",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:12",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:14",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:14",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:14",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:15",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:15",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:15",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:30",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:30",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:30",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:31",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:31",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:31",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:32",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:32",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:32",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:55",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:55",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 76.59,
+            "cas": "28 Oct 10:55",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:34",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:34",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:34",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:40",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:40",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:40",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 11:46",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:55",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:55",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 12:55",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:32",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:32",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:32",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:33",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:33",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 84.39,
+            "cas": "28 Oct 13:33",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 13:34",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 13:34",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 13:34",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:41",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:41",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:41",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:42",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:42",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:42",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:45",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:45",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 14:45",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:04",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 16:39",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 17:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 17:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 17:28",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 18:12",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 18:12",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 92.755,
+            "cas": "28 Oct 18:12",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:19",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:23",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:23",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 20:23",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 21:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 21:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 95.951,
+            "cas": "28 Oct 21:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:35",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:35",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:35",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:48",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:49",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:50",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:50",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 21:50",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:35",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:35",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:35",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:36",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:36",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:36",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:38",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:38",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:38",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:39",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:39",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.192,
+            "cas": "28 Oct 22:39",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.409,
+            "cas": "28 Oct 22:40",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.409,
+            "cas": "28 Oct 22:40",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.409,
+            "cas": "28 Oct 22:40",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "28 Oct 23:56",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "28 Oct 23:56",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "28 Oct 23:56",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "29 Oct 00:27",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "29 Oct 00:27",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.573,
+            "cas": "29 Oct 00:27",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.797,
+            "cas": "29 Oct 00:28",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.797,
+            "cas": "29 Oct 00:28",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.797,
+            "cas": "29 Oct 00:28",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:01",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:01",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:01",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:16",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:16",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:16",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:17",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:17",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:17",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:19",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:19",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:19",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:50",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:50",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 01:50",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 03:04",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 03:04",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 03:04",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:29",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:29",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:29",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:32",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:32",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:32",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 04:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:00",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:00",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:00",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:01",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:01",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 97.972,
+            "cas": "29 Oct 05:01",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.472,
+            "cas": "29 Oct 05:02",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.472,
+            "cas": "29 Oct 05:02",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.472,
+            "cas": "29 Oct 05:02",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 05:57",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 05:57",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 05:57",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:46",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:46",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:46",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:48",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:48",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:48",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:49",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:49",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:49",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:50",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:50",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.633,
+            "cas": "29 Oct 06:50",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:53",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:54",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:55",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:55",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:55",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:56",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:57",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:57",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:57",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:58",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:59",
+            "blok": "Netanyahu bloc",
+            "mandaty": 53,
+            "barva": "#5e66d5"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:59",
+            "blok": "Eisenkot opposition",
+            "mandaty": 48,
+            "barva": "#0e839e"
+          },
+          {
+            "secteno": 98.703,
+            "cas": "29 Oct 06:59",
+            "blok": "Arab parties",
+            "mandaty": 19,
+            "barva": "#507e08"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "opacity": 0,
+        "size": 80
+      },
+      "encoding": {
+        "x": {
+          "field": "secteno",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "mandaty",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "cas",
+            "title": "Time (CET)"
+          },
+          {
+            "field": "secteno",
+            "title": "Counted %",
+            "format": ".1f"
+          },
+          {
+            "field": "blok",
+            "title": "Bloc"
+          },
+          {
+            "field": "mandaty",
+            "title": "Seats"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "secteno": 98.703,
+            "mandaty": 53,
+            "barva": "#5e66d5",
+            "t": "Netanyahu bloc 53",
+            "pod": false
+          },
+          {
+            "secteno": 98.703,
+            "mandaty": 19,
+            "barva": "#507e08",
+            "t": "Arab parties 19",
+            "pod": false
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dy": -5,
+        "fontSize": 12.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "secteno",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "mandaty",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "secteno": 98.703,
+            "mandaty": 48,
+            "barva": "#0e839e",
+            "t": "Eisenkot opposition 48",
+            "pod": true
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dy": 6,
+        "fontSize": 12.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "secteno",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "mandaty",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "The prediction never gave any bloc a majority, but it initially underestimated the {Arab parties|#507e08}",
+    "subtitle": "Estimated final number of seats according to the DataTimes.cz prediction during the count; a majority in the 120-member Knesset is 61 seats"
+  },
+  "_source": "DataTimes.cz prediction (Mahdalová & Škop) based on interim results from the [Central Elections Committee](https://votes26.bechirot.gov.il/), 128 recalculations, 27–29 Oct 2026",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

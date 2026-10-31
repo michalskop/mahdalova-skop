@@ -1,0 +1,723 @@
+{
+ "stav": "29. 10. 07:18",
+ "secteno_pct_zapsanych": 99.6,
+ "mista_sectena": 8338,
+ "mista_celkem": 8392,
+ "zapsani": 6451292,
+ "platne_hlasy_sectene": 4373915,
+ "ucast_prubezne": 68.95,
+ "ucast_predikce": 68.94,
+ "hranice_platnych_pct": 3.04,
+ "listiny": [
+  {
+   "id": "list_03",
+   "nazev": "3. Student list",
+   "mensinova": false,
+   "hlasy": 2349689,
+   "prubezne": 53.72,
+   "predikce": 53.68,
+   "lo": 53.65,
+   "hi": 53.72,
+   "mandaty": 141
+  },
+  {
+   "id": "list_01",
+   "nazev": "1. SNS — United Serbia",
+   "mensinova": false,
+   "hlasy": 1726375,
+   "prubezne": 39.47,
+   "predikce": 39.49,
+   "lo": 39.46,
+   "hi": 39.53,
+   "mandaty": 103
+  },
+  {
+   "id": "list_02",
+   "nazev": "2. SPS–JS",
+   "mensinova": false,
+   "hlasy": 94569,
+   "prubezne": 2.16,
+   "predikce": 2.16,
+   "lo": 2.16,
+   "hi": 2.16,
+   "mandaty": 0
+  },
+  {
+   "id": "list_08",
+   "nazev": "8. NADA / Authentic Right",
+   "mensinova": false,
+   "hlasy": 39484,
+   "prubezne": 0.9,
+   "predikce": 0.9,
+   "lo": 0.9,
+   "hi": 0.9,
+   "mandaty": 0
+  },
+  {
+   "id": "list_05",
+   "nazev": "5. VMSZ / SVM",
+   "mensinova": true,
+   "hlasy": 35004,
+   "prubezne": 0.8,
+   "predikce": 0.81,
+   "lo": 0.81,
+   "hi": 0.82,
+   "mandaty": 2
+  },
+  {
+   "id": "list_17",
+   "nazev": "17. Albanian Coalition",
+   "mensinova": true,
+   "hlasy": 27681,
+   "prubezne": 0.63,
+   "predikce": 0.63,
+   "lo": 0.63,
+   "hi": 0.63,
+   "mandaty": 2
+  },
+  {
+   "id": "list_04",
+   "nazev": "4. Ljajić — Ljudski",
+   "mensinova": true,
+   "hlasy": 20415,
+   "prubezne": 0.47,
+   "predikce": 0.47,
+   "lo": 0.47,
+   "hi": 0.48,
+   "mandaty": 1
+  },
+  {
+   "id": "list_11",
+   "nazev": "11. Karić — BK",
+   "mensinova": false,
+   "hlasy": 20029,
+   "prubezne": 0.46,
+   "predikce": 0.46,
+   "lo": 0.46,
+   "hi": 0.46,
+   "mandaty": 0
+  },
+  {
+   "id": "list_09",
+   "nazev": "9. European Serbia",
+   "mensinova": false,
+   "hlasy": 12562,
+   "prubezne": 0.29,
+   "predikce": 0.29,
+   "lo": 0.29,
+   "hi": 0.29,
+   "mandaty": 0
+  },
+  {
+   "id": "list_10",
+   "nazev": "10. SDA Sandžaka",
+   "mensinova": true,
+   "hlasy": 12381,
+   "prubezne": 0.28,
+   "predikce": 0.28,
+   "lo": 0.28,
+   "hi": 0.29,
+   "mandaty": 1
+  },
+  {
+   "id": "list_06",
+   "nazev": "6. Zukorlić — SPP",
+   "mensinova": true,
+   "hlasy": 12132,
+   "prubezne": 0.28,
+   "predikce": 0.28,
+   "lo": 0.28,
+   "hi": 0.28,
+   "mandaty": 0
+  },
+  {
+   "id": "list_07",
+   "nazev": "7. Russian Party",
+   "mensinova": true,
+   "hlasy": 6492,
+   "prubezne": 0.15,
+   "predikce": 0.15,
+   "lo": 0.15,
+   "hi": 0.15,
+   "mandaty": 0
+  },
+  {
+   "id": "list_14",
+   "nazev": "14. Russian–Serbian Unity",
+   "mensinova": true,
+   "hlasy": 4284,
+   "prubezne": 0.1,
+   "predikce": 0.1,
+   "lo": 0.1,
+   "hi": 0.1,
+   "mandaty": 0
+  },
+  {
+   "id": "list_16",
+   "nazev": "16. Alternative for Serbia",
+   "mensinova": false,
+   "hlasy": 3704,
+   "prubezne": 0.08,
+   "predikce": 0.08,
+   "lo": 0.08,
+   "hi": 0.09,
+   "mandaty": 0
+  },
+  {
+   "id": "list_18",
+   "nazev": "18. Majka Srbija — Gruda",
+   "mensinova": true,
+   "hlasy": 3227,
+   "prubezne": 0.07,
+   "predikce": 0.07,
+   "lo": 0.07,
+   "hi": 0.07,
+   "mandaty": 0
+  },
+  {
+   "id": "list_12",
+   "nazev": "12. Liberal Green",
+   "mensinova": false,
+   "hlasy": 2683,
+   "prubezne": 0.06,
+   "predikce": 0.06,
+   "lo": 0.06,
+   "hi": 0.06,
+   "mandaty": 0
+  },
+  {
+   "id": "list_15",
+   "nazev": "15. Ćale, ovo je za tebe",
+   "mensinova": false,
+   "hlasy": 2018,
+   "prubezne": 0.05,
+   "predikce": 0.05,
+   "lo": 0.05,
+   "hi": 0.05,
+   "mandaty": 0
+  },
+  {
+   "id": "list_13",
+   "nazev": "13. Coalition Snaga",
+   "mensinova": true,
+   "hlasy": 1186,
+   "prubezne": 0.03,
+   "predikce": 0.03,
+   "lo": 0.03,
+   "hi": 0.03,
+   "mandaty": 0
+  }
+ ],
+ "mandaty_celkem": 250,
+ "mandaty_mensiny": 6,
+ "rozdil_hlasu_stu_sns": 623314,
+ "rozdil_pb": 14.25,
+ "prvni_odhad": {
+  "cas": "21:13",
+  "secteno": 0.009,
+  "sns": 60.5,
+  "stu": 24.9,
+  "sns_prubezne": 61.7,
+  "stu_prubezne": 23.3,
+  "stu_lo": 5.2,
+  "stu_hi": 44.3
+ },
+ "predikce_stu_vede_od": {
+  "cas": "21:44",
+  "secteno": 0.87,
+  "stu": 47.7,
+  "sns": 44.92,
+  "stu_prubezne": 38.7,
+  "sns_prubezne": 53.48,
+  "stu_lo": 39.98,
+  "stu_hi": 55.37,
+  "sns_lo": 33.9,
+  "sns_hi": 55.67,
+  "stu_mandaty": 125,
+  "sns_mandaty": 117
+ },
+ "intervaly_oddeleny_od": {
+  "cas": "22:01",
+  "secteno": 3.18,
+  "stu": 51.24,
+  "sns": 41.02,
+  "stu_prubezne": 41.53,
+  "sns_prubezne": 49.71,
+  "stu_lo": 49.1,
+  "stu_hi": 53.39,
+  "sns_lo": 37.55,
+  "sns_hi": 44.48,
+  "stu_mandaty": 134,
+  "sns_mandaty": 108
+ },
+ "predikce_vetsina_stu_od": {
+  "cas": "21:46",
+  "secteno": 1.17,
+  "stu": 48.13,
+  "sns": 44.26,
+  "stu_prubezne": 38.97,
+  "sns_prubezne": 52.6,
+  "stu_lo": 40.45,
+  "stu_hi": 55.79,
+  "sns_lo": 33.31,
+  "sns_hi": 55.0,
+  "stu_mandaty": 126,
+  "sns_mandaty": 116
+ },
+ "interval_stu_nad_50_od": {
+  "cas": "22:32",
+  "secteno": 7.43,
+  "stu": 51.97,
+  "sns": 40.47,
+  "stu_prubezne": 43.69,
+  "sns_prubezne": 47.18,
+  "stu_lo": 50.62,
+  "stu_hi": 53.3,
+  "sns_lo": 38.76,
+  "sns_hi": 42.19,
+  "stu_mandaty": 136,
+  "sns_mandaty": 105
+ },
+ "prubezne_stu_vede_od": {
+  "cas": "23:14",
+  "secteno": 14.16,
+  "stu_prubezne": 45.7,
+  "sns_prubezne": 45.52
+ },
+ "prubezne_stu_nad_50_od": {
+  "cas": "02:38",
+  "secteno": 63.07
+ },
+ "nahled_minut": 90,
+ "nahled_minut_intervaly": 73,
+ "prubezne_sns_max": {
+  "cas": "21:13",
+  "secteno": 0.009,
+  "sns": 61.65
+ },
+ "milniky": [
+  {
+   "milnik": 1,
+   "cas": "21:45",
+   "secteno": 1.04,
+   "stu": 47.92,
+   "sns": 44.58,
+   "stu_prubezne": 39.06,
+   "sns_prubezne": 52.53,
+   "stu_lo": 40.21,
+   "stu_hi": 55.61,
+   "sns_lo": 33.46,
+   "sns_hi": 55.37,
+   "stu_mandaty": 125,
+   "sns_mandaty": 117
+  },
+  {
+   "milnik": 3,
+   "cas": "22:01",
+   "secteno": 3.18,
+   "stu": 51.24,
+   "sns": 41.02,
+   "stu_prubezne": 41.53,
+   "sns_prubezne": 49.71,
+   "stu_lo": 49.1,
+   "stu_hi": 53.39,
+   "sns_lo": 37.55,
+   "sns_hi": 44.48,
+   "stu_mandaty": 134,
+   "sns_mandaty": 108
+  },
+  {
+   "milnik": 5,
+   "cas": "22:18",
+   "secteno": 5.3,
+   "stu": 51.76,
+   "sns": 40.41,
+   "stu_prubezne": 42.81,
+   "sns_prubezne": 47.86,
+   "stu_lo": 49.81,
+   "stu_hi": 53.72,
+   "sns_lo": 37.16,
+   "sns_hi": 43.63,
+   "stu_mandaty": 135,
+   "sns_mandaty": 105
+  },
+  {
+   "milnik": 10,
+   "cas": "22:52",
+   "secteno": 10.07,
+   "stu": 52.31,
+   "sns": 40.21,
+   "stu_prubezne": 45.03,
+   "sns_prubezne": 45.94,
+   "stu_lo": 50.93,
+   "stu_hi": 53.67,
+   "sns_lo": 38.44,
+   "sns_hi": 41.99,
+   "stu_mandaty": 136,
+   "sns_mandaty": 105
+  },
+  {
+   "milnik": 25,
+   "cas": "00:53",
+   "secteno": 25.02,
+   "stu": 52.45,
+   "sns": 40.35,
+   "stu_prubezne": 46.69,
+   "sns_prubezne": 44.71,
+   "stu_lo": 51.24,
+   "stu_hi": 53.63,
+   "sns_lo": 38.83,
+   "sns_hi": 41.86,
+   "stu_mandaty": 137,
+   "sns_mandaty": 105
+  },
+  {
+   "milnik": 50,
+   "cas": "01:43",
+   "secteno": 50.39,
+   "stu": 52.96,
+   "sns": 39.97,
+   "stu_prubezne": 48.94,
+   "sns_prubezne": 42.8,
+   "stu_lo": 51.46,
+   "stu_hi": 54.37,
+   "sns_lo": 38.98,
+   "sns_hi": 40.95,
+   "stu_mandaty": 139,
+   "sns_mandaty": 104
+  },
+  {
+   "milnik": 75,
+   "cas": "03:53",
+   "secteno": 75.5,
+   "stu": 53.29,
+   "sns": 39.76,
+   "stu_prubezne": 51.2,
+   "sns_prubezne": 41.16,
+   "stu_lo": 52.11,
+   "stu_hi": 54.46,
+   "sns_lo": 38.88,
+   "sns_hi": 40.66,
+   "stu_mandaty": 139,
+   "sns_mandaty": 104
+  },
+  {
+   "milnik": 90,
+   "cas": "06:19",
+   "secteno": 90.36,
+   "stu": 53.42,
+   "sns": 39.67,
+   "stu_prubezne": 52.75,
+   "sns_prubezne": 40.14,
+   "stu_lo": 52.48,
+   "stu_hi": 54.34,
+   "sns_lo": 38.94,
+   "sns_hi": 40.39,
+   "stu_mandaty": 140,
+   "sns_mandaty": 103
+  },
+  {
+   "milnik": 95,
+   "cas": "08:07",
+   "secteno": 95.08,
+   "stu": 53.46,
+   "sns": 39.64,
+   "stu_prubezne": 53.23,
+   "sns_prubezne": 39.8,
+   "stu_lo": 52.83,
+   "stu_hi": 54.11,
+   "sns_lo": 39.03,
+   "sns_hi": 40.22,
+   "stu_mandaty": 140,
+   "sns_mandaty": 103
+  },
+  {
+   "milnik": 99,
+   "cas": "11:03",
+   "secteno": 99.0,
+   "stu": 53.68,
+   "sns": 39.5,
+   "stu_prubezne": 53.66,
+   "sns_prubezne": 39.51,
+   "stu_lo": 53.6,
+   "stu_hi": 53.76,
+   "sns_lo": 39.42,
+   "sns_hi": 39.57,
+   "stu_mandaty": 141,
+   "sns_mandaty": 103
+  }
+ ],
+ "kalibrace": [
+  {
+   "od": 0,
+   "do": 1,
+   "aktualizaci": 18,
+   "stu_chyba_prumer": -14.24,
+   "stu_chyba_max": -28.79,
+   "sns_chyba_prumer": 12.96,
+   "sns_chyba_max": 21.06,
+   "stu_prubezne_chyba_prumer": -19.39,
+   "stu_v_intervalu": 39,
+   "sns_v_intervalu": 28
+  },
+  {
+   "od": 1,
+   "do": 5,
+   "aktualizaci": 29,
+   "stu_chyba_prumer": -3.19,
+   "stu_chyba_max": -5.8,
+   "sns_chyba_prumer": 2.22,
+   "sns_chyba_max": 5.11,
+   "stu_prubezne_chyba_prumer": -12.52,
+   "stu_v_intervalu": 21,
+   "sns_v_intervalu": 100
+  },
+  {
+   "od": 5,
+   "do": 25,
+   "aktualizaci": 106,
+   "stu_chyba_prumer": -1.4,
+   "stu_chyba_max": -2.03,
+   "sns_chyba_prumer": 0.85,
+   "sns_chyba_max": 1.06,
+   "stu_prubezne_chyba_prumer": -8.25,
+   "stu_v_intervalu": 21,
+   "sns_v_intervalu": 100
+  },
+  {
+   "od": 25,
+   "do": 50,
+   "aktualizaci": 12,
+   "stu_chyba_prumer": -0.88,
+   "stu_chyba_max": -1.27,
+   "sns_chyba_prumer": 0.59,
+   "sns_chyba_max": 0.88,
+   "stu_prubezne_chyba_prumer": -5.47,
+   "stu_v_intervalu": 83,
+   "sns_v_intervalu": 100
+  },
+  {
+   "od": 50,
+   "do": 90,
+   "aktualizaci": 59,
+   "stu_chyba_prumer": -0.43,
+   "stu_chyba_max": -0.76,
+   "sns_chyba_prumer": 0.29,
+   "sns_chyba_max": 0.5,
+   "stu_prubezne_chyba_prumer": -2.53,
+   "stu_v_intervalu": 100,
+   "sns_v_intervalu": 100
+  },
+  {
+   "od": 90,
+   "do": 101,
+   "aktualizaci": 943,
+   "stu_chyba_prumer": -0.01,
+   "stu_chyba_max": 0.33,
+   "sns_chyba_prumer": -0.02,
+   "sns_chyba_max": -0.36,
+   "stu_prubezne_chyba_prumer": -0.22,
+   "stu_v_intervalu": 58,
+   "sns_v_intervalu": 72
+  }
+ ],
+ "od_3pct": {
+  "stu_min": 51.24,
+  "stu_max": 54.05,
+  "sns_min": 39.11,
+  "sns_max": 41.13,
+  "stu_prubezne_min": 41.53,
+  "sns_prubezne_max": 49.71
+ },
+ "obce_celkem": 191,
+ "obce_vede": {
+  "1. SNS — United Serbia": 95,
+  "3. Student list": 91,
+  "17. Albanian Coalition": 2,
+  "10. SDA Sandžaka": 1,
+  "5. VMSZ / SVM": 1,
+  "2. SPS–JS": 1
+ },
+ "regiony_vede": {
+  "Inostranstvo": {
+   "3. Student list": 1
+  },
+  "Zatvori": {
+   "1. SNS — United Serbia": 1
+  },
+  "Šumadija i Zapadna Srbija": {
+   "3. Student list": 34,
+   "1. SNS — United Serbia": 18,
+   "10. SDA Sandžaka": 1
+  },
+  "Južna i Istočna Srbija": {
+   "1. SNS — United Serbia": 37,
+   "3. Student list": 13,
+   "17. Albanian Coalition": 2
+  },
+  "Beograd": {
+   "3. Student list": 17
+  },
+  "Vojvodina": {
+   "1. SNS — United Serbia": 18,
+   "3. Student list": 26,
+   "5. VMSZ / SVM": 1
+  },
+  "Kosovo i Metohija": {
+   "1. SNS — United Serbia": 21,
+   "2. SPS–JS": 1
+  }
+ },
+ "zapsani_v_obcich_kde_vede": {
+  "3. Student list": 4959834,
+  "1. SNS — United Serbia": 1346445,
+  "17. Albanian Coalition": 89153,
+  "10. SDA Sandžaka": 33372,
+  "5. VMSZ / SVM": 20662,
+  "2. SPS–JS": 1826
+ },
+ "zahranici": {
+  "stu": 72.7,
+  "zapsani": 102147
+ },
+ "nejvetsi_obce": [
+  {
+   "obec": "Novi Sad",
+   "region": "Vojvodina",
+   "zapsani": 336807,
+   "vede": "3. Student list",
+   "podil": 63.7
+  },
+  {
+   "obec": "Novi Beograd",
+   "region": "Beograd",
+   "zapsani": 196985,
+   "vede": "3. Student list",
+   "podil": 68.9
+  },
+  {
+   "obec": "Palilula (Beograd)",
+   "region": "Beograd",
+   "zapsani": 172820,
+   "vede": "3. Student list",
+   "podil": 63.2
+  },
+  {
+   "obec": "Zemun",
+   "region": "Beograd",
+   "zapsani": 168934,
+   "vede": "3. Student list",
+   "podil": 60.6
+  },
+  {
+   "obec": "Zvezdara",
+   "region": "Beograd",
+   "zapsani": 161410,
+   "vede": "3. Student list",
+   "podil": 69.2
+  },
+  {
+   "obec": "Voždovac",
+   "region": "Beograd",
+   "zapsani": 160476,
+   "vede": "3. Student list",
+   "podil": 66.3
+  },
+  {
+   "obec": "Čukarica",
+   "region": "Beograd",
+   "zapsani": 159988,
+   "vede": "3. Student list",
+   "podil": 64.2
+  },
+  {
+   "obec": "Kragujevac",
+   "region": "Šumadija i Zapadna Srbija",
+   "zapsani": 152043,
+   "vede": "3. Student list",
+   "podil": 58.6
+  },
+  {
+   "obec": "Subotica",
+   "region": "Vojvodina",
+   "zapsani": 123177,
+   "vede": "3. Student list",
+   "podil": 52.2
+  },
+  {
+   "obec": "Leskovac",
+   "region": "Južna i Istočna Srbija",
+   "zapsani": 110942,
+   "vede": "1. SNS — United Serbia",
+   "podil": 48.9
+  },
+  {
+   "obec": "Pančevo",
+   "region": "Vojvodina",
+   "zapsani": 105115,
+   "vede": "3. Student list",
+   "podil": 59.3
+  },
+  {
+   "obec": "Kruševac",
+   "region": "Šumadija i Zapadna Srbija",
+   "zapsani": 103342,
+   "vede": "3. Student list",
+   "podil": 50.2
+  },
+  {
+   "obec": "Inostranstvo",
+   "region": "Inostranstvo",
+   "zapsani": 102147,
+   "vede": "3. Student list",
+   "podil": 72.7
+  },
+  {
+   "obec": "Kraljevo",
+   "region": "Šumadija i Zapadna Srbija",
+   "zapsani": 98607,
+   "vede": "3. Student list",
+   "podil": 54.5
+  },
+  {
+   "obec": "Rakovica",
+   "region": "Beograd",
+   "zapsani": 97514,
+   "vede": "3. Student list",
+   "podil": 64.1
+  }
+ ],
+ "rik_2026": {
+  "stav": "29.10.2026 07:20:00",
+  "mista": 8338,
+  "mista_celkem": 8392,
+  "stu_pct_rik": 53.04,
+  "sns_pct_rik": 38.97,
+  "ucast_rik": 68.72
+ },
+ "srovnani_2023": {
+  "sns_hlasy_2023": 1783701,
+  "sns_hlasy_2026": 1726375,
+  "sns_rozdil": -57326,
+  "sns_platne_pct_2023": 48.07,
+  "sps_hlasy_2023": 249916,
+  "sps_hlasy_2026": 94569,
+  "hlasovalo_2023": 3820746,
+  "hlasovalo_2026": 4433055,
+  "hlasovalo_rozdil": 612309,
+  "ucast_2023": 58.77,
+  "zapsani_2023": 6500666,
+  "zapsani_2026": 6451292,
+  "ostatni_platne_2023": 1927277,
+  "ostatni_platne_2026": 2647540
+ },
+ "dhondt": {
+  "posledni_mandat": "3. Student list",
+  "posledni_podil": 16664,
+  "prvni_nezvoleny": "1. SNS — United Serbia",
+  "prvni_nezvoleny_podil": 16600,
+  "chybi_hlasu": 6729,
+  "nesectena_mista": 54,
+  "nesecteni_zapsani": 25837
+ }
+}

@@ -1,0 +1,23 @@
+Kontrola: oficiální úhrnná plodnost žen 2024 (součet měr I.10) = 1.368; z D.10 (včetně mrtvě narozených) = 1.369
+D.10: narozených celkem 84602, z toho věk otce neuveden u 5878 (6.9 %)
+Úhrnná plodnost žen (D.10, 1. 7. 2024): 1.37; průměrný věk matky při narození (z měr) 30.5
+Úhrnná plodnost mužů, varianta A (dolní mez (jen děti s uvedeným otcem)): 1.14; průměrný věk otce při narození 33.7; poměr k ženám 83 %
+Úhrnná plodnost mužů, varianta B (neuvedení otcové rozděleni podle věku matky): 1.23; průměrný věk otce při narození 33.5; poměr k ženám 90 %
+Úhrnná plodnost mužů, varianta C (neuvedení otcové jako u dětí mimo manželství): 1.23; průměrný věk otce při narození 33.5; poměr k ženám 90 %
+muži do19: míra 1.5 na 1 000 (varianta B)
+muži 20-24: míra 16.0 na 1 000 (varianta B)
+muži 25-29: míra 56.6 na 1 000 (varianta B)
+muži 30-34: míra 81.2 na 1 000 (varianta B)
+muži 35-39: míra 55.4 na 1 000 (varianta B)
+muži 40-44: míra 23.0 na 1 000 (varianta B)
+muži 45-49: míra 7.7 na 1 000 (varianta B)
+muži 50-54: míra 2.5 na 1 000 (varianta B)
+muži 55-59: míra 1.0 na 1 000 (varianta B)
+muži 60+: míra 0.2 na 1 000 (varianta B)
+ženy 15-19: míra 5.7 na 1 000
+ženy 20-24: míra 34.6 na 1 000
+ženy 25-29: míra 87.8 na 1 000
+ženy 30-34: míra 91.0 na 1 000
+ženy 35-39: míra 43.9 na 1 000
+ženy 40-44: míra 9.9 na 1 000
+ženy 45-49: míra 0.8 na 1 000

@@ -193,6 +193,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou</loc>
+    <lastmod>2026-10-28T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-10-28-statni-vyznamenani</loc>
+    <lastmod>2026-10-28T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/analyza-2026-10-28-statni-vyznamenani-komu</loc>
+    <lastmod>2026-10-28T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/cislo-dne-2025-02-14-jedenact-milionu-otevreny-dopis-rektoratu-univerzity-karlovy</loc>
     <lastmod>2025-02-14T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -307,6 +325,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri</loc>
+    <lastmod>2026-10-30T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/komentar-2025-01-09-hitler-nebyl-komunista</loc>
     <lastmod>2025-01-09T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -333,6 +357,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/komentar-2026-01-08-zla-ai-ne-nebezpeci-je-urputna-ai</loc>
     <lastmod>2026-01-08T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/komentar-2026-10-24-stojime-za-medii-verejne-sluzby</loc>
+    <lastmod>2026-10-24T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -493,6 +523,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu</loc>
+    <lastmod>2026-10-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/mandaty-2024-10-31-ctyrkoalice-by-se-nad-vodou-drzela-jen-stezi</loc>
     <lastmod>2024-10-31T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -549,6 +585,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-25-druhe-kolo-vyhrava-lula</loc>
     <lastmod>2026-10-25T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-brazilie-2026-10-26-proc-vyhral-lula</loc>
+    <lastmod>2026-10-26T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -777,6 +819,12 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-24-marianske-lazne-kupovani-hlasu</loc>
     <lastmod>2026-10-24T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce</loc>
+    <lastmod>2026-10-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

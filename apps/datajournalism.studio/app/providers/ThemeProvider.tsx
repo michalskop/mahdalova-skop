@@ -2,20 +2,17 @@
 'use client';
 
 import { MantineProvider } from '@mantine/core';
-import { Work_Sans } from 'next/font/google';
-
-const workSans = Work_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-work-sans',
-});
+import { ibmPlexSans, ibmPlexSerif } from '../fonts';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <MantineProvider
       defaultColorScheme="light"
       theme={{
-        fontFamily: workSans.style.fontFamily,
+        // Site-wide typography: IBM Plex Serif for body copy, IBM Plex Sans for
+        // all headings (Mantine Title). See packages/ui/DESIGN.md → Typography.
+        fontFamily: ibmPlexSerif.style.fontFamily,
+        headings: { fontFamily: ibmPlexSans.style.fontFamily },
         colors: {
           // PRIMARY – crimson red. Use for: links, headings, tag badges, primary
           // buttons, Arrow component, section titles, InfoBox 'error' border.
@@ -59,8 +56,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#ffcf02', // [6] main yellow
             '#efb704',
             '#bd9103',
-            '#a47d03'
-          ],
+            '#a47d03'],
           // ACCENT ORANGE – use for: InfoBox 'warning' border/bg, warning states.
           // Main shade: [6] = #f76800. Light tint: [0] = #fff4eb.
           brandOrange: [
@@ -73,8 +69,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             '#f76800',
             '#cc5f00',
             '#994800',
-            '#663200'
-          ],
+            '#663200'],
           // ROYAL BLUE – use for: testimonial card backgrounds (dark [8]).
           // Main shade: [6] = #4a51ab. Dark shade: [8] = #272a59.
           brandRoyalBlue: [
@@ -95,8 +90,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             "#0e839e",
             "#06677d",
             "#044d5e",
-            "#023440"
-          ],
+            "#023440"],
           // FOREST GREEN – decorative accent. Not used in current components.
           // Main shade: [6] = #639e0a.
           brandForestGreen: [
@@ -127,8 +121,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             "#a03250",
             "#812840",
             "#621d30",
-            "#431320"
-          ],
+            "#431320"],
           // AMETHYST / PURPLE – binding palette, card "White, yellow, orange and red", row 7.
           // Main shade: [6] = #9f319e. Bright accent: [5] = #b262c0 (e.g. DPBP hub dot).
           brandAmethyst: [
@@ -141,8 +134,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             "#9f319e",
             "#6e227d",
             "#522a7a",
-            "#351040"
-          ],
+            "#351040"],
           brandCoralRed: [
             "#fff0ed",
             "#ffcec6",
@@ -153,8 +145,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             "#e8412c",
             "#c93020",
             "#a32318",
-            "#7d1810"
-          ],
+            "#7d1810"],
           brandChocolate: [
             "#f5f0eb",
             "#e6d5c3",
@@ -165,8 +156,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             "#6e4a2c",
             "#53361e",
             "#3b2414",
-            "#24150b"
-          ]
+            "#24150b"]
         },
         // Force light mode colors
         white: '#ffffff',

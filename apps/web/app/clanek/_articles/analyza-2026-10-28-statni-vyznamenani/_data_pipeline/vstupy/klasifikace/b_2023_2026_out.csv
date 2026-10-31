@@ -1,0 +1,180 @@
+id,pohlavi,cizinec,obor,popis,jistota
+1199,M,0,hrdinsky_cin,"dobrovolný hasič zahynul při požáru, in memoriam",vysoka
+1200,M,0,odboj_valka,"pilot 311. perutě RAF, Wintonovo dítě",vysoka
+1201,M,0,armada_bezpecnost,"policista, evakuace hořící ubytovny Tábor",vysoka
+1202,M,0,odboj_valka,"letec 311. perutě RAF, in memoriam",vysoka
+1203,M,0,armada_bezpecnost,"policista, evakuace hořící ubytovny Tábor",vysoka
+1204,M,0,odboj_valka,"letec 311. perutě RAF, in memoriam",vysoka
+1205,M,0,armada_bezpecnost,"hasič, záchrana zraněného motorkáře",vysoka
+1206,M,0,hrdinsky_cin,zachránil dvouletou dívku z Chrudimky,vysoka
+1207,M,0,odboj_valka,"stíhací pilot RAF, in memoriam",vysoka
+1208,M,0,veda,"ekolog a environmentalista, bývalý ministr",vysoka
+1209,Z,0,obcanska_spolecnost,"zakladatelka Konta Bariéry, Nadace Charty 77",vysoka
+1210,M,0,veda,"fyzik, průkopník nanovláken (TU Liberec)",vysoka
+1211,Z,0,sport,horolezkyně a himálajistka,vysoka
+1212,Z,0,sport,"krasobruslařka, mistryně světa v tancích",vysoka
+1213,Z,0,kultura,"spisovatelka, disidentka",vysoka
+1214,Z,0,veda,"pedagožka předškolního vzdělávání, PedF UK",vysoka
+1215,M,0,kultura,malíř a sochař žijící ve Francii,vysoka
+1216,M,1,podnikani,"rakouský pojišťovák, Vienna Insurance Group",stredni
+1217,Z,0,veda,"vědkyně, spoluzakladatelka Nadace Experientia",vysoka
+1218,Z,0,veda,"imunoložka a mikrobioložka, Mikrobiologický ústav AV",vysoka
+1219,Z,0,kultura,"zpěvačka a skladatelka, romská hudba",vysoka
+1220,M,0,kultura,klavírista a pedagog,vysoka
+1221,M,0,armada_bezpecnost,"bývalý disident, náměstek ředitele BIS",vysoka
+1222,M,0,kultura,ilustrátor a autor komiksů,vysoka
+1223,M,0,kultura,"herec, prezident MFF Karlovy Vary",vysoka
+1224,M,0,kultura,"sbormistr, Kühnův dětský sbor",vysoka
+1225,M,0,veda,astronom a popularizátor vědy,vysoka
+1226,M,0,veda,"lesník a ekolog, profesor",vysoka
+1227,M,0,veda,"amerikanista, rektor UP, senátor",vysoka
+1228,M,0,sport,"veterán atlet sprinter, závodil do 94 let",vysoka
+1229,M,0,armada_bezpecnost,"legionář, intendanční generál, oběť komunismu, in memoriam",stredni
+1230,Z,0,kultura,"ilustrátorka dětských knih, in memoriam",vysoka
+1231,M,0,sport,motocyklový trialista,stredni
+1232,Z,0,kultura,"operní pěvkyně, mezzosopranistka",vysoka
+1233,M,0,medicina,"onkolog, Masarykův onkologický ústav",vysoka
+1234,M,0,politika,"diplomat, náměstek BIS, signatář Charty, in memoriam",vysoka
+1235,M,0,kultura,spisovatel a ochránce přírody Krkonoš,vysoka
+1236,M,0,kultura,spisovatel a herec Divadla Járy Cimrmana,vysoka
+1237,M,0,podnikani,"inženýr, elektrárna Dlouhé Stráně, Energotis",vysoka
+1238,M,0,kultura,"architekt, SIAL Liberec",vysoka
+1239,Z,0,kultura,dokumentaristka,vysoka
+1240,M,0,kultura,herec Národního divadla,vysoka
+1241,M,0,kultura,ilustrátor a výtvarník v USA,vysoka
+1242,M,0,sport,"horolezec, zdolal všech 14 osmitisícovek",vysoka
+1243,M,0,kultura,herec Divadla na Vinohradech,vysoka
+1244,M,0,medicina,"neurochirurg, ÚVN Střešovice",vysoka
+1245,M,0,kultura,rockový zpěvák a skladatel,vysoka
+1246,M,0,medicina,"kardiolog, IKEM",vysoka
+1247,Z,0,medicina,"dětská lékařka, cystická fibróza",vysoka
+1248,M,1,zahranicni_statnik,prezident Rakouska,vysoka
+1249,M,0,odboj_valka,"voják, sokol, odbojář popravený v Mauthausenu, in memoriam",vysoka
+1250,M,0,odboj_valka,"první velitel 311. perutě RAF, in memoriam",vysoka
+1251,M,0,politika,"politik, bývalý ministr zahraničí",vysoka
+1252,M,0,odboj_valka,"spoluzakladatel ČSR a legií, in memoriam",vysoka
+1253,M,0,politika,předseda Ústavního soudu,vysoka
+1254,M,0,politika,"politik, bývalý premiér a předseda Senátu",vysoka
+1255,Z,0,veda,"socioložka a environmentalistka, MU Brno",vysoka
+1256,M,0,obcanska_spolecnost,"zakladatel Naděje, pomoc bezdomovcům",vysoka
+1257,M,0,obcanska_spolecnost,zakladatel Naděje (duplicitní záznam),vysoka
+1258,M,0,veda,"filozof, signatář Charty, ministr, in memoriam",stredni
+1259,M,0,politika,"politolog, poslanec FS, občanský aktivista",stredni
+1260,Z,0,protikomunisticky_odboj,politická vězenkyně komunismu,vysoka
+1261,Z,0,protikomunisticky_odboj,"zpěvačka, mluvčí Charty 77",stredni
+1262,M,0,kultura,"dramatik, disident, předseda Sněmovny",stredni
+1263,M,0,cirkev,"kněz, teolog a sociolog",vysoka
+1264,Z,0,protikomunisticky_odboj,"sestra bratrů Mašínů, třetí odboj",vysoka
+1265,M,0,odboj_valka,"stíhací pilot RAF, in memoriam",vysoka
+1266,M,0,armada_bezpecnost,"voják, hrdinství v boji, in memoriam",stredni
+1267,Z,0,hrdinsky_cin,"učitelka, vyvedla žáky před zřícením stropu",vysoka
+1268,M,0,hrdinsky_cin,pomohl cestujícím z hořícího vlaku,vysoka
+1269,M,0,armada_bezpecnost,"válečný veterán z Afghánistánu, paraatlet",vysoka
+1270,M,0,odboj_valka,"výsadkář z Anglie, skupina Zinc, in memoriam",stredni
+1271,M,0,hrdinsky_cin,"vlakvedoucí, evakuace z hořícího vlaku",vysoka
+1272,Z,1,kultura,"polská filmová režisérka, FAMU",vysoka
+1273,M,0,protikomunisticky_odboj,odpůrce totalitního režimu,nizka
+1274,Z,0,kultura,"operní pěvkyně, mezzosopranistka",vysoka
+1275,M,0,media,"novinář Hospodářských novin, in memoriam",vysoka
+1276,Z,0,kultura,herečka,vysoka
+1277,Z,0,obcanska_spolecnost,zakladatelka projektu Silou hlasu,stredni
+1278,Z,0,medicina,rehabilitační pracovnice,stredni
+1279,Z,0,kultura,dokumentaristka,vysoka
+1280,M,0,kultura,"herec, Dejvické divadlo",vysoka
+1281,M,0,veda,"průkopník českého internetu, CESNET",stredni
+1282,M,0,veda,"ekonom, profesor Columbia University",vysoka
+1283,Z,0,kultura,"herečka Národního divadla, in memoriam",vysoka
+1284,M,0,kultura,spisovatel a dramatik,vysoka
+1285,M,0,armada_bezpecnost,policista,stredni
+1286,M,0,kultura,divadelní teoretik a režisér,vysoka
+1287,M,0,podnikani,podnikatel,stredni
+1288,M,0,kultura,malíř a sochař,vysoka
+1289,Z,0,kultura,"spisovatelka, Šikmý kostel",vysoka
+1290,Z,0,medicina,lékařka,stredni
+1291,M,0,veda,"ekonom a datový vědec, UK",vysoka
+1292,Z,0,obcanska_spolecnost,zakladatelka platformy Breakfaststory,stredni
+1293,M,0,kultura,"herec Národního divadla, in memoriam",vysoka
+1294,Z,0,kultura,zpěvačka,vysoka
+1295,M,0,veda,ředitel ČHMÚ,stredni
+1296,M,0,sport,"kanoista, olympijský vítěz",vysoka
+1297,M,1,obcanska_spolecnost,"vůdce krymských Tatarů, lidskoprávní aktivista",vysoka
+1298,M,0,kultura,herec,vysoka
+1299,M,0,kultura,spisovatel a publicista,vysoka
+1300,M,0,media,bývalý generální ředitel České televize,vysoka
+1301,M,0,kultura,"hudebník, Olympic",vysoka
+1302,M,0,podnikani,podnikatel a filantrop,stredni
+1303,Z,0,kultura,spisovatelka,vysoka
+1304,Z,0,obcanska_spolecnost,zakladatelka prvního dětského hospice,vysoka
+1305,M,0,sport,hokejista,vysoka
+1306,M,0,kultura,kameraman,vysoka
+1307,Z,0,obcanska_spolecnost,"environmentalistka, ekologická výchova",stredni
+1308,M,0,sport,cyklista,vysoka
+1309,Z,0,obcanska_spolecnost,"zakladatelka organizace ROSA, domácí násilí",vysoka
+1310,Z,0,sport,vodní slalomářka,vysoka
+1311,Z,0,kultura,architektka a designérka v Londýně,vysoka
+1312,M,0,odboj_valka,"šéf zpravodajství exilové vlády, in memoriam",vysoka
+1313,M,0,kultura,choreograf,vysoka
+1314,M,0,odboj_valka,"ministr obrany exilové vlády, in memoriam",vysoka
+1315,Z,1,zahranicni_statnik,prezidentka Slovenska,vysoka
+1316,Z,0,protikomunisticky_odboj,"disidentka, bývalá ombudsmanka",stredni
+1317,M,0,protikomunisticky_odboj,"disident, filozof a politik",stredni
+1318,M,1,cirkev,"papež, in memoriam",vysoka
+1319,M,1,zahranicni_statnik,"generální tajemník NATO, ex-premiér Norska",vysoka
+1320,M,0,cirkev,kněz,stredni
+1321,M,0,politika,"diplomat, velvyslanec při NATO",vysoka
+1322,M,0,media,"ředitel Rádia Svobodná Evropa, in memoriam",vysoka
+1323,M,1,zahranicni_statnik,bývalý prezident USA,vysoka
+1324,Z,0,odboj_valka,"odbojářka, ukrývala Gabčíka, in memoriam",vysoka
+1325,M,0,odboj_valka,"plukovník zahraniční armády za 2. sv. války, in memoriam",vysoka
+1326,M,0,armada_bezpecnost,"voják, zraněn v Afghánistánu 2018",vysoka
+1327,M,0,hrdinsky_cin,zachránil chlapce z ledové vody,vysoka
+1328,M,0,odboj_valka,"legionář, brigádní generál, in memoriam",stredni
+1329,M,0,armada_bezpecnost,"voják, mise Jugoslávie, Irák, Afghánistán",vysoka
+1330,M,0,hrdinsky_cin,"řidič sanitky, záchrana chlapců z ledu",vysoka
+1331,M,0,hrdinsky_cin,devítiletý chlapec zachránil dědečka,vysoka
+1332,M,0,kultura,"herec Národního divadla, in memoriam",vysoka
+1333,Z,0,kultura,herečka,vysoka
+1334,Z,0,veda,dětská klinická psycholožka,stredni
+1335,Z,0,obcanska_spolecnost,zakladatelka první Univerzity třetího věku,vysoka
+1336,M,0,sport,nevidomý paraplavec,vysoka
+1337,M,0,medicina,"lékař, profesor",nizka
+1338,M,0,sport,"právník, krasobruslař a sportovní funkcionář",vysoka
+1339,M,0,kultura,dirigent,vysoka
+1340,M,0,veda,učitel ZŠ Jeseník a skautský vůdce,vysoka
+1341,M,0,kultura,"architekt a designér, in memoriam",vysoka
+1342,M,0,medicina,dětský hematoonkolog,vysoka
+1343,M,0,veda,"stavební inženýr, autor Nuselského mostu",vysoka
+1344,Z,0,medicina,"imunoložka, Motol",vysoka
+1345,M,0,kultura,"hudebník, Spirituál kvintet",vysoka
+1346,M,0,sport,"rychlostní kanoista, olympijský vítěz",vysoka
+1347,M,0,podnikani,"průkopník 3D tisku, Prusa Research",vysoka
+1348,M,0,veda,"zoolog, ředitel ZOO Dvůr Králové, in memoriam",vysoka
+1349,M,0,armada_bezpecnost,náčelník Generálního štábu,vysoka
+1350,M,0,armada_bezpecnost,ředitel policejního Útvaru rychlého nasazení,vysoka
+1351,M,0,media,válečný zpravodaj Českého rozhlasu,vysoka
+1352,M,0,sport,"rychlostní kanoista, olympijský vítěz",vysoka
+1353,M,0,kultura,"spisovatel, skaut, in memoriam",vysoka
+1354,M,0,politika,"IT expert, digitalizace veřejné správy",stredni
+1355,M,0,medicina,"patolog, in memoriam",vysoka
+1356,M,0,kultura,"dramaturg Husy na provázku, rektor JAMU",vysoka
+1357,M,0,armada_bezpecnost,náměstek generálního ředitele HZS,vysoka
+1358,M,0,veda,"fyzik, spintronika",vysoka
+1359,M,0,politika,"diplomat, poradce pro národní bezpečnost",vysoka
+1360,Z,0,obcanska_spolecnost,"zakladatelka Jelimánu, pomoc onkopacientům",vysoka
+1361,Z,0,obcanska_spolecnost,propagátorka dárcovství kostní dřeně,vysoka
+1362,Z,0,obcanska_spolecnost,zakladatelka Nadace Naše dítě,vysoka
+1363,Z,0,veda,"molekulární bioložka, CEITEC",vysoka
+1364,Z,0,veda,"jaderná fyzička, předsedkyně SÚJB, in memoriam",vysoka
+1365,M,1,zahranicni_statnik,král Belgičanů,vysoka
+1366,M,0,odboj_valka,"generál, odboj za 2. sv. války, in memoriam",stredni
+1367,M,0,odboj_valka,"voják zahraniční armády, i protikomunistický odboj, in memoriam",vysoka
+1368,Z,0,sport,tenistka,vysoka
+1369,Z,1,zahranicni_statnik,nizozemská královna,vysoka
+1370,M,1,zahranicni_statnik,nizozemský král,vysoka
+1371,M,0,kultura,"scenárista, herec a spisovatel",vysoka
+1372,Z,0,protikomunisticky_odboj,"psycholožka, mluvčí Charty 77, in memoriam",vysoka
+1373,M,0,politika,"ombudsman, ministr spravedlnosti, in memoriam",vysoka
+1374,M,0,obcanska_spolecnost,ředitel Člověka v tísni,vysoka
+1375,M,1,zahranicni_statnik,prezident Estonska,vysoka
+1376,M,1,zahranicni_statnik,prezident Lotyšska,vysoka
+1377,M,1,zahranicni_statnik,prezident Litvy,vysoka

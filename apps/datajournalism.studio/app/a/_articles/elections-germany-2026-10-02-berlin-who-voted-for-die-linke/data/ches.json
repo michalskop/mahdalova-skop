@@ -1,0 +1,353 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Die Linke sits far to the left, but on courts and executive power it stands next to the SPD and the Greens",
+    "subtitle": "Average expert ratings of the parties in the 2024 Chapel Hill Expert Survey (scale 0–10)"
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "d": "Economy: left (0) – right (10)",
+        "o": 1,
+        "p": "Die Linke",
+        "v": 1.42,
+        "dy": 0
+      },
+      {
+        "d": "Liberal (0) – authoritarian values (10)",
+        "o": 2,
+        "p": "Die Linke",
+        "v": 2.29,
+        "dy": 0
+      },
+      {
+        "d": "Independent courts (0) – government influence over courts (10)",
+        "o": 3,
+        "p": "Die Linke",
+        "v": 1.67,
+        "dy": 0
+      },
+      {
+        "d": "Limited (0) – unlimited executive power (10)",
+        "o": 4,
+        "p": "Die Linke",
+        "v": 3.6,
+        "dy": 0
+      },
+      {
+        "d": "Defence against Russia (0) – trade and diplomacy with Russia (10)",
+        "o": 5,
+        "p": "Die Linke",
+        "v": 8.0,
+        "dy": 0
+      },
+      {
+        "d": "Economy: left (0) – right (10)",
+        "o": 1,
+        "p": "AfD",
+        "v": 9.26,
+        "dy": 0
+      },
+      {
+        "d": "Liberal (0) – authoritarian values (10)",
+        "o": 2,
+        "p": "AfD",
+        "v": 9.39,
+        "dy": 0
+      },
+      {
+        "d": "Independent courts (0) – government influence over courts (10)",
+        "o": 3,
+        "p": "AfD",
+        "v": 9.5,
+        "dy": 0
+      },
+      {
+        "d": "Limited (0) – unlimited executive power (10)",
+        "o": 4,
+        "p": "AfD",
+        "v": 7.27,
+        "dy": 0
+      },
+      {
+        "d": "Defence against Russia (0) – trade and diplomacy with Russia (10)",
+        "o": 5,
+        "p": "AfD",
+        "v": 8.4,
+        "dy": 0
+      },
+      {
+        "d": "Economy: left (0) – right (10)",
+        "o": 1,
+        "p": "CDU",
+        "v": 6.58,
+        "dy": 0
+      },
+      {
+        "d": "Liberal (0) – authoritarian values (10)",
+        "o": 2,
+        "p": "CDU",
+        "v": 6.56,
+        "dy": 0
+      },
+      {
+        "d": "Independent courts (0) – government influence over courts (10)",
+        "o": 3,
+        "p": "CDU",
+        "v": 1.0,
+        "dy": -12
+      },
+      {
+        "d": "Limited (0) – unlimited executive power (10)",
+        "o": 4,
+        "p": "CDU",
+        "v": 4.0,
+        "dy": 0
+      },
+      {
+        "d": "Defence against Russia (0) – trade and diplomacy with Russia (10)",
+        "o": 5,
+        "p": "CDU",
+        "v": 1.8,
+        "dy": 0
+      },
+      {
+        "d": "Economy: left (0) – right (10)",
+        "o": 1,
+        "p": "SPD",
+        "v": 3.47,
+        "dy": 0
+      },
+      {
+        "d": "Liberal (0) – authoritarian values (10)",
+        "o": 2,
+        "p": "SPD",
+        "v": 3.61,
+        "dy": 0
+      },
+      {
+        "d": "Independent courts (0) – government influence over courts (10)",
+        "o": 3,
+        "p": "SPD",
+        "v": 1.0,
+        "dy": 0
+      },
+      {
+        "d": "Limited (0) – unlimited executive power (10)",
+        "o": 4,
+        "p": "SPD",
+        "v": 3.33,
+        "dy": 0
+      },
+      {
+        "d": "Defence against Russia (0) – trade and diplomacy with Russia (10)",
+        "o": 5,
+        "p": "SPD",
+        "v": 4.2,
+        "dy": 0
+      },
+      {
+        "d": "Economy: left (0) – right (10)",
+        "o": 1,
+        "p": "Greens",
+        "v": 3.06,
+        "dy": 0
+      },
+      {
+        "d": "Liberal (0) – authoritarian values (10)",
+        "o": 2,
+        "p": "Greens",
+        "v": 1.61,
+        "dy": 0
+      },
+      {
+        "d": "Independent courts (0) – government influence over courts (10)",
+        "o": 3,
+        "p": "Greens",
+        "v": 1.0,
+        "dy": 12
+      },
+      {
+        "d": "Limited (0) – unlimited executive power (10)",
+        "o": 4,
+        "p": "Greens",
+        "v": 2.58,
+        "dy": 0
+      },
+      {
+        "d": "Defence against Russia (0) – trade and diplomacy with Russia (10)",
+        "o": 5,
+        "p": "Greens",
+        "v": 2.4,
+        "dy": 0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "d",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 330
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          10
+        ]
+      },
+      "axis": {
+        "title": null
+      }
+    },
+    "color": {
+      "field": "p",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Die Linke",
+          "AfD",
+          "CDU",
+          "SPD",
+          "Greens"
+        ],
+        "range": [
+          "#9f319e",
+          "#0e839e",
+          "#101432",
+          "#e8412c",
+          "#507e08"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#d4d4c8"
+      },
+      "encoding": {
+        "color": {
+          "value": "#d4d4c8"
+        },
+        "x": {
+          "datum": 0
+        },
+        "x2": {
+          "datum": 10
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150,
+        "opacity": 1,
+        "yOffset": -12
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "d",
+            "title": "Question"
+          },
+          {
+            "field": "p",
+            "title": "Party"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Value",
+            "format": ",.1f"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == -12"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "d",
+            "title": "Question"
+          },
+          {
+            "field": "p",
+            "title": "Party"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Value",
+            "format": ",.1f"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 0"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150,
+        "opacity": 1,
+        "yOffset": 12
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "d",
+            "title": "Question"
+          },
+          {
+            "field": "p",
+            "title": "Party"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Value",
+            "format": ",.1f"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 12"
+        }
+      ]
+    }
+  ],
+  "_source": "Chapel Hill Expert Survey 2024 (Jolly et al.), variables lrgen, galtan, judicial_independence, executive_power, eu_russia; values are averages of expert estimates, not voters' positions"
+}

@@ -3,6 +3,15 @@
 import React from 'react';
 import { Container, useMantineTheme } from '@mantine/core';
 import classes from './KeyNumbers.module.css';
+import { fixCzechTypography } from '../lib/remark-czech-typography';
+
+// Popisky karet nejdou přes remark (přicházejí z YAML / props), proto typografii řešíme tady: jednopísmenné předložky
+// a závorky (fixCzechTypography), nezlomitelná mezera v tisících a mezi číslem a slovem za ním.
+const typo = (s: string) =>
+  fixCzechTypography(s)
+    ?.replace(/(\d) (?=\d{3}(?!\d))/g, '$1\u00a0')
+    // číslo a jednotka nebo slovo za ním na jednom řádku („18 let“, „50 %“, „1 067 znásilnění“)
+    .replace(/(\d) (?=[^\s\d–-])/g, '$1\u00a0');
 
 export type KeyNumberPaletteColor = 'brand' | 'background' | 'brandNavy' | 'brandTeal' | 'brandOrange' | 'brandRoyalBlue' | 'brandYellow' | 'brandForestGreen' | 'brandEmeraldMint' | 'brandDeepRed';
 
@@ -11,6 +20,8 @@ export interface KeyNumberItem {
   title: string;
   description: string;
   color?: KeyNumberPaletteColor | string;
+  // Volitelný odkaz pod popiskem karty, např. na článek, kde jsme číslo rozebrali ("Psali jsme: …").
+  link?: { href: string; text: string };
 }
 
 export interface KeyNumbersData {
@@ -121,8 +132,13 @@ export function KeyNumbers({ label = 'Klíčová čísla', numbers, align = 'lef
                   {item.value}
                 </div>
                 <div className={classes.numLabel}>
-                  <strong>{item.title}</strong>
-                  {item.description}
+                  <strong>{typo(item.title)}</strong>
+                  {typo(item.description)}
+                  {item.link && (
+                    <a className={classes.numLink} href={item.link.href} style={{ color: colorStyles.valueColor }}>
+                      {item.link.text}&nbsp;→
+                    </a>
+                  )}
                 </div>
               </div>
             );

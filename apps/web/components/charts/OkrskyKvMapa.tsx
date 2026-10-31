@@ -15,6 +15,7 @@ import { feature } from 'topojson-client';
 import type { Feature, FeatureCollection, Geometry } from 'geojson';
 import ChartCard from './ChartCard';
 import ChartSignature from './ChartSignature';
+import OsmPodklad, { OsmAttribution } from './OsmPodklad';
 import { renderTitle, renderSubtitle } from './chartText';
 
 const INK = '#101432';
@@ -150,6 +151,8 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
     const path = geoPath(proj);
     return {
       h,
+      s: proj.scale(),
+      t: proj.translate(),
       mine: feats.mine.map((f) => ({ id: f.properties.id, d: path(f) ?? '' })),
       rest: feats.rest.map((f) => ({ id: f.properties.id, d: path(f) ?? '' })),
     };
@@ -370,15 +373,18 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
                     onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}
                   >
                     <g transform={`translate(${tf.x},${tf.y}) scale(${tf.k})`}>
+                      <OsmPodklad scale={geo.s} translate={geo.t} width={mapW} height={geo.h} tf={tf} />
+                      {/* okrsky okolních obcí jen obrysem, podklad pod nimi zůstává čitelný */}
                       <g pointerEvents="none">
-                        {geo.rest.map((p) => <path key={p.id} d={p.d} fill={CONTEXT} stroke="#fff" strokeWidth={0.6} vectorEffect="non-scaling-stroke" />)}
+                        {geo.rest.map((p) => <path key={p.id} d={p.d} fill={CONTEXT} fillOpacity={0.25} stroke={MUTED} strokeOpacity={0.35} strokeWidth={0.5} vectorEffect="non-scaling-stroke" />)}
                       </g>
-                      <g>
+                      {/* barva okrsku násobená s podkladem: barva kandidátky zůstane, silnice, lesy a zástavba prosvítají */}
+                      <g style={{ mixBlendMode: 'multiply' }}>
                         {geo.mine.map((p) => {
                           const r = res.rows.get(p.id);
                           const w = r?.[4][0]?.[0];
                           return (
-                            <path key={p.id} d={p.d} fill={w != null ? L[w]?.c ?? NODATA : NODATA} stroke="#fff" strokeWidth={0.7} vectorEffect="non-scaling-stroke"
+                            <path key={p.id} d={p.d} fill={w != null ? L[w]?.c ?? NODATA : NODATA} fillOpacity={0.82} stroke="#fff" strokeWidth={0.7} vectorEffect="non-scaling-stroke"
                               style={{ cursor: 'pointer' }}
                               onPointerEnter={(e) => { if (e.pointerType === 'mouse') setHover(p.id); }}
                               onClick={() => { if (gest.current.moved) return; setPinned((x) => (x === p.id ? null : p.id)); }}
@@ -404,6 +410,9 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
               {geo && res && (
                 <div style={{ fontSize: 12, color: MUTED, marginTop: 6 }}>
                   {num(nOkr)} {pl(nOkr, 'okrsek', 'okrsky', 'okrsků')} · účast {pct(res.obal / Math.max(1, res.vol))} · přiblížíte Ctrl + kolečkem, dvěma prsty nebo tlačítky
+                  <span style={{ display: 'block', marginTop: 2 }}>
+                    <OsmAttribution color={MUTED} />
+                  </span>
                 </div>
               )}
             </div>

@@ -15,6 +15,8 @@ export interface BuildRssFeedOptions {
   copyright: string;
   /** Absolute path to the app's public/ dir, used to resolve real byte sizes for local cover images. */
   publicDir?: string;
+  /** Optional full-text HTML for <content:encoded> (aggregators like MSN or Flipboard need the whole article). */
+  getContent?: (article: Article, url: string) => string | undefined;
 }
 
 const MIME_TYPES: Record<string, string> = {
@@ -56,6 +58,7 @@ export function buildRssFeed({
   articles,
   copyright,
   publicDir,
+  getContent,
 }: BuildRssFeedOptions): Feed {
   const feed = new Feed({
     title,
@@ -77,6 +80,8 @@ export function buildRssFeed({
       id: url,
       link: url,
       description: article.excerpt,
+      content: getContent?.(article, url),
+      category: (article.tags || []).map((name) => ({ name })),
       author: article.author
         ? article.author.split(/,|&/).map((name) => ({ name: name.trim() })).filter((a) => a.name)
         : undefined,

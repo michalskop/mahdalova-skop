@@ -15,14 +15,14 @@ const PROTI = process.env.PROTI_BARVA || '#bd9103'; // brandYellow.8
 const PRO = '#5fcce6'; // brandTeal.3 – jasný tyrkys pro Dětřichov
 const ZARE = '#33b9d9'; // brandTeal.4 – záře pod Dětřichovem
 const KREM = '#f8f6f0'; // světlá kontura Dětřichova
-const TECKA = '#2f325c'; // brandNavy.8
+const TECKA = '#4c4f8e'; // brandNavy.7 – o odstín světlejší, ať je republika vidět (Kateřina 29. 10.)
 const NAVY = '#101432'; // brandNavy.9
 
 // Stejné plochy mapy jako tools/cover-generator.cjs (FORMATY[].mapa, homepage podle mapaPozice v cover.config.cjs).
 const MAPA = {
-  homepage: [1500, 1200, [140, 470, 1500, 1170]], og: [1200, 630, [40, 30, 1160, 610]],
-  square: [1080, 1080, [20, 470, 1070, 1050]], instagram: [1080, 1350, [20, 560, 1070, 1260]],
-  story: [1080, 1920, [0, 860, 1080, 1580]],
+  homepage: [1500, 1200, [140, 470, 1500, 1170]], og: [1200, 630, [190, 165, 1010, 628]],
+  square: [1080, 1080, [20, 440, 1070, 1020]], instagram: [1080, 1350, [20, 510, 1070, 1220]],
+  story: [1080, 1920, [0, 790, 1080, 1520]], // na výšku mapa výš, blíž k podtitulku (Kateřina 29. 10.)
 };
 
 const lon = dots.map((d) => d[0]), lat = dots.map((d) => d[1]);
@@ -35,7 +35,7 @@ const f = (v) => v.toFixed(1);
 
 // stav(o, i) → měřítko turbíny 0–1 (animace: vyrůstání); otoceni → úhel listů ve stupních navíc (animace: točení)
 // popisek = true: u Dětřichova jméno (OG ho nemá, střed zabírá text)
-function kresli(klic, { stav = () => 1, otoceni = 0, plocha, popisek = klic !== 'og' } = {}) {
+function kresli(klic, { stav = () => 1, otoceni = 0, plocha, popisek = true } = {}) {
   const [W, H, vychozi] = MAPA[klic];
   const [mx0, my0, mx1, my1] = plocha ?? vychozi;
   const sc = Math.min((mx1 - mx0) / ((x1 - x0) * kx), (my1 - my0) / (y1 - y0));

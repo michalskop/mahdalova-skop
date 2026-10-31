@@ -1,0 +1,1935 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "padding": {
+    "right": 76
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "t": 0
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -5,
+            "rok": 1970,
+            "obyv": 6639182,
+            "index": 97.9,
+            "barva": "#994800",
+            "popis": "Kambodža 1970",
+            "obyv_t": "6,64 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -4,
+            "rok": 1971,
+            "obyv": 6620880,
+            "index": 97.6,
+            "barva": "#994800",
+            "popis": "Kambodža 1971",
+            "obyv_t": "6,62 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -3,
+            "rok": 1972,
+            "obyv": 6673886,
+            "index": 98.4,
+            "barva": "#994800",
+            "popis": "Kambodža 1972",
+            "obyv_t": "6,67 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -2,
+            "rok": 1973,
+            "obyv": 6739726,
+            "index": 99.4,
+            "barva": "#994800",
+            "popis": "Kambodža 1973",
+            "obyv_t": "6,74 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -1,
+            "rok": 1974,
+            "obyv": 6783240,
+            "index": 100.0,
+            "barva": "#994800",
+            "popis": "Kambodža 1974",
+            "obyv_t": "6,78 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 0,
+            "rok": 1975,
+            "obyv": 6581371,
+            "index": 97.0,
+            "barva": "#994800",
+            "popis": "Kambodža 1975",
+            "obyv_t": "6,58 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 1,
+            "rok": 1976,
+            "obyv": 6134991,
+            "index": 90.4,
+            "barva": "#994800",
+            "popis": "Kambodža 1976",
+            "obyv_t": "6,13 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 2,
+            "rok": 1977,
+            "obyv": 5668551,
+            "index": 83.6,
+            "barva": "#994800",
+            "popis": "Kambodža 1977",
+            "obyv_t": "5,67 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 3,
+            "rok": 1978,
+            "obyv": 5211653,
+            "index": 76.8,
+            "barva": "#994800",
+            "popis": "Kambodža 1978",
+            "obyv_t": "5,21 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 4,
+            "rok": 1979,
+            "obyv": 5088808,
+            "index": 75.0,
+            "barva": "#994800",
+            "popis": "Kambodža 1979",
+            "obyv_t": "5,09 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 5,
+            "rok": 1980,
+            "obyv": 5199872,
+            "index": 76.7,
+            "barva": "#994800",
+            "popis": "Kambodža 1980",
+            "obyv_t": "5,20 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 6,
+            "rok": 1981,
+            "obyv": 5284495,
+            "index": 77.9,
+            "barva": "#994800",
+            "popis": "Kambodža 1981",
+            "obyv_t": "5,28 mil.",
+            "stitek": "Kambodža",
+            "dy": 0
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -5,
+            "rok": 1989,
+            "obyv": 7184706,
+            "index": 90.0,
+            "barva": "#f76800",
+            "popis": "Rwanda 1989",
+            "obyv_t": "7,18 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -4,
+            "rok": 1990,
+            "obyv": 7375307,
+            "index": 92.4,
+            "barva": "#f76800",
+            "popis": "Rwanda 1990",
+            "obyv_t": "7,38 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -3,
+            "rok": 1991,
+            "obyv": 7526966,
+            "index": 94.3,
+            "barva": "#f76800",
+            "popis": "Rwanda 1991",
+            "obyv_t": "7,53 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -2,
+            "rok": 1992,
+            "obyv": 7683266,
+            "index": 96.3,
+            "barva": "#f76800",
+            "popis": "Rwanda 1992",
+            "obyv_t": "7,68 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -1,
+            "rok": 1993,
+            "obyv": 7981132,
+            "index": 100.0,
+            "barva": "#f76800",
+            "popis": "Rwanda 1993",
+            "obyv_t": "7,98 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 0,
+            "rok": 1994,
+            "obyv": 6792352,
+            "index": 85.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1994",
+            "obyv_t": "6,79 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 1,
+            "rok": 1995,
+            "obyv": 5674118,
+            "index": 71.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1995",
+            "obyv_t": "5,67 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 2,
+            "rok": 1996,
+            "obyv": 6708764,
+            "index": 84.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1996",
+            "obyv_t": "6,71 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 3,
+            "rok": 1997,
+            "obyv": 7755238,
+            "index": 97.2,
+            "barva": "#f76800",
+            "popis": "Rwanda 1997",
+            "obyv_t": "7,76 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 4,
+            "rok": 1998,
+            "obyv": 8081681,
+            "index": 101.3,
+            "barva": "#f76800",
+            "popis": "Rwanda 1998",
+            "obyv_t": "8,08 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 5,
+            "rok": 1999,
+            "obyv": 8147912,
+            "index": 102.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1999",
+            "obyv_t": "8,15 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 6,
+            "rok": 2000,
+            "obyv": 8213931,
+            "index": 102.9,
+            "barva": "#f76800",
+            "popis": "Rwanda 2000",
+            "obyv_t": "8,21 mil.",
+            "stitek": "Rwanda",
+            "dy": 5
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -5,
+            "rok": 1976,
+            "obyv": 6262404,
+            "index": 90.8,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1976",
+            "obyv_t": "6,26 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -4,
+            "rok": 1977,
+            "obyv": 6401515,
+            "index": 92.8,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1977",
+            "obyv_t": "6,40 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -3,
+            "rok": 1978,
+            "obyv": 6561534,
+            "index": 95.1,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1978",
+            "obyv_t": "6,56 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -2,
+            "rok": 1979,
+            "obyv": 6727797,
+            "index": 97.5,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1979",
+            "obyv_t": "6,73 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -1,
+            "rok": 1980,
+            "obyv": 6900212,
+            "index": 100.0,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1980",
+            "obyv_t": "6,90 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 0,
+            "rok": 1981,
+            "obyv": 7075648,
+            "index": 102.5,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1981",
+            "obyv_t": "7,08 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 1,
+            "rok": 1982,
+            "obyv": 7240241,
+            "index": 104.9,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1982",
+            "obyv_t": "7,24 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 2,
+            "rok": 1983,
+            "obyv": 7419642,
+            "index": 107.5,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1983",
+            "obyv_t": "7,42 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 3,
+            "rok": 1984,
+            "obyv": 7630682,
+            "index": 110.6,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1984",
+            "obyv_t": "7,63 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 4,
+            "rok": 1985,
+            "obyv": 7849693,
+            "index": 113.8,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1985",
+            "obyv_t": "7,85 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 5,
+            "rok": 1986,
+            "obyv": 8070818,
+            "index": 117.0,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1986",
+            "obyv_t": "8,07 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 6,
+            "rok": 1987,
+            "obyv": 8296485,
+            "index": 120.2,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1987",
+            "obyv_t": "8,30 mil.",
+            "stitek": "Guatemala",
+            "dy": -7
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -5,
+            "rok": 2009,
+            "obyv": 30058206,
+            "index": 85.2,
+            "barva": "#06677d",
+            "popis": "Irák 2009",
+            "obyv_t": "30,06 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -4,
+            "rok": 2010,
+            "obyv": 31045366,
+            "index": 88.0,
+            "barva": "#06677d",
+            "popis": "Irák 2010",
+            "obyv_t": "31,05 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -3,
+            "rok": 2011,
+            "obyv": 32161424,
+            "index": 91.2,
+            "barva": "#06677d",
+            "popis": "Irák 2011",
+            "obyv_t": "32,16 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -2,
+            "rok": 2012,
+            "obyv": 33654842,
+            "index": 95.4,
+            "barva": "#06677d",
+            "popis": "Irák 2012",
+            "obyv_t": "33,65 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -1,
+            "rok": 2013,
+            "obyv": 35281989,
+            "index": 100.0,
+            "barva": "#06677d",
+            "popis": "Irák 2013",
+            "obyv_t": "35,28 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 0,
+            "rok": 2014,
+            "obyv": 36550059,
+            "index": 103.6,
+            "barva": "#06677d",
+            "popis": "Irák 2014",
+            "obyv_t": "36,55 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 1,
+            "rok": 2015,
+            "obyv": 37560535,
+            "index": 106.5,
+            "barva": "#06677d",
+            "popis": "Irák 2015",
+            "obyv_t": "37,56 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 2,
+            "rok": 2016,
+            "obyv": 38469627,
+            "index": 109.0,
+            "barva": "#06677d",
+            "popis": "Irák 2016",
+            "obyv_t": "38,47 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 3,
+            "rok": 2017,
+            "obyv": 39337353,
+            "index": 111.5,
+            "barva": "#06677d",
+            "popis": "Irák 2017",
+            "obyv_t": "39,34 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 4,
+            "rok": 2018,
+            "obyv": 40265624,
+            "index": 114.1,
+            "barva": "#06677d",
+            "popis": "Irák 2018",
+            "obyv_t": "40,27 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 5,
+            "rok": 2019,
+            "obyv": 41192171,
+            "index": 116.8,
+            "barva": "#06677d",
+            "popis": "Irák 2019",
+            "obyv_t": "41,19 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 6,
+            "rok": 2020,
+            "obyv": 42116605,
+            "index": 119.4,
+            "barva": "#06677d",
+            "popis": "Irák 2020",
+            "obyv_t": "42,12 mil.",
+            "stitek": "Irák",
+            "dy": 7
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -5,
+            "rok": 2012,
+            "obyv": 49837446,
+            "index": 96.8,
+            "barva": "#023440",
+            "popis": "Myanmar 2012",
+            "obyv_t": "49,84 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -4,
+            "rok": 2013,
+            "obyv": 50262658,
+            "index": 97.6,
+            "barva": "#023440",
+            "popis": "Myanmar 2013",
+            "obyv_t": "50,26 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -3,
+            "rok": 2014,
+            "obyv": 50681634,
+            "index": 98.4,
+            "barva": "#023440",
+            "popis": "Myanmar 2014",
+            "obyv_t": "50,68 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -2,
+            "rok": 2015,
+            "obyv": 51089056,
+            "index": 99.2,
+            "barva": "#023440",
+            "popis": "Myanmar 2015",
+            "obyv_t": "51,09 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -1,
+            "rok": 2016,
+            "obyv": 51495696,
+            "index": 100.0,
+            "barva": "#023440",
+            "popis": "Myanmar 2016",
+            "obyv_t": "51,50 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 0,
+            "rok": 2017,
+            "obyv": 51894938,
+            "index": 100.8,
+            "barva": "#023440",
+            "popis": "Myanmar 2017",
+            "obyv_t": "51,89 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 1,
+            "rok": 2018,
+            "obyv": 52272247,
+            "index": 101.5,
+            "barva": "#023440",
+            "popis": "Myanmar 2018",
+            "obyv_t": "52,27 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 2,
+            "rok": 2019,
+            "obyv": 52640713,
+            "index": 102.2,
+            "barva": "#023440",
+            "popis": "Myanmar 2019",
+            "obyv_t": "52,64 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 3,
+            "rok": 2020,
+            "obyv": 53016522,
+            "index": 103.0,
+            "barva": "#023440",
+            "popis": "Myanmar 2020",
+            "obyv_t": "53,02 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 4,
+            "rok": 2021,
+            "obyv": 53387102,
+            "index": 103.7,
+            "barva": "#023440",
+            "popis": "Myanmar 2021",
+            "obyv_t": "53,39 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 5,
+            "rok": 2022,
+            "obyv": 53756787,
+            "index": 104.4,
+            "barva": "#023440",
+            "popis": "Myanmar 2022",
+            "obyv_t": "53,76 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 6,
+            "rok": 2023,
+            "obyv": 54133798,
+            "index": 105.1,
+            "barva": "#023440",
+            "popis": "Myanmar 2023",
+            "obyv_t": "54,13 mil.",
+            "stitek": "Myanmar",
+            "dy": -5
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -5,
+              6
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              -5,
+              0,
+              5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? 'začátek' : (datum.value < 0 ? '−5 let' : '+5 let')"
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              75,
+              100,
+              125
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12
+          }
+        },
+        "detail": {
+          "field": "zeme"
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -5,
+            "rok": 1970,
+            "obyv": 6639182,
+            "index": 97.9,
+            "barva": "#994800",
+            "popis": "Kambodža 1970",
+            "obyv_t": "6,64 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -4,
+            "rok": 1971,
+            "obyv": 6620880,
+            "index": 97.6,
+            "barva": "#994800",
+            "popis": "Kambodža 1971",
+            "obyv_t": "6,62 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -3,
+            "rok": 1972,
+            "obyv": 6673886,
+            "index": 98.4,
+            "barva": "#994800",
+            "popis": "Kambodža 1972",
+            "obyv_t": "6,67 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -2,
+            "rok": 1973,
+            "obyv": 6739726,
+            "index": 99.4,
+            "barva": "#994800",
+            "popis": "Kambodža 1973",
+            "obyv_t": "6,74 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": -1,
+            "rok": 1974,
+            "obyv": 6783240,
+            "index": 100.0,
+            "barva": "#994800",
+            "popis": "Kambodža 1974",
+            "obyv_t": "6,78 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 0,
+            "rok": 1975,
+            "obyv": 6581371,
+            "index": 97.0,
+            "barva": "#994800",
+            "popis": "Kambodža 1975",
+            "obyv_t": "6,58 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 1,
+            "rok": 1976,
+            "obyv": 6134991,
+            "index": 90.4,
+            "barva": "#994800",
+            "popis": "Kambodža 1976",
+            "obyv_t": "6,13 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 2,
+            "rok": 1977,
+            "obyv": 5668551,
+            "index": 83.6,
+            "barva": "#994800",
+            "popis": "Kambodža 1977",
+            "obyv_t": "5,67 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 3,
+            "rok": 1978,
+            "obyv": 5211653,
+            "index": 76.8,
+            "barva": "#994800",
+            "popis": "Kambodža 1978",
+            "obyv_t": "5,21 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 4,
+            "rok": 1979,
+            "obyv": 5088808,
+            "index": 75.0,
+            "barva": "#994800",
+            "popis": "Kambodža 1979",
+            "obyv_t": "5,09 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 5,
+            "rok": 1980,
+            "obyv": 5199872,
+            "index": 76.7,
+            "barva": "#994800",
+            "popis": "Kambodža 1980",
+            "obyv_t": "5,20 mil."
+          },
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 6,
+            "rok": 1981,
+            "obyv": 5284495,
+            "index": 77.9,
+            "barva": "#994800",
+            "popis": "Kambodža 1981",
+            "obyv_t": "5,28 mil.",
+            "stitek": "Kambodža",
+            "dy": 0
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -5,
+            "rok": 1989,
+            "obyv": 7184706,
+            "index": 90.0,
+            "barva": "#f76800",
+            "popis": "Rwanda 1989",
+            "obyv_t": "7,18 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -4,
+            "rok": 1990,
+            "obyv": 7375307,
+            "index": 92.4,
+            "barva": "#f76800",
+            "popis": "Rwanda 1990",
+            "obyv_t": "7,38 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -3,
+            "rok": 1991,
+            "obyv": 7526966,
+            "index": 94.3,
+            "barva": "#f76800",
+            "popis": "Rwanda 1991",
+            "obyv_t": "7,53 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -2,
+            "rok": 1992,
+            "obyv": 7683266,
+            "index": 96.3,
+            "barva": "#f76800",
+            "popis": "Rwanda 1992",
+            "obyv_t": "7,68 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": -1,
+            "rok": 1993,
+            "obyv": 7981132,
+            "index": 100.0,
+            "barva": "#f76800",
+            "popis": "Rwanda 1993",
+            "obyv_t": "7,98 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 0,
+            "rok": 1994,
+            "obyv": 6792352,
+            "index": 85.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1994",
+            "obyv_t": "6,79 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 1,
+            "rok": 1995,
+            "obyv": 5674118,
+            "index": 71.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1995",
+            "obyv_t": "5,67 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 2,
+            "rok": 1996,
+            "obyv": 6708764,
+            "index": 84.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1996",
+            "obyv_t": "6,71 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 3,
+            "rok": 1997,
+            "obyv": 7755238,
+            "index": 97.2,
+            "barva": "#f76800",
+            "popis": "Rwanda 1997",
+            "obyv_t": "7,76 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 4,
+            "rok": 1998,
+            "obyv": 8081681,
+            "index": 101.3,
+            "barva": "#f76800",
+            "popis": "Rwanda 1998",
+            "obyv_t": "8,08 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 5,
+            "rok": 1999,
+            "obyv": 8147912,
+            "index": 102.1,
+            "barva": "#f76800",
+            "popis": "Rwanda 1999",
+            "obyv_t": "8,15 mil."
+          },
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 6,
+            "rok": 2000,
+            "obyv": 8213931,
+            "index": 102.9,
+            "barva": "#f76800",
+            "popis": "Rwanda 2000",
+            "obyv_t": "8,21 mil.",
+            "stitek": "Rwanda",
+            "dy": 5
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -5,
+            "rok": 1976,
+            "obyv": 6262404,
+            "index": 90.8,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1976",
+            "obyv_t": "6,26 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -4,
+            "rok": 1977,
+            "obyv": 6401515,
+            "index": 92.8,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1977",
+            "obyv_t": "6,40 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -3,
+            "rok": 1978,
+            "obyv": 6561534,
+            "index": 95.1,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1978",
+            "obyv_t": "6,56 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -2,
+            "rok": 1979,
+            "obyv": 6727797,
+            "index": 97.5,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1979",
+            "obyv_t": "6,73 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": -1,
+            "rok": 1980,
+            "obyv": 6900212,
+            "index": 100.0,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1980",
+            "obyv_t": "6,90 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 0,
+            "rok": 1981,
+            "obyv": 7075648,
+            "index": 102.5,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1981",
+            "obyv_t": "7,08 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 1,
+            "rok": 1982,
+            "obyv": 7240241,
+            "index": 104.9,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1982",
+            "obyv_t": "7,24 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 2,
+            "rok": 1983,
+            "obyv": 7419642,
+            "index": 107.5,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1983",
+            "obyv_t": "7,42 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 3,
+            "rok": 1984,
+            "obyv": 7630682,
+            "index": 110.6,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1984",
+            "obyv_t": "7,63 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 4,
+            "rok": 1985,
+            "obyv": 7849693,
+            "index": 113.8,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1985",
+            "obyv_t": "7,85 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 5,
+            "rok": 1986,
+            "obyv": 8070818,
+            "index": 117.0,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1986",
+            "obyv_t": "8,07 mil."
+          },
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 6,
+            "rok": 1987,
+            "obyv": 8296485,
+            "index": 120.2,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1987",
+            "obyv_t": "8,30 mil.",
+            "stitek": "Guatemala",
+            "dy": -7
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -5,
+            "rok": 2009,
+            "obyv": 30058206,
+            "index": 85.2,
+            "barva": "#06677d",
+            "popis": "Irák 2009",
+            "obyv_t": "30,06 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -4,
+            "rok": 2010,
+            "obyv": 31045366,
+            "index": 88.0,
+            "barva": "#06677d",
+            "popis": "Irák 2010",
+            "obyv_t": "31,05 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -3,
+            "rok": 2011,
+            "obyv": 32161424,
+            "index": 91.2,
+            "barva": "#06677d",
+            "popis": "Irák 2011",
+            "obyv_t": "32,16 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -2,
+            "rok": 2012,
+            "obyv": 33654842,
+            "index": 95.4,
+            "barva": "#06677d",
+            "popis": "Irák 2012",
+            "obyv_t": "33,65 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": -1,
+            "rok": 2013,
+            "obyv": 35281989,
+            "index": 100.0,
+            "barva": "#06677d",
+            "popis": "Irák 2013",
+            "obyv_t": "35,28 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 0,
+            "rok": 2014,
+            "obyv": 36550059,
+            "index": 103.6,
+            "barva": "#06677d",
+            "popis": "Irák 2014",
+            "obyv_t": "36,55 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 1,
+            "rok": 2015,
+            "obyv": 37560535,
+            "index": 106.5,
+            "barva": "#06677d",
+            "popis": "Irák 2015",
+            "obyv_t": "37,56 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 2,
+            "rok": 2016,
+            "obyv": 38469627,
+            "index": 109.0,
+            "barva": "#06677d",
+            "popis": "Irák 2016",
+            "obyv_t": "38,47 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 3,
+            "rok": 2017,
+            "obyv": 39337353,
+            "index": 111.5,
+            "barva": "#06677d",
+            "popis": "Irák 2017",
+            "obyv_t": "39,34 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 4,
+            "rok": 2018,
+            "obyv": 40265624,
+            "index": 114.1,
+            "barva": "#06677d",
+            "popis": "Irák 2018",
+            "obyv_t": "40,27 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 5,
+            "rok": 2019,
+            "obyv": 41192171,
+            "index": 116.8,
+            "barva": "#06677d",
+            "popis": "Irák 2019",
+            "obyv_t": "41,19 mil."
+          },
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 6,
+            "rok": 2020,
+            "obyv": 42116605,
+            "index": 119.4,
+            "barva": "#06677d",
+            "popis": "Irák 2020",
+            "obyv_t": "42,12 mil.",
+            "stitek": "Irák",
+            "dy": 7
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -5,
+            "rok": 2012,
+            "obyv": 49837446,
+            "index": 96.8,
+            "barva": "#023440",
+            "popis": "Myanmar 2012",
+            "obyv_t": "49,84 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -4,
+            "rok": 2013,
+            "obyv": 50262658,
+            "index": 97.6,
+            "barva": "#023440",
+            "popis": "Myanmar 2013",
+            "obyv_t": "50,26 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -3,
+            "rok": 2014,
+            "obyv": 50681634,
+            "index": 98.4,
+            "barva": "#023440",
+            "popis": "Myanmar 2014",
+            "obyv_t": "50,68 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -2,
+            "rok": 2015,
+            "obyv": 51089056,
+            "index": 99.2,
+            "barva": "#023440",
+            "popis": "Myanmar 2015",
+            "obyv_t": "51,09 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": -1,
+            "rok": 2016,
+            "obyv": 51495696,
+            "index": 100.0,
+            "barva": "#023440",
+            "popis": "Myanmar 2016",
+            "obyv_t": "51,50 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 0,
+            "rok": 2017,
+            "obyv": 51894938,
+            "index": 100.8,
+            "barva": "#023440",
+            "popis": "Myanmar 2017",
+            "obyv_t": "51,89 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 1,
+            "rok": 2018,
+            "obyv": 52272247,
+            "index": 101.5,
+            "barva": "#023440",
+            "popis": "Myanmar 2018",
+            "obyv_t": "52,27 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 2,
+            "rok": 2019,
+            "obyv": 52640713,
+            "index": 102.2,
+            "barva": "#023440",
+            "popis": "Myanmar 2019",
+            "obyv_t": "52,64 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 3,
+            "rok": 2020,
+            "obyv": 53016522,
+            "index": 103.0,
+            "barva": "#023440",
+            "popis": "Myanmar 2020",
+            "obyv_t": "53,02 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 4,
+            "rok": 2021,
+            "obyv": 53387102,
+            "index": 103.7,
+            "barva": "#023440",
+            "popis": "Myanmar 2021",
+            "obyv_t": "53,39 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 5,
+            "rok": 2022,
+            "obyv": 53756787,
+            "index": 104.4,
+            "barva": "#023440",
+            "popis": "Myanmar 2022",
+            "obyv_t": "53,76 mil."
+          },
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 6,
+            "rok": 2023,
+            "obyv": 54133798,
+            "index": 105.1,
+            "barva": "#023440",
+            "popis": "Myanmar 2023",
+            "obyv_t": "54,13 mil.",
+            "stitek": "Myanmar",
+            "dy": -5
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 60,
+        "opacity": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -5,
+              6
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              -5,
+              0,
+              5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? 'začátek' : (datum.value < 0 ? '−5 let' : '+5 let')"
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              75,
+              100,
+              125
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "popis",
+            "title": "Země a rok"
+          },
+          {
+            "field": "skupina",
+            "title": "Genocida"
+          },
+          {
+            "field": "obyv_t",
+            "title": "Obyvatel"
+          },
+          {
+            "field": "index",
+            "title": "Index (rok před = 100)"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Kambodža",
+            "skupina": "Rudí Khmerové, 1975–1979",
+            "t": 6,
+            "rok": 1981,
+            "obyv": 5284495,
+            "index": 77.9,
+            "barva": "#994800",
+            "popis": "Kambodža 1981",
+            "obyv_t": "5,28 mil.",
+            "stitek": "Kambodža",
+            "dy": 0
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": 0,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#994800"
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -5,
+              6
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              -5,
+              0,
+              5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? 'začátek' : (datum.value < 0 ? '−5 let' : '+5 let')"
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              75,
+              100,
+              125
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12
+          }
+        },
+        "text": {
+          "field": "stitek"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Rwanda",
+            "skupina": "Tutsiové, 1994",
+            "t": 6,
+            "rok": 2000,
+            "obyv": 8213931,
+            "index": 102.9,
+            "barva": "#f76800",
+            "popis": "Rwanda 2000",
+            "obyv_t": "8,21 mil.",
+            "stitek": "Rwanda",
+            "dy": 5
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": 5,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -5,
+              6
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              -5,
+              0,
+              5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? 'začátek' : (datum.value < 0 ? '−5 let' : '+5 let')"
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              75,
+              100,
+              125
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12
+          }
+        },
+        "text": {
+          "field": "stitek"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Guatemala",
+            "skupina": "Ixilové, 1981–1983",
+            "t": 6,
+            "rok": 1987,
+            "obyv": 8296485,
+            "index": 120.2,
+            "barva": "#1a9fbd",
+            "popis": "Guatemala 1987",
+            "obyv_t": "8,30 mil.",
+            "stitek": "Guatemala",
+            "dy": -7
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": -7,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#1a9fbd"
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -5,
+              6
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              -5,
+              0,
+              5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? 'začátek' : (datum.value < 0 ? '−5 let' : '+5 let')"
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              75,
+              100,
+              125
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12
+          }
+        },
+        "text": {
+          "field": "stitek"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Irák",
+            "skupina": "Jezídové, 2014",
+            "t": 6,
+            "rok": 2020,
+            "obyv": 42116605,
+            "index": 119.4,
+            "barva": "#06677d",
+            "popis": "Irák 2020",
+            "obyv_t": "42,12 mil.",
+            "stitek": "Irák",
+            "dy": 7
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": 7,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -5,
+              6
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              -5,
+              0,
+              5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? 'začátek' : (datum.value < 0 ? '−5 let' : '+5 let')"
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              75,
+              100,
+              125
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12
+          }
+        },
+        "text": {
+          "field": "stitek"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Myanmar",
+            "skupina": "Rohingové, 2016–2017",
+            "t": 6,
+            "rok": 2023,
+            "obyv": 54133798,
+            "index": 105.1,
+            "barva": "#023440",
+            "popis": "Myanmar 2023",
+            "obyv_t": "54,13 mil.",
+            "stitek": "Myanmar",
+            "dy": -5
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": -5,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#023440"
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -5,
+              6
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              -5,
+              0,
+              5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? 'začátek' : (datum.value < 0 ? '−5 let' : '+5 let')"
+          }
+        },
+        "y": {
+          "field": "index",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              75,
+              100,
+              125
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12
+          }
+        },
+        "text": {
+          "field": "stitek"
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Ve Rwandě a Kambodži počet obyvatel spadl, u Jezídů, Rohingů a Ixilů {rostl dál|#06677d}",
+    "subtitle": "Celkový počet obyvatel země pět let před začátkem genocidy a šest let po něm (rok před začátkem = 100): Kambodža 1975, Rwanda 1994, Guatemala 1981 (Ixilové), Irák 2014 (Jezídové), Myanmar 2017 (Rohingové). Propad ve Rwandě zahrnuje kromě zavražděných i přes dva miliony uprchlíků."
+  },
+  "_source": "[World Bank, Population total (UN WPP 2024)](https://data.worldbank.org/indicator/SP.POP.TOTL)",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

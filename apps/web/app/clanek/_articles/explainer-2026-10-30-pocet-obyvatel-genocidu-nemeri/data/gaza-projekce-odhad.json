@@ -1,0 +1,705 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 220,
+  "padding": {
+    "right": 10
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.77
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.8,
+            "n": 400000,
+            "t": "7. 10. 2023"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11.5,
+        "color": "#101432",
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + ' mil.'"
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2022.5,
+            "n": 2166269,
+            "t": "2,17 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2022"
+          },
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2,23 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2287558,
+            "t": "2,29 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2349301,
+            "t": "2,35 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2025"
+          },
+          {
+            "rok": 2026.5,
+            "n": 2411790,
+            "t": "2,41 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "strokeDash": [
+          6,
+          4
+        ],
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + ' mil.'"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2022.5,
+            "n": 2166269,
+            "t": "2,17 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2022"
+          },
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2,23 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2287558,
+            "t": "2,29 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2349301,
+            "t": "2,35 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2025"
+          },
+          {
+            "rok": 2026.5,
+            "n": 2411790,
+            "t": "2,41 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 45,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + ' mil.'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "popis",
+            "title": "Období"
+          },
+          {
+            "field": "t",
+            "title": "Obyvatel Gazy"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2,23 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "polovina 2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2129724,
+            "t": "2,13 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "polovina 2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2114301,
+            "t": "2,11 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "polovina 2025"
+          },
+          {
+            "rok": 2026.0,
+            "n": 2130000,
+            "t": "2,13 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "konec 2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + ' mil.'"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.5,
+            "n": 2226544,
+            "t": "2,23 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "polovina 2023"
+          },
+          {
+            "rok": 2024.5,
+            "n": 2129724,
+            "t": "2,13 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "polovina 2024"
+          },
+          {
+            "rok": 2025.5,
+            "n": 2114301,
+            "t": "2,11 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "polovina 2025"
+          },
+          {
+            "rok": 2026.0,
+            "n": 2130000,
+            "t": "2,13 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "konec 2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + ' mil.'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "popis",
+            "title": "Období"
+          },
+          {
+            "field": "t",
+            "title": "Obyvatel Gazy"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2026.5,
+            "n": 2411790,
+            "t": "2,41 mil.",
+            "rada": "Předválečná projekce",
+            "popis": "polovina 2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dy": -14,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + ' mil.'"
+          }
+        },
+        "text": {
+          "value": "projekce 2,41 mil."
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2026.0,
+            "n": 2130000,
+            "t": "2,13 mil.",
+            "rada": "Odhad PCBS",
+            "popis": "konec 2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dy": 20,
+        "dx": 8,
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2022.3,
+              2026.7
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              2022.5,
+              2023.5,
+              2024.5,
+              2025.5,
+              2026.5
+            ],
+            "domain": false,
+            "ticks": false,
+            "grid": false,
+            "labelFontSize": 12,
+            "labelExpr": "floor(datum.value)"
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2500000
+            ],
+            "nice": false
+          },
+          "axis": {
+            "title": null,
+            "values": [
+              0,
+              1000000,
+              2000000
+            ],
+            "domain": false,
+            "ticks": false,
+            "gridColor": "#d4d4c8",
+            "labelFontSize": 12,
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1e6, '.0f') + ' mil.'"
+          }
+        },
+        "text": {
+          "value": "odhad 2,13 mil."
+        }
+      }
+    }
+  ],
+  "title": {
+    "text": "Graf ze sítí kreslí {předválečnou projekci|#06677d}. Podle palestinských statistiků v Gaze {lidí ubylo|#f76800}",
+    "subtitle": "Obyvatelé Pásma Gazy: projekce PCBS z doby před válkou (polovina roku) a válečné odhady PCBS (polovina 2024 a 2025, konec 2025)"
+  },
+  "_source": "[PCBS: projekce obyvatel a zprávy 2024–2025](https://www.pcbs.gov.ps/portals/_pcbs/PressRelease/Press_En_PalPeopleEnd2025E.pdf)",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

@@ -1,0 +1,299 @@
+id,pohlavi,cizinec,obor,popis,jistota
+1,M,0,armada_bezpecnost,"voják mise OSN, in memoriam",nizka
+2,M,0,armada_bezpecnost,"voják, záchrana Francouzů v Chorvatsku 1993",vysoka
+3,M,0,armada_bezpecnost,"voják mise OSN, in memoriam",nizka
+4,M,0,odboj_valka,"sociálnědemokratický politik, odboj, in memoriam",stredni
+5,Z,1,obcanska_spolecnost,"neznámá, pravděpodobně Němka",nizka
+6,M,0,veda,"německý historik, rodák z Čech",vysoka
+7,M,0,politika,"kněz a ministr (ČSL), exil, in memoriam",stredni
+8,M,1,politika,německý velvyslanec v Praze 1989,stredni
+9,M,0,kultura,"divadelní režisér, in memoriam",vysoka
+10,M,0,politika,"exilový ekonom, MMF, in memoriam",stredni
+11,M,0,kultura,"herec a dramatik, in memoriam",vysoka
+12,M,0,kultura,"hudební skladatel, in memoriam",vysoka
+13,M,0,kultura,"divadelník, textař, Semafor",vysoka
+14,M,0,kultura,"herec a dramatik, in memoriam",vysoka
+15,M,0,media,"exilový novinář, in memoriam",stredni
+16,M,0,cirkev,"katolický kněz, in memoriam",nizka
+17,M,0,protikomunisticky_odboj,exilový politik a publicista,stredni
+18,M,0,kultura,hudební skladatel v USA,vysoka
+19,M,0,kultura,"písničkář, in memoriam",vysoka
+20,M,0,cirkev,benediktin Angelus Waldstein,stredni
+21,M,1,kultura,"německý divadelní agent, Havlovy hry",stredni
+22,M,0,media,exilový novinář v Kanadě,stredni
+23,Z,1,obcanska_spolecnost,"neznámá, pravděpodobně německá šlechtična",nizka
+24,Z,0,kultura,zpěvačka,vysoka
+25,M,0,kultura,spisovatel,vysoka
+26,M,0,kultura,filmový režisér,vysoka
+27,M,0,kultura,"dirigent, in memoriam",stredni
+28,Z,0,sport,"gymnastka, olympijská vítězka",vysoka
+29,M,0,odboj_valka,"generál, exilová armáda, in memoriam",stredni
+30,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+31,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+32,M,1,zahranicni_statnik,král Španělska,vysoka
+33,M,0,odboj_valka,"plukovník v.v., veterán 2. sv. války",stredni
+34,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+35,M,0,odboj_valka,"podplukovník v.v., veterán 2. sv. války",stredni
+36,M,0,odboj_valka,"protinacistický odboj, in memoriam",vysoka
+37,M,0,odboj_valka,"plukovník v.v., veterán 2. sv. války",stredni
+38,M,0,cirkev,"litoměřický biskup, in memoriam",stredni
+39,M,1,politika,"britský poslanec, lord",stredni
+40,M,0,politika,americký kongresman českého původu,vysoka
+41,M,0,kultura,"spisovatel a dramatik, in memoriam",vysoka
+42,M,0,odboj_valka,"filozof, popraven nacisty, in memoriam",stredni
+43,M,0,protikomunisticky_odboj,"sociolog, politický vězeň, exil",stredni
+44,M,0,cirkev,královéhradecký biskup,vysoka
+45,M,0,kultura,"spisovatel, in memoriam",vysoka
+46,M,0,kultura,"spisovatel, in memoriam",vysoka
+47,M,0,politika,"ministr exilové vlády, in memoriam",vysoka
+48,M,0,protikomunisticky_odboj,"filozof, mluvčí Charty 77",stredni
+49,M,0,odboj_valka,"politik, odboj, in memoriam",stredni
+50,M,0,politika,exilový politik a politolog,stredni
+51,M,0,media,"exilový publicista, Svědectví",vysoka
+52,M,0,veda,literární teoretik v USA,vysoka
+53,M,0,politika,"právník, in memoriam; nejasné",nizka
+54,M,1,politika,"německý diplomat, kurýr chartistů",stredni
+55,M,0,kultura,"básník, politický vězeň",stredni
+56,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+57,M,0,odboj_valka,"generál, 2. sv. válka, in memoriam",stredni
+58,M,0,odboj_valka,československý legionář,stredni
+59,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+60,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+61,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+62,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+63,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+64,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+65,M,0,armada_bezpecnost,"voják, zahraniční mise",nizka
+66,M,0,armada_bezpecnost,"voják, zahraniční mise",nizka
+67,M,0,armada_bezpecnost,"voják, zahraniční mise",nizka
+68,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+69,M,0,odboj_valka,"pilot RAF, in memoriam",stredni
+70,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+71,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+72,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+73,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+74,M,0,odboj_valka,stíhací pilot RAF,vysoka
+75,M,0,armada_bezpecnost,"voják, zahraniční mise",nizka
+76,M,0,armada_bezpecnost,"voják, zahraniční mise, in memoriam",nizka
+77,M,0,armada_bezpecnost,"voják, zahraniční mise, in memoriam",nizka
+78,M,0,armada_bezpecnost,"voják, zahraniční mise",nizka
+79,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+80,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+81,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+82,M,0,odboj_valka,pravděpodobně válečný veterán/legionář,nizka
+83,M,0,kultura,spisovatel,vysoka
+84,Z,0,obcanska_spolecnost,neznámá,nizka
+85,M,1,kultura,"australský dirigent, Janáček",vysoka
+86,M,1,odboj_valka,britský letec RAF,vysoka
+87,M,0,kultura,"malíř, in memoriam",vysoka
+88,Z,0,kultura,"slovenská spisovatelka, disidentka",stredni
+89,M,0,kultura,"exilový skladatel, in memoriam",stredni
+90,M,0,kultura,filmový režisér,vysoka
+91,M,0,medicina,dětský onkolog,vysoka
+92,M,0,armada_bezpecnost,důstojník AČR,nizka
+93,M,0,kultura,"malíř, in memoriam",vysoka
+94,M,0,armada_bezpecnost,voják AČR,nizka
+95,M,0,armada_bezpecnost,voják AČR,nizka
+96,M,0,kultura,sochař,vysoka
+97,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",nizka
+98,M,0,veda,dětský psycholog,vysoka
+99,M,0,odboj_valka,"předseda protektorátní vlády, odboj, in memoriam",vysoka
+100,Z,1,zahranicni_statnik,britská královna,vysoka
+101,M,1,cirkev,kardinál z Beninu,vysoka
+102,M,1,zahranicni_statnik,prezident Izraele,vysoka
+103,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+104,M,1,cirkev,"německý kněz, Ackermann-Gemeinde",stredni
+105,M,0,obcanska_spolecnost,"právník, in memoriam; nejasné",nizka
+106,M,0,jine,in memoriam; neidentifikován,nizka
+107,M,0,protikomunisticky_odboj,"exilový publicista, náboženská svoboda",stredni
+108,M,0,cirkev,"premonstrát, politický vězeň",stredni
+109,M,0,cirkev,"kněz a pedagog, politický vězeň",stredni
+110,M,1,armada_bezpecnost,"francouzský generál, vojenská mise v ČSR",stredni
+111,M,0,jine,právník; neidentifikován,nizka
+112,M,0,odboj_valka,"student zastřelený 1939, in memoriam",vysoka
+113,M,0,jine,in memoriam; neidentifikován,nizka
+114,M,0,zahranicni_statnik,brazilský prezident českého původu,vysoka
+115,M,0,kultura,"spisovatel, disident",vysoka
+116,M,1,zahranicni_statnik,"nizozemský ministr zahraničí, OBSE",vysoka
+117,Z,0,odboj_valka,"novinářka, odboj, Ravensbrück, in memoriam",stredni
+118,M,0,odboj_valka,"historik, odboj, exil",stredni
+119,M,1,zahranicni_statnik,rakouský prezident,vysoka
+120,M,0,jine,neidentifikován,nizka
+121,M,0,kultura,"spisovatel, izraelský diplomat",vysoka
+122,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+123,M,0,armada_bezpecnost,voják AČR,nizka
+124,M,0,odboj_valka,"generál v.v., veterán 2. sv. války",stredni
+125,M,0,odboj_valka,"generál v.v., letec RAF",stredni
+126,M,0,jine,in memoriam; neidentifikován,nizka
+127,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+128,M,0,odboj_valka,"poručík v.v., 2. sv. válka",stredni
+129,M,0,jine,in memoriam; neidentifikován,nizka
+130,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+131,M,0,armada_bezpecnost,důstojník AČR,nizka
+132,M,0,armada_bezpecnost,voják AČR,nizka
+133,M,0,armada_bezpecnost,"důstojník AČR, in memoriam",nizka
+134,M,0,odboj_valka,"generál v.v., in memoriam",stredni
+135,M,0,armada_bezpecnost,důstojník AČR,nizka
+136,M,0,armada_bezpecnost,voják AČR,nizka
+137,M,0,armada_bezpecnost,důstojník AČR,nizka
+138,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+139,M,0,odboj_valka,letec RAF,stredni
+140,M,0,odboj_valka,letec RAF,stredni
+141,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+142,Z,0,kultura,malířka,vysoka
+143,M,0,cirkev,evangelický farář a teolog,stredni
+144,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+145,M,0,veda,"historik architektury, památkář",vysoka
+146,M,0,kultura,překladatel v Británii,vysoka
+147,M,0,jine,in memoriam; neidentifikován,nizka
+148,M,0,jine,in memoriam; neidentifikován,nizka
+149,M,1,kultura,maďarský překladatel české literatury,nizka
+150,M,0,kultura,"básník, in memoriam",vysoka
+151,M,0,kultura,básník,vysoka
+152,M,1,veda,"polský bohemista, velvyslanec",vysoka
+153,M,0,veda,matematik,vysoka
+154,Z,0,kultura,básnířka a překladatelka,vysoka
+155,M,0,kultura,choreograf,vysoka
+156,M,0,jine,in memoriam; neidentifikován,nizka
+157,M,0,medicina,"pediatr, in memoriam",vysoka
+158,M,1,veda,"německý pedagog, komeniolog",vysoka
+159,M,0,armada_bezpecnost,"plukovník, pravděpodobně hasič",nizka
+160,M,0,kultura,dirigent,vysoka
+161,Z,0,kultura,spisovatelka v Německu,vysoka
+162,Z,0,veda,norská komenioložka českého původu,vysoka
+163,Z,0,jine,neidentifikována,nizka
+164,M,0,cirkev,"evangelický teolog, biblista",vysoka
+165,M,0,armada_bezpecnost,"hasič, plukovník",stredni
+166,M,0,armada_bezpecnost,"hasič, plukovník (duplicitní záznam)",stredni
+167,M,0,armada_bezpecnost,generál AČR,stredni
+168,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+169,M,0,odboj_valka,"generál, exilová armáda, in memoriam",stredni
+170,M,0,odboj_valka,stíhací pilot RAF,vysoka
+171,M,1,armada_bezpecnost,"americký generál, velitel NATO",vysoka
+172,M,1,zahranicni_statnik,prezident Francie,vysoka
+173,M,1,armada_bezpecnost,francouzský náčelník štábu,vysoka
+174,M,0,odboj_valka,"generál v.v., 2. sv. válka",stredni
+175,M,0,odboj_valka,"odboj, popraven komunisty, in memoriam",stredni
+176,M,0,odboj_valka,"generál v.v., 2. sv. válka",stredni
+177,Z,0,zahranicni_statnik,"ministryně zahraničí USA, rodačka z Prahy",vysoka
+178,M,0,odboj_valka,"generál, 2. sv. válka",stredni
+179,M,0,odboj_valka,"legionářský generál, oběť gulagu",vysoka
+180,Z,0,protikomunisticky_odboj,"skautka, politická vězeňkyně",vysoka
+181,M,0,kultura,"básník, in memoriam",vysoka
+182,M,0,cirkev,"pravoslavný biskup, popraven 1942",vysoka
+183,M,0,politika,"prokurátor, exil, in memoriam",stredni
+184,M,0,odboj_valka,"historik, protinacistický odboj",stredni
+185,M,0,protikomunisticky_odboj,"spisovatel, politický vězeň, in memoriam",stredni
+186,M,0,protikomunisticky_odboj,"politický vězeň, plukovník v.v.",stredni
+187,Z,0,obcanska_spolecnost,"Výbor dobré vůle, in memoriam",vysoka
+188,Z,0,protikomunisticky_odboj,"novinářka, signatářka Charty 77",vysoka
+189,M,0,cirkev,"kněz, politický vězeň",vysoka
+190,M,0,veda,"filozof, rektor UK",vysoka
+191,M,0,odboj_valka,přeživší vzpoury v Treblince,vysoka
+192,M,0,protikomunisticky_odboj,"disident, politický vězeň",vysoka
+193,M,0,odboj_valka,"lékař, in memoriam",nizka
+194,Z,0,odboj_valka,pravděpodobně odboj za 2. sv. války,nizka
+195,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+196,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+197,Z,0,odboj_valka,pravděpodobně odboj za 2. sv. války,nizka
+198,M,0,odboj_valka,"generál, 2. sv. válka, in memoriam",stredni
+199,Z,0,odboj_valka,"novinářka, popravena nacisty, in memoriam",vysoka
+200,M,0,odboj_valka,"odboj, pomoc parašutistům, in memoriam",vysoka
+201,M,0,odboj_valka,"lékař, plukovník v.v.",stredni
+202,M,0,odboj_valka,"plukovník, 2. sv. válka, in memoriam",stredni
+203,M,0,odboj_valka,"stíhací pilot RAF, in memoriam",vysoka
+204,M,0,odboj_valka,"generál, 2. sv. válka, in memoriam",stredni
+205,M,0,odboj_valka,"generál v.v., 2. sv. válka",stredni
+206,M,0,odboj_valka,"generál v.v., 2. sv. válka",stredni
+207,M,0,armada_bezpecnost,voják AČR,nizka
+208,M,1,veda,"italský bohemista, in memoriam",vysoka
+209,M,0,medicina,"lékař, primář",nizka
+210,Z,0,protikomunisticky_odboj,"disidentka, Charta 77",vysoka
+211,M,0,sport,hokejový brankář,vysoka
+212,M,0,sport,"běžec, olympijský vítěz",vysoka
+213,M,0,veda,filozof,vysoka
+214,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+215,M,0,kultura,exilový básník a publicista,stredni
+216,M,0,kultura,herec a režisér,vysoka
+217,M,0,kultura,"literární kritik, in memoriam",vysoka
+218,Z,0,sport,tenistka,vysoka
+219,M,0,veda,sociolog v exilu,stredni
+220,M,0,jine,"právník, in memoriam; neidentifikován",nizka
+221,M,0,armada_bezpecnost,důstojník AČR,nizka
+222,M,0,jine,právník; neidentifikován,nizka
+223,M,1,politika,"americký úředník, rozšíření NATO",stredni
+224,M,0,veda,matematik,vysoka
+225,M,0,kultura,básník,vysoka
+226,M,0,media,"exilový novinář, Listy, europoslanec",stredni
+227,M,0,medicina,"lékař, in memoriam",stredni
+228,M,0,obcanska_spolecnost,exilový skaut Baghíra,stredni
+229,M,0,kultura,dramatik,vysoka
+230,M,1,politika,velvyslanec USA v ČSSR,stredni
+231,M,0,veda,historik,vysoka
+232,Z,1,medicina,lékařka; neidentifikována,nizka
+233,Z,0,sport,tenistka,vysoka
+234,M,0,veda,egyptolog,vysoka
+235,M,0,armada_bezpecnost,důstojník AČR,nizka
+236,M,0,kultura,divadelní režisér,vysoka
+237,M,1,politika,"americký úředník, rozšíření NATO",stredni
+238,M,0,obcanska_spolecnost,krajan; neidentifikován,nizka
+239,M,0,protikomunisticky_odboj,"disident, VONS",vysoka
+240,M,0,veda,matematik,vysoka
+241,M,1,politika,americký diplomat,vysoka
+242,M,1,veda,"britský filozof, podzemní univerzita",vysoka
+243,M,1,veda,německý historik,stredni
+244,M,0,veda,chemik,vysoka
+245,M,0,odboj_valka,"plukovník v.v., 2. sv. válka",stredni
+246,M,0,kultura,architekt,stredni
+247,Z,0,veda,historička,stredni
+248,M,0,protikomunisticky_odboj,"disident, Charta 77",vysoka
+249,M,0,kultura,básník a imunolog,vysoka
+250,M,0,protikomunisticky_odboj,"katolický aktivista, politický vězeň",stredni
+251,Z,0,kultura,filmová režisérka,vysoka
+252,Z,0,kultura,spisovatelka a malířka,vysoka
+253,M,0,veda,patolog v USA,nizka
+254,M,0,jine,neidentifikován,nizka
+255,Z,0,jine,neidentifikována,nizka
+256,M,0,odboj_valka,"generál, in memoriam",stredni
+257,M,0,odboj_valka,"generál, in memoriam",stredni
+258,M,1,obcanska_spolecnost,honorární konzul ČR v Izraeli,stredni
+259,M,0,odboj_valka,"generál, in memoriam",stredni
+260,M,1,odboj_valka,"americký generál, osvobození 1945, in memoriam",vysoka
+261,M,0,odboj_valka,"major, in memoriam",stredni
+262,M,1,zahranicni_statnik,generální tajemník NATO,vysoka
+263,M,1,cirkev,kolínský arcibiskup,vysoka
+264,M,1,armada_bezpecnost,"americký generál, náčelník štábů",vysoka
+265,M,0,odboj_valka,"zpravodajský důstojník, in memoriam",stredni
+266,M,0,odboj_valka,"generál, in memoriam",stredni
+267,M,1,politika,belgický politik,stredni
+268,M,1,zahranicni_statnik,prezident USA,vysoka
+269,M,0,cirkev,"kněz, politický vězeň",stredni
+270,M,0,media,novinář a překladatel,stredni
+271,M,0,odboj_valka,"zpravodajec 1. sv. války, in memoriam",stredni
+272,M,0,kultura,"malíř, in memoriam",vysoka
+273,M,1,zahranicni_statnik,bývalý ministr zahraničí USA,vysoka
+274,M,0,cirkev,evangelický teolog,stredni
+275,M,0,cirkev,evangelický teolog,vysoka
+276,M,0,protikomunisticky_odboj,"disident, samizdat, in memoriam",stredni
+277,M,0,odboj_valka,"generál, odboj, in memoriam",stredni
+278,M,0,kultura,"divadelní režisér, in memoriam",stredni
+279,M,0,veda,"historik, disident",stredni
+280,M,0,veda,historik,stredni
+281,Z,1,zahranicni_statnik,velvyslankyně USA při OSN,stredni
+282,M,0,kultura,exilový básník a historik,stredni
+283,Z,0,jine,neidentifikována,nizka
+284,M,0,veda,"filozof, rektor v Mnichově",stredni
+285,M,1,obcanska_spolecnost,zachránce židovských dětí,vysoka
+286,M,0,politika,exilový politik,nizka
+287,M,0,kultura,"hudební skladatel, in memoriam",vysoka
+288,M,0,jine,právník; neidentifikován,nizka
+289,M,0,cirkev,"jezuita, teolog",vysoka
+290,M,0,veda,politolog v Kanadě,stredni
+291,M,0,veda,"historik, archiv samizdatu",vysoka
+292,M,0,media,"novinář, in memoriam",stredni
+293,Z,0,kultura,herečka,vysoka
+294,M,0,jine,právník; neidentifikován,nizka
+295,M,0,cirkev,světící biskup pražský,vysoka
+296,M,0,kultura,"básník, in memoriam",vysoka
+297,M,1,zahranicni_statnik,poradce prezidenta USA pro bezpečnost,vysoka
+298,Z,0,protikomunisticky_odboj,"matka bratří Mašínů, in memoriam",stredni

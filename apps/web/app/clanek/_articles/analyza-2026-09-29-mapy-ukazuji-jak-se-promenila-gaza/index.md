@@ -4,8 +4,10 @@ date: "2026-09-29"
 time: "19:43"
 author: "Kateřina Mahdalová"
 excerpt: "Google Maps po více než roce aktualizovaly satelitní snímky velké části Pásma Gazy. Každý si tak může prohlédnout, jak se území za téměř tři roky války proměnilo. Devět míst, před a po: od uprchlického tábora v Rafáhu po historické centrum města Gaza."
-coverImage: "images/cover-gaza-5x4-text-datatimes.jpg"
-ogImage: "images/cover-og-gaza-text-datatimes.jpg"
+coverImage: "images/cover-homepage.jpg"
+ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.jpg"
+instagramImage: "images/cover-instagram.jpg"
 filter: ["analýza"]
 tags: ["Gaza", "Izrael", "Palestina", "satelitní snímky", "vizuální analýza", "Google Maps", "OSN", "Blízký východ"]
 promoted: 1

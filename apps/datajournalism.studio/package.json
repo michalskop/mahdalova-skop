@@ -10,16 +10,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@repo/ui": "*",
+    "d3-geo": "^3.1.1",
     "@emotion/react": "^11.13.3",
     "@emotion/server": "^11.x.x",
+    "gray-matter": "^4.0.3",
     "@mantine/core": "^7.13.4",
     "@mantine/hooks": "^7.13.4",
     "@mantinex/mantine-logo": "^1.0.1",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
-    "@tabler/icons-react": "^3.21.0",
-    "gray-matter": "^4.0.3",
     "next": "^14.2.22",
     "next-mdx-remote": "^5.0.0",
     "react": "^18.3.1",
@@ -37,18 +36,24 @@
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
     "remark-rehype": "^11.1.1",
-    "sass": "^1.80.5"
+    "@repo/ui": "*",
+    "sass": "^1.80.5",
+    "@tabler/icons-react": "^3.21.0",
+    "topojson-client": "^3.1.0",
+    "vega-embed": "^7.1.0"
   },
   "devDependencies": {
-    "@types/mdx": "^2.0.13",
-    "@types/node": "20.14.8",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "18.2.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.4",
     "postcss": "^8.4.38",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
+    "@types/d3-geo": "^3.1.0",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "20.14.8",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "18.2.0",
+    "@types/topojson-client": "^3.1.5",
     "typescript": "5.5.2"
   }
 }

@@ -1,14 +1,14 @@
 label: Obviňování obětí v číslech
 numbers:
   - value: "32 %"
-    title: Čechů dává opilé oběti spoluvinu
+    title: Čechů přenáší část viny na oběť, pokud byla opilá
     description: Že je žena, která se stala obětí sexuálního násilí pod vlivem alkoholu nebo drog, za to aspoň částečně odpovědná, si myslí 32 procent Čechů. V průměru EU 16 procent (Eurobarometr 2024).
     color: brand
   - value: "70 %"
-    title: Obětí znásilnění během útoku ztuhne
-    description: Výrazné ztuhnutí, kdy se člověk nemůže hýbat ani křičet, zažilo během útoku 70 procent z 298 žen ve švédské studii z roku 2017.
+    title: obětí znásilnění se během útoku nedokáže bránit
+    description: Tělo na ohrožení reaguje samo. Výrazné ztuhnutí (tonickou imobilitu), kdy se člověk nemůže hýbat ani křičet, zažilo během útoku 70 procent z 298 žen ve švédské studii z roku 2017.
     color: brandNavy
   - value: "76 %"
-    title: Obětí partnerských vražd jsou ženy
+    title: obětí partnerských vražd jsou ženy
     description: V letech 2015–2024 zabil v Česku současný nebo bývalý partner 109 žen a 35 mužů (Eurostat, bez roku 2018).
     color: brandOrange
