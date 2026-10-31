@@ -41,9 +41,9 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Vyšetřovatelé OSN viní Izrael z vyhlazování Palestinců na Západním břehu](https://www.mahdalova-skop.cz/clanek/kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu)
 
 ### Vzdělávání a společnost
+- [Vučić voliče neztratil. Porazila ho sjednocená opozice a vyšší účast](https://www.mahdalova-skop.cz/clanek/volby-srbsko-2026-10-26-studenti)
 - [Dívek léčených s poruchou příjmu potravy je třikrát víc než před patnácti lety](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-25-poruchy-prijmu-potravy)
-- [Lékařům, veterinářům a ředitelkám škol voliči věří. Do zastupitelstva je posunou i z konce kandidátky](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-15-profese-zastupitelu)
-- [Česko pouští matky předškoláků do zaměstnání nejméně v EU. Vláda na to odpovídá vyšším rodičákem](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu)
+- [Vučić uznal porážku dřív, než ji ukázalo sčítání. Predikce ji potvrdila za půl hodiny](https://www.mahdalova-skop.cz/clanek/volby-srbsko-2026-10-25-predikce)
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)

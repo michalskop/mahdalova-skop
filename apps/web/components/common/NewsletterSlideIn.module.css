@@ -14,8 +14,9 @@
   border-radius: var(--mantine-radius-md);
   background: var(--mantine-color-brandDeepRed-9);
   color: var(--mantine-color-background-0);
-  box-shadow: 0 0 0 6px var(--mantine-color-brandDeepRed-9),
-    0 18px 40px rgba(16, 20, 50, 0.35);
+  /* Plný rámeček v barvě obálky kolem čárkovaného okraje, bez vrženého stínu
+     (přání Kateřiny, 31. 10. 2026). */
+  box-shadow: 0 0 0 6px var(--mantine-color-brandDeepRed-9);
   transform: translateX(calc(100% + 48px));
   visibility: hidden;
   transition: transform 0.7s cubic-bezier(0.34, 1.4, 0.64, 1), visibility 0s linear 0.7s;
@@ -144,8 +145,7 @@
     left: 8px;
     width: auto;
     padding: 10px 12px 12px;
-    box-shadow: 0 0 0 4px var(--mantine-color-brandDeepRed-9),
-      0 -6px 24px rgba(16, 20, 50, 0.3);
+    box-shadow: 0 0 0 4px var(--mantine-color-brandDeepRed-9);
     transform: translateY(calc(100% + 24px));
   }
 
