@@ -33,7 +33,7 @@ Interactive maps and visualizations of election results.
 ### Election Models & Methodology
 - https://www.datajournalism.studio/a/elections-israel-2026-10-27-netanyahu-without-majority-prediction
 - https://www.datajournalism.studio/a/elections-brazil-2026-10-25-lula-wins-runoff-prediction
-- https://www.datajournalism.studio/a/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament
+- https://www.datajournalism.studio/a/elections-serbia-2026-10-25-students-beat-vucic-prediction
 
 ### Czech Elections
 - https://www.datajournalism.studio/a/analysis-2026-10-21-victim-blaming-in-europe
@@ -59,7 +59,7 @@ Interactive maps and visualizations of election results.
 - https://www.datajournalism.studio/a/elections-israel-2026-10-28-arab-parties-hold-the-key
 - https://www.datajournalism.studio/a/elections-israel-2026-10-27-netanyahu-without-majority-prediction
 - https://www.datajournalism.studio/a/elections-brazil-2026-10-26-why-lula-won
-- https://www.datajournalism.studio/a/elections-brazil-2026-10-25-lula-wins-runoff-prediction
+- https://www.datajournalism.studio/a/elections-serbia-2026-10-26-why-vucic-lost
 
 ## Contact
 
