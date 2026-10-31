@@ -52,7 +52,7 @@ const CSS = `
   .obsah .podpora .qr{width:380px;height:380px;padding:18px;background:#f8f6f0;border-radius:24px;box-sizing:content-box}
   .obsah .podpora .qr svg{width:100%;height:100%;display:block}
   .obsah .podpora .male{margin-top:18px;font-weight:600;letter-spacing:.04em}
-  .obsah .podpora .srdce{width:120px;height:108px;margin-bottom:34px}
+  .obsah .podpora .srdce{width:120px;height:108px;margin-bottom:81px} /* srdce v půli mezi podtitulkem (konec ~412) a QR (682), Kateřina 31. 10. */
 `;
 
 // závěrečný slide: poděkování a výzva k podpoře s QR kódem (Stripe odkaz ze SupportBanner.tsx)
@@ -63,8 +63,8 @@ const SRDCE = `<svg class="srdce" viewBox="0 0 100 90" aria-hidden="true"><defs>
   <path d="M50 88 C20 66 2 50 2 28 C2 13 13 2 27 2 C37 2 45 8 50 17 C55 8 63 2 73 2 C87 2 98 13 98 28 C98 50 80 66 50 88 Z" fill="url(#srdceG)"/></svg>`;
 const PODEKOVANI = {
   titulek: 'Moc si vážíme vaší podpory. Bez ní to nejde.',
-  pod: 'DataTimes dělá nezávislou datovou žurnalistiku díky čtenářům, jako jste vy.',
-  obsahOd: 520,
+  pod: 'DataTimes.cz může i nadále dělat poctivou nezávislou žurnalistiku díky čtenářkám a čtenářům, jako jste vy.',
+  obsahOd: 473,
   html: `<div class="podpora">${SRDCE}<div class="qr">${QR}</div><div class="male">Podpořte nás · naskenujte QR kód</div></div>`,
   zdroj: 'DataTimes.cz',
 };
