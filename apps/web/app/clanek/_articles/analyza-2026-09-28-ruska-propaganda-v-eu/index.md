@@ -3,6 +3,8 @@ title: "Na Slovensku viní z války Rusko 40 procent lidí, v Polsku 85. Kremlu 
 date: "2026-09-28"
 author: "Kateřina Mahdalová"
 excerpt: "Kde je podle Media Literacy Indexu 2026 společnost vůči dezinformacím nejméně odolná, tam mají lidé podle Eurobarometru nejlepší mínění o Rusku. Sankce proti Rusku podporují dvě třetiny Čechů, zbraně pro Ukrajinu necelá třetina. Na Slovensku přejímá kremelský výklad války zhruba polovina lidí, z Evropské unie a NATO ale chce odejít pětina až čtvrtina."
+coverTitulek: "Kde zabírá ruská<br>propaganda"
+coverPodtitulek: "<span style='color:#33b9d9;font-weight:600'>Sankce</span> podporují dvě třetiny Čechů,<br><span style='color:#c49ad8;font-weight:600'>zbraně pro Ukrajinu</span> necelá třetina"
 coverImage: "images/cover-homepage.webp"
 ogImage: "images/cover-og.jpg"
 filter: ["analýza"]

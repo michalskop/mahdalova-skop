@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/images/cover-homepage.png",
+      "otisk": "ad3a54a956ac2201",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/cover.config.cjs": "6b488f4168286047",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/motiv.cjs": "91c28d6ceb99c0a0"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/images/cover-og.jpg",
+      "otisk": "fe0dc583b31e0f29",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/cover.config.cjs": "6b488f4168286047",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/motiv.cjs": "91c28d6ceb99c0a0"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/images/cover-square.png",
+      "otisk": "18c891e4a3a1518b",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/cover.config.cjs": "6b488f4168286047",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/motiv.cjs": "91c28d6ceb99c0a0"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/images/cover-instagram.png",
+      "otisk": "172f727b25a644da",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/cover.config.cjs": "6b488f4168286047",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/motiv.cjs": "91c28d6ceb99c0a0"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/images/cover-story.png",
+      "otisk": "937c99c12d4316e9",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/cover.config.cjs": "6b488f4168286047",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/motiv.cjs": "91c28d6ceb99c0a0"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T19:34:25.085Z",
+  "clanek": "apps/datajournalism.studio/app/a/_articles/analysis-2026-09-23-czech-mothers-of-preschoolers-least-employed-in-eu/index.md",
+  "titulekClanku": "Czechia keeps mothers of preschoolers out of paid work more than any other EU country. The government answers with a higher parental allowance",
+  "texty": {
+    "stitek": "Analysis • Family and work",
+    "nadtitulek": "Czechia lets mothers into work",
+    "titulek": "least in the EU",
+    "podtitulek": "Employed parents of children under 6 (2025)"
+  }
+}

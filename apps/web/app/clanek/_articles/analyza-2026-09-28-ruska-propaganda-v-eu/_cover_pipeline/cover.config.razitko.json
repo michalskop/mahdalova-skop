@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/images/cover-homepage.png",
+      "otisk": "71884f0b7e4cd3d7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/cover.config.cjs": "2ea449462a4904c5",
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/motiv.cjs": "2c33ddfd24262731"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/images/cover-og.jpg",
+      "otisk": "38b077f8a1ddbeaf",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/cover.config.cjs": "2ea449462a4904c5",
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/motiv.cjs": "2c33ddfd24262731"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/images/cover-square.png",
+      "otisk": "b9e135542ef970f7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/cover.config.cjs": "2ea449462a4904c5",
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/motiv.cjs": "2c33ddfd24262731"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/images/cover-instagram.png",
+      "otisk": "3744a23c59387814",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/cover.config.cjs": "2ea449462a4904c5",
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/motiv.cjs": "2c33ddfd24262731"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/images/cover-story.png",
+      "otisk": "77f0bbdc272ec7f4",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/cover.config.cjs": "2ea449462a4904c5",
+        "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/motiv.cjs": "2c33ddfd24262731"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-31T05:54:07.775Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-09-28-ruska-propaganda-v-eu/index.md",
+  "titulekClanku": "Na Slovensku viní z války Rusko 40 procent lidí, v Polsku 85. Kremlu se v EU daří tam, kde se lidé nejhůř brání dezinformacím",
+  "texty": {
+    "stitek": "Analýza",
+    "nadtitulek": "",
+    "titulek": "Kde zabírá ruská propaganda",
+    "podtitulek": "Sankce podporují dvě třetiny Čechů, zbraně pro Ukrajinu necelá třetina"
+  }
+}

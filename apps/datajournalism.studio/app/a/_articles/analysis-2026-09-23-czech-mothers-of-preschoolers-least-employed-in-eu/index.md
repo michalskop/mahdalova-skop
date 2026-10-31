@@ -4,7 +4,10 @@ date: "2026-09-23"
 time: "15:07"
 author: "Kateřina Mahdalová"
 excerpt: "Fathers of children under six are in paid work more often in Czechia than anywhere else in the European Union; mothers, together with those in Romania, least often. The 46-percentage-point gap is unmatched in the EU. Mothers do want to work: once their child starts school, Czech women are employed more often than anywhere else in Europe. At a round table in the Chamber of Deputies, experts agreed that what keeps them out of the labour market is a lack of nurseries, a lack of part-time jobs and fathers who do not take parental leave. From January 2027, the government is raising the parental allowance to CZK 400,000."
+coverTitulek: "least<br>in the EU"
+coverPodtitulek: "Employed parents of children under 6 (2025)"
 coverImage: "images/cover-homepage.jpg"
+homepageImage: "images/cover-homepage.jpg"
 ogImage: "images/og-matky-prace-rodina-datatimes.jpg"
 filter: ["blog"]
 promoted: 1
