@@ -17,7 +17,13 @@ Na letošní volby do obecních zastupitelstev a třetiny Senátu má stát v ro
 
 Novinky se týden po volbách ptaly, [jak volby zlevnit](https://www.novinky.cz/clanek/ekonomika-jak-zlevnit-volby-stat-letos-prisly-na-miliardu-korun-40602321). Podle ministerstva financí stojí 1 063 milionů, o pětinu víc než před čtyřmi lety, napsaly Novinky a propočítaly menší komise, slučování obcí, jednodenní volby a hlasování přes internet. Prošli jsme závěrečné účty státního rozpočtu od roku 2014, otevřená data všech 14 551 okrsků od Českého statistického úřadu a vyhlášky o odměnách komisí. Po započtení inflace volby nezdražily proti roku 2018 vůbec a většina navrhovaných úspor vychází na jednotky procent jejich ceny.
 
-<KeyNumbers yamlFile="key-stats.yaml" />
+```infobox info
+**Ve zkratce**
+
+- Letošní volby do obcí a třetiny Senátu stojí státní rozpočet 1 050 milionů korun, 127 korun na voliče. Po započtení inflace je to na voliče stejně jako v roce 2018.
+- Ve 3 998 okrscích, tedy ve 27 % ze 14 551, kandiduje tak málo stran, že komise nemůže mít víc členů, než žádá zákon. Zmenšit ji tam nejde.
+- V 1 397 okrscích s nejvýš sto voliči stojí komise nejméně 191 korun na voliče, v okrscích nad tisíc voličů 14 korun. Necelá polovina z nich je jediným okrskem své obce.
+```
 
 <VegaChart dataFile="data/naklady_na_volice.json" />
 

@@ -15,8 +15,6 @@ promoted: 1
 
 Švédsko dnes volí nový Riksdag – od 8:00 do 20:00 místního času, který je shodný se středoevropským. Volí se všech 349 poslaneckých mandátů na čtyři roky dopředu ([Next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Next_Swedish_general_election)). Poslední průzkumy z týdne před volbami se shodují jen v jednom: je to nerozhodnuto. Nejtěsnější z nich, agentura Ipsos (sběr 7.–10. 9.), odhaduje 175 mandátů pro opoziční červeno-zelený blok proti 174 pro vládní blok Tidö – rozdíl jediného křesla ([Opinion polling for the next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Swedish_general_election)).
 
-<KeyNumbers yamlFile="key-stats.yaml" />
-
 ```infobox info
 Text vzniká před zveřejněním výsledků voleb, uvedená čísla jsou tedy odhady z průzkumů, ne fakta o skutečném výsledku.
 ```
@@ -34,6 +32,8 @@ Text vzniká před zveřejněním výsledků voleb, uvedená čísla jsou tedy o
 Zdroj: agregace pěti posledních průzkumů podle [Opinion polling for the next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Opinion_polling_for_the_next_Swedish_general_election), stav k 11. 9. 2026. Červeno-zelený blok tvoří Sociální demokraté (S), Levice (V), Centristé (C) a Zelení (MP); blok Tidö Umírnění (M), nacionalističtí Švédští demokraté (SD), Křesťanští demokraté (KD) a Liberálové (L).
 
 Ve všech pěti průzkumech má červeno-zelený blok mírný náskok, ale rozpětí mandátů – od 164 do 185 pro vládní blok – je široké na to, aby samo o sobě nic nerozhodlo. Sociální demokraté zůstávají nejsilnější jednotlivou stranou (26–30 %), druzí skončí Švédští demokraté (18–20 %), třetí vládní Umírnění (16–18 %).
+
+<SupportBanner />
 
 ## Poprvé v historii by mohli Švédští demokraté usednout ve vládě
 

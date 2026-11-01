@@ -14,8 +14,6 @@ promoted: 1
 ---
 Prezidentem Brazílie zůstává Luiz Inácio Lula da Silva. Podle oficiálních výsledků Nejvyššího volebního soudu (TSE) získal v neděli ve druhém kole 51,79 procenta platných hlasů, senátor Flávio Bolsonaro 48,21 procenta. Rozdíl činí 4 430 191 hlasů. Lula je prvním kandidátem od obnovení přímé volby v roce 1989, který vyhrál, přestože v prvním kole skončil druhý. Flávio Bolsonaro výsledek neuznal a oznámil, že bude žádat o zrušení voleb ([Reuters](https://theprint.in/world/brazils-lula-wins-historic-fourth-term-flavio-bolsonaro-refuses-to-concede/3081467/)).
 
-<KeyNumbers yamlFile="key-stats.yaml" />
-
 ## Co se stalo mezi prvním a druhým kolem
 
 Po prvním kole 4. října to vypadalo na Flávia Bolsonara. Vedl o 2,2 milionu hlasů a během čtyř dnů za ním stáli tři ze čtyř nejsilnějších poražených kandidátů: Romeu Zema (Novo), Ronaldo Caiado (PSD) a Augusto Cury (Avante). Čtvrtý, Renan Santos z hnutí Missão, svým voličům nedoporučil nikoho ([A Crítica](https://acritica.net/eleicoes-2026/caiado-zema-e-cury-apoiam-flavio-no-2o-turno-renan-santos-libera-eleitores/)). Za Flávia Bolsonara se postavily i strany takzvaného centrão, velkého středového bloku, bez něhož se v brazilském Kongresu nedá vládnout.

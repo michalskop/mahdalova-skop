@@ -346,6 +346,23 @@ mark type, and are checked on a real render on desktop **and** at 390 px mobile 
    line – link text names the document briefly („Zpráva komise OSN A/81/430“), details go to the subtitle.
 4. **No empty band above the footer.** The chart canvas reserves at most the spec `height` + 20 px (component default
    since 28. 10. 2026); don't pad low charts with extra `height`.
+5. **Line labels placed in data coordinates collide on mobile.** A direct label at a fixed x/y (e.g. „Likud v průběžném
+   součtu“ at x = 8 %) is ~45 % of the plot wide at 375 px, so it runs into lines that are clear on desktop. Put labels
+   above a series' peak or below its line where nothing else runs, keep end labels of close series on opposite sides
+   (one `baseline: bottom`, the other `baseline: top`), and check where a long label ends at 375 px. Vega line charts
+   draw in with an animation – wait a few seconds before judging a screenshot. Reference (29. 10. 2026):
+   `volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_data_pipeline/predikce.py`.
+
+### Pictogram grids – icon charts (added 2026-10-29, approved by Kateřina: "naprosto nádherné")
+
+Icon grids are the preferred form for "X out of 100" statements and for evidence/policy overviews in the DPBP special. Kateřina orders further icon charts as needed, so use this style by default where a share or a count of people is the message.
+
+- **100 icons, 20 per row** (Tabler icons via `@tabler/icons-react`, `size="100%"`, `stroke` 1.6–2), one icon = one person/family/payment/child; max ~100 icons per chart.
+- **Two states only:** highlighted = the finding (brand `#de1743`; a lighter `#ffb3c0` for a third state), rest muted (`#d4d4c8` or `#c9c9bd`). Never red against green.
+- **The icon says what is counted:** woman (`IconWoman`), family home (`IconHome`), baby carriage (`IconBabyCarriage`), cash (`IconCash`). Same icon for both states, only colour and stroke change.
+- **Each row has a plain-language headline** stating the finding ("z každých 100 rodin by o druhém dítěti rozhodla odměna jen u 5"), no jargon like "z 100 milionů zaplatí 5 dítě navíc". Legend below with the same icons, accessible `role="img"` + `aria-label`.
+- **Card grids with icons** (`PolicyEvidenceCards`): always an even number of cards (2 × 2, 2 × 3), fixed two-column grid, one column on mobile. Evidence level as three dots. Single-letter prepositions and conjunctions get a non-breaking space (never "a" at a line end).
+- **Examples:** `BirthOrderPictogram` (ze 100 žen), `MilionKamJdou` (kam míří milion za druhé dítě), `PolicyEvidenceCards` (co podporuje rodičovství); all in `apps/web/components/dpbp/`.
 
 ### Default implementation for a new chart
 

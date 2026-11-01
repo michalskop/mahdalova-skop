@@ -58,3 +58,6 @@ apps/web/app/clanek/_articles/*/social/
 scripts/git-hooks/post-checkout
 scripts/git-hooks/post-commit
 scripts/git-hooks/post-merge
+
+# kontrolní náhledy generátoru coverů (vyznačené chyby kompozice), vznikají při každém renderu
+**/_cover_pipeline/_kontrola-*.png

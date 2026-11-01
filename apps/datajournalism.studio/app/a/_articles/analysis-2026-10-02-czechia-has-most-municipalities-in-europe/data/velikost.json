@@ -1,0 +1,334 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Half of Czech municipalities have fewer than 500 inhabitants, in Austria only one in twenty",
+    "subtitle": "Share of municipalities by population (%), as of 1 January 2026"
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "sk": "under 200",
+        "i": 0,
+        "zeme": "Czechia",
+        "v": 21.43,
+        "n": 1340
+      },
+      {
+        "sk": "under 200",
+        "i": 0,
+        "zeme": "Austria",
+        "v": 0.67,
+        "n": 14
+      },
+      {
+        "sk": "200–499",
+        "i": 1,
+        "zeme": "Czechia",
+        "v": 31.85,
+        "n": 1992
+      },
+      {
+        "sk": "200–499",
+        "i": 1,
+        "zeme": "Austria",
+        "v": 4.59,
+        "n": 96
+      },
+      {
+        "sk": "500–999",
+        "i": 2,
+        "zeme": "Czechia",
+        "v": 22.11,
+        "n": 1383
+      },
+      {
+        "sk": "500–999",
+        "i": 2,
+        "zeme": "Austria",
+        "v": 14.2,
+        "n": 297
+      },
+      {
+        "sk": "1,000–1,999",
+        "i": 3,
+        "zeme": "Czechia",
+        "v": 12.92,
+        "n": 808
+      },
+      {
+        "sk": "1,000–1,999",
+        "i": 3,
+        "zeme": "Austria",
+        "v": 34.56,
+        "n": 723
+      },
+      {
+        "sk": "2,000–4,999",
+        "i": 4,
+        "zeme": "Czechia",
+        "v": 7.29,
+        "n": 456
+      },
+      {
+        "sk": "2,000–4,999",
+        "i": 4,
+        "zeme": "Austria",
+        "v": 32.7,
+        "n": 684
+      },
+      {
+        "sk": "5,000–9,999",
+        "i": 5,
+        "zeme": "Czechia",
+        "v": 2.29,
+        "n": 143
+      },
+      {
+        "sk": "5,000–9,999",
+        "i": 5,
+        "zeme": "Austria",
+        "v": 9.08,
+        "n": 190
+      },
+      {
+        "sk": "10,000–49,999",
+        "i": 6,
+        "zeme": "Czechia",
+        "v": 1.82,
+        "n": 114
+      },
+      {
+        "sk": "10,000–49,999",
+        "i": 6,
+        "zeme": "Austria",
+        "v": 3.68,
+        "n": 77
+      },
+      {
+        "sk": "50,000+",
+        "i": 7,
+        "zeme": "Czechia",
+        "v": 0.29,
+        "n": 18
+      },
+      {
+        "sk": "50,000+",
+        "i": 7,
+        "zeme": "Austria",
+        "v": 0.53,
+        "n": 11
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "sk",
+      "type": "nominal",
+      "sort": [
+        "under 200",
+        "200–499",
+        "500–999",
+        "1,000–1,999",
+        "2,000–4,999",
+        "5,000–9,999",
+        "10,000–49,999",
+        "50,000+"
+      ],
+      "axis": {
+        "title": "population of municipality",
+        "labelAngle": 0,
+        "labelFontSize": 10.5
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2",
+            "labelExpr": "datum.label + '%'"
+          },
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          }
+        },
+        "xOffset": {
+          "field": "zeme",
+          "sort": [
+            "Czechia",
+            "Austria"
+          ]
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Czechia",
+              "Austria"
+            ],
+            "range": [
+              "#de1743",
+              "#06677d"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -7,
+        "fontSize": 10.5,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "xOffset": {
+          "field": "zeme",
+          "sort": [
+            "Czechia",
+            "Austria"
+          ]
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Czechia",
+              "Austria"
+            ],
+            "range": [
+              "#de1743",
+              "#06677d"
+            ]
+          },
+          "legend": {
+            "title": null
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "sk": "under 200",
+            "Czechia": "21.4% (1,340 municipalities)",
+            "Austria": "0.7% (14 municipalities)"
+          },
+          {
+            "sk": "200–499",
+            "Czechia": "31.9% (1,992 municipalities)",
+            "Austria": "4.6% (96 municipalities)"
+          },
+          {
+            "sk": "500–999",
+            "Czechia": "22.1% (1,383 municipalities)",
+            "Austria": "14.2% (297 municipalities)"
+          },
+          {
+            "sk": "1,000–1,999",
+            "Czechia": "12.9% (808 municipalities)",
+            "Austria": "34.6% (723 municipalities)"
+          },
+          {
+            "sk": "2,000–4,999",
+            "Czechia": "7.3% (456 municipalities)",
+            "Austria": "32.7% (684 municipalities)"
+          },
+          {
+            "sk": "5,000–9,999",
+            "Czechia": "2.3% (143 municipalities)",
+            "Austria": "9.1% (190 municipalities)"
+          },
+          {
+            "sk": "10,000–49,999",
+            "Czechia": "1.8% (114 municipalities)",
+            "Austria": "3.7% (77 municipalities)"
+          },
+          {
+            "sk": "50,000+",
+            "Czechia": "0.3% (18 municipalities)",
+            "Austria": "0.5% (11 municipalities)"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hov",
+          "select": {
+            "type": "point",
+            "fields": [
+              "sk"
+            ],
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "fill": "#101432",
+        "cursor": "default"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        },
+        "y2": {
+          "datum": 40
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hov",
+            "empty": false,
+            "value": 0.06
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "sk",
+            "title": "Population of municipality"
+          },
+          {
+            "field": "Czechia",
+            "title": "Czechia"
+          },
+          {
+            "field": "Austria",
+            "title": "Austria"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "ČSÚ (Czech Statistical Office) – population of municipalities on 1 January 2026 (dataset OBY02A, excluding military training areas); Statistik Austria – Gemeindeverzeichnis 2026"
+}

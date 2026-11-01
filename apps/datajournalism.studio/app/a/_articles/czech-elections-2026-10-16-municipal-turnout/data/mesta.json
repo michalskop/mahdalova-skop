@@ -1,0 +1,1027 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Turnout fell mainly in towns where the fewest people had voted in 2022",
+  "subtitle": "99 towns with 10,000 or more voters: turnout in the 2022 municipal elections (%) and its change by 2026 (pp)"
+ },
+ "width": 560,
+ "height": 420,
+ "data": {
+  "values": [
+   {
+    "obec": "Sokolov",
+    "okres": "Sokolov",
+    "u22": 34.3,
+    "u26": 29.6,
+    "zmena": -4.7,
+    "smer": "fell",
+    "popis": "Sokolov"
+   },
+   {
+    "obec": "Orlová",
+    "okres": "Karviná",
+    "u22": 31.6,
+    "u26": 27.7,
+    "zmena": -3.9,
+    "smer": "fell",
+    "popis": "Orlová"
+   },
+   {
+    "obec": "Havířov",
+    "okres": "Karviná",
+    "u22": 34.5,
+    "u26": 30.9,
+    "zmena": -3.6,
+    "smer": "fell",
+    "popis": "Havířov"
+   },
+   {
+    "obec": "Bohumín",
+    "okres": "Karviná",
+    "u22": 37.8,
+    "u26": 34.3,
+    "zmena": -3.5,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Varnsdorf",
+    "okres": "Děčín",
+    "u22": 37.8,
+    "u26": 34.5,
+    "zmena": -3.3,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Kroměříž",
+    "okres": "Kroměříž",
+    "u22": 45.8,
+    "u26": 42.6,
+    "zmena": -3.1,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Bílina",
+    "okres": "Teplice",
+    "u22": 34.8,
+    "u26": 31.7,
+    "zmena": -3.1,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Louny",
+    "okres": "Louny",
+    "u22": 40.2,
+    "u26": 37.2,
+    "zmena": -3.0,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Chomutov",
+    "okres": "Chomutov",
+    "u22": 31.4,
+    "u26": 28.5,
+    "zmena": -3.0,
+    "smer": "fell",
+    "popis": "Chomutov"
+   },
+   {
+    "obec": "Jihlava",
+    "okres": "Jihlava",
+    "u22": 44.2,
+    "u26": 41.2,
+    "zmena": -3.0,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Krupka",
+    "okres": "Teplice",
+    "u22": 43.6,
+    "u26": 40.7,
+    "zmena": -2.9,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Bruntál",
+    "okres": "Bruntál",
+    "u22": 36.3,
+    "u26": 33.5,
+    "zmena": -2.8,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Otrokovice",
+    "okres": "Zlín",
+    "u22": 41.4,
+    "u26": 38.6,
+    "zmena": -2.7,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Karviná",
+    "okres": "Karviná",
+    "u22": 35.3,
+    "u26": 32.5,
+    "zmena": -2.7,
+    "smer": "fell",
+    "popis": "Karviná"
+   },
+   {
+    "obec": "Ostrov",
+    "okres": "Karlovy Vary",
+    "u22": 40.7,
+    "u26": 38.0,
+    "zmena": -2.7,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Jirkov",
+    "okres": "Chomutov",
+    "u22": 30.1,
+    "u26": 27.5,
+    "zmena": -2.6,
+    "smer": "fell",
+    "popis": "Jirkov"
+   },
+   {
+    "obec": "Hodonín",
+    "okres": "Hodonín",
+    "u22": 36.5,
+    "u26": 34.1,
+    "zmena": -2.4,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Krnov",
+    "okres": "Bruntál",
+    "u22": 40.2,
+    "u26": 37.8,
+    "zmena": -2.4,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Karlovy Vary",
+    "okres": "Karlovy Vary",
+    "u22": 37.7,
+    "u26": 35.3,
+    "zmena": -2.4,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Uherský Brod",
+    "okres": "Uherské Hradiště",
+    "u22": 45.1,
+    "u26": 42.8,
+    "zmena": -2.4,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Šternberk",
+    "okres": "Olomouc",
+    "u22": 39.2,
+    "u26": 36.9,
+    "zmena": -2.3,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Teplice",
+    "okres": "Teplice",
+    "u22": 34.1,
+    "u26": 31.9,
+    "zmena": -2.2,
+    "smer": "fell",
+    "popis": "Teplice"
+   },
+   {
+    "obec": "Most",
+    "okres": "Most",
+    "u22": 32.0,
+    "u26": 29.9,
+    "zmena": -2.1,
+    "smer": "fell",
+    "popis": "Most"
+   },
+   {
+    "obec": "Cheb",
+    "okres": "Cheb",
+    "u22": 35.2,
+    "u26": 33.2,
+    "zmena": -2.0,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Česká Třebová",
+    "okres": "Ústí nad Orlicí",
+    "u22": 42.5,
+    "u26": 40.7,
+    "zmena": -1.8,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Přerov",
+    "okres": "Přerov",
+    "u22": 39.5,
+    "u26": 38.0,
+    "zmena": -1.6,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Klášterec nad Ohří",
+    "okres": "Chomutov",
+    "u22": 34.7,
+    "u26": 33.4,
+    "zmena": -1.3,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Olomouc",
+    "okres": "Olomouc",
+    "u22": 39.8,
+    "u26": 38.6,
+    "zmena": -1.2,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Děčín",
+    "okres": "Děčín",
+    "u22": 36.3,
+    "u26": 35.4,
+    "zmena": -0.9,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Prostějov",
+    "okres": "Prostějov",
+    "u22": 39.5,
+    "u26": 38.6,
+    "zmena": -0.9,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Pardubice",
+    "okres": "Pardubice",
+    "u22": 40.9,
+    "u26": 40.2,
+    "zmena": -0.7,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Říčany",
+    "okres": "Praha-východ",
+    "u22": 51.1,
+    "u26": 50.4,
+    "zmena": -0.6,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Jablonec nad Nisou",
+    "okres": "Jablonec nad Nisou",
+    "u22": 39.0,
+    "u26": 38.5,
+    "zmena": -0.4,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Ostrava",
+    "okres": "Ostrava-město",
+    "u22": 35.5,
+    "u26": 35.0,
+    "zmena": -0.4,
+    "smer": "fell",
+    "popis": "Ostrava"
+   },
+   {
+    "obec": "Valašské Meziříčí",
+    "okres": "Vsetín",
+    "u22": 45.7,
+    "u26": 45.3,
+    "zmena": -0.4,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Litoměřice",
+    "okres": "Litoměřice",
+    "u22": 42.4,
+    "u26": 42.1,
+    "zmena": -0.3,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Česká Lípa",
+    "okres": "Česká Lípa",
+    "u22": 33.7,
+    "u26": 33.4,
+    "zmena": -0.3,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Žatec",
+    "okres": "Louny",
+    "u22": 36.5,
+    "u26": 36.2,
+    "zmena": -0.3,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Náchod",
+    "okres": "Náchod",
+    "u22": 46.3,
+    "u26": 46.0,
+    "zmena": -0.3,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Mladá Boleslav",
+    "okres": "Mladá Boleslav",
+    "u22": 38.9,
+    "u26": 38.6,
+    "zmena": -0.2,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Liberec",
+    "okres": "Liberec",
+    "u22": 40.9,
+    "u26": 40.6,
+    "zmena": -0.2,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Znojmo",
+    "okres": "Znojmo",
+    "u22": 42.7,
+    "u26": 42.7,
+    "zmena": -0.1,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Břeclav",
+    "okres": "Břeclav",
+    "u22": 40.2,
+    "u26": 40.1,
+    "zmena": -0.1,
+    "smer": "fell",
+    "popis": ""
+   },
+   {
+    "obec": "Ústí nad Labem",
+    "okres": "Ústí nad Labem",
+    "u22": 35.0,
+    "u26": 35.0,
+    "zmena": -0.0,
+    "smer": "fell",
+    "popis": "Ústí nad Labem"
+   },
+   {
+    "obec": "Kladno",
+    "okres": "Kladno",
+    "u22": 37.1,
+    "u26": 37.2,
+    "zmena": 0.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Litvínov",
+    "okres": "Most",
+    "u22": 34.2,
+    "u26": 34.2,
+    "zmena": 0.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Chodov",
+    "okres": "Sokolov",
+    "u22": 30.2,
+    "u26": 30.3,
+    "zmena": 0.1,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Ústí nad Orlicí",
+    "okres": "Ústí nad Orlicí",
+    "u22": 46.2,
+    "u26": 46.4,
+    "zmena": 0.1,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Beroun",
+    "okres": "Beroun",
+    "u22": 40.9,
+    "u26": 41.1,
+    "zmena": 0.2,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Šumperk",
+    "okres": "Šumperk",
+    "u22": 38.2,
+    "u26": 38.6,
+    "zmena": 0.5,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Brandýs nad Labem-Stará Boleslav",
+    "okres": "Praha-východ",
+    "u22": 44.1,
+    "u26": 44.6,
+    "zmena": 0.6,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Kutná Hora",
+    "okres": "Kutná Hora",
+    "u22": 40.7,
+    "u26": 41.6,
+    "zmena": 0.9,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Rokycany",
+    "okres": "Rokycany",
+    "u22": 40.5,
+    "u26": 41.4,
+    "zmena": 0.9,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Jičín",
+    "okres": "Jičín",
+    "u22": 46.7,
+    "u26": 47.6,
+    "zmena": 0.9,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Hlučín",
+    "okres": "Opava",
+    "u22": 46.4,
+    "u26": 47.3,
+    "zmena": 0.9,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Chrudim",
+    "okres": "Chrudim",
+    "u22": 43.8,
+    "u26": 44.8,
+    "zmena": 0.9,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Trutnov",
+    "okres": "Trutnov",
+    "u22": 40.0,
+    "u26": 41.0,
+    "zmena": 1.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Nový Jičín",
+    "okres": "Nový Jičín",
+    "u22": 41.4,
+    "u26": 42.4,
+    "zmena": 1.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Slaný",
+    "okres": "Kladno",
+    "u22": 41.0,
+    "u26": 42.1,
+    "zmena": 1.1,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Benešov",
+    "okres": "Benešov",
+    "u22": 43.1,
+    "u26": 44.2,
+    "zmena": 1.1,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Vsetín",
+    "okres": "Vsetín",
+    "u22": 42.9,
+    "u26": 44.0,
+    "zmena": 1.1,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Český Těšín",
+    "okres": "Karviná",
+    "u22": 39.2,
+    "u26": 40.4,
+    "zmena": 1.2,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Příbram",
+    "okres": "Příbram",
+    "u22": 38.4,
+    "u26": 39.6,
+    "zmena": 1.2,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Turnov",
+    "okres": "Semily",
+    "u22": 44.0,
+    "u26": 45.3,
+    "zmena": 1.4,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Svitavy",
+    "okres": "Svitavy",
+    "u22": 37.5,
+    "u26": 39.0,
+    "zmena": 1.5,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "České Budějovice",
+    "okres": "České Budějovice",
+    "u22": 39.2,
+    "u26": 40.8,
+    "zmena": 1.5,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Písek",
+    "okres": "Písek",
+    "u22": 39.2,
+    "u26": 40.8,
+    "zmena": 1.6,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Kadaň",
+    "okres": "Chomutov",
+    "u22": 33.3,
+    "u26": 35.0,
+    "zmena": 1.7,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Jindřichův Hradec",
+    "okres": "Jindřichův Hradec",
+    "u22": 42.3,
+    "u26": 44.2,
+    "zmena": 2.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Praha",
+    "okres": "Hlavní město Praha",
+    "u22": 43.9,
+    "u26": 46.0,
+    "zmena": 2.1,
+    "smer": "rose",
+    "popis": "Praha"
+   },
+   {
+    "obec": "Brno",
+    "okres": "Brno-město",
+    "u22": 41.9,
+    "u26": 44.1,
+    "zmena": 2.2,
+    "smer": "rose",
+    "popis": "Brno"
+   },
+   {
+    "obec": "Klatovy",
+    "okres": "Klatovy",
+    "u22": 41.7,
+    "u26": 44.0,
+    "zmena": 2.4,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Blansko",
+    "okres": "Blansko",
+    "u22": 46.8,
+    "u26": 49.1,
+    "zmena": 2.4,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Kopřivnice",
+    "okres": "Nový Jičín",
+    "u22": 40.0,
+    "u26": 42.4,
+    "zmena": 2.5,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Plzeň",
+    "okres": "Plzeň-město",
+    "u22": 39.2,
+    "u26": 41.7,
+    "zmena": 2.6,
+    "smer": "rose",
+    "popis": "Plzeň"
+   },
+   {
+    "obec": "Uherské Hradiště",
+    "okres": "Uherské Hradiště",
+    "u22": 44.3,
+    "u26": 46.9,
+    "zmena": 2.6,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Zlín",
+    "okres": "Zlín",
+    "u22": 43.0,
+    "u26": 45.6,
+    "zmena": 2.6,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Rakovník",
+    "okres": "Rakovník",
+    "u22": 37.8,
+    "u26": 40.5,
+    "zmena": 2.6,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Vyškov",
+    "okres": "Vyškov",
+    "u22": 41.7,
+    "u26": 44.4,
+    "zmena": 2.7,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Kolín",
+    "okres": "Kolín",
+    "u22": 38.5,
+    "u26": 41.3,
+    "zmena": 2.8,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Hradec Králové",
+    "okres": "Hradec Králové",
+    "u22": 42.2,
+    "u26": 45.1,
+    "zmena": 2.9,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Poděbrady",
+    "okres": "Nymburk",
+    "u22": 50.1,
+    "u26": 53.1,
+    "zmena": 3.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Frýdek-Místek",
+    "okres": "Frýdek-Místek",
+    "u22": 37.0,
+    "u26": 40.0,
+    "zmena": 3.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Neratovice",
+    "okres": "Mělník",
+    "u22": 34.9,
+    "u26": 38.0,
+    "zmena": 3.1,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Kralupy nad Vltavou",
+    "okres": "Mělník",
+    "u22": 38.2,
+    "u26": 41.4,
+    "zmena": 3.2,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Hranice",
+    "okres": "Přerov",
+    "u22": 38.1,
+    "u26": 41.4,
+    "zmena": 3.3,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Třinec",
+    "okres": "Frýdek-Místek",
+    "u22": 34.9,
+    "u26": 38.3,
+    "zmena": 3.3,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Mělník",
+    "okres": "Mělník",
+    "u22": 40.5,
+    "u26": 43.9,
+    "zmena": 3.4,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Třebíč",
+    "okres": "Třebíč",
+    "u22": 42.2,
+    "u26": 45.6,
+    "zmena": 3.4,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Dvůr Králové nad Labem",
+    "okres": "Trutnov",
+    "u22": 41.6,
+    "u26": 45.1,
+    "zmena": 3.5,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Tábor",
+    "okres": "Tábor",
+    "u22": 40.3,
+    "u26": 43.8,
+    "zmena": 3.5,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Strakonice",
+    "okres": "Strakonice",
+    "u22": 42.8,
+    "u26": 46.3,
+    "zmena": 3.5,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Zábřeh",
+    "okres": "Šumperk",
+    "u22": 42.0,
+    "u26": 46.0,
+    "zmena": 4.0,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Opava",
+    "okres": "Opava",
+    "u22": 39.8,
+    "u26": 43.9,
+    "zmena": 4.1,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Havlíčkův Brod",
+    "okres": "Havlíčkův Brod",
+    "u22": 42.5,
+    "u26": 46.7,
+    "zmena": 4.2,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Rožnov pod Radhoštěm",
+    "okres": "Vsetín",
+    "u22": 42.5,
+    "u26": 46.8,
+    "zmena": 4.2,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Pelhřimov",
+    "okres": "Pelhřimov",
+    "u22": 45.8,
+    "u26": 50.1,
+    "zmena": 4.3,
+    "smer": "rose",
+    "popis": ""
+   },
+   {
+    "obec": "Nymburk",
+    "okres": "Nymburk",
+    "u22": 45.3,
+    "u26": 50.5,
+    "zmena": 5.2,
+    "smer": "rose",
+    "popis": "Nymburk"
+   },
+   {
+    "obec": "Žďár nad Sázavou",
+    "okres": "Žďár nad Sázavou",
+    "u22": 41.8,
+    "u26": 47.6,
+    "zmena": 5.9,
+    "smer": "rose",
+    "popis": "Žďár nad Sázavou"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "rule",
+    "color": "#6267a3",
+    "strokeDash": [
+     4,
+     3
+    ]
+   },
+   "encoding": {
+    "y": {
+     "datum": 0
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 70,
+    "opacity": 0.9,
+    "stroke": "#ffffff",
+    "strokeWidth": 0.6
+   },
+   "encoding": {
+    "x": {
+     "field": "u22",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       28,
+       52
+      ]
+     },
+     "axis": {
+      "title": "Turnout 2022 (%)"
+     }
+    },
+    "y": {
+     "field": "zmena",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -6,
+       7
+      ]
+     },
+     "axis": {
+      "title": "Change in turnout 2022–2026 (pp)"
+     }
+    },
+    "color": {
+     "field": "smer",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "rose",
+       "fell"
+      ],
+      "range": [
+       "#6ec53f",
+       "#ff1a4a"
+      ]
+     },
+     "legend": {
+      "title": "Turnout"
+     }
+    },
+    "tooltip": [
+     {
+      "field": "obec",
+      "title": "Municipality"
+     },
+     {
+      "field": "okres",
+      "title": "District"
+     },
+     {
+      "field": "u22",
+      "title": "Turnout 2022 (%)"
+     },
+     {
+      "field": "u26",
+      "title": "Turnout 2026 (%)"
+     },
+     {
+      "field": "zmena",
+      "title": "Change (pp)"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 6,
+    "dy": -6,
+    "fontSize": 11,
+    "color": "#101432"
+   },
+   "transform": [
+    {
+     "filter": "datum.popis != ''"
+    }
+   ],
+   "encoding": {
+    "x": {
+     "field": "u22",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "zmena",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "popis"
+    }
+   }
+  }
+ ],
+ "_source": "Czech Statistical Office (ČSÚ), open data on the 2022 and 2026 municipal elections (volby.gov.cz); calculations by DataTimes.cz"
+}

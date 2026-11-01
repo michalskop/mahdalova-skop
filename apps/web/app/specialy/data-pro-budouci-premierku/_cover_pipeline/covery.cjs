@@ -26,6 +26,7 @@ const DETI = uri(path.join(PODKLADY, 'deti-na-bodech-grafu.png'), 'image/png');
 const typo = (s) => s
   .replace(/(^|[\s>])([vkszouaiVKSZOUAI]) /g, '$1$2&nbsp;')
   .replace(/([A-Za-zÁ-ž]) (\d)/g, '$1&nbsp;$2')
+  .replace(/(\d)–(\d)/g, '$1⁠–⁠$2')
   .replace(/(\d) (%|žen|dětí|let|mil\.|tis\.|tisíc|milionů|milionu)/g, '$1&nbsp;$2');
 
 // ---------- formáty (bezpečné zóny podle COVER-EDITOR.md) ----------
@@ -44,15 +45,15 @@ const svgWrap = (w, h, inner) => `<svg width="${w}" height="${h}" viewBox="0 0 $
 const fsOf = (w) => Math.max(20, Math.min(40, w * 0.032));
 
 function lineChart(w, h, { x, y, serie, ticks, ref }) {
-  const f = fsOf(w), L = f * 1.2, R = f * 7, Tp = f * 1.2, B = f * 2.6;
+  const f = fsOf(w), L = f * 2.2, R = f * 0.6, Tp = f * 1.4, B = f * 2.6;
   const px = (v) => L + ((v - x[0]) / (x[1] - x[0])) * (w - L - R), py = (v) => Tp + (1 - (v - y[0]) / (y[1] - y[0])) * (h - Tp - B);
   let s = `<line x1="${L}" x2="${w - R * 0.4}" y1="${py(y[0])}" y2="${py(y[0])}" stroke="${BILA}" stroke-opacity=".35" stroke-width="2"/>`;
   if (ref) s += `<line x1="${L}" x2="${w - R * 0.4}" y1="${py(ref.y)}" y2="${py(ref.y)}" stroke="${ZLU}" stroke-width="${f * 0.14}" stroke-dasharray="${f * 0.6} ${f * 0.4}"/>` + T(w - R * 0.4, py(ref.y) - f * 0.5, ref.t, 'end', ZLU, f * 0.95, 700);
-  for (const [tx, tt] of ticks) s += T(px(tx), py(y[0]) + f * 1.6, tt, 'middle', BILA, f * 0.9, 500);
+  ticks.forEach(([tx, tt], i) => { s += T(px(tx), py(y[0]) + f * 1.6, tt, i === 0 ? 'start' : i === ticks.length - 1 ? 'end' : 'middle', BILA, f * 0.9, 500); });
   for (const se of serie) {
     const pts = se.body.map(([a, b]) => [px(a), py(b)]);
     s += `<polyline points="${pts.map((p) => p.map((v) => v.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="${se.barva}" stroke-width="${f * 0.42}" stroke-linejoin="round" stroke-linecap="round"/>`;
-    pts.forEach(([a, b], i) => { s += C(a, b, f * 0.55, se.barva, ` stroke="${NAVY}" stroke-width="${f * 0.16}"`); const lab = se.popisky?.[i]; if (lab) s += T(a + (lab[1] === 'r' ? f * 1.0 : lab[1] === 'l' ? -f * 1.0 : 0), b + (lab[1] === 'd' ? f * 1.95 : lab[1] === 'r' || lab[1] === 'l' ? f * 0.4 : -f * 1.0), lab[0], lab[1] === 'r' ? 'start' : lab[1] === 'l' ? 'end' : 'middle', BILA, f * 1.25, 700); });
+    pts.forEach(([a, b], i) => { s += C(a, b, f * 0.55, se.barva, ` stroke="${NAVY}" stroke-width="${f * 0.16}"`); const lab = se.popisky?.[i]; if (lab) s += T(a + (lab[1] === 'r' ? f * 1.0 : lab[1] === 'l' ? -f * 1.0 : lab[1].endsWith('e') ? f * 0.4 : 0), b + (lab[1] === 'd' || lab[1] === 'de' ? f * 1.95 : lab[1] === 'r' || lab[1] === 'l' ? f * 0.4 : -f * 1.0), lab[0], lab[1] === 'r' ? 'start' : lab[1] === 'l' || lab[1].endsWith('e') ? 'end' : 'middle', BILA, f * 1.25, 700); });
   }
   return svgWrap(w, h, s);
 }
@@ -79,44 +80,57 @@ const MOTIVY = {
     s += `<text font-family="IBM Plex Sans" font-size="${f * 1.05}" font-weight="600" fill="${BILA}"><tspan x="${gx}" y="${k * rows + f * 1.6}"><tspan fill="${CORAL}">●</tspan> dnes: 128 dětí na 100 žen</tspan><tspan x="${gx}" y="${k * rows + f * 3.0}"><tspan fill-opacity=".8">○</tspan> k obnově populace: 210 dětí na 100 žen</tspan></text>`;
     return svgWrap(w, h, s);
   },
-  // 03: Togo × Česko (tabulka OSN v článku), mil. obyvatel
+  // 03: Togo 8,4 → 14,0 mil., Česko 10,9 → 10,7 mil. (OSN, ČSÚ; článek 03)
   krizeni(w, h) {
     const f = fsOf(w);
-    return lineChart(w, h - f * 1.6, { x: [1996, 2058], y: [0, 18], ticks: [[2000, '2000'], [2024, '2024'], [2050, '2050']],
-      serie: [{ body: [[2000, 5.1], [2024, 9.5], [2050, 16]], barva: CORAL, popisky: [null, null, ['Togo 16', 'r']] },
-        { body: [[2000, 10.2], [2024, 10.7], [2050, 9.8]], barva: MOD, popisky: [null, null, ['Česko 9,8', 'r']] }] })
-      .replace('</svg>', `<text x="0" y="${h - f * 0.2}" font-family="IBM Plex Sans" font-weight="500" font-size="${f * 0.9}" fill="${BILA}" fill-opacity=".85">obyvatel v milionech, odhad OSN</text></svg>`).replace(/height="\d+" viewBox="0 0 (\d+) \d+"/, `height="${h}" viewBox="0 0 $1 ${h}"`);
+    return lineChart(w, h - f * 1.6, { x: [2024, 2050], y: [5, 15.5], ticks: [[2024, '2024'], [2050, '2050']],
+      serie: [{ body: [[2024, 8.4], [2050, 14.0]], barva: CORAL, popisky: [['8,4', 'd'], ['Togo 14,0', 'ue']] },
+        { body: [[2024, 10.9], [2050, 10.7]], barva: MOD, popisky: [['10,9', 'u'], ['Česko 10,7', 'de']] }] })
+      .replace('</svg>', `<text x="0" y="${h - f * 0.2}" font-family="IBM Plex Sans" font-weight="500" font-size="${f * 0.9}" fill="${BILA}" fill-opacity=".85">obyvatel v milionech, projekce OSN a ČSÚ</text></svg>`).replace(/height="\d+" viewBox="0 0 (\d+) \d+"/, `height="${h}" viewBox="0 0 $1 ${h}"`);
   },
-  // 04: Švédsko 2010 1,97 → 2023 1,45, hranice obnovy 2,1
-  sklon(w, h) {
-    return lineChart(w, h, { x: [1998, 2026], y: [1.0, 2.45], ticks: [[2000, '2000'], [2010, '2010'], [2023, '2023']], ref: { y: 2.1, t: 'hranice obnovy populace: 2,1' },
-      serie: [{ body: [[2000, 1.5], [2010, 1.97], [2023, 1.45]], barva: CORAL, popisky: [['1,50', 'd'], ['1,97', 'd'], ['1,45', 'd']] }] });
+  // hantle: jedna řada = země; prázdný bod = začátek (vyšší hodnota vlevo), plný bod = konec (pokles doprava); hodnoty vně bodů; plná šířka
+  hantle(w, h, spec) {
+    const f = fsOf(w), n = spec.rady.length, Lname = f * 7.2, V = f * 3.2, lane = Math.min(f * 3.3, (h - f * 1.8) / n), fl = f * 0.78;
+    const vals = spec.rady.flatMap((r) => [r.a, r.b]), lo = Math.min(...vals), hi = Math.max(...vals);
+    const x = (v) => Lname + V + ((hi - v) / (hi - lo)) * (w - Lname - 2 * V);
+    const tot = f * 1.8 + lane * n, y0 = Math.max(0, (h - tot) * 0.3);
+    const l2 = fl * 0.55 + fl * 0.92 * spec.hlavicka[0].length * 0.56 + fl * 1.6; // druhá položka legendy hned za první
+    let s = C(fl * 0.5, y0 + fl * 0.8, fl * 0.42, NAVY, ` stroke="${BILA}" stroke-width="${fl * 0.14}"`) + T(fl * 1.3, y0 + fl * 1.1, spec.hlavicka[0], 'start', BILA, fl, 600)
+      + C(fl * 0.5 + l2, y0 + fl * 0.8, fl * 0.42, BILA) + T(fl * 1.3 + l2, y0 + fl * 1.1, spec.hlavicka[1], 'start', BILA, fl, 600);
+    spec.rady.forEach((r, i) => {
+      const cy = y0 + f * 1.8 + lane * (i + 0.5), col = r.barva || CORAL;
+      s += T(0, cy + f * 0.4, r.n, 'start', BILA, f * 1.1, 700);
+      s += `<line x1="${x(r.a)}" x2="${x(r.b)}" y1="${cy}" y2="${cy}" stroke="${col}" stroke-width="${f * 0.34}" stroke-linecap="round"/>`;
+      s += C(x(r.a), cy, f * 0.68, NAVY, ` stroke="${col}" stroke-width="${f * 0.22}"`) + C(x(r.b), cy, f * 0.68, col, ` stroke="${NAVY}" stroke-width="${f * 0.14}"`);
+      s += T(x(r.a) - f * 1.0, cy + f * 0.4, String(r.a).replace('.', ','), 'end', BILA, f * 1.05, 700) + T(x(r.b) + f * 1.0, cy + f * 0.4, String(r.b).replace('.', ','), 'start', BILA, f * 1.05, 700);
+    });
+    return svgWrap(w, h, s);
   },
-  // 05: věk matky při prvním dítěti: necelých 22 (1990) → přes 30 (dnes), posun o více než osm let
+  // 05: průměrný věk matky při prvním dítěti 22,5 (1990) → 29,2 (2025), posun o 6,7 roku (ČSÚ, článek 05)
   vek(w, h) {
-    const f = fsOf(w), n = 9, d = Math.min((w * 0.94) / n, h * 0.5), x0 = (w - d * n) / 2, cy = h * 0.5;
+    const f = fsOf(w), n = 8, d = Math.min((w * 0.94) / n, h * 0.5), x0 = (w - d * n) / 2, cy = h * 0.5;
     let s = '';
     for (let i = 0; i < n; i++) {
       const krajni = i === 0 || i === n - 1, cx = x0 + (i + 0.5) * d;
-      s += krajni ? C(cx, cy, d * 0.42, CRIMSON) : C(cx, cy, d * 0.38, 'none', ` stroke="${BILA}" stroke-opacity=".6" stroke-width="${Math.max(2, d * 0.05)}"`);
-      s += `<text x="${cx.toFixed(1)}" y="${(cy + d * 0.12).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="${(d * 0.34).toFixed(1)}" fill="${BILA}" fill-opacity="${krajni ? 1 : 0.8}">${22 + i}</text>`;
+      s += krajni ? C(cx, cy, d * 0.45, CRIMSON) : C(cx, cy, d * 0.32, 'none', ` stroke="${BILA}" stroke-opacity=".5" stroke-width="${Math.max(2, d * 0.05)}"`);
+      if (krajni) s += `<text x="${cx.toFixed(1)}" y="${(cy + d * 0.12).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Sans" font-weight="700" font-size="${(d * 0.3).toFixed(1)}" fill="${BILA}">${i === 0 ? '22,5' : '29,2'}</text>`;
     }
-    s += T(x0 + d * 0.5, cy + d * 0.62 + f * 1.3, 'kolem 1990', 'middle', BILA, f * 0.95, 600) + T(x0 + d * 8.5, cy + d * 0.62 + f * 1.3, 'dnes', 'middle', BILA, f * 0.95, 600);
-    s += T(w / 2, cy - d * 0.62, '+ 8 let', 'middle', ZLU, f * 1.5, 700);
+    s += T(x0 + d * 0.5, cy + d * 0.62 + f * 1.3, '1990', 'middle', BILA, f * 0.95, 600) + T(x0 + d * (n - 0.5), cy + d * 0.62 + f * 1.3, '2025', 'middle', BILA, f * 0.95, 600);
+    s += T(w / 2, cy - d * 0.62, '+ 6,7 roku', 'middle', ZLU, f * 1.5, 700);
     return svgWrap(w, h, s);
   },
-  // 16: seniorů (65+) a lidí ve věku 15–64: 10 + 31 (2023), 10 + 18 (2040)
+  // 16: lidí ve věku 15–64 na jednoho seniora 65+: 3,1 (2023), 2,5 (2040), 2,0 (2050); projekce ČSÚ 2023–2100
   rady(w, h) {
     const f = fsOf(w), Lm = f * 3.6, Rm = f * 5.2, N = 41, d = Math.min((w - Lm - Rm) / N, h / 4.2);
     let s = '';
-    [['2023', 10, 31, '1 : 3,1'], ['2040', 10, 18, '1 : 1,8']].forEach(([rok, a, b, pom], i) => {
-      const cy = h * (0.2 + 0.28 * i);
+    [['2023', 10, 31, '1 : 3,1'], ['2040', 10, 25, '1 : 2,5'], ['2050', 10, 20, '1 : 2,0']].forEach(([rok, a, b, pom], i) => {
+      const cy = h * (0.14 + 0.22 * i);
       for (let k = 0; k < N; k++) s += C(Lm + (k + 0.5) * d, cy, d * 0.36, 'none', ` stroke="${SED}" stroke-width="${Math.max(1.5, d * 0.06)}" stroke-opacity=".8"`);
       for (let k = 0; k < a + b; k++) s += C(Lm + (k + 0.5) * d, cy, d * 0.4, k < a ? ZLU : MOD);
       s += T(0, cy + f * 0.4, rok, 'start', BILA, f * 1.2, 700) + T(Lm + N * d + f * 0.8, cy + f * 0.45, pom, 'start', ZLU, f * 1.35, 700);
     });
-    s += `<text x="${Lm}" y="${h * 0.8}" font-family="IBM Plex Sans" font-weight="600" font-size="${f}" fill="${BILA}"><tspan fill="${ZLU}">●</tspan> senioři 65+ &#160;&#160;<tspan fill="${MOD}">●</tspan> lidé ve věku 15–64</text>`;
-    return svgWrap(w, h * 0.88, s);
+    s += `<text x="${Lm}" y="${h * 0.78}" font-family="IBM Plex Sans" font-weight="600" font-size="${f}" fill="${BILA}"><tspan fill="${ZLU}">●</tspan> senioři 65+ &#160;&#160;<tspan fill="${MOD}">●</tspan> lidé ve věku 15–64</text>`;
+    return svgWrap(w, h * 0.86, s);
   },
   // 11: tečkovaná mapa ČR, šipky (ne kolečka): Karviná −12 %, Říčany +30 %
   mapa(w, h) {
@@ -135,18 +149,53 @@ const MOTIVY = {
       return g + T(tx, y - f * 0.05, nazev, an, BILA, f * 1.05, 700) + T(tx, y + f * 1.2, pct, an, barva, f * 1.35, 700);
     };
     const [kx_, ky_] = P(18.5369, 49.8546), [rx, ry] = P(14.6544, 49.9918);
-    s += sip(kx_, ky_, true, CORAL, 'Karviná', '−12 %', true) + sip(rx, ry, false, ZLU, 'Říčany', '+30 %', true);
+    s += sip(kx_, ky_, true, CORAL, 'Karviná', '−20 %', true) + sip(rx, ry, false, ZLU, 'Říčany', '+47 %', true);
     return svgWrap(w, h, s);
   },
-  // 10: podíl vysokoškolaček 12 % (1991) → 32 % (2021), 1 tečka = 1 %
-  dvewaffle(w, h) {
-    const f = fsOf(w), k = Math.min((w * 0.44) / 10, (h - f * 4.2) / 10), gap = w * 0.08, gw = k * 10, x0 = (w - 2 * gw - gap) / 2;
-    let s = '';
-    [[1991, 12], [2021, 32]].forEach(([rok, n], j) => {
-      const gx = x0 + j * (gw + gap);
-      for (let i = 0; i < 100; i++) { const cx = gx + (i % 10 + 0.5) * k, cy = k * 10 - (Math.floor(i / 10) + 0.5) * k; s += i < n ? C(cx, cy, k * 0.4, CRIMSON) : C(cx, cy, k * 0.3, SED, ' opacity=".55"'); }
-      s += T(gx + gw / 2, k * 10 + f * 1.5, String(rok), 'middle', BILA, f, 600) + T(gx + gw / 2, k * 10 + f * 3.1, n + ' %', 'middle', CORAL, f * 1.6, 700);
+  // 10: děti na ženu podle vzdělání (SLDB 2021, tabulka v článku): 45–49 let maturita 1,77 / vysoká škola 1,75; 30–34 let 1,10 / 0,89; 1 kolečko = 1 dítě
+  dvewaffle(w, h, spec) {
+    // tabulka o čtyřech sloupcích: věk (barva kapitoly) | vzdělání | dvě kolečka (1 kolečko = 1 dítě) | hodnota; jedna velikost písma, jedna barva dat
+    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, nPan = spec.panely.length, nR = nPan * 2, mez = f * 2.4;
+    const rh = Math.min((h - (nPan - 1) * mez) / nR, f * 3.8), d = rh * 0.86;
+    const ageW = f * 5.2, eduW = f * 9.2, valW = f * 3.8, g = Math.min((w - ageW - eduW - 2 * d - valW) / 3, f * 5);
+    const xE = ageW + g, xD = xE + eduW + g, xV = xD + 2 * d + g * 0.6;
+    const hTot = nR * rh + (nPan - 1) * mez, y0 = Math.max(0, (h - hTot) / 2);
+    let s = '', id = 0;
+    spec.panely.forEach((p, j) => {
+      const yy = y0 + j * (2 * rh + mez);
+      s += T(0, yy + rh + fz * 0.35, p.nazev, 'start', CRIMSON, fz, 700);
+      p.rady.forEach((r, i) => {
+        const cy = yy + rh * (i + 0.5);
+        s += T(xE, cy + fz * 0.35, r.n, 'start', BILA, fz, 600);
+        for (let k = 0; k < 2; k++) {
+          const cx = xD + (k + 0.5) * d, podil = Math.max(0, Math.min(1, r.v - k));
+          s += C(cx, cy, d * 0.42, 'none', ` stroke="${SED}" stroke-width="${Math.max(1.5, d * 0.05)}" stroke-opacity=".6"`);
+          if (podil > 0) { const cid = 'kl' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.42}" y="${cy - d * 0.42}" width="${d * 0.84 * podil}" height="${d * 0.84}"/></clipPath><g clip-path="url(#${cid})">${C(cx, cy, d * 0.42, TYRK)}</g>`; }
+        }
+        s += T(xV, cy + fz * 0.35, r.v.toFixed(2).replace('.', ','), 'start', TYRK, fz, 700);
+      });
     });
+    return svgWrap(w, h, s);
+  },
+  // 19: dětí na jednu ženu (1,37) a na jednoho muže (1,23; ČSÚ 2024, vlastní výpočet) vs. 2,1 k obnově; 1 kolečko = 1 dítě
+  kolecka(w, h, spec) {
+    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, N = 3, mez = f * 1.0, lg = f * 1.9;
+    const nR = spec.rady.length, rh = Math.min((h - lg - mez) / nR, f * 3.8), d = rh * 0.86;
+    const eduW = f * 10.2, valW = f * 3.6, g = Math.min((w - eduW - N * d - valW) / 2, f * 4);
+    const xD = eduW + g, xV = xD + N * d + g * 0.5;
+    const tot = nR * rh + mez + lg, y0 = Math.max(0, (h - tot) / 2);
+    let s = '', id = 0;
+    spec.rady.forEach((r, i) => {
+      const cy = y0 + rh * (i + 0.5) + (i === nR - 1 ? mez : 0);
+      s += T(0, cy + fz * 0.35, r.n, 'start', BILA, fz, 600);
+      for (let k = 0; k < N; k++) {
+        const cx = xD + (k + 0.5) * d, podil = Math.max(0, Math.min(1, r.v - k));
+        s += C(cx, cy, d * 0.42, 'none', ` stroke="${r.obrys ? BILA : SED}" stroke-width="${Math.max(1.5, d * 0.05)}" stroke-opacity="${r.obrys ? 0.8 : 0.6}"`);
+        if (podil > 0 && !r.obrys) { const cid = 'kc' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.42}" y="${cy - d * 0.42}" width="${d * 0.84 * podil}" height="${d * 0.84}"/></clipPath><g clip-path="url(#${cid})">${C(cx, cy, d * 0.42, TYRK)}</g>`; }
+      }
+      s += T(xV, cy + fz * 0.35, r.v.toFixed(2).replace('.', ','), 'start', r.obrys ? BILA : TYRK, fz, 700);
+    });
+    s += T(0, y0 + nR * rh + mez + f * 1.5, spec.pozn, 'start', BILA, f * 0.9, 500).replace('<text ', '<text fill-opacity=".8" ');
     return svgWrap(w, h, s);
   },
   // 12: plodnost 2023: Švédsko 1,45, Maďarsko ≈1,57, Francie ≈1,72, Kanada 1,4–1,5; hranice obnovy 2,1
@@ -161,11 +210,11 @@ const MOTIVY = {
     });
     return svgWrap(w, h, s);
   },
-  // 08: v institucionální péči 5 % dětí do tří let (Česko), kolem 35 % (Evropa); 1 tečka = 1 %
+  // 08: v jeslích a školkách je 7,9 % dětí do tří let, v EU 40,6 % (Eurostat 2025); 1 tečka = 1 % (zaokrouhleno)
   bloky(w, h) {
-    const f = fsOf(w), R = 5, cols = [1, 7], mez = 2.2, celkem = cols[0] + cols[1] + mez, k = Math.min(w / celkem, (h - f * 4) / R), x0 = (w - k * celkem) / 2;
+    const f = fsOf(w), R = 5, cols = [2, 9], mez = 2.2, celkem = cols[0] + cols[1] + mez, k = Math.min(w / celkem, (h - f * 4) / R), x0 = (w - k * celkem) / 2;
     let s = '', gx = x0;
-    [['Česko', 5, '5 %', CORAL, 1], ['Evropa', 35, 'kolem 35 %', MOD, 7]].forEach(([n, pocet, lab, b, c]) => {
+    [['Česko', 8, '7,9 %', CORAL, 2], ['EU', 41, '40,6 %', MOD, 9]].forEach(([n, pocet, lab, b, c]) => {
       for (let i = 0; i < pocet; i++) s += C(gx + (Math.floor(i / R) + 0.5) * k, k * R - (i % R + 0.5) * k, k * 0.4, b);
       s += T(gx + (c * k) / 2, k * R + f * 1.6, n, 'middle', BILA, f * 1.1, 600) + T(gx + (c * k) / 2, k * R + f * 3.1, lab, 'middle', b === MOD ? '#c9d0f5' : CORAL, f * 1.45, 700);
       gx += (c + mez) * k;
@@ -176,35 +225,42 @@ const MOTIVY = {
 
 // ---------- zadání deseti coverů (každé číslo je v textu článku; odvozená čísla jsou v komentáři) ----------
 const DEF = {
-  '01-proc-klesa-plodnost': { motiv: 'deti', titulek: 'Rodí se nejméně dětí za 240 let', pod: 'Plodnost klesla z 1,89 dítěte na ženu v roce 1990 na 1,28.' },
-  '02-co-znamena-plodnost': { motiv: 'waffle', titulek: 'Na čtyři ženy<br>připadá pět dětí', pod: 'K tomu, aby populace neubývala,<br>je třeba statisticky 2,1 dítěte na ženu' },
-  '03-svet-populace': { motiv: 'krizeni', titulek: 'Togo bude mít víc obyvatel než Česko', pod: 'Africké země rychle rostou, Česko stagnuje, podle OSN to bude do roku 2040' },
-  '04-skandinavska-past': { motiv: 'sklon', titulek: 'Ani Švédsko<span style="display:block;font-size:.46em;font-weight:400;font-style:italic;line-height:1.2;margin:.12em 0 .1em;color:#ffd0da">(vzor pro Česko)</span>plodnost neudrželo', pod: 'Vzestup z 1,50 na 1,97 netrval, dnes je 1,45 a Česko má 1,28' },
-  '05-cas-rodicovstvi': { motiv: 'vek', titulek: 'Matky rodí první dítě o osm let později', pod: 'Průměrný věk při prvním porodu: necelých 22 let kolem roku 1990, dnes přes 30.' },
-  '16-starnuti-populace': { motiv: 'rady', logoVpravo: true, titulek: 'Stárnutí přijde kolem roku 2040', pod: 'Na jednoho seniora připadají dnes 3,1 lidé ve věku 15–64 let, v roce 2040 jen 1,8.' },
-  '11-vylidnovani-obci': { motiv: 'mapa', bok: true, titulek: 'Karviná se zmenšuje, Říčany rostou', pod: 'Za deset let<br>v Karviné ubylo víc než 12 % obyvatel,<br>v Říčanech jich přibylo téměř 30 %.' },
-  '10-data-porody': { motiv: 'dvewaffle', titulek: 'Vysokoškolaček je skoro třikrát víc než v roce 1991', pod: 'Víc žen studuje, a proto děti přicházejí později.' }, // 12 → 32 %, 32 / 12 = 2,7
-  '12-mezinarodni-srovnani': { motiv: 'zebrik', titulek: 'Žádná ze čtyř zemí nedosáhla plodnosti 2,1', pod: 'Ani Francie, která dává na rodiny nejvíc v Evropské unii.' },
-  '08-politicke-sliby': { motiv: 'bloky', titulek: 'České jesle pokryjí jen 5 % dětí', pod: 'Evropský průměr je kolem 35 %, dostupná péče o děti patří k nejúčinnějším opatřením' },
+  '01-proc-klesa-plodnost': { motiv: 'deti', titulek: 'Rodí se nejméně dětí za 240 let', pod: 'Plodnost klesla z 1,89 dítěte na ženu v roce 1990 na 1,28' },
+  '02-co-znamena-plodnost': { rubrika: 'Explainer', motiv: 'waffle', titulek: 'Na čtyři ženy<br>připadá pět dětí', pod: 'K tomu, aby populace neubývala,<br>je třeba statisticky 2,1 dítěte na ženu' },
+  '03-svet-populace': { rubrika: 'Kontext', motiv: 'krizeni', titulek: 'Togo předstihne Česko kolem roku 2036', pod: 'Togo má 8,4 milionu obyvatel a roste o 2,2 % ročně, Česko 10,9 milionu a stagnuje' },
+  '04-skandinavska-past': { rubrika: 'Kontext', motiv: 'hantle', titulek: 'Švédsko, Francie i Maďarsko vzestup plodnosti neudržely', pod: 'Plodnost po vrcholu klesla o 0,3 až 0,6 dítěte na ženu',
+    spec: { min: 1.1, max: 2.2, hlavicka: ['vrchol plodnosti', 'dnes'], rady: [{ n: 'Švédsko', a: 1.98, b: 1.42 }, { n: 'Francie', a: 2.03, b: 1.56, barva: '#899aeb' }, { n: 'Maďarsko', a: 1.61, b: 1.31, barva: '#ffcf02' }] } },
+  '05-cas-rodicovstvi': { motiv: 'vek', titulek: 'Prvorodičky jsou o 6,7 roku starší než v roce 1990', pod: 'Průměrný věk matky při prvním dítěti vzrostl z 22,5 na 29,2 roku' },
+  '16-starnuti-populace': { motiv: 'rady', logoVpravo: true, titulek: 'Na jednoho seniora dnes tři lidé v produktivním věku, v roce 2050 dva', pod: 'Poměr lidí ve věku 15–64 let k seniorům 65+: 3,1 v roce 2023, 2,5 v roce 2040, 2,0 v roce 2050' },
+  '11-vylidnovani-obci': { motiv: 'mapa', bok: true, titulek: 'Od roku 2000 přibylo lidí ve 72 % obcí', pod: 'Karviná ztratila pětinu obyvatel,<br>Říčany o 47 % vyrostly' },
+  '10-data-porody': { motiv: 'dvewaffle', posun: { homepage: 0.1, square: 0.045, og: 0.045, instagram: 0.02, story: 0.012 }, titulek: 'Vzdělání ovlivňuje, kdy má žena první dítě, ne kolik dětí bude mít', pod: 'Ve 45–49 letech mají ženy s maturitou 1,77 dítěte a s vysokou školou 1,75',
+    spec: { panely: [
+      { nazev: '45–49 let', rady: [{ n: 's maturitou', v: 1.77, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 1.75, barva: CRIMSON }] },
+      { nazev: '30–34 let', rady: [{ n: 's maturitou', v: 1.1, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 0.89, barva: CRIMSON }] }] } },
+  '12-mezinarodni-srovnani': { motiv: 'hantle', titulek: 'Čtyři různé politiky, podobný pokles plodnosti', pod: 'Švédsko, Francie, Maďarsko i Kanada ztratily v letech 2021–2024 asi 0,2 dítěte na ženu, Česko 0,47',
+    spec: { min: 1.1, max: 2.0, hlavicka: ['rok 2021', 'rok 2024'], rady: [{ n: 'Švédsko', a: 1.67, b: 1.43 }, { n: 'Francie', a: 1.83, b: 1.61, barva: '#899aeb' }, { n: 'Maďarsko', a: 1.63, b: 1.41, barva: '#ffcf02' }, { n: 'Kanada', a: 1.44, b: 1.25, barva: '#4fd6b4' }] } },
+  '19-plodnost-muzu': { rubrika: 'Explainer', motiv: 'kolecka', posun: { homepage: 0.05, square: 0.04, og: 0.04, instagram: 0.02, story: 0.012 }, titulek: 'Plodnost mužů se dá spočítat, vychází o 10 až 17 % níž než u žen', pod: 'V roce 2024 vychází na jednoho muže 1,14 až 1,23 dítěte, na jednu ženu 1,37',
+    spec: { pozn: '1 kolečko = 1 dítě, rok 2024', rady: [{ n: 'na jednu ženu', v: 1.37 }, { n: 'na jednoho muže', v: 1.23 }, { n: 'k obnově populace', v: 2.1, obrys: true }] } },
+  '08-politicke-sliby': { motiv: 'bloky', titulek: 'Jesle a školky má v Česku 8 % dětí do tří let', pod: 'V Evropské unii je to 40,6 %, dostupná péče o děti patří k nejúčinnějším opatřením' },
 };
 
 // ---------- sestavení stránky ----------
-const BG = () => `background:radial-gradient(ellipse 80% 70% at 0% 0%,#272a59cc 0%,#272a5900 60%),radial-gradient(ellipse 70% 60% at 100% 100%,#431320 0%,#43132000 70%),${NAVY}`;
+const BG = (bez) => bez ? '' : `background:radial-gradient(ellipse 80% 70% at 0% 0%,#272a59cc 0%,#272a5900 60%),radial-gradient(ellipse 70% 60% at 100% 100%,#431320 0%,#43132000 70%),${NAVY}`;
 
-function coverHtml(F, d) {
+function coverHtml(F, d, bez, fmt) {
+  const bok = d.bok && fmt === 'homepage', ps = (d.posun && d.posun[fmt]) || 0; // posun: optické vyvážení mezery nad a pod motivem (podíl velikosti titulku)
   const { W, H, m } = F;
-  return `<div id="cv" style="position:relative;width:${W}px;height:${H}px;overflow:hidden;${BG(W, H)};font-family:'IBM Plex Sans',Arial,sans-serif;color:#fff;display:flex;flex-direction:column;padding:${F.top}px ${m}px ${F.bot}px ${m}px;box-sizing:border-box">
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:${F.head * 0.14}px;flex:none">
-     <div style="display:flex;align-items:center;gap:${F.head * 0.14}px;height:${F.head}px">
-      <div style="height:${F.head}px;width:${F.head * 0.78}px;flex:none">${hlava}</div>
-      <div style="font:700 ${F.hl}px/1.05 'IBM Plex Serif',Georgia,serif;color:${CORAL}">Data pro budoucí<br>premiérku</div>
-     </div>
-     <div style="margin-top:${F.kick * 0.5}px;font:600 ${F.kick}px 'IBM Plex Sans';letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;text-align:right;line-height:1.7"><span style="color:${CORAL};border-bottom:3px solid ${CORAL};padding-bottom:6px">Analýza</span><span style="color:${CORAL}"> • </span>Kapitola 1<br>Demografie</div>
+  const dlouhy = d.titulek.replace(/<br>/g, ' ').length > 50, tz = dlouhy ? 0.92 : 1, tl = dlouhy ? 1.17 : 1.1; // dlouhé titulky: menší písmo, větší řádkování
+  return `<div id="cv" style="position:relative;width:${W}px;height:${H}px;overflow:hidden;${BG(bez)};font-family:'IBM Plex Sans',Arial,sans-serif;color:#fff;display:flex;flex-direction:column;padding:${F.top}px ${m}px ${F.bot}px ${m}px;box-sizing:border-box">
+    <div style="display:flex;align-items:center;gap:${F.head * 0.14}px;flex:none;height:${F.head * 0.84}px">
+      <div style="height:${F.head * 0.84}px;width:${F.head * 0.84 * 0.78}px;flex:none">${hlava}</div>
+      <div style="font:700 ${F.hl}px/1.05 'IBM Plex Serif',Georgia,serif;color:${CORAL};white-space:nowrap">Data pro budoucí premiérku</div>
     </div>
-    <div style="margin-top:${F.head * 0.2}px;font:700 ${F.t}px/1.06 'IBM Plex Serif',Georgia,serif;flex:none">${typo(d.titulek)}</div>
-    <div style="margin-top:${F.t * 0.22}px;font:500 ${F.sub}px/1.3 'IBM Plex Sans';color:#ffd0da;max-width:${(W - 2 * m) * (d.bok ? 0.62 : 0.94)}px;flex:none">${typo(d.pod).replace(/[.]$/, '')}</div>
-    <div id="motiv" style="${d.bok ? `position:absolute;right:${m * 0.4}px;bottom:${F.bot + F.dt * 1.9}px;width:${(W - 2 * m) * 0.62}px;height:${H * 0.42}px` : `flex:1;margin-top:${F.t * 0.35}px;min-height:0;position:relative`}"></div>
-    <div style="flex:none;margin-top:${d.bok ? 'auto' : (F.t * 0.3) + 'px'};${d.logoVpravo ? 'align-self:flex-end;' : ''}display:flex;align-items:center;gap:12px;font:700 ${F.dt}px 'IBM Plex Serif',Georgia,serif;color:#fff"><span style="width:${F.dt * 1.4}px;height:${F.dt * 1.4}px;display:block">${donut}</span>DataTimes.cz</div>
+    <div style="flex:none;margin-top:${F.head * 0.1}px;align-self:flex-end;font:600 ${F.kick}px 'IBM Plex Sans';letter-spacing:.12em;text-transform:uppercase;white-space:nowrap"><span style="color:${CORAL};border-bottom:3px solid ${CORAL};padding-bottom:5px">${d.rubrika || 'Analýza'}</span><span style="margin-left:${F.kick * 1.4}px">01 Demografie</span></div>
+    <div style="margin-top:${F.head * 0.1}px;font:700 ${F.t * tz}px/${tl} 'IBM Plex Serif',Georgia,serif;flex:none">${typo(d.titulek)}</div>
+    <div style="margin-top:${F.t * 0.4}px;font:500 ${F.sub}px/1.3 'IBM Plex Sans';color:#ffd0da;max-width:${(W - 2 * m) * (bok ? 0.5 : 0.94)}px;flex:none">${typo(d.pod).replace(/[.]$/, '')}</div>
+    <div id="motiv" style="${bok ? `position:absolute;right:${m * 0.4}px;bottom:${F.bot + F.dt * 1.9}px;width:${(W - 2 * m) * 0.78}px;height:${H * 0.56}px` : `flex:1;margin-top:${F.t * (0.35 - ps)}px;min-height:0;position:relative`}"></div>
+    <div style="flex:none;margin-top:${bok ? 'auto' : (F.t * (0.3 + ps)) + 'px'};${d.logoVpravo ? 'align-self:flex-end;' : ''}display:flex;align-items:center;gap:12px;font:700 ${F.dt}px 'IBM Plex Serif',Georgia,serif;color:#fff"><span style="width:${F.dt * 1.4}px;height:${F.dt * 1.4}px;display:block">${donut}</span>DataTimes.cz</div>
   </div>`;
 }
 
@@ -222,9 +278,9 @@ function coverHtml(F, d) {
       const og = fmt === 'og';
       const F = FM[og ? 'square' : fmt];
       const W = og ? 1200 : F.W, H = og ? 630 : F.H;
-      const inner = coverHtml(F, d);
+      const inner = coverHtml(F, d, og, fmt);
       const wrap = og
-        ? `<div style="position:relative;width:1200px;height:630px;overflow:hidden;${BG(1200, 630)}"><div style="position:absolute;left:285px;top:0;width:630px;height:630px;overflow:hidden"><div style="transform:scale(${630 / 1080});transform-origin:0 0">${inner}</div></div></div>`
+        ? `<div style="position:relative;width:1200px;height:630px;overflow:hidden;${BG()}"><div style="position:absolute;left:285px;top:0;width:630px;height:630px;overflow:hidden"><div style="transform:scale(${630 / 1080});transform-origin:0 0">${inner}</div></div></div>`
         : inner;
       const html = `<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,700;1,400&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet"><style>html,body{margin:0;width:${W}px;height:${H}px;overflow:hidden}</style></head><body>${wrap}</body></html>`;
       const pg = await b.newPage({ viewport: { width: W, height: H } });
@@ -232,7 +288,7 @@ function coverHtml(F, d) {
       await pg.evaluate(() => document.fonts.ready);
       const box = await pg.evaluate(() => { const m = document.querySelector('#motiv'); return [m.offsetWidth, m.offsetHeight]; });
       const scale = og ? 1080 / 1080 : 1;
-      const html2 = MOTIVY[d.motiv](Math.floor(box[0]), Math.floor(box[1]));
+      const html2 = MOTIVY[d.motiv](Math.floor(box[0]), Math.floor(box[1]), d.spec);
       await pg.evaluate((h) => { document.querySelector('#motiv').innerHTML = h; }, html2);
       await pg.waitForTimeout(250);
       const file = path.join(dir, og ? 'cover-og.jpg' : fmt === 'homepage' ? 'cover-homepage.png' : fmt === 'square' ? 'cover-square.png' : fmt === 'instagram' ? 'cover-instagram.png' : 'cover-story.png');

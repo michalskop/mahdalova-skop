@@ -1,0 +1,111 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The higher the office and the bigger the city, the fewer women",
+    "subtitle": "Share of women (%) after the 2022 municipal elections and the 2024 regional elections"
+  },
+  "width": 600,
+  "height": 280,
+  "data": {
+    "values": [
+      {
+        "k": "Candidates for municipal councils (2022)",
+        "v": 33.3,
+        "o": 1
+      },
+      {
+        "k": "Municipal councillors (2022)",
+        "v": 29,
+        "o": 2
+      },
+      {
+        "k": "Mayors (February 2023)",
+        "v": 27,
+        "o": 3
+      },
+      {
+        "k": "Councillors in statutory cities and Prague (2022)",
+        "v": 23.7,
+        "o": 4
+      },
+      {
+        "k": "Regional councillors (2024)",
+        "v": 21.2,
+        "o": 5
+      },
+      {
+        "k": "Regional governors (2 of 14, 2024)",
+        "v": 14.3,
+        "o": 6
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "k",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 320
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          50
+        ]
+      },
+      "axis": {
+        "title": null
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#de1743",
+        "height": 22
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "k",
+            "type": "nominal",
+            "title": "Indicator"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Share of women (%)",
+            "format": ",.1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#272a59"
+      },
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ",.1f"
+        }
+      }
+    }
+  ],
+  "_source": "Forum 50 % based on ČSÚ (municipalities 2022, statutory cities 2022); Office of the Government, Report on Gender Equality 2022 (women mayors according to the Ministry of the Interior as of 13 February 2023); ČSÚ (regions 2024)"
+}

@@ -1,0 +1,70 @@
+vek,vzdelani,zen,prumer_deti,podil_bezdetnych_pct
+15 - 19 let,střední bez maturity,12103,0.02,97.7
+15 - 19 let,střední s maturitou,19291,0.00,99.7
+15 - 19 let,vyšší odborné,42,0.00,100.0
+15 - 19 let,základní,197321,0.01,99.2
+20 - 24 let,střední bez maturity,33268,0.27,78.0
+20 - 24 let,střední s maturitou,130755,0.06,94.9
+20 - 24 let,vysokoškolské,27452,0.03,97.0
+20 - 24 let,vyšší odborné,4257,0.06,94.3
+20 - 24 let,základní,22602,0.50,64.4
+25 - 29 let,střední bez maturity,41848,0.81,44.1
+25 - 29 let,střední s maturitou,90990,0.53,60.6
+25 - 29 let,vysokoškolské,108310,0.27,78.3
+25 - 29 let,vyšší odborné,12968,0.42,66.8
+25 - 29 let,základní,19125,1.22,33.1
+30 - 34 let,střední bez maturity,47531,1.32,24.3
+30 - 34 let,střední s maturitou,100812,1.10,32.0
+30 - 34 let,vysokoškolské,133843,0.89,42.2
+30 - 34 let,vyšší odborné,14450,1.04,33.9
+30 - 34 let,základní,17289,1.71,21.4
+35 - 39 let,střední bez maturity,60260,1.61,15.4
+35 - 39 let,střední s maturitou,113219,1.48,18.1
+35 - 39 let,vysokoškolské,118884,1.46,21.0
+35 - 39 let,vyšší odborné,17830,1.50,17.8
+35 - 39 let,základní,16384,1.97,16.9
+40 - 44 let,střední bez maturity,93573,1.78,10.3
+40 - 44 let,střední s maturitou,157584,1.68,11.4
+40 - 44 let,vysokoškolské,101809,1.71,13.7
+40 - 44 let,vyšší odborné,19302,1.71,11.6
+40 - 44 let,základní,19514,2.06,13.5
+45 - 49 let,střední bez maturity,141022,1.90,6.9
+45 - 49 let,střední s maturitou,160096,1.77,8.1
+45 - 49 let,vysokoškolské,78492,1.75,11.1
+45 - 49 let,vyšší odborné,6694,1.76,10.3
+45 - 49 let,základní,18432,2.12,12.7
+50 - 54 let,střední bez maturity,111486,1.98,5.5
+50 - 54 let,střední s maturitou,129722,1.82,6.2
+50 - 54 let,vysokoškolské,56891,1.74,9.0
+50 - 54 let,vyšší odborné,3508,1.76,7.9
+50 - 54 let,základní,17176,2.24,10.6
+55 - 59 let,střední bez maturity,105863,2.06,4.4
+55 - 59 let,střední s maturitou,127814,1.89,5.2
+55 - 59 let,vysokoškolské,52996,1.77,7.8
+55 - 59 let,vyšší odborné,2994,1.82,6.7
+55 - 59 let,základní,24775,2.27,8.8
+60 - 64 let,střední bez maturity,111395,2.12,3.7
+60 - 64 let,střední s maturitou,104452,1.93,4.9
+60 - 64 let,vysokoškolské,41814,1.77,7.9
+60 - 64 let,vyšší odborné,2234,1.81,8.2
+60 - 64 let,základní,37939,2.33,5.9
+65 - 69 let,střední bez maturity,123713,2.13,3.5
+65 - 69 let,střední s maturitou,111339,1.94,4.9
+65 - 69 let,vysokoškolské,34760,1.76,8.7
+65 - 69 let,vyšší odborné,1965,1.83,7.0
+65 - 69 let,základní,64495,2.33,4.7
+70 - 74 let,střední bez maturity,123312,2.15,3.2
+70 - 74 let,střední s maturitou,117514,1.93,4.9
+70 - 74 let,vysokoškolské,26139,1.74,9.6
+70 - 74 let,vyšší odborné,1780,1.74,8.6
+70 - 74 let,základní,57440,2.34,4.3
+75 - 79 let,střední bez maturity,77249,2.12,3.2
+75 - 79 let,střední s maturitou,76222,1.87,5.5
+75 - 79 let,vysokoškolské,23283,1.72,9.3
+75 - 79 let,vyšší odborné,1359,1.70,9.5
+75 - 79 let,základní,56131,2.29,3.7
+80 a více let,střední bez maturity,95480,2.06,3.8
+80 a více let,střední s maturitou,66588,1.76,7.0
+80 a více let,vysokoškolské,15514,1.61,11.1
+80 a více let,vyšší odborné,2038,1.65,10.7
+80 a více let,základní,92585,2.30,3.6

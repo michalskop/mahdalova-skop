@@ -3,7 +3,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'export',
+  // Use static export for production builds; in development keep undefined so
+  // notFound() routes render the 404 page instead of throwing missing param errors.
+  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   transpilePackages: ['@repo/ui'],
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],

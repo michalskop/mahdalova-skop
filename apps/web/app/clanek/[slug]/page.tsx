@@ -9,6 +9,7 @@ import { FollowBar } from '@/components/common/FollowBar';
 import { notFound } from 'next/navigation';
 import { Box, Container } from '@mantine/core';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
+import NewsletterSlideIn from '@/components/common/NewsletterSlideIn';
 import ArticleRating from '@/components/common/ArticleRating';
 import { ArticleJsonLd } from '@/components/seo/ArticleJsonLd';
 import { resolveArticleOgImage } from '@/lib/coverMetadata';
@@ -148,6 +149,7 @@ export default async function ArticlePage({ params }: PageProps) {
             >
           <SubscribeNewsletter actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088' position='center' />
         </Container>
+        <NewsletterSlideIn actionUrl='https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088' />
       </div>
     );
   } catch (error) {

@@ -1,4 +1,4 @@
-import { IconBabyCarriage, IconCash, IconHome, IconHorseToy, IconMicroscope } from '@tabler/icons-react';
+import { IconBabyCarriage, IconCash, IconHorseToy, IconMicroscope } from '@tabler/icons-react';
 import ChartCard from '@/components/charts/ChartCard';
 
 // Zjištění podle systematického přehledu Bergsvik, Fauske a Hart (2021),
@@ -30,12 +30,6 @@ const ITEMS = [
     sila: 1,
     text: 'Účinek bývá jen dočasný: lidé mají děti dřív, ale ne víc.',
   },
-  {
-    Icon: IconHome,
-    title: 'Dostupné bydlení',
-    sila: 0,
-    text: 'Do přehledu se nedostala žádná studie, která by účinek na porodnost spolehlivě změřila. Důkazy chybí, neznamená to, že bydlení nehraje roli.',
-  },
 ] as const;
 
 const LABEL = ['důkazy chybí', 'účinek dočasný nebo zatím slibný', 'novější doklady o účinku', 'silné doklady'];
@@ -62,11 +56,12 @@ function Dots({ n }: { n: number }) {
 export default function PolicyEvidenceCards() {
   return (
     <ChartCard
-      title="Co může stát udělat: nejsilnější doklady mají jesle a školky"
-      subtitle="Co o pěti typech opatření říká přehled 35 studií z Evropy, USA, Kanady a Austrálie"
+      title="Co podle studií pomáhá rodinám mít děti: nejlíp to funguje u jeslí a školek"
+      subtitle="Čtyři typy opatření podle přehledu 35 studií z Evropy, USA, Kanady a Austrálie"
       source="[Bergsvik, Fauske, Hart: Can Policies Stall the Fertility Fall?, Population and Development Review, 2021](https://onlinelibrary.wiley.com/doi/10.1111/padr.12431)"
     >
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12 }}>
+      <style>{`.dpbp-evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media (max-width:520px){.dpbp-evidence-grid{grid-template-columns:1fr}}`}</style>
+      <div className="dpbp-evidence-grid">
         {ITEMS.map(({ Icon, title, sila, text }) => (
           <div key={title} style={{ background: '#ffffff', borderRadius: 8, padding: '14px 14px 12px', border: '1px solid #e8e3d2' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
@@ -80,6 +75,9 @@ export default function PolicyEvidenceCards() {
           </div>
         ))}
       </div>
+      <p style={{ margin: '14px 0 0', fontSize: 13.5, lineHeight: 1.45, color: '#333' }}>
+        Dostupné bydlení přehled nehodnotí: žádnou studii, která by účinek na porodnost spolehlivě změřila, nenašel. Důkazy chybí, neznamená to, že bydlení nehraje roli.
+      </p>
     </ChartCard>
   );
 }

@@ -87,7 +87,7 @@ Jak dopadla vaše profese, najdete v přehledu níže. Obsahuje profese tak, jak
 <HtmlEmbed file="dohledavac-povolani.html" />
 
 ```infobox info
-### Jak jsme počítali
+**Jak jsme počítali**
 
 Vycházíme z [registru kandidátů pro volby do zastupitelstev obcí 2026](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm), který zveřejnil Český statistický úřad 11. října 2026, a ze stejných registrů pro roky [2022](https://volby.gov.cz/opendata/kv2022/kv2022_opendata.htm) a [2018](https://volby.gov.cz/opendata/kv2018/kv2018_opendata.htm). Registr uvádí u každého kandidáta povolání, pořadí na kandidátce, počet hlasů a to, zda byl zvolen.
 

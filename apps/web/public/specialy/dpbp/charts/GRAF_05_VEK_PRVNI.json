@@ -1,0 +1,984 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Průměrná prvorodička je o 6,7 roku starší než v roce 1990",
+  "subtitle": "Průměrný věk matky při narození dítěte, Česko 1990–2025; do roku 2008 rostl o 0,3 roku ročně, od té doby o 0,1"
+ },
+ "_source": "[Obyvatelstvo – roční časové řady, ČSÚ (open data OBY01CR)](https://csu.gov.cz/produkty/obyvatelstvo_hu)\nVěk se počítá z rozdílu kalendářního roku porodu a roku narození matky; hodnoty za 2025 jsou předběžné.",
+ "height": 320,
+ "data": {
+  "values": [
+   {
+    "rok": 1990,
+    "serie": "při prvním dítěti",
+    "vek": 22.47,
+    "label": "22,5 let",
+    "ptr": "22,5 let"
+   },
+   {
+    "rok": 1990,
+    "serie": "při všech porodech",
+    "vek": 24.76,
+    "label": "24,8 let",
+    "ptr": "24,8 let"
+   },
+   {
+    "rok": 1991,
+    "serie": "při prvním dítěti",
+    "vek": 22.43,
+    "label": "22,4 let",
+    "ptr": "22,4 let"
+   },
+   {
+    "rok": 1991,
+    "serie": "při všech porodech",
+    "vek": 24.73,
+    "label": "24,7 let",
+    "ptr": "24,7 let"
+   },
+   {
+    "rok": 1992,
+    "serie": "při prvním dítěti",
+    "vek": 22.51,
+    "label": "22,5 let",
+    "ptr": "22,5 let"
+   },
+   {
+    "rok": 1992,
+    "serie": "při všech porodech",
+    "vek": 24.83,
+    "label": "24,8 let",
+    "ptr": "24,8 let"
+   },
+   {
+    "rok": 1993,
+    "serie": "při prvním dítěti",
+    "vek": 22.61,
+    "label": "22,6 let",
+    "ptr": "22,6 let"
+   },
+   {
+    "rok": 1993,
+    "serie": "při všech porodech",
+    "vek": 25.04,
+    "label": "25,0 let",
+    "ptr": "25,0 let"
+   },
+   {
+    "rok": 1994,
+    "serie": "při prvním dítěti",
+    "vek": 22.92,
+    "label": "22,9 let",
+    "ptr": "22,9 let"
+   },
+   {
+    "rok": 1994,
+    "serie": "při všech porodech",
+    "vek": 25.37,
+    "label": "25,4 let",
+    "ptr": "25,4 let"
+   },
+   {
+    "rok": 1995,
+    "serie": "při prvním dítěti",
+    "vek": 23.32,
+    "label": "23,3 let",
+    "ptr": "23,3 let"
+   },
+   {
+    "rok": 1995,
+    "serie": "při všech porodech",
+    "vek": 25.76,
+    "label": "25,8 let",
+    "ptr": "25,8 let"
+   },
+   {
+    "rok": 1996,
+    "serie": "při prvním dítěti",
+    "vek": 23.68,
+    "label": "23,7 let",
+    "ptr": "23,7 let"
+   },
+   {
+    "rok": 1996,
+    "serie": "při všech porodech",
+    "vek": 26.09,
+    "label": "26,1 let",
+    "ptr": "26,1 let"
+   },
+   {
+    "rok": 1997,
+    "serie": "při prvním dítěti",
+    "vek": 24.04,
+    "label": "24,0 let",
+    "ptr": "24,0 let"
+   },
+   {
+    "rok": 1997,
+    "serie": "při všech porodech",
+    "vek": 26.36,
+    "label": "26,4 let",
+    "ptr": "26,4 let"
+   },
+   {
+    "rok": 1998,
+    "serie": "při prvním dítěti",
+    "vek": 24.35,
+    "label": "24,4 let",
+    "ptr": "24,4 let"
+   },
+   {
+    "rok": 1998,
+    "serie": "při všech porodech",
+    "vek": 26.62,
+    "label": "26,6 let",
+    "ptr": "26,6 let"
+   },
+   {
+    "rok": 1999,
+    "serie": "při prvním dítěti",
+    "vek": 24.59,
+    "label": "24,6 let",
+    "ptr": "24,6 let"
+   },
+   {
+    "rok": 1999,
+    "serie": "při všech porodech",
+    "vek": 26.86,
+    "label": "26,9 let",
+    "ptr": "26,9 let"
+   },
+   {
+    "rok": 2000,
+    "serie": "při prvním dítěti",
+    "vek": 24.94,
+    "label": "24,9 let",
+    "ptr": "24,9 let"
+   },
+   {
+    "rok": 2000,
+    "serie": "při všech porodech",
+    "vek": 27.18,
+    "label": "27,2 let",
+    "ptr": "27,2 let"
+   },
+   {
+    "rok": 2001,
+    "serie": "při prvním dítěti",
+    "vek": 25.34,
+    "label": "25,3 let",
+    "ptr": "25,3 let"
+   },
+   {
+    "rok": 2001,
+    "serie": "při všech porodech",
+    "vek": 27.55,
+    "label": "27,5 let",
+    "ptr": "27,5 let"
+   },
+   {
+    "rok": 2002,
+    "serie": "při prvním dítěti",
+    "vek": 25.63,
+    "label": "25,6 let",
+    "ptr": "25,6 let"
+   },
+   {
+    "rok": 2002,
+    "serie": "při všech porodech",
+    "vek": 27.81,
+    "label": "27,8 let",
+    "ptr": "27,8 let"
+   },
+   {
+    "rok": 2003,
+    "serie": "při prvním dítěti",
+    "vek": 25.93,
+    "label": "25,9 let",
+    "ptr": "25,9 let"
+   },
+   {
+    "rok": 2003,
+    "serie": "při všech porodech",
+    "vek": 28.05,
+    "label": "28,1 let",
+    "ptr": "28,1 let"
+   },
+   {
+    "rok": 2004,
+    "serie": "při prvním dítěti",
+    "vek": 26.31,
+    "label": "26,3 let",
+    "ptr": "26,3 let"
+   },
+   {
+    "rok": 2004,
+    "serie": "při všech porodech",
+    "vek": 28.33,
+    "label": "28,3 let",
+    "ptr": "28,3 let"
+   },
+   {
+    "rok": 2005,
+    "serie": "při prvním dítěti",
+    "vek": 26.61,
+    "label": "26,6 let",
+    "ptr": "26,6 let"
+   },
+   {
+    "rok": 2005,
+    "serie": "při všech porodech",
+    "vek": 28.61,
+    "label": "28,6 let",
+    "ptr": "28,6 let"
+   },
+   {
+    "rok": 2006,
+    "serie": "při prvním dítěti",
+    "vek": 26.94,
+    "label": "26,9 let",
+    "ptr": "26,9 let"
+   },
+   {
+    "rok": 2006,
+    "serie": "při všech porodech",
+    "vek": 28.88,
+    "label": "28,9 let",
+    "ptr": "28,9 let"
+   },
+   {
+    "rok": 2007,
+    "serie": "při prvním dítěti",
+    "vek": 27.14,
+    "label": "27,1 let",
+    "ptr": "27,1 let"
+   },
+   {
+    "rok": 2007,
+    "serie": "při všech porodech",
+    "vek": 29.14,
+    "label": "29,1 let",
+    "ptr": "29,1 let"
+   },
+   {
+    "rok": 2008,
+    "serie": "při prvním dítěti",
+    "vek": 27.33,
+    "label": "27,3 let",
+    "ptr": "27,3 let"
+   },
+   {
+    "rok": 2008,
+    "serie": "při všech porodech",
+    "vek": 29.33,
+    "label": "29,3 let",
+    "ptr": "29,3 let"
+   },
+   {
+    "rok": 2009,
+    "serie": "při prvním dítěti",
+    "vek": 27.44,
+    "label": "27,4 let",
+    "ptr": "27,4 let"
+   },
+   {
+    "rok": 2009,
+    "serie": "při všech porodech",
+    "vek": 29.43,
+    "label": "29,4 let",
+    "ptr": "29,4 let"
+   },
+   {
+    "rok": 2010,
+    "serie": "při prvním dítěti",
+    "vek": 27.62,
+    "label": "27,6 let",
+    "ptr": "27,6 let"
+   },
+   {
+    "rok": 2010,
+    "serie": "při všech porodech",
+    "vek": 29.59,
+    "label": "29,6 let",
+    "ptr": "29,6 let"
+   },
+   {
+    "rok": 2011,
+    "serie": "při prvním dítěti",
+    "vek": 27.79,
+    "label": "27,8 let",
+    "ptr": "27,8 let"
+   },
+   {
+    "rok": 2011,
+    "serie": "při všech porodech",
+    "vek": 29.69,
+    "label": "29,7 let",
+    "ptr": "29,7 let"
+   },
+   {
+    "rok": 2012,
+    "serie": "při prvním dítěti",
+    "vek": 27.92,
+    "label": "27,9 let",
+    "ptr": "27,9 let"
+   },
+   {
+    "rok": 2012,
+    "serie": "při všech porodech",
+    "vek": 29.76,
+    "label": "29,8 let",
+    "ptr": "29,8 let"
+   },
+   {
+    "rok": 2013,
+    "serie": "při prvním dítěti",
+    "vek": 28.08,
+    "label": "28,1 let",
+    "ptr": "28,1 let"
+   },
+   {
+    "rok": 2013,
+    "serie": "při všech porodech",
+    "vek": 29.86,
+    "label": "29,9 let",
+    "ptr": "29,9 let"
+   },
+   {
+    "rok": 2014,
+    "serie": "při prvním dítěti",
+    "vek": 28.14,
+    "label": "28,1 let",
+    "ptr": "28,1 let"
+   },
+   {
+    "rok": 2014,
+    "serie": "při všech porodech",
+    "vek": 29.94,
+    "label": "29,9 let",
+    "ptr": "29,9 let"
+   },
+   {
+    "rok": 2015,
+    "serie": "při prvním dítěti",
+    "vek": 28.22,
+    "label": "28,2 let",
+    "ptr": "28,2 let"
+   },
+   {
+    "rok": 2015,
+    "serie": "při všech porodech",
+    "vek": 29.99,
+    "label": "30,0 let",
+    "ptr": "30,0 let"
+   },
+   {
+    "rok": 2016,
+    "serie": "při prvním dítěti",
+    "vek": 28.21,
+    "label": "28,2 let",
+    "ptr": "28,2 let"
+   },
+   {
+    "rok": 2016,
+    "serie": "při všech porodech",
+    "vek": 29.99,
+    "label": "30,0 let",
+    "ptr": "30,0 let"
+   },
+   {
+    "rok": 2017,
+    "serie": "při prvním dítěti",
+    "vek": 28.24,
+    "label": "28,2 let",
+    "ptr": "28,2 let"
+   },
+   {
+    "rok": 2017,
+    "serie": "při všech porodech",
+    "vek": 30.02,
+    "label": "30,0 let",
+    "ptr": "30,0 let"
+   },
+   {
+    "rok": 2018,
+    "serie": "při prvním dítěti",
+    "vek": 28.36,
+    "label": "28,4 let",
+    "ptr": "28,4 let"
+   },
+   {
+    "rok": 2018,
+    "serie": "při všech porodech",
+    "vek": 30.11,
+    "label": "30,1 let",
+    "ptr": "30,1 let"
+   },
+   {
+    "rok": 2019,
+    "serie": "při prvním dítěti",
+    "vek": 28.46,
+    "label": "28,5 let",
+    "ptr": "28,5 let"
+   },
+   {
+    "rok": 2019,
+    "serie": "při všech porodech",
+    "vek": 30.15,
+    "label": "30,2 let",
+    "ptr": "30,2 let"
+   },
+   {
+    "rok": 2020,
+    "serie": "při prvním dítěti",
+    "vek": 28.51,
+    "label": "28,5 let",
+    "ptr": "28,5 let"
+   },
+   {
+    "rok": 2020,
+    "serie": "při všech porodech",
+    "vek": 30.19,
+    "label": "30,2 let",
+    "ptr": "30,2 let"
+   },
+   {
+    "rok": 2021,
+    "serie": "při prvním dítěti",
+    "vek": 28.81,
+    "label": "28,8 let",
+    "ptr": "28,8 let"
+   },
+   {
+    "rok": 2021,
+    "serie": "při všech porodech",
+    "vek": 30.42,
+    "label": "30,4 let",
+    "ptr": "30,4 let"
+   },
+   {
+    "rok": 2022,
+    "serie": "při prvním dítěti",
+    "vek": 28.85,
+    "label": "28,8 let",
+    "ptr": "28,8 let"
+   },
+   {
+    "rok": 2022,
+    "serie": "při všech porodech",
+    "vek": 30.43,
+    "label": "30,4 let",
+    "ptr": "30,4 let"
+   },
+   {
+    "rok": 2023,
+    "serie": "při prvním dítěti",
+    "vek": 28.91,
+    "label": "28,9 let",
+    "ptr": "28,9 let"
+   },
+   {
+    "rok": 2023,
+    "serie": "při všech porodech",
+    "vek": 30.43,
+    "label": "30,4 let",
+    "ptr": "30,4 let"
+   },
+   {
+    "rok": 2024,
+    "serie": "při prvním dítěti",
+    "vek": 29.0,
+    "label": "29,0 let",
+    "ptr": "29,0 let"
+   },
+   {
+    "rok": 2024,
+    "serie": "při všech porodech",
+    "vek": 30.51,
+    "label": "30,5 let",
+    "ptr": "30,5 let"
+   },
+   {
+    "rok": 2025,
+    "serie": "při prvním dítěti",
+    "vek": 29.16,
+    "label": "29,2 let",
+    "ptr": "29,2 let"
+   },
+   {
+    "rok": 2025,
+    "serie": "při všech porodech",
+    "vek": 30.63,
+    "label": "30,6 let",
+    "ptr": "30,6 let"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1989,
+       2030
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1990,
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "vek",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       20,
+       32
+      ]
+     },
+     "axis": {
+      "values": [
+       20,
+       24,
+       28,
+       32
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' let'"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "při prvním dítěti",
+       "při všech porodech"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 40,
+    "opacity": 0
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1989,
+       2030
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1990,
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "vek",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       20,
+       32
+      ]
+     },
+     "axis": {
+      "values": [
+       20,
+       24,
+       28,
+       32
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' let'"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "při prvním dítěti",
+       "při všech porodech"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "type": "quantitative",
+      "title": "Rok",
+      "format": "d"
+     },
+     {
+      "field": "serie",
+      "title": "Věk matky"
+     },
+     {
+      "field": "ptr",
+      "title": "Průměr"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1990,
+      "serie": "při prvním dítěti",
+      "vek": 22.47,
+      "label": "22,5 let",
+      "ptr": "22,5 let"
+     },
+     {
+      "rok": 1990,
+      "serie": "při všech porodech",
+      "vek": 24.76,
+      "label": "24,8 let",
+      "ptr": "24,8 let"
+     },
+     {
+      "rok": 2025,
+      "serie": "při prvním dítěti",
+      "vek": 29.16,
+      "label": "29,2 let",
+      "ptr": "29,2 let"
+     },
+     {
+      "rok": 2025,
+      "serie": "při všech porodech",
+      "vek": 30.63,
+      "label": "30,6 let",
+      "ptr": "30,6 let"
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 70,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1989,
+       2030
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1990,
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "vek",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       20,
+       32
+      ]
+     },
+     "axis": {
+      "values": [
+       20,
+       24,
+       28,
+       32
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' let'"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "při prvním dítěti",
+       "při všech porodech"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1990,
+      "serie": "při prvním dítěti",
+      "vek": 22.47,
+      "label": "22,5 let",
+      "ptr": "22,5 let"
+     },
+     {
+      "rok": 1990,
+      "serie": "při všech porodech",
+      "vek": 24.76,
+      "label": "24,8 let",
+      "ptr": "24,8 let"
+     },
+     {
+      "rok": 2025,
+      "serie": "při prvním dítěti",
+      "vek": 29.16,
+      "label": "29,2 let",
+      "ptr": "29,2 let"
+     },
+     {
+      "rok": 2025,
+      "serie": "při všech porodech",
+      "vek": 30.63,
+      "label": "30,6 let",
+      "ptr": "30,6 let"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "dy": -11
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1989,
+       2030
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       1990,
+       1995,
+       2000,
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "vek",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       20,
+       32
+      ]
+     },
+     "axis": {
+      "values": [
+       20,
+       24,
+       28,
+       32
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' let'"
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "při prvním dítěti",
+       "při všech porodech"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "vek": 27.963,
+      "serie": "při prvním dítěti",
+      "t": "první dítě"
+     },
+     {
+      "rok": 2025,
+      "vek": 31.828,
+      "serie": "při všech porodech",
+      "t": "všechny porody"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 16,
+    "fontSize": 12,
+    "baseline": "middle"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2030
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "field": "vek",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       20,
+       32
+      ]
+     }
+    },
+    "color": {
+     "field": "serie",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "při prvním dítěti",
+       "při všech porodech"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

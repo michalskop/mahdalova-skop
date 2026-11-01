@@ -1,0 +1,472 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Podle projekce poroste do roku 2080 jen Praha, Středočeský a Plzeňský kraj",
+  "subtitle": "Změna počtu obyvatel od 1. 1. 2024 do 1. 1. 2081, střední varianta krajské projekce ČSÚ; Karlovarský kraj ztratí 44 % obyvatel"
+ },
+ "_source": "[Projekce obyvatelstva v krajích ČR 2024–2080, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-v-krajich-cr-do-roku-2080) · vlastní výpočet\nProjekce počtu obyvatel na padesát let dopředu, ne podílu krajů mezi voliči v roce 2029; obyvatelé včetně cizinců.",
+ "height": 340,
+ "data": {
+  "values": [
+   {
+    "kraj": "Praha",
+    "zmena": 40.3,
+    "label": "+40,3 %",
+    "skupina": "roste",
+    "hlavicka": "Hlavní město Praha",
+    "Obyvatelé": "+40,3 % (1,38 mil. → 1,94 mil.)",
+    "Dospělí od 18 let": "+47,9 %"
+   },
+   {
+    "kraj": "Středočeský",
+    "zmena": 30.5,
+    "label": "+30,5 %",
+    "skupina": "roste",
+    "hlavicka": "Středočeský kraj",
+    "Obyvatelé": "+30,5 % (1,46 mil. → 1,90 mil.)",
+    "Dospělí od 18 let": "+38,6 %"
+   },
+   {
+    "kraj": "Plzeňský",
+    "zmena": 5.4,
+    "label": "+5,4 %",
+    "skupina": "roste",
+    "hlavicka": "Plzeňský kraj",
+    "Obyvatelé": "+5,4 % (613 tis. → 647 tis.)",
+    "Dospělí od 18 let": "+11,2 %"
+   },
+   {
+    "kraj": "Jihomoravský",
+    "zmena": -6.5,
+    "label": "−6,5 %",
+    "skupina": "ubývá",
+    "hlavicka": "Jihomoravský kraj",
+    "Obyvatelé": "−6,5 % (1,23 mil. → 1,15 mil.)",
+    "Dospělí od 18 let": "−1,5 %"
+   },
+   {
+    "kraj": "Pardubický",
+    "zmena": -14.8,
+    "label": "−14,8 %",
+    "skupina": "ubývá",
+    "hlavicka": "Pardubický kraj",
+    "Obyvatelé": "−14,8 % (531 tis. → 452 tis.)",
+    "Dospělí od 18 let": "−9,7 %"
+   },
+   {
+    "kraj": "Jihočeský",
+    "zmena": -19.3,
+    "label": "−19,3 %",
+    "skupina": "ubývá",
+    "hlavicka": "Jihočeský kraj",
+    "Obyvatelé": "−19,3 % (655 tis. → 528 tis.)",
+    "Dospělí od 18 let": "−14,7 %"
+   },
+   {
+    "kraj": "Liberecký",
+    "zmena": -22.2,
+    "label": "−22,2 %",
+    "skupina": "ubývá",
+    "hlavicka": "Liberecký kraj",
+    "Obyvatelé": "−22,2 % (451 tis. → 351 tis.)",
+    "Dospělí od 18 let": "−16,9 %"
+   },
+   {
+    "kraj": "Vysočina",
+    "zmena": -24.3,
+    "label": "−24,3 %",
+    "skupina": "ubývá",
+    "hlavicka": "Kraj Vysočina",
+    "Obyvatelé": "−24,3 % (518 tis. → 392 tis.)",
+    "Dospělí od 18 let": "−20,3 %"
+   },
+   {
+    "kraj": "Královéhradecký",
+    "zmena": -25.5,
+    "label": "−25,5 %",
+    "skupina": "ubývá",
+    "hlavicka": "Královéhradecký kraj",
+    "Obyvatelé": "−25,5 % (557 tis. → 415 tis.)",
+    "Dospělí od 18 let": "−21,6 %"
+   },
+   {
+    "kraj": "Olomoucký",
+    "zmena": -25.5,
+    "label": "−25,5 %",
+    "skupina": "ubývá",
+    "hlavicka": "Olomoucký kraj",
+    "Obyvatelé": "−25,5 % (633 tis. → 471 tis.)",
+    "Dospělí od 18 let": "−22,2 %"
+   },
+   {
+    "kraj": "Ústecký",
+    "zmena": -26.7,
+    "label": "−26,7 %",
+    "skupina": "ubývá",
+    "hlavicka": "Ústecký kraj",
+    "Obyvatelé": "−26,7 % (811 tis. → 595 tis.)",
+    "Dospělí od 18 let": "−22,6 %"
+   },
+   {
+    "kraj": "Zlínský",
+    "zmena": -30.4,
+    "label": "−30,4 %",
+    "skupina": "ubývá",
+    "hlavicka": "Zlínský kraj",
+    "Obyvatelé": "−30,4 % (581 tis. → 404 tis.)",
+    "Dospělí od 18 let": "−26,9 %"
+   },
+   {
+    "kraj": "Moravskoslezský",
+    "zmena": -35.4,
+    "label": "−35,4 %",
+    "skupina": "ubývá",
+    "hlavicka": "Moravskoslezský kraj",
+    "Obyvatelé": "−35,4 % (1,19 mil. → 768 tis.)",
+    "Dospělí od 18 let": "−32,0 %"
+   },
+   {
+    "kraj": "Karlovarský",
+    "zmena": -43.5,
+    "label": "−43,5 %",
+    "skupina": "ubývá",
+    "hlavicka": "Karlovarský kraj",
+    "Obyvatelé": "−43,5 % (295 tis. → 167 tis.)",
+    "Dospělí od 18 let": "−39,7 %"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2,
+    "height": {
+     "band": 0.7
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "kraj",
+     "type": "nominal",
+     "sort": [
+      "Praha",
+      "Středočeský",
+      "Plzeňský",
+      "Jihomoravský",
+      "Pardubický",
+      "Jihočeský",
+      "Liberecký",
+      "Vysočina",
+      "Královéhradecký",
+      "Olomoucký",
+      "Ústecký",
+      "Zlínský",
+      "Moravskoslezský",
+      "Karlovarský"
+     ],
+     "title": null,
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12
+     }
+    },
+    "x": {
+     "field": "zmena",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       -56,
+       56
+      ]
+     },
+     "axis": {
+      "values": [
+       -40,
+       -20,
+       0,
+       20,
+       40
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "(datum.value > 0 ? '+' : datum.value < 0 ? '−' : '') + abs(datum.value) + ' %'"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "roste",
+       "ubývá"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 1,
+    "color": "#101432",
+    "opacity": 0.7
+   },
+   "encoding": {
+    "x": {
+     "datum": 0
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.zmena > 0"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 5,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "y": {
+     "field": "kraj",
+     "type": "nominal",
+     "sort": [
+      "Praha",
+      "Středočeský",
+      "Plzeňský",
+      "Jihomoravský",
+      "Pardubický",
+      "Jihočeský",
+      "Liberecký",
+      "Vysočina",
+      "Královéhradecký",
+      "Olomoucký",
+      "Ústecký",
+      "Zlínský",
+      "Moravskoslezský",
+      "Karlovarský"
+     ],
+     "title": null,
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12
+     }
+    },
+    "x": {
+     "field": "zmena",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       -56,
+       56
+      ]
+     },
+     "axis": {
+      "values": [
+       -40,
+       -20,
+       0,
+       20,
+       40
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "(datum.value > 0 ? '+' : datum.value < 0 ? '−' : '') + abs(datum.value) + ' %'"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "roste",
+       "ubývá"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.zmena < 0"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -5,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "y": {
+     "field": "kraj",
+     "type": "nominal",
+     "sort": [
+      "Praha",
+      "Středočeský",
+      "Plzeňský",
+      "Jihomoravský",
+      "Pardubický",
+      "Jihočeský",
+      "Liberecký",
+      "Vysočina",
+      "Královéhradecký",
+      "Olomoucký",
+      "Ústecký",
+      "Zlínský",
+      "Moravskoslezský",
+      "Karlovarský"
+     ],
+     "title": null,
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12
+     }
+    },
+    "x": {
+     "field": "zmena",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       -56,
+       56
+      ]
+     },
+     "axis": {
+      "values": [
+       -40,
+       -20,
+       0,
+       20,
+       40
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "(datum.value > 0 ? '+' : datum.value < 0 ? '−' : '') + abs(datum.value) + ' %'"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "roste",
+       "ubývá"
+      ],
+      "range": [
+       "#de1743",
+       "#2f325c"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "y": {
+     "field": "kraj",
+     "type": "nominal",
+     "sort": [
+      "Praha",
+      "Středočeský",
+      "Plzeňský",
+      "Jihomoravský",
+      "Pardubický",
+      "Jihočeský",
+      "Liberecký",
+      "Vysočina",
+      "Královéhradecký",
+      "Olomoucký",
+      "Ústecký",
+      "Zlínský",
+      "Moravskoslezský",
+      "Karlovarský"
+     ],
+     "title": null,
+     "axis": {
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": 12
+     }
+    },
+    "x": {
+     "datum": -56
+    },
+    "x2": {
+     "datum": 56
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "Obyvatelé",
+      "title": "Obyvatelé"
+     },
+     {
+      "field": "Dospělí od 18 let",
+      "title": "Dospělí od 18 let"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}
