@@ -1,0 +1,192 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Osadníci {letos do září|#de1743} zaútočili víc než za celý loňský rok",
+  "subtitle": "Útoky osadníků na Palestince, které skončily zraněním, smrtí nebo škodou na majetku (Západní břeh včetně východního Jeruzaléma). Rok 2026 leden–září."
+ },
+ "width": 600,
+ "height": 300,
+ "data": {
+  "values": [
+   {
+    "rok": "2006",
+    "utoky": 117,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2007",
+    "utoky": 112,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2008",
+    "utoky": 208,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2009",
+    "utoky": 170,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2010",
+    "utoky": 314,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2011",
+    "utoky": 423,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2012",
+    "utoky": 369,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2013",
+    "utoky": 397,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2014",
+    "utoky": 323,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2015",
+    "utoky": 228,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2016",
+    "utoky": 95,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2017",
+    "utoky": 179,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2018",
+    "utoky": 330,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2019",
+    "utoky": 367,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2020",
+    "utoky": 381,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2021",
+    "utoky": 532,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2022",
+    "utoky": 853,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2023",
+    "utoky": 1291,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2024",
+    "utoky": 1449,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2025",
+    "utoky": 1836,
+    "druh": "cely rok"
+   },
+   {
+    "rok": "2026",
+    "utoky": 1848,
+    "druh": "leden–září"
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "axis": {
+    "title": null,
+    "labelAngle": 0,
+    "labelExpr": "toNumber(datum.value) % 2 == 0 ? datum.value : ''"
+   }
+  },
+  "y": {
+   "field": "utoky",
+   "type": "quantitative",
+   "axis": {
+    "title": "Počet útoků"
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "width": {
+     "band": 0.75
+    }
+   },
+   "encoding": {
+    "color": {
+     "condition": {
+      "test": "datum.rok == '2026'",
+      "value": "#de1743"
+     },
+     "value": "#272a59"
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "druh",
+      "title": "Období"
+     },
+     {
+      "field": "utoky",
+      "title": "Útoků",
+      "format": ",d"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "toNumber(datum.rok) >= 2021"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "dy": -8,
+    "fontSize": 11,
+    "fontWeight": "bold",
+    "color": "#272a59"
+   },
+   "encoding": {
+    "text": {
+     "field": "utoky",
+     "type": "quantitative",
+     "format": ",d"
+    }
+   }
+  }
+ ],
+ "_source": "[OCHA, West Bank Monthly snapshot k 30. 9. 2026](https://www.ochaopt.org/content/west-bank-monthly-snapshot-casualties-property-damage-and-displacement-september-2026); OCHA údaje zpětně upřesňuje"
+}

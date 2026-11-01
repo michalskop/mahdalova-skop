@@ -1,0 +1,83 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/images/cover-homepage.png",
+      "otisk": "0006aae650dcc178",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs": "8a1d8bb15373f43b",
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/motiv-homepage.svg": "8cd47e83763b85a9"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/images/cover-og.jpg",
+      "otisk": "1dc32e658531a4b7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs": "8a1d8bb15373f43b",
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/motiv-og.svg": "95a46975946618b4"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/images/cover-square.png",
+      "otisk": "55ccf3dc68381dc8",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs": "8a1d8bb15373f43b",
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/motiv-square.svg": "7c933670cd15ac93"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/images/cover-instagram.png",
+      "otisk": "e5befe094345dba5",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs": "8a1d8bb15373f43b",
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/motiv-instagram.svg": "b54d771efa098292"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/images/cover-story.png",
+      "otisk": "f27c87301e0b2626",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs": "8a1d8bb15373f43b",
+        "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/motiv-story.svg": "72667a58de2e48e8"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)",
+          "legenda: podklad pod textem (leží na světlé části motivu)",
+          "legenda: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-01T00:16:26.189Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-10-31-osadnici-na-zapadnim-brehu/index.md",
+  "titulekClanku": "Osadníci útočí čím dál častěji, palestinský stát nechce ani Netanjahu, ani Eisenkot",
+  "texty": {
+    "stitek": "Analýza • Západní břeh",
+    "nadtitulek": "",
+    "titulek": "Osadníci zakládají nelegální osady nejrychleji za 30 let",
+    "podtitulek": "Palestinský stát nechce ani Netanjahu, ani jeho vyzyvatel Eisenkot"
+  }
+}
