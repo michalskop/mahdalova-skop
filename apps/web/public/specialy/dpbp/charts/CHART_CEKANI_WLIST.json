@@ -1,0 +1,238 @@
+{
+ "_source": "Eurostat, hlth_silc_08 (EU-SILC), rok 2025, lidé starší 16 let, důvod „čekací listina“",
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "description": "Nesplněná potřeba lékařského vyšetření kvůli čekací listině",
+ "width": 450,
+ "height": 520,
+ "background": "#fdfbf7",
+ "autosize": {
+  "type": "pad",
+  "resize": true
+ },
+ "data": {
+  "values": [
+   {
+    "zeme": "Bulharsko",
+    "val": 0.0,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Kypr",
+    "val": 0.0,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Belgie",
+    "val": 0.1,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Malta",
+    "val": 0.1,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Nizozemsko",
+    "val": 0.2,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Česko",
+    "val": 0.2,
+    "color": "#de1743"
+   },
+   {
+    "zeme": "Chorvatsko",
+    "val": 0.5,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Rakousko",
+    "val": 0.6,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Rumunsko",
+    "val": 0.6,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Německo",
+    "val": 0.8,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Itálie",
+    "val": 0.9,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Lucembursko",
+    "val": 0.9,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Slovensko",
+    "val": 1.0,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Maďarsko",
+    "val": 1.1,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Francie",
+    "val": 1.4,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Portugalsko",
+    "val": 1.5,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Španělsko",
+    "val": 1.5,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Švédsko",
+    "val": 1.7,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Řecko",
+    "val": 2.0,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Irsko",
+    "val": 2.1,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Polsko",
+    "val": 2.2,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Dánsko",
+    "val": 2.3,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Litva",
+    "val": 2.9,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Slovinsko",
+    "val": 3.0,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Lotyšsko",
+    "val": 4.8,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Estonsko",
+    "val": 6.9,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Finsko",
+    "val": 7.3,
+    "color": "#bcbcb0"
+   },
+   {
+    "zeme": "Průměr EU",
+    "val": 1.2,
+    "color": "#6267a3"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "cornerRadiusEnd": 3
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "title": null,
+     "sort": {
+      "field": "val",
+      "op": "max",
+      "order": "descending"
+     }
+    },
+    "x": {
+     "field": "val",
+     "type": "quantitative",
+     "title": "Podíl lidí s nesplněnou potřebou vyšetření kvůli čekací listině, %"
+    },
+    "color": {
+     "field": "color",
+     "type": "nominal",
+     "scale": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 4,
+    "fontSize": 10,
+    "color": "#272a59"
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": {
+      "field": "val",
+      "op": "max",
+      "order": "descending"
+     }
+    },
+    "x": {
+     "field": "val",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "val",
+     "type": "quantitative",
+     "format": ".1f"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  },
+  "title": {
+   "font": "Roboto Slab",
+   "fontWeight": "bold",
+   "fontSize": 13,
+   "anchor": "start",
+   "color": "#272a59",
+   "subtitleFont": "Work Sans",
+   "subtitleFontSize": 10,
+   "subtitleColor": "#6267a3"
+  },
+  "axis": {
+   "titleColor": "#6267a3"
+  }
+ },
+ "title": {
+  "text": "Kvůli čekací listině zůstalo v Česku bez potřebného vyšetření 0.2 % lidí, v EU 1.2 %",
+  "subtitle": "Podíl lidí 16+ s nesplněnou potřebou vyšetření kvůli čekací listině, 2025"
+ }
+}
