@@ -32,7 +32,7 @@ There are no automated tests. No test runner is configured.
 ## Media Storage & CDN Policy (`media.datatimes.org`)
 
 **Binary media files (PNG, JPEG, WebP, SVG, MP4) must NEVER be committed to Git.**
-A pre-commit hook (`.githooks/pre-commit`) blocks newly staged binary assets.
+A pre-commit hook (`.githooks/pre-commit`) blocks newly staged binary assets; `scripts/git-hooks/pre-commit` calls it, so it runs with either `core.hooksPath` (recommended: `scripts/git-hooks`; exception without skipping article checks: `ALLOW_MEDIA_COMMIT=1 git commit`).
 
 - **Workflow:**
   1. Generate/save files locally (in `work/` or temporary folder).

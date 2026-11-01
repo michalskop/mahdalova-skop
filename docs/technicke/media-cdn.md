@@ -78,15 +78,21 @@ python scripts/upload_media.py \
 ### Features:
 1. **Collision Refusal (`--no-clobber`):** Exits with an error if the remote file already exists, protecting browser caches.
 2. **Auto Cache Headers:** Sends `Cache-Control: public, max-age=31536000, immutable`.
-3. **Machine-Readable JSON Output:** AI agents parse the returned JSON to extract the public URL automatically:
+3. **Explicit Content-Type map:** `.webp`, `.avif`, `.svg`, `.png`, `.jpg/.jpeg`, `.gif`, `.mp4`, `.webm`, `.mov`, `.pdf` get their type from a fixed table in the script; only other extensions fall back to Python's `mimetypes`. (On Windows `mimetypes` reads the registry, which usually lacks `.webp` – before 2026-11-01 WebP uploaded from Windows was served as `application/octet-stream`.)
+4. **Target validation:** `--target` must be a relative bucket key ending in a file name. Empty targets, a leading `/` or `\`, anything containing `:` (drive letters, URLs) and empty/`.`/`..` segments are refused with exit code 1 – never silently "fixed". In Git Bash an argument starting with `/` is rewritten to a Windows path (`/cover-og.jpg` → `C:/Program Files/Git/cover-og.jpg`); the script now rejects that instead of uploading under that key.
+5. **Machine-Readable JSON Output:** AI agents parse the returned JSON to extract the public URL automatically. `content_type` is what was sent; `verified_at_edge` / `edge_content_type` come from a HEAD request to the CDN after the upload:
    ```json
    {
      "status": "success",
      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/10/slug/chart.webp",
      "key": "datatimes-cz/articles/2026/10/slug/chart.webp",
-     "bytes": 48210
+     "bytes": 48210,
+     "content_type": "image/webp",
+     "verified_at_edge": true,
+     "edge_content_type": "image/webp"
    }
    ```
+   Test uploads go under `datatimes-cz/site/test/<name>-YYYY-MM-DD.<ext>` (never reuse a key).
 
 ---
 
@@ -116,10 +122,17 @@ B2_APPLICATION_KEY="YOUR_APP_KEY"
 
 ---
 
-## 6. Pre-Commit Guardrail (`.githooks/pre-commit`)
+## 6. Pre-Commit Guardrail (`.githooks/pre-commit`, also run by `scripts/git-hooks/pre-commit`)
 
-A Git pre-commit hook is committed in `.githooks/pre-commit`.
-* **Activation:** `git config core.hooksPath .githooks` (runs automatically on `npm install`).
-* **Behavior:** Inspects only **newly added** files (`--diff-filter=A`). If a new binary image/video is staged, the commit is rejected with instructions.
+The check lives in `.githooks/pre-commit`. The repo has two hook directories and a machine uses one of them via `core.hooksPath`; the binary check runs in **both**:
+
+| `core.hooksPath` | pre-commit runs | pre-push runs |
+|---|---|---|
+| `scripts/git-hooks` (recommended) | binary check (calls `.githooks/pre-commit`) → hidden publish `time` → `checkArticles.js --staged` | `git lfs pre-push` (web animations in Git LFS) |
+| `.githooks` | binary check only | nothing |
+
+* **Activation (once per computer):** `git config core.hooksPath scripts/git-hooks`. Nothing sets it automatically on `npm install` (there is no `prepare` script). Check with `git config --show-origin --get-all core.hooksPath` – Claude worktrees may carry their own copy in `.git/worktrees/<name>/config.worktree`.
+* **Behavior:** Inspects only **newly added** files (`--diff-filter=A`). If a new image/video (`png, jpg/jpeg, webp, gif, mp4, webm, mov, tiff, svg`) is staged, the commit is rejected with instructions.
 * **Backwards Compatibility:** Modifying existing text in older articles that reference legacy files in `public/` is never blocked.
-* **Emergency Bypass:** `git commit --no-verify` (for rare exceptions like essential favicon updates).
+* **Emergency Bypass:** with `scripts/git-hooks` use `ALLOW_MEDIA_COMMIT=1 git commit …` – it skips only the binary check, the article checks still run. `git commit --no-verify` skips every hook (including `checkArticles`), so use it only with `.githooks`, for rare exceptions like essential favicon updates.
+* Keep one copy of the rule: change extensions or messages in `.githooks/pre-commit`; `scripts/git-hooks/pre-commit` only calls it.
