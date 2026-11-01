@@ -3,9 +3,12 @@
 // nevypadne; tempo pomalé až středně pomalé („ne rozbitý vánoční strom“). Cyklus se plynule opakuje.
 // PW_PATH=<repo>/node_modules/playwright node tools/animation-generator.cjs <tento soubor> [--nahledy <složka> [--jen-nahledy]]
 // → images/cover-homepage-animace.gif (frontmatter homepageImage), MP4 do social/animace/
+// Kateřina 31. 10. 2026: i animovaný první slide carouselu (formát instagram 1080×1350, stejný titulek, tip a legenda
+// jako 01.png z carousel.config.cjs); na Instagram se nahraje jako první položka místo 01.png.
 const path = require('path');
 const { zaznamy, medaile, f1 } = require('./motiv.cjs');
 const cover = require('./cover.config.cjs');
+const prvniSlide = require('./carousel.config.cjs').slidy[0].cover; // text a legenda 1. slidu carouselu
 
 const CYKLUS = 45;   // s – za tuto dobu blikne každá žena právě jednou
 const ZABLESK = 2.6; // s – jeden záblesk: pomalé rozsvícení a pohasnutí
@@ -42,7 +45,8 @@ module.exports = {
   vystup: path.join(__dirname, '..', 'social', 'animace'),
   fps: 12,
   trvani: CYKLUS,
-  formaty: ['homepage'],
+  formaty: ['homepage', 'instagram'],
+  coverPro: { instagram: { ...prvniSlide, logo: 'nahore' } },
   snimek,
   gif: { format: 'homepage', sirka: 1000, fps: 12, delka: CYKLUS, cil: path.join(__dirname, '..', 'images', 'cover-homepage-animace.gif') },
   nahledy: [0, 5, 12.3],
