@@ -67,7 +67,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     // jedna řada = jeden řádek: vlaječka, název, řada ikon, výsledek vpravo
     radyVRadku(w, h, { radky, jednotka }) {
       const f = fsOf(w), n = radky.length, rez = jednotka ? f * 1.9 : 0, lane = (h - rez) / n, fw = f * 2.0;
-      const nameW = f * 4.6, R = f * 3.4, L = fw + f * 0.6 + nameW, N = Math.max(...radky.map((r) => r.skupiny.reduce((a, g) => a + g[0], 0)));
+      const nameW = f * 4.6, R = f * 4.9, L = fw + f * 0.6 + nameW, N = Math.max(...radky.map((r) => r.skupiny.reduce((a, g) => a + g[0], 0)));
       const k = Math.min((w - L - R) / N, lane * 0.8);
       let s = '';
       radky.forEach((r, i) => {
@@ -173,7 +173,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     '13-cekaci-doby': { motiv: 'chybi', arg: { co: 'Jak dlouho se čeká', jak: 'to se plošně neměří' } },
     '14-kolik-stoji-kdo-plati': { motiv: 'podil', arg: { cislo: '14 Kč', cast: 14, legenda: [[ZLU, 'platíme sami'], [CH, 'hradí veřejné peníze']] } },
     '15-sousede-stredni-evropa': { motiv: 'rady2', arg: { jednotka: 'každá mince je 1 koruna na zdraví na člověka (Česko = 10)', radky: [{ nazev: 'Česko', ikona: 'mince', skupiny: [[10, CH]], pozn: '10' }, { nazev: 'Rakousko', ikona: 'mince', skupiny: [[10, CH], [7, ZLU]], pozn: '17', zv: true }] } },
-    'svet-japonsko-stari': { motiv: 'radyVRadku', arg: { radky: [{ nazev: 'nyní', vlajka: 'cz', ikona: 'senior', skupiny: [[2, ZLU], [8, CH]], pozn: '2' }, { nazev: '2050', vlajka: 'cz', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3' }, { nazev: 'nyní', vlajka: 'jp', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3', zv: true }] } },
+    'svet-japonsko-stari': { motiv: 'radyVRadku', arg: { jednotka: 'podíly lidí starších 65 let', radky: [{ nazev: 'nyní', vlajka: 'cz', ikona: 'senior', skupiny: [[2, ZLU], [8, CH]], pozn: '2/10' }, { nazev: '2050', vlajka: 'cz', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3/10' }, { nazev: 'nyní', vlajka: 'jp', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3/10', zv: true }] } },
     'svet-jizni-korea-lekari': { motiv: 'rady2', arg: { jednotka: 'symbol = 1 z 10 v Česku; plné jsou ty, které má Jižní Korea', radky: [{ nazev: 'Lékaři na obyvatele', ikona: 'lekar', skupiny: [[6, ZLU], [4, CH, true]], pozn: 'o 40 % méně', zv: true }, { nazev: 'Předčasná úmrtí', ikona: 'svicka', skupiny: [[5, ZLU], [5, CH, true]], pozn: 'o polovinu méně', zv: true }] } },
     'explainer-drg': { motiv: 'diagnoza', arg: {} },
   };
