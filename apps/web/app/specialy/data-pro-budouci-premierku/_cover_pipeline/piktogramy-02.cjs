@@ -52,7 +52,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
         const y0 = i * lane + (lane - hh - kk) / 2;
         s += T(0, y0 + f * 1.3, r.nazev, 'start', BILA, f * 1.3, 700) + (r.pozn ? T(w, y0 + f * 1.4, r.pozn, 'end', r.zv ? ZLU : BILA, f * 1.7, 700) : '');
         let idx = 0;
-        for (const [cnt, b, duch] of r.skupiny) for (let j = 0; j < cnt; j++, idx++) s += ikona(r.ikona, (idx + 0.5) * kk, y0 + hh + kk / 2, kk * 0.86, b, duch);
+        for (const [cnt, b, duch, typ] of r.skupiny) for (let j = 0; j < cnt; j++, idx++) s += ikona(typ || r.ikona, (idx + 0.5) * kk, y0 + hh + kk / 2, kk * 0.86, b, duch);
       });
       if (jednotka) s += T(0, h - f * 0.3, jednotka, 'start', BILA, f * 1.1, 500);
       return svgWrap(w, h, s);
@@ -140,7 +140,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     '13-cekaci-doby': { motiv: 'dveCisla', arg: { sloupce: [{ n: '12', jmeno: 'průměr EU', b: CH }, { n: '2', jmeno: 'Česko', b: ZLU }], pod: 'z tisíce lidí' } },
     '14-kolik-stoji-kdo-plati': { motiv: 'podil', arg: { cislo: '14 Kč', cast: 14, legenda: [[ZLU, 'platíme sami'], [CH, 'hradí veřejné peníze']] } },
     '15-sousede-stredni-evropa': { motiv: 'rady2', arg: { jednotka: 'každá mince je 1 koruna na zdraví na člověka (Česko = 10)', radky: [{ nazev: 'Česko', ikona: 'mince', skupiny: [[10, CH]], pozn: '10' }, { nazev: 'Rakousko', ikona: 'mince', skupiny: [[10, CH], [7, ZLU]], pozn: '17', zv: true }] } },
-    'svet-japonsko-stari': { motiv: 'rady2', arg: { jednotka: 'z každých deseti lidí jsou žlutí starší 65 let', radky: [{ nazev: 'Japonsko dnes', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: 'skoro 3', zv: true }, { nazev: 'Česko kolem roku 2050', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3' }] } },
+    'svet-japonsko-stari': { motiv: 'rady2', arg: { jednotka: 'z každých deseti lidí jsou žlutí starší 65 let', radky: [{ nazev: 'Japonsko dnes', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '', zv: true }, { nazev: 'Česko kolem roku 2050', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '' }] } },
     'svet-jizni-korea-lekari': { motiv: 'rady2', arg: { jednotka: 'symbol = 1 z 10 v Česku; plné jsou ty, které má Jižní Korea', radky: [{ nazev: 'Lékaři na obyvatele', ikona: 'lekar', skupiny: [[6, ZLU], [4, CH, true]], pozn: 'o 40 % méně', zv: true }, { nazev: 'Předčasná úmrtí', ikona: 'svicka', skupiny: [[5, ZLU], [5, CH, true]], pozn: 'o polovinu méně', zv: true }] } },
     'explainer-drg': { motiv: 'diagnoza', arg: {} },
   };
