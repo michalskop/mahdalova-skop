@@ -6,10 +6,10 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Flávio Bolsonaro won the first round, gained the backing of three defeated candidates and led in the polls. Yet Lula remains president. Between the two rounds he added 10.4 million votes, more than all the eliminated candidates received together in the first round. The outcome was decided by people who had not voted the first time or had cast an invalid ballot."
 coverTitulek: "Why Lula<br>won"
 coverPodtitulek: "Three million more people turned out<br>and decided the runoff"
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover.webp","
-homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover.webp","
-ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover-og.jpg","
-squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover-square.webp","
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover.webp"
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover.webp"
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover-og.jpg"
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-26-why-lula-won/cover-square.webp"
 filter: ["work"]
 tags: ["elections", "brazil", "lula", "flávio bolsonaro", "jair bolsonaro", "latin america", "russia"]
 promoted: 1

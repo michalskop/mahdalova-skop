@@ -6,10 +6,10 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "48.00% of voters turned out, 1.9 percentage points more than in 2022, and turnout rose in 12 of the 14 regions. But in the quarter of larger towns with the lowest turnout it fell in 18 of 24. Five towns are below 30% this year; four years ago there were none."
 coverTitulek: "Turnout rose,<br>but not everywhere"
 coverPodtitulek: "In the towns with the lowest turnout, even fewer people voted than in 2022"
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover.webp","
-homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover.webp","
-ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover-og.jpg","
-squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover-square.webp","
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover.webp"
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover.webp"
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover-og.jpg"
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-16-municipal-turnout/cover-square.webp"
 filter: ["work"]
 tags: ["elections", "czech elections 2026", "municipal elections", "turnout", "municipalities", "data"]
 promoted: 1

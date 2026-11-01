@@ -6,10 +6,10 @@ author: "Kateřina Mahdalová & Michal Škop"
 translator: "Translated from Czech with AI assistance"
 original: "https://www.datatimes.cz/clanek/volby-nemecko-2026-10-02-berlin-kdo-volil-levici"
 excerpt: "Die Linke won the Berlin election with 25.7% and took 47% among voters under thirty. Election-day data and results from 1,572 polling districts show that age and housing in a city of renters were decisive. In Czech media the party is often portrayed as a far-left force comparable to the AfD. Political scientists, the offices for the protection of the constitution and its record in government point to something else: a radical, not an extremist party, whose risks lie elsewhere than Czech coverage suggests."
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover.webp","
-ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover-og.jpg","
-squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover-square.webp","
-instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover-instagram.webp","
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover.webp"
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover-og.jpg"
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover-square.webp"
+instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-germany-2026-10-02-berlin-who-voted-for-die-linke/cover-instagram.webp"
 filter: ["work"]
 tags: ["elections", "germany", "berlin", "die linke", "young voters", "housing", "antisemitism", "world"]
 promoted: 1

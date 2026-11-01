@@ -8,9 +8,9 @@ original: "https://www.datatimes.cz/clanek/volby-izrael-2026-10-27-netanjahu-bez
 excerpt: "Pre-election polls put Eisenkot's Yashar in the lead, and the overnight running tally overstated Likud. From the first hour of the count, the DataTimes.cz prediction showed a stalemate: Netanyahu's bloc will end up with 53 seats, Gadi Eisenkot's opposition with 48, and the 19 members of the Arab parties will decide whether anyone has a majority."
 coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-israel-2026-10-27-netanyahu-without-majority-prediction/cover.webp"
 homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-israel-2026-10-27-netanyahu-without-majority-prediction/cover.webp"
-ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-israel-2026-10-27-netanyahu-without-majority-prediction/cover-og.jpg","
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-israel-2026-10-27-netanyahu-without-majority-prediction/cover-og.jpg"
 squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-israel-2026-10-27-netanyahu-without-majority-prediction/cover-square.webp"
-instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-israel-2026-10-27-netanyahu-without-majority-prediction/cover-instagram.webp","
+instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-israel-2026-10-27-netanyahu-without-majority-prediction/cover-instagram.webp"
 coverTitulek: "Netanyahu<br>will not win<br>a majority"
 coverPodtitulek: "The prediction puts his bloc<br>eight seats short of a majority"
 filter: ["work"]
