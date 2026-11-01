@@ -31,6 +31,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
   const vlajka = (kod, x, y, w, h) => {
     const r = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h * 0.1}" fill="#f8f6f0"/>`;
     if (kod === 'cz') return r + `<path d="M ${x} ${y + h / 2} H ${x + w} V ${y + h - h * 0.1} Q ${x + w} ${y + h} ${x + w - h * 0.1} ${y + h} H ${x + h * 0.1} Q ${x} ${y + h} ${x} ${y + h - h * 0.1} Z" fill="#d7141a"/><path d="M ${x} ${y} L ${x + w * 0.5} ${y + h / 2} L ${x} ${y + h} Z" fill="#11457e"/>`;
+    if (kod === 'no') return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h * 0.1}" fill="#ba0c2f"/><rect x="${x}" y="${y + h * 0.375}" width="${w}" height="${h * 0.25}" fill="#f8f6f0"/><rect x="${x + w * 0.27}" y="${y}" width="${h * 0.25}" height="${h}" fill="#f8f6f0"/><rect x="${x}" y="${y + h * 0.44}" width="${w}" height="${h * 0.12}" fill="#00205b"/><rect x="${x + w * 0.27 + h * 0.065}" y="${y}" width="${h * 0.12}" height="${h}" fill="#00205b"/>`;
     return r + `<circle cx="${x + w / 2}" cy="${y + h / 2}" r="${h * 0.3}" fill="#bc002d"/>`;
   };
 
@@ -168,7 +169,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     '04-sestry-a-skupinove-praxe': { motiv: 'rady2', arg: { jednotka: 'sestry na 1 000 obyvatel', radky: [{ nazev: 'Norsko', ikona: 'sestra', skupiny: [[16, CH]], pozn: '16' }, { nazev: 'Česko', ikona: 'sestra', skupiny: [[9, ZLU], [7, CH, true]], pozn: '9', zv: true }] } },
     '07-zubari': { motiv: 'zub', arg: { cislo: 'skoro 7 000', popis: ['zubních lékařů,', 'zhruba jako před pěti lety'] } },
     '09-nemocnice': { motiv: 'rady2', arg: { jednotka: 'nemocniční lůžka na 1 000 obyvatel', radky: [{ nazev: 'Česko', ikona: 'postel', skupiny: [[6, ZLU]], pozn: '6', zv: true }, { nazev: 'vyspělé země', ikona: 'postel', skupiny: [[4, CH]], pozn: '4' }] } },
-    '10-kdo-se-postara': { motiv: 'rady2', arg: { jednotka: 'ze sta korun na zdraví jde na péči o seniory', radky: [{ nazev: 'Evropa (průměr EU)', ikona: 'mince', skupiny: [[18, CH]], pozn: '18 Kč' }, { nazev: 'Česko', ikona: 'mince', skupiny: [[13, ZLU], [5, CH, true]], pozn: '13 Kč', zv: true }] } },
+    '10-kdo-se-postara': { motiv: 'radyVRadku', arg: { jednotka: 'pracovníci v péči o seniory na 100 seniorů', radky: [{ nazev: '', vlajka: 'cz', ikona: 'sestra', skupiny: [[2, ZLU]], pozn: [['2', ZLU]] }, { nazev: 'průměr', ikona: 'sestra', skupiny: [[5, CH]], pozn: [['5', BILA]] }, { nazev: '', vlajka: 'no', ikona: 'sestra', skupiny: [[13, CH]], pozn: [['13', BILA]] }] } },
     '11-kdo-vlastni-peci': { motiv: 'mrizka', arg: { ikona: 'dum', sloupce: 5, skupiny: [[25, ZLU]], bok: [['455 000', 3.4, ZLU], ['lidí je kapacita domovů,', 1.25, BILA, 600], ['které spravuje', 1.25, BILA, 600], ['25 největších korporací', 1.25, BILA, 600]] } },
     '12-treti-navrat-vojtecha': { motiv: 'platba', arg: { kdo: [['clovek', 'děti'], ['senior', 'senioři'], ['student', 'studenti']], puvodni: '21', nove: '13', pod: 'miliard navíc pro rok 2027' } },
     '13-cekaci-doby': { motiv: 'chybi', arg: { co: 'Jak dlouho se čeká', jak: 'to se plošně neměří' } },
