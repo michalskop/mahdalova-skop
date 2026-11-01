@@ -9,7 +9,7 @@ const { svg } = require('./motiv.cjs');
 module.exports = {
   logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
-  kicker: { cervene: 'Analysis' },
+  kicker: { cervene: 'Analysis', dal: 'Czech Republic and the EU' },
   // brandTeal.9 × brandAmethyst.9 záře, podtitulek brandNavy.1, štítek brand.6
   barvy: { glowA: '#023440', glowB: '#351040', glowPosA: '0% 0%', glowPosB: '100% 100%', sub: '#d2d8e9', stitek: '#de1743' },
   pro: { story: { barvy: { glowA: '#101432', glowB: '#101432', sub: '#d2d8e9', stitek: '#de1743' } } },
