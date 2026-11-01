@@ -64,6 +64,23 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
       if (jednotka) s += T(0, h - f * 0.3, jednotka, 'start', BILA, f * 1.1, 500);
       return svgWrap(w, h, s);
     },
+    // jedna řada = jeden řádek: vlaječka, název, řada ikon, výsledek vpravo
+    radyVRadku(w, h, { radky, jednotka }) {
+      const f = fsOf(w), n = radky.length, rez = jednotka ? f * 1.9 : 0, lane = (h - rez) / n, fw = f * 2.6;
+      const nameW = f * 10.6, R = f * 6.0, L = fw + f * 0.7 + nameW, N = Math.max(...radky.map((r) => r.skupiny.reduce((a, g) => a + g[0], 0)));
+      const k = Math.min((w - L - R) / N, lane * 0.8);
+      let s = '';
+      radky.forEach((r, i) => {
+        const cy = lane * (i + 0.5);
+        if (r.vlajka) s += vlajka(r.vlajka, 0, cy - fw / 3, fw, fw / 1.5);
+        s += T(fw + f * 0.7, cy + f * 0.45, r.nazev, 'start', BILA, f * 1.4, 700);
+        let idx = 0;
+        for (const [cnt, b, duch] of r.skupiny) for (let j = 0; j < cnt; j++, idx++) s += ikona(r.ikona, L + (idx + 0.5) * k, cy, k * 0.9, b, duch);
+        if (r.pozn) s += T(w, cy + f * 0.5, r.pozn, 'end', r.zv ? ZLU : BILA, f * 1.5, 700);
+      });
+      if (jednotka) s += T(0, h - f * 0.3, jednotka, 'start', BILA, f * 1.1, 500);
+      return svgWrap(w, h, s);
+    },
     // zub a velké číslo
     zub(w, h, { cislo, popis }) {
       const f = fsOf(w), k = Math.min(h * 0.92, w * 0.34);
@@ -156,7 +173,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     '13-cekaci-doby': { motiv: 'chybi', arg: { co: 'Jak dlouho se čeká', jak: 'to se plošně neměří' } },
     '14-kolik-stoji-kdo-plati': { motiv: 'podil', arg: { cislo: '14 Kč', cast: 14, legenda: [[ZLU, 'platíme sami'], [CH, 'hradí veřejné peníze']] } },
     '15-sousede-stredni-evropa': { motiv: 'rady2', arg: { jednotka: 'každá mince je 1 koruna na zdraví na člověka (Česko = 10)', radky: [{ nazev: 'Česko', ikona: 'mince', skupiny: [[10, CH]], pozn: '10' }, { nazev: 'Rakousko', ikona: 'mince', skupiny: [[10, CH], [7, ZLU]], pozn: '17', zv: true }] } },
-    'svet-japonsko-stari': { motiv: 'rady2', arg: { jednotka: 'z každých deseti lidí jsou žlutí starší 65 let', radky: [{ nazev: 'Česko nyní', vlajka: 'cz', ikona: 'senior', skupiny: [[2, ZLU], [8, CH]], pozn: '2 z 10' }, { nazev: 'Česko kolem roku 2050', vlajka: 'cz', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3 z 10' }, { nazev: 'Japonsko nyní', vlajka: 'jp', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: 'skoro 3 z 10', zv: true }] } },
+    'svet-japonsko-stari': { motiv: 'radyVRadku', arg: { jednotka: 'z každých deseti lidí jsou žlutí starší 65 let', radky: [{ nazev: 'ČR nyní', vlajka: 'cz', ikona: 'senior', skupiny: [[2, ZLU], [8, CH]], pozn: '2' }, { nazev: 'ČR 2050', vlajka: 'cz', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3' }, { nazev: 'Japonsko nyní', vlajka: 'jp', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: 'skoro 3', zv: true }] } },
     'svet-jizni-korea-lekari': { motiv: 'rady2', arg: { jednotka: 'symbol = 1 z 10 v Česku; plné jsou ty, které má Jižní Korea', radky: [{ nazev: 'Lékaři na obyvatele', ikona: 'lekar', skupiny: [[6, ZLU], [4, CH, true]], pozn: 'o 40 % méně', zv: true }, { nazev: 'Předčasná úmrtí', ikona: 'svicka', skupiny: [[5, ZLU], [5, CH, true]], pozn: 'o polovinu méně', zv: true }] } },
     'explainer-drg': { motiv: 'diagnoza', arg: {} },
   };
