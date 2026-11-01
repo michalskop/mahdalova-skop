@@ -56,17 +56,27 @@ function checkArticle(slug) {
 
   // Cover set (tools/COVER-EDITOR.md)
   const img = (p) => p && path.join(dir, p);
+  // Covery na CDN media.datatimes.org (docs/technicke/media-cdn.md): soubor v gitu není, existenci a velikost
+  // ověřuje při nahrání scripts/upload_media.py; sada pěti formátů se pak hlídá podle frontmatteru.
+  const cdn = (v) => typeof v === 'string' && /^https:\/\/media\.datatimes\.org\//.test(v);
   for (const k of ['coverImage', 'ogImage']) {
     if (!fm[k]) err(slug, `chybí frontmatter „${k}“ (sada coverů)`);
-    else if (!fs.existsSync(img(fm[k]))) err(slug, `${k} ukazuje na neexistující soubor ${fm[k]}`);
+    else if (!cdn(fm[k]) && !fs.existsSync(img(fm[k]))) err(slug, `${k} ukazuje na neexistující soubor ${fm[k]}`);
   }
+  if (cdn(fm.ogImage) && !/\.jpe?g$/i.test(fm.ogImage)) err(slug, 'ogImage musí být JPEG (sítě a WhatsApp)');
   if (fm.ogImage && fs.existsSync(img(fm.ogImage)) && fs.statSync(img(fm.ogImage)).size > 300 * 1024) {
     err(slug, 'ogImage je větší než 300 kB (WhatsApp ho nenačte)');
   }
   const imagesDir = path.join(dir, 'images');
   const files = fs.existsSync(imagesDir) ? fs.readdirSync(imagesDir) : [];
-  for (const name of ['cover-square', 'cover-instagram', 'cover-story']) {
-    if (!files.some((f) => f.startsWith(name + '.'))) err(slug, `chybí ${name} (sada pěti coverů)`);
+  if (cdn(fm.coverImage)) {
+    for (const k of ['squareImage', 'instagramImage', 'storyImage']) {
+      if (!cdn(fm[k])) err(slug, `chybí frontmatter „${k}“ s adresou na media.datatimes.org (sada pěti coverů na CDN)`);
+    }
+  } else {
+    for (const name of ['cover-square', 'cover-instagram', 'cover-story']) {
+      if (!files.some((f) => f.startsWith(name + '.'))) err(slug, `chybí ${name} (sada pěti coverů)`);
+    }
   }
   // A cover must be a real cover, not a copy of an in-text image or a tool screenshot.
   if (fm.coverImage && fs.existsSync(img(fm.coverImage))) {
