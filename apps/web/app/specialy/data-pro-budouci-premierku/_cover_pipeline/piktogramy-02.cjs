@@ -26,6 +26,13 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
   // legenda: [[barva|null (prázdný obrys), text]]
   const legenda = (x, y, f, polozky, typ) => polozky.map(([b, t], i) => ikona(typ, x + f * 0.65, y + i * f * 2.0 - f * 0.4, f * 1.5, b || BILA, !b) + T(x + f * 1.7, y + i * f * 2.0, t, 'start', BILA, f * 1.25, 600)).join('');
 
+  // vlaječky (poměr 3:2): CZ a JP
+  const vlajka = (kod, x, y, w, h) => {
+    const r = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h * 0.1}" fill="#f8f6f0"/>`;
+    if (kod === 'cz') return r + `<path d="M ${x} ${y + h / 2} H ${x + w} V ${y + h - h * 0.1} Q ${x + w} ${y + h} ${x + w - h * 0.1} ${y + h} H ${x + h * 0.1} Q ${x} ${y + h} ${x} ${y + h - h * 0.1} Z" fill="#d7141a"/><path d="M ${x} ${y} L ${x + w * 0.5} ${y + h / 2} L ${x} ${y + h} Z" fill="#11457e"/>`;
+    return r + `<circle cx="${x + w / 2}" cy="${y + h / 2}" r="${h * 0.3}" fill="#bc002d"/>`;
+  };
+
   const MOTIVY = {
     // jedna mřížka ikon: skupiny = [[počet, barva, duch]], legenda dole
     mrizka(w, h, { ikona: typ, skupiny, legenda: lg, sloupce, bok }) {
@@ -50,7 +57,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
       let s = '';
       radky.forEach((r, i) => {
         const y0 = i * lane + (lane - hh - kk) / 2;
-        s += T(0, y0 + f * 1.3, r.nazev, 'start', BILA, f * 1.3, 700) + (r.pozn ? T(w, y0 + f * 1.4, r.pozn, 'end', r.zv ? ZLU : BILA, f * 1.7, 700) : '');
+        const fw = r.vlajka ? f * 2.4 : 0; if (r.vlajka) s += vlajka(r.vlajka, 0, y0 + f * 0.1, fw, fw / 1.5); s += T(r.vlajka ? fw + f * 0.6 : 0, y0 + f * 1.3, r.nazev, 'start', BILA, f * 1.3, 700) + (r.pozn ? T(w, y0 + f * 1.4, r.pozn, 'end', r.zv ? ZLU : BILA, f * 1.7, 700) : '');
         let idx = 0;
         for (const [cnt, b, duch, typ] of r.skupiny) for (let j = 0; j < cnt; j++, idx++) s += ikona(typ || r.ikona, (idx + 0.5) * kk, y0 + hh + kk / 2, kk * 0.86, b, duch);
       });
@@ -149,7 +156,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     '13-cekaci-doby': { motiv: 'chybi', arg: { co: 'Jak dlouho se čeká', jak: 'to se plošně neměří' } },
     '14-kolik-stoji-kdo-plati': { motiv: 'podil', arg: { cislo: '14 Kč', cast: 14, legenda: [[ZLU, 'platíme sami'], [CH, 'hradí veřejné peníze']] } },
     '15-sousede-stredni-evropa': { motiv: 'rady2', arg: { jednotka: 'každá mince je 1 koruna na zdraví na člověka (Česko = 10)', radky: [{ nazev: 'Česko', ikona: 'mince', skupiny: [[10, CH]], pozn: '10' }, { nazev: 'Rakousko', ikona: 'mince', skupiny: [[10, CH], [7, ZLU]], pozn: '17', zv: true }] } },
-    'svet-japonsko-stari': { motiv: 'rady2', arg: { jednotka: '', radky: [{ nazev: 'Japonsko dnes', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '', zv: true }, { nazev: 'Česko dnes', ikona: 'senior', skupiny: [[2, ZLU], [8, CH, false, 'clovek']], pozn: '' }, { nazev: 'Česko kolem roku 2050', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '' }] } },
+    'svet-japonsko-stari': { motiv: 'rady2', arg: { jednotka: 'z každých deseti lidí jsou žlutí starší 65 let', radky: [{ nazev: 'Česko nyní', vlajka: 'cz', ikona: 'senior', skupiny: [[2, ZLU], [8, CH]], pozn: '2 z 10' }, { nazev: 'Česko kolem roku 2050', vlajka: 'cz', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: '3 z 10' }, { nazev: 'Japonsko nyní', vlajka: 'jp', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: 'skoro 3 z 10', zv: true }] } },
     'svet-jizni-korea-lekari': { motiv: 'rady2', arg: { jednotka: 'symbol = 1 z 10 v Česku; plné jsou ty, které má Jižní Korea', radky: [{ nazev: 'Lékaři na obyvatele', ikona: 'lekar', skupiny: [[6, ZLU], [4, CH, true]], pozn: 'o 40 % méně', zv: true }, { nazev: 'Předčasná úmrtí', ikona: 'svicka', skupiny: [[5, ZLU], [5, CH, true]], pozn: 'o polovinu méně', zv: true }] } },
     'explainer-drg': { motiv: 'diagnoza', arg: {} },
   };
