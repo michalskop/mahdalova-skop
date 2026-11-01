@@ -9,14 +9,14 @@ const { svg } = require('./motiv.cjs');
 module.exports = {
   logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
-  kicker: { cervene: 'Analysis', dal: 'Family and work' },
+  kicker: { cervene: 'Analysis', dal: 'Czech Republic &nbsp;•&nbsp; Family and work' },
   nad: 'Czechia lets mothers into work',
   // čisté ink blue jako původní cover (koláž nese barvu), podtitulek brandNavy.1, nadtitulek brandNavy.2
   barvy: { glowA: '#101432', glowB: '#272a59', glowPosB: '100% 100%', sub: '#d2d8e9', stitek: '#de1743' },
   og: 'siroky', ogScrim: false,
   format: { homepage: { t: 112 }, og: { t: 52, sub: 20 }, square: { t: 84 }, instagram: { t: 92 }, story: { t: 110 } },
   // podtitulek se na homepage nevejde na jeden řádek vedle koláže
-  pro: { homepage: { pod: 'Employed parents of children<br>under 6 (2025)' }, story: { barvy: { glowA: '#101432', glowB: '#101432', sub: '#d2d8e9', stitek: '#de1743' } } },
+  pro: { og: { kicker: { cervene: 'Analysis', dal: 'Czech Republic' } }, homepage: { pod: 'Employed parents of children<br>under 6 (2025)' }, story: { barvy: { glowA: '#101432', glowB: '#101432', sub: '#d2d8e9', stitek: '#de1743' } } },
   rozlozeni: {
     homepage: [{ prvky: ['kicker'], x: 180, y: 120 }, { prvky: ['nad', 'titulek', 'pod'], x: 740, y: 330 }, { prvky: ['logo'], x: 1320, y: 1080, vpravo: true, dole: true }],
     og: [{ prvky: ['kicker', 'nad', 'titulek', 'pod'], x: 470, y: 48 }, { prvky: ['logo'], x: 880, y: 584, vpravo: true, dole: true }],

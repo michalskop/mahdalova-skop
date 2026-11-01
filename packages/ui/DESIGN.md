@@ -676,6 +676,13 @@ import { TagList } from '@repo/ui/components/TagList';
 <TagList tags={['Data', 'Volby']} size="sm" />
 ```
 
+**Centred in the 800px article column (2026-10-31).** The list sits in
+`Container maw={800}` and the badges are centred (`justify="center"`). The old
+default `Container` (960 px) was wider than the reading column, so under an
+article the tags started left of the text and of the „Sledujte DataTimes" bar
+below them (at the page edge on narrower windows). Keep it in the same column
+as the elements around it.
+
 ---
 
 ### `MatomoAnalytics`

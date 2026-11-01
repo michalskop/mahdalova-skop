@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.datajournalism.studio/</loc>
-    <lastmod>2026-10-30T17:26:58.717Z</lastmod>
+    <lastmod>2026-10-31T18:00:48.633Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.datajournalism.studio/blog</loc>
-    <lastmod>2026-10-30T17:26:58.717Z</lastmod>
+    <lastmod>2026-10-31T18:00:48.636Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.datajournalism.studio/work</loc>
-    <lastmod>2026-10-30T17:26:58.717Z</lastmod>
+    <lastmod>2026-10-31T18:00:48.636Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.datajournalism.studio/about</loc>
-    <lastmod>2026-10-30T17:26:58.717Z</lastmod>
+    <lastmod>2026-10-31T18:00:48.636Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -267,6 +267,18 @@
   <url>
     <loc>https://www.datajournalism.studio/a/elections-romania-2024-12-20-epicentre-of-hybrid-war</loc>
     <lastmod>2024-12-20T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.datajournalism.studio/a/elections-serbia-2026-10-25-students-beat-vucic-prediction</loc>
+    <lastmod>2026-10-25T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.datajournalism.studio/a/elections-serbia-2026-10-26-why-vucic-lost</loc>
+    <lastmod>2026-10-26T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

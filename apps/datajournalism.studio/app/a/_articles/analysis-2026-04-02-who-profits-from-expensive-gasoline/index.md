@@ -3,6 +3,8 @@ title: "Data: Capping Gas Station Margins Won't Make Much Difference in Your Wal
 date: "2026-04-04"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "The government promises cheaper fuel. But for most people who fill up with gasoline at regular pumps, almost nothing will change. The tax on gasoline remains the same, and most stations already kept margins low before regulation. The intervention can help significantly mainly at expensive highway pumps."
+coverTitulek: "Babiš can’t<br>do the maths"
+coverPodtitulek: "Capping petrol station margins<br>won’t make fuel cheaper for most people"
 coverImage: "images/babis-a-ceny-benzinu-datatimes.webp"
 filter: ["blog"]
 tags: ["fuel", "high prices", "gasoline", "diesel", "government", "Babiš", "prices", "Schillerová"]

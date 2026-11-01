@@ -5,127 +5,680 @@
   "data": {
     "values": [
       {
-        "kat": "Příměří, říjen 2025",
-        "n": 53,
-        "t": "53 %",
-        "barva": "#bcbcb0",
-        "tbarva": "#101432",
-        "minpx": 46.8
+        "sl": 0,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
       },
       {
-        "kat": "Září 2026",
-        "n": 60,
-        "t": "nejméně 60 %",
-        "barva": "#de1743",
-        "tbarva": "#ffffff",
-        "minpx": 104.4
+        "sl": 0,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
       },
       {
-        "kat": "Pokyn Netanjahua",
-        "n": 70,
-        "t": "70 %",
-        "barva": "#ff8099",
-        "tbarva": "#101432",
-        "minpx": 46.8
+        "sl": 0,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 0,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 0,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 1,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 1,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 1,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 1,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 1,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 2,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 2,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 2,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 2,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 2,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 3,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 3,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 3,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 3,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 3,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 4,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 4,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 4,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 4,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 4,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 5,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 5,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 5,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 5,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 5,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 6,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 6,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 6,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 6,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 6,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 7,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 7,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 7,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 7,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 7,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 8,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 8,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 8,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 8,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 8,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 9,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 9,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 9,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 9,
+        "ra": 3,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 9,
+        "ra": 4,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 10,
+        "ra": 0,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 10,
+        "ra": 1,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 10,
+        "ra": 2,
+        "stav": "53 % podle příměří",
+        "popis": "Izraeli podle dohody o příměří z října 2025"
+      },
+      {
+        "sl": 10,
+        "ra": 3,
+        "stav": "+7 p. b. obsazeno navíc",
+        "popis": "obsadil navíc nad dohodu (stav k 2. 9. 2026)"
+      },
+      {
+        "sl": 10,
+        "ra": 4,
+        "stav": "+7 p. b. obsazeno navíc",
+        "popis": "obsadil navíc nad dohodu (stav k 2. 9. 2026)"
+      },
+      {
+        "sl": 11,
+        "ra": 0,
+        "stav": "+7 p. b. obsazeno navíc",
+        "popis": "obsadil navíc nad dohodu (stav k 2. 9. 2026)"
+      },
+      {
+        "sl": 11,
+        "ra": 1,
+        "stav": "+7 p. b. obsazeno navíc",
+        "popis": "obsadil navíc nad dohodu (stav k 2. 9. 2026)"
+      },
+      {
+        "sl": 11,
+        "ra": 2,
+        "stav": "+7 p. b. obsazeno navíc",
+        "popis": "obsadil navíc nad dohodu (stav k 2. 9. 2026)"
+      },
+      {
+        "sl": 11,
+        "ra": 3,
+        "stav": "+7 p. b. obsazeno navíc",
+        "popis": "obsadil navíc nad dohodu (stav k 2. 9. 2026)"
+      },
+      {
+        "sl": 11,
+        "ra": 4,
+        "stav": "+7 p. b. obsazeno navíc",
+        "popis": "obsadil navíc nad dohodu (stav k 2. 9. 2026)"
+      },
+      {
+        "sl": 12,
+        "ra": 0,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 12,
+        "ra": 1,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 12,
+        "ra": 2,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 12,
+        "ra": 3,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 12,
+        "ra": 4,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 13,
+        "ra": 0,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 13,
+        "ra": 1,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 13,
+        "ra": 2,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 13,
+        "ra": 3,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 13,
+        "ra": 4,
+        "stav": "+10 p. b. chce Netanjahu",
+        "popis": "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"
+      },
+      {
+        "sl": 14,
+        "ra": 0,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 14,
+        "ra": 1,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 14,
+        "ra": 2,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 14,
+        "ra": 3,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 14,
+        "ra": 4,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 15,
+        "ra": 0,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 15,
+        "ra": 1,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 15,
+        "ra": 2,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 15,
+        "ra": 3,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 15,
+        "ra": 4,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 16,
+        "ra": 0,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 16,
+        "ra": 1,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 16,
+        "ra": 2,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 16,
+        "ra": 3,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 16,
+        "ra": 4,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 17,
+        "ra": 0,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 17,
+        "ra": 1,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 17,
+        "ra": 2,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 17,
+        "ra": 3,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 17,
+        "ra": 4,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 18,
+        "ra": 0,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 18,
+        "ra": 1,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 18,
+        "ra": 2,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 18,
+        "ra": 3,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 18,
+        "ra": 4,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 19,
+        "ra": 0,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 19,
+        "ra": 1,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 19,
+        "ra": 2,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 19,
+        "ra": 3,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
+      },
+      {
+        "sl": 19,
+        "ra": 4,
+        "stav": "zbytek Gazy (30 %)",
+        "popis": "zbytek území"
       }
     ]
   },
+  "mark": {
+    "type": "circle",
+    "size": 110,
+    "opacity": 1
+  },
   "encoding": {
-    "y": {
-      "field": "kat",
-      "type": "nominal",
-      "sort": null,
-      "scale": {
-        "paddingInner": 0.3
-      },
-      "axis": {
-        "title": null,
-        "labelLimit": 240,
-        "domain": false,
-        "ticks": false,
-        "labelFontSize": 12,
-        "labelPadding": 8
-      }
-    },
     "x": {
-      "field": "n",
+      "field": "sl",
       "type": "quantitative",
       "scale": {
         "domain": [
-          0,
-          100
+          -0.5,
+          19.5
         ],
         "nice": false
       },
       "axis": null
-    }
-  },
-  "layer": [
-    {
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 3
+    },
+    "y": {
+      "field": "ra",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          -0.5,
+          4.5
+        ],
+        "nice": false,
+        "reverse": true
       },
-      "encoding": {
-        "color": {
-          "field": "barva",
-          "type": "nominal",
-          "scale": null
-        },
-        "tooltip": [
-          {
-            "field": "kat",
-            "title": "Stav"
-          },
-          {
-            "field": "t",
-            "title": "Hodnota"
-          }
+      "axis": null
+    },
+    "color": {
+      "field": "stav",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "53 % podle příměří",
+          "+7 p. b. obsazeno navíc",
+          "+10 p. b. chce Netanjahu",
+          "zbytek Gazy (30 %)"
+        ],
+        "range": [
+          "#6267a3",
+          "#de1743",
+          "#ff8099",
+          "#d4d4c8"
         ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top",
+        "direction": "horizontal",
+        "columns": 2,
+        "labelFontSize": 12.5,
+        "symbolType": "circle",
+        "symbolSize": 150,
+        "labelLimit": 300
       }
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "dx": -9,
-        "fontSize": 12.5,
-        "fontWeight": 700
+    "tooltip": [
+      {
+        "field": "stav",
+        "title": "Území Gazy"
       },
-      "encoding": {
-        "text": {
-          "value": {
-            "expr": "datum.n / 100 * width > datum.minpx ? datum.t : ''"
-          }
-        },
-        "color": {
-          "field": "tbarva",
-          "type": "nominal",
-          "scale": null
-        }
+      {
+        "field": "popis",
+        "title": "Co znamená"
       }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 6,
-        "fontSize": 12.5,
-        "fontWeight": 700,
-        "color": "#101432"
-      },
-      "encoding": {
-        "text": {
-          "value": {
-            "expr": "datum.n / 100 * width > datum.minpx ? '' : datum.t"
-          }
-        }
-      }
-    }
-  ],
+    ]
+  },
   "title": {
-    "text": "Izrael podle komise kontroluje {nejméně 60 %|#de1743} Gazy, příměří počítalo s 53 %",
-    "subtitle": "Podíl území Pásma Gazy pod kontrolou izraelské armády (%): podle dohody o příměří z října 2025, skutečnost k 2. 9. 2026 a 70 %, která podle premiéra Netanjahua v květnu 2026 nařídil obsadit."
+    "text": "Izrael podle komise drží nejméně {60 %|#de1743} Gazy, o sedm procentních bodů víc, než dovolilo příměří",
+    "subtitle": "Území Pásma Gazy, 1 kulička = 1 %. Hranici 53 % určilo příměří mezi Izraelem a Hamásem zprostředkované USA (říjen 2025), stav k 2. 9. 2026. Premiér Netanjahu 28. 5. 2026 řekl, že nařídil obsadit 70 %."
   },
   "_source": "[Zpráva komise OSN A/81/430](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiopt/ga-81-430-auv.pdf), odst. 37",
   "config": {

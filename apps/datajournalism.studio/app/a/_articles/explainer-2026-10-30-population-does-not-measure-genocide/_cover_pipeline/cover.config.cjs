@@ -12,7 +12,7 @@ const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 module.exports = {
   logoText: 'DataTimes.org', // anglický web datajournalism.studio
   vystup: path.join(__dirname, '..', 'images'),
-  kicker: { cervene: 'Explainer', dal: 'Genocide and numbers' },
+  kicker: { cervene: 'Explainer', dal: 'Gaza &nbsp;•&nbsp; Genocide and numbers' },
   // homepage: text níž kvůli štítku rubriky v malých kartách (nic textového nad ~200 z 800)
   format: { homepage: { box: [180, 300, 1320, 1080] }, story: { t: 86 } },
   // brandTeal.8 × brandRoyalBlue.8 záře (COVER-VIZUALNI-IDENTITA 7), podtitulek brandNavy.1, štítek brand.6

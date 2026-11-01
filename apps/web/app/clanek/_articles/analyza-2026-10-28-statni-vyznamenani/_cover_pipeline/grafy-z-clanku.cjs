@@ -23,7 +23,7 @@ const config = (base = {}) => ({
   header: { labelFont: FONT, titleFont: FONT },
 });
 
-function priprav(soubor, { sirka, vyska, dlazdice, sloupce, obory } = {}) {
+function priprav(soubor, { sirka, vyska, dlazdice, vyskaDlazdice, sloupce, obory, barvy } = {}) {
   const spec = JSON.parse(fs.readFileSync(soubor, 'utf8'));
   const { title, _source, _click_detail, _facet_fill, _total_width, ...rest } = spec;
   let s = { ...rest, title: null, background: '#f8f6f0', padding: 12, config: config(rest.config) };
@@ -33,12 +33,13 @@ function priprav(soubor, { sirka, vyska, dlazdice, sloupce, obory } = {}) {
       s.transform = [...(s.transform ?? []), { filter: { field: s.facet.field, oneOf: obory } }];
     }
     s.columns = sloupce ?? s.columns;
-    s.spec = { ...s.spec, width: dlazdice ?? s.spec.width };
+    s.spec = { ...s.spec, width: dlazdice ?? s.spec.width, height: vyskaDlazdice ?? s.spec.height };
   } else {
     s.width = sirka;
     if (vyska) s.height = vyska; // nižší řádky, aby se graf vešel na slide 4:5
     s.autosize = { type: 'fit-x', contains: 'padding' };
   }
+  if (barvy) s.encoding = { ...s.encoding, color: { ...s.encoding.color, scale: { ...s.encoding.color.scale, range: barvy } } };
   return s;
 }
 
@@ -50,6 +51,15 @@ const ULOHY = [
     obory: ['občanská společnost', 'sport', 'protikomunistický odboj a disent', 'kultura a umění'] },
   { cil: path.join(ZENY, 'social', 'grafy', 'obory-nejmene.png'), soubor: path.join(ZENY, 'data', 'graf_obory.json'), dlazdice: 190, sloupce: 2,
     obory: ['politika, stát a justice', 'podnikání', 'církev', 'válka a protinacistický odboj'] },
+  // článek Komu (Kateřina 30. 10. 2026: nový carousel jen z grafů článku, po vzoru karuselů Moravec.cz jedno zjištění na slide)
+  { cil: path.join(KOMU, 'social', 'grafy', 'roky.png'), soubor: path.join(KOMU, 'data', 'graf_roky.json'), sirka: 600, vyska: 430 },
+  { cil: path.join(KOMU, 'social', 'grafy', 'obory-klaus-zeman.png'), soubor: path.join(KOMU, 'data', 'graf_obory.json'), dlazdice: 400, vyskaDlazdice: 130, sloupce: 1,
+    obory: ['protikomunistický odboj a disent', 'podnikání'] },
+  { cil: path.join(KOMU, 'social', 'grafy', 'obory-nejcasteji.png'), soubor: path.join(KOMU, 'data', 'graf_obory.json'), dlazdice: 190, vyskaDlazdice: 110, sloupce: 2,
+    obory: ['kultura a umění', 'věda a vzdělávání', 'občanská společnost', 'zahraniční státníci'] },
+  { cil: path.join(KOMU, 'social', 'grafy', 'rady.png'), soubor: path.join(KOMU, 'data', 'graf_rady.json'), dlazdice: 400, vyskaDlazdice: 130, sloupce: 1,
+    obory: ['protikomunistický odboj a disent', 'zahraniční státníci'] },
+  { cil: path.join(KOMU, 'social', 'grafy', 'druhy.png'), soubor: path.join(KOMU, 'data', 'graf_druhy.json'), sirka: 600, vyska: 300 }, // barvy kovů jsou přímo v grafu článku (02_analyza.py)
 ];
 
 (async () => {

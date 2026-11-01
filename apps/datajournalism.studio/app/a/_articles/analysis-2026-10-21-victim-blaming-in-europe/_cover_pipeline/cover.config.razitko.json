@@ -2,9 +2,9 @@
   "formaty": {
     "homepage": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/images/cover-homepage.png",
-      "otisk": "caea9de12cd84327",
+      "otisk": "8204552929d6ae4e",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "826c226b39c41dd5",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "551764b20379ee5a",
         "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/motiv/homepage.svg": "997dc6dbaddf7226"
       },
       "kontrola": {
@@ -17,9 +17,9 @@
     },
     "og": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/images/cover-og.jpg",
-      "otisk": "251e0bb8210d1270",
+      "otisk": "2c4b9fd4c67bfe93",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "826c226b39c41dd5",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "551764b20379ee5a",
         "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/motiv/og.svg": "ebf2eabfef9cea62"
       },
       "kontrola": {
@@ -30,9 +30,9 @@
     },
     "square": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/images/cover-square.png",
-      "otisk": "fba9603f293b482e",
+      "otisk": "049bb64358ff2171",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "826c226b39c41dd5",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "551764b20379ee5a",
         "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/motiv/square.svg": "fbd04b48124c512c"
       },
       "kontrola": {
@@ -43,9 +43,9 @@
     },
     "instagram": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/images/cover-instagram.png",
-      "otisk": "df779b29328eb781",
+      "otisk": "0cd2f9cb04300aa9",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "826c226b39c41dd5",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "551764b20379ee5a",
         "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/motiv/instagram.svg": "57b77d3c8c880e35"
       },
       "kontrola": {
@@ -56,9 +56,9 @@
     },
     "story": {
       "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/images/cover-story.png",
-      "otisk": "fbe79b3e512a2e84",
+      "otisk": "b73944790c7c0de8",
       "vstupy": {
-        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "826c226b39c41dd5",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs": "551764b20379ee5a",
         "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/motiv/story.svg": "70939f60e32871b6"
       },
       "kontrola": {
@@ -71,11 +71,11 @@
     }
   },
   "konfigurace": "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-10-30T19:26:05.306Z",
+  "vyrenderovano": "2026-10-31T19:33:04.792Z",
   "clanek": "apps/datajournalism.studio/app/a/_articles/analysis-2026-10-21-victim-blaming-in-europe/index.md",
   "titulekClanku": "Czechs blame victims of violence twice as often as the rest of Europe",
   "texty": {
-    "stitek": "Analysis • Domestic and sexual violence",
+    "stitek": "Analysis • Czech Republic • Domestic and sexual violence",
     "nadtitulek": "",
     "titulek": "Czechs blame victims of violence twice as often as the rest of Europe",
     "podtitulek": "We compared common beliefs with the actual data"

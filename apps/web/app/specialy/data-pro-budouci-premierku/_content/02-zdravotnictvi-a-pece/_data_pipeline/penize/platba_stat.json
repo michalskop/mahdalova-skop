@@ -1,0 +1,78 @@
+{
+ "tabulka_duvodova_zprava": [
+  {
+   "od": "1. 1. 2026",
+   "do": "31. 12. 2026",
+   "zaklad": 16206,
+   "mesicne": 2188,
+   "kontrola_ok": true
+  },
+  {
+   "od": "1. 1. 2025",
+   "do": "31. 12. 2025",
+   "zaklad": 15749,
+   "mesicne": 2127,
+   "kontrola_ok": true
+  },
+  {
+   "od": "1. 1. 2024",
+   "do": "31. 12. 2024",
+   "zaklad": 15440,
+   "mesicne": 2085,
+   "kontrola_ok": true
+  },
+  {
+   "od": "1. 1. 2023",
+   "do": "31. 12. 2023",
+   "zaklad": 14074,
+   "mesicne": 1900,
+   "kontrola_ok": true
+  },
+  {
+   "od": "31. 8. 2022",
+   "do": "31. 12. 2022",
+   "zaklad": 11014,
+   "mesicne": 1487,
+   "kontrola_ok": true
+  },
+  {
+   "od": "1. 1. 2022",
+   "do": "30. 8. 2022",
+   "zaklad": 14570,
+   "mesicne": 1967,
+   "kontrola_ok": true
+  },
+  {
+   "od": "1. 1. 2021",
+   "do": "31. 12. 2021",
+   "zaklad": 13088,
+   "mesicne": 1767,
+   "kontrola_ok": true
+  },
+  {
+   "od": "1. 6. 2020",
+   "do": "31. 12. 2020",
+   "zaklad": 11607,
+   "mesicne": 1567,
+   "kontrola_ok": true
+  },
+  {
+   "od": "1. 1. 2020",
+   "do": "31. 5. 2020",
+   "zaklad": 7903,
+   "mesicne": 1067,
+   "kontrola_ok": true
+  }
+ ],
+ "vladni_navrh_zaklad_2027": 18362,
+ "vladni_navrh_mesicne_2027": 2479,
+ "pozmenovaci_navrh_zaklad_2027": 17540,
+ "pozmenovaci_navrh_mesicne_2027": 2368,
+ "pozmenovaci_navrh_puvodni_hodnota": 18362,
+ "rozdil_zaklad": 822,
+ "rozdil_mesicne": 111,
+ "zustatky_pojistoven_mld": [
+  "69,9",
+  "43,2"
+ ]
+}

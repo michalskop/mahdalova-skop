@@ -390,7 +390,9 @@ save('graf_druhy.json', {
         'x': {'field': 'podíl', 'type': 'quantitative', 'stack': 'normalize', 'title': None,
               'axis': {'format': '.0%', 'gridColor': '#e8e3d2'}},
         'color': {'field': 'druh', 'type': 'nominal', 'title': None,
-                  'scale': {'domain': DRUHY, 'range': ['#9f319e', '#6267a3', '#ff934d', '#bcc4df']},
+                  # barvy kovů podle příloh zákona 157/1994 Sb. (Kateřina 31. 10. 2026): řády zlacené stříbro (Bílý lev
+                  # tmavé zlato, TGM zlato), Za hrdinství stříbro, Za zásluhy pozlacené stříbro (světlé zlato); odstíny palety
+                  'scale': {'domain': DRUHY, 'range': ['#bd9103', '#ffcf02', '#bcbcb0', '#ffe680']},
                   'legend': {'orient': 'top', 'direction': 'horizontal', 'columns': 2, 'symbolType': 'square'}},
         'order': {'field': 'pořadí'},
         'tooltip': [{'field': 'prezident', 'title': 'Prezident'}, {'field': 'druh', 'title': 'Vyznamenání'},
