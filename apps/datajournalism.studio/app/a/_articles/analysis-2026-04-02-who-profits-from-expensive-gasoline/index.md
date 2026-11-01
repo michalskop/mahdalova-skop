@@ -5,10 +5,11 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "The government promises cheaper fuel. But for most people who fill up with gasoline at regular pumps, almost nothing will change. The tax on gasoline remains the same, and most stations already kept margins low before regulation. The intervention can help significantly mainly at expensive highway pumps."
 coverTitulek: "Babiš can’t<br>do the maths"
 coverPodtitulek: "Capping petrol station margins<br>won’t make fuel cheaper for most people"
-coverImage: "images/babis-a-ceny-benzinu-datatimes.webp"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/04/analysis-2026-04-02-who-profits-from-expensive-gasoline/cover.webp","
 filter: ["blog"]
 tags: ["fuel", "high prices", "gasoline", "diesel", "government", "Babiš", "prices", "Schillerová"]
 promoted: 72
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/04/analysis-2026-04-02-who-profits-from-expensive-gasoline/cover-og.jpg","
 ---
 
 You arrive at your usual pump to fill up with Natural 95 and expect to save money after the government intervention? In most cases, almost not at all.

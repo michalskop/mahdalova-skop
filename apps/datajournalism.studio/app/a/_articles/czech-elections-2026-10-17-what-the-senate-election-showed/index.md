@@ -6,10 +6,10 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Between the first and second rounds of the Senate election, ANO's candidates lost a third of their votes, their opponents only a tenth. The voters of candidates who did not make it to the run-off went mainly to ANO's rivals. The governing parties won none of the 27 seats, and only one woman was elected."
 coverTitulek: "Rivals won over<br>ANO's voters"
 coverPodtitulek: "ANO's candidates lost a&nbsp;third of their votes between the two rounds of the Senate election, their rivals only a&nbsp;tenth"
-coverImage: "images/cover-homepage.png"
-homepageImage: "images/cover-homepage.png"
-ogImage: "images/cover-og.jpg"
-squareImage: "images/cover-square.png"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-17-what-the-senate-election-showed/cover.webp","
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-17-what-the-senate-election-showed/cover.webp","
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-17-what-the-senate-election-showed/cover-og.jpg","
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-17-what-the-senate-election-showed/cover-square.webp","
 filter: ["work"]
 tags: ["elections", "elections 2026", "senate elections 2026", "senate", "ano", "women in politics", "data"]
 promoted: 1

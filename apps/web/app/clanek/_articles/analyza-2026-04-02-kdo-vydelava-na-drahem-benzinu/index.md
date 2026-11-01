@@ -5,11 +5,12 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Vláda slibuje levnější pohonné hmoty. Jenže pro většinu lidí, kteří tankují benzín na běžných pumpách, se nezmění skoro nic. Daň na benzín zůstává stejná a většina stanic už před regulací držela marže nízko. Výrazněji může zásah pomoct hlavně na drahých dálničních pumpách."
 coverTitulek: "Babiš neumí<br>počítat"
 coverPodtitulek: "Regulace benzínek lidem neuleví"
-coverImage: "images/babis-a-ceny-benzinu-datatimes.webp"
+coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/04/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/cover.webp","
 coverFit: cover
 filter: ["analýza"]
 tags: ["pohonné hmoty", "vysoké ceny", "benzín", "nafta", "vláda", "Babiš", "ceny", "Schillerová"]
 promoted: 1
+ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/04/analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu/cover-og.jpg","
 ---
 
 Přijedete na svou obvyklou pumpu natankovat Natural 95 a čekáte, že po vládním zásahu ušetříte? Ve většině případů skoro ne.

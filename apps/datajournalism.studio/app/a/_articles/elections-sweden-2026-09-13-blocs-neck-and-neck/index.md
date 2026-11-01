@@ -6,11 +6,11 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Sweden is electing a new Riksdag today, from 8:00 to 20:00. The latest polls, conducted on 4–11 September, give Magdalena Andersson's red-green bloc a lead of 45.9–51.5% against 47.8–49.0% for Ulf Kristersson's governing coalition – in the closest estimate, the difference is a single seat, 175 to 174. If the right wins, the nationalist Sweden Democrats could take government posts for the first time in history: they agreed on this in March with the Liberals, who themselves are above the 4% threshold by only a small margin."
 coverTitulek: "Blocs divided<br>by a single seat"
 coverPodtitulek: "Closest estimate of the Swedish election:<br>175 to 174 seats in the&nbsp;Riksdag"
-coverImage: "images/cover-homepage.png"
-homepageImage: "images/cover-homepage.png"
-ogImage: "images/cover-og.jpg"
-squareImage: "images/cover-square.png"
-instagramImage: "images/cover-instagram.png"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-sweden-2026-09-13-blocs-neck-and-neck/cover.webp","
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-sweden-2026-09-13-blocs-neck-and-neck/cover.webp","
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-sweden-2026-09-13-blocs-neck-and-neck/cover-og.jpg","
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-sweden-2026-09-13-blocs-neck-and-neck/cover-square.webp","
+instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-sweden-2026-09-13-blocs-neck-and-neck/cover-instagram.webp","
 filter: ["work"]
 tags: ["sweden", "elections", "riksdag", "sweden democrats", "ulf kristersson", "magdalena andersson", "europe", "far right"]
 promoted: 1

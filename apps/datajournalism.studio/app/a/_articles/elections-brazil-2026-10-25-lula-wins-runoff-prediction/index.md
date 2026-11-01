@@ -8,10 +8,10 @@ original: "https://www.datatimes.cz/clanek/volby-brazilie-2026-10-25-druhe-kolo-
 excerpt: "Polls before the runoff had Flávio Bolsonaro slightly ahead, and during the night the running count briefly put him in front of Lula. From the first minutes of the count, however, the DataTimes.cz prediction pointed to a win for the incumbent president: Lula will finish on 51.8 per cent and beat the son of his predecessor by more than four million votes."
 coverTitulek: "Lula wins<br>the runoff"
 coverPodtitulek: "Lula 51.8%, Flávio Bolsonaro 48.2%<br>First-round winner loses by 4.4&nbsp;million votes"
-coverImage: "images/cover-homepage.png"
-homepageImage: "images/cover-homepage.png"
-ogImage: "images/cover-og.jpg"
-squareImage: "images/cover-square.png"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-25-lula-wins-runoff-prediction/cover.webp","
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-25-lula-wins-runoff-prediction/cover.webp","
+ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-25-lula-wins-runoff-prediction/cover-og.jpg","
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/elections-brazil-2026-10-25-lula-wins-runoff-prediction/cover-square.webp","
 filter: ["work"]
 tags: ["elections", "brazil", "lula", "flávio bolsonaro", "jair bolsonaro", "latin america", "election prediction"]
 promoted: 1
