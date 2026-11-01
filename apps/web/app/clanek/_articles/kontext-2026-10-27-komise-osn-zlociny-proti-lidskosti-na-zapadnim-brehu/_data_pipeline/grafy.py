@@ -61,7 +61,7 @@ def pruhy(hodnoty, osa_max, vyska, tooltip_titul):
         "layer": [
             {"mark": {"type": "bar", "cornerRadiusEnd": 3},
              "encoding": {"color": {"field": "barva", "type": "nominal", "scale": None},
-                          "tooltip": [{"field": "kat", "title": tooltip_titul}, {"field": "t", "title": "Hodnota"}]}},
+                          "tooltip": [{"field": "kat", "title": tooltip_titul}, {"field": "t", "title": "Počet obětí"}]}},
             {"mark": {"type": "text", "align": "right", "dx": -9, "fontSize": 12.5, "fontWeight": 700},
              "encoding": {"text": {"value": {"expr": f"{vejde} ? datum.t : ''"}},
                           "color": {"field": "tbarva", "type": "nominal", "scale": None}}},
@@ -146,16 +146,42 @@ s["title"] = {
 s["_source"] = f"{ZPRAVA}, odst. 17"
 uloz("obeti-zapadni-breh.json", s)
 
-# 3) Izraelská kontrola území Gazy (odst. 37)
-kontrola = [
-    {"kat": "Příměří, říjen 2025", "n": 53, "t": "53 %", "barva": SEDA, "tbarva": INK},
-    {"kat": "Září 2026", "n": 60, "t": "nejméně 60 %", "barva": KARMIN, "tbarva": "#ffffff"},
-    {"kat": "Pokyn Netanjahua", "n": 70, "t": "70 %", "barva": SVETLA, "tbarva": INK},
+# 3) Izraelská kontrola území Gazy (odst. 37): 100 kuliček = celé území, 1 kulička = 1 %
+FIALOVA = "#6267a3"    # brandNavy.6 – kontext, dohodnutý stav
+SVETLA_SEDA = "#d4d4c8"  # background.7
+DOHODA, SKUTECNOST, CIL = 53, 60, 70
+STAVY = [
+    (f"{DOHODA} % podle příměří", DOHODA, FIALOVA, "Izraeli podle dohody o příměří z října 2025"),
+    (f"+{SKUTECNOST - DOHODA} p. b. obsazeno navíc", SKUTECNOST - DOHODA, KARMIN, "obsadil navíc nad dohodu (stav k 2. 9. 2026)"),
+    (f"+{CIL - SKUTECNOST} p. b. chce Netanjahu", CIL - SKUTECNOST, SVETLA, "chce podle premiéra Netanjahua obsadit (28. 5. 2026)"),
+    (f"zbytek Gazy ({100 - CIL} %)", 100 - CIL, SVETLA_SEDA, "zbytek území"),
 ]
-s = pruhy(kontrola, 100, 140, "Stav")
+RADKU = 5
+kulicky, i = [], 0
+for nazev, pocet, barva, popis in STAVY:
+    for _ in range(pocet):
+        kulicky.append({"sl": i // RADKU, "ra": i % RADKU, "stav": nazev, "popis": popis})
+        i += 1
+assert i == 100
+s = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 140,
+    "data": {"values": kulicky},
+    "mark": {"type": "circle", "size": 110, "opacity": 1},
+    "encoding": {
+        "x": {"field": "sl", "type": "quantitative", "scale": {"domain": [-0.5, 100 / RADKU - 0.5], "nice": False}, "axis": None},
+        "y": {"field": "ra", "type": "quantitative", "scale": {"domain": [-0.5, RADKU - 0.5], "nice": False, "reverse": True}, "axis": None},
+        "color": {"field": "stav", "type": "nominal",
+                  "scale": {"domain": [n for n, *_ in STAVY], "range": [b for _, _, b, _ in STAVY]},
+                  "legend": {"title": None, "orient": "top", "direction": "horizontal", "columns": 2, "labelFontSize": 12.5,
+                             "symbolType": "circle", "symbolSize": 150, "labelLimit": 300}},
+        "tooltip": [{"field": "stav", "title": "Území Gazy"}, {"field": "popis", "title": "Co znamená"}],
+    },
+}
 s["title"] = {
-    "text": "Izrael podle komise kontroluje {nejméně 60 %|#de1743} Gazy, příměří počítalo s 53 %",
-    "subtitle": "Podíl území Pásma Gazy pod kontrolou izraelské armády (%): podle dohody o příměří z října 2025, skutečnost k 2. 9. 2026 a 70 %, která podle premiéra Netanjahua v květnu 2026 nařídil obsadit.",
+    "text": "Izrael podle komise drží nejméně {60 %|#de1743} Gazy, o sedm procentních bodů víc, než dovolilo příměří",
+    "subtitle": "Území Pásma Gazy, 1 kulička = 1 %. Hranici 53 % určilo příměří mezi Izraelem a Hamásem zprostředkované USA (říjen 2025), stav k 2. 9. 2026. Premiér Netanjahu 28. 5. 2026 řekl, že nařídil obsadit 70 %.",
 }
 s["_source"] = f"{ZPRAVA}, odst. 37"
 uloz("kontrola-gazy.json", s)

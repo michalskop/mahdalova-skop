@@ -264,6 +264,17 @@ na oko zbývá motiv, sdělení a celkový dojem:
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují; co platí obecně, přenést do kapitoly *Kompozice podle
 formátu*):**
+- *1. 11. 2026 – první covery na CDN (osadníci na Západním břehu).* Covery se do gitu necommitují
+  (`docs/technicke/media-cdn.md`): generátor je vyrobí do `images/` u článku, `.gitignore` článku tu složku
+  i vykreslené motivy (`_cover_pipeline/*.svg`, `*.png`) vynechá, pět souborů se nahraje
+  `scripts/upload_media.py` do `datatimes-cz/articles/RRRR/MM/<slug>/` a frontmatter odkazuje na URL
+  (`coverImage`, `homepageImage`, `ogImage`, `squareImage`, `instagramImage` a nově `storyImage`).
+  `checkArticles.js` u adres `https://media.datatimes.org/` nehledá soubor, ale žádá všech pět polí a OG v JPEG.
+  Na Windows tři pasti: (1) klíče musí ležet v `%USERPROFILE%\.datatimes-media.env` – Poznámkový blok přidá
+  `.txt` a skript je pak nenajde; (2) v Git Bash spouštět s `MSYS_NO_PATHCONV=1` a cestu `--target` mít
+  v proměnné ověřené předem – prázdná proměnná udělala z `/cover-og.jpg` klíč `C:/Program Files/Git/cover-og.jpg`;
+  (3) `.webp` nahraný z Windows dostane typ `application/octet-stream` (Python ho na Windows nezná), proto
+  covery zatím PNG/JPEG. Square, Instagram a story stejně PNG – Instagram WebP nebere.
 - *30. 10. 2026 – anglické covery DJS s logem DataTimes.org.* Delší nápis loga (o znak) stačí k tomu, aby logo
   sáhlo na motiv: u Žen na radnicích leželo logo přes řádek hejtmanů (ve čtverci a tím i v OG „čtverec s ušima“),
   opraveno posunem řádků výš. Po změně loga projít všechny formáty, nejen homepage. Převod českého coveru s koláží

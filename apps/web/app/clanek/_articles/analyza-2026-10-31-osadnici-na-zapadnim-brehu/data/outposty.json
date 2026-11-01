@@ -1,0 +1,262 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Dvě třetiny dnešních outpostů vznikly od roku 2023, většinou jako {farmy|#9f319e}",
+  "subtitle": "Outposty, které dnes na Západním břehu stojí, podle roku vzniku. Farmy jsou zemědělské a pastevecké outposty, světlejší část sloupce ostatní outposty. Rok 2026 do 19. října."
+ },
+ "width": 600,
+ "height": 300,
+ "data": {
+  "values": [
+   {
+    "rok": "2012",
+    "druh": "farma",
+    "pocet": 2
+   },
+   {
+    "rok": "2012",
+    "druh": "outpost",
+    "pocet": 3
+   },
+   {
+    "rok": "2013",
+    "druh": "farma",
+    "pocet": 2
+   },
+   {
+    "rok": "2013",
+    "druh": "outpost",
+    "pocet": 1
+   },
+   {
+    "rok": "2014",
+    "druh": "farma",
+    "pocet": 1
+   },
+   {
+    "rok": "2014",
+    "druh": "outpost",
+    "pocet": 3
+   },
+   {
+    "rok": "2015",
+    "druh": "farma",
+    "pocet": 1
+   },
+   {
+    "rok": "2015",
+    "druh": "outpost",
+    "pocet": 0
+   },
+   {
+    "rok": "2016",
+    "druh": "farma",
+    "pocet": 2
+   },
+   {
+    "rok": "2016",
+    "druh": "outpost",
+    "pocet": 1
+   },
+   {
+    "rok": "2017",
+    "druh": "farma",
+    "pocet": 1
+   },
+   {
+    "rok": "2017",
+    "druh": "outpost",
+    "pocet": 3
+   },
+   {
+    "rok": "2018",
+    "druh": "farma",
+    "pocet": 6
+   },
+   {
+    "rok": "2018",
+    "druh": "outpost",
+    "pocet": 2
+   },
+   {
+    "rok": "2019",
+    "druh": "farma",
+    "pocet": 15
+   },
+   {
+    "rok": "2019",
+    "druh": "outpost",
+    "pocet": 1
+   },
+   {
+    "rok": "2020",
+    "druh": "farma",
+    "pocet": 11
+   },
+   {
+    "rok": "2020",
+    "druh": "outpost",
+    "pocet": 0
+   },
+   {
+    "rok": "2021",
+    "druh": "farma",
+    "pocet": 10
+   },
+   {
+    "rok": "2021",
+    "druh": "outpost",
+    "pocet": 4
+   },
+   {
+    "rok": "2022",
+    "druh": "farma",
+    "pocet": 2
+   },
+   {
+    "rok": "2022",
+    "druh": "outpost",
+    "pocet": 3
+   },
+   {
+    "rok": "2023",
+    "druh": "farma",
+    "pocet": 23
+   },
+   {
+    "rok": "2023",
+    "druh": "outpost",
+    "pocet": 8
+   },
+   {
+    "rok": "2024",
+    "druh": "farma",
+    "pocet": 43
+   },
+   {
+    "rok": "2024",
+    "druh": "outpost",
+    "pocet": 16
+   },
+   {
+    "rok": "2025",
+    "druh": "farma",
+    "pocet": 62
+   },
+   {
+    "rok": "2025",
+    "druh": "outpost",
+    "pocet": 29
+   },
+   {
+    "rok": "2026",
+    "druh": "farma",
+    "pocet": 67
+   },
+   {
+    "rok": "2026",
+    "druh": "outpost",
+    "pocet": 25
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "ordinal",
+   "axis": {
+    "title": null,
+    "labelAngle": 0
+   }
+  },
+  "y": {
+   "field": "pocet",
+   "type": "quantitative",
+   "aggregate": "sum",
+   "stack": "zero",
+   "axis": {
+    "title": "Počet outpostů"
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "width": {
+     "band": 0.75
+    }
+   },
+   "encoding": {
+    "color": {
+     "field": "druh",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "farma",
+       "outpost"
+      ],
+      "range": [
+       "#9f319e",
+       "#8f9dc9"
+      ]
+     },
+     "legend": null
+    },
+    "order": {
+     "field": "druh",
+     "sort": "ascending"
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Rok vzniku"
+     },
+     {
+      "field": "druh",
+      "title": "Druh"
+     },
+     {
+      "field": "pocet",
+      "title": "Počet",
+      "aggregate": "sum"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "aggregate": [
+      {
+       "op": "sum",
+       "field": "pocet",
+       "as": "celkem"
+      }
+     ],
+     "groupby": [
+      "rok"
+     ]
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "dy": -8,
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#272a59"
+   },
+   "encoding": {
+    "y": {
+     "field": "celkem",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "celkem",
+     "type": "quantitative"
+    }
+   }
+  }
+ ],
+ "_source": "[Peace Now, seznam osad a outpostů na Západním břehu](https://peacenow.org.il/en/settlements-watch/settlements-data/population) (aktualizace 19. 10. 2026); outposty vyklizené nebo legalizované před tímto datem v seznamu nejsou"
+}

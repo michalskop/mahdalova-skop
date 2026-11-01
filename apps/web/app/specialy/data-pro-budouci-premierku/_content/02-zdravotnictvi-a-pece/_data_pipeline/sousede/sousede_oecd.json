@@ -1,0 +1,233 @@
+{
+ "rok": "2024",
+ "zeme": {
+  "Česko": {
+   "lekari": [
+    "2024",
+    4.29
+   ],
+   "sestry": [
+    "2024",
+    9.09
+   ],
+   "vydaje_hdp": [
+    "2024",
+    8.646
+   ],
+   "vydaje_ppp": [
+    "2024",
+    5200.672
+   ],
+   "verejne_podil": [
+    "2024",
+    85.556
+   ],
+   "z_kapsy_podil": [
+    "2024",
+    13.562
+   ],
+   "odvratitelna": [
+    "2024",
+    225.0
+   ],
+   "lecitelna": [
+    "2024",
+    85.0
+   ],
+   "preventabilni": [
+    "2024",
+    140.0
+   ]
+  },
+  "Polsko": {
+   "lekari": [
+    "2024",
+    3.86
+   ],
+   "sestry": [
+    "2024",
+    6.01
+   ],
+   "vydaje_hdp": [
+    "2024",
+    7.837
+   ],
+   "vydaje_ppp": [
+    "2024",
+    4327.855
+   ],
+   "verejne_podil": [
+    "2024",
+    76.917
+   ],
+   "z_kapsy_podil": [
+    "2024",
+    16.567
+   ],
+   "odvratitelna": [
+    "2024",
+    272.0
+   ],
+   "lecitelna": [
+    "2024",
+    106.0
+   ],
+   "preventabilni": [
+    "2024",
+    166.0
+   ]
+  },
+  "Slovensko": {
+   "lekari": [
+    "2024",
+    3.95
+   ],
+   "sestry": [
+    "2024",
+    5.79
+   ],
+   "vydaje_hdp": [
+    "2024",
+    7.979
+   ],
+   "vydaje_ppp": [
+    "2024",
+    3923.089
+   ],
+   "verejne_podil": [
+    "2024",
+    78.977
+   ],
+   "z_kapsy_podil": [
+    "2024",
+    20.225
+   ],
+   "odvratitelna": [
+    "2024",
+    283.0
+   ],
+   "lecitelna": [
+    "2024",
+    126.0
+   ],
+   "preventabilni": [
+    "2024",
+    157.0
+   ]
+  },
+  "Maďarsko": {
+   "lekari": [
+    "2024",
+    3.72
+   ],
+   "sestry": [
+    "2024",
+    5.63
+   ],
+   "vydaje_hdp": [
+    "2024",
+    6.452
+   ],
+   "vydaje_ppp": [
+    "2024",
+    3340.53
+   ],
+   "verejne_podil": [
+    "2024",
+    73.844
+   ],
+   "z_kapsy_podil": [
+    "2024",
+    22.8
+   ],
+   "odvratitelna": [
+    "2024",
+    383.0
+   ],
+   "lecitelna": [
+    "2024",
+    140.0
+   ],
+   "preventabilni": [
+    "2024",
+    243.0
+   ]
+  },
+  "Rakousko": {
+   "lekari": [
+    "2024",
+    5.64
+   ],
+   "sestry": [
+    "2024",
+    10.73
+   ],
+   "vydaje_hdp": [
+    "2024",
+    11.706
+   ],
+   "vydaje_ppp": [
+    "2024",
+    8850.713
+   ],
+   "verejne_podil": [
+    "2024",
+    75.719
+   ],
+   "z_kapsy_podil": [
+    "2024",
+    16.723
+   ],
+   "odvratitelna": [
+    "2024",
+    171.0
+   ],
+   "lecitelna": [
+    "2024",
+    53.0
+   ],
+   "preventabilni": [
+    "2024",
+    118.0
+   ]
+  },
+  "Německo": {
+   "lekari": [
+    "2024",
+    4.75
+   ],
+   "sestry": [
+    "2024",
+    12.51
+   ],
+   "vydaje_hdp": [
+    "2024",
+    12.208
+   ],
+   "vydaje_ppp": [
+    "2024",
+    9584.343
+   ],
+   "verejne_podil": [
+    "2024",
+    85.883
+   ],
+   "z_kapsy_podil": [
+    "2024",
+    11.104
+   ],
+   "odvratitelna": [
+    "2022",
+    192.0
+   ],
+   "lecitelna": [
+    "2022",
+    63.0
+   ],
+   "preventabilni": [
+    "2022",
+    129.0
+   ]
+  }
+ }
+}
