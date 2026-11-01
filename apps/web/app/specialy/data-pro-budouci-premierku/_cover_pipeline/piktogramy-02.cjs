@@ -113,6 +113,15 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
       s += T(x0, h * 0.52 + f * 2.2, pod, 'start', BILA, f * 1.2, 600);
       return svgWrap(w, h, s);
     },
+    // chybějící údaj: přerušovaný obrys s otazníkem
+    chybi(w, h, { co, jak }) {
+      const f = fsOf(w), q = h * 0.9;
+      let s = `<rect x="${f * 0.1}" y="${f * 0.1}" width="${w - f * 0.2}" height="${h - f * 0.2}" rx="${f * 1.2}" fill="${BILA}" fill-opacity=".05" stroke="${BILA}" stroke-opacity=".7" stroke-width="${f * 0.13}" stroke-dasharray="${f * 0.9} ${f * 0.6}"/>`;
+      s += `<text x="${(w - f * 2.2).toFixed(1)}" y="${(h * 0.5 + q * 0.34).toFixed(1)}" text-anchor="end" font-family="IBM Plex Serif, Georgia, serif" font-weight="700" font-size="${q.toFixed(1)}" fill="${CORAL}">?</text>`;
+      s += T(f * 2, h * 0.42, co, 'start', BILA, Math.min(f * 2.6, (w * 0.6) / (co.length * 0.52)), 700);
+      s += T(f * 2, h * 0.42 + f * 3.2, jak, 'start', ZLU, f * 1.9, 700);
+      return svgWrap(w, h, s);
+    },
     // diagnóza → platba
     diagnoza(w, h, { text }) {
       const f = fsOf(w), k = Math.min(h * 0.62, w * 0.24), cy = h * 0.4, x1 = w * 0.2, x2 = w * 0.8;
@@ -137,7 +146,7 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     '10-kdo-se-postara': { motiv: 'rady2', arg: { jednotka: 'ze sta korun na zdraví jde na péči o seniory', radky: [{ nazev: 'Evropa (průměr EU)', ikona: 'mince', skupiny: [[18, CH]], pozn: '18 Kč' }, { nazev: 'Česko', ikona: 'mince', skupiny: [[13, ZLU], [5, CH, true]], pozn: '13 Kč', zv: true }] } },
     '11-kdo-vlastni-peci': { motiv: 'mrizka', arg: { ikona: 'dum', sloupce: 5, skupiny: [[25, ZLU]], bok: [['455 000', 3.4, ZLU], ['lidí je kapacita domovů,', 1.25, BILA, 600], ['které spravuje', 1.25, BILA, 600], ['25 největších korporací', 1.25, BILA, 600]] } },
     '12-treti-navrat-vojtecha': { motiv: 'platba', arg: { kdo: [['clovek', 'děti'], ['senior', 'senioři'], ['student', 'studenti']], puvodni: '21', nove: '13', pod: 'miliard navíc pro rok 2027' } },
-    '13-cekaci-doby': { motiv: 'dveCisla', arg: { sloupce: [{ n: '12', jmeno: 'průměr EU', b: CH }, { n: '2', jmeno: 'Česko', b: ZLU }], pod: 'z tisíce lidí' } },
+    '13-cekaci-doby': { motiv: 'chybi', arg: { co: 'Jak dlouho se čeká', jak: 'plošně se neměří' } },
     '14-kolik-stoji-kdo-plati': { motiv: 'podil', arg: { cislo: '14 Kč', cast: 14, legenda: [[ZLU, 'platíme sami'], [CH, 'hradí veřejné peníze']] } },
     '15-sousede-stredni-evropa': { motiv: 'rady2', arg: { jednotka: 'každá mince je 1 koruna na zdraví na člověka (Česko = 10)', radky: [{ nazev: 'Česko', ikona: 'mince', skupiny: [[10, CH]], pozn: '10' }, { nazev: 'Rakousko', ikona: 'mince', skupiny: [[10, CH], [7, ZLU]], pozn: '17', zv: true }] } },
     'svet-japonsko-stari': { motiv: 'rady2', arg: { jednotka: '', radky: [{ nazev: 'Japonsko dnes', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '', zv: true }, { nazev: 'Česko dnes', ikona: 'senior', skupiny: [[2, ZLU], [8, CH, false, 'clovek']], pozn: '' }, { nazev: 'Česko kolem roku 2050', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '' }] } },
