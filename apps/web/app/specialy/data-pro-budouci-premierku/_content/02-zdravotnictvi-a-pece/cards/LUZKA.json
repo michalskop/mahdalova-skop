@@ -1,11 +1,11 @@
 {
   "id": "LUZKA",
-  "number": "+35 700",
+  "number": "+34 000",
   "unit": "",
   "perUnit": "",
-  "label": "Chybějící lůžka následné péče",
-  "sublabel": "Chybějící lůžka následné péče",
-  "context": "Aby stát zvládl demografickou tsunami seniorů nad 80 let, musí do roku 2040 vybudovat kapacitu srovnatelnou s desítkami nových nemocnic.",
-  "source": "MPSV, Koncepce dlouhodobé péče 2040",
+  "label": "Nových lůžek pro seniory do roku 2035",
+  "sublabel": "Nových lůžek pro seniory do roku 2035",
+  "context": "Podle ministerstva práce a sociálních věcí a ÚZIS bude Česko potřebovat asi 34 000 nových lůžek v domovech, stacionářích a dalších pobytových službách. Jde o minimální variantu.",
+  "source": "MPSV a ÚZIS, 14. 11. 2025 (ČTK)",
   "accent": "#de1743"
 }
