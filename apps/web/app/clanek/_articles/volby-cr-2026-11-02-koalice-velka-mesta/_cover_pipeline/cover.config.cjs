@@ -1,7 +1,7 @@
 // Sada coverů – python _data_pipeline/vypocet.py (zapíše mesta.json), pak
 // PW_PATH=<repo>/node_modules/playwright node tools/cover-generator.cjs <tento soubor>
 // Motiv: tečková mapa ČR (sourozenec volebních coverů), 26 statutárních měst a Praha jako body; velikost ∝ počet
-// obyvatel, barva podle toho, zda je ANO v dohodnuté koalici (stav 25. 10. 2026, role z vypocet.py).
+// obyvatel, barva podle toho, zda je ANO v dohodnuté koalici (stav 2. 11. 2026, role z vypocet.py).
 const path = require('path');
 const mapa = require(path.join(__dirname, '..', '..', 'volby-cr-2026-10-10-senat-komunalni-2026-predikce', 'senat-mapa.json'));
 const mesta = require('./mesta.json');

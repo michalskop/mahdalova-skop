@@ -1,5 +1,5 @@
 ==============================================================================
-KOALICE VE 26 STATUTÁRNÍCH MĚSTECH A V PRAZE (stav 25. 10. 2026)
+KOALICE VE 26 STATUTÁRNÍCH MĚSTECH A V PRAZE (stav 2. 11. 2026)
 ==============================================================================
 
 Olomouc (45 mandátů  105 297 obyv.)
@@ -115,7 +115,7 @@ Pardubice (39 mandátů  92 713 obyv.)
    *  4  ostatni  NAŠE PARDUBICE - "Nechme město rozkvést"  [NK+SOPU]
       2  vlada    SPD s podporou Trikolory, Svobodných a nezávislých  [NK+SPD]
    *  2  opozice  Noví lidovci a Nestraníci  [KDU-ČSL+Nestran.]
-   stav: dohoda 21. 10.; koalice 22/39; strany v koalici: KDU-ČSL, ODS, Piráti, STAN, TOP 09; ANO v koalici: ne; vítěz: ANO 2011 (10); ohlášen/a: Ondřej Tichý (ODS)
+   stav: smlouva 26. 10.; koalice 22/39; strany v koalici: KDU-ČSL, ODS, Piráti, STAN, TOP 09; ANO v koalici: ne; vítěz: ANO 2011 (10); ohlášen/a: Ondřej Tichý (ODS)
 
 Děčín (27 mandátů  46 003 obyv.)
       7  ANO      ANO 2011  [ANO]
@@ -161,14 +161,14 @@ Most (45 mandátů  63 160 obyv.)
    *  8  ANO      ANO 2011  [ANO]
       2  opozice  Piráti, Zelení a Starostové  [Zelení+STAN+Piráti]
       2  vlada    SPD a Motoristé sobě  [SPD+AUTO]
-   stav: dohoda 21. 10.; koalice 30/45; strany v koalici: ANO; ANO v koalici: ano; vítěz: ProMOST (22); ohlášen/a: Marek Hrvol (ProMOST)
+   stav: smlouva 29. 10.; koalice 30/45; strany v koalici: ANO; ANO v koalici: ano; vítěz: ProMOST (22); ohlášen/a: Marek Hrvol (ProMOST)
 
 Teplice (27 mandátů  50 856 obyv.)
      10  opozice  Občanská demokratická strana  [ODS]
    *  9  ANO      ANO 2011  [ANO]
    *  7  opozice  Volba pro Teplice  [KDU-ČSL+Zelení+NK+Piráti]
       1  vlada    SPD, Trikolora, nezávislí  [NK+SPD+Trikolora]
-   stav: dohoda 15. 10.; koalice 16/27; strany v koalici: ANO, KDU-ČSL, Piráti; ANO v koalici: ano; vítěz: Občanská demokratická strana (10); ohlášen/a: Jiří Štábl (ANO)
+   stav: smlouva 26. 10.; koalice 16/27; strany v koalici: ANO, KDU-ČSL, Piráti; ANO v koalici: ano; vítěz: Občanská demokratická strana (10); ohlášen/a: Jiří Štábl (ANO)
 
 Hradec Králové (37 mandátů  93 534 obyv.)
    * 11  opozice  Hradecký demokratický klub a TOP 09 s podporou Hradeckých kant  [TOP 09+HDK]
@@ -190,13 +190,13 @@ Brno (55 mandátů  404 296 obyv.)
 
 Zlín (41 mandátů  74 917 obyv.)
      10  ANO      ANO 2011  [ANO]
-      9  opozice  STAROSTOVÉ A NEZÁVISLÍ  [STAN]
-      8  ostatni  Zlín 21  [Z21]
-      5  opozice  Společně pro Zlín  [KDU-ČSL+Nestran.+TOP 09]
-      4  opozice  Občanská demokratická strana  [ODS]
-      3  opozice  ZLÍN SRDCEM a Piráti  [NK+Piráti+ZS]
+   *  9  opozice  STAROSTOVÉ A NEZÁVISLÍ  [STAN]
+   *  8  ostatni  Zlín 21  [Z21]
+   *  5  opozice  Společně pro Zlín  [KDU-ČSL+Nestran.+TOP 09]
+   *  4  opozice  Občanská demokratická strana  [ODS]
+   *  3  opozice  ZLÍN SRDCEM a Piráti  [NK+Piráti+ZS]
       2  vlada    Svoboda a přímá demokracie (SPD)  [SPD]
-   stav: jedna ; koalice 0/41; strany v koalici: –; ANO v koalici: ne; vítěz: ANO 2011 (10)
+   stav: dohoda 1. 11.; koalice 29/41; strany v koalici: KDU-ČSL, ODS, Piráti, STAN, TOP 09; ANO v koalici: ne; vítěz: ANO 2011 (10)
 
 Jihlava (37 mandátů  53 686 obyv.)
    * 16  opozice  Tým Pro Jihlavu - ODS, lidovci, TOP 09  [KDU-ČSL+ODS+TOP 09]
@@ -207,13 +207,13 @@ Jihlava (37 mandátů  53 686 obyv.)
    stav: dohoda 15. 10.; koalice 21/37; strany v koalici: KDU-ČSL, ODS, STAN, TOP 09; ANO v koalici: ne; vítěz: Tým Pro Jihlavu - ODS, lidovci, TOP 09 (16); ohlášen/a: Petr Ryška (ODS)
 
 Prostějov (35 mandátů  43 236 obyv.)
-     13  opozice  Na rovinu!  [Zelení+STAN+TOP 09]
+   * 13  opozice  Na rovinu!  [Zelení+STAN+TOP 09]
      11  ANO      ANO 2011  [ANO]
-      5  opozice  Prostějovští demokraté: Občanská demokratická strana spolu s n  [ODS+NK]
+   *  5  opozice  Prostějovští demokraté: Občanská demokratická strana spolu s n  [ODS+NK]
       3  ostatni  Pévéčko  [PV]
       2  vlada    Svoboda a přímá demokracie (SPD)  [SPD]
       1  opozice  Prostějov 2:0  [NK+Piráti]
-   stav: jedna ; koalice 0/35; strany v koalici: –; ANO v koalici: ne; vítěz: Na rovinu! (13)
+   stav: dohoda 1. 11.; koalice 18/35; strany v koalici: ODS, STAN, TOP 09; ANO v koalici: ne; vítěz: Na rovinu! (13)
 
 Frýdek-Místek (43 mandátů  53 164 obyv.)
    * 20  ostatni  Naše Město F-M  [NMFM]
@@ -231,7 +231,7 @@ Třinec (27 mandátů  33 523 obyv.)
       4  ostatni  Osobnosti pro Třinec  [NK+NG]
    *  2  opozice  KDU-ČSL  [KDU-ČSL]
    *  2  opozice  SPOLEČNĚ PRO TŘINEC  [ODS+TOP 09]
-   stav: dohoda 21. 10.; koalice 12/27 (MENŠINOVÁ); strany v koalici: KDU-ČSL, ODS, TOP 09; ANO v koalici: ne; vítěz: Volte Třinec – Věcně a Otevřeně za Lepší (8)
+   stav: dohoda 29. 10.; koalice 12/27 (MENŠINOVÁ); strany v koalici: KDU-ČSL, ODS, TOP 09; ANO v koalici: ne; vítěz: Volte Třinec – Věcně a Otevřeně za Lepší (8); ohlášen/a: Marian Plucnar (Volte Třinec)
 
 Karviná (41 mandátů  48 684 obyv.)
      30  ostatni  Žijeme pro Karvinou  [SOCDEM+NK]
@@ -242,24 +242,24 @@ Karviná (41 mandátů  48 684 obyv.)
 ==============================================================================
 SOUHRN
 ==============================================================================
-stav koalic: {'smlouva': 10, 'dohoda': 10, 'jedna': 6, 'sama': 1} | celkem 27
-dohodnuté koalice (smlouva + dohoda): 20
+stav koalic: {'smlouva': 13, 'dohoda': 9, 'jedna': 4, 'sama': 1} | celkem 27
+dohodnuté koalice (smlouva + dohoda): 22
   ANO v koalici: 9: Přerov, Kladno, Mladá Boleslav, Plzeň, Ostrava, Karlovy Vary, Havířov, Most, Teplice
     z toho se stranou opozice (ČSÚ složení kandidátek): 8: Přerov (KDU-ČSL, ODS); Kladno (ODS); Mladá Boleslav (ODS, STAN, TOP 09); Plzeň (KDU-ČSL, STAN); Ostrava (STAN); Karlovy Vary (ODS); Havířov (KDU-ČSL, ODS, STAN, TOP 09); Teplice (KDU-ČSL, Piráti)
     jen s místními/ostatními: Most
   SPD, Motoristé nebo PRO v dohodnuté koalici: 0
-  ANO mimo dohodnutou koalici: 11: Olomouc, Opava, Pardubice, Děčín, Jablonec nad Nisou, Liberec, Hradec Králové, Brno, Jihlava, Frýdek-Místek, Třinec
-    z toho koalice se stranou opozice: 11
+  ANO mimo dohodnutou koalici: 13: Olomouc, Opava, Pardubice, Děčín, Jablonec nad Nisou, Liberec, Hradec Králové, Brno, Zlín, Jihlava, Prostějov, Frýdek-Místek, Třinec
+    z toho koalice se stranou opozice: 13
   menšinové: Třinec
 většina jedné kandidátky: Ústí nad Labem
-jedná se: České Budějovice, Praha hl.m., Chomutov, Zlín, Prostějov, Karviná
+jedná se: České Budějovice, Praha hl.m., Chomutov, Karviná
 
 ANO má nejvíc mandátů (vítěz) v 12 z 27: Olomouc, Opava, Přerov, Mladá Boleslav, Plzeň, Ostrava, Karlovy Vary, Pardubice, Děčín, Chomutov, Jablonec nad Nisou, Zlín
    vládne: 5 – Přerov, Mladá Boleslav, Plzeň, Ostrava, Karlovy Vary
-   mimo koalici: 5 – Olomouc, Opava, Pardubice, Děčín, Jablonec nad Nisou
-   jedná se: 2 – Chomutov, Zlín
+   mimo koalici: 6 – Olomouc, Opava, Pardubice, Děčín, Jablonec nad Nisou, Zlín
+   jedná se: 1 – Chomutov
 ANO v koalici, kde nevyhrálo: Kladno, Havířov, Most, Teplice
-vítěz voleb mimo dohodnutou koalici: Olomouc (ANO 2011), Opava (ANO 2011), Havířov (HAVÍŘOV SOBĚ – sdružení politi), Pardubice (ANO 2011), Děčín (ANO 2011), Jablonec nad Nisou (ANO 2011), Teplice (Občanská demokratická strana)
+vítěz voleb mimo dohodnutou koalici: Olomouc (ANO 2011), Opava (ANO 2011), Havířov (HAVÍŘOV SOBĚ – sdružení politi), Pardubice (ANO 2011), Děčín (ANO 2011), Jablonec nad Nisou (ANO 2011), Teplice (Občanská demokratická strana), Zlín (ANO 2011)
 
 ANO mandáty ve 27 městech: 276 z 1070; z toho v dohodnutých koalicích: 107
 
@@ -286,7 +286,10 @@ Ohlášení kandidáti na primátora/starostu (zvolí je ustavující zasedání
    Brno: Jakub Hruška (KDU-ČSL, M)
    Jihlava: Petr Ryška (ODS, M)
    Frýdek-Místek: Petr Korč (Naše Město F-M, M)
-   ženy 3 z 19
+   Třinec: Marian Plucnar (Volte Třinec, M)
+   ženy 3 z 20
+Dohodnutá koalice bez dohodnutého jména (do počtu nezahrnuto): Zlín: Věra Stojar (STAN, Z) nebo Čestmír Vančura (Zlín 21, M); Prostějov: Jana Jílková (Na rovinu!, Z) nebo Milada Sokolová (Prostějovští demokraté, Z)
+dohodnuté koalice bez ohlášeného jména: Liberec, Zlín, Prostějov
 
 ==============================================================================
 SPOLEČNÉ KANDIDÁTKY VLÁDNÍCH A OPOZIČNÍCH STRAN (všechna zastupitelstva)
@@ -307,7 +310,7 @@ VÍTĚZ VOLEB (kandidátka s nejvíc mandáty, při shodě hlasy)
    Opava                17/39 =  43,6 % mandátů, 37,25 % hlasů              MIMO KOALICI | ANO 2011 | koalice bez vítěze: 20 mandátů, 45,1 % hlasů
    Jihlava              16/37 =  43,2 % mandátů, 37,49 % hlasů              vládne       | Tým Pro Jihlavu - ODS, lidovci, TOP 09
    Plzeň                18/47 =  38,3 % mandátů, 31,69 % hlasů              vládne       | ANO 2011 a nezávislí
-   Prostějov            13/35 =  37,1 % mandátů,  32,2 % hlasů              jedná se     | Na rovinu!
+   Prostějov            13/35 =  37,1 % mandátů,  32,2 % hlasů              vládne       | Na rovinu!
    Teplice              10/27 =  37,0 % mandátů, 30,09 % hlasů              MIMO KOALICI | Občanská demokratická strana | koalice bez vítěze: 16 mandátů, 50,6 % hlasů
    Liberec              14/39 =  35,9 % mandátů, 28,35 % hlasů              vládne       | Starostové pro Liberecký kraj
    Kladno               11/33 =  33,3 % mandátů, 29,27 % hlasů              vládne       | VOLBA PRO KLADNO
@@ -324,9 +327,9 @@ VÍTĚZ VOLEB (kandidátka s nejvíc mandáty, při shodě hlasy)
    Praha hl.m.          17/65 =  26,2 % mandátů, 23,16 % hlasů              jedná se     | STAROSTOVÉ A NEZÁVISLÍ
    Děčín                 7/27 =  25,9 % mandátů,  22,6 % hlasů              MIMO KOALICI | ANO 2011 | koalice bez vítěze: 16 mandátů, 54,0 % hlasů
    Pardubice            10/39 =  25,6 % mandátů, 22,85 % hlasů              MIMO KOALICI | ANO 2011 | koalice bez vítěze: 22 mandátů, 55,2 % hlasů
-   Zlín                 10/41 =  24,4 % mandátů, 21,36 % hlasů              jedná se     | ANO 2011
+   Zlín                 10/41 =  24,4 % mandátů, 21,36 % hlasů              MIMO KOALICI | ANO 2011 | koalice bez vítěze: 29 mandátů, 66,2 % hlasů
    Chomutov              8/35 =  22,9 % mandátů, 19,59 % hlasů              jedná se     | ANO 2011
-rozhodnuto 21: vítěz vládne 14, vítěz mimo koalici 7
+rozhodnuto 23: vítěz vládne 15, vítěz mimo koalici 8
 většina jedné kandidátky 2026: Ústí nad Labem, Karviná
 většina jedné kandidátky 2022: Karviná (23/41, Česká strana sociálně demokrat)
 
@@ -341,8 +344,8 @@ graf zapsán: data/vitezove.json
 
 Graf – ANO v dohodnuté koalici: 9
 
-Graf – Koalice bez ANO: 12
+Graf – Koalice bez ANO: 14
 
-Graf – Jedná se nebo čeká na soud: 6
+Graf – Jedná se nebo čeká na soud: 4
 
 graf zapsán: data/koalice.json

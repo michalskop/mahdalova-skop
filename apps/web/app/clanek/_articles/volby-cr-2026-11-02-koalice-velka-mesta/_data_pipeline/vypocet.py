@@ -7,7 +7,7 @@
 #    https://volby.gov.cz/opendata/kv2026/KV2026ciselniky20261011_csv.zip
 #    https://volby.gov.cz/opendata/kv2022/KV2022reg20260328_csv.zip (řádné volby 2022 = DATUMVOLEB 20220923)
 #    Skript je najde ve sdíleném archivu csu-data (složka vedle repa, nebo proměnná CSU_DATA).
-# 2) Koalice: tabulka KOALICE níže, ručně z ověřených zpráv ke 25. 10. 2026 (odkaz u každého města).
+# 2) Koalice: tabulka KOALICE níže, ručně z ověřených zpráv ke 2. 11. 2026 (odkaz u každého města).
 #    Koalice se zadává kódy kandidátek (OSTRANA v kvros.csv), do které strany kandidátka patří, určuje ČSÚ
 #    (sloupec SLOZENI), ne my.
 #
@@ -47,13 +47,14 @@ def pct(a, b, d=1): return f'{a / b * 100:.{d}f}'.replace('.', ',') + ' %'
 VLADA = {'768': 'ANO', '1114': 'SPD', '1178': 'Motoristé', '1265': 'PRO'}
 OPOZICE = {'53': 'ODS', '1': 'KDU-ČSL', '721': 'TOP 09', '166': 'STAN', '720': 'Piráti'}
 
-# ── Koalice ke 25. 10. 2026 ────────────────────────────────────────────────
+# ── Koalice ke 2. 11. 2026 ─────────────────────────────────────────────────
 # stav: smlouva = podepsaná koaliční smlouva; dohoda = memorandum nebo oznámená dohoda; sama = jedna kandidátka
 # má většinu sama; jedna = jedná se. kl = kódy kandidátek (OSTRANA) v koalici; prim = ohlášený kandidát
-# na primátora/starostu (jméno, kandidátka, pohlaví) – zvolí ho až ustavující zasedání.
+# na primátora/starostu (jméno, kandidátka, pohlaví) – zvolí ho až ustavující zasedání. Kde koalice jméno
+# nedohodla (Zlín, Prostějov), je prim=None a možná jména jsou v kand; do počtu žen se nepočítají.
 KOALICE = {
-    'Praha hl.m.': dict(stav='jedna', kl=[], prim=None, pozn='STAN a SPOLU jednají o koalici, třetí má být Praha sobě; ANO všichni vyloučili',
-                        zdroj='https://ct24.ceskatelevize.cz/clanek/regiony/hlavni-mesto-praha/v-hlavnim-meste-asi-vznikne-koalice-stan-spolu-a-prahy-sobe-naznacil-hlavacek-378900'),
+    'Praha hl.m.': dict(stav='jedna', kl=[], prim=None, pozn='STAN a SPOLU jednají o koalici, třetí Praha sobě, nebo Piráti; ANO všichni vyloučili; zasedání 5. 11. jen slib, pak přerušení do 12. 11.',
+                        zdroj='https://prazsky.denik.cz/komunalni-volby/ustavujici-zastupitelstvo-prahy-se-sejde-5-listopadu-v-planu-je-ho-prerusit/'),
     'Brno': dict(stav='smlouva', datum='23. 10.', kl=['340', '523', '1869', '1870', '1710'], prim=('Jakub Hruška', 'KDU-ČSL', 'M'),
                  zdroj='https://ct24.ceskatelevize.cz/clanek/regiony/jihomoravsky-kraj/uskupeni-v-brne-podepsala-koalicni-smlouvu-primatorem-bude-lidovec-hruska-378942'),
     'Ostrava': dict(stav='smlouva', datum='22. 10.', kl=['768', '1973', '755'], prim=('Richard Vereš', 'ANO', 'M'),
@@ -64,16 +65,19 @@ KOALICE = {
                     zdroj='https://www.ceskenoviny.cz/zpravy/v-liberci-se-na-koalici-domluvili-slk-s-hnutim-lepsi-liberec-a-lol+pirati/2886593'),
     'Olomouc': dict(stav='smlouva', datum='19. 10.', kl=['166', '1039', '1', '1192', '1369'], prim=('Marek Zelenka', 'STAN', 'M'),
                     zdroj='https://www.olomouc.eu/aktualni-informace/aktuality/31678'),
-    'České Budějovice': dict(stav='jedna', kl=[], prim=None, pozn='vítězné Naše Česko jedná, zasedání 9. 11.',
-                             zdroj='https://ceskobudejovicky.denik.cz/zpravy-region/v-budejovicich-se-jedna-o-koalici-jasny-je-termin-zastupitelstva/'),
+    'České Budějovice': dict(stav='jedna', kl=[], prim=None, pozn='jedná se o koalici bez vítězného Našeho Česka: HOPB/STAN, ANO, Piráti, Společně pro Budějovice, možná ODS; zasedání 9. 11.',
+                             zdroj='https://www.ceskenoviny.cz/zpravy/2893197'),
     'Hradec Králové': dict(stav='dohoda', datum='22. 10.', kl=['1859', '1350', '479'], prim=('Pavlína Springerová', 'HDK a TOP 09', 'Z'),
-                           zdroj='https://hradecky.denik.cz/komunalni-volby/koalice-v-hradci-kralove-si-rozdelila-kompetence-podpis-dohody-2-listopadu/'),
+                           pozn='smlouvu podepisují 2. 11., zasedání 3. 11.',
+                           zdroj='https://www.ceskenoviny.cz/zpravy/2895943'),
     'Ústí nad Labem': dict(stav='sama', kl=['1933'], prim=('Tomáš Vohryzka', 'Jedno Ústí', 'M'),
                            zdroj='https://ustecky.denik.cz/komunalni-volby/jedno-usti-vedeni-vohryzka-zakovska-krivan-cerna/'),
-    'Pardubice': dict(stav='dohoda', datum='21. 10.', kl=['389', '166', '1897', '1301', '339'], prim=('Ondřej Tichý', 'ODS', 'M'),
-                      zdroj='https://pardubicky.denik.cz/zpravy-region/pardubicka-petikoalice-doladuje-program-vetsinu-bodu-uz-vyresila/'),
-    'Zlín': dict(stav='jedna', kl=[], prim=None, pozn='jedná se o koalici bez ANO',
-                 zdroj='https://zlinsky.denik.cz/komunalni-volby/zlin-komunalni-volby-2026-povolebni-vyjednavani-koalice/'),
+    'Pardubice': dict(stav='smlouva', datum='26. 10.', kl=['389', '166', '1897', '1301', '339'], prim=('Ondřej Tichý', 'ODS', 'M'),
+                      zdroj='https://www.ceskenoviny.cz/zpravy/2893137'),
+    'Zlín': dict(stav='dohoda', datum='1. 11.', kl=['166', '797', '1387', '53', '1949'], prim=None,
+                 kand=[('Věra Stojar', 'STAN', 'Z'), ('Čestmír Vančura', 'Zlín 21', 'M')],
+                 pozn='STAN, Zlín 21 a trojblok ODS, Společně pro Zlín, Zlín Srdcem a Piráti; smlouva příští týden; primátor nedohodnut',
+                 zdroj='https://www.zlin.cz/zpravy/zlin-povede-nova-koalice-vitezne-ano-skonci-v-opozici/'),
     'Jihlava': dict(stav='dohoda', datum='15. 10.', kl=['1327', '166'], prim=('Petr Ryška', 'ODS', 'M'),
                     zdroj='https://ct24.ceskatelevize.cz/clanek/regiony/kraj-vysocina/koalici-v-jihlave-vytvori-vitezny-tym-pro-jihlavu-se-starosty-378667'),
     'Karlovy Vary': dict(stav='smlouva', datum='20. 10.', kl=['768', '1028', '53'], prim=('Andrea Pfeffer Ferklová', 'ANO', 'Z'),
@@ -82,30 +86,33 @@ KOALICE = {
                     zdroj='https://polar.cz/zpravy/karvinsko/havirov/11000057309/havirov-ma-koalicni-smlouvu-vedeni-mesta-pokracuje'),
     'Frýdek-Místek': dict(stav='smlouva', datum='22. 10.', kl=['799', '1531'], prim=('Petr Korč', 'Naše Město F-M', 'M'),
                           zdroj='https://polar.cz/zpravy/frydeckomistecko/frydek-mistek/11000057503/nase-mesto-f-m-a-koalice-spolecne-pro-frydek-mistek-podepsaly-koalicni-smlouvu-primatorem-bude-petr-korc'),
-    'Teplice': dict(stav='dohoda', datum='15. 10.', kl=['768', '1370'], prim=('Jiří Štábl', 'ANO', 'M'),
-                    zdroj='https://www.ceskenoviny.cz/zpravy/v-teplicich-bude-dal-vladnout-ano-a-volba-pro-teplice-ods-bude-v-opozici/2888185'),
+    'Teplice': dict(stav='smlouva', datum='26. 10.', kl=['768', '1370'], prim=('Jiří Štábl', 'ANO', 'M'),
+                    zdroj='https://www.ceskenoviny.cz/zpravy/2893229'),
     'Děčín': dict(stav='smlouva', datum='23. 10.', kl=['456', '1851', '53', '166'], prim=('Martin Pošta', 'Volba pro Děčín', 'M'),
                   zdroj='https://www.ceskenoviny.cz/zpravy/koalici-v-decine-podepsala-ctyri-uskupeni-ano-bude-v-opozici/2891892'),
     'Jablonec nad Nisou': dict(stav='dohoda', datum='13. 10.', kl=['703', '53', '479', '541'], prim=('Miloš Vele', 'ODS', 'M'),
                                zdroj='https://jablonecky.denik.cz/zpravy-region/vedeni-jablonec-koalice-ano-opozice-primator-milos-vele/'),
-    'Most': dict(stav='dohoda', datum='21. 10.', kl=['1175', '768'], prim=('Marek Hrvol', 'ProMOST', 'M'),
-                 zdroj='https://mostecky.denik.cz/komunalni-volby/most-volby-koalice-promost-ano-smlouva/'),
+    'Most': dict(stav='smlouva', datum='29. 10.', kl=['1175', '768'], prim=('Marek Hrvol', 'ProMOST', 'M'),
+                 pozn='ustavující zasedání čeká na soud', zdroj='https://www.ceskenoviny.cz/zpravy/2894633'),
     'Kladno': dict(stav='dohoda', datum='19. 10.', kl=['727', '768', '53'], prim=('Milan Volf', 'Volba pro Kladno', 'M'),
                    zdroj='https://kladensky.denik.cz/zpravy-region/kladno-povede-koalice-volby-pro-kladno-ano-a-ods-primatorem-ma-byt-nadale-volf/'),
     'Opava': dict(stav='dohoda', datum='21. 10.', kl=['1807', '389', '364'], prim=('Petr Czudek', 'OK Změna pro Opavu', 'M'),
                   zdroj='https://opavsky.denik.cz/komunalni-volby/zlom-v-jednanich-o-opave-ok-zmena-ods-a-zeleni-podepsali-memorandum/'),
-    'Karviná': dict(stav='jedna', kl=[], prim=None, pozn='Žijeme pro Karvinou má 30 ze 41 mandátů, partnera neohlásila; ustavující zasedání čeká na soud',
+    'Karviná': dict(stav='jedna', kl=[], prim=None, pozn='Žijeme pro Karvinou má 30 ze 41 mandátů, partnera neohlásila; ustavující zasedání čeká na soud (tři návrhy u KS Ostrava)',
                     zdroj='https://karvinsky.denik.cz/komunalni-volby/jednani-o-vedeni-karvine-stoji-spd-chysta-soudni-prezkum-voleb/'),
-    'Chomutov': dict(stav='jedna', kl=[], prim=None, pozn='blok ANO a Lepší Chomutov proti bloku Nový Sever a JsmePRO!',
+    'Chomutov': dict(stav='jedna', kl=[], prim=None, pozn='blok ANO a Lepší Chomutov proti bloku Nový Sever a JsmePRO!; čeká se na soud (115 A 5/2026)',
                      zdroj='https://chomutovsky.denik.cz/komunalni-volby/chomutov-volby-komunalni-ano-novy-sever-jsme-pro-jednani-opozice-vlada/'),
-    'Prostějov': dict(stav='jedna', kl=[], prim=None, pozn='Na rovinu! s ODS, nebo ANO s ODS a Pévéčkem',
-                      zdroj='https://hanacka.drbna.cz/politika/903212-v-olomouci-se-blizi-podpis-koalicni-smlouvy-v-dalsich-mestech-kraje-se-jeste-jedna.html'),
+    'Prostějov': dict(stav='dohoda', datum='1. 11.', kl=['1612', '389'], prim=None,
+                      kand=[('Jana Jílková', 'Na rovinu!', 'Z'), ('Milada Sokolová', 'Prostějovští demokraté', 'Z')],
+                      pozn='memorandum Na rovinu! (STAN, TOP 09, Zelení) a Prostějovských demokratů (ODS); primátor nedohodnut',
+                      zdroj='https://hanacka.drbna.cz/politika/904630-radnicni-koalici-v-prostejove-vytvori-na-rovinu-s-ods-je-podepsano.html'),
     'Mladá Boleslav': dict(stav='smlouva', datum='19. 10.', kl=['1071', '166', '523', '411'], prim=('Jiří Bouška', 'ANO', 'M'),
                            zdroj='https://boleslavsky.denik.cz/komunalni-volby/mlada-boleslav-komunalni-volby-vedeni-mesta-koalice-opozice/'),
     'Přerov': dict(stav='smlouva', datum='21. 10.', kl=['768', '53', '355'], prim=('Petr Vrána', 'ANO', 'M'),
                    zdroj='https://www.ceskenoviny.cz/zpravy/v-prerove-podepsalo-koalicni-smlouvu-ano-ods-a-kdu-csl-primatorem-vrana-z-ano/2890766'),
-    'Třinec': dict(stav='dohoda', datum='21. 10.', kl=['1688', '1', '687'], prim=None, pozn='menšinová koalice',
-                   zdroj='https://ehutnik.cz/zpravy/trinec-cekaji-zmeny-v-tesine-i-jablunkove-se-jedna'),
+    'Třinec': dict(stav='dohoda', datum='29. 10.', kl=['1688', '1', '687'], prim=('Marian Plucnar', 'Volte Třinec', 'M'),
+                   pozn='menšinová koalice, „by měla vést“ (ČTK), nic podepsáno',
+                   zdroj='https://www.ceskenoviny.cz/zpravy/2894506'),
 }
 
 # ── Data ČSÚ ──────────────────────────────────────────────────────────────
@@ -127,7 +134,7 @@ def tabor(l):
 
 
 p('=' * 78)
-p('KOALICE VE 26 STATUTÁRNÍCH MĚSTECH A V PRAZE (stav 25. 10. 2026)')
+p('KOALICE VE 26 STATUTÁRNÍCH MĚSTECH A V PRAZE (stav 2. 11. 2026)')
 p('=' * 78)
 assert set(KOALICE) == {z['NAZEVZAST'] for z in zast.values()}, set(KOALICE) ^ {z['NAZEVZAST'] for z in zast.values()}
 mesta = []
@@ -196,6 +203,10 @@ pr = [m for m in mesta if m['c']['prim']]
 for m in pr:
     p(f"   {m['nazev']}: {m['c']['prim'][0]} ({m['c']['prim'][1]}, {m['c']['prim'][2]})")
 p(f"   ženy {sum(1 for m in pr if m['c']['prim'][2] == 'Z')} z {len(pr)}")
+nd = [m for m in mesta if m['c'].get('kand')]
+p('Dohodnutá koalice bez dohodnutého jména (do počtu nezahrnuto): ' + '; '.join(
+    f"{m['nazev']}: " + ' nebo '.join(f'{a} ({b}, {c})' for a, b, c in m['c']['kand']) for m in nd))
+p(f"dohodnuté koalice bez ohlášeného jména: {', '.join(m['nazev'] for m in mesta if m['stav'] in ('smlouva', 'dohoda') and not m['c']['prim'])}")
 
 # ── Před volbami: společné kandidátky napříč tábory (všechny obce a MČ, 2022 a 2026) ──
 p('\n' + '=' * 78 + '\nSPOLEČNÉ KANDIDÁTKY VLÁDNÍCH A OPOZIČNÍCH STRAN (všechna zastupitelstva)\n' + '=' * 78)
@@ -255,8 +266,8 @@ ROLE = {'vítěz v koalici': '#12b886', 'vítěz mimo koalici': '#522a7a', 'jedn
 spec2 = {
     '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
     'title': {'text': 'Nadpoloviční většinu získala jedna kandidátka jen v Karviné a v Ústí nad Labem',
-              'subtitle': 'Podíl mandátů kandidátky, která v zastupitelstvu získala nejvíc křesel (%), a zda je v dohodnuté koalici. Stav 25. 10. 2026'},
-    '_source': 'ČSÚ – otevřená data komunálních voleb 2026; koalice podle zpráv ČTK a regionálních médií k 25. 10. 2026; výpočet DataTimes.cz',
+              'subtitle': 'Podíl mandátů kandidátky, která v zastupitelstvu získala nejvíc křesel (%), a zda je v dohodnuté koalici. Stav 2. 11. 2026'},
+    '_source': 'ČSÚ – otevřená data komunálních voleb 2026; koalice podle zpráv ČTK a regionálních médií k 2. 11. 2026; výpočet DataTimes.cz',
     'width': 600, 'height': 560,
     'data': {'values': rows2},
     'layer': [
@@ -322,8 +333,8 @@ Y = {'field': 'mesto', 'type': 'ordinal', 'sort': domena, 'scale': {'domain': do
 spec = {
     '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
     'title': {'text': 'ANO vládne v devíti velkých městech, v osmi z nich se stranami opozice',
-              'subtitle': 'Rozdělení mandátů v zastupitelstvech 26 statutárních měst a Prahy; plnou barvou kandidátky v dohodnuté koalici, světle ostatní. Stav 25. 10. 2026'},
-    '_source': 'ČSÚ – otevřená data komunálních voleb 2026 (mandáty, složení kandidátek); koalice podle zpráv ČTK a regionálních médií k 25. 10. 2026; výpočet DataTimes.cz',
+              'subtitle': 'Rozdělení mandátů v zastupitelstvech 26 statutárních měst a Prahy; plnou barvou kandidátky v dohodnuté koalici, světle ostatní. Stav 2. 11. 2026'},
+    '_source': 'ČSÚ – otevřená data komunálních voleb 2026 (mandáty, složení kandidátek); koalice podle zpráv ČTK a regionálních médií k 2. 11. 2026; výpočet DataTimes.cz',
     'width': 600, 'height': 620,
     'data': {'values': rows},
     'layer': [
