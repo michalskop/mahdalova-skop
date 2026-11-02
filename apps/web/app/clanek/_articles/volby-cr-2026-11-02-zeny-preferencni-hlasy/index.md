@@ -1,9 +1,9 @@
 ---
-title: "Voliči dávají ženám o dvě procenta méně hlasů. Kolik žen usedne v zastupitelstvech, ale rozhodlo pořadí na kandidátkách"
-date: "2026-10-18"
+title: "O ženách na radnicích nerozhodují voliči, ale strany. Kolik jich usedne, určí pořadí na kandidátkách"
+date: "2026-11-02"
 time: "07:30"
 author: "Kateřina Mahdalová"
-excerpt: "Prošli jsme 189 908 kandidátů obecních voleb 2026. Typická kandidátka dostala o dvě procenta méně hlasů než muž na téže kandidátce, učitelka zhruba polovinu náskoku učitele a ženy na mateřské nejméně ze všech. Podíl žen v zastupitelstvech to ale skoro nezměnilo: podle pořadí na kandidátkách by jich bylo 30,6 %, zvoleno bylo 30,7 %."
+excerpt: "Podle pořadí na kandidátkách by v zastupitelstvech obcí zasedlo 30,6 % žen, zvoleno jich bylo 30,7 %. O tom, kolik žen usedne na radnicích, tak rozhodují hlavně strany, když sestavují kandidátky. Křížky voličů na tom skoro nic nezměnily, i když typická kandidátka dostala o dvě procenta méně hlasů než muž na téže kandidátce a ženy na mateřské nejméně ze všech. Prošli jsme všech 189 908 kandidátů obecních voleb 2026."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
@@ -105,7 +105,7 @@ Vycházíme z [registru kandidátů pro volby do zastupitelstev obcí 2026](http
 
 **Mateřská:** povolání obsahuje mateřskou nebo rodičovskou dovolenou nebo domácnost, ne však mateřskou školu.
 
-Výpočty jsou v [datech k článku](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-10-18-zeny-preferencni-hlasy/_data_pipeline).
+Výpočty jsou v [datech k článku](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-11-02-zeny-preferencni-hlasy/_data_pipeline).
 ```
 
 <RelatedArticles heading="🔻🔻🔻" slugs={["volby-cr-2026-10-15-profese-zastupitelu", "volby-cr-2026-10-02-zeny-na-radnicich", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen", "analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu", "volby-cr-2026-09-02-jak-volit-do-zastupitelstva-obce", "volby-cr-2026-10-12-kdo-zustal-doma"]} />

@@ -23,8 +23,8 @@ const body = [
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Analýza', dal: 'Komunální volby 2026' },
-  titulek: 'Ženy, muži<br>a křížky voličů',
-  pod: 'Ženy dostávají o&nbsp;dvě procenta méně hlasů.<br>O&nbsp;zastupitelkách ale rozhoduje pořadí',
+  titulek: 'O ženách<br>rozhodují strany',
+  pod: 'Kolik jich usedne na radnicích, určí pořadí<br>na kandidátkách, ne křížky voličů',
   legenda: [[ZENA, 'z nevolitelného místa zvolena žena'], [MUZ, 'z nevolitelného místa zvolen muž']],
   mapaPozice: { homepage: [230, 650, 1500, 1170], square: [60, 570, 1080, 1060] },
   legendaPodTextem: true,

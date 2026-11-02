@@ -22,7 +22,7 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Voliči dávají ženám o dvě procenta méně hlasů. Kolik žen usedne v zastupitelstvech, ale rozhodlo pořadí na kandidátkách](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-18-zeny-preferencni-hlasy)
+- [O ženách na radnicích nerozhodují voliči, ale strany. Kolik jich usedne, určí pořadí na kandidátkách](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-18-zeny-preferencni-hlasy)
 - [Lékařům, veterinářům a ředitelkám škol voliči věří. Do zastupitelstva je posunou i z konce kandidátky](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-15-profese-zastupitelu)
 
 ### Ekonomika a ceny
