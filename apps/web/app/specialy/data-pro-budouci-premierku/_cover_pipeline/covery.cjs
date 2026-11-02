@@ -179,7 +179,7 @@ const MOTIVY = {
   },
   // 19: dětí na jednu ženu (1,37) a na jednoho muže (1,23; ČSÚ 2024, vlastní výpočet) vs. 2,1 k obnově; 1 kolečko = 1 dítě
   kolecka(w, h, spec) {
-    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, N = 3, mez = f * 1.0, lg = f * 1.9;
+    const f = fsOf(w), TYRK = '#4fd6b4', fz = f * 1.25, N = 3, mez = 0, lg = f * 1.9;
     const nR = spec.rady.length, rh = Math.min((h - lg - mez) / nR, f * 3.8), d = rh * 0.86;
     const eduW = f * 10.2, valW = f * 3.6, g = Math.min((w - eduW - N * d - valW) / 2, f * 4);
     const xD = eduW + g, xV = xD + N * d + g * 0.5;
