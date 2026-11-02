@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.errorCode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.04em;
+  font-family: var(--mantine-font-family-headings), sans-serif;
+  font-size: clamp(5.5rem, 16vw, 8.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--mantine-color-brand-6);
+  margin: 0 0 0.75rem 0;
+  text-shadow: 0 4px 24px rgba(222, 23, 67, 0.12);
+  user-select: none;
+}
+
+.digit {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.logoWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  /* Optical alignment: perfectly aligns the visual center with IBM Plex Sans '4' */
+  transform: translateY(0.025em);
+}
+
+.logoImg {
+  width: 0.72em;
+  height: 0.72em;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(222, 23, 67, 0.15));
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.logoImg:hover {
+  transform: rotate(360deg);
+}
+
+.kicker {
+  font-family: var(--mantine-font-family-headings), sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--mantine-font-family-headings), sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--mantine-color-brandNavy-9);
+  margin-bottom: 0.75rem;
+}
+
+.perex {
+  font-family: var(--mantine-font-family), serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--mantine-color-brandNavy-9);
+  max-width: 660px;
+  margin: 0 auto 1.75rem auto;
+}
+
+.gameWrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.navSection {
+  background-color: var(--mantine-color-background-0);
+  border: 1px solid var(--mantine-color-background-4);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navTitle {
+  font-family: var(--mantine-font-family-headings), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--mantine-color-brandNavy-9);
+  margin-bottom: 1rem;
+}
+

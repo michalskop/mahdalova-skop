@@ -12,7 +12,7 @@ import ChartLegend from './ChartLegend';
 import { PRED, COUNT } from './brazil2026Data';
 
 // Barvy výhradně ze závazné palety (ThemeProvider.tsx)
-const C = {
+export const C = {
   ink: '#101432',        // brandNavy.9
   ink2: '#4c4f8e',       // brandNavy.7
   grid: '#eeeae2',       // background.4
@@ -26,10 +26,10 @@ const C = {
   model: '#de1743',      // brand.6
   surface: '#f8f6f0',    // background.2 – pozadí ChartCard
 };
-const FONT = 'var(--font-roboto-condensed), Arial, sans-serif';
-const fmt = (v: number, d = 1) => v.toFixed(d).replace('.', ',');
+export const FONT = 'var(--font-roboto-condensed), Arial, sans-serif';
+export const fmt = (v: number, d = 1) => v.toFixed(d).replace('.', ',');
 
-function useWidth<T extends HTMLElement>() {
+export function useWidth<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   const [w, setW] = useState(0);
   useEffect(() => {
@@ -41,9 +41,9 @@ function useWidth<T extends HTMLElement>() {
   return [ref, w] as const;
 }
 
-type Tip = { x: number; y: number; body: ReactNode } | null;
+export type Tip = { x: number; y: number; body: ReactNode } | null;
 
-function Tooltip({ tip, width }: { tip: Tip; width: number }) {
+export function Tooltip({ tip, width }: { tip: Tip; width: number }) {
   if (!tip) return null;
   const right = tip.x > width - 240;
   return (

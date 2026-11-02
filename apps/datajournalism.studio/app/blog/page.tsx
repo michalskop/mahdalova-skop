@@ -18,7 +18,7 @@ export default async function ArticlesPage() {
       m="0 auto"
     >
       <ArticlesSection 
-        sectionTitle="Blog"
+        sectionTitle="Context"
         articles={articles}
         themeColor="brandOrange.4"
       />

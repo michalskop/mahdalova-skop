@@ -6,6 +6,8 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Die Linke vyhrála berlínské volby s 25,7 % a mezi voliči do třiceti let získala 47 %. Data z volebního dne i z 1 572 okrsků ukazují, že rozhodoval věk a bydlení ve městě nájemníků. V českých médiích strana často vystupuje jako krajní levice srovnatelná s AfD. Politologové, úřady pro ochranu ústavy i její vládní minulost ukazují něco jiného: radikální, ne extremistickou stranu, jejíž rizika leží jinde, než se v Česku píše."
 coverImage: "images/cover.jpg"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
 tags: ["volby", "Německo", "Berlín", "Die Linke", "mladí voliči", "bydlení", "antisemitismus", "zahraničí"]
 promoted: 1

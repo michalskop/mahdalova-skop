@@ -72,7 +72,14 @@ const CHANNELS = [
   },
 ];
 
-export function FollowBar() {
+interface FollowBarProps {
+  /** Lead-in text (default Czech „Sledujte DataTimes:"); the English DJS site passes its own. */
+  label?: string;
+  /** Channel labels to hide (e.g. ["Google"] on English sites – the Google News link searches the Czech domain). */
+  exclude?: string[];
+}
+
+export function FollowBar({ label: leadLabel = "Sledujte DataTimes:", exclude = [] }: FollowBarProps = {}) {
   const theme = useMantineTheme();
 
   return (
@@ -89,9 +96,9 @@ export function FollowBar() {
       }}
     >
       <span style={{ fontSize: 13, color: theme.colors.gray[6], marginRight: 2, whiteSpace: "nowrap" }}>
-        Sledujte DataTimes:
+        {leadLabel}
       </span>
-      {CHANNELS.map(({ label, url, icon }) => (
+      {CHANNELS.filter(({ label }) => !exclude.includes(label)).map(({ label, url, icon }) => (
         <Anchor key={label} href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <Button
             variant="default"

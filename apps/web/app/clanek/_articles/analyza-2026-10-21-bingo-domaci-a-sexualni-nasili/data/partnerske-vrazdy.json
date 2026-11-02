@@ -1,0 +1,157 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Tři čtvrtiny obětí partnerských vražd jsou ženy",
+    "subtitle": "Oběti vražd, které spáchal současný nebo bývalý partner, Česko 2015–2024 (počet). Eurostat"
+  },
+  "width": 560,
+  "height": 260,
+  "data": {
+    "values": [
+      {
+        "rok": "2015",
+        "pohlavi": "ženy",
+        "v": 12
+      },
+      {
+        "rok": "2015",
+        "pohlavi": "muži",
+        "v": 8
+      },
+      {
+        "rok": "2016",
+        "pohlavi": "ženy",
+        "v": 17
+      },
+      {
+        "rok": "2016",
+        "pohlavi": "muži",
+        "v": 3
+      },
+      {
+        "rok": "2017",
+        "pohlavi": "ženy",
+        "v": 13
+      },
+      {
+        "rok": "2017",
+        "pohlavi": "muži",
+        "v": 5
+      },
+      {
+        "rok": "2019",
+        "pohlavi": "ženy",
+        "v": 12
+      },
+      {
+        "rok": "2019",
+        "pohlavi": "muži",
+        "v": 1
+      },
+      {
+        "rok": "2020",
+        "pohlavi": "ženy",
+        "v": 14
+      },
+      {
+        "rok": "2020",
+        "pohlavi": "muži",
+        "v": 1
+      },
+      {
+        "rok": "2021",
+        "pohlavi": "ženy",
+        "v": 7
+      },
+      {
+        "rok": "2021",
+        "pohlavi": "muži",
+        "v": 4
+      },
+      {
+        "rok": "2022",
+        "pohlavi": "ženy",
+        "v": 11
+      },
+      {
+        "rok": "2022",
+        "pohlavi": "muži",
+        "v": 5
+      },
+      {
+        "rok": "2023",
+        "pohlavi": "ženy",
+        "v": 13
+      },
+      {
+        "rok": "2023",
+        "pohlavi": "muži",
+        "v": 3
+      },
+      {
+        "rok": "2024",
+        "pohlavi": "ženy",
+        "v": 10
+      },
+      {
+        "rok": "2024",
+        "pohlavi": "muži",
+        "v": 5
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "rok",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "v",
+      "type": "quantitative",
+      "title": null,
+      "stack": true
+    },
+    "color": {
+      "field": "pohlavi",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "ženy",
+          "muži"
+        ],
+        "range": [
+          "#f76800",
+          "#06677d"
+        ]
+      },
+      "legend": {
+        "orient": "top",
+        "title": null
+      }
+    },
+    "order": {
+      "field": "pohlavi",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {
+        "field": "rok"
+      },
+      {
+        "field": "pohlavi"
+      },
+      {
+        "field": "v",
+        "title": "Obětí"
+      }
+    ]
+  }
+}

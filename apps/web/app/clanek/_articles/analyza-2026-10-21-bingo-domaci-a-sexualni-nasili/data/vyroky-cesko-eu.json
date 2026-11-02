@@ -1,0 +1,221 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Češi souhlasí s obviňováním obětí častěji než lidé jinde v EU",
+    "subtitle": "Podíl lidí, kteří s výrokem souhlasí (%). Eurobarometr 2016 a 2024, Česko a průměr EU"
+  },
+  "width": 560,
+  "height": {
+    "step": 22
+  },
+  "data": {
+    "values": [
+      {
+        "vyrok": "„Byla opilá, může si za to sama“",
+        "kdo": "Česko",
+        "v": 32,
+        "rok": "2024",
+        "pomer": 2.0
+      },
+      {
+        "vyrok": "„Byla opilá, může si za to sama“",
+        "kdo": "průměr EU",
+        "v": 16,
+        "rok": "2024",
+        "pomer": 2.0
+      },
+      {
+        "vyrok": "„Flirtovala, tak je sex bez souhlasu omluvitelný“",
+        "kdo": "Česko",
+        "v": 17,
+        "rok": "2016",
+        "pomer": 2.4
+      },
+      {
+        "vyrok": "„Flirtovala, tak je sex bez souhlasu omluvitelný“",
+        "kdo": "průměr EU",
+        "v": 7,
+        "rok": "2016",
+        "pomer": 2.4
+      },
+      {
+        "vyrok": "„Neřekla jasně ne, nebránila se“",
+        "kdo": "Česko",
+        "v": 19,
+        "rok": "2016",
+        "pomer": 1.9
+      },
+      {
+        "vyrok": "„Neřekla jasně ne, nebránila se“",
+        "kdo": "průměr EU",
+        "v": 10,
+        "rok": "2016",
+        "pomer": 1.9
+      },
+      {
+        "vyrok": "„Šla s ním domů“",
+        "kdo": "Česko",
+        "v": 18,
+        "rok": "2016",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "„Šla s ním domů“",
+        "kdo": "průměr EU",
+        "v": 11,
+        "rok": "2016",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "„Násilí na ženách často vyprovokuje oběť“",
+        "kdo": "Česko",
+        "v": 26,
+        "rok": "2016",
+        "pomer": 1.5
+      },
+      {
+        "vyrok": "„Násilí na ženách často vyprovokuje oběť“",
+        "kdo": "průměr EU",
+        "v": 17,
+        "rok": "2016",
+        "pomer": 1.5
+      },
+      {
+        "vyrok": "„Když žena řekne ne, často myslí ano“",
+        "kdo": "Česko",
+        "v": 14,
+        "rok": "2024",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "„Když žena řekne ne, často myslí ano“",
+        "kdo": "průměr EU",
+        "v": 9,
+        "rok": "2024",
+        "pomer": 1.6
+      },
+      {
+        "vyrok": "„Ženy si obvinění vymýšlejí nebo přehánějí“",
+        "kdo": "Česko",
+        "v": 23,
+        "rok": "2024",
+        "pomer": 1.4
+      },
+      {
+        "vyrok": "„Ženy si obvinění vymýšlejí nebo přehánějí“",
+        "kdo": "průměr EU",
+        "v": 17,
+        "rok": "2024",
+        "pomer": 1.4
+      },
+      {
+        "vyrok": "„Co měla na sobě“ (vyzývavé oblečení)",
+        "kdo": "Česko",
+        "v": 10,
+        "rok": "2016",
+        "pomer": 1.0
+      },
+      {
+        "vyrok": "„Co měla na sobě“ (vyzývavé oblečení)",
+        "kdo": "průměr EU",
+        "v": 10,
+        "rok": "2016",
+        "pomer": 1.0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "vyrok",
+      "type": "nominal",
+      "sort": null,
+      "title": null,
+      "axis": {
+        "labelLimit": 330,
+        "labelFontSize": 13
+      }
+    },
+    "yOffset": {
+      "field": "kdo",
+      "sort": [
+        "Česko",
+        "průměr EU"
+      ]
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [
+          0,
+          40
+        ]
+      },
+      "axis": {
+        "grid": true,
+        "tickCount": 4,
+        "labelExpr": "datum.value + ' %'"
+      }
+    },
+    "color": {
+      "field": "kdo",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Česko",
+          "průměr EU"
+        ],
+        "range": [
+          "#de1743",
+          "#c8c8bc"
+        ]
+      },
+      "legend": {
+        "orient": "top",
+        "title": null
+      }
+    },
+    "tooltip": [
+      {
+        "field": "vyrok",
+        "title": "Výrok"
+      },
+      {
+        "field": "kdo",
+        "title": "Kdo"
+      },
+      {
+        "field": "v",
+        "title": "Souhlasí (%)"
+      },
+      {
+        "field": "rok",
+        "title": "Průzkum"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 9,
+        "cornerRadiusEnd": 2
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "v",
+          "format": ".0f"
+        }
+      }
+    }
+  ]
+}

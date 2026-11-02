@@ -1,0 +1,34 @@
+SLDB 2021, ženy 25 - 29 let, střední bez maturity: n=41848, průměr dětí 0.81, bezdětných 44.1 %
+SLDB 2021, ženy 25 - 29 let, střední s maturitou: n=90990, průměr dětí 0.53, bezdětných 60.6 %
+SLDB 2021, ženy 25 - 29 let, vysokoškolské: n=108310, průměr dětí 0.27, bezdětných 78.3 %
+SLDB 2021, ženy 25 - 29 let, vyšší odborné: n=12968, průměr dětí 0.42, bezdětných 66.8 %
+SLDB 2021, ženy 25 - 29 let, základní: n=19125, průměr dětí 1.22, bezdětných 33.1 %
+SLDB 2021, ženy 30 - 34 let, střední bez maturity: n=47531, průměr dětí 1.32, bezdětných 24.3 %
+SLDB 2021, ženy 30 - 34 let, střední s maturitou: n=100812, průměr dětí 1.10, bezdětných 32.0 %
+SLDB 2021, ženy 30 - 34 let, vysokoškolské: n=133843, průměr dětí 0.89, bezdětných 42.2 %
+SLDB 2021, ženy 30 - 34 let, vyšší odborné: n=14450, průměr dětí 1.04, bezdětných 33.9 %
+SLDB 2021, ženy 30 - 34 let, základní: n=17289, průměr dětí 1.71, bezdětných 21.4 %
+SLDB 2021, ženy 35 - 39 let, střední bez maturity: n=60260, průměr dětí 1.61, bezdětných 15.4 %
+SLDB 2021, ženy 35 - 39 let, střední s maturitou: n=113219, průměr dětí 1.48, bezdětných 18.1 %
+SLDB 2021, ženy 35 - 39 let, vysokoškolské: n=118884, průměr dětí 1.46, bezdětných 21.0 %
+SLDB 2021, ženy 35 - 39 let, vyšší odborné: n=17830, průměr dětí 1.50, bezdětných 17.8 %
+SLDB 2021, ženy 35 - 39 let, základní: n=16384, průměr dětí 1.97, bezdětných 16.9 %
+SLDB 2021, ženy 45 - 49 let, střední bez maturity: n=141022, průměr dětí 1.90, bezdětných 6.9 %
+SLDB 2021, ženy 45 - 49 let, střední s maturitou: n=160096, průměr dětí 1.77, bezdětných 8.1 %
+SLDB 2021, ženy 45 - 49 let, vysokoškolské: n=78492, průměr dětí 1.75, bezdětných 11.1 %
+SLDB 2021, ženy 45 - 49 let, vyšší odborné: n=6694, průměr dětí 1.76, bezdětných 10.3 %
+SLDB 2021, ženy 45 - 49 let, základní: n=18432, průměr dětí 2.12, bezdětných 12.7 %
+Nejpočetnější ročníky žen (k 1. 1. 2023): 1974 95055, 1975 94505, 1976 92793, 1977 90617, 1978 89111
+Ženy narozené 1980–1984: průměr na ročník 74965
+Ženy narozené 1985–1989: průměr na ročník 71211
+Ženy narozené 1990–1994: průměr na ročník 65904
+Ženy narozené 1995–1999: průměr na ročník 50670
+Ženy narozené 2000–2004: průměr na ročník 50914
+Ženy narozené 2005–2009: průměr na ročník 57909
+Ženy 26–33 let k 1. 1. 2023: 502835; ženy 23–37 let: 938924
+Ženy 26–33 let k 1. 1. 2025: 473604; ženy 23–37 let: 911482
+Ženy 26–33 let k 1. 1. 2030: 416287; ženy 23–37 let: 829874
+Ženy 26–33 let k 1. 1. 2035: 467139; ženy 23–37 let: 865189
+Ženy 26–33 let k 1. 1. 2040: 507586; ženy 23–37 let: 921166
+Změna počtu žen 26–33 let 2025 → 2030: -12.1 %
+Změna počtu žen 23–37 let 2025 → 2030: -9.0 %

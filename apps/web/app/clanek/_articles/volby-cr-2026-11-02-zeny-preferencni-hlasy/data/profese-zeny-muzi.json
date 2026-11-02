@@ -1,0 +1,421 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Učitelky, ředitelky škol a lékařky dostávají méně hlasů navíc než jejich mužští kolegové",
+    "subtitle": "O kolik procent víc, nebo méně hlasů dostala typická žena a typický muž s daným povoláním než kandidáti na stejném místě stejně dlouhé kandidátky ve stejně velkých obcích. Obecní volby 2026."
+  },
+  "width": 600,
+  "height": {
+    "step": 30
+  },
+  "data": {
+    "values": [
+      {
+        "profese": "všichni kandidáti",
+        "pohlavi": "ženy",
+        "bonus": -1.2,
+        "popisek": "−1,2 %",
+        "kandidatu": 66277,
+        "zvoleno": 18635
+      },
+      {
+        "profese": "všichni kandidáti",
+        "pohlavi": "muži",
+        "bonus": 0.7,
+        "popisek": "+0,7 %",
+        "kandidatu": 119594,
+        "zvoleno": 42132
+      },
+      {
+        "profese": "lékaři a lékařky (vč. zubařů)",
+        "pohlavi": "ženy",
+        "bonus": 10.2,
+        "popisek": "+10,2 %",
+        "kandidatu": 1105,
+        "zvoleno": 327
+      },
+      {
+        "profese": "lékaři a lékařky (vč. zubařů)",
+        "pohlavi": "muži",
+        "bonus": 14.3,
+        "popisek": "+14,3 %",
+        "kandidatu": 1155,
+        "zvoleno": 457
+      },
+      {
+        "profese": "ředitelé a ředitelky škol",
+        "pohlavi": "ženy",
+        "bonus": 9.4,
+        "popisek": "+9,4 %",
+        "kandidatu": 1436,
+        "zvoleno": 654
+      },
+      {
+        "profese": "ředitelé a ředitelky škol",
+        "pohlavi": "muži",
+        "bonus": 14.2,
+        "popisek": "+14,2 %",
+        "kandidatu": 844,
+        "zvoleno": 504
+      },
+      {
+        "profese": "místostarostové a místostarostky",
+        "pohlavi": "ženy",
+        "bonus": 7.2,
+        "popisek": "+7,2 %",
+        "kandidatu": 530,
+        "zvoleno": 467
+      },
+      {
+        "profese": "místostarostové a místostarostky",
+        "pohlavi": "muži",
+        "bonus": 9.0,
+        "popisek": "+9,0 %",
+        "kandidatu": 1383,
+        "zvoleno": 1164
+      },
+      {
+        "profese": "učitelé a učitelky",
+        "pohlavi": "ženy",
+        "bonus": 4.1,
+        "popisek": "+4,1 %",
+        "kandidatu": 5839,
+        "zvoleno": 1797
+      },
+      {
+        "profese": "učitelé a učitelky",
+        "pohlavi": "muži",
+        "bonus": 8.7,
+        "popisek": "+8,7 %",
+        "kandidatu": 2843,
+        "zvoleno": 1127
+      },
+      {
+        "profese": "starostové a starostky",
+        "pohlavi": "ženy",
+        "bonus": 0.8,
+        "popisek": "+0,8 %",
+        "kandidatu": 1193,
+        "zvoleno": 1103
+      },
+      {
+        "profese": "starostové a starostky",
+        "pohlavi": "muži",
+        "bonus": 3.5,
+        "popisek": "+3,5 %",
+        "kandidatu": 2976,
+        "zvoleno": 2691
+      },
+      {
+        "profese": "zdravotní sestry a bratři",
+        "pohlavi": "ženy",
+        "bonus": 1.0,
+        "popisek": "+1,0 %",
+        "kandidatu": 2572,
+        "zvoleno": 589
+      },
+      {
+        "profese": "zdravotní sestry a bratři",
+        "pohlavi": "muži",
+        "bonus": 0.7,
+        "popisek": "+0,7 %",
+        "kandidatu": 137,
+        "zvoleno": 42
+      },
+      {
+        "profese": "podnikatelé a podnikatelky",
+        "pohlavi": "ženy",
+        "bonus": -2.5,
+        "popisek": "−2,5 %",
+        "kandidatu": 4368,
+        "zvoleno": 1147
+      },
+      {
+        "profese": "podnikatelé a podnikatelky",
+        "pohlavi": "muži",
+        "bonus": 0.6,
+        "popisek": "+0,6 %",
+        "kandidatu": 17847,
+        "zvoleno": 6256
+      },
+      {
+        "profese": "studenti a studentky",
+        "pohlavi": "ženy",
+        "bonus": -6.9,
+        "popisek": "−6,9 %",
+        "kandidatu": 1719,
+        "zvoleno": 140
+      },
+      {
+        "profese": "studenti a studentky",
+        "pohlavi": "muži",
+        "bonus": -6.0,
+        "popisek": "−6,0 %",
+        "kandidatu": 2568,
+        "zvoleno": 247
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "pohlavi": "ženy",
+        "bonus": -7.9,
+        "popisek": "−7,9 %",
+        "kandidatu": 5015,
+        "zvoleno": 816
+      },
+      {
+        "profese": "důchodci a důchodkyně",
+        "pohlavi": "muži",
+        "bonus": -6.0,
+        "popisek": "−6,0 %",
+        "kandidatu": 7615,
+        "zvoleno": 1587
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "profese",
+      "type": "nominal",
+      "sort": [
+        "všichni kandidáti",
+        "lékaři a lékařky (vč. zubařů)",
+        "ředitelé a ředitelky škol",
+        "místostarostové a místostarostky",
+        "učitelé a učitelky",
+        "starostové a starostky",
+        "zdravotní sestry a bratři",
+        "podnikatelé a podnikatelky",
+        "studenti a studentky",
+        "důchodci a důchodkyně"
+      ],
+      "axis": {
+        "title": null,
+        "labelLimit": 320,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeWidth": 1,
+        "opacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "pivot": "pohlavi",
+          "value": "bonus",
+          "groupby": [
+            "profese"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#c8c8bc",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "ženy",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "muži"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 160,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -10,
+              16
+            ]
+          },
+          "axis": {
+            "title": "hlasy navíc proti kandidátům na stejném místě (%)",
+            "grid": true,
+            "gridColor": "#e8e2d6",
+            "format": "+d"
+          }
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "direction": "horizontal",
+            "labelFontSize": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "profese",
+            "title": "Povolání"
+          },
+          {
+            "field": "pohlavi",
+            "title": "Pohlaví"
+          },
+          {
+            "field": "popisek",
+            "title": "Hlasy navíc"
+          },
+          {
+            "field": "kandidatu",
+            "title": "Kandidátů",
+            "format": ","
+          },
+          {
+            "field": "zvoleno",
+            "title": "Zvoleno",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "max",
+              "field": "bonus",
+              "as": "mx"
+            }
+          ],
+          "groupby": [
+            "profese"
+          ]
+        },
+        {
+          "filter": "datum.bonus === datum.mx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": 11,
+        "align": "left"
+      },
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "max",
+              "field": "bonus",
+              "as": "mx"
+            }
+          ],
+          "groupby": [
+            "profese"
+          ]
+        },
+        {
+          "filter": "datum.bonus < datum.mx"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": -11,
+        "align": "right"
+      },
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          },
+          "legend": null
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "_source": "ČSÚ – registry kandidátů pro volby do zastupitelstev obcí 2018, 2022 a 2026 (stav 11. 10. 2026); pohlaví odvozené z příjmení a jména; výpočet DataTimes.cz; pohlaví podle jména, ne podle tvaru povolání (učitel/učitelka)"
+}

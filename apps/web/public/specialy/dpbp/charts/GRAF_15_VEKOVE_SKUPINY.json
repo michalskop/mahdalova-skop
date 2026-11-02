@@ -1,0 +1,896 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Podíl lidí od 50 let mezi dospělými stoupá, třicátníků a čtyřicátníků ubývá",
+  "subtitle": "Podíl věkových skupin z obyvatel od 18 let k 1. lednu; 2018 a 2023 skutečnost, od 2026 střední varianta projekce ČSÚ"
+ },
+ "_source": "[Projekce obyvatelstva ČR 2023–2100, ČSÚ](https://csu.gov.cz/csu/czso/projekce-obyvatelstva-ceske-republiky-2023-2100) · [Projekce obyvatelstva ČR 2018–2100, ČSÚ](https://csu.gov.cz/produkty/projekce-obyvatelstva-ceske-republiky-2018-2100) · vlastní výpočet\nObyvatelé včetně cizinců; skutečná data ČSÚ k 1. 1. 2026 jsme nepoužili.",
+ "_reveal_sequence": [
+  [
+   "#9fd0dd",
+   "#0e8aab"
+  ],
+  [
+   "#acadbe",
+   "#2f325c"
+  ],
+  [
+   "#f2a2b4",
+   "#de1743"
+  ]
+ ],
+ "height": 320,
+ "data": {
+  "values": [
+   {
+    "rok": 2018,
+    "skupina": "18–29 let",
+    "podil": 16.0,
+    "label": "16,0 %",
+    "typ": "skutečnost",
+    "pocet": 1386749
+   },
+   {
+    "rok": 2018,
+    "skupina": "30–49 let",
+    "podil": 37.2,
+    "label": "37,2 %",
+    "typ": "skutečnost",
+    "pocet": 3217775
+   },
+   {
+    "rok": 2018,
+    "skupina": "50 let a více",
+    "podil": 46.8,
+    "label": "46,8 %",
+    "typ": "skutečnost",
+    "pocet": 4056641
+   },
+   {
+    "rok": 2023,
+    "skupina": "18–29 let",
+    "podil": 14.7,
+    "label": "14,7 %",
+    "typ": "skutečnost",
+    "pocet": 1287351
+   },
+   {
+    "rok": 2023,
+    "skupina": "30–49 let",
+    "podil": 36.8,
+    "label": "36,8 %",
+    "typ": "skutečnost",
+    "pocet": 3212509
+   },
+   {
+    "rok": 2023,
+    "skupina": "50 let a více",
+    "podil": 48.5,
+    "label": "48,5 %",
+    "typ": "skutečnost",
+    "pocet": 4232180
+   },
+   {
+    "rok": 2026,
+    "skupina": "18–29 let",
+    "podil": 14.8,
+    "label": "14,8 %",
+    "typ": "projekce",
+    "pocet": 1304381
+   },
+   {
+    "rok": 2026,
+    "skupina": "30–49 let",
+    "podil": 34.4,
+    "label": "34,4 %",
+    "typ": "projekce",
+    "pocet": 3040877
+   },
+   {
+    "rok": 2026,
+    "skupina": "50 let a více",
+    "podil": 50.8,
+    "label": "50,8 %",
+    "typ": "projekce",
+    "pocet": 4484905
+   },
+   {
+    "rok": 2030,
+    "skupina": "18–29 let",
+    "podil": 15.7,
+    "label": "15,7 %",
+    "typ": "projekce",
+    "pocet": 1393535
+   },
+   {
+    "rok": 2030,
+    "skupina": "30–49 let",
+    "podil": 30.8,
+    "label": "30,8 %",
+    "typ": "projekce",
+    "pocet": 2736449
+   },
+   {
+    "rok": 2030,
+    "skupina": "50 let a více",
+    "podil": 53.4,
+    "label": "53,4 %",
+    "typ": "projekce",
+    "pocet": 4740651
+   },
+   {
+    "rok": 2035,
+    "skupina": "18–29 let",
+    "podil": 16.5,
+    "label": "16,5 %",
+    "typ": "projekce",
+    "pocet": 1482665
+   },
+   {
+    "rok": 2035,
+    "skupina": "30–49 let",
+    "podil": 28.8,
+    "label": "28,8 %",
+    "typ": "projekce",
+    "pocet": 2591467
+   },
+   {
+    "rok": 2035,
+    "skupina": "50 let a více",
+    "podil": 54.7,
+    "label": "54,7 %",
+    "typ": "projekce",
+    "pocet": 4916507
+   },
+   {
+    "rok": 2040,
+    "skupina": "18–29 let",
+    "podil": 16.3,
+    "label": "16,3 %",
+    "typ": "projekce",
+    "pocet": 1478139
+   },
+   {
+    "rok": 2040,
+    "skupina": "30–49 let",
+    "podil": 28.3,
+    "label": "28,3 %",
+    "typ": "projekce",
+    "pocet": 2570734
+   },
+   {
+    "rok": 2040,
+    "skupina": "50 let a více",
+    "podil": 55.4,
+    "label": "55,4 %",
+    "typ": "projekce",
+    "pocet": 5039393
+   }
+  ]
+ },
+ "layer": [
+  {
+   "transform": [
+    {
+     "filter": "datum.skupina == '18–29 let'"
+    }
+   ],
+   "mark": {
+    "type": "area",
+    "opacity": 0.5,
+    "line": false,
+    "color": "#0e8aab"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2018,
+       2023,
+       2026,
+       2030,
+       2035,
+       2040
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       62
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     },
+     "stack": null
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.skupina == '30–49 let'"
+    }
+   ],
+   "mark": {
+    "type": "area",
+    "opacity": 0.26,
+    "line": false,
+    "color": "#2f325c"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2018,
+       2023,
+       2026,
+       2030,
+       2035,
+       2040
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       62
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     },
+     "stack": null
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.skupina == '50 let a více'"
+    }
+   ],
+   "mark": {
+    "type": "area",
+    "opacity": 0.08,
+    "line": false,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2018,
+       2023,
+       2026,
+       2030,
+       2035,
+       2040
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       62
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     },
+     "stack": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2018,
+       2023,
+       2026,
+       2030,
+       2035,
+       2040
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       62
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "18–29 let",
+       "30–49 let",
+       "50 let a více"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 70,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2018,
+       2023,
+       2026,
+       2030,
+       2035,
+       2040
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       62
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "18–29 let",
+       "30–49 let",
+       "50 let a více"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "dy": -12,
+    "fontSize": 13,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2018,
+       2023,
+       2026,
+       2030,
+       2035,
+       2040
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "podil",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       62
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "18–29 let",
+       "30–49 let",
+       "50 let a více"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2037.5,
+      "skupina": "18–29 let",
+      "podil": 8.2
+     },
+     {
+      "rok": 2037.5,
+      "skupina": "30–49 let",
+      "podil": 22.475
+     },
+     {
+      "rok": 2037.5,
+      "skupina": "50 let a více",
+      "podil": 41.8
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "fontSize": 13,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "field": "podil",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       62
+      ]
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "18–29 let",
+       "30–49 let",
+       "50 let a více"
+      ],
+      "range": [
+       "#0e8aab",
+       "#2f325c",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "skupina"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "hlavicka": "K 1. 1. 2018 (skutečnost)",
+      "od": 2016,
+      "do": 2020.5,
+      "50 let a více": "46,8 % (4,06 mil.)",
+      "30–49 let": "37,2 % (3,22 mil.)",
+      "18–29 let": "16,0 % (1,39 mil.)",
+      "rok": 2018
+     },
+     {
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "od": 2020.5,
+      "do": 2024.5,
+      "50 let a více": "48,5 % (4,23 mil.)",
+      "30–49 let": "36,8 % (3,21 mil.)",
+      "18–29 let": "14,7 % (1,29 mil.)",
+      "rok": 2023
+     },
+     {
+      "hlavicka": "K 1. 1. 2026 (projekce)",
+      "od": 2024.5,
+      "do": 2028.0,
+      "50 let a více": "50,8 % (4,48 mil.)",
+      "30–49 let": "34,4 % (3,04 mil.)",
+      "18–29 let": "14,8 % (1,30 mil.)",
+      "rok": 2026
+     },
+     {
+      "hlavicka": "K 1. 1. 2030 (projekce)",
+      "od": 2028.0,
+      "do": 2032.5,
+      "50 let a více": "53,4 % (4,74 mil.)",
+      "30–49 let": "30,8 % (2,74 mil.)",
+      "18–29 let": "15,7 % (1,39 mil.)",
+      "rok": 2030
+     },
+     {
+      "hlavicka": "K 1. 1. 2035 (projekce)",
+      "od": 2032.5,
+      "do": 2037.5,
+      "50 let a více": "54,7 % (4,92 mil.)",
+      "30–49 let": "28,8 % (2,59 mil.)",
+      "18–29 let": "16,5 % (1,48 mil.)",
+      "rok": 2035
+     },
+     {
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "od": 2037.5,
+      "do": 2041.5,
+      "50 let a více": "55,4 % (5,04 mil.)",
+      "30–49 let": "28,3 % (2,57 mil.)",
+      "18–29 let": "16,3 % (1,48 mil.)",
+      "rok": 2040
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 1,
+    "strokeDash": [
+     3,
+     3
+    ],
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 62
+    },
+    "strokeOpacity": {
+     "condition": {
+      "param": "hov",
+      "empty": false,
+      "value": 0.6
+     },
+     "value": 0
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "hlavicka": "K 1. 1. 2018 (skutečnost)",
+      "od": 2016,
+      "do": 2020.5,
+      "50 let a více": "46,8 % (4,06 mil.)",
+      "30–49 let": "37,2 % (3,22 mil.)",
+      "18–29 let": "16,0 % (1,39 mil.)"
+     },
+     {
+      "hlavicka": "K 1. 1. 2023 (skutečnost)",
+      "od": 2020.5,
+      "do": 2024.5,
+      "50 let a více": "48,5 % (4,23 mil.)",
+      "30–49 let": "36,8 % (3,21 mil.)",
+      "18–29 let": "14,7 % (1,29 mil.)"
+     },
+     {
+      "hlavicka": "K 1. 1. 2026 (projekce)",
+      "od": 2024.5,
+      "do": 2028.0,
+      "50 let a více": "50,8 % (4,48 mil.)",
+      "30–49 let": "34,4 % (3,04 mil.)",
+      "18–29 let": "14,8 % (1,30 mil.)"
+     },
+     {
+      "hlavicka": "K 1. 1. 2030 (projekce)",
+      "od": 2028.0,
+      "do": 2032.5,
+      "50 let a více": "53,4 % (4,74 mil.)",
+      "30–49 let": "30,8 % (2,74 mil.)",
+      "18–29 let": "15,7 % (1,39 mil.)"
+     },
+     {
+      "hlavicka": "K 1. 1. 2035 (projekce)",
+      "od": 2032.5,
+      "do": 2037.5,
+      "50 let a více": "54,7 % (4,92 mil.)",
+      "30–49 let": "28,8 % (2,59 mil.)",
+      "18–29 let": "16,5 % (1,48 mil.)"
+     },
+     {
+      "hlavicka": "K 1. 1. 2040 (projekce)",
+      "od": 2037.5,
+      "do": 2041.5,
+      "50 let a více": "55,4 % (5,04 mil.)",
+      "30–49 let": "28,3 % (2,57 mil.)",
+      "18–29 let": "16,3 % (1,48 mil.)"
+     }
+    ]
+   },
+   "params": [
+    {
+     "name": "hov",
+     "select": {
+      "type": "point",
+      "fields": [
+       "hlavicka"
+      ],
+      "on": "mouseover",
+      "clear": "mouseout"
+     }
+    }
+   ],
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "x": {
+     "field": "od",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2016,
+       2041.5
+      ],
+      "nice": false
+     }
+    },
+    "x2": {
+     "field": "do"
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 62
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "50 let a více",
+      "title": "50 let a více"
+     },
+     {
+      "field": "30–49 let",
+      "title": "30–49 let"
+     },
+     {
+      "field": "18–29 let",
+      "title": "18–29 let"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

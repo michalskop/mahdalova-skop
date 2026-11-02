@@ -1,5 +1,5 @@
 {
- "_source": "OECD Health Statistics 2025",
+ "_source": "Eurostat, tepsr_sp320, rok 2023",
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "description": "Měřítko věcí: Naděje dožití ve zdraví po 65. roce (Healthy Life Years)",
  "width": 450,
@@ -14,16 +14,16 @@
    {
     "country": "Švédsko",
     "val": 13.9,
-    "color": "#27ae60"
+    "color": "#5e66d5"
    },
    {
-    "country": "Průměr EU",
-    "val": 9.5,
+    "country": "Průměr 29 zemí",
+    "val": 9.3,
     "color": "#bcbcb0"
    },
    {
     "country": "Česká republika",
-    "val": 7.6,
+    "val": 7.7,
     "color": "#de1743"
    }
   ]

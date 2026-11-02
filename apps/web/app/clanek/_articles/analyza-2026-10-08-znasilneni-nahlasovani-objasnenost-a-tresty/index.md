@@ -4,8 +4,11 @@ date: "2026-10-08"
 time: "17:08"
 author: "Kateřina Mahdalová"
 excerpt: "Americký případ Jane Doe z Cornellovy univerzity ukazuje, kolik se toho může ztratit mezi oznámením a soudem. V Česku jde na policii zhruba desetina obětí, objasněnost znásilnění za patnáct let klesla ze 75 na 53 procent a polovina odsouzených odchází s podmínkou."
-coverImage: "images/cover-znasilneni-datatimes.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 coverBg: "brandNavy.9"
 filter: ["analýza"]
 tags: ["spravedlnost", "znásilnění", "sexuální násilí", "justice", "policie", "tresty", "Evropa", "USA", "Cornell"]
@@ -34,6 +37,8 @@ Případ není výjimečný ani na samotném Cornellu. V [univerzitním průzkum
 Nejvíc případů se neztratí u prokurátora, ale ještě před policejní služebnou. Česko se v letech 2023–2024 zapojilo do [evropského šetření o násilí na ženách (EU-GBV)](https://ec.europa.eu/eurostat/databrowser/view/gbv_any_type/default/table). Znásilnění v dospělosti podle něj zažilo 7,1 procenta Češek ve věku 18–74 let, ve většině případů šlo o čin bez jejich souhlasu, ne nutně s použitím síly. Jakékoli fyzické nebo sexuální násilí [oznámilo policii](https://ec.europa.eu/eurostat/databrowser/view/gbv_any_rp/default/table) 11 procent obětí, v průměru EU 13,9 procenta. Samostatný údaj jen pro sexuální násilí Eurostat nezveřejňuje.
 
 Podobně vychází i domácí výzkumy. Podle [viktimizačního šetření Institutu pro kriminologii a sociální prevenci](https://iksp.gov.cz/storage/169/summary_obyvatele_CR_a_viktimizace.pdf) z let 2019–2022 se policie dozvěděla zhruba o 15 procentech případů sexuálního násilí. Ve 62 procentech případů oběť pachatele znala, nejčastěji šlo o současného nebo bývalého partnera, a zhruba polovina pachatelů byla pod vlivem alkoholu nebo drog. Organizace proFem, která obětem pomáhá, ve svém [online průzkumu z roku 2023](https://www.profem.cz/shared/clanky/3162/2024_Sexualizovan%C3%A9%20n%C3%A1sil%C3%AD%20v%C3%BDskyt%20dopady%20a%20n%C3%A1klady%20na%20zdravotn%C3%AD%20p%C3%A9%C4%8Di.pdf) uvádí, že znásilnění, které považovaly za svou nejhorší zkušenost, oznámilo policii šest procent žen.
+
+Hrubý přepočet ukazuje, co to znamená v počtech. Policie loni registrovala 1 086 znásilnění. Pokud se k ní dostane jen desetina až sedmina případů, je skutečných znásilnění řádově 7 až 10 tisíc ročně. Je to jen orientační číslo: oba průzkumy se ptají na sexuální nebo jakékoli násilí, ne jen na znásilnění.
 
 <SupportBanner float="left" />
 

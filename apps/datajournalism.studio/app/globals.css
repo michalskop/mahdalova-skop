@@ -2,37 +2,353 @@
    @mantine/styles (v6) package. Colour values reference Mantine v7 CSS
    variables so they stay in sync with the theme in ThemeProvider. */
 
-/* Oválné tagy/badge: svislé centrování verzálek plošně (shodné s apps/web).
-   `text-box-trim` seřízne řádkový box na výšku verzálek (cap → baseline);
-   `overflow: visible` nechá diakritiku nad verzálkami přirozeně vykreslit.
-   Viz packages/ui/DESIGN.md → „Oval tag/badge — vertical centering". */
+/* Shared "bleed" standard — the single source of truth for every element that
+   extends past the reading column on its OUTER edge while the running text
+   wraps around its inner edge: floated photos (<Figure>), side InfoBoxes
+   (```infobox … right```), the floating "Napsali jsme" (RelatedArticles
+   position="right"), and the bleeding SupportBanner (float). Change it here and
+   every bleeding element updates together. On mobile these collapse to
+   full-width blocks (see the per-component `@media (max-width: 768px)` rules).
+   See packages/ui/DESIGN.md → "Bleed / vyčuhující prvky".
+
+   Spacing: ONE visual gap on every text-facing side. Horizontally it is exactly
+   --dt-bleed-gap; vertically the text line already brings ~0.3rem of half-leading
+   (17px / 1.6 body), so the vertical margin is the gap minus that → the eye sees
+   the same ~20px above, beside and below the element.
+   - float placed as its own block (between paragraphs): margin-top 0, so its top
+     lines up with the next paragraph's first line; the previous paragraph's own
+     16px margin gives the gap above.
+   - float placed INSIDE a paragraph (mid-text): margin-top = --dt-bleed-gap-y,
+     otherwise the line above would touch it.
+   Outer bleed: --dt-bleed-pull hangs the outer edge into the page margin, but
+   only as far as the viewport has room (never closer than --dt-bleed-gutter to
+   the screen edge), so it scales smoothly from wide screens down to 769px.
+   (100% in a margin = the reading column width; the column is centred.) */
+:root {
+  --dt-bleed-width: 48%;    /* width of the floated element */
+  --dt-bleed-out: 12%;      /* max. how far the outer edge bleeds into the page margin */
+  --dt-bleed-gap: 1.25rem;  /* gap between the element and the wrapping text */
+  --dt-bleed-gap-y: calc(var(--dt-bleed-gap) - 0.3rem); /* vertical, minus half-leading */
+  --dt-bleed-gutter: 1.5rem; /* min. distance of the outer edge from the viewport edge */
+  --dt-bleed-pull: calc(-1 * clamp(0px, (100vw - 100%) / 2 - var(--dt-bleed-gutter), var(--dt-bleed-out)));
+}
+
+/* Oválné tagy/badge (rubriky „ANALÝZA"/„KONTEXT", tag pill v kartách…): svislé
+   centrování verzálek PLOŠNĚ na celém webu (jeden zdroj pravdy). Verzálky nemají
+   dolní dotažnice, takže defaultní řádkový box je posadí opticky moc vysoko;
+   `text-box-trim` seřízne řádkový box na výšku samotných verzálek (cap →
+   baseline), takže se vycentrují. `overflow: visible` nechá háčky/čárky
+   (Š, É, Í…) přesahující nad verzálky přirozeně vykreslit (Mantine label má
+   jinak overflow: hidden a ořízl by je). Standardní CSS (CSS Inline Layout 3),
+   ne hack; prohlížeč bez podpory `text-box-trim` spadne na původní chování.
+   Viz packages/ui/DESIGN.md → „Oval tag/badge — vertical centering".
+   Dvoutřídní selektor drží přednost nad Mantine defaultem (overflow: hidden)
+   bez ohledu na pořadí importů CSS, bez !important. */
 .mantine-Badge-root .mantine-Badge-label {
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
   overflow: visible;
 }
 
+/* Newsletter (SubscribeNewsletter): po výběru uložené adresy prohlížeč
+   přebarví pole na světle modro a světlé písmo pak zmizí (podnět čtenáře,
+   10/2026). Podklad se přebarvit nedá, tak ho překryje vnitřní stín v barvě
+   pole (brandDeepRed.7) a písmo zůstane světlé (background.2). */
+.dt-newsletter-input:-webkit-autofill,
+.dt-newsletter-input:-webkit-autofill:hover,
+.dt-newsletter-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--mantine-color-brandDeepRed-7) inset;
+  box-shadow: 0 0 0 1000px var(--mantine-color-brandDeepRed-7) inset;
+  -webkit-text-fill-color: var(--mantine-color-background-2);
+  caret-color: var(--mantine-color-background-2);
+}
+
+/* Standardní :autofill zvlášť – neznámý pseudo-selektor v seznamu by
+   prohlížeči bez podpory zneplatnil celé pravidlo výše. */
+.dt-newsletter-input:autofill {
+  box-shadow: 0 0 0 1000px var(--mantine-color-brandDeepRed-7) inset;
+  -webkit-text-fill-color: var(--mantine-color-background-2);
+  caret-color: var(--mantine-color-background-2);
+}
+
+/* Contain the article's floats within the body so a bleeding element near the
+   end never overlaps the byline above or the "Doporučujeme"/SupportBanner
+   below. overflow stays visible, so the -12% bleed still paints outside. */
+.article-links .markdown-content .article-content {
+  display: flow-root;
+}
+
+/* One central spacing rule for EVERY InfoBox — do not tweak padding/margins per
+   box. Uniform vertical rhythm inside: consistent gaps between blocks, and the
+   box hugs its content (no extra space at top or bottom). The `*:last-child`
+   rule zeroes the trailing margin at ANY nesting depth (e.g. a <div> that MDX
+   wraps inside the last list item), which is what caused uneven bottom space. */
+.dt-infobox > * {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+.dt-infobox *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Unify InfoBox titles regardless of the markdown heading level (### vs ####):
+   one modest size, bold, the same dark shade as the rest; a title that is a
+   link is not crimson. */
+.dt-infobox :is(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.0625rem !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: #242424 !important;
+  margin: 0 0 8px !important;
+}
+.dt-infobox :is(h1, h2, h3, h4, h5, h6) a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* SupportBanner. Kept in globals (not an inline <style> in the component) so the
+   CSS text is never re-serialised by React — inline <style> escapes < > " '
+   differently on server vs client and caused repeated hydration mismatches. */
+.dt-support-outer {
+  width: 100%;
+}
+.dt-support-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 10px 14px;
+  background: #0d1438;
+  text-decoration: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+/* Full-width: logo stacked above the name. */
+.dt-support-brand {
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Bleeding (float) variant. --dt-support-w drives BOTH the width and the bleed:
+   at most half the width hangs in the page margin, and only as far as the
+   viewport has room (same rule as --dt-bleed-pull). Vertical spacing follows the
+   shared bleed standard (see :root above). */
+.dt-support-float {
+  --dt-support-w: 13rem;
+  --dt-support-pull: calc(-1 * clamp(0px, (100vw - 100%) / 2 - var(--dt-bleed-gutter), 0.5 * var(--dt-support-w)));
+  width: var(--dt-support-w);
+  margin-top: 0; /* top aligns with the adjacent paragraph's first line */
+  margin-bottom: var(--dt-bleed-gap-y);
+}
+/* Placed mid-paragraph: keep the same gap to the text line above. */
+.mantine-Text-root > .dt-support-float {
+  margin-top: var(--dt-bleed-gap-y);
+}
+.dt-support-float--right {
+  float: right;
+  margin-left: var(--dt-bleed-gap);
+  margin-right: var(--dt-support-pull);
+}
+.dt-support-float--left {
+  float: left;
+  margin-right: var(--dt-bleed-gap);
+  margin-left: var(--dt-support-pull);
+}
+/* Compact = brand/text/CTA stacked; logo + name side by side to keep it short. */
+.dt-support-banner--compact {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+}
+.dt-support-banner--compact .dt-support-brand {
+  flex-direction: row;
+  gap: 8px;
+  min-width: 0;
+}
+/* Text set as a justified block; the soft hyphens in SupportBanner.tsx keep the
+   narrow 176px measure from opening wide word gaps. */
+.dt-support-banner--compact .dt-support-text {
+  flex: 1 1 auto;
+  width: 100%;
+  font-size: 14px;
+  text-align: justify;
+  hyphens: manual;
+}
+.dt-support-banner--compact .dt-support-cta {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .dt-support-float,
+  .dt-support-float--right,
+  .dt-support-float--left {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 640px) {
+  .dt-support-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 16px;
+  }
+  .dt-support-brand {
+    min-width: 0;
+  }
+  .dt-support-text {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .dt-support-cta {
+    width: 100%;
+  }
+}
+
 /* Article body links (ArticleRenderer with withContainer=true).
    --article-link-color is set by ArticleRenderer when an article defines a
-   custom text colour. */
-.article-links .markdown-content a {
+   custom text colour. Scoped to .article-content so the byline (author links
+   + share icons) keeps its own dark-navy colours from ArticleHeader.module.css
+   instead of inheriting the crimson body-link colour. */
+.article-links .markdown-content .article-content a {
   color: var(--article-link-color, var(--mantine-color-brand-6));
   text-decoration: none;
 }
 
-.article-links .markdown-content a:hover {
+.article-links .markdown-content .article-content a:hover {
   color: var(--mantine-color-brand-7);
 }
 
-.article-links .markdown-content a:active {
+.article-links .markdown-content .article-content a:active {
   color: var(--mantine-color-brand-8);
 }
 
-.article-links .markdown-content a:visited {
+.article-links .markdown-content .article-content a:visited {
   color: var(--mantine-color-brand-5);
 }
 
+/* Responsive article hero title (all articles), sized after The Nerve – a
+   single hard breakpoint at 768px rather than fluid scaling. 2.625rem (42px)
+   from 769px up, 2rem (32px) at 768px and below. Scoped under .article-links so
+   it overrides Mantine's default h1 size; only the size changes (font, weight
+   and colour stay as set on the <Title>). See packages/ui/DESIGN.md. */
+.article-links .article-hero-title {
+  font-size: 2.625rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .article-links .article-hero-title {
+    font-size: 2rem;
+  }
+}
+
+/* Section headings (H2) and sub-headings (H3) shrink on narrow screens, the
+   same hard-breakpoint approach as the hero title. Desktop keeps the Mantine
+   defaults (H2 1.625rem/26px, H3 1.375rem/22px); only ≤768px is overridden. */
+@media (max-width: 768px) {
+  .article-links .markdown-content h2 {
+    font-size: 1.375rem;
+  }
+  .article-links .markdown-content h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Opt-in article sidebar: independent inner and outer text wrapping. */
+.article-sidebar-flow {
+  display: flow-root;
+}
+.article-sidebar {
+  float: right;
+  width: 48%;
+  /* Shared bleed standard: 12% bleed only where the viewport has room for it. */
+  margin: 0 var(--dt-bleed-pull) var(--dt-bleed-gap-y) var(--dt-bleed-gap);
+}
+.article-sidebar > div {
+  display: flow-root;
+  margin-top: 0 !important;
+}
+.article-sidebar-photo {
+  float: left;
+  width: clamp(4.5rem, 40%, 9rem);
+  max-width: 42%;
+  /* Match the adjacent bold opening: align the image with its cap height,
+     including when the reader changes the font size or zoom level. */
+  font-family: var(--mantine-font-family-headings);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: var(--mantine-line-height, 1.55);
+  margin: 0.4em 0.75rem 0.25rem 0;
+  margin-top: calc((1lh - 1cap) / 2);
+}
+.article-sidebar-photo img {
+  display: block;
+}
+.article-sidebar-photo > div {
+  /* The Markdown paragraph has an inline Mantine mb="md" (16px).
+     It must not enlarge the float's exclusion area below the image. */
+  margin-bottom: 0 !important;
+}
+.article-sidebar-flow > :is(h2, h3) {
+  clear: none !important;
+}
+@media (max-width: 768px) {
+  .article-sidebar {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem;
+  }
+}
+
 /* Contact block links (ContactsBlock). */
+#kontakty a {
+  color: var(--mantine-color-brand-6);
+  text-decoration: none;
+}
+
+#kontakty a:hover {
+  text-decoration: underline;
+}
+
+#kontakty a:active,
+#kontakty a:visited {
+  color: var(--mantine-color-brand-6);
+}
+
+/* Never let the page pan sideways on phones. Any element that sticks out past
+   the viewport by even a pixel (a hidden tooltip, a bleed, a 100vw breakout)
+   otherwise makes the whole article wobble left–right under the finger.
+   `clip` (not `hidden`) creates no scroll container, so position: sticky
+   (scrollytelling, sticky headers) keeps working. */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* /about page (markdown from app/about/about.md): headings like article pages. */
+.about-content h1,
+.about-content h2 {
+  color: var(--mantine-color-brand-6);
+  font-family: var(--mantine-font-family-headings);
+}
+.about-content h1 {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0.25rem 0 1.5rem;
+}
+.about-content p,
+.about-content li {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+/* DJS: contact block links (ContactsBlock, /about#contacts). */
 #contacts a {
   color: var(--mantine-color-brand-6);
   text-decoration: none;

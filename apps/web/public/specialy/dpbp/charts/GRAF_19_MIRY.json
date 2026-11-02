@@ -1,0 +1,528 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Muži mají děti později a ve větším věkovém rozpětí než ženy",
+  "subtitle": "Dětí narozených v roce 2024 na 1 000 mužů, resp. žen stejného věku (věk otce, resp. matky)"
+ },
+ "_source": "[Demografická ročenka ČR 2024, tab. D.10 a I.01, ČSÚ](https://csu.gov.cz/produkty/demograficka-rocenka-ceske-republiky-2ncey2iey2) · vlastní výpočet\nU 6,9 % narozených není věk otce uveden; rozdělili jsme je podle věku matky. Muži ve věku 60 a více let (0,2 na 1 000) nejsou v grafu.",
+ "height": 280,
+ "data": {
+  "values": [
+   {
+    "vek": 17.5,
+    "pohlavi": "Muži",
+    "mira": 1.5
+   },
+   {
+    "vek": 17.5,
+    "pohlavi": "Ženy",
+    "mira": 5.7
+   },
+   {
+    "vek": 22.5,
+    "pohlavi": "Muži",
+    "mira": 16.0
+   },
+   {
+    "vek": 22.5,
+    "pohlavi": "Ženy",
+    "mira": 34.6
+   },
+   {
+    "vek": 27.5,
+    "pohlavi": "Muži",
+    "mira": 56.6
+   },
+   {
+    "vek": 27.5,
+    "pohlavi": "Ženy",
+    "mira": 87.8
+   },
+   {
+    "vek": 32.5,
+    "pohlavi": "Muži",
+    "mira": 81.2
+   },
+   {
+    "vek": 32.5,
+    "pohlavi": "Ženy",
+    "mira": 91.0
+   },
+   {
+    "vek": 37.5,
+    "pohlavi": "Muži",
+    "mira": 55.4
+   },
+   {
+    "vek": 37.5,
+    "pohlavi": "Ženy",
+    "mira": 43.9
+   },
+   {
+    "vek": 42.5,
+    "pohlavi": "Muži",
+    "mira": 23.0
+   },
+   {
+    "vek": 42.5,
+    "pohlavi": "Ženy",
+    "mira": 9.9
+   },
+   {
+    "vek": 47.5,
+    "pohlavi": "Muži",
+    "mira": 7.7
+   },
+   {
+    "vek": 47.5,
+    "pohlavi": "Ženy",
+    "mira": 0.8
+   },
+   {
+    "vek": 52.5,
+    "pohlavi": "Muži",
+    "mira": 2.5
+   },
+   {
+    "vek": 57.5,
+    "pohlavi": "Muži",
+    "mira": 1.0
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round",
+    "point": {
+     "filled": true,
+     "size": 55
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "vek",
+     "type": "quantitative",
+     "title": "Věk (roky)",
+     "scale": {
+      "domain": [
+       15,
+       60
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       15,
+       20,
+       25,
+       30,
+       35,
+       40,
+       45,
+       50,
+       55,
+       60
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "mira",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "values": [
+       0,
+       25,
+       50,
+       75,
+       100
+      ],
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false
+     }
+    },
+    "color": {
+     "field": "pohlavi",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Muži",
+       "Ženy"
+      ],
+      "range": [
+       "#2f325c",
+       "#0e8aab"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "vek": 42.5,
+      "mira": 33,
+      "t": "muži"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#2f325c",
+    "align": "left",
+    "dx": 4
+   },
+   "encoding": {
+    "x": {
+     "field": "vek",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       15,
+       60
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "field": "mira",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "vek": 22.5,
+      "mira": 46,
+      "t": "ženy"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#0e8aab",
+    "align": "right",
+    "dx": -4
+   },
+   "encoding": {
+    "x": {
+     "field": "vek",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       15,
+       60
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "field": "mira",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "vek": 17.5,
+      "muzi": 1.5,
+      "zeny": 5.7,
+      "hlavicka": "Věk do 19 let",
+      "Muži (dětí na 1 000 mužů)": "1,5",
+      "Ženy (dětí na 1 000 žen)": "5,7"
+     },
+     {
+      "vek": 22.5,
+      "muzi": 16.0,
+      "zeny": 34.6,
+      "hlavicka": "Věk 20–24 let",
+      "Muži (dětí na 1 000 mužů)": "16,0",
+      "Ženy (dětí na 1 000 žen)": "34,6"
+     },
+     {
+      "vek": 27.5,
+      "muzi": 56.6,
+      "zeny": 87.8,
+      "hlavicka": "Věk 25–29 let",
+      "Muži (dětí na 1 000 mužů)": "56,6",
+      "Ženy (dětí na 1 000 žen)": "87,8"
+     },
+     {
+      "vek": 32.5,
+      "muzi": 81.2,
+      "zeny": 91.0,
+      "hlavicka": "Věk 30–34 let",
+      "Muži (dětí na 1 000 mužů)": "81,2",
+      "Ženy (dětí na 1 000 žen)": "91,0"
+     },
+     {
+      "vek": 37.5,
+      "muzi": 55.4,
+      "zeny": 43.9,
+      "hlavicka": "Věk 35–39 let",
+      "Muži (dětí na 1 000 mužů)": "55,4",
+      "Ženy (dětí na 1 000 žen)": "43,9"
+     },
+     {
+      "vek": 42.5,
+      "muzi": 23.0,
+      "zeny": 9.9,
+      "hlavicka": "Věk 40–44 let",
+      "Muži (dětí na 1 000 mužů)": "23,0",
+      "Ženy (dětí na 1 000 žen)": "9,9"
+     },
+     {
+      "vek": 47.5,
+      "muzi": 7.7,
+      "zeny": 0.8,
+      "hlavicka": "Věk 45–49 let",
+      "Muži (dětí na 1 000 mužů)": "7,7",
+      "Ženy (dětí na 1 000 žen)": "0,8"
+     },
+     {
+      "vek": 52.5,
+      "muzi": 2.5,
+      "zeny": null,
+      "hlavicka": "Věk 50–54 let",
+      "Muži (dětí na 1 000 mužů)": "2,5",
+      "Ženy (dětí na 1 000 žen)": "–"
+     },
+     {
+      "vek": 57.5,
+      "muzi": 1.0,
+      "zeny": null,
+      "hlavicka": "Věk 55–59 let",
+      "Muži (dětí na 1 000 mužů)": "1,0",
+      "Ženy (dětí na 1 000 žen)": "–"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 1,
+    "strokeDash": [
+     3,
+     3
+    ],
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "vek",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       15,
+       60
+      ],
+      "nice": false
+     }
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 100
+    },
+    "strokeOpacity": {
+     "condition": {
+      "param": "hov",
+      "empty": false,
+      "value": 0.6
+     },
+     "value": 0
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "vek": 17.5,
+      "muzi": 1.5,
+      "zeny": 5.7,
+      "hlavicka": "Věk do 19 let",
+      "Muži (dětí na 1 000 mužů)": "1,5",
+      "Ženy (dětí na 1 000 žen)": "5,7",
+      "od": 15.0,
+      "do": 20.0
+     },
+     {
+      "vek": 22.5,
+      "muzi": 16.0,
+      "zeny": 34.6,
+      "hlavicka": "Věk 20–24 let",
+      "Muži (dětí na 1 000 mužů)": "16,0",
+      "Ženy (dětí na 1 000 žen)": "34,6",
+      "od": 20.0,
+      "do": 25.0
+     },
+     {
+      "vek": 27.5,
+      "muzi": 56.6,
+      "zeny": 87.8,
+      "hlavicka": "Věk 25–29 let",
+      "Muži (dětí na 1 000 mužů)": "56,6",
+      "Ženy (dětí na 1 000 žen)": "87,8",
+      "od": 25.0,
+      "do": 30.0
+     },
+     {
+      "vek": 32.5,
+      "muzi": 81.2,
+      "zeny": 91.0,
+      "hlavicka": "Věk 30–34 let",
+      "Muži (dětí na 1 000 mužů)": "81,2",
+      "Ženy (dětí na 1 000 žen)": "91,0",
+      "od": 30.0,
+      "do": 35.0
+     },
+     {
+      "vek": 37.5,
+      "muzi": 55.4,
+      "zeny": 43.9,
+      "hlavicka": "Věk 35–39 let",
+      "Muži (dětí na 1 000 mužů)": "55,4",
+      "Ženy (dětí na 1 000 žen)": "43,9",
+      "od": 35.0,
+      "do": 40.0
+     },
+     {
+      "vek": 42.5,
+      "muzi": 23.0,
+      "zeny": 9.9,
+      "hlavicka": "Věk 40–44 let",
+      "Muži (dětí na 1 000 mužů)": "23,0",
+      "Ženy (dětí na 1 000 žen)": "9,9",
+      "od": 40.0,
+      "do": 45.0
+     },
+     {
+      "vek": 47.5,
+      "muzi": 7.7,
+      "zeny": 0.8,
+      "hlavicka": "Věk 45–49 let",
+      "Muži (dětí na 1 000 mužů)": "7,7",
+      "Ženy (dětí na 1 000 žen)": "0,8",
+      "od": 45.0,
+      "do": 50.0
+     },
+     {
+      "vek": 52.5,
+      "muzi": 2.5,
+      "zeny": null,
+      "hlavicka": "Věk 50–54 let",
+      "Muži (dětí na 1 000 mužů)": "2,5",
+      "Ženy (dětí na 1 000 žen)": "–",
+      "od": 50.0,
+      "do": 55.0
+     },
+     {
+      "vek": 57.5,
+      "muzi": 1.0,
+      "zeny": null,
+      "hlavicka": "Věk 55–59 let",
+      "Muži (dětí na 1 000 mužů)": "1,0",
+      "Ženy (dětí na 1 000 žen)": "–",
+      "od": 55.0,
+      "do": 60.0
+     }
+    ]
+   },
+   "params": [
+    {
+     "name": "hov",
+     "select": {
+      "type": "point",
+      "fields": [
+       "hlavicka"
+      ],
+      "on": "mouseover",
+      "clear": "mouseout"
+     }
+    }
+   ],
+   "mark": {
+    "type": "rect",
+    "fill": "#bcbcb0",
+    "cursor": "default"
+   },
+   "encoding": {
+    "x": {
+     "field": "od",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       15,
+       60
+      ],
+      "nice": false
+     }
+    },
+    "x2": {
+     "field": "do"
+    },
+    "y": {
+     "datum": 0
+    },
+    "y2": {
+     "datum": 100
+    },
+    "fillOpacity": {
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "hlavicka",
+      "title": "hlavicka"
+     },
+     {
+      "field": "Muži (dětí na 1 000 mužů)",
+      "title": "Muži (dětí na 1 000 mužů)"
+     },
+     {
+      "field": "Ženy (dětí na 1 000 žen)",
+      "title": "Ženy (dětí na 1 000 žen)"
+     }
+    ]
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

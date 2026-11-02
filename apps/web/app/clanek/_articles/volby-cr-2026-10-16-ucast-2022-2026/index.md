@@ -52,7 +52,7 @@ V obou letech se spolu s komunálními volbami konalo i první kolo senátních 
 Pokles ve městech s nejnižší účastí senátní volby nevysvětlují. V Sokolově, Havířově, Chomutově, Jirkově, Teplicích ani v Bílině se do Senátu nevolilo ani v roce 2022, ani letos. Mezi městy, kde se do Senátu nevolilo v žádném z obou let, klesla účast v nejnižší čtvrtině v mediánu o 2,4 p. b., kdežto ve zbylých třech čtvrtinách o 0,9 p. b. stoupla. Mezi městy se senátní volbou jen letos vychází v nejnižší čtvrtině medián −0,9 p. b. a ve zbytku +2,6 p. b. Slabší je rozdíl jen mezi městy, kde se senátor volil v roce 2022: tam je medián v nejnižší čtvrtině 0,0 p. b. a ve zbytku +0,4 p. b.
 
 ```infobox info
-### Jak jsme to počítali
+**Jak jsme počítali**
 
 Vycházíme ze zápisů okrskových komisí v otevřených datech ČSÚ: [komunální volby 2026](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm) (konečné výsledky, export z 11. 10. 2026), [komunální volby 2022](https://volby.gov.cz/opendata/kv2022/kv2022_opendata.htm) a pro souběžné senátní volby [2026](https://volby.gov.cz/opendata/se2026/se2026_opendata.htm) a [2022](https://volby.gov.cz/opendata/se2022/se2022_opendata.htm). Účast obce je podíl vydaných úředních obálek a voličů v seznamu, sečtený přes všechny okrsky zastupitelstva obce. Změna je rozdíl účasti 2026 a 2022 v procentních bodech.
 

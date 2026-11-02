@@ -132,3 +132,24 @@ Toto je návrh rozhraní, nikoli popis již dostupných funkcí:
   kódu i zbytečné zapojování AI do opakovaného převodu.
 
 Technický postup a spouštění automatu: [COVER-EDITOR.md](COVER-EDITOR.md).
+
+## Balík výstupů pro sítě a místo na GitHubu (25. 10. 2026)
+
+Pro nás oba: ke každé publikaci teď vzniká balík: pět coverů, Instagram carousel, animace MP4/GIF a Reels.
+Návod je v [COVER-VIZUALNI-IDENTITA.md](COVER-VIZUALNI-IDENTITA.md), kapitola 8. Kvůli místu v repu:
+
+- **Na webu je jen jeden GIF:** `apps/web/app/clanek/_articles/analyza-2026-10-25-poruchy-prijmu-potravy/images/cover-homepage-animace.gif`,
+  **1,3 MB** (1000×800, 8 s, 15 snímků/s). Je to homepage obrázek článku (`homepageImage`). Od 25. 10. 2026 je v **Git LFS**
+  (v gitu jen odkaz, soubor na LFS úložišti GitHubu, Cloudflare ho při buildu stáhne). Každý počítač proto potřebuje
+  nainstalovaný `git-lfs` a `git config core.hooksPath scripts/git-hooks` (hook `pre-push` animace nahraje).
+  Statické covery do LFS nedáváme kvůli měsíčnímu limitu stahování.
+  Pro srovnání: běžný homepage cover má 0,2–0,9 MB. Animované GIFy na homepage dávat jen výjimečně, cíl do 1,5 MB.
+- **Výstupy pro sítě jsou mimo git:** složka `social/` u článků (carousel PNG, MP4, GIF pro newsletter) je
+  v `.gitignore`. U pilotního článku má asi 17 MB a na web se nekopíruje. Vyrobí se znovu jedním spuštěním
+  generátorů z `_cover_pipeline/` (`animation-generator.cjs`, `carousel-generator.cjs`), takže se nic neztratí.
+  V gitu zůstávají jen konfigurace a ručně psaný text pod carousel (`_cover_pipeline/carousel-caption.txt`).
+- **Podklady coverů:** fotka pod coverem se ukládá zmenšená (např. `podklad-iustitia.jpg`, 0,5 MB),
+  fotografické covery jako JPEG (kolem 0,2 MB místo 1–2 MB v PNG).
+- **ffmpeg** (pro animace) je v `tools/media/`, mimo workspaces, takže ho Cloudflare při deployi neinstaluje.
+  Binárka je v `node_modules`, do gitu nejde. Na každém počítači: `cd tools/media && npm install`. Kontrola otisku
+  zatím zná jen Windows; pro Linux/macOS je potřeba doplnit otisk do `verify-ffmpeg.cjs` (postup v `tools/media/README.md`).

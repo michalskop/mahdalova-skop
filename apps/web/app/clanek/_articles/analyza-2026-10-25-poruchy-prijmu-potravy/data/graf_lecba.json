@@ -1,0 +1,372 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Dívek léčených s poruchou příjmu potravy je {třikrát víc|#f76800} než v roce 2010",
+  "subtitle": "Děti a dospívající do 18 let s diagnózou poruchy příjmu potravy (F50) v ambulantní nebo nemocniční péči hrazené pojišťovnami. Každé dítě se v roce počítá jednou."
+ },
+ "_source": "ÚZIS, NZIP – datový souhrn Poruchy příjmu potravy (NR-04-25, aktualizace 2026); výpočet DataTimes.cz",
+ "width": "container",
+ "height": 320,
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "2010",
+      "skupina": "dívky",
+      "počet": 1199,
+      "pořadí": 0
+     },
+     {
+      "rok": "2010",
+      "skupina": "chlapci",
+      "počet": 314,
+      "pořadí": 1
+     },
+     {
+      "rok": "2011",
+      "skupina": "dívky",
+      "počet": 1185,
+      "pořadí": 0
+     },
+     {
+      "rok": "2011",
+      "skupina": "chlapci",
+      "počet": 307,
+      "pořadí": 1
+     },
+     {
+      "rok": "2012",
+      "skupina": "dívky",
+      "počet": 1200,
+      "pořadí": 0
+     },
+     {
+      "rok": "2012",
+      "skupina": "chlapci",
+      "počet": 321,
+      "pořadí": 1
+     },
+     {
+      "rok": "2013",
+      "skupina": "dívky",
+      "počet": 1354,
+      "pořadí": 0
+     },
+     {
+      "rok": "2013",
+      "skupina": "chlapci",
+      "počet": 325,
+      "pořadí": 1
+     },
+     {
+      "rok": "2014",
+      "skupina": "dívky",
+      "počet": 1530,
+      "pořadí": 0
+     },
+     {
+      "rok": "2014",
+      "skupina": "chlapci",
+      "počet": 362,
+      "pořadí": 1
+     },
+     {
+      "rok": "2015",
+      "skupina": "dívky",
+      "počet": 1589,
+      "pořadí": 0
+     },
+     {
+      "rok": "2015",
+      "skupina": "chlapci",
+      "počet": 363,
+      "pořadí": 1
+     },
+     {
+      "rok": "2016",
+      "skupina": "dívky",
+      "počet": 1573,
+      "pořadí": 0
+     },
+     {
+      "rok": "2016",
+      "skupina": "chlapci",
+      "počet": 359,
+      "pořadí": 1
+     },
+     {
+      "rok": "2017",
+      "skupina": "dívky",
+      "počet": 1829,
+      "pořadí": 0
+     },
+     {
+      "rok": "2017",
+      "skupina": "chlapci",
+      "počet": 359,
+      "pořadí": 1
+     },
+     {
+      "rok": "2018",
+      "skupina": "dívky",
+      "počet": 2026,
+      "pořadí": 0
+     },
+     {
+      "rok": "2018",
+      "skupina": "chlapci",
+      "počet": 334,
+      "pořadí": 1
+     },
+     {
+      "rok": "2019",
+      "skupina": "dívky",
+      "počet": 1978,
+      "pořadí": 0
+     },
+     {
+      "rok": "2019",
+      "skupina": "chlapci",
+      "počet": 340,
+      "pořadí": 1
+     },
+     {
+      "rok": "2020",
+      "skupina": "dívky",
+      "počet": 2092,
+      "pořadí": 0
+     },
+     {
+      "rok": "2020",
+      "skupina": "chlapci",
+      "počet": 347,
+      "pořadí": 1
+     },
+     {
+      "rok": "2021",
+      "skupina": "dívky",
+      "počet": 3139,
+      "pořadí": 0
+     },
+     {
+      "rok": "2021",
+      "skupina": "chlapci",
+      "počet": 469,
+      "pořadí": 1
+     },
+     {
+      "rok": "2022",
+      "skupina": "dívky",
+      "počet": 3518,
+      "pořadí": 0
+     },
+     {
+      "rok": "2022",
+      "skupina": "chlapci",
+      "počet": 488,
+      "pořadí": 1
+     },
+     {
+      "rok": "2023",
+      "skupina": "dívky",
+      "počet": 3557,
+      "pořadí": 0
+     },
+     {
+      "rok": "2023",
+      "skupina": "chlapci",
+      "počet": 510,
+      "pořadí": 1
+     },
+     {
+      "rok": "2024",
+      "skupina": "dívky",
+      "počet": 3649,
+      "pořadí": 0
+     },
+     {
+      "rok": "2024",
+      "skupina": "chlapci",
+      "počet": 525,
+      "pořadí": 1
+     },
+     {
+      "rok": "2025",
+      "skupina": "dívky",
+      "počet": 3858,
+      "pořadí": 0
+     },
+     {
+      "rok": "2025",
+      "skupina": "chlapci",
+      "počet": 549,
+      "pořadí": 1
+     }
+    ]
+   },
+   "mark": {
+    "type": "bar",
+    "width": {
+     "band": 0.75
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "title": null,
+     "sort": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ],
+     "axis": {
+      "labelAngle": 0,
+      "ticks": false,
+      "labelExpr": "(+datum.value) % 5 == 0 || datum.value == '2021' || datum.value == '2025' ? datum.value : ''"
+     }
+    },
+    "y": {
+     "field": "počet",
+     "type": "quantitative",
+     "stack": "zero",
+     "title": null,
+     "axis": {
+      "gridColor": "#e8e3d2",
+      "format": ",d"
+     }
+    },
+    "color": {
+     "field": "skupina",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "dívky",
+       "chlapci"
+      ],
+      "range": [
+       "#f76800",
+       "#06677d"
+      ]
+     },
+     "legend": {
+      "orient": "top-left",
+      "title": null,
+      "direction": "horizontal"
+     }
+    },
+    "order": {
+     "field": "pořadí"
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "skupina",
+      "title": "Skupina"
+     },
+     {
+      "field": "počet",
+      "title": "Pacientů",
+      "format": ",d"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": "2010",
+      "počet": 1199,
+      "text": "1 199"
+     },
+     {
+      "rok": "2019",
+      "počet": 1978,
+      "text": "1 978"
+     },
+     {
+      "rok": "2021",
+      "počet": 3139,
+      "text": "3 139"
+     },
+     {
+      "rok": "2025",
+      "počet": 3858,
+      "text": "3 858"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "dy": 9,
+    "baseline": "top",
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#ffffff"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "ordinal",
+     "sort": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+     ]
+    },
+    "y": {
+     "field": "počet",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  },
+  "locale": {
+   "number": {
+    "decimal": ",",
+    "thousands": " ",
+    "grouping": [
+     3
+    ]
+   }
+  }
+ }
+}

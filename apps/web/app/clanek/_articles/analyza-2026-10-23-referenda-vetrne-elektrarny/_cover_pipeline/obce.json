@@ -1,0 +1,233 @@
+[
+ {
+  "obec": "Dětřichov",
+  "lon": 16.5432,
+  "lat": 49.7982,
+  "vysledek": "pro výstavbu",
+  "hlasujicich": 206,
+  "proti": 96,
+  "pro": 104,
+  "ucast": 74.4,
+  "okres": "Svitavy"
+ },
+ {
+  "obec": "Mikuleč",
+  "lon": 16.4349,
+  "lat": 49.8088,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 157,
+  "proti": 113,
+  "pro": 38,
+  "ucast": 78.5,
+  "okres": "Svitavy"
+ },
+ {
+  "obec": "Kamenná Horka",
+  "lon": 16.5387,
+  "lat": 49.7364,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 223,
+  "proti": 200,
+  "pro": 23,
+  "ucast": 75.9,
+  "okres": "Svitavy"
+ },
+ {
+  "obec": "Sklené",
+  "lon": 16.5322,
+  "lat": 49.705,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 101,
+  "proti": 81,
+  "pro": 6,
+  "ucast": 53.7,
+  "okres": "Svitavy"
+ },
+ {
+  "obec": "Kačice",
+  "lon": 13.995,
+  "lat": 50.1637,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 661,
+  "proti": 377,
+  "pro": 262,
+  "ucast": 65.6,
+  "okres": "Kladno"
+ },
+ {
+  "obec": "Petrovice",
+  "lon": 13.6388,
+  "lat": 50.0663,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 204,
+  "proti": 109,
+  "pro": 91,
+  "ucast": 82.9,
+  "okres": "Rakovník"
+ },
+ {
+  "obec": "Petroupim",
+  "lon": 14.7569,
+  "lat": 49.8133,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 164,
+  "proti": 140,
+  "pro": 17,
+  "ucast": 64.8,
+  "okres": "Benešov"
+ },
+ {
+  "obec": "Soběhrdy",
+  "lon": 14.7257,
+  "lat": 49.8264,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 265,
+  "proti": 207,
+  "pro": 46,
+  "ucast": 74.2,
+  "okres": "Benešov"
+ },
+ {
+  "obec": "Teplýšovice",
+  "lon": 14.7993,
+  "lat": 49.7986,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 283,
+  "proti": 258,
+  "pro": 19,
+  "ucast": 69.2,
+  "okres": "Benešov"
+ },
+ {
+  "obec": "Kralovice",
+  "lon": 13.4451,
+  "lat": 49.9898,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 1411,
+  "proti": 980,
+  "pro": 408,
+  "ucast": 51.4,
+  "okres": "Plzeň-sever"
+ },
+ {
+  "obec": "Kožlany",
+  "lon": 13.535,
+  "lat": 49.9816,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 485,
+  "proti": 297,
+  "pro": 172,
+  "ucast": 42.2,
+  "okres": "Plzeň-sever"
+ },
+ {
+  "obec": "Žihle",
+  "lon": 13.3412,
+  "lat": 50.0439,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 573,
+  "proti": 355,
+  "pro": 201,
+  "ucast": 53.0,
+  "okres": "Plzeň-sever"
+ },
+ {
+  "obec": "Měčín",
+  "lon": 13.4065,
+  "lat": 49.4727,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 513,
+  "proti": 441,
+  "pro": 61,
+  "ucast": 54.9,
+  "okres": "Klatovy"
+ },
+ {
+  "obec": "Horní Benešov",
+  "lon": 17.5995,
+  "lat": 49.9673,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 754,
+  "proti": 507,
+  "pro": 230,
+  "ucast": 41.7,
+  "okres": "Bruntál"
+ },
+ {
+  "obec": "Staré Heřminovy",
+  "lon": 17.6283,
+  "lat": 49.9307,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 133,
+  "proti": 71,
+  "pro": 60,
+  "ucast": 77.8,
+  "okres": "Bruntál"
+ },
+ {
+  "obec": "Zátor",
+  "lon": 17.5853,
+  "lat": 50.0407,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 648,
+  "proti": 496,
+  "pro": 136,
+  "ucast": 68.4,
+  "okres": "Bruntál"
+ },
+ {
+  "obec": "Radenín",
+  "lon": 14.8332,
+  "lat": 49.3753,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 235,
+  "proti": 132,
+  "pro": 95,
+  "ucast": 56.6,
+  "okres": "Tábor"
+ },
+ {
+  "obec": "Šebířov",
+  "lon": 14.7939,
+  "lat": 49.5849,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 183,
+  "proti": 154,
+  "pro": 27,
+  "ucast": 61.8,
+  "okres": "Tábor"
+ },
+ {
+  "obec": "Cítoliby",
+  "lon": 13.8049,
+  "lat": 50.334,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 516,
+  "proti": 368,
+  "pro": 142,
+  "ucast": 59.3,
+  "okres": "Louny"
+ },
+ {
+  "obec": "Bystrá nad Jizerou",
+  "lon": 15.4071,
+  "lat": 50.602,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 94,
+  "proti": 50,
+  "pro": 43,
+  "ucast": 84.7,
+  "okres": "Semily"
+ },
+ {
+  "obec": "Maršov u Úpice",
+  "lon": 15.9737,
+  "lat": 50.4869,
+  "vysledek": "proti výstavbě",
+  "hlasujicich": 116,
+  "proti": 77,
+  "pro": 29,
+  "ucast": 75.3,
+  "okres": "Trutnov"
+ }
+]

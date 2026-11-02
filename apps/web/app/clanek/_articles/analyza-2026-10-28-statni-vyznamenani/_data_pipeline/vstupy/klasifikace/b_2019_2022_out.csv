@@ -1,0 +1,187 @@
+id,pohlavi,cizinec,obor,popis,jistota
+1013,Z,0,odboj_valka,veteránka 1. čs. armádního sboru v SSSR,vysoka
+1014,M,0,hrdinsky_cin,zakročil při rvačce na koupališti,stredni
+1015,Z,0,odboj_valka,veteránka 1. čs. armádního sboru v SSSR,vysoka
+1016,M,0,odboj_valka,"velitel četnické stanice, padl 1938",stredni
+1017,M,0,odboj_valka,"čs. letec RAF, in memoriam",stredni
+1018,M,0,armada_bezpecnost,"voják padlý v Afghánistánu, in memoriam",vysoka
+1019,M,0,medicina,"lékař, anatom, profesor",stredni
+1020,Z,0,sport,"automobilová závodnice, in memoriam",vysoka
+1021,M,1,kultura,srbský filmový režisér,vysoka
+1022,Z,0,sport,starostka České obce sokolské,vysoka
+1023,Z,0,veda,"lékařská etička, bioložka a filozofka",vysoka
+1024,M,0,veda,"vědec, chemik",stredni
+1025,M,0,kultura,fotograf,vysoka
+1026,M,0,media,"novinář, bezpečnostní analytik",stredni
+1027,M,0,podnikani,"finančník, ekonom",stredni
+1028,M,0,sport,hokejista,vysoka
+1029,M,0,medicina,lékař,stredni
+1030,M,0,veda,vojenský historik,vysoka
+1031,M,0,politika,politik,nizka
+1032,M,0,medicina,lékař,stredni
+1033,M,0,kultura,zpěvák a herec,vysoka
+1034,M,0,kultura,"malíř a grafik, in memoriam",vysoka
+1035,M,0,sport,freestyle motokrosař,vysoka
+1036,M,0,medicina,"onkolog, profesor",vysoka
+1037,M,0,kultura,"ředitel Národního muzea, historik",vysoka
+1038,M,0,obcanska_spolecnost,turistický značkař,stredni
+1039,M,0,politika,prezident Nejvyššího kontrolního úřadu,vysoka
+1040,M,0,podnikani,"advokát, podnikatel a mecenáš",stredni
+1041,M,0,kultura,automobilový designér,stredni
+1042,M,0,media,novinář a spisovatel,stredni
+1043,M,0,podnikani,podnikatel a investor,stredni
+1044,M,0,podnikani,podnikatel,stredni
+1045,Z,1,kultura,čínská bohemistka a překladatelka,stredni
+1046,M,0,odboj_valka,"právník, žalobce nacistických zločinců, in memoriam",stredni
+1047,M,0,odboj_valka,stíhací pilot RAF,vysoka
+1048,M,1,zahranicni_statnik,"rakouský politik, starosta Vídně, in memoriam",vysoka
+1049,M,0,podnikani,"podnikatel, Baťův koncern, in memoriam",vysoka
+1050,M,0,odboj_valka,"legionář, generál, in memoriam",stredni
+1051,M,0,odboj_valka,"velitel 311. peruti RAF, in memoriam",vysoka
+1052,M,0,zahranicni_statnik,bývalý prezident Slovenska,vysoka
+1053,M,0,politika,bývalý prezident a premiér ČR,vysoka
+1054,M,0,obcanska_spolecnost,"evangelický farář, zachránce Židů na Volyni",stredni
+1055,Z,0,medicina,"zdravotní sestra, pomoc v covidu",stredni
+1056,M,0,politika,"velvyslanec v Afghánistánu, evakuace 2021",vysoka
+1057,Z,0,armada_bezpecnost,"vojákyně zahynulá na misi Sinaj, in memoriam",vysoka
+1058,M,0,hrdinsky_cin,"vězeňská služba, zraněn při střelbě v nemocnici",vysoka
+1059,M,0,armada_bezpecnost,voják zraněný minou v Afghánistánu,vysoka
+1060,M,0,armada_bezpecnost,velitel vojenské policie na ambasádě Kábul,vysoka
+1061,Z,0,kultura,varhanice a pedagožka,vysoka
+1062,M,0,armada_bezpecnost,náměstek generálního ředitele HZS,vysoka
+1063,M,0,veda,"vojenský historik, ředitel Památníku Lidice",vysoka
+1064,M,0,odboj_valka,"účastník Pražského povstání, stíhací letec",vysoka
+1065,Z,0,obcanska_spolecnost,"izraelská spisovatelka, přeživší holokaustu",stredni
+1066,M,0,kultura,"filmový a televizní režisér, in memoriam",vysoka
+1067,M,0,podnikani,"jaderný inženýr, bývalý ředitel Temelína",vysoka
+1068,M,0,podnikani,majitel firmy Marlenka,vysoka
+1069,M,0,odboj_valka,"válečný veterán, hoteliér a filantrop, in memoriam",stredni
+1070,M,0,podnikani,"podnikatel, TOS Varnsdorf",vysoka
+1071,M,0,sport,motokrosový závodník,vysoka
+1072,M,0,medicina,dětský psychiatr a soudní znalec,vysoka
+1073,M,0,politika,"hejtman Vysočiny, lékař",vysoka
+1074,M,0,veda,profesor trestního práva,vysoka
+1075,M,0,politika,"dlouholetý starosta Vintířova, in memoriam",vysoka
+1076,M,0,kultura,herec,vysoka
+1077,M,0,kultura,lidový zpěvák (Jožka Černý),vysoka
+1078,M,0,kultura,lidový zpěvák (Jožka Šmukař),vysoka
+1079,M,0,armada_bezpecnost,bývalý velitel praporu mírových sil OSN,vysoka
+1080,M,0,sport,fotbalový trenér,vysoka
+1081,M,0,kultura,"herec a muzikálový zpěvák, in memoriam",vysoka
+1082,M,0,obcanska_spolecnost,"starosta Školského spolku Komenský, krajané",vysoka
+1083,M,0,kultura,hudební producent a skladatel,vysoka
+1084,M,0,sport,"judista, olympijský vítěz",vysoka
+1085,M,0,armada_bezpecnost,první náměstek policejního prezidenta,vysoka
+1086,M,0,veda,"ekonom, profesor UK, in memoriam",vysoka
+1087,M,0,armada_bezpecnost,bývalý náčelník generálního štábu Slovenska,vysoka
+1088,M,0,veda,odborník na vinařství a šlechtění révy,vysoka
+1089,M,0,sport,sportovní manažer a funkcionář,vysoka
+1090,M,0,media,"právník, spisovatel a novinář",nizka
+1091,M,0,kultura,herec,vysoka
+1092,M,0,kultura,textař a hudebník,vysoka
+1093,M,0,zahranicni_statnik,"slovenský politik, exvelvyslanec v Praze",stredni
+1094,M,0,media,historik a komentátor Českého rozhlasu,stredni
+1095,M,0,veda,historik husitství,vysoka
+1096,M,0,armada_bezpecnost,"armádní specialista, chytrá karanténa",vysoka
+1097,M,0,medicina,sexuolog,vysoka
+1098,M,0,politika,"odborář a politik, in memoriam",stredni
+1099,M,0,veda,historik 19. a 20. století,vysoka
+1100,M,0,obcanska_spolecnost,předseda vietnamského svazu na Ostravsku,stredni
+1101,M,0,veda,"biochemik a virolog, remdesivir",vysoka
+1102,M,0,podnikani,"podnikatel, zakladatel TOP Hotels",vysoka
+1103,M,0,kultura,"malíř, grafik a ilustrátor, in memoriam",vysoka
+1104,M,0,veda,archivář a historik,vysoka
+1105,M,0,kultura,"nevidomý fotograf, pomoc nevidomým",stredni
+1106,M,0,obcanska_spolecnost,předseda Národní rady osob se zdravotním postižením,stredni
+1107,M,0,sport,hokejista,vysoka
+1108,M,1,zahranicni_statnik,"prezident Srbska, státní návštěva 2021",vysoka
+1109,M,0,odboj_valka,"vojenský letec RAF, in memoriam",vysoka
+1110,M,1,zahranicni_statnik,"britský politik, odstoupil kvůli Mnichovu",vysoka
+1111,M,0,odboj_valka,"letec RAF, in memoriam",vysoka
+1112,M,0,odboj_valka,"generál, legionář, oběť komunistů, in memoriam",vysoka
+1113,Z,0,kultura,herečka,vysoka
+1114,M,0,odboj_valka,"letec RAF, in memoriam",vysoka
+1115,M,0,kultura,"zpěvák, in memoriam",vysoka
+1116,M,0,odboj_valka,veterán východní fronty 2. sv. války,vysoka
+1117,M,0,podnikani,"podnikatel, PPF, in memoriam",vysoka
+1118,M,0,medicina,"epidemiolog, exministr zdravotnictví, covid",vysoka
+1119,M,0,veda,"kosmonaut, Řád Bílého lva za proslavení vlasti v zahraničí (ČT24 2021)",stredni
+1120,M,0,medicina,"epidemiolog, vymýcení pravých neštovic, in memoriam",vysoka
+1121,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1122,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1123,M,0,hrdinsky_cin,"velitel dobrovolných hasičů Hřensko, požár",vysoka
+1124,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1125,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1126,M,0,hrdinsky_cin,"dobrovolný hasič, pomoc po tornádu",vysoka
+1127,M,0,hrdinsky_cin,dobrovolný hasič zahynulý v Koryčanech,vysoka
+1128,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1129,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1130,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1131,M,0,odboj_valka,"romský partyzánský velitel, vězeň Letů",vysoka
+1132,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1133,M,0,hrdinsky_cin,záchrana lidského života,stredni
+1134,M,0,hrdinsky_cin,dobrovolný hasič zahynulý v Koryčanech,vysoka
+1135,M,0,hrdinsky_cin,"lesník, pomohl najít ztracenou dívku",vysoka
+1136,M,0,hrdinsky_cin,zahynul při záchraně rodiny z požáru,vysoka
+1137,M,0,armada_bezpecnost,"důstojník speciálních sil, Afghánistán",vysoka
+1138,M,0,odboj_valka,"odbojář, Obrana národa, in memoriam",vysoka
+1139,M,0,hrdinsky_cin,"voják, zachránil tonoucí u jezu",vysoka
+1140,M,0,armada_bezpecnost,"pilot letecké služby policie, požár",vysoka
+1141,M,0,odboj_valka,student popravený 17. 11. 1939,vysoka
+1142,Z,0,cirkev,"řeholnice boromejka, zdravotní sestra",vysoka
+1143,M,0,medicina,lékař a podnikatel ve zdravotnictví,vysoka
+1144,M,0,politika,starosta Kralic nad Oslavou,vysoka
+1145,Z,0,medicina,"neuroložka, centrum roztroušené sklerózy",vysoka
+1146,M,0,veda,americký raketový inženýr českého původu,vysoka
+1147,M,0,kultura,"malíř, in memoriam",vysoka
+1148,M,0,obcanska_spolecnost,kronikář a velitel hasičů v Lánech,vysoka
+1149,M,0,kultura,"scenárista, režisér a herec, in memoriam",vysoka
+1150,Z,0,kultura,"zpěvačka, in memoriam",vysoka
+1151,M,0,sport,tenista,vysoka
+1152,M,0,kultura,sbormistr,stredni
+1153,Z,0,podnikani,"podnikatelka a modelka, in memoriam",vysoka
+1154,M,0,sport,"sportovní rybář a televizní dobrodruh (ČTK 2022)",vysoka
+1155,M,0,medicina,"ORL chirurg, profesor",vysoka
+1156,M,0,armada_bezpecnost,přednosta Vojenské kanceláře prezidenta,vysoka
+1157,M,0,kultura,"trumpetista, zakladatel Moravanky",vysoka
+1158,M,0,medicina,hematolog,vysoka
+1159,M,0,podnikani,podnikatel a mecenáš umění,stredni
+1160,M,0,veda,"historik, spisovatel, badatel o atentátu",vysoka
+1161,M,0,kultura,"izraelský malíř, přeživší Osvětimi",vysoka
+1162,M,0,sport,hokejista a trenér,vysoka
+1163,M,0,veda,"regionální historik, bývalý akademik",stredni
+1164,M,0,veda,profesor zahradní a krajinářské architektury,vysoka
+1165,Z,0,obcanska_spolecnost,"bojovnice za práva žen, první starostka na Moravě",vysoka
+1166,M,0,cirkev,převor kláštera Vyšší Brod,vysoka
+1167,M,0,kultura,"filmový archivář a televizní dokumentarista, in memoriam",vysoka
+1168,M,0,kultura,"primáš cimbálové muziky, zpěvák",vysoka
+1169,Z,0,obcanska_spolecnost,"přeživší holokaustu, svědectví o Terezíně",vysoka
+1170,M,0,veda,"vojenský historik, ředitel muzea",stredni
+1171,M,0,cirkev,"premonstrát, mluvčí České biskupské konference",vysoka
+1172,M,0,medicina,"internista, organizace zdravotnictví",vysoka
+1173,M,0,kultura,skladatel a muzikolog,vysoka
+1174,M,0,sport,"předseda České unie sportu, právník",stredni
+1175,M,0,medicina,"gastroenterolog, ředitel ÚVN",vysoka
+1176,M,0,kultura,"slovenský zpěvák, in memoriam",vysoka
+1177,M,0,podnikani,"právník, manažer a podnikatel",stredni
+1178,M,0,medicina,oční lékař,vysoka
+1179,M,0,sport,cyklista a trenér,vysoka
+1180,M,0,medicina,"radiační onkolog, Brno",vysoka
+1181,M,0,obcanska_spolecnost,zakladatel spolku Bezkomunistu.cz,stredni
+1182,M,0,politika,"předseda antimonopolního úřadu, právník",vysoka
+1183,M,0,politika,"senátor, starosta Hluboké nad Vltavou",vysoka
+1184,M,0,politika,předseda česko-chorvatské parlamentní skupiny,nizka
+1185,M,0,armada_bezpecnost,generální ředitel HZS ČR,vysoka
+1186,M,0,medicina,"chirurg, přednosta kliniky v Plzni",vysoka
+1187,M,0,armada_bezpecnost,ředitel HZS Karlovarského kraje,vysoka
+1188,M,0,odboj_valka,"odbojář, Tři králové, in memoriam",vysoka
+1189,M,0,odboj_valka,stíhací pilot RAF a letecký akrobat,vysoka
+1190,M,0,odboj_valka,"stíhací pilot RAF, in memoriam",vysoka
+1191,M,0,odboj_valka,"odbojář, Tři králové, in memoriam",vysoka
+1192,M,0,odboj_valka,"legionář a odbojář, in memoriam",stredni
+1193,M,0,odboj_valka,"generál, velitel odboje, in memoriam",vysoka
+1194,M,1,zahranicni_statnik,prezident Ukrajiny,vysoka
+1195,M,0,odboj_valka,"odbojář, Tři králové, in memoriam",vysoka
+1196,M,0,kultura,"slovenský spisovatel, in memoriam",vysoka
+1197,Z,0,obcanska_spolecnost,"ředitelka Výboru dobré vůle, in memoriam",vysoka
+1198,Z,0,obcanska_spolecnost,ředitelka Potravinové banky Praha,vysoka

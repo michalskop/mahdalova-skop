@@ -1,0 +1,964 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Plodnost klesla po roce 2021 o 0,2 dítěte na ženu ve Švédsku, Francii, Maďarsku i Kanadě",
+  "subtitle": "Úhrnná plodnost, 2000–2024; Česko pro srovnání (od roku 2021 −0,47)"
+ },
+ "_source": "[Fertility indicators (demo_find), Eurostat](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table?lang=en) · Kanada: Světová banka a OSN, 2024 [Statistics Canada](https://www150.statcan.gc.ca/n1/daily-quotidien/250924/dq250924d-eng.htm)\nPlodnost je počet dětí na jednu ženu při věkově specifických plodnostech daného roku, ne skutečný počet dětí žen určitého ročníku.",
+ "_toggle_legend": true,
+ "height": 330,
+ "data": {
+  "values": [
+   {
+    "zeme": "Švédsko",
+    "rok": 2000,
+    "tfr": 1.54,
+    "label": "1,54"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2001,
+    "tfr": 1.57,
+    "label": "1,57"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2002,
+    "tfr": 1.65,
+    "label": "1,65"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2003,
+    "tfr": 1.71,
+    "label": "1,71"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2004,
+    "tfr": 1.75,
+    "label": "1,75"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2005,
+    "tfr": 1.77,
+    "label": "1,77"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2006,
+    "tfr": 1.85,
+    "label": "1,85"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2007,
+    "tfr": 1.88,
+    "label": "1,88"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2008,
+    "tfr": 1.91,
+    "label": "1,91"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2009,
+    "tfr": 1.94,
+    "label": "1,94"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2010,
+    "tfr": 1.98,
+    "label": "1,98"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2011,
+    "tfr": 1.9,
+    "label": "1,90"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2012,
+    "tfr": 1.91,
+    "label": "1,91"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2013,
+    "tfr": 1.89,
+    "label": "1,89"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2014,
+    "tfr": 1.88,
+    "label": "1,88"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2015,
+    "tfr": 1.85,
+    "label": "1,85"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2016,
+    "tfr": 1.85,
+    "label": "1,85"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2017,
+    "tfr": 1.78,
+    "label": "1,78"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2018,
+    "tfr": 1.76,
+    "label": "1,76"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2019,
+    "tfr": 1.71,
+    "label": "1,71"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2020,
+    "tfr": 1.67,
+    "label": "1,67"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2021,
+    "tfr": 1.67,
+    "label": "1,67"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2022,
+    "tfr": 1.53,
+    "label": "1,53"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2023,
+    "tfr": 1.45,
+    "label": "1,45"
+   },
+   {
+    "zeme": "Švédsko",
+    "rok": 2024,
+    "tfr": 1.43,
+    "label": "1,43"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2000,
+    "tfr": 1.89,
+    "label": "1,89"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2001,
+    "tfr": 1.9,
+    "label": "1,90"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2002,
+    "tfr": 1.88,
+    "label": "1,88"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2003,
+    "tfr": 1.89,
+    "label": "1,89"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2004,
+    "tfr": 1.92,
+    "label": "1,92"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2005,
+    "tfr": 1.94,
+    "label": "1,94"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2006,
+    "tfr": 2.0,
+    "label": "2,00"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2007,
+    "tfr": 1.98,
+    "label": "1,98"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2008,
+    "tfr": 2.01,
+    "label": "2,01"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2009,
+    "tfr": 2.0,
+    "label": "2,00"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2010,
+    "tfr": 2.03,
+    "label": "2,03"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2011,
+    "tfr": 2.01,
+    "label": "2,01"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2012,
+    "tfr": 2.01,
+    "label": "2,01"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2013,
+    "tfr": 1.99,
+    "label": "1,99"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2014,
+    "tfr": 2.0,
+    "label": "2,00"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2015,
+    "tfr": 1.96,
+    "label": "1,96"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2016,
+    "tfr": 1.92,
+    "label": "1,92"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2017,
+    "tfr": 1.89,
+    "label": "1,89"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2018,
+    "tfr": 1.87,
+    "label": "1,87"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2019,
+    "tfr": 1.86,
+    "label": "1,86"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2020,
+    "tfr": 1.82,
+    "label": "1,82"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2021,
+    "tfr": 1.83,
+    "label": "1,83"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2022,
+    "tfr": 1.78,
+    "label": "1,78"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2023,
+    "tfr": 1.66,
+    "label": "1,66"
+   },
+   {
+    "zeme": "Francie",
+    "rok": 2024,
+    "tfr": 1.61,
+    "label": "1,61"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2000,
+    "tfr": 1.32,
+    "label": "1,32"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2001,
+    "tfr": 1.31,
+    "label": "1,31"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2002,
+    "tfr": 1.3,
+    "label": "1,30"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2003,
+    "tfr": 1.27,
+    "label": "1,27"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2004,
+    "tfr": 1.28,
+    "label": "1,28"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2005,
+    "tfr": 1.31,
+    "label": "1,31"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2006,
+    "tfr": 1.34,
+    "label": "1,34"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2007,
+    "tfr": 1.32,
+    "label": "1,32"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2008,
+    "tfr": 1.35,
+    "label": "1,35"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2009,
+    "tfr": 1.32,
+    "label": "1,32"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2010,
+    "tfr": 1.25,
+    "label": "1,25"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2011,
+    "tfr": 1.23,
+    "label": "1,23"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2012,
+    "tfr": 1.34,
+    "label": "1,34"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2013,
+    "tfr": 1.36,
+    "label": "1,36"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2014,
+    "tfr": 1.45,
+    "label": "1,45"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2015,
+    "tfr": 1.46,
+    "label": "1,46"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2016,
+    "tfr": 1.55,
+    "label": "1,55"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2017,
+    "tfr": 1.56,
+    "label": "1,56"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2018,
+    "tfr": 1.57,
+    "label": "1,57"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2019,
+    "tfr": 1.58,
+    "label": "1,58"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2020,
+    "tfr": 1.61,
+    "label": "1,61"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2021,
+    "tfr": 1.63,
+    "label": "1,63"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2022,
+    "tfr": 1.57,
+    "label": "1,57"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2023,
+    "tfr": 1.55,
+    "label": "1,55"
+   },
+   {
+    "zeme": "Maďarsko",
+    "rok": 2024,
+    "tfr": 1.41,
+    "label": "1,41"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2000,
+    "tfr": 1.51,
+    "label": "1,51"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2001,
+    "tfr": 1.54,
+    "label": "1,54"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2002,
+    "tfr": 1.52,
+    "label": "1,52"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2003,
+    "tfr": 1.55,
+    "label": "1,55"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2004,
+    "tfr": 1.56,
+    "label": "1,56"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2005,
+    "tfr": 1.58,
+    "label": "1,58"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2006,
+    "tfr": 1.63,
+    "label": "1,63"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2007,
+    "tfr": 1.67,
+    "label": "1,67"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2008,
+    "tfr": 1.7,
+    "label": "1,70"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2009,
+    "tfr": 1.69,
+    "label": "1,69"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2010,
+    "tfr": 1.65,
+    "label": "1,65"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2011,
+    "tfr": 1.63,
+    "label": "1,63"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2012,
+    "tfr": 1.63,
+    "label": "1,63"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2013,
+    "tfr": 1.61,
+    "label": "1,61"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2014,
+    "tfr": 1.61,
+    "label": "1,61"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2015,
+    "tfr": 1.6,
+    "label": "1,60"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2016,
+    "tfr": 1.59,
+    "label": "1,59"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2017,
+    "tfr": 1.55,
+    "label": "1,55"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2018,
+    "tfr": 1.51,
+    "label": "1,51"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2019,
+    "tfr": 1.47,
+    "label": "1,47"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2020,
+    "tfr": 1.41,
+    "label": "1,41"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2021,
+    "tfr": 1.44,
+    "label": "1,44"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2022,
+    "tfr": 1.34,
+    "label": "1,34"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2023,
+    "tfr": 1.27,
+    "label": "1,27"
+   },
+   {
+    "zeme": "Kanada",
+    "rok": 2024,
+    "tfr": 1.25,
+    "label": "1,25"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2000,
+    "tfr": 1.15,
+    "label": "1,15"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2001,
+    "tfr": 1.15,
+    "label": "1,15"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2002,
+    "tfr": 1.17,
+    "label": "1,17"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2003,
+    "tfr": 1.18,
+    "label": "1,18"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2004,
+    "tfr": 1.23,
+    "label": "1,23"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2005,
+    "tfr": 1.29,
+    "label": "1,29"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2006,
+    "tfr": 1.34,
+    "label": "1,34"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2007,
+    "tfr": 1.45,
+    "label": "1,45"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2008,
+    "tfr": 1.51,
+    "label": "1,51"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2009,
+    "tfr": 1.51,
+    "label": "1,51"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2010,
+    "tfr": 1.51,
+    "label": "1,51"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2011,
+    "tfr": 1.43,
+    "label": "1,43"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2012,
+    "tfr": 1.45,
+    "label": "1,45"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2013,
+    "tfr": 1.46,
+    "label": "1,46"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2014,
+    "tfr": 1.53,
+    "label": "1,53"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2015,
+    "tfr": 1.57,
+    "label": "1,57"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2016,
+    "tfr": 1.63,
+    "label": "1,63"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2017,
+    "tfr": 1.69,
+    "label": "1,69"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2018,
+    "tfr": 1.71,
+    "label": "1,71"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2019,
+    "tfr": 1.71,
+    "label": "1,71"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2020,
+    "tfr": 1.74,
+    "label": "1,74"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2021,
+    "tfr": 1.83,
+    "label": "1,83"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2022,
+    "tfr": 1.64,
+    "label": "1,64"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2023,
+    "tfr": 1.46,
+    "label": "1,46"
+   },
+   {
+    "zeme": "Česko",
+    "rok": 2024,
+    "tfr": 1.36,
+    "label": "1,36"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round",
+    "interpolate": "monotone"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2000,
+       2027
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2000,
+       2005,
+       2010,
+       2015,
+       2020,
+       2024
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "tfr",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1.0,
+       2.1
+      ]
+     },
+     "axis": {
+      "values": [
+       1.0,
+       1.25,
+       1.5,
+       1.75,
+       2.0
+      ],
+      "format": ".2f",
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, '.2f'), '.', ',')"
+     }
+    },
+    "color": {
+     "field": "zeme",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Švédsko",
+       "Francie",
+       "Maďarsko",
+       "Kanada",
+       "Česko"
+      ],
+      "range": [
+       "#2f325c",
+       "#0e8aab",
+       "#de1743",
+       "#f76800",
+       "#101432"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "rok",
+      "type": "quantitative",
+      "title": "Rok",
+      "format": "d"
+     },
+     {
+      "field": "label",
+      "title": "Úhrnná plodnost"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.rok == 2024"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 7,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       2000,
+       2027
+      ],
+      "nice": false
+     },
+     "axis": {
+      "values": [
+       2000,
+       2005,
+       2010,
+       2015,
+       2020,
+       2024
+      ],
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0
+     }
+    },
+    "y": {
+     "field": "tfr",
+     "type": "quantitative",
+     "title": null,
+     "scale": {
+      "domain": [
+       1.0,
+       2.1
+      ]
+     },
+     "axis": {
+      "values": [
+       1.0,
+       1.25,
+       1.5,
+       1.75,
+       2.0
+      ],
+      "format": ".2f",
+      "grid": true,
+      "gridColor": "#e8e8dc",
+      "domain": false,
+      "ticks": false,
+      "labelExpr": "replace(format(datum.value, '.2f'), '.', ',')"
+     }
+    },
+    "color": {
+     "field": "zeme",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Švédsko",
+       "Francie",
+       "Maďarsko",
+       "Kanada",
+       "Česko"
+      ],
+      "range": [
+       "#2f325c",
+       "#0e8aab",
+       "#de1743",
+       "#f76800",
+       "#101432"
+      ]
+     },
+     "legend": null
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

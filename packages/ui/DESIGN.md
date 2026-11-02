@@ -406,6 +406,23 @@ import { ArticleCard } from '@repo/ui/components/ArticleCard';
 />
 ```
 
+**Cards in a row share one bottom edge (rule since 2026-10-26, reader feedback).**
+In a grid row (homepage trios, listings) cards with a shorter title/excerpt used to
+end higher, so the bottom borders and the date/author footers zig-zagged. `.card`
+has `height: 100%` (fills its grid cell) and the excerpt (`.excerpt`) has
+`flex-grow: 1`, so the spare space sits under the excerpt and the footer stays on
+the bottom edge. Don't remove either, and don't wrap `ArticleCard` in an extra
+element whose height is not stretched by the grid (the `height: 100%` then resolves
+to auto). Mobile tiles (`flow-root`) and hero side cards (CSS grid) ignore
+`flex-grow`, so they are unaffected.
+
+**No social links in the card (2026-10-25).** The card shows only the cover, rubric badge,
+title, excerpt, date and author. Frontmatter `instagramImage` / `squareImage` are part of the
+cover set (record of the 5 formats), never rendered in the card – an „Instagram ↗“ link that
+appeared once every article got the full cover set was removed on Kateřina's request. The
+first removal sat unmerged in a side branch for a day while readers still saw the link –
+a fix is done only once it is in `main` and deployed.
+
 **Homepage hero lead – no empty gaps (`apps/web`, rule since 2026-10-05).** The big
 left card in `FeaturedHero` (Volby / Výběr bands) must never show white space
 between the excerpt and the date/author footer. Its text = frontmatter `excerpt`
@@ -500,7 +517,14 @@ const stats: KeyNumberItem[] = [
 
 Props: `label` (section title, default: "Klíčová čísla"), `numbers` (array of `KeyNumberItem`), `yamlFile` (filename relative to article directory, loaded server-side like Timeline), `align` (alignment for single items: 'left', 'center', 'right', default: 'left', desktop only).
 
-Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba).
+Each `KeyNumberItem` has: `value` (string), `title` (string), `description` (string), `color?` (palette name, hex, or rgba), `link?` (`{ href, text }` – a link under the description, e.g. `text: "Psali jsme: …"` to the article where we analysed the number).
+
+**When to use it (Kateřina, 29. 10. 2026 – box review of all articles):** a card belongs in the box only when the number says something on its own – it is compared (share, multiple, vs. another country/year/group) or explains the story. A bare total the reader can't judge („81,9 mld. Kč“, „190 174 kandidátů“, „16. řádné volby“) is not a key number: give it a comparison (e.g. „1,9× dražší je správa nejmenších obcí“) or move the facts into an ```` ```infobox info ```` „**Ve zkratce**“ with 2–3 bullet sentences. Election/prediction boxes with just the result numbers (Brazil, Israel, Serbia, Sweden) were removed – the prediction is told by charts. Card rules:
+- the title continues the number as one phrase, so it starts **lowercase** („6 254 / obcí v Česku“, „161 / pachatelů šlo do vězení“); capital only when it doesn't read as a phrase („52,9 % / Objasněnost znásilnění“) or for proper nouns („Čechů“);
+- the description says why the number is what it is (one short sentence of explanation, e.g. why clearance is only half), not just its source;
+- a rough own estimate is allowed when the article explains it, labelled „hrubý odhad / přepočet, ne statistika“;
+- YAML: put any description containing „: “ in quotes (an unquoted colon broke the page; `checkArticles.js` now parses every `yamlFile`);
+- titles and descriptions get Czech typography in the component (one-letter prepositions, NBSP in thousands).
 
 **Colors:** Use theme names (`brand`, `brandTeal`, `brandOrange`, `brandNavy`, `brandYellow`, `brandForestGreen`, `brandEmeraldMint`, `brandDeepRed`, `brandRoyalBlue`, `background`), shade notation (`brand[9]`, `brandTeal[3]`), or custom codes (`#ff6b35`, `rgba(26,111,168,0.8)`).
 
@@ -651,6 +675,13 @@ import { TagList } from '@repo/ui/components/TagList';
 
 <TagList tags={['Data', 'Volby']} size="sm" />
 ```
+
+**Centred in the 800px article column (2026-10-31).** The list sits in
+`Container maw={800}` and the badges are centred (`justify="center"`). The old
+default `Container` (960 px) was wider than the reading column, so under an
+article the tags started left of the text and of the „Sledujte DataTimes" bar
+below them (at the page edge on narrower windows). Keep it in the same column
+as the elements around it.
 
 ---
 
@@ -1007,12 +1038,27 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 
 | | `apps/web` | `apps/datajournalism.studio` |
 |-|------------|------------------------------|
-| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | Work Sans (sans-serif) |
+| Font | IBM Plex Serif (body) + IBM Plex Sans (headings) | same (since 30 Oct 2026; was Work Sans) |
 | Article path | `/clanek/[slug]` | `/a/[slug]` |
 | Articles dir | `app/clanek/_articles/` | `app/a/_articles/` |
 | Matomo siteId | `4` | `5` |
-| Date locale | `cs-CZ` | `en-US` |
+| Date locale | `cs-CZ` | `en-GB` |
 | ScrollyTelling base | `/clanek/_articles` | `/a/_articles` |
+
+Since 30 Oct 2026 DJS reuses the DataTimes.cz shell in English (header, footer,
+FeaturedHero homepage bands, ArticleByline with portraits + share icons, 800px
+reading column, bleed tokens and SupportBanner in `app/globals.css`). Shared-UI
+rules for English sites, so the Czech look never leaks into English text:
+- **Dates:** `ArticleCard` and `RelatedArticles` format via `lib/formatCardDate.ts`
+  – `cs-*` keeps „30. 10. 2026", any other locale gets "30 October 2026"
+  (numeric en-GB "30/10/2026" is ambiguous). Always pass `locale` on English sites.
+- **Typography:** `RelatedArticles` applies `fixCzechTypography` only for `cs-*`
+  locales (Czech nbsp rules after single-letter words must not touch English).
+  `KeyNumbers` still applies it unconditionally (number nbsp rules are useful in
+  English too; the single-letter rule is a known minor leftover).
+- **FollowBar:** `label` (default „Sledujte DataTimes:") and `exclude` props; DJS
+  passes `label="Follow DataTimes:" exclude={["Google"]}` (the Google News link
+  searches the Czech domain). No `PreferredSource` button on English sites.
 
 ---
 
@@ -1022,6 +1068,11 @@ The animation uses `easeInOut` via `requestAnimationFrame` – scroll-snap is te
 - **Tečkový motiv jen jako podkres** (bílé tečky, opacity ~0,2) – nikdy ne tečky v barvě strany místo ploch. Tečková mapa je styl coverů, ne čitelné mapy obvodů.
 - **Barva podle senátorského klubu se musí dát doložit:** obhájce = jeho klub podle senat.cz (ověřit skriptem, např. `_data_pipeline/kluby_kontrola.py`), nový senátor = „klub zatím neznámý“ a barva podle kandidátky. V tooltipu klub a kandidátku vždy odděleně, koaliční zkratky ČSÚ („KDUODSSTANPiTOP“) nikdy, jen vypsané strany.
 - Jedno logo na graf (ChartCard), žádné druhé logo uvnitř mapy.
+- **Podkladová mapa pod každou d3 mapou obcí či okrsků** – sdílená vrstva `apps/web/components/charts/OsmPodklad.tsx` (`<OsmPodklad>` dovnitř přibližované `<g transform>`, `<OsmAttribution>` pod mapu; použito v `OkrskyKvMapa`, `BrazilMunicipalMap`). Mapa celé země potřebuje přibližování (a skok na vyhledanou obec), jinak podklad nemá co ukázat. Technika: rastrové dlaždice OpenStreetMap složené do stejné d3 Mercatorovy projekce (svět = 2π·scale, roh dlaždice 0/0/0 = translate − π·scale), podklad SVG filtrem do tlumené šedi (saturace 0,3), okrsky `mix-blend-mode: multiply` s `fillOpacity` ~0,8, takže silnice, lesy, voda a názvy prosvítají a barva kandidátky zůstane. Pod mapou vždy „Podkladová mapa © přispěvatelé OpenStreetMap“ s odkazem.
+
+- **Barvy kandidátů = barvy jejich stran, ne státní vlajky** (Kateřina 30. 10. 2026, Brazílie: Lula PT → brandCoralRed, Flávio Bolsonaro PL → brandRoyalBlue místo dřívější žluté × zelené z vlajky). Má-li strana víc barev, vybrat tu, která s barvou soupeře projde testem barvosleposti (ne červená × zelená). **Posun nebo změna mezi koly je jiná veličina** a dostane vlastní divergentní škálu mimo barvy kandidátů (Brazílie: fialová brandAmethyst = získal, oranžová brandOrange = ztratil), jinak čtenář splete „ztratil“ s „vyhrál soupeř“.
+
+*Ponaučení (30. 10. 2026, podkladová mapa okrsků):* dlaždice CARTO (Positron, Voyager) od roku 2026 bez API klíče vracejí jen obrázek „API KEY REQUIRED“; ZTM ČÚZK (`ZTM_WM`) je pro podklad přeplněná kódy obcí a katastrálními hranicemi.
 
 *Ponaučení (17. 10. 2026, Senát 2. kolo):* první verze mapy vítězů měla dominantní tečky a obvody se slévaly; tooltip míchal klub s kandidátkou, takže nebylo poznat, proč má obhájce (Grulich, kandidátka KDU-ČSL, ODS, STAN, Piráti, TOP 09 a LES) barvu klubu ODS a TOP 09.
 

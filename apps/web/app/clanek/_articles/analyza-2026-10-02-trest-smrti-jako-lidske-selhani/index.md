@@ -6,6 +6,8 @@ author: "Kateřina Mahdalová"
 excerpt: "Americký stát Tennessee se 30. září pokusil popravit Christu Pike, jedinou ženu ve svých celách smrti. Přežila obě dávky smrtící injekce a leží v nemocnici na ventilátoru. Trest smrti má 54 zemí světa a USA loni popravily nejvíc lidí od roku 2009."
 coverImage: "images/cover-homepage.jpg"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.jpg"
+instagramImage: "images/cover-instagram.jpg"
 filter: ["analýza"]
 tags: ["trest smrti", "lidská práva", "USA", "Tennessee", "Christa Pike", "Amnesty International", "týrání dětí", "práva dítěte"]
 promoted: 1
@@ -28,7 +30,7 @@ Podstatnou část té doby prožila v izolaci. Podle [žádosti o milost](https:
 Guvernér Bill Lee jí dva dny před popravou [milost neudělil](https://deathpenaltyinfo.org/governor-bill-lee-denies-clemency-for-christa-pike-refusing-to-stop-tennessees-first-execution-of-a-woman-in-more-than-200-years). Po nepovedené popravě ji označil za „tragédii“, odložil zbývající popravu letošního roku a nařídil nezávislé prověření. Vězeňská služba tvrdí, že postupovala přesně podle protokolu.
 
 ```infobox info
-Z čeho vycházíme: průběh popravy [popsali](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/) svědci, zástupci médií a obhájci Christy Pike. Fakta o vraždě jsou z rozhodnutí [Nejvyššího soudu Tennessee z roku 1998](https://caselaw.findlaw.com/court/tn-supreme-court/1130311.html). Dětství Christy Pike popisuje [žádost o milost](https://abcnews4.com/resources/pdf/f250727a-5607-4cb8-a3ae-4c4c78b9d0f1-christapikeclemencypetition.pdf), kterou podali její obhájci, a [Cornell Center on the Death Penalty Worldwide](https://dpw.lawschool.cornell.edu/advocacy/christa-pike/), které usiluje o zmírnění jejího trestu. Obojí jsou advokační dokumenty. Údaje z nich přebíráme jen tam, kde se opírají o soudní spisy, zdravotní dokumentaci nebo odborné posudky. Světová data jsou z výroční zprávy [Amnesty International](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), americká od Death Penalty Information Center. Úvodní koláž: socha Iustitie od Emanuela Pendla ve vídeňském Justičním paláci, foto Hubertl, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AT_50473_Justizpalast_Wien,_Iustitia_-_Emanuel_Pendl_4293-HDR.jpg), licence CC BY-SA 4.0; výstřižky z deníku Knoxville News Sentinel (15. 1. 1995) a z kampaní a pořadů o případu.
+Z čeho vycházíme: průběh popravy [popsali](https://nashvillebanner.com/2026/09/30/christa-pike-failed-execution-tennessee-pentobarbital/) svědci, zástupci médií a obhájci Christy Pike. Fakta o vraždě jsou z rozhodnutí [Nejvyššího soudu Tennessee z roku 1998](https://caselaw.findlaw.com/court/tn-supreme-court/1130311.html). Dětství Christy Pike popisuje [žádost o milost](https://abcnews4.com/resources/pdf/f250727a-5607-4cb8-a3ae-4c4c78b9d0f1-christapikeclemencypetition.pdf), kterou podali její obhájci, a [Cornell Center on the Death Penalty Worldwide](https://dpw.lawschool.cornell.edu/advocacy/christa-pike/), které usiluje o zmírnění jejího trestu. Obojí jsou advokační dokumenty. Údaje z nich přebíráme jen tam, kde se opírají o soudní spisy, zdravotní dokumentaci nebo odborné posudky. Světová data jsou z výroční zprávy [Amnesty International](https://www.amnestyusa.org/wp-content/uploads/2026/05/Amnesty-International-Global-Report-Death-Sentences-and-Executions-2025.pdf), americká od Death Penalty Information Center. Úvodní obrázek: socha Iustitie od Emanuela Pendla ve vídeňském Justičním paláci, foto Hubertl, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AT_50473_Justizpalast_Wien,_Iustitia_-_Emanuel_Pendl_4293-HDR.jpg), licence CC BY-SA 4.0; citace titulků deníku Knoxville News Sentinel (15. 1. 1995), pořadu MediaOne a petice za milost.
 ```
 
 ## Zločin: osmnáctiletá dívka a mučení spolužačky
@@ -40,24 +42,24 @@ Colleen Slemmer na odlehlém místě mučili a nakonec zabili. Podrobnosti popis
 Trest smrti dostala 30. března 1996. Podle Cornellova centra byla nejmladší ženou odsouzenou k smrti v moderní historii USA. Stejný čin ale skončil pro tři lidi, kteří se ho účastnili, úplně jinak:
 
 <KeyNumbers
-  label="Jeden čin, tři tresty"
+  label="Tři pachatelé, tři různé osudy"
   numbers={[
     {
       value: "Trest smrti",
-      title: "Christa Pike, 18 let",
-      description: "Odsouzena za vraždu prvního stupně. Pokus o popravu 30. září 2026 přežila.",
+      title: "Christa Pike, při činu 18 let",
+      description: "Odsouzena v roce 1996 za vraždu prvního stupně. V cele smrti strávila zhruba 30 let, většinu z nich 22 až 23 hodin denně o samotě. Pokus o popravu 30. září 2026 přežila. Letos jí je 50 let.",
       color: "brand"
     },
     {
       value: "Doživotí",
-      title: "Tadaryl Shipp, 17 let",
-      description: "S možností podmínečného propuštění. Komise ho v říjnu 2025 zamítla, další přezkum čeká v roce 2031.",
+      title: "Tadaryl Shipp, při činu 17 let",
+      description: "Nepodmíněně, s možností podmínečného propuštění. Později pod přísahou vypověděl, že pentagram do hrudi oběti vyryl on. Propuštění mu komise v říjnu 2025 zamítla, další přezkum je v roce 2031. Letos mu je 49 let.",
       color: "brandNavy[8]"
     },
     {
       value: "Podmínka",
-      title: "Shadolla Peterson, 18 let",
-      description: "Šest let podmíněně za napomáhání. Svědčila pro obžalobu.",
+      title: "Shadolla Peterson, při činu 18 let",
+      description: "Šest let podmíněně. Spolupracovala s vyšetřovateli a u soudu svědčila proti Christě Pike i Tadarylu Shippovi, místo vraždy proto byla odsouzena jen za napomáhání. Letos jí je kolem 50 let.",
       color: "brandNavy[6]"
     }
   ]}

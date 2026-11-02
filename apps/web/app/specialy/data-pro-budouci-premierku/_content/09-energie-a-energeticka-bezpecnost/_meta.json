@@ -30,5 +30,8 @@
     { "slug": "03-mezera", "topic": "Analýza" },
     { "slug": "05-vypocet-350km2", "topic": "Investigace" },
     { "slug": "06-jak-rychle-oze", "topic": "Komparace" }
+  ],
+  "postSupportTiles": [
+    { "web": "analyza-2026-04-02-kdo-vydelava-na-drahem-benzinu", "topic": "Analýza" }
   ]
 }

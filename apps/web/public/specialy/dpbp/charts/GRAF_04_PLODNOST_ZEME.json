@@ -1,0 +1,887 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Švédsko, Francie, Maďarsko i Česko jsou dnes mezi 1,28 a 1,56 dítěte na ženu, od svých vrcholů klesly o 0,3 až 0,6",
+  "subtitle": "Úhrnná plodnost, dětí na ženu, 2000–2025. Vrcholy (body): Francie 2,03 a Švédsko 1,98 v roce 2010, Česko 1,83 a Maďarsko 1,61 v roce 2021. Přerušovaná čára je hranice 2,1."
+ },
+ "_source": "[SCB, Total fertility rate](https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__BE__BE0101__BE0101H/FruktsamhetSum/) (Švédsko) · [Eurostat, demo_find](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (Francie a Česko do 2024) · [KSH, 22.1.1.6](https://www.ksh.hu/stadat_files/nep/en/nep0006.html) (Maďarsko, 2025 předběžně) · [INSEE, Bilan démographique 2025](https://www.insee.fr/fr/statistiques/8719824) (Francie 2025) · [ČSÚ, Nejméně narozených dětí v historii](https://statistikaamy.csu.gov.cz/nejmene-narozenych-deti-v-historii) (Česko 2025)\nZdroje se liší metodikou o setiny; vrcholy označují nejvyšší hodnotu v letech 2000–2025.",
+ "height": 340,
+ "config": {
+  "view": {
+   "stroke": "transparent"
+  }
+ },
+ "encoding": {
+  "x": {
+   "field": "rok",
+   "type": "quantitative",
+   "title": null,
+   "scale": {
+    "domain": [
+     2000,
+     2029
+    ],
+    "nice": false
+   },
+   "axis": {
+    "format": "d",
+    "values": [
+     2000,
+     2005,
+     2010,
+     2015,
+     2020,
+     2025
+    ],
+    "grid": false,
+    "domain": false,
+    "ticks": false,
+    "labelAngle": 0
+   }
+  },
+  "y": {
+   "field": "tfr",
+   "type": "quantitative",
+   "title": null,
+   "scale": {
+    "domain": [
+     1.1,
+     2.2
+    ]
+   },
+   "axis": {
+    "grid": true,
+    "gridColor": "#e8e8dc",
+    "domain": false,
+    "ticks": false,
+    "values": [
+     1.2,
+     1.5,
+     1.8,
+     2.1
+    ],
+    "format": ".1f"
+   }
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2000,
+      "tfr": 2.1
+     },
+     {
+      "rok": 2029,
+      "tfr": 2.1
+     }
+    ]
+   },
+   "mark": {
+    "type": "line",
+    "strokeDash": [
+     5,
+     4
+    ],
+    "stroke": "#0e8aab",
+    "strokeWidth": 1.5
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2000,
+      "zeme": "Švédsko",
+      "tfr": 1.54,
+      "Plodnost": "1,54"
+     },
+     {
+      "rok": 2001,
+      "zeme": "Švédsko",
+      "tfr": 1.57,
+      "Plodnost": "1,57"
+     },
+     {
+      "rok": 2002,
+      "zeme": "Švédsko",
+      "tfr": 1.65,
+      "Plodnost": "1,65"
+     },
+     {
+      "rok": 2003,
+      "zeme": "Švédsko",
+      "tfr": 1.71,
+      "Plodnost": "1,71"
+     },
+     {
+      "rok": 2004,
+      "zeme": "Švédsko",
+      "tfr": 1.75,
+      "Plodnost": "1,75"
+     },
+     {
+      "rok": 2005,
+      "zeme": "Švédsko",
+      "tfr": 1.77,
+      "Plodnost": "1,77"
+     },
+     {
+      "rok": 2006,
+      "zeme": "Švédsko",
+      "tfr": 1.85,
+      "Plodnost": "1,85"
+     },
+     {
+      "rok": 2007,
+      "zeme": "Švédsko",
+      "tfr": 1.88,
+      "Plodnost": "1,88"
+     },
+     {
+      "rok": 2008,
+      "zeme": "Švédsko",
+      "tfr": 1.91,
+      "Plodnost": "1,91"
+     },
+     {
+      "rok": 2009,
+      "zeme": "Švédsko",
+      "tfr": 1.93,
+      "Plodnost": "1,93"
+     },
+     {
+      "rok": 2010,
+      "zeme": "Švédsko",
+      "tfr": 1.98,
+      "Plodnost": "1,98"
+     },
+     {
+      "rok": 2011,
+      "zeme": "Švédsko",
+      "tfr": 1.9,
+      "Plodnost": "1,90"
+     },
+     {
+      "rok": 2012,
+      "zeme": "Švédsko",
+      "tfr": 1.9,
+      "Plodnost": "1,90"
+     },
+     {
+      "rok": 2013,
+      "zeme": "Švédsko",
+      "tfr": 1.89,
+      "Plodnost": "1,89"
+     },
+     {
+      "rok": 2014,
+      "zeme": "Švédsko",
+      "tfr": 1.88,
+      "Plodnost": "1,88"
+     },
+     {
+      "rok": 2015,
+      "zeme": "Švédsko",
+      "tfr": 1.85,
+      "Plodnost": "1,85"
+     },
+     {
+      "rok": 2016,
+      "zeme": "Švédsko",
+      "tfr": 1.85,
+      "Plodnost": "1,85"
+     },
+     {
+      "rok": 2017,
+      "zeme": "Švédsko",
+      "tfr": 1.78,
+      "Plodnost": "1,78"
+     },
+     {
+      "rok": 2018,
+      "zeme": "Švédsko",
+      "tfr": 1.75,
+      "Plodnost": "1,75"
+     },
+     {
+      "rok": 2019,
+      "zeme": "Švédsko",
+      "tfr": 1.7,
+      "Plodnost": "1,70"
+     },
+     {
+      "rok": 2020,
+      "zeme": "Švédsko",
+      "tfr": 1.66,
+      "Plodnost": "1,66"
+     },
+     {
+      "rok": 2021,
+      "zeme": "Švédsko",
+      "tfr": 1.67,
+      "Plodnost": "1,67"
+     },
+     {
+      "rok": 2022,
+      "zeme": "Švédsko",
+      "tfr": 1.52,
+      "Plodnost": "1,52"
+     },
+     {
+      "rok": 2023,
+      "zeme": "Švédsko",
+      "tfr": 1.45,
+      "Plodnost": "1,45"
+     },
+     {
+      "rok": 2024,
+      "zeme": "Švédsko",
+      "tfr": 1.43,
+      "Plodnost": "1,43"
+     },
+     {
+      "rok": 2025,
+      "zeme": "Švédsko",
+      "tfr": 1.42,
+      "Plodnost": "1,42"
+     },
+     {
+      "rok": 2000,
+      "zeme": "Francie",
+      "tfr": 1.89,
+      "Plodnost": "1,89"
+     },
+     {
+      "rok": 2001,
+      "zeme": "Francie",
+      "tfr": 1.9,
+      "Plodnost": "1,90"
+     },
+     {
+      "rok": 2002,
+      "zeme": "Francie",
+      "tfr": 1.88,
+      "Plodnost": "1,88"
+     },
+     {
+      "rok": 2003,
+      "zeme": "Francie",
+      "tfr": 1.89,
+      "Plodnost": "1,89"
+     },
+     {
+      "rok": 2004,
+      "zeme": "Francie",
+      "tfr": 1.92,
+      "Plodnost": "1,92"
+     },
+     {
+      "rok": 2005,
+      "zeme": "Francie",
+      "tfr": 1.94,
+      "Plodnost": "1,94"
+     },
+     {
+      "rok": 2006,
+      "zeme": "Francie",
+      "tfr": 2.0,
+      "Plodnost": "2,00"
+     },
+     {
+      "rok": 2007,
+      "zeme": "Francie",
+      "tfr": 1.98,
+      "Plodnost": "1,98"
+     },
+     {
+      "rok": 2008,
+      "zeme": "Francie",
+      "tfr": 2.01,
+      "Plodnost": "2,01"
+     },
+     {
+      "rok": 2009,
+      "zeme": "Francie",
+      "tfr": 2.0,
+      "Plodnost": "2,00"
+     },
+     {
+      "rok": 2010,
+      "zeme": "Francie",
+      "tfr": 2.03,
+      "Plodnost": "2,03"
+     },
+     {
+      "rok": 2011,
+      "zeme": "Francie",
+      "tfr": 2.01,
+      "Plodnost": "2,01"
+     },
+     {
+      "rok": 2012,
+      "zeme": "Francie",
+      "tfr": 2.01,
+      "Plodnost": "2,01"
+     },
+     {
+      "rok": 2013,
+      "zeme": "Francie",
+      "tfr": 1.99,
+      "Plodnost": "1,99"
+     },
+     {
+      "rok": 2014,
+      "zeme": "Francie",
+      "tfr": 2.0,
+      "Plodnost": "2,00"
+     },
+     {
+      "rok": 2015,
+      "zeme": "Francie",
+      "tfr": 1.96,
+      "Plodnost": "1,96"
+     },
+     {
+      "rok": 2016,
+      "zeme": "Francie",
+      "tfr": 1.92,
+      "Plodnost": "1,92"
+     },
+     {
+      "rok": 2017,
+      "zeme": "Francie",
+      "tfr": 1.89,
+      "Plodnost": "1,89"
+     },
+     {
+      "rok": 2018,
+      "zeme": "Francie",
+      "tfr": 1.87,
+      "Plodnost": "1,87"
+     },
+     {
+      "rok": 2019,
+      "zeme": "Francie",
+      "tfr": 1.86,
+      "Plodnost": "1,86"
+     },
+     {
+      "rok": 2020,
+      "zeme": "Francie",
+      "tfr": 1.82,
+      "Plodnost": "1,82"
+     },
+     {
+      "rok": 2021,
+      "zeme": "Francie",
+      "tfr": 1.83,
+      "Plodnost": "1,83"
+     },
+     {
+      "rok": 2022,
+      "zeme": "Francie",
+      "tfr": 1.78,
+      "Plodnost": "1,78"
+     },
+     {
+      "rok": 2023,
+      "zeme": "Francie",
+      "tfr": 1.66,
+      "Plodnost": "1,66"
+     },
+     {
+      "rok": 2024,
+      "zeme": "Francie",
+      "tfr": 1.61,
+      "Plodnost": "1,61"
+     },
+     {
+      "rok": 2025,
+      "zeme": "Francie",
+      "tfr": 1.56,
+      "Plodnost": "1,56"
+     },
+     {
+      "rok": 2000,
+      "zeme": "Maďarsko",
+      "tfr": 1.32,
+      "Plodnost": "1,32"
+     },
+     {
+      "rok": 2001,
+      "zeme": "Maďarsko",
+      "tfr": 1.31,
+      "Plodnost": "1,31"
+     },
+     {
+      "rok": 2002,
+      "zeme": "Maďarsko",
+      "tfr": 1.3,
+      "Plodnost": "1,30"
+     },
+     {
+      "rok": 2003,
+      "zeme": "Maďarsko",
+      "tfr": 1.27,
+      "Plodnost": "1,27"
+     },
+     {
+      "rok": 2004,
+      "zeme": "Maďarsko",
+      "tfr": 1.27,
+      "Plodnost": "1,27"
+     },
+     {
+      "rok": 2005,
+      "zeme": "Maďarsko",
+      "tfr": 1.3,
+      "Plodnost": "1,30"
+     },
+     {
+      "rok": 2006,
+      "zeme": "Maďarsko",
+      "tfr": 1.34,
+      "Plodnost": "1,34"
+     },
+     {
+      "rok": 2007,
+      "zeme": "Maďarsko",
+      "tfr": 1.31,
+      "Plodnost": "1,31"
+     },
+     {
+      "rok": 2008,
+      "zeme": "Maďarsko",
+      "tfr": 1.35,
+      "Plodnost": "1,35"
+     },
+     {
+      "rok": 2009,
+      "zeme": "Maďarsko",
+      "tfr": 1.32,
+      "Plodnost": "1,32"
+     },
+     {
+      "rok": 2010,
+      "zeme": "Maďarsko",
+      "tfr": 1.25,
+      "Plodnost": "1,25"
+     },
+     {
+      "rok": 2011,
+      "zeme": "Maďarsko",
+      "tfr": 1.23,
+      "Plodnost": "1,23"
+     },
+     {
+      "rok": 2012,
+      "zeme": "Maďarsko",
+      "tfr": 1.34,
+      "Plodnost": "1,34"
+     },
+     {
+      "rok": 2013,
+      "zeme": "Maďarsko",
+      "tfr": 1.34,
+      "Plodnost": "1,34"
+     },
+     {
+      "rok": 2014,
+      "zeme": "Maďarsko",
+      "tfr": 1.42,
+      "Plodnost": "1,42"
+     },
+     {
+      "rok": 2015,
+      "zeme": "Maďarsko",
+      "tfr": 1.45,
+      "Plodnost": "1,45"
+     },
+     {
+      "rok": 2016,
+      "zeme": "Maďarsko",
+      "tfr": 1.51,
+      "Plodnost": "1,51"
+     },
+     {
+      "rok": 2017,
+      "zeme": "Maďarsko",
+      "tfr": 1.51,
+      "Plodnost": "1,51"
+     },
+     {
+      "rok": 2018,
+      "zeme": "Maďarsko",
+      "tfr": 1.5,
+      "Plodnost": "1,50"
+     },
+     {
+      "rok": 2019,
+      "zeme": "Maďarsko",
+      "tfr": 1.51,
+      "Plodnost": "1,51"
+     },
+     {
+      "rok": 2020,
+      "zeme": "Maďarsko",
+      "tfr": 1.59,
+      "Plodnost": "1,59"
+     },
+     {
+      "rok": 2021,
+      "zeme": "Maďarsko",
+      "tfr": 1.61,
+      "Plodnost": "1,61"
+     },
+     {
+      "rok": 2022,
+      "zeme": "Maďarsko",
+      "tfr": 1.55,
+      "Plodnost": "1,55"
+     },
+     {
+      "rok": 2023,
+      "zeme": "Maďarsko",
+      "tfr": 1.51,
+      "Plodnost": "1,51"
+     },
+     {
+      "rok": 2024,
+      "zeme": "Maďarsko",
+      "tfr": 1.39,
+      "Plodnost": "1,39"
+     },
+     {
+      "rok": 2025,
+      "zeme": "Maďarsko",
+      "tfr": 1.31,
+      "Plodnost": "1,31"
+     },
+     {
+      "rok": 2000,
+      "zeme": "Česko",
+      "tfr": 1.15,
+      "Plodnost": "1,15"
+     },
+     {
+      "rok": 2001,
+      "zeme": "Česko",
+      "tfr": 1.15,
+      "Plodnost": "1,15"
+     },
+     {
+      "rok": 2002,
+      "zeme": "Česko",
+      "tfr": 1.17,
+      "Plodnost": "1,17"
+     },
+     {
+      "rok": 2003,
+      "zeme": "Česko",
+      "tfr": 1.18,
+      "Plodnost": "1,18"
+     },
+     {
+      "rok": 2004,
+      "zeme": "Česko",
+      "tfr": 1.23,
+      "Plodnost": "1,23"
+     },
+     {
+      "rok": 2005,
+      "zeme": "Česko",
+      "tfr": 1.29,
+      "Plodnost": "1,29"
+     },
+     {
+      "rok": 2006,
+      "zeme": "Česko",
+      "tfr": 1.34,
+      "Plodnost": "1,34"
+     },
+     {
+      "rok": 2007,
+      "zeme": "Česko",
+      "tfr": 1.45,
+      "Plodnost": "1,45"
+     },
+     {
+      "rok": 2008,
+      "zeme": "Česko",
+      "tfr": 1.51,
+      "Plodnost": "1,51"
+     },
+     {
+      "rok": 2009,
+      "zeme": "Česko",
+      "tfr": 1.51,
+      "Plodnost": "1,51"
+     },
+     {
+      "rok": 2010,
+      "zeme": "Česko",
+      "tfr": 1.51,
+      "Plodnost": "1,51"
+     },
+     {
+      "rok": 2011,
+      "zeme": "Česko",
+      "tfr": 1.43,
+      "Plodnost": "1,43"
+     },
+     {
+      "rok": 2012,
+      "zeme": "Česko",
+      "tfr": 1.45,
+      "Plodnost": "1,45"
+     },
+     {
+      "rok": 2013,
+      "zeme": "Česko",
+      "tfr": 1.46,
+      "Plodnost": "1,46"
+     },
+     {
+      "rok": 2014,
+      "zeme": "Česko",
+      "tfr": 1.53,
+      "Plodnost": "1,53"
+     },
+     {
+      "rok": 2015,
+      "zeme": "Česko",
+      "tfr": 1.57,
+      "Plodnost": "1,57"
+     },
+     {
+      "rok": 2016,
+      "zeme": "Česko",
+      "tfr": 1.63,
+      "Plodnost": "1,63"
+     },
+     {
+      "rok": 2017,
+      "zeme": "Česko",
+      "tfr": 1.69,
+      "Plodnost": "1,69"
+     },
+     {
+      "rok": 2018,
+      "zeme": "Česko",
+      "tfr": 1.71,
+      "Plodnost": "1,71"
+     },
+     {
+      "rok": 2019,
+      "zeme": "Česko",
+      "tfr": 1.71,
+      "Plodnost": "1,71"
+     },
+     {
+      "rok": 2020,
+      "zeme": "Česko",
+      "tfr": 1.74,
+      "Plodnost": "1,74"
+     },
+     {
+      "rok": 2021,
+      "zeme": "Česko",
+      "tfr": 1.83,
+      "Plodnost": "1,83"
+     },
+     {
+      "rok": 2022,
+      "zeme": "Česko",
+      "tfr": 1.64,
+      "Plodnost": "1,64"
+     },
+     {
+      "rok": 2023,
+      "zeme": "Česko",
+      "tfr": 1.46,
+      "Plodnost": "1,46"
+     },
+     {
+      "rok": 2024,
+      "zeme": "Česko",
+      "tfr": 1.36,
+      "Plodnost": "1,36"
+     },
+     {
+      "rok": 2025,
+      "zeme": "Česko",
+      "tfr": 1.28,
+      "Plodnost": "1,28"
+     }
+    ]
+   },
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "strokeJoin": "round"
+   },
+   "encoding": {
+    "color": {
+     "field": "zeme",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Švédsko",
+       "Francie",
+       "Maďarsko",
+       "Česko"
+      ],
+      "range": [
+       "#4a51ab",
+       "#0e839e",
+       "#f76800",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "type": "quantitative",
+      "title": "Rok",
+      "format": "d"
+     },
+     {
+      "field": "zeme",
+      "type": "nominal",
+      "title": "Země"
+     },
+     {
+      "field": "Plodnost",
+      "type": "nominal",
+      "title": "Dětí na ženu"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2010,
+      "zeme": "Švédsko",
+      "tfr": 1.98
+     },
+     {
+      "rok": 2010,
+      "zeme": "Francie",
+      "tfr": 2.03
+     },
+     {
+      "rok": 2021,
+      "zeme": "Maďarsko",
+      "tfr": 1.61
+     },
+     {
+      "rok": 2021,
+      "zeme": "Česko",
+      "tfr": 1.83
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 70
+   },
+   "encoding": {
+    "color": {
+     "field": "zeme",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Švédsko",
+       "Francie",
+       "Maďarsko",
+       "Česko"
+      ],
+      "range": [
+       "#4a51ab",
+       "#0e839e",
+       "#f76800",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "zeme": "Švédsko",
+      "tfr": 1.42,
+      "label": "Švédsko 1,42",
+      "ly": 1.42
+     },
+     {
+      "rok": 2025,
+      "zeme": "Francie",
+      "tfr": 1.56,
+      "label": "Francie 1,56",
+      "ly": 1.56
+     },
+     {
+      "rok": 2025,
+      "zeme": "Maďarsko",
+      "tfr": 1.31,
+      "label": "Maďarsko 1,31",
+      "ly": 1.335
+     },
+     {
+      "rok": 2025,
+      "zeme": "Česko",
+      "tfr": 1.28,
+      "label": "Česko 1,28",
+      "ly": 1.2550000000000001
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 7,
+    "baseline": "middle",
+    "fontWeight": "bold",
+    "fontSize": 12
+   },
+   "encoding": {
+    "y": {
+     "field": "ly"
+    },
+    "text": {
+     "field": "label"
+    },
+    "color": {
+     "field": "zeme",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "Švédsko",
+       "Francie",
+       "Maďarsko",
+       "Česko"
+      ],
+      "range": [
+       "#4a51ab",
+       "#0e839e",
+       "#f76800",
+       "#de1743"
+      ]
+     },
+     "legend": null
+    }
+   }
+  }
+ ]
+}

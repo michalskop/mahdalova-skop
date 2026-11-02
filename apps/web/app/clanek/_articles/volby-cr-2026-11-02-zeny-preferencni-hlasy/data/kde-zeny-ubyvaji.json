@@ -1,0 +1,132 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Žen ubývá už na kandidátkách. Křížky voličů jejich podíl v zastupitelstvech skoro nezměnily",
+    "subtitle": "Podíl žen mezi kandidáty, lídry kandidátek, kandidáty na volitelných místech (zvolenými, kdyby rozhodovalo jen pořadí na kandidátce) a skutečně zvolenými zastupiteli. Obecní volby 2026."
+  },
+  "width": 600,
+  "height": {
+    "step": 34
+  },
+  "data": {
+    "values": [
+      {
+        "krok": "kandidáti",
+        "podil": 35.7,
+        "n": "66 277 z 185 871",
+        "popisek": "35,7 %"
+      },
+      {
+        "krok": "lídři kandidátek (1. místo)",
+        "podil": 27.7,
+        "n": "6 151 z 22 180",
+        "popisek": "27,7 %"
+      },
+      {
+        "krok": "volitelná místa (zvolení podle pořadí)",
+        "podil": 30.6,
+        "n": "18 574 z 60 726",
+        "popisek": "30,6 %"
+      },
+      {
+        "krok": "skutečně zvolení (po křížcích voličů)",
+        "podil": 30.7,
+        "n": "18 635 z 60 767",
+        "popisek": "30,7 %"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "krok",
+      "type": "nominal",
+      "sort": [
+        "kandidáti",
+        "lídři kandidátek (1. místo)",
+        "volitelná místa (zvolení podle pořadí)",
+        "skutečně zvolení (po křížcích voličů)"
+      ],
+      "axis": {
+        "title": null,
+        "labelLimit": 320,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 20,
+        "cornerRadius": 1,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "podil",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": "podíl žen (%)",
+            "grid": true,
+            "gridColor": "#e8e2d6",
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "krok",
+            "title": "Skupina"
+          },
+          {
+            "field": "popisek",
+            "title": "Podíl žen"
+          },
+          {
+            "field": "n",
+            "title": "Žen"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "dx": 5,
+        "align": "left",
+        "color": "#101432",
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {
+          "field": "podil",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "_source": "ČSÚ – registry kandidátů pro volby do zastupitelstev obcí 2018, 2022 a 2026 (stav 11. 10. 2026); pohlaví odvozené z příjmení a jména; výpočet DataTimes.cz; bez 2 % kandidátů s nejistým pohlavím"
+}
