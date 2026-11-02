@@ -48,8 +48,7 @@ export const metadata: Metadata = {
 
 export default async function VyberPage() {
   // Fetch a large number to effectively show all published articles
-  // Články speciálů (href pod /specialy/) do Výběru nepatří, mají vlastní stránky (stejné pravidlo jako na homepage).
-  const articles = (await getArticles(1000)).filter((a) => !a.href?.startsWith('/specialy/'));
+  const articles = await getArticles(1000);
 
   return (
     <Container 
