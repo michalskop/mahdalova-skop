@@ -191,7 +191,7 @@ const MOTIVY = {
       for (let k = 0; k < N; k++) {
         const cx = xD + (k + 0.5) * d, podil = Math.max(0, Math.min(1, r.v - k));
         s += C(cx, cy, d * 0.42, 'none', ` stroke="${r.obrys ? BILA : SED}" stroke-width="${Math.max(1.5, d * 0.05)}" stroke-opacity="${r.obrys ? 0.8 : 0.6}"`);
-        if (podil > 0 && !r.obrys) { const cid = 'kc' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.42}" y="${cy - d * 0.42}" width="${d * 0.84 * podil}" height="${d * 0.84}"/></clipPath><g clip-path="url(#${cid})">${C(cx, cy, d * 0.42, TYRK)}</g>`; }
+        if (podil > 0) { const cid = 'kc' + id++; s += `<clipPath id="${cid}"><rect x="${cx - d * 0.42}" y="${cy - d * 0.42}" width="${d * 0.84 * podil}" height="${d * 0.84}"/></clipPath><g clip-path="url(#${cid})"${r.obrys ? ' opacity=".4"' : ''}>${C(cx, cy, d * 0.42, r.obrys ? BILA : TYRK)}</g>`; }
       }
       s += T(xV, cy + fz * 0.35, r.v.toFixed(2).replace('.', ','), 'start', r.obrys ? BILA : TYRK, fz, 700);
     });
@@ -239,7 +239,7 @@ const DEF = {
       { nazev: '30–34 let', rady: [{ n: 's maturitou', v: 1.1, barva: '#899aeb' }, { n: 'vysokoškolačky', v: 0.89, barva: CRIMSON }] }] } },
   '12-mezinarodni-srovnani': { motiv: 'hantle', titulek: 'Čtyři různé politiky, podobný pokles plodnosti', pod: 'Švédsko, Francie, Maďarsko i Kanada ztratily v letech 2021–2024 asi 0,2 dítěte na ženu, Česko 0,47',
     spec: { min: 1.1, max: 2.0, hlavicka: ['rok 2021', 'rok 2024'], rady: [{ n: 'Švédsko', a: 1.67, b: 1.43 }, { n: 'Francie', a: 1.83, b: 1.61, barva: '#899aeb' }, { n: 'Maďarsko', a: 1.63, b: 1.41, barva: '#ffcf02' }, { n: 'Kanada', a: 1.44, b: 1.25, barva: '#4fd6b4' }] } },
-  '19-plodnost-muzu': { rubrika: 'Explainer', motiv: 'kolecka', posun: { homepage: 0.05, square: 0.04, og: 0.04, instagram: 0.02, story: 0.012 }, titulek: 'Plodnost mužů se dá spočítat, vychází o 10 až 17 % níž než u žen', pod: 'V roce 2024 vychází na jednoho muže 1,14 až 1,23 dítěte, na jednu ženu 1,37',
+  '19-plodnost-muzu': { rubrika: 'Explainer', motiv: 'kolecka', logoVpravo: true, posun: { homepage: 0.05, square: 0.04, og: 0.04, instagram: 0.02, story: 0.012 }, titulek: 'Plodnost mužů se dá spočítat, vychází o 10 až 17 % níž než u žen', pod: 'V roce 2024 vychází na jednoho muže 1,14 až 1,23 dítěte, na jednu ženu 1,37',
     spec: { pozn: '1 kolečko = 1 dítě, rok 2024', rady: [{ n: 'na jednu ženu', v: 1.37 }, { n: 'na jednoho muže', v: 1.23 }, { n: 'k obnově populace', v: 2.1, obrys: true }] } },
   '08-politicke-sliby': { motiv: 'bloky', titulek: 'Jesle a školky má v Česku 8 % dětí do tří let', pod: 'V Evropské unii je to 40,6 %, dostupná péče o děti patří k nejúčinnějším opatřením' },
 };
