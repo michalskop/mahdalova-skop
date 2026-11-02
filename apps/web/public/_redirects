@@ -100,3 +100,6 @@
 /clanek/volby-cr-2026-10-23-referenda-vetrne-elektrarny /clanek/analyza-2026-10-23-referenda-vetrne-elektrarny 301
 /clanek/volby-cr-2026-10-23-referenda-vetrne-elektrarny/ /clanek/analyza-2026-10-23-referenda-vetrne-elektrarny 301
 /clanek/_articles/volby-cr-2026-10-23-referenda-vetrne-elektrarny/* /clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/:splat 301
+
+# Koalice ve velkých městech: datum vráceno na 26. 10. (2026-11-02)
+/clanek/volby-cr-2026-11-02-koalice-velka-mesta  /clanek/volby-cr-2026-10-26-koalice-velka-mesta  301

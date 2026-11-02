@@ -3,8 +3,10 @@ title: "Na Slovensku viní z války Rusko 40 procent lidí, v Polsku 85. Kremlu 
 date: "2026-09-28"
 author: "Kateřina Mahdalová"
 excerpt: "Kde je podle Media Literacy Indexu 2026 společnost vůči dezinformacím nejméně odolná, tam mají lidé podle Eurobarometru nejlepší mínění o Rusku. Sankce proti Rusku podporují dvě třetiny Čechů, zbraně pro Ukrajinu necelá třetina. Na Slovensku přejímá kremelský výklad války zhruba polovina lidí, z Evropské unie a NATO ale chce odejít pětina až čtvrtina."
-coverImage: "images/cover-homepage.webp"
-ogImage: "images/cover-og.jpg"
+coverTitulek: "Kde zabírá ruská<br>propaganda"
+coverPodtitulek: "<span style='color:#33b9d9;font-weight:600'>Sankce</span> podporují dvě třetiny Čechů,<br><span style='color:#c49ad8;font-weight:600'>zbraně pro Ukrajinu</span> necelá třetina"
+coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/09/analyza-2026-09-28-ruska-propaganda-v-eu/cover.webp"
+ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/09/analyza-2026-09-28-ruska-propaganda-v-eu/cover-og.jpg"
 filter: ["analýza"]
 promoted: 1
 tags: ["Rusko", "dezinformace", "propaganda", "Slovensko", "Robert Fico", "Ukrajina", "EU", "NATO", "GLOBSEC", "Eurobarometr", "Bulharsko", "Maďarsko"]

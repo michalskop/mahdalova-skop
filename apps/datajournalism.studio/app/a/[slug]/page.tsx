@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.title,
       description: article.excerpt,
       authors: [{ name: article.author }],
+      alternates: { canonical: articleUrl },
       openGraph: {
         title: article.title,
         description: article.excerpt,
@@ -119,24 +120,24 @@ export default async function ArticlePage({ params }: PageProps) {
           articleUrl={articleUrl}
           tags={article.tags}
         />
-        <ArticleRenderer {...article} slug={params.slug} />
+        <ArticleRenderer {...article} slug={params.slug} shareUrl={articleUrl} />
         <Box my="lg">
           <TagList tags={article.tags} />
         </Box>
         <Container
           size="md"
-          maw="928px"
+          maw="800px"
           w="100%"
           px={0}
           my="lg"
         >
-          <FollowBar />
+          <FollowBar label="Follow DataTimes:" exclude={["Google"]} />
         </Container>
         <Container 
               size="md" 
               // py="xl"
               bg="background.2"
-              maw="928px"
+              maw="800px"
               w="100%"
               p={0}
               m="0 auto"

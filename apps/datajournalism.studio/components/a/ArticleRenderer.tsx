@@ -2,11 +2,9 @@
 'use client';
 
 import { Anchor, Paper, Title, Text, Container, Stack, useMantineTheme } from '@mantine/core';
-import Image from 'next/image';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { MdxClient } from '@repo/ui/components/MdxClient';
 import type { MDXComponents } from 'mdx/types';
-import type { ImageProps } from 'next/image';
 import { CodeBlock } from './MediaBox';
 import { InfoBox } from './InfoBox'; // Import the InfoBox component
 import { FlourishEmbed } from '@/components/mdx/FlourishEmbed';
@@ -18,20 +16,43 @@ import { PartyFace } from '@/components/politics/PartyFace';
 import { MotionsStancesTable } from '@/components/politics/MotionsStancesTable';
 import RelatedArticlesComponent from '@repo/ui/components/RelatedArticles';
 import { Flag } from '@repo/ui/components/Flag';
+import { KeyNumbers } from '@repo/ui/components/KeyNumbers';
+import { Figure } from './Figure';
+import SupportBanner from '@/components/common/SupportBanner';
+import ArticleByline from '@/components/a/ArticleByline';
+import VegaChart from '@/components/charts/VegaChart';
+// English one-off charts for translated articles (ported from apps/web / apps/datatimes-org)
+import { BrazilGainsChartEn, BrazilRegionsChartEn } from '@/components/charts/BrazilProcChartsEn';
+import BrazilMunicipalMapEn from '@/components/charts/BrazilMunicipalMapEn';
+import { BrazilRunoffTimelineEn, BrazilRunoffStatesEn } from '@/components/charts/BrazilRunoffChartsEn';
+import { CduPredictionTimelineEn, CduThresholdDotsEn } from '@/components/charts/CduPredictionChartsEn';
+import SenatSlozeniEn from '@/components/charts/SenatSlozeniEn';
+import { SerbiaNightTimelineEn, SerbiaVotesChartEn } from '@/components/charts/SerbiaElectionChartsEn';
+import ChartCard from '@/components/charts/ChartCard';
 import type { Article } from '@repo/ui/lib/getArticles';
 // import yaml from 'js-yaml';
+
+// Article layout constants (see packages/ui/DESIGN.md → Article layout), the
+// same as on DataTimes.cz. Fonts come from the theme (IBM Plex Serif body /
+// IBM Plex Sans headings, set in ThemeProvider).
+const ARTICLE_MAX_WIDTH = 800;            // reading column width (px)
+const ARTICLE_BODY_FONT_SIZE = '1.0625rem'; // body copy = 17px
+const ARTICLE_TITLE_WEIGHT = 600;         // H1 weight (IBM Plex Sans SemiBold)
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
   title?: string;
   date?: string;
   author?: string;
+  translator?: string;
+  shareUrl?: string;
   slug: string;
   scrollyContent?: any; // Add scrollyContent to the ArticleProps
   htmlContent?: string | null;
   backgroundColor?: string;  // Optional background color
   textColor?: string;       // Optional text color
   withContainer?: boolean;  // Optional flag to control Container wrapper
+  withSupportBanner?: boolean; // Full-width donate strip below the article (default true)
 }
 
 export function ArticleRenderer({ 
@@ -39,12 +60,15 @@ export function ArticleRenderer({
   title,
   date,
   author,
+  translator,
+  shareUrl,
   slug = '',
   scrollyContent,
   htmlContent,
   backgroundColor,
   textColor,
-  withContainer = true  // Default to true for backward compatibility
+  withContainer = true,  // Default to true for backward compatibility
+  withSupportBanner = true
 }: ArticleProps) {
   const theme = useMantineTheme();
 
@@ -218,7 +242,7 @@ export function ArticleRenderer({
     ),
     
     p: ({ children }) => (
-      <Text component="div" mb="md" size="lg" c={textColor}>
+      <Text component="div" mb="md" size="lg" fz={ARTICLE_BODY_FONT_SIZE} c={textColor}>
         {children}
       </Text>
     ),
@@ -242,21 +266,16 @@ export function ArticleRenderer({
           : `/a/_articles/${slug}/images/${props.src.replace('images/', '')}`
         : '';
 
-      const imageProps: ImageProps = {
-        src: imageSrc,
-        alt: props.alt || '',
-        width: props.width ? Number(props.width) : 800,
-        height: props.height ? Number(props.height) : 400,
-        style: { maxWidth: '100%', height: 'auto' }
-      };
-
+      // Native responsive image: keeps the natural aspect ratio (no forced
+      // 800×400 that distorted square/portrait images). The export uses
+      // images.unoptimized, so next/image added nothing here.
       return (
-        <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
-          <Image 
-            {...imageProps} 
-            alt={props.alt || ''} 
-          />
-        </div>
+        <img
+          src={imageSrc}
+          alt={props.alt || ''}
+          loading="lazy"
+          style={{ display: 'block', maxWidth: '100%', height: 'auto', margin: '24px auto' }}
+        />
       );
     },
 
@@ -291,22 +310,76 @@ export function ArticleRenderer({
     },
 
     RelatedArticles: (props) => {
-      const pool = (mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined;
+      // DJS section keys (frontmatter `filter`) → reader-facing labels for the
+      // format badge in related boxes ("work" → Elections, "blog" → Context).
+      const relabel = (f: string) => ({ work: 'Elections', blog: 'Context' } as Record<string, string>)[f.trim().toLowerCase()] ?? f;
+      const pool = ((((mdxSource.scope as any)?.relatedArticlesPool as Article[] | undefined) ?? [])).map((a) => ({
+        ...a,
+        filter: Array.isArray(a.filter) ? a.filter.map(relabel) : a.filter ? relabel(a.filter) : a.filter,
+      }));
+      // Full-width box (cards in rows of three) without a filter/tag: always whole rows, at least
+      // 6 cards. Missing places are filled from the pool (sorted by shared tags in lib/articles.ts);
+      // unknown hand-picked slugs are dropped. Side boxes (position/float) and other presets unchanged.
+      const full = !props.position && !props.float && (!props.preset || props.preset === 'cards');
+      let extra: Record<string, unknown> = {};
+      if (full && !props.filter && !props.tag) {
+        const known = new Set(pool.map((a) => a.slug));
+        const picked: string[] = (props.slugs ?? []).filter((s: string) => known.has(s));
+        const target = Math.max(6, Math.ceil(picked.length / 3) * 3);
+        const fill = pool.map((a) => a.slug).filter((s) => !picked.includes(s)).slice(0, target - picked.length);
+        extra = { slugs: [...picked, ...fill], count: target };
+      }
       return (
         <RelatedArticlesComponent
-          pool={pool ?? []}
+          pool={pool}
           articleBasePath="/a"
-          locale="en-US"
+          authorBasePath="/author"
+          locale="en-GB"
           heading="Read more"
           {...props}
+          {...extra}
         />
       );
     },
 
-    HtmlEmbed: ({ file, ...rest }) => {
+    Figure: (props: any) => <Figure slug={slug} {...props} />,
+    SupportBanner: (props: any) => <SupportBanner {...props} />,
+    KeyNumbers: ({ yamlFile, ...props }: any) => {
+      if (yamlFile) {
+        const keyNumbersData = (mdxSource.scope as any)?.keyNumbersData as Record<string, any> | undefined;
+        const data = keyNumbersData?.[yamlFile];
+        if (!data) {
+          return <div className="text-red-500">KeyNumbers data not found for {yamlFile}</div>;
+        }
+        return <KeyNumbers label={data.label ?? 'Key numbers'} numbers={data.numbers} {...props} />;
+      }
+      return <KeyNumbers label="Key numbers" {...props} />;
+    },
+    VegaChart: ({ dataFile }: { dataFile?: string }) => {
+      const vegaChartData = (mdxSource.scope as any)?.vegaChartData as Record<string, any> | undefined;
+      const spec = dataFile ? vegaChartData?.[dataFile] : undefined;
+      if (!dataFile || !spec) {
+        return <div className="text-red-500">VegaChart data not found for {dataFile}</div>;
+      }
+      return <VegaChart spec={spec} />;
+    },
+    BrazilGainsChartEn,
+    BrazilRegionsChartEn,
+    BrazilMunicipalMapEn,
+    BrazilRunoffTimelineEn,
+    BrazilRunoffStatesEn,
+    CduPredictionTimelineEn,
+    CduThresholdDotsEn,
+    SenatSlozeniEn,
+    SerbiaNightTimelineEn,
+    SerbiaVotesChartEn,
+
+    // With title/subtitle/source the embed is wrapped in ChartCard (same frame as other charts).
+    HtmlEmbed: ({ file, title, subtitle, source, ...rest }) => {
       const htmlEmbedData = (mdxSource.scope as any)?.htmlEmbedData as Record<string, string> | undefined;
       const htmlContent = file ? htmlEmbedData?.[file] : undefined;
-      return <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
+      const embed = <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
+      return title || subtitle || source ? <ChartCard title={title} subtitle={subtitle} source={source}>{embed}</ChartCard> : embed;
     },
   };
 
@@ -316,6 +389,7 @@ export function ArticleRenderer({
       p="md"
       pt="xl"
       className='markdown-content'
+      c="brandNavy.9"
       styles={{
         root: {
           backgroundColor: backgroundColor || theme.colors.background[1],
@@ -327,12 +401,14 @@ export function ArticleRenderer({
           <Title
             order={1}
             size="h1"
-            fw={500}
+            fw={ARTICLE_TITLE_WEIGHT}
             c={textColor}
+            className="article-hero-title"
             styles={{
               root: {
                 color: textColor || theme.colors.brand[6],
-                fontSize: '2.75rem',
+                // Size is responsive via .article-hero-title in globals.css
+                // (2.625rem ≥769px / 2rem ≤768px); no inline fontSize here.
               }
             }}
           >
@@ -340,21 +416,37 @@ export function ArticleRenderer({
           </Title>
         )}
 
-        {date && (
-          <Text size="sm" c={textColor || "dimmed"}>
-            {author ? `${author.toUpperCase()} • ` : ''}
-            {new Date(date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })}
-          </Text>
-        )}
+        {date && author ? (
+          <ArticleByline
+            author={author}
+            translator={translator}
+            date={date}
+            shareUrl={shareUrl ?? ''}
+            shareTitle={title ?? ''}
+          />
+        ) : date ? (
+          <>
+            <Text size="sm" c={textColor || 'dimmed'}>
+              {new Date(date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </Text>
+            {translator && (
+              <Text size="sm" c={textColor || 'dimmed'} mt={-12}>
+                {translator}
+              </Text>
+            )}
+          </>
+        ) : null}
 
         <div className="article-content">
           {htmlContent ? <RawHtmlEmbed html={htmlContent} assetBasePath={`/a/_articles/${slug}`} /> : null}
           <MdxClient {...mdxSource} components={components} />
         </div>
+
+        {withSupportBanner ? (
+          <div style={{ clear: 'both', marginTop: '0.5rem' }}>
+            <SupportBanner />
+          </div>
+        ) : null}
       </Stack>
     </Paper>
   );
@@ -365,9 +457,14 @@ export function ArticleRenderer({
   return withContainer ? (
     <Container
       size="md"
+      // Reading column 800px as on DataTimes.cz (after The Nerve).
+      maw={ARTICLE_MAX_WIDTH}
       pb="lg"
       className="article-links"
-      style={textColor ? ({ '--article-link-color': textColor } as React.CSSProperties) : undefined}
+      style={{
+        overflow: 'visible',
+        ...(textColor ? ({ '--article-link-color': textColor } as React.CSSProperties) : {}),
+      }}
     >
       {content}
     </Container>

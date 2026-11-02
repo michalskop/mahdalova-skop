@@ -5,17 +5,17 @@ import VisualFrame from './VisualFrame';
 import styles from './HealthcareVisuals.module.css';
 
 export default function LongTermCareFlow() {
-  const [year, setYear] = useState<2024 | 2050>(2024);
-  const seniorShare = year === 2024 ? '20,7 %' : '29 %';
-  const people = year === 2024 ? 10 : 14;
+  const [year, setYear] = useState<2025 | 2050>(2025);
+  const seniorShare = year === 2025 ? '20,4 %' : '27,2 %';
+  const people = year === 2025 ? 10 : 14;
   return (
     <VisualFrame
       title="Po propuštění z nemocnice se tok péče rozpadá"
-      subtitle="Schéma ukazuje, kdo přebírá každodenní práci. Šířka spojnic není objemem peněz; stát srovnatelný tok hodin péče dosud nezveřejňuje."
-      source={<><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/country-health-profile-2025-country-notes_7e72146d/czechia_e16c6d2d/7d087e31-en.pdf">OECD, Country Health Profile Czechia 2025</a>; <a href="https://csu.gov.cz/pocet-struktura-a-projekce-obyvatel">ČSÚ, projekce obyvatelstva</a></>}
+      subtitle="Schéma ukazuje, kdo přebírá každodenní práci. Šířka spojnic ani počet teček nejsou měřená data; podíl lidí 65+ je z projekce Eurostatu."
+      source={<><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/country-health-profile-2025-country-notes_7e72146d/czechia_e16c6d2d/7d087e31-en.pdf">OECD, Country Health Profile Czechia 2025</a>; <a href="https://ec.europa.eu/eurostat/databrowser/view/proj_23np">Eurostat, projekce obyvatelstva</a></>}
     >
       <div className={styles.controls}>
-        <button type="button" aria-pressed={year === 2024} onClick={() => setYear(2024)}>Dnes</button>
+        <button type="button" aria-pressed={year === 2025} onClick={() => setYear(2025)}>Rok 2025</button>
         <button type="button" aria-pressed={year === 2050} onClick={() => setYear(2050)}>Rok 2050</button>
       </div>
       <svg className={styles.flowSvg} viewBox="0 0 920 470" role="img" aria-label="Tok dlouhodobé péče">
@@ -54,7 +54,7 @@ export default function LongTermCareFlow() {
         <text x="540" y="430" fontSize="16" fontWeight="700" fill="#315f8c">EU: 18 %</text>
       </svg>
       <div className={styles.note}>
-        Přepínač mění demografický tlak, nikoli přesnou projekci toku služeb. ČSÚ očekává růst podílu lidí 65+ přibližně z 21 na 29 procent populace; rozdělení hodin mezi rodiny a formální služby stát v jednotné časové řadě nemá.
+        Přepínač mění demografický tlak, nikoli přesnou projekci toku služeb. Podle základní projekce Eurostatu vzroste podíl lidí 65+ z 20,4 % v roce 2025 na 27,2 % v roce 2050; rozdělení hodin mezi rodiny a formální služby stát v jednotné časové řadě nemá.
       </div>
     </VisualFrame>
   );

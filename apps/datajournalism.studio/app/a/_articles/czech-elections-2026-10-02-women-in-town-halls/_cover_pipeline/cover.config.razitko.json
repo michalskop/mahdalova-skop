@@ -1,0 +1,76 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/images/cover-homepage.png",
+      "otisk": "cd4560e1437ded8b",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/_cover_pipeline/cover.config.cjs": "905d660af2020f1b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [
+          "titulek zasahuje do rohu pro štítek rubriky (x ≥ 950, y ≤ 280) – v malých kartách ho štítek zakryje"
+        ],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/images/cover-og.jpg",
+      "otisk": "5e3dcb4ae79e9cf3",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/_cover_pipeline/cover.config.cjs": "905d660af2020f1b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/images/cover-square.png",
+      "otisk": "c05ad17eef7c5899",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/_cover_pipeline/cover.config.cjs": "905d660af2020f1b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/images/cover-instagram.png",
+      "otisk": "cd97b777f7053a13",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/_cover_pipeline/cover.config.cjs": "905d660af2020f1b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/images/cover-story.png",
+      "otisk": "0a25b26ba5208e05",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/_cover_pipeline/cover.config.cjs": "905d660af2020f1b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-30T19:35:44.306Z",
+  "clanek": "apps/datajournalism.studio/app/a/_articles/czech-elections-2026-10-02-women-in-town-halls/index.md",
+  "titulekClanku": "Women make up a third of candidates for Czech municipal councils but only a quarter of mayors. In big cities, even fewer",
+  "texty": {
+    "stitek": "Analysis • Czech municipal elections 2026",
+    "nadtitulek": "",
+    "titulek": "The higher up, the fewer women",
+    "podtitulek": "Women make up a third of municipal candidates, but only a quarter of mayors"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/images/cover-homepage.png",
+      "otisk": "ee718cb60bac8a5a",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/cover.config.cjs": "834aa1292e70d208",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/motiv.cjs": "08ad54f48daf4fd2"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/images/cover-og.jpg",
+      "otisk": "fc5099af10d0b123",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/cover.config.cjs": "834aa1292e70d208",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/motiv.cjs": "08ad54f48daf4fd2"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/images/cover-square.png",
+      "otisk": "e9dd80f48c7a6de2",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/cover.config.cjs": "834aa1292e70d208",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/motiv.cjs": "08ad54f48daf4fd2"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/images/cover-instagram.png",
+      "otisk": "239817867a20337a",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/cover.config.cjs": "834aa1292e70d208",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/motiv.cjs": "08ad54f48daf4fd2"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/images/cover-story.png",
+      "otisk": "9133b24be857ff8c",
+      "vstupy": {
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/cover.config.cjs": "834aa1292e70d208",
+        "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/motiv.cjs": "08ad54f48daf4fd2"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-10-31T19:29:36.798Z",
+  "clanek": "apps/datajournalism.studio/app/a/_articles/analysis-2026-04-02-who-profits-from-expensive-gasoline/index.md",
+  "titulekClanku": "Data: Capping Gas Station Margins Won't Make Much Difference in Your Wallet",
+  "texty": {
+    "stitek": "Analysis • Czech Republic • Fuel prices",
+    "nadtitulek": "",
+    "titulek": "Babiš can’t do the maths",
+    "podtitulek": "Capping petrol station margins won’t make fuel cheaper for most people"
+  }
+}

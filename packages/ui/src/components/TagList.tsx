@@ -17,8 +17,10 @@ export function TagList({ tags, size = 'sm', spacing = 8 }: TagListProps) {
   }
 
   return (
-    <Container>
-      <Group gap={spacing} mt="xs">
+    // Stejný 800px sloupec jako text článku a lišta Sledujte DataTimes pod ním
+    // (výchozí Container má 960 px, takže štítky ujížděly doleva), vycentrované.
+    <Container maw={800} px="md">
+      <Group gap={spacing} mt="xs" justify="center">
         {tags.map((tag) => (
           <Link
             key={tag}

@@ -1,0 +1,109 @@
+/* Card content of the /about timeline. Layout, line, logos and the card
+   itself come from the shared RouteTimeline. */
+
+.bubbleMeta {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 16px;
+}
+
+.bubbleEyebrow {
+  color: var(--mantine-color-brand-6);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bubbleEyebrowPlain {
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+/* Compact person header: portrait left, name + role beside it */
+.bubbleHeader {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bubbleHeaderImg {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: clamp(78px, 10vw, 100px);
+  object-fit: cover;
+  width: clamp(78px, 10vw, 100px);
+}
+
+.bubbleHeaderText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bubbleHeaderText h3 {
+  margin: 0;
+}
+
+.bubbleHeaderLead {
+  color: var(--mantine-color-brand-9);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.bubbleChips {
+  color: var(--mantine-color-brand-6) !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em;
+  margin: 18px 0 0 !important;
+  text-transform: uppercase;
+}
+
+.bubbleChipsCentered {
+  text-align: center;
+}
+
+/* Centred masthead (title + red caps line below it) */
+.bubbleMasthead {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.bubbleMasthead h3 {
+  margin: 0;
+}
+
+.bubbleMasthead h3.titleInk {
+  color: var(--mantine-color-brandNavy-9);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.bubbleCta {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0 24px;
+}
+
+.afterCta {
+  margin-bottom: 24px !important;
+}
+
+.bubbleBars {
+  margin-top: 4px;
+}
+
+@media (max-width: 820px) {
+  .bubbleHeader {
+    flex-wrap: wrap;
+  }
+}

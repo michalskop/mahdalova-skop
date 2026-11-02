@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
-- [Bez arabských stran nemá v izraelském parlamentu většinu Netanjahu ani Eisenkot](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou)
-- [Volby v Izraeli: Netanjahu většinu nezíská, ukazuje predikce](https://www.mahdalova-skop.cz/clanek/volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce)
+- [O ženách na radnicích nerozhodují voliči, ale strany. Kolik jich usedne, určí pořadí na kandidátkách](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-11-02-zeny-preferencni-hlasy)
+- [Osadníci útočí čím dál častěji, palestinský stát nechce ani Netanjahu, ani Eisenkot](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-31-osadnici-na-zapadnim-brehu)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
@@ -31,19 +31,19 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 - [Filmový kalendář 2026](https://www.mahdalova-skop.cz/clanek/kontext-2026-01-26-filmove-ceny-a-festivaly-kalendar-2026)
 
 ### Mezinárodní politika
+- [Osadníci útočí čím dál častěji, palestinský stát nechce ani Netanjahu, ani Eisenkot](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-31-osadnici-na-zapadnim-brehu)
 - [Počet obyvatel genocidu neměří. Proč neobstojí graf, podle kterého v Gaze o genocidu nejde](https://www.mahdalova-skop.cz/clanek/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri)
 - [Bez arabských stran nemá v izraelském parlamentu většinu Netanjahu ani Eisenkot](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou)
-- [Vyšetřovatelé OSN viní Izrael z vyhlazování Palestinců na Západním břehu](https://www.mahdalova-skop.cz/clanek/kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu)
 
 ### Dezinformace a média
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
 - [Počet obyvatel genocidu neměří. Proč neobstojí graf, podle kterého v Gaze o genocidu nejde](https://www.mahdalova-skop.cz/clanek/explainer-2026-10-30-pocet-obyvatel-genocidu-nemeri)
-- [Vyšetřovatelé OSN viní Izrael z vyhlazování Palestinců na Západním břehu](https://www.mahdalova-skop.cz/clanek/kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu)
+- [Vyšetřování OSN: Izrael po příměří dál páchá v Gaze genocidu](https://www.mahdalova-skop.cz/clanek/kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu)
 
 ### Vzdělávání a společnost
+- [Vučić voliče neztratil. Porazila ho sjednocená opozice a vyšší účast](https://www.mahdalova-skop.cz/clanek/volby-srbsko-2026-10-26-studenti)
 - [Dívek léčených s poruchou příjmu potravy je třikrát víc než před patnácti lety](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-25-poruchy-prijmu-potravy)
-- [Lékařům, veterinářům a ředitelkám škol voliči věří. Do zastupitelstva je posunou i z konce kandidátky](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-10-15-profese-zastupitelu)
-- [Česko pouští matky předškoláků do zaměstnání nejméně v EU. Vláda na to odpovídá vyšším rodičákem](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu)
+- [Vučić uznal porážku dřív, než ji ukázalo sčítání. Predikce ji potvrdila za půl hodiny](https://www.mahdalova-skop.cz/clanek/volby-srbsko-2026-10-25-predikce)
 
 ### Technologie a AI
 - [Vibe coding: když aplikaci postaví AI a nikdo neví, co je uvnitř](https://www.mahdalova-skop.cz/clanek/podcast-mahdalky-2026-03-24-ai-a-bezpecnost)
