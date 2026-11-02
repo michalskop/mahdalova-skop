@@ -342,6 +342,8 @@ Ptáme se vždy na tři věci:
 
 **Změna URL publikovaného článku** = vždy 301 přesměrování ze staré URL v `apps/web/public/_redirects` (i s variantou se `/` a s `/clanek/_articles/<slug>/*` pro obrázky), oprava všech interních odkazů a `RelatedArticles`, přegenerování `sitemap.xml` a `llms.txt`. Starou URL, která už byla sdílená, nerušíme – jen přesměrováváme.
 
+**Změna data = změna URL.** Datum ve slugu musí sedět s `date`, jinak `checkArticles` zastaví build a na Cloudflare se nenasadí nic, ani ostatní změny z `main`. Hub to zatím nehlídá: když v něm změníš datum, commit projde do `main`, ale web zůstane na starém stavu, dokud se složka nepřejmenuje (s 301 jako výše). *(3. 11. 2026, ženy a preferenční hlasy: datum 26. 10. z hubu se nepropsalo.)*
+
 *Pravidlo platí od 2026-09-23 (po chybném přejmenování Steigerova profilu na slug bez rubriky a data). Vlastník: Kateřina Mahdalová.*
 
 ## Skrytý čas publikace (`time`)
