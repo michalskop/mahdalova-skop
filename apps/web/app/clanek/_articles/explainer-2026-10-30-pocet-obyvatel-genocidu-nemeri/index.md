@@ -1,6 +1,7 @@
 ---
 title: "Počet obyvatel genocidu neměří. Proč neobstojí graf, podle kterého v Gaze o genocidu nejde"
 date: "2026-10-30"
+time: "07:48"
 author: "Kateřina Mahdalová"
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
