@@ -1,6 +1,6 @@
 ---
 title: "Ve velkých městech vládne ANO s opozicí. S vládními partnery zatím nikde"
-date: "2026-11-02"
+date: "2026-10-26"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Tři týdny po komunálních volbách má ANO dohodnutou koalici v 9 z 27 největších měst. V osmi z nich vládne se stranami, které jsou ve Sněmovně v opozici. SPD, Motoristé ani PRO nejsou v žádné z 22 dohodnutých koalic."
 coverImage: "images/cover-homepage.png"
