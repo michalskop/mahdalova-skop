@@ -1,6 +1,6 @@
 ---
 title: "O ženách na radnicích nerozhodují voliči, ale strany. Kolik jich usedne, určí pořadí na kandidátkách"
-date: "2026-11-02"
+date: "2026-10-26"
 time: "07:30"
 author: "Kateřina Mahdalová"
 excerpt: "Podle pořadí na kandidátkách by v zastupitelstvech obcí zasedlo 30,6 % žen, zvoleno jich bylo 30,7 %. O tom, kolik žen usedne na radnicích, tak rozhodují hlavně strany, když sestavují kandidátky. Křížky voličů na tom skoro nic nezměnily, i když typická kandidátka dostala o dvě procenta méně hlasů než muž na téže kandidátce a ženy na mateřské nejméně ze všech. Prošli jsme všech 189 908 kandidátů obecních voleb 2026."
