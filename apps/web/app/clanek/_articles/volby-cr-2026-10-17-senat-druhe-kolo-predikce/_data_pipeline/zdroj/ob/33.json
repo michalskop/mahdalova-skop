@@ -1,0 +1,21 @@
+{
+  "id" : "20261009/vysled/obvod/33.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":33},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Děčín",
+  "prehled" : [
+  [1,143,143,100,101496,35869,35.34,17,35177,34182,97.17]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 87,
+  "vysledky" : [
+  [1,"Skalický Jan Ing.","PRO","PRO","PRO",3539,10.35,null,null,false,false,1265,1265,1265],
+  [2,"Lehká Anna Mgr. Ing.","MÍSTNÍ HNHRM","MÍSTNÍ HNHRM","MÍSTNÍ HNHRM",3574,10.45,null,null,false,false,112,112,112],
+  [3,"Linhart Zbyněk Ing.","STAN+SLK","STAN","BEZPP",17850,52.22,null,null,false,false,1164,166,99],
+  [4,"Hejcman Michal prof. RNDr. Mgr. Ph.D. et Ph.D.","ANO","ANO","BEZPP",6882,20.13,null,null,false,false,768,768,99],
+  [5,"Štross Miroslav Ing. arch.","Zelen+Pirát+SEN","Zelení","Zelení",2337,6.83,null,null,false,false,1852,5,5]
+],
+  "postupuje" : [],
+  "zvoleny" : 3
+}

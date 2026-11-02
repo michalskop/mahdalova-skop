@@ -1,0 +1,23 @@
+{
+  "id" : "20261009/vysled/obvod/60.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":60},
+  "generovano" : "2026-10-17T16:27:52",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Brno-město",
+  "prehled" : [
+  [1,123,123,100,97578,48150,49.35,14,47314,46082,97.4],
+  [2,123,123,100,97506,18473,18.95,11,18452,18319,99.28]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 83,
+  "vysledky" : [
+  [1,"Papoušek Zdeněk PhDr.","KDUODSPirTOPFBr","ODS","BEZPP",19395,42.08,12051,65.78,false,false,1694,53,99],
+  [2,"Samková Klára Alžběta JUDr. Ph.D.","Stačilo!","Stačilo!","BEZPP",1355,2.94,0,0,false,false,1298,1298,99],
+  [3,"Holcnerová Veronika","Kruh","Kruh","Kruh",1896,4.11,0,0,false,false,1707,1707,1707],
+  [4,"Štěrba Jaroslav prof. MUDr. Ph.D.","ANO","ANO","BEZPP",9275,20.12,0,0,false,false,768,768,99],
+  [5,"Zitterbart Karel MUDr. Ph.D.","STAN","STAN","BEZPP",11269,24.45,6268,34.21,false,false,166,166,99],
+  [6,"Turánek Jaroslav prof. RNDr. CSc., DSc.","SPD","SPD","BEZPP",2892,6.27,0,0,false,false,1114,1114,99]
+],
+  "postupuje" : [1,5],
+  "zvoleny" : 1
+}

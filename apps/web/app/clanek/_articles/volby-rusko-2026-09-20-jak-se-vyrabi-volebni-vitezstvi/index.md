@@ -3,10 +3,11 @@ title: "Ruské volby: Jak se vyrábí volební vítězství"
 date: "2026-09-20"
 author: "Kateřina Mahdalová"
 excerpt: "Svobodné volby? Ruský „svátek demokracie“ se odehrává ve znamení přísných kvót a selekce."
-coverImage: "images/rusko-volby-jak-se-vyrabi-vitezstvi-datatimes.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
-coverFit: contain
-coverBg: "brandChocolate.9"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
 tags: ["Rusko", "ruské volby 2026", "Jednotné Rusko", "Jabloko", "elektronické hlasování", "okupovaná území", "volební podvody", "Kreml", "Duma", "válka na Ukrajině", "volby"]
 promoted: 1

@@ -1,0 +1,22 @@
+{
+  "id" : "20261009/vysled/obvod/69.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":69},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Frýdek-Místek",
+  "prehled" : [
+  [1,124,124,100,102332,45455,44.42,13,44745,43405,97.01]
+],
+  "existujePdf" : false,
+  "vysledky" : [
+  [1,"Hrnčárek Petr Ing.","KSČM","KSČM","KSČM",981,2.26,null,null,false,false,47,47,47],
+  [2,"Korč Petr","NMFM","NMFM","NMFM",14095,32.47,null,null,false,false,799,799,799],
+  [3,"Lisková Nela","NEZLOMNÍ","NEZLOMNÍ","NEZLOMNÍ",2123,4.89,null,null,false,false,1701,1701,1701],
+  [4,"Hompora René","Švýcarská dem.","Švýcarská dem.","BEZPP",1334,3.07,null,null,false,false,752,752,99],
+  [5,"Krpel Tomáš Mgr.","SPD","SPD","SPD",5647,13.01,null,null,false,false,1114,1114,1114],
+  [6,"Pešatová Helena RNDr.","STAN+Piráti+TOP","STAN","BEZPP",15085,34.75,null,null,false,false,1472,166,99],
+  [7,"Navrátil Zdeněk Ing.","Evo","Evo","Evo",4140,9.53,null,null,false,false,1736,1736,1736]
+],
+  "postupuje" : [2,6],
+  "zvoleny" : null
+}

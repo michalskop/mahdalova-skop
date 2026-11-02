@@ -1,0 +1,24 @@
+{
+  "id" : "20261009/vysled/obvod/72.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":72},
+  "generovano" : "2026-10-17T16:08:47",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Ostrava-město",
+  "prehled" : [
+  [1,88,88,100,88457,34959,39.52,16,34362,33247,96.76],
+  [2,88,88,100,88434,19085,21.58,12,19077,19003,99.61]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 84,
+  "vysledky" : [
+  [1,"Loprais Milan","SPD+PRO","PRO","PRO",4239,12.75,0,0,false,false,1535,1265,1265],
+  [2,"Jančík Petr doc. Ing. Ph.D.","Ostravak","Ostravak","BEZPP",2071,6.22,0,0,false,false,755,755,99],
+  [3,"Šimetka Ondřej doc. MUDr. Ph.D., MBA","KDUODSSTANPiTOP","ODS","BEZPP",15542,46.74,12524,65.9,false,false,1655,53,99],
+  [4,"Baránková Vilamová Lucie Ing. Ph.D.","ANO","ANO","ANO",10177,30.61,6479,34.09,false,false,768,768,768],
+  [5,"Štědroň Radoslav RNDr.","Švýcarská dem.","Švýcarská dem.","Švýcarská dem.",388,1.16,0,0,false,false,752,752,752],
+  [6,"Iwoniak Radek Ing.","ČSSD","ČSSD","ČSSD",206,0.61,0,0,false,false,759,759,759],
+  [7,"Režný Štefan","ReMeK","ReMeK","ReMeK",624,1.87,0,0,false,false,1293,1293,1293]
+],
+  "postupuje" : [3,4],
+  "zvoleny" : 3
+}

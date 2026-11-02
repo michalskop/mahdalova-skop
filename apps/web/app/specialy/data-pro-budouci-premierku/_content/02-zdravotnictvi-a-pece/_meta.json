@@ -18,25 +18,107 @@
   "intro": {
     "title": "Kdo vás bude léčit – a kdo se o vás postará potom",
     "textBefore": "Každá vláda slibuje do zdravotnictví víc peněz, víc sester a víc lékařů. A na první pohled se daří: lékařů je v Česku nejvíc v novodobé historii, mezi roky 2020 a 2024 jich přibylo přes tři a půl tisíce. Jenže ve stejné zemi zavírají ordinace bez náhrady a statisíce lidí hledají praktika, pediatra nebo zubaře, který by je vůbec přijal.",
-    "textAfter": "Celostátní součet totiž o dostupnosti péče nevypovídá. Rozhoduje věk lékařů – do roku 2035 dosáhne důchodového věku 53 % praktiků –, jejich rozmístění, skutečné úvazky a smlouvy s pojišťovnami. A rozhoduje i to, co nastává po nemocnici: do dlouhodobé péče posílá Česko 13 % zdravotních výdajů proti 18 % v EU a rozdíl dnes odpracovávají rodiny. Kapitola proto sleduje obě otázky z titulku – kdo bude léčit a kdo se postará potom.",
-    "textClosing": "Jak stejné problémy řeší jinde – norské sestry s rozšířenými kompetencemi, rakouské pobídky pro venkovské lékaře, japonská lekce ze stárnutí – a nově i to, co součty zakrývají: zubaři bez smluv, nemocniční miliardy bez měřitelných výsledků, neviditelná práce pečujících rodin, vlastníci soukromé péče a třetí návrat ministra Vojtěcha."
+    "textAfter": "Celostátní součet totiž o dostupnosti péče nevypovídá. Rozhoduje věk lékařů – do roku 2035 dosáhne důchodového věku 53 % praktických lékařů –, jejich rozmístění, skutečné úvazky a smlouvy s pojišťovnami. A rozhoduje i to, co nastává po nemocnici: do dlouhodobé péče posílá Česko 13 % zdravotních výdajů proti 18 % v EU a rozdíl dnes odpracovávají rodiny. Kapitola proto sleduje obě otázky z titulku – kdo bude léčit a kdo se postará potom.",
+    "textClosing": "Jak stejné problémy řeší jinde – rakouská primární centra a norské sestry, Polsko, Slovensko, Maďarsko a Německo na jedné straně, japonská a jihokorejská zkušenost na druhé – a co součty zakrývají: čekací doby, které se neměří, zubaři bez smluv, nemocniční miliardy bez měřitelných výsledků, platba státu za státní pojištěnce, vlastníci soukromé péče a třetí návrat ministra Vojtěcha."
   },
   "tiles": [
-    { "slug": "explainer-drg", "topic": "Explainer" },
-    { "slug": "svet-japonsko-stari", "topic": "Svět" },
-    { "slug": "04-norsko-sestry", "topic": "Evropa" },
-    { "slug": "01-pyramida", "topic": "Analýza" },
-    { "slug": "02-stari", "topic": "Analýza" },
-    { "slug": "03-digital", "topic": "Analýza" },
-    { "slug": "05-overili-53-procent", "topic": "Investigace" },
-    { "slug": "06-rakousko-udrzet-lekare", "topic": "Komparace" }
+    {
+      "slug": "explainer-drg",
+      "topic": "Explainer",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/explainer-drg/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "svet-japonsko-stari",
+      "topic": "Svět",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/svet-japonsko-stari/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "04-sestry-a-skupinove-praxe",
+      "topic": "Evropa",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/04-sestry-a-skupinove-praxe/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "01-pyramida",
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/01-pyramida/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "02-stari",
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/02-stari/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "03-digital",
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/03-digital/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    }
   ],
   "postSupportTiles": [
-    { "slug": "07-zubari", "topic": "Analýza", "fullWidth": true },
-    { "slug": "08-odbornosti-2035", "topic": "Analýza" },
-    { "slug": "09-nemocnice", "topic": "Analýza" },
-    { "slug": "10-kdo-se-postara", "topic": "Péče", "fullWidth": true },
-    { "slug": "11-kdo-vlastni-peci", "topic": "Investigace" },
-    { "slug": "12-treti-navrat-vojtecha", "topic": "Kontext" }
+    {
+      "slug": "07-zubari",
+      "topic": "Analýza",
+      "fullWidth": true,
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/07-zubari/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "09-nemocnice",
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/09-nemocnice/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "10-kdo-se-postara",
+      "topic": "Péče",
+      "fullWidth": true,
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/10-kdo-se-postara/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "11-kdo-vlastni-peci",
+      "topic": "Investigace",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/11-kdo-vlastni-peci/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "12-treti-navrat-vojtecha",
+      "topic": "Kontext",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/12-treti-navrat-vojtecha/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "13-cekaci-doby",
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/13-cekaci-doby/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "14-kolik-stoji-kdo-plati",
+      "topic": "Analýza",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/14-kolik-stoji-kdo-plati/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "15-sousede-stredni-evropa",
+      "topic": "Komparace",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/15-sousede-stredni-evropa/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "slug": "svet-jizni-korea-lekari",
+      "topic": "Svět",
+      "image": "/specialy/dpbp/og/02-zdravotnictvi-a-pece/svet-jizni-korea-lekari/cover-og.jpg",
+      "imageAspect": "1200 / 630"
+    },
+    {
+      "web": "analyza-2026-09-24-navrat-karencni-doby-nedava-smysl",
+      "topic": "Analýza"
+    }
   ]
 }

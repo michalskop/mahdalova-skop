@@ -1,0 +1,23 @@
+{
+  "id" : "20261009/vysled/obvod/30.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":30},
+  "generovano" : "2026-10-17T15:47:52",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Kladno",
+  "prehled" : [
+  [1,150,150,100,118290,49847,42.14,17,49118,47933,97.59],
+  [2,150,150,100,118250,21945,18.56,21,21931,21771,99.27]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 82,
+  "vysledky" : [
+  [1,"Klas Jan Ing.","NČ","NČ","BEZPP",3886,8.1,0,0,false,false,1722,1722,99],
+  [2,"Sucharda Šípová Adéla Mgr.","ZelSTAPirTOPSEN","Piráti","BEZPP",14766,30.8,10524,48.33,false,false,1803,720,99],
+  [3,"Pelc Jaroslav","PŘÍSAHA","PŘÍSAHA","PŘÍSAHA",1602,3.34,0,0,false,false,1245,1245,1245],
+  [4,"Machalová Marcela Mgr. Bc. MBA","SPD","SPD","SPD",2945,6.14,0,0,false,false,1114,1114,1114],
+  [5,"Paták Petr Mgr. DiS., MBA","ODS","ODS","ODS",14112,29.44,11247,51.66,false,false,53,53,53],
+  [6,"Gerloch Aleš prof. JUDr. CSc.","ANO","ANO","BEZPP",10622,22.16,0,0,false,false,768,768,99]
+],
+  "postupuje" : [2,5],
+  "zvoleny" : 5
+}

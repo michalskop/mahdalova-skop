@@ -1,0 +1,24 @@
+{
+  "id" : "20261009/vysled/obvod/21.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":21},
+  "generovano" : "2026-10-17T16:17:02",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Praha 5",
+  "prehled" : [
+  [1,139,139,100,101780,46218,45.41,38,45782,44877,98.02],
+  [2,139,139,100,101664,23060,22.68,53,23038,22935,99.55]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 83,
+  "vysledky" : [
+  [1,"Brož Lubomír Ing.","ANO","ANO","ANO",6030,13.43,0,0,false,false,768,768,768],
+  [2,"Šarapatka Zdeněk PaedDr. Ph.D.","Piráti+TOP+LES","TOP 09","TOP 09",8866,19.75,0,0,false,false,1954,721,721],
+  [3,"Láska Václav Mgr.","SEN 21","SEN 21","SEN 21",14606,32.54,12205,53.21,false,false,1187,1187,1187],
+  [4,"Augustín Ľubomír","PŘÍSAHA","PŘÍSAHA","PŘÍSAHA",418,0.93,0,0,false,false,1245,1245,1245],
+  [5,"Spirov Pavel Ing. Ph.D.","SPD","SPD","SPD",2084,4.64,0,0,false,false,1114,1114,1114],
+  [6,"Sáblík Radko Ing.","KDUČSL+ODS+STAN","ODS","ODS",12162,27.1,10730,46.78,false,false,1889,53,53],
+  [7,"Prokšanová Petra Mgr.","KSČM","KSČM","KSČM",711,1.58,0,0,false,false,47,47,47]
+],
+  "postupuje" : [3,6],
+  "zvoleny" : 3
+}

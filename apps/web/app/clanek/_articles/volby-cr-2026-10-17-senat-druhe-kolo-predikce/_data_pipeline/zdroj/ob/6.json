@@ -1,0 +1,21 @@
+{
+  "id" : "20261009/vysled/obvod/6.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":6},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Louny",
+  "prehled" : [
+  [1,295,295,100,117069,48521,41.45,43,47285,45679,96.6]
+],
+  "existujePdf" : false,
+  "vysledky" : [
+  [1,"Hrbáček Vladislav Bc. et Bc.","SPD","SPD","SPD",4992,10.92,null,null,false,false,1114,1114,1114],
+  [2,"Kobza Jiří","Stačilo!","Stačilo!","BEZPP",1568,3.43,null,null,false,false,1298,1298,99],
+  [3,"Steiner Leo Mgr.","JsmePRO!","JsmePRO!","BEZPP",4617,10.1,null,null,false,false,1126,1126,99],
+  [4,"Hluštíková Ivana Bc.","Zelení+Piráti","Zelení","Zelení",2955,6.46,null,null,false,false,1066,5,5],
+  [5,"Trešl Ivo MUDr.","STAN","STAN","BEZPP",19872,43.5,null,null,false,false,166,166,99],
+  [6,"Mikoláš Jaroslav Ing.","ANO","ANO","BEZPP",11675,25.55,null,null,false,false,768,768,99]
+],
+  "postupuje" : [5,6],
+  "zvoleny" : null
+}

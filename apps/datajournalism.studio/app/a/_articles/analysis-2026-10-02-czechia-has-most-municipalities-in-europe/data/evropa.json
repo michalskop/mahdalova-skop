@@ -1,0 +1,325 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Czechia has the most municipalities per capita in Europe",
+    "subtitle": "Municipalities per 100,000 inhabitants, 2025. Municipality = the basic unit of local self-government."
+  },
+  "width": 600,
+  "height": 532,
+  "data": {
+    "values": [
+      {
+        "zeme": "Czechia",
+        "v": 57.4,
+        "obci": 6258,
+        "obyv_na_obec": 1743,
+        "barva": "#de1743"
+      },
+      {
+        "zeme": "Slovakia",
+        "v": 54.0,
+        "obci": 2927,
+        "obyv_na_obec": 1852,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "France",
+        "v": 50.6,
+        "obci": 34875,
+        "obyv_na_obec": 1975,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Hungary",
+        "v": 33.1,
+        "obci": 3155,
+        "obyv_na_obec": 3024,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Switzerland",
+        "v": 23.3,
+        "obci": 2110,
+        "obyv_na_obec": 4290,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Austria",
+        "v": 22.7,
+        "obci": 2092,
+        "obyv_na_obec": 4396,
+        "barva": "#06677d"
+      },
+      {
+        "zeme": "Romania",
+        "v": 16.7,
+        "obci": 3181,
+        "obyv_na_obec": 5987,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Spain",
+        "v": 16.6,
+        "obci": 8132,
+        "obyv_na_obec": 6041,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Luxembourg",
+        "v": 14.7,
+        "obci": 100,
+        "obyv_na_obec": 6820,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Croatia",
+        "v": 14.4,
+        "obci": 556,
+        "obyv_na_obec": 6968,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Italy",
+        "v": 13.4,
+        "obci": 7894,
+        "obyv_na_obec": 7467,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Germany",
+        "v": 12.9,
+        "obci": 10749,
+        "obyv_na_obec": 7775,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Malta",
+        "v": 11.8,
+        "obci": 68,
+        "obyv_na_obec": 8445,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Slovenia",
+        "v": 9.9,
+        "obci": 212,
+        "obyv_na_obec": 10051,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Poland",
+        "v": 6.8,
+        "obci": 2479,
+        "obyv_na_obec": 14723,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Norway",
+        "v": 6.4,
+        "obci": 357,
+        "obyv_na_obec": 15670,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Estonia",
+        "v": 5.7,
+        "obci": 78,
+        "obyv_na_obec": 17564,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Finland",
+        "v": 5.5,
+        "obci": 308,
+        "obyv_na_obec": 18299,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Belgium",
+        "v": 4.8,
+        "obci": 565,
+        "obyv_na_obec": 21033,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Bulgaria",
+        "v": 4.1,
+        "obci": 265,
+        "obyv_na_obec": 24292,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Greece",
+        "v": 3.2,
+        "obci": 332,
+        "obyv_na_obec": 31242,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Sweden",
+        "v": 2.7,
+        "obci": 290,
+        "obyv_na_obec": 36509,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Portugal",
+        "v": 2.7,
+        "obci": 308,
+        "obyv_na_obec": 36972,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Latvia",
+        "v": 2.3,
+        "obci": 42,
+        "obyv_na_obec": 44299,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Lithuania",
+        "v": 2.1,
+        "obci": 60,
+        "obyv_na_obec": 48178,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Netherlands",
+        "v": 1.9,
+        "obci": 342,
+        "obyv_na_obec": 52760,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Denmark",
+        "v": 1.6,
+        "obci": 98,
+        "obyv_na_obec": 61150,
+        "barva": "#c8c8bc"
+      },
+      {
+        "zeme": "Ireland",
+        "v": 0.6,
+        "obci": 31,
+        "obyv_na_obec": 175493,
+        "barva": "#c8c8bc"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": [
+        "Czechia",
+        "Slovakia",
+        "France",
+        "Hungary",
+        "Switzerland",
+        "Austria",
+        "Romania",
+        "Spain",
+        "Luxembourg",
+        "Croatia",
+        "Italy",
+        "Germany",
+        "Malta",
+        "Slovenia",
+        "Poland",
+        "Norway",
+        "Estonia",
+        "Finland",
+        "Belgium",
+        "Bulgaria",
+        "Greece",
+        "Sweden",
+        "Portugal",
+        "Latvia",
+        "Lithuania",
+        "Netherlands",
+        "Denmark",
+        "Ireland"
+      ],
+      "axis": {
+        "title": null,
+        "labelFontSize": 12,
+        "ticks": false,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "height": 13
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              72
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Country"
+          },
+          {
+            "field": "v",
+            "title": "Municipalities per 100,000 inhabitants",
+            "format": ",.1f"
+          },
+          {
+            "field": "obci",
+            "title": "Municipalities",
+            "format": ",.0f"
+          },
+          {
+            "field": "obyv_na_obec",
+            "title": "Average inhabitants per municipality",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "v",
+          "type": "quantitative",
+          "format": ",.1f"
+        }
+      }
+    }
+  ],
+  "_source": "OECD – Subnational government structure and finance 2025 (number of municipalities), Eurostat LAU 2025 (Bulgaria, Croatia, Malta, Romania), Eurostat – population on 1 January 2025. Czechia including 4 military training areas. No comparable figure for Cyprus."
+}

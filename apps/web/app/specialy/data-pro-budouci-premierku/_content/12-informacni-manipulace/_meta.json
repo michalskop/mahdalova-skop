@@ -30,5 +30,8 @@
     { "slug": "03-odolnost", "topic": "Analýza" },
     { "slug": "05-overili-91-procent", "topic": "Investigace" },
     { "slug": "06-finsko-gramotnost", "topic": "Komparace" }
+  ],
+  "postSupportTiles": [
+    { "web": "analyza-2026-09-28-ruska-propaganda-v-eu", "topic": "Komparace" }
   ]
 }

@@ -1,0 +1,14 @@
+label: Predikce DataTimes.cz, stav 29. 10. 7:18 (sečteno 99,6 % voličů)
+numbers:
+  - value: "53,7 %"
+    title: Studentská listina
+    description: 2 349 689 platných hlasů. Podle našeho přepočtu 141 z 250 mandátů, k většině stačí 126.
+    color: "#a03250"
+  - value: "39,5 %"
+    title: Vučićova Ujedinjena Srbija
+    description: 1 726 375 platných hlasů a podle přepočtu 103 mandátů. V roce 2023 měla Vučićova kandidátka 48,1 % platných hlasů.
+    color: "#4a51ab"
+  - value: "22:01"
+    title: Predikce potvrzuje porážku
+    description: Půl hodiny po Vučićově projevu, při 3,2 % sečtených voličů, se intervaly nejistoty obou listin přestaly překrývat. Průběžné sčítání ukázalo studenty v čele až ve 23:14.
+    color: brandNavy

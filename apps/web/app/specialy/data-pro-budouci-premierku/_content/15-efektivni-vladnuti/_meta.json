@@ -37,6 +37,10 @@
     { "slug": "11-duvera-stat-vs-politika", "topic": "Důvěra", "fullWidth": true },
     { "slug": "12-duvera-samosprava", "topic": "Důvěra" },
     { "slug": "13-duvera-svet", "topic": "Důvěra" },
-    { "slug": "14-duvera-spolecnost", "topic": "Důvěra", "fullWidth": true }
+    { "slug": "14-duvera-spolecnost", "topic": "Důvěra", "fullWidth": true },
+    { "web": "analyza-2026-10-02-kolik-ma-cesko-obci", "topic": "Komparace" },
+    { "web": "volby-cr-2026-09-24-mista-kde-neexistuje-politicka-konkurence", "topic": "Analýza" },
+    { "web": "analyza-2026-06-29-ucast-na-snemovnich-vyborech", "topic": "Analýza" },
+    { "web": "analyza-2026-03-18-poslanci-chteji-zprisnit-dohled-nad-neziskovkami", "topic": "Analýza" }
   ]
 }

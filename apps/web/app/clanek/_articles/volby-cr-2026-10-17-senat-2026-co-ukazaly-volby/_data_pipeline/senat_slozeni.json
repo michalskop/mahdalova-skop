@@ -1,0 +1,7810 @@
+{
+"1996": [
+{
+"obvod": 1,
+"jmeno": "Vladimír Kulhánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 2,
+"jmeno": "Jiří Vyvadil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 3,
+"jmeno": "Peter Morávek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Richard Falbr",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 5,
+"jmeno": "Ladislav Drlý",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 6,
+"jmeno": "Ivan Havlíček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 7,
+"jmeno": "Jaroslav Jurečka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 8,
+"jmeno": "František Jirava",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 9,
+"jmeno": "Bohumil Kulhánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Karel Vachta",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 11,
+"jmeno": "Petr Smutný",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Pavel Rychetský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Rückl",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 17,
+"jmeno": "Jan Krámek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Zdeněk Vojíř",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 19,
+"jmeno": "Václav Mencl",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Zdeněk Klausner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 21,
+"jmeno": "Michael Žantovský",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 22,
+"jmeno": "Milan Kondr",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Josef Pavlata",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Jan Koukal",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 26,
+"jmeno": "Vladimír Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Václav Benda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Jaroslav Horák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Karel Burda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Ladislav Svoboda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Oto Neubauer",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Musial",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 33,
+"jmeno": "Egon Lansky",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "František Vízek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 36,
+"jmeno": "Miroslav Coufal",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 37,
+"jmeno": "Jiří Liška",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 38,
+"jmeno": "Jarmila Filipová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Vlastimil Šubrt",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 40,
+"jmeno": "Karel Floss",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Libuše Benešová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 42,
+"jmeno": "Vladislav Malát",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 43,
+"jmeno": "Jaroslava Moserová",
+"g": "Ž",
+"ns": "ODA"
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Karel Barták",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 46,
+"jmeno": "Bohumil Čada",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Miloslav Müller",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "František Bartoš",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 49,
+"jmeno": "Libor Pavlů",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 50,
+"jmeno": "Jiří Brýdl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Jiří Šenkýř",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Václav Jehlička",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 53,
+"jmeno": "Pavel Heřman",
+"g": "M",
+"ns": "DEU"
+},
+{
+"obvod": 54,
+"jmeno": "Milan Špaček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 55,
+"jmeno": "Vlasta Svobodová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Jiří Pavlov",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 57,
+"jmeno": "Oldřich Dočekal",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 58,
+"jmeno": "Luděk Zahradníček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 59,
+"jmeno": "Richard Salzmann",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 60,
+"jmeno": "Jan Zahradníček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 61,
+"jmeno": "Josef Jařab",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 62,
+"jmeno": "Jan Kavan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "ODA"
+},
+{
+"obvod": 64,
+"jmeno": "Zdeněk Babka",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 65,
+"jmeno": "Václav Reitinger",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 66,
+"jmeno": "Karel Korytář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 67,
+"jmeno": "František Konečný",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 68,
+"jmeno": "Jan Voráček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 69,
+"jmeno": "Věra Vašínková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 70,
+"jmeno": "Mirek Topolánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 71,
+"jmeno": "Jan Zapletal",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 72,
+"jmeno": "Vítězslav Matuška",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 73,
+"jmeno": "Emil Škrabiš",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 74,
+"jmeno": "Alfréd Michalík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Antonín Petráš",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 76,
+"jmeno": "Eva Nováková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 77,
+"jmeno": "Vladimír Oplt",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 78,
+"jmeno": "Irena Ondrová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 79,
+"jmeno": "Jan Benda",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 80,
+"jmeno": "Jiří Stodůlka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Jaroslav Petřík",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"1998": [
+{
+"obvod": 1,
+"jmeno": "Vladimír Kulhánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 2,
+"jmeno": "Jiří Vyvadil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 3,
+"jmeno": "Peter Morávek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Richard Falbr",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 5,
+"jmeno": "Ladislav Drlý",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 6,
+"jmeno": "Ivan Havlíček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 7,
+"jmeno": "Jiří Skalický",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 8,
+"jmeno": "František Jirava",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 9,
+"jmeno": "Bohumil Kulhánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Martin Dvořák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Petr Smutný",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Pavel Rychetský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Rűckl",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 17,
+"jmeno": "Jan Krámek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Zdeněk Vojíř",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 19,
+"jmeno": "Daniel Kroupa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 20,
+"jmeno": "Zdeněk Klausner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 21,
+"jmeno": "Michael Žantovský",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 22,
+"jmeno": "Zuzana Roithová",
+"g": "Ž",
+"ns": "4KOALICE"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Josef Pavlata",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Jan Ruml",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 26,
+"jmeno": "Vladimír Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Václav Benda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Jaroslav Horák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Karel Burda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Ladislav Svoboda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Musial",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 33,
+"jmeno": "Egon Lansky",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "František Vízek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 36,
+"jmeno": "Miroslav Coufal",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 37,
+"jmeno": "Jiří Liška",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 38,
+"jmeno": "Jarmila Filipová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Vlastimil Šubrt",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 40,
+"jmeno": "Jan Fencl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Libuše Benešová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 42,
+"jmeno": "Vladislav Malát",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 43,
+"jmeno": "Jaroslava Moserová",
+"g": "Ž",
+"ns": "4KOALICE"
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Karel Barták",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 46,
+"jmeno": "Bohumil Čada",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 47,
+"jmeno": "Miloslav Müller",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "František Bartoš",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 49,
+"jmeno": "Stanislav Bělehrádek",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 50,
+"jmeno": "Jiří Brýdl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Jiří Šenkýř",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Václav Jehlička",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 53,
+"jmeno": "Pavel Heřman",
+"g": "M",
+"ns": "DEU"
+},
+{
+"obvod": 54,
+"jmeno": "Milan Špaček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Julínek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Jiří Pavlov",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 57,
+"jmeno": "Oldřich Dočekal",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 58,
+"jmeno": "Dagmar Lastovecká",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 59,
+"jmeno": "Richard Salzmann",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 60,
+"jmeno": "Jan Zahradníček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 61,
+"jmeno": "František Mezihorák ",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 62,
+"jmeno": "Jan Kavan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "ODA"
+},
+{
+"obvod": 64,
+"jmeno": "Rostislav Harazin",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 65,
+"jmeno": "Václav Reitinger",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 66,
+"jmeno": "Karel Korytář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 67,
+"jmeno": "Jaroslav Šula",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 68,
+"jmeno": "Jan Voráček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 69,
+"jmeno": "Věra Vašínková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 70,
+"jmeno": "Mirek Topolánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 71,
+"jmeno": "Jan Zapletal",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 72,
+"jmeno": "Vítězslav Matuška",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 73,
+"jmeno": "Emil Škrabiš",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 74,
+"jmeno": "Alfréd Michalík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Antonín Petráš",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 76,
+"jmeno": "František Kroupa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 77,
+"jmeno": "Vladimír Oplt",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 78,
+"jmeno": "Irena Ondrová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 79,
+"jmeno": "Josef Kaňa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 80,
+"jmeno": "Jiří Stodůlka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Jaroslav Petřík",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2000": [
+{
+"obvod": 1,
+"jmeno": "Vladimír Kulhánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 2,
+"jmeno": "Jan Hadrava",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 3,
+"jmeno": "Peter Morávek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Richard Falbr",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 5,
+"jmeno": "Alexandr Novák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 6,
+"jmeno": "Ivan Havlíček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 7,
+"jmeno": "Jiří Skalický",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 8,
+"jmeno": "Luděk Sefzig",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Bohumil Kulhánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Martin Dvořák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Petr Smutný",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Pavel Rychetský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Rűckl",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 17,
+"jmeno": "Edvard Outrata",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 18,
+"jmeno": "Zdeněk Vojíř",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 19,
+"jmeno": "Daniel Kroupa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 20,
+"jmeno": "Josef Zieleniec",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 21,
+"jmeno": "Michael Žantovský",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 22,
+"jmeno": "Zuzana Roithová",
+"g": "Ž",
+"ns": "4KOALICE"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Josef Pavlata",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Jan Ruml",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 26,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Václav Fischer",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 28,
+"jmeno": "Jaroslav Horák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Zdeněk Bárta",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 30,
+"jmeno": "Ladislav Svoboda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Egon Lansky",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Soňa Paukrtová",
+"g": "Ž",
+"ns": "US-DEU"
+},
+{
+"obvod": 36,
+"jmeno": "Miroslav Coufal",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 37,
+"jmeno": "Jiří Liška",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 38,
+"jmeno": "Jaroslav Mitlener",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Vlastimil Šubrt",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 40,
+"jmeno": "Jan Fencl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Helena Rögnerová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 42,
+"jmeno": "Vladislav Malát",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 43,
+"jmeno": "Jaroslava Moserová",
+"g": "Ž",
+"ns": "4KOALICE"
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Karel Barták",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 46,
+"jmeno": "Bohumil Čada",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 47,
+"jmeno": "Petr Fejfar",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 48,
+"jmeno": "František Bartoš",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 49,
+"jmeno": "Stanislav Bělehrádek",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 50,
+"jmeno": "Jiří Brýdl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Jiří Šenkýř",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Václav Jehlička",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 53,
+"jmeno": "Pavel Janata",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 54,
+"jmeno": "Milan Špaček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Julínek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Vladimír Schovánek",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 57,
+"jmeno": "Oldřich Dočekal",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 58,
+"jmeno": "Dagmar Lastovecká",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 59,
+"jmeno": "Milan Šimonovský",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 60,
+"jmeno": "Jan Zahradníček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 61,
+"jmeno": "František Mezihorák ",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 62,
+"jmeno": "Robert Kolář",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "ODA"
+},
+{
+"obvod": 64,
+"jmeno": "Rostislav Harazin",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 65,
+"jmeno": "Adolf Jílek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Karel Korytář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 67,
+"jmeno": "Jaroslav Šula",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 68,
+"jmeno": "Josef Jařab",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 69,
+"jmeno": "Věra Vašínková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 70,
+"jmeno": "Mirek Topolánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 71,
+"jmeno": "Milan Balabán",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 72,
+"jmeno": "Vítězslav Matuška",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 73,
+"jmeno": "Emil Škrabiš",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 74,
+"jmeno": "Ondřej Feber",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 75,
+"jmeno": "Antonín Petráš",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 76,
+"jmeno": "František Kroupa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 77,
+"jmeno": "Jaroslav Kubín",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 78,
+"jmeno": "Irena Ondrová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 79,
+"jmeno": "Josef Kaňa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 80,
+"jmeno": "Jiří Stodůlka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Jaroslav Petřík",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2002": [
+{
+"obvod": 1,
+"jmeno": "Vladimír Kulhánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 2,
+"jmeno": "Jan Hadrava",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 3,
+"jmeno": "Ladislav Macák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Richard Falbr",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 5,
+"jmeno": "Alexandr Novák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 6,
+"jmeno": "Miloslav Pelc",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 7,
+"jmeno": "Jiří Skalický",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 8,
+"jmeno": "Luděk Sefzig",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Richard Sequens",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 10,
+"jmeno": "Martin Dvořák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Petr Smutný",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Pavel Rychetský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Rűckl",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 17,
+"jmeno": "Edvard Outrata",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 18,
+"jmeno": "Jaromír Volný",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 19,
+"jmeno": "Daniel Kroupa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 20,
+"jmeno": "Josef Zieleniec",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 21,
+"jmeno": "Miroslav Škaloud",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 22,
+"jmeno": "Zuzana Roithová",
+"g": "Ž",
+"ns": "4KOALICE"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Josef Pavlata",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Jan Ruml",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 26,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Martin Mejstřík",
+"g": "M",
+"ns": "CZ"
+},
+{
+"obvod": 28,
+"jmeno": "Jaroslav Horák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Zdeněk Bárta",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 30,
+"jmeno": "Ladislav Svoboda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Josef Zoser",
+"g": "M",
+"ns": "MÍSTNÍ HNHRM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Soňa Paukrtová",
+"g": "Ž",
+"ns": "US-DEU"
+},
+{
+"obvod": 36,
+"jmeno": "Karel Tejnora",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 37,
+"jmeno": "Jiří Liška",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 38,
+"jmeno": "Jaroslav Mitlener",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Ivan Adamec",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 40,
+"jmeno": "Jan Fencl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Helena Rögnerová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 42,
+"jmeno": "Jan Rakušan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Jaroslava Moserová",
+"g": "Ž",
+"ns": "4KOALICE"
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Karel Barták",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 46,
+"jmeno": "Bohumil Čada",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 47,
+"jmeno": "Petr Fejfar",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 48,
+"jmeno": "Václava Domšová",
+"g": "Ž",
+"ns": "SNK ED"
+},
+{
+"obvod": 49,
+"jmeno": "Stanislav Bělehrádek",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 50,
+"jmeno": "Jiří Brýdl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Josef Novotný",
+"g": "M",
+"ns": "SNK ED"
+},
+{
+"obvod": 52,
+"jmeno": "Václav Jehlička",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 53,
+"jmeno": "Pavel Janata",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 54,
+"jmeno": "Vladimír Železný",
+"g": "M",
+"ns": "NEZ"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Julínek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Vladimír Schovánek",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Dagmar Lastovecká",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 59,
+"jmeno": "Milan Šimonovský",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 60,
+"jmeno": "Jiří Zlatuška",
+"g": "M",
+"ns": "LIB"
+},
+{
+"obvod": 61,
+"jmeno": "František Mezihorák ",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 62,
+"jmeno": "Robert Kolář",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 64,
+"jmeno": "Rostislav Harazin",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 65,
+"jmeno": "Adolf Jílek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Vítězslav Vavroušek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 67,
+"jmeno": "Jaroslav Šula",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 68,
+"jmeno": "Josef Jařab",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 69,
+"jmeno": "František Kopecký",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 70,
+"jmeno": "Mirek Topolánek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 71,
+"jmeno": "Milan Balabán",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 72,
+"jmeno": "Václav Roubíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 73,
+"jmeno": "Emil Škrabiš",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 74,
+"jmeno": "Ondřej Feber",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 75,
+"jmeno": "Eduard Matykiewicz",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 76,
+"jmeno": "František Kroupa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 77,
+"jmeno": "Jaroslav Kubín",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 78,
+"jmeno": "Alena Gajdůšková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 79,
+"jmeno": "Josef Kaňa",
+"g": "M",
+"ns": "4KOALICE"
+},
+{
+"obvod": 80,
+"jmeno": "Jiří Stodůlka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Josef Vaculík",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2004": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "SD-SN"
+},
+{
+"obvod": 2,
+"jmeno": "Jan Hadrava",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 3,
+"jmeno": "Ladislav Macák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Vlastimil Balín",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 5,
+"jmeno": "Alexandr Novák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 6,
+"jmeno": "Miloslav Pelc",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 7,
+"jmeno": "Jiří Šneberger",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 8,
+"jmeno": "Luděk Sefzig",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Richard Sequens",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Petr Smutný",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Josef Kalbáč",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Edvard Outrata",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 18,
+"jmeno": "Jaromír Volný",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 19,
+"jmeno": "Jan Nádvorník",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "František Příhoda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 21,
+"jmeno": "Miroslav Škaloud",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 22,
+"jmeno": "Jaromír Štětina",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Josef Pavlata",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Karel Schwarzenberg",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 26,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Martin Mejstřík",
+"g": "M",
+"ns": "CZ"
+},
+{
+"obvod": 28,
+"jmeno": "Jiří Nedoma",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Zdeněk Bárta",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 30,
+"jmeno": "Ladislav Svoboda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Pavel Sušický",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Josef Zoser",
+"g": "M",
+"ns": "MÍSTNÍ HNHRM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Soňa Paukrtová",
+"g": "Ž",
+"ns": "US-DEU"
+},
+{
+"obvod": 36,
+"jmeno": "Karel Tejnora",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 37,
+"jmeno": "Jiří Liška",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 38,
+"jmeno": "Jaroslav Mitlener",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Ivan Adamec",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 40,
+"jmeno": "Bedřich Moldan",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 41,
+"jmeno": "Helena Rögnerová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 42,
+"jmeno": "Jan Rakušan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Jiří Stříteský",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Karel Barták",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 46,
+"jmeno": "Ludmila Müllerová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Petr Fejfar",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 48,
+"jmeno": "Václava Domšová",
+"g": "Ž",
+"ns": "SNK ED"
+},
+{
+"obvod": 49,
+"jmeno": "Vlastimil Sehnal",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 50,
+"jmeno": "Jiří Brýdl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Josef Novotný",
+"g": "M",
+"ns": "SNK ED"
+},
+{
+"obvod": 52,
+"jmeno": "Václav Jehlička",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 53,
+"jmeno": "Pavel Janata",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 54,
+"jmeno": "Milan Špaček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Julínek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Vladimír Schovánek",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Rostislav Slavotínek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 59,
+"jmeno": "Milan Šimonovský",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 60,
+"jmeno": "Jiří Zlatuška",
+"g": "M",
+"ns": "LIB"
+},
+{
+"obvod": 61,
+"jmeno": "Jan Hálek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 62,
+"jmeno": "Robert Kolář",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 64,
+"jmeno": "Jiří Žák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 65,
+"jmeno": "Adolf Jílek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Vítězslav Vavroušek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 67,
+"jmeno": "Milan Bureš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 68,
+"jmeno": "Josef Jařab",
+"g": "M",
+"ns": "ODA"
+},
+{
+"obvod": 69,
+"jmeno": "František Kopecký",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 70,
+"jmeno": "Liana Janáčková",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 71,
+"jmeno": "Milan Balabán",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 72,
+"jmeno": "Václav Roubíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 73,
+"jmeno": "Igor Petrov",
+"g": "M",
+"ns": "SNK ED"
+},
+{
+"obvod": 74,
+"jmeno": "Ondřej Feber",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 75,
+"jmeno": "Eduard Matykiewicz",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 76,
+"jmeno": "Zdeněk Janalík",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 77,
+"jmeno": "Jaroslav Kubín",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 78,
+"jmeno": "Alena Gajdůšková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 79,
+"jmeno": "Alena Venhodová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 80,
+"jmeno": "Jiří Stodůlka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Josef Vaculík",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2006": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "SD-SN"
+},
+{
+"obvod": 2,
+"jmeno": "Pavel Čáslava",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 3,
+"jmeno": "Ladislav Macák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Vlastimil Balín",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 5,
+"jmeno": "Petr Skála",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 6,
+"jmeno": "Miloslav Pelc",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 7,
+"jmeno": "Jiří Šneberger",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 8,
+"jmeno": "Luděk Sefzig",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Richard Sequens",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jiřina Rippelová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Josef Kalbáč",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Tomáš Grulich",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Jaromír Volný",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 19,
+"jmeno": "Jan Nádvorník",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Tomáš Töpfer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 21,
+"jmeno": "Miroslav Škaloud",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 22,
+"jmeno": "Jaromír Štětina",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Josef Pavlata",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Karel Schwarzenberg",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 26,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Martin Mejstřík",
+"g": "M",
+"ns": "CZ"
+},
+{
+"obvod": 28,
+"jmeno": "Jiří Nedoma",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Alexandr Vondra",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Ladislav Svoboda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Pavel Sušický",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Josef Zoser",
+"g": "M",
+"ns": "MÍSTNÍ HNHRM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Soňa Paukrtová",
+"g": "Ž",
+"ns": "SOS"
+},
+{
+"obvod": 36,
+"jmeno": "Karel Tejnora",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 37,
+"jmeno": "Jiří Liška",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 38,
+"jmeno": "Jaromír Jermář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 39,
+"jmeno": "Ivan Adamec",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 40,
+"jmeno": "Bedřich Moldan",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 41,
+"jmeno": "Karel Šebek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 42,
+"jmeno": "Jan Rakušan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Jiří Stříteský",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Karel Barták",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 46,
+"jmeno": "Ludmila Müllerová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Petr Pakosta",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Václava Domšová",
+"g": "Ž",
+"ns": "SNK ED"
+},
+{
+"obvod": 49,
+"jmeno": "Vlastimil Sehnal",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 50,
+"jmeno": "Václav Koukal",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Josef Novotný",
+"g": "M",
+"ns": "SNK ED"
+},
+{
+"obvod": 52,
+"jmeno": "Václav Jehlička",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 53,
+"jmeno": "Vítězslav Jonáš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 54,
+"jmeno": "Milan Špaček",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Julínek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Jan Hajda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Rostislav Slavotínek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 59,
+"jmeno": "Richard Svoboda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 60,
+"jmeno": "Jiří Zlatuška",
+"g": "M",
+"ns": "LIB"
+},
+{
+"obvod": 61,
+"jmeno": "Jan Hálek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 62,
+"jmeno": "Božena Sekaninová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 64,
+"jmeno": "Jiří Žák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 65,
+"jmeno": "Adolf Jílek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Vítězslav Vavroušek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 67,
+"jmeno": "Milan Bureš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 68,
+"jmeno": "Václav Vlček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 69,
+"jmeno": "František Kopecký",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 70,
+"jmeno": "Liana Janáčková",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 71,
+"jmeno": "Otakar Veřovský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 72,
+"jmeno": "Václav Roubíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 73,
+"jmeno": "Igor Petrov",
+"g": "M",
+"ns": "SNK ED"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Eduard Matykiewicz",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 76,
+"jmeno": "Zdeněk Janalík",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Alena Gajdůšková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 79,
+"jmeno": "Alena Venhodová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 80,
+"jmeno": "Jana Juřenčáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 81,
+"jmeno": "Josef Vaculík",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2008": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "SD-SN"
+},
+{
+"obvod": 2,
+"jmeno": "Pavel Čáslava",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Nenutil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Vlastimil Balín",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 5,
+"jmeno": "Václav Homolka",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 6,
+"jmeno": "Marcel Chládek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 7,
+"jmeno": "Jiří Šneberger",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 8,
+"jmeno": "Luděk Sefzig",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Jiří Bis",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jiřina Rippelová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Miroslav Krejča",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Tomáš Grulich",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Josef Řihák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 19,
+"jmeno": "Jan Nádvorník",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Tomáš Töpfer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 21,
+"jmeno": "Miroslav Škaloud",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 22,
+"jmeno": "Jaromír Štětina",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Tomáš Kladívko",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Karel Schwarzenberg",
+"g": "M",
+"ns": "US-DEU"
+},
+{
+"obvod": 26,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Zdeněk Schwarz",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Jiří Nedoma",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Alexandr Vondra",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Jiří Dienstbier",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Pavel Sušický",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Jaroslav Sykáček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Soňa Paukrtová",
+"g": "Ž",
+"ns": "SOS"
+},
+{
+"obvod": 36,
+"jmeno": "Karel Kapoun",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 37,
+"jmeno": "Jiří Liška",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 38,
+"jmeno": "Jaromír Jermář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 39,
+"jmeno": "Pavel Trpák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 40,
+"jmeno": "Bedřich Moldan",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 41,
+"jmeno": "Karel Šebek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 42,
+"jmeno": "Pavel Lebeda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Jiří Stříteský",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Vladimír Dryml",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 46,
+"jmeno": "Ludmila Müllerová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Petr Pakosta",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Miroslav Antl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 49,
+"jmeno": "Vlastimil Sehnal",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 50,
+"jmeno": "Václav Koukal",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Dagmar Zvěřinová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 52,
+"jmeno": "Václav Jehlička",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 53,
+"jmeno": "Vítězslav Jonáš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 54,
+"jmeno": "Marta Bayerová",
+"g": "Ž",
+"ns": "KSČM"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Julínek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Jan Hajda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Rostislav Slavotínek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 59,
+"jmeno": "Richard Svoboda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 60,
+"jmeno": "Miloš Janeček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 61,
+"jmeno": "Jan Hálek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 62,
+"jmeno": "Božena Sekaninová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jiří Lajtoch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 64,
+"jmeno": "Jiří Žák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 65,
+"jmeno": "Adolf Jílek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Karel Korytář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 67,
+"jmeno": "Milan Bureš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 68,
+"jmeno": "Václav Vlček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 69,
+"jmeno": "Eva Richtrová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 70,
+"jmeno": "Liana Janáčková",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 71,
+"jmeno": "Otakar Veřovský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 72,
+"jmeno": "Petr Guziana",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 73,
+"jmeno": "Igor Petrov",
+"g": "M",
+"ns": "SNK ED"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Radek Sušil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 76,
+"jmeno": "Zdeněk Janalík",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Alena Gajdůšková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 79,
+"jmeno": "Alena Venhodová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 80,
+"jmeno": "Jana Juřenčáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 81,
+"jmeno": "Hana Doupovcová",
+"g": "Ž",
+"ns": "SOCDEM"
+}
+],
+"2010": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 2,
+"jmeno": "Pavel Čáslava",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Nenutil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Alena Dernerová",
+"g": "Ž",
+"ns": "S.cz"
+},
+{
+"obvod": 5,
+"jmeno": "Václav Homolka",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 6,
+"jmeno": "Marcel Chládek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 7,
+"jmeno": "Dagmar Terelmešová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 8,
+"jmeno": "Luděk Sefzig",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Jiří Bis",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jiřina Rippelová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Miroslav Krejča",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Pospíšil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Tomáš Grulich",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Josef Řihák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 19,
+"jmeno": "Milan Pešák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Tomáš Töpfer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 21,
+"jmeno": "Miroslav Škaloud",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 22,
+"jmeno": "Jaromír Štětina",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 23,
+"jmeno": "Alena Palečková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Tomáš Kladívko",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Petr Bratský",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 26,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 27,
+"jmeno": "Zdeněk Schwarz",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Veronika Vrecionová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Alexandr Vondra",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Jiří Dienstbier",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "S.cz"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Jaroslav Sykáček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Soňa Paukrtová",
+"g": "Ž",
+"ns": "SOS"
+},
+{
+"obvod": 36,
+"jmeno": "Karel Kapoun",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 37,
+"jmeno": "Josef Táborský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 38,
+"jmeno": "Jaromír Jermář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 39,
+"jmeno": "Pavel Trpák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 40,
+"jmeno": "Jaromír Strnad",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Karel Šebek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 42,
+"jmeno": "Pavel Lebeda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "Nestran."
+},
+{
+"obvod": 44,
+"jmeno": "Petr Pithart",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 45,
+"jmeno": "Vladimír Dryml",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Šilar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Petr Pakosta",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Miroslav Antl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 49,
+"jmeno": "Jozef Regec",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 50,
+"jmeno": "Václav Koukal",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Dagmar Zvěřinová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "Vítězslav Jonáš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 54,
+"jmeno": "Marta Bayerová",
+"g": "Ž",
+"ns": "KSČM"
+},
+{
+"obvod": 55,
+"jmeno": "Jan Žaloudík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 56,
+"jmeno": "Jan Hajda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Stanislav Juránek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 59,
+"jmeno": "Richard Svoboda",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 60,
+"jmeno": "Miloš Janeček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 61,
+"jmeno": "Martin Tesařík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 62,
+"jmeno": "Božena Sekaninová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jiří Lajtoch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 64,
+"jmeno": "Jaroslav Palas",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 65,
+"jmeno": "Adolf Jílek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Karel Korytář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 67,
+"jmeno": "Zdeněk Besta",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 68,
+"jmeno": "Václav Vlček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 69,
+"jmeno": "Eva Richtrová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 70,
+"jmeno": "Antonín Maštalíř",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 71,
+"jmeno": "Otakar Veřovský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 72,
+"jmeno": "Petr Guziana",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 73,
+"jmeno": "Petr Gawlas",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Radek Sušil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 76,
+"jmeno": "Miloš Malý",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Alena Gajdůšková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 79,
+"jmeno": "Zdeněk Škromach",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 80,
+"jmeno": "Jana Juřenčáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 81,
+"jmeno": "Hana Doupovcová",
+"g": "Ž",
+"ns": "SOCDEM"
+}
+],
+"2012": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 2,
+"jmeno": "Zdeněk Berka",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Nenutil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Alena Dernerová",
+"g": "Ž",
+"ns": "S.cz"
+},
+{
+"obvod": 5,
+"jmeno": "Václav Homolka",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 6,
+"jmeno": "Marcel Chládek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 7,
+"jmeno": "Dagmar Terelmešová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 8,
+"jmeno": "Milada Emmerová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 9,
+"jmeno": "Jiří Bis",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jan Látka",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Miroslav Krejča",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Šesták",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Tomáš Grulich",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Josef Řihák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 19,
+"jmeno": "Milan Pešák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Eva Syková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 21,
+"jmeno": "Miroslav Škaloud",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 22,
+"jmeno": "Jaromír Štětina",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 23,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Tomáš Kladívko",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 25,
+"jmeno": "Petr Bratský",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 26,
+"jmeno": "Libor Michálek",
+"g": "M",
+"ns": "Piráti"
+},
+{
+"obvod": 27,
+"jmeno": "Zdeněk Schwarz",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Veronika Vrecionová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Hassan Mezian",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 30,
+"jmeno": "Jiří Dienstbier",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "S.cz"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Jaroslav Sykáček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Jaroslav Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 36,
+"jmeno": "Karel Kapoun",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 37,
+"jmeno": "Josef Táborský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 38,
+"jmeno": "Jaromír Jermář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 39,
+"jmeno": "Pavel Trpák",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 40,
+"jmeno": "Jaromír Strnad",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Luděk Jeništa",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 42,
+"jmeno": "Pavel Lebeda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "Nestran."
+},
+{
+"obvod": 44,
+"jmeno": "Jan Veleba",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 45,
+"jmeno": "Vladimír Dryml",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Šilar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Lubomír Franc",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 48,
+"jmeno": "Miroslav Antl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 49,
+"jmeno": "Jozef Regec",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 50,
+"jmeno": "Radko Martínek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 51,
+"jmeno": "Dagmar Zvěřinová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "František Bublan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 54,
+"jmeno": "Marta Bayerová",
+"g": "Ž",
+"ns": "KSČM"
+},
+{
+"obvod": 55,
+"jmeno": "Jan Žaloudík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 56,
+"jmeno": "Jan Hajda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Stanislav Juránek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 59,
+"jmeno": "Eliška Wagnerová",
+"g": "Ž",
+"ns": "Zelení"
+},
+{
+"obvod": 60,
+"jmeno": "Miloš Janeček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 61,
+"jmeno": "Martin Tesařík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 62,
+"jmeno": "Božena Sekaninová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jiří Lajtoch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 64,
+"jmeno": "Jaroslav Palas",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 65,
+"jmeno": "Zdeněk Brož",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Karel Korytář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 67,
+"jmeno": "Zdeněk Besta",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 68,
+"jmeno": "Vladimír Plaček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 69,
+"jmeno": "Eva Richtrová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 70,
+"jmeno": "Antonín Maštalíř",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 71,
+"jmeno": "Leopold Sulovský",
+"g": "M",
+"ns": "Ostravak"
+},
+{
+"obvod": 72,
+"jmeno": "Petr Guziana",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 73,
+"jmeno": "Petr Gawlas",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Radek Sušil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 76,
+"jmeno": "Miloš Malý",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Alena Gajdůšková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 79,
+"jmeno": "Zdeněk Škromach",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 80,
+"jmeno": "Tomio Okamura",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 81,
+"jmeno": "Hana Doupovcová",
+"g": "Ž",
+"ns": "SOCDEM"
+}
+],
+"2014": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 2,
+"jmeno": "Zdeněk Berka",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Nenutil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Alena Dernerová",
+"g": "Ž",
+"ns": "S.cz"
+},
+{
+"obvod": 5,
+"jmeno": "Václav Homolka",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 6,
+"jmeno": "Zdeňka Hamousová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 7,
+"jmeno": "Dagmar Terelmešová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 8,
+"jmeno": "Milada Emmerová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 9,
+"jmeno": "Lumír Aschenbrenner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jan Látka",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Karel Kratochvíle",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Pavel Eybert",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Šesták",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Tomáš Grulich",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Jiří Burian",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 19,
+"jmeno": "Milan Pešák",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Eva Syková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 21,
+"jmeno": "Václav Láska",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 22,
+"jmeno": "Ivana Cabrnochová",
+"g": "Ž",
+"ns": "Zelení"
+},
+{
+"obvod": 23,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Zuzana Baudyšová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 25,
+"jmeno": "Petr Bratský",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 26,
+"jmeno": "Libor Michálek",
+"g": "M",
+"ns": "Piráti"
+},
+{
+"obvod": 27,
+"jmeno": "Václav Hampl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 28,
+"jmeno": "Veronika Vrecionová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Hassan Mezian",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 30,
+"jmeno": "Jiří DIENSTBIER",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "S.cz"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Zbyněk Linhart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 34,
+"jmeno": "Přemysl Sobotka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 35,
+"jmeno": "Jaroslav Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 36,
+"jmeno": "Jiří Vosecký",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 37,
+"jmeno": "Josef Táborský",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 38,
+"jmeno": "Jaromír Jermář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 39,
+"jmeno": "Jiří Hlavatý",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 40,
+"jmeno": "Jaromír Strnad",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Luděk Jeništa",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 42,
+"jmeno": "Emilie Třísková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "Nestran."
+},
+{
+"obvod": 44,
+"jmeno": "Jan Veleba",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 45,
+"jmeno": "Jaroslav Malý",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Šilar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Lubomír Franc",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 48,
+"jmeno": "Miroslav Antl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 49,
+"jmeno": "Jozef Regec",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 50,
+"jmeno": "Radko Martínek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 51,
+"jmeno": "František Bradáč",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "František Bublan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 54,
+"jmeno": "Pavel Štohl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 55,
+"jmeno": "Jan Žaloudík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 56,
+"jmeno": "Jan Hajda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Stanislav Juránek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 59,
+"jmeno": "Eliška Wagnerová",
+"g": "Ž",
+"ns": "Zelení"
+},
+{
+"obvod": 60,
+"jmeno": "Zdeněk Papoušek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 61,
+"jmeno": "Martin Tesařík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 62,
+"jmeno": "Božena Sekaninová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "Zelení"
+},
+{
+"obvod": 64,
+"jmeno": "Jaroslav Palas",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 65,
+"jmeno": "Zdeněk Brož",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Alena Šromová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 67,
+"jmeno": "Zdeněk Besta",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 68,
+"jmeno": "Vladimír Plaček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 69,
+"jmeno": "Jiří Carbol",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 70,
+"jmeno": "Antonín Maštalíř",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 71,
+"jmeno": "Leopold Sulovský",
+"g": "M",
+"ns": "Ostravak"
+},
+{
+"obvod": 72,
+"jmeno": "Peter Koliba",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 73,
+"jmeno": "Petr Gawlas",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Radek Sušil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 76,
+"jmeno": "Miloš Malý",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "František Čuba",
+"g": "M",
+"ns": "SPOZ"
+},
+{
+"obvod": 79,
+"jmeno": "Zdeněk Škromach",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 80,
+"jmeno": "Patrik Kunčar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Ivo Valenta",
+"g": "M",
+"ns": "Soukromníci"
+}
+],
+"2016": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 2,
+"jmeno": "Zdeněk Berka",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Nenutil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Alena Dernerová",
+"g": "Ž",
+"ns": "S.cz"
+},
+{
+"obvod": 5,
+"jmeno": "Václav Homolka",
+"g": "M",
+"ns": "KSČM"
+},
+{
+"obvod": 6,
+"jmeno": "Zdeňka Hamousová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 7,
+"jmeno": "Václav Chaloupek",
+"g": "M",
+"ns": "OPAT"
+},
+{
+"obvod": 8,
+"jmeno": "Milada Emmerová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 9,
+"jmeno": "Lumír Aschenbrenner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jan Látka",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 12,
+"jmeno": "Karel Kratochvíle",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Jaroslav Větrovský",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 14,
+"jmeno": "Jiří Šesták",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Tomáš Grulich",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 18,
+"jmeno": "Jiří Burian",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 19,
+"jmeno": "Ladislav Kos",
+"g": "M",
+"ns": "HPP 11"
+},
+{
+"obvod": 20,
+"jmeno": "Eva Syková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 21,
+"jmeno": "Václav Láska",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 22,
+"jmeno": "Renata Chmelová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 23,
+"jmeno": "Daniela Filipiová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "Zuzana Baudyšová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 25,
+"jmeno": "Jiří Růžička",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 26,
+"jmeno": "Libor Michálek",
+"g": "M",
+"ns": "Piráti"
+},
+{
+"obvod": 27,
+"jmeno": "Václav Hampl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 28,
+"jmeno": "Petr Holeček",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 29,
+"jmeno": "Hassan Mezian",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 30,
+"jmeno": "Jiří DIENSTBIER",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "S.cz"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Zbyněk Linhart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 34,
+"jmeno": "Michael Canov",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 35,
+"jmeno": "Jaroslav Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 36,
+"jmeno": "Jiří Vosecký",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 37,
+"jmeno": "Tomáš Czernin",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 38,
+"jmeno": "Jaromír Jermář",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 39,
+"jmeno": "Jiří Hlavatý",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 40,
+"jmeno": "Jaromír Strnad",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Luděk Jeništa",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 42,
+"jmeno": "Emilie Třísková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "Nestran."
+},
+{
+"obvod": 44,
+"jmeno": "Jan Veleba",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 45,
+"jmeno": "Jaroslav Malý",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Šilar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Lubomír Franc",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 48,
+"jmeno": "Miroslav Antl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 49,
+"jmeno": "Jaromíra Vítková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 50,
+"jmeno": "Radko Martínek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 51,
+"jmeno": "František Bradáč",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "František Bublan",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 54,
+"jmeno": "Pavel Štohl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 55,
+"jmeno": "Jan Žaloudík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 56,
+"jmeno": "Jan Hajda",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Jiří Dušek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 59,
+"jmeno": "Eliška Wagnerová",
+"g": "Ž",
+"ns": "Zelení"
+},
+{
+"obvod": 60,
+"jmeno": "Zdeněk Papoušek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 61,
+"jmeno": "Lumír Kantor",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 62,
+"jmeno": "Božena Sekaninová",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "Zelení"
+},
+{
+"obvod": 64,
+"jmeno": "Ladislav Václavec",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 65,
+"jmeno": "Zdeněk Brož",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 66,
+"jmeno": "Alena Šromová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 67,
+"jmeno": "Petr Orel",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 68,
+"jmeno": "Vladimír Plaček",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 69,
+"jmeno": "Jiří Carbol",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 70,
+"jmeno": "Zdeněk Nytra",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 71,
+"jmeno": "Leopold Sulovský",
+"g": "M",
+"ns": "Ostravak"
+},
+{
+"obvod": 72,
+"jmeno": "Peter Koliba",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 73,
+"jmeno": "Jiří Cieńciała",
+"g": "M",
+"ns": "„OSN“"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Radek Sušil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 76,
+"jmeno": "Šárka Jelínková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "František Čuba",
+"g": "M",
+"ns": "SPOZ"
+},
+{
+"obvod": 79,
+"jmeno": "Anna Hubáčková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 80,
+"jmeno": "Patrik Kunčar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Ivo Valenta",
+"g": "M",
+"ns": "Soukromníci"
+}
+],
+"2018": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 2,
+"jmeno": "Miroslav Balatka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Nenutil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 4,
+"jmeno": "Alena Dernerová",
+"g": "Ž",
+"ns": "SD-SN"
+},
+{
+"obvod": 5,
+"jmeno": "Přemysl Rabas",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 6,
+"jmeno": "Zdeňka Hamousová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 7,
+"jmeno": "Václav Chaloupek",
+"g": "M",
+"ns": "OPAT"
+},
+{
+"obvod": 8,
+"jmeno": "Pavel Karpíšek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Lumír Aschenbrenner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Vladislav Vilímec",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 12,
+"jmeno": "Karel Kratochvíle",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 13,
+"jmeno": "Jaroslav Větrovský",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 14,
+"jmeno": "Ladislav Faktor",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 15,
+"jmeno": "Milan Štěch",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Pavel Fischer",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 18,
+"jmeno": "Jiří Burian",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 19,
+"jmeno": "Ladislav Kos",
+"g": "M",
+"ns": "HPP 11"
+},
+{
+"obvod": 20,
+"jmeno": "Jiří Drahoš",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 21,
+"jmeno": "Václav Láska",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 22,
+"jmeno": "Renata Chmelová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 23,
+"jmeno": "Lukáš Wagenknecht",
+"g": "M",
+"ns": "Piráti"
+},
+{
+"obvod": 24,
+"jmeno": "Zuzana Baudyšová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 25,
+"jmeno": "Jiří Růžička",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 26,
+"jmeno": "Marek Hilšer",
+"g": "M",
+"ns": "MHS"
+},
+{
+"obvod": 27,
+"jmeno": "Václav Hampl",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 28,
+"jmeno": "Petr Holeček",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 29,
+"jmeno": "Ladislav Chlupáč",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Jiří DIENSTBIER",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "S.cz"
+},
+{
+"obvod": 32,
+"jmeno": "Jaroslav Kubera",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Zbyněk Linhart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 34,
+"jmeno": "Michael Canov",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 35,
+"jmeno": "Jaroslav Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 36,
+"jmeno": "Jiří Vosecký",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 37,
+"jmeno": "Tomáš Czernin",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 38,
+"jmeno": "Raduan Nwelati",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Jan Sobotka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 40,
+"jmeno": "Jaromír Strnad",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Zdeněk Hraba",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 42,
+"jmeno": "Emilie Třísková",
+"g": "Ž",
+"ns": "SOCDEM"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "Nestran."
+},
+{
+"obvod": 44,
+"jmeno": "Jan Tecl",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 45,
+"jmeno": "Jaroslav Malý",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Šilar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Martin Červíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Miroslav Antl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 49,
+"jmeno": "Jaromíra Vítková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 50,
+"jmeno": "Michal Kortyš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 51,
+"jmeno": "František Bradáč",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "Hana Žáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 54,
+"jmeno": "Pavel Štohl",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 55,
+"jmeno": "Jan Žaloudík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 56,
+"jmeno": "Rostislav Koštial",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 57,
+"jmeno": "Ivo Bárek",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 58,
+"jmeno": "Jiří Dušek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 59,
+"jmeno": "Mikuláš Bek",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 60,
+"jmeno": "Zdeněk Papoušek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 61,
+"jmeno": "Lumír Kantor",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 62,
+"jmeno": "Jitka Chalánková",
+"g": "Ž",
+"ns": "NK"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "Zelení"
+},
+{
+"obvod": 64,
+"jmeno": "Ladislav Václavec",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 65,
+"jmeno": "Miroslav Adámek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 66,
+"jmeno": "Alena Šromová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 67,
+"jmeno": "Petr Orel",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 68,
+"jmeno": "Herbert Pavera",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 69,
+"jmeno": "Jiří Carbol",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 70,
+"jmeno": "Zdeněk Nytra",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 71,
+"jmeno": "Leopold Sulovský",
+"g": "M",
+"ns": "Ostravak"
+},
+{
+"obvod": 72,
+"jmeno": "Peter Koliba",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 73,
+"jmeno": "Jiří Cieńciała",
+"g": "M",
+"ns": "„OSN“"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Radek Sušil",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 76,
+"jmeno": "Šárka Jelínková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Tomáš Goláň",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 79,
+"jmeno": "Anna Hubáčková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 80,
+"jmeno": "Patrik Kunčar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Ivo Valenta",
+"g": "M",
+"ns": "Soukromníci"
+}
+],
+"2020": [
+{
+"obvod": 1,
+"jmeno": "Jan Horník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 2,
+"jmeno": "Miroslav Balatka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Plevný",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 4,
+"jmeno": "Alena Dernerová",
+"g": "Ž",
+"ns": "SD-SN"
+},
+{
+"obvod": 5,
+"jmeno": "Přemysl Rabas",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 6,
+"jmeno": "Ivo Trešl",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 7,
+"jmeno": "Václav Chaloupek",
+"g": "M",
+"ns": "OPAT"
+},
+{
+"obvod": 8,
+"jmeno": "Pavel Karpíšek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Lumír Aschenbrenner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Vladislav Vilímec",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 12,
+"jmeno": "Tomáš Fiala",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 13,
+"jmeno": "Jaroslav Větrovský",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 14,
+"jmeno": "Ladislav Faktor",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 15,
+"jmeno": "Jaroslav Chalupský",
+"g": "M",
+"ns": "Svobodní"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Pavel Fischer",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 18,
+"jmeno": "Petr Štěpánek",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 19,
+"jmeno": "Ladislav Kos",
+"g": "M",
+"ns": "HPP 11"
+},
+{
+"obvod": 20,
+"jmeno": "Jiří Drahoš",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 21,
+"jmeno": "Václav Láska",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 22,
+"jmeno": "Renata Chmelová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 23,
+"jmeno": "Lukáš Wagenknecht",
+"g": "M",
+"ns": "Piráti"
+},
+{
+"obvod": 24,
+"jmeno": "David Smoljak",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 25,
+"jmeno": "Jiří Růžička",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 26,
+"jmeno": "Marek Hilšer",
+"g": "M",
+"ns": "MHS"
+},
+{
+"obvod": 27,
+"jmeno": "Miroslava Němcová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Petr Holeček",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 29,
+"jmeno": "Ladislav Chlupáč",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Adéla Šípová",
+"g": "Ž",
+"ns": "Piráti"
+},
+{
+"obvod": 31,
+"jmeno": "Jaroslav Doubrava",
+"g": "M",
+"ns": "S.cz"
+},
+{
+"obvod": 32,
+"jmeno": "Hynek Hanza",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Zbyněk Linhart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 34,
+"jmeno": "Michael Canov",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 35,
+"jmeno": "Jaroslav Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 36,
+"jmeno": "Jiří Vosecký",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 37,
+"jmeno": "Tomáš Czernin",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 38,
+"jmeno": "Raduan Nwelati",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Jan Sobotka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 40,
+"jmeno": "Jaromír Strnad",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 41,
+"jmeno": "Zdeněk Hraba",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 42,
+"jmeno": "Pavel Kárník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "Nestran."
+},
+{
+"obvod": 44,
+"jmeno": "Jan Tecl",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 45,
+"jmeno": "Jan Holásek",
+"g": "M",
+"ns": "HDK"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Šilar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Martin Červíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Jan Grulich",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 49,
+"jmeno": "Jaromíra Vítková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 50,
+"jmeno": "Michal Kortyš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 51,
+"jmeno": "Josef Klement",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "Hana Žáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 54,
+"jmeno": "Tomáš Třetina",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 55,
+"jmeno": "Jan Žaloudík",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 56,
+"jmeno": "Rostislav Koštial",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 57,
+"jmeno": "Karel Zitterbart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 58,
+"jmeno": "Jiří Dušek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 59,
+"jmeno": "Mikuláš Bek",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 60,
+"jmeno": "Roman Kraus",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 61,
+"jmeno": "Lumír Kantor",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 62,
+"jmeno": "Jitka Chalánková",
+"g": "Ž",
+"ns": "NK"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 64,
+"jmeno": "Ladislav Václavec",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 65,
+"jmeno": "Miroslav Adámek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 66,
+"jmeno": "Marek Ošťádal",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 67,
+"jmeno": "Petr Orel",
+"g": "M",
+"ns": "Zelení"
+},
+{
+"obvod": 68,
+"jmeno": "Herbert Pavera",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 69,
+"jmeno": "Helena Pešatová",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 70,
+"jmeno": "Zdeněk Nytra",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 71,
+"jmeno": "Leopold Sulovský",
+"g": "M",
+"ns": "Ostravak"
+},
+{
+"obvod": 72,
+"jmeno": "Ondřej Šimetka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 73,
+"jmeno": "Jiří Cieńciała",
+"g": "M",
+"ns": "„OSN“"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Ondřej Feber",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 76,
+"jmeno": "Šárka Jelínková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Tomáš Goláň",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 79,
+"jmeno": "Anna Hubáčková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 80,
+"jmeno": "Patrik Kunčar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Josef Bazala",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2022": [
+{
+"obvod": 1,
+"jmeno": "Věra Procházková",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 2,
+"jmeno": "Miroslav Balatka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Plevný",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 4,
+"jmeno": "Jan Paparega",
+"g": "M",
+"ns": "ProMOST"
+},
+{
+"obvod": 5,
+"jmeno": "Přemysl Rabas",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 6,
+"jmeno": "Ivo Trešl",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 7,
+"jmeno": "Daniela Kovářová",
+"g": "Ž",
+"ns": "NK"
+},
+{
+"obvod": 8,
+"jmeno": "Pavel Karpíšek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 9,
+"jmeno": "Lumír Aschenbrenner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Vladislav Vilímec",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 12,
+"jmeno": "Tomáš Fiala",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 13,
+"jmeno": "Marek Slabý",
+"g": "M",
+"ns": "T2020"
+},
+{
+"obvod": 14,
+"jmeno": "Ladislav Faktor",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 15,
+"jmeno": "Jaroslav Chalupský",
+"g": "M",
+"ns": "Svobodní"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Pavel Fischer",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 18,
+"jmeno": "Petr Štěpánek",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 19,
+"jmeno": "Hana Kordová Marvanová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Jiří Drahoš",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 21,
+"jmeno": "Václav Láska",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 22,
+"jmeno": "Jan Pirk",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 23,
+"jmeno": "Lukáš Wagenknecht",
+"g": "M",
+"ns": "Piráti"
+},
+{
+"obvod": 24,
+"jmeno": "David Smoljak",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 25,
+"jmeno": "Jiří Růžička",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 26,
+"jmeno": "Marek Hilšer",
+"g": "M",
+"ns": "MHS"
+},
+{
+"obvod": 27,
+"jmeno": "Miroslava Němcová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Jarmila Smotlachová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Ladislav Chlupáč",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 30,
+"jmeno": "Adéla Šípová",
+"g": "Ž",
+"ns": "Piráti"
+},
+{
+"obvod": 31,
+"jmeno": "Martin Krsek",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 32,
+"jmeno": "Hynek Hanza",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 33,
+"jmeno": "Zbyněk Linhart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 34,
+"jmeno": "Michael Canov",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 35,
+"jmeno": "Jaroslav Zeman",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 36,
+"jmeno": "Jiří Vosecký",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 37,
+"jmeno": "Tomáš Czernin",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 38,
+"jmeno": "Raduan Nwelati",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 39,
+"jmeno": "Jan Sobotka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 40,
+"jmeno": "Bohuslav Procházka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 41,
+"jmeno": "Zdeněk Hraba",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 42,
+"jmeno": "Pavel Kárník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 44,
+"jmeno": "Jan Tecl",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 45,
+"jmeno": "Jan Holásek",
+"g": "M",
+"ns": "HDK"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Fiala",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Martin Červíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Jan Grulich",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 49,
+"jmeno": "Jaromíra Vítková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 50,
+"jmeno": "Michal Kortyš",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 51,
+"jmeno": "Josef Klement",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "Hana Žáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 54,
+"jmeno": "Tomáš Třetina",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Töpfer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Rostislav Koštial",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 57,
+"jmeno": "Karel Zitterbart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 58,
+"jmeno": "Jiří Dušek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 59,
+"jmeno": "Mikuláš Bek",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 60,
+"jmeno": "Roman Kraus",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 61,
+"jmeno": "Lumír Kantor",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 62,
+"jmeno": "Jitka Chalánková",
+"g": "Ž",
+"ns": "NK"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 64,
+"jmeno": "Ladislav Václavec",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 65,
+"jmeno": "Miroslav Adámek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 66,
+"jmeno": "Marek Ošťádal",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 67,
+"jmeno": "Ivana Váňová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 68,
+"jmeno": "Herbert Pavera",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 69,
+"jmeno": "Helena Pešatová",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 70,
+"jmeno": "Zdeněk Nytra",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 71,
+"jmeno": "Leopold Sulovský",
+"g": "M",
+"ns": "Ostravak"
+},
+{
+"obvod": 72,
+"jmeno": "Ondřej Šimetka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 73,
+"jmeno": "Zdeněk Matušek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Ondřej Feber",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 76,
+"jmeno": "Jana Zwyrtek Hamplová",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Tomáš Goláň",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 79,
+"jmeno": "Eva Rajchmanová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 80,
+"jmeno": "Patrik Kunčar",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 81,
+"jmeno": "Josef Bazala",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2024": [
+{
+"obvod": 1,
+"jmeno": "Věra Procházková",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 2,
+"jmeno": "Jana Mračková Vildumetzová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Plevný",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 4,
+"jmeno": "Jan Paparega",
+"g": "M",
+"ns": "ProMOST"
+},
+{
+"obvod": 5,
+"jmeno": "Přemysl Rabas",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 6,
+"jmeno": "Ivo Trešl",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 7,
+"jmeno": "Daniela Kovářová",
+"g": "Ž",
+"ns": "NK"
+},
+{
+"obvod": 8,
+"jmeno": "Miroslav Kroc",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 9,
+"jmeno": "Lumír Aschenbrenner",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jan Látka",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 12,
+"jmeno": "Tomáš Fiala",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 13,
+"jmeno": "Marek Slabý",
+"g": "M",
+"ns": "T2020"
+},
+{
+"obvod": 14,
+"jmeno": "Zbyněk Sýkora",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Jaroslav Chalupský",
+"g": "M",
+"ns": "Svobodní"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Pavel Fischer",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 18,
+"jmeno": "Petr Štěpánek",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 19,
+"jmeno": "Hana Kordová Marvanová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Jiří Drahoš",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 21,
+"jmeno": "Václav Láska",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 22,
+"jmeno": "Jan Pirk",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 23,
+"jmeno": "Vladimíra Ludková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "David Smoljak",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 25,
+"jmeno": "Jiří Růžička",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 26,
+"jmeno": "Miroslav Bárta",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 27,
+"jmeno": "Miroslava Němcová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 28,
+"jmeno": "Jarmila Smotlachová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Ondřej Štěrba",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 30,
+"jmeno": "Adéla Šípová",
+"g": "Ž",
+"ns": "Piráti"
+},
+{
+"obvod": 31,
+"jmeno": "Martin Krsek",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 32,
+"jmeno": "Jan Schiller",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 33,
+"jmeno": "Zbyněk Linhart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 34,
+"jmeno": "Michael Canov",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 35,
+"jmeno": "Lena Mlejnková",
+"g": "Ž",
+"ns": "SLK"
+},
+{
+"obvod": 36,
+"jmeno": "Jiří Vosecký",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 37,
+"jmeno": "Tomáš Czernin",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 38,
+"jmeno": "Ondřej Lochman",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 39,
+"jmeno": "Jan Sobotka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 40,
+"jmeno": "Bohuslav Procházka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 41,
+"jmeno": "Zdeněk Hraba",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 42,
+"jmeno": "Pavel Kárník",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 44,
+"jmeno": "Jan Tecl",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 45,
+"jmeno": "Jan Holásek",
+"g": "M",
+"ns": "HDK"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Fiala",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Martin Červíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Jan Grulich",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 49,
+"jmeno": "Jaromíra Vítková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 50,
+"jmeno": "David Šimek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Josef Klement",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "Hana Žáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 54,
+"jmeno": "Tomáš Třetina",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Töpfer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Róbert Šlachta",
+"g": "M",
+"ns": "PŘÍSAHA"
+},
+{
+"obvod": 57,
+"jmeno": "Karel Zitterbart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 58,
+"jmeno": "Jiří Dušek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 59,
+"jmeno": "Břetislav Rychlík",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 60,
+"jmeno": "Roman Kraus",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 61,
+"jmeno": "Lumír Kantor",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 62,
+"jmeno": "František Jura",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 63,
+"jmeno": "Jitka Seitlová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 64,
+"jmeno": "Ladislav Václavec",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 65,
+"jmeno": "Stanislav Balík",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 66,
+"jmeno": "Marek Ošťádal",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 67,
+"jmeno": "Ivana Váňová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 68,
+"jmeno": "Tomáš Navrátil",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 69,
+"jmeno": "Helena Pešatová",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 70,
+"jmeno": "Zdeněk Nytra",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 71,
+"jmeno": "Martin Bednář",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 72,
+"jmeno": "Ondřej Šimetka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 73,
+"jmeno": "Zdeněk Matušek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Ondřej Feber",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 76,
+"jmeno": "Jana Zwyrtek Hamplová",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Tomáš Goláň",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 79,
+"jmeno": "Eva Rajchmanová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 80,
+"jmeno": "Oldřich Hájek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 81,
+"jmeno": "Josef Bazala",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+],
+"2026": [
+{
+"obvod": 1,
+"jmeno": "Věra Procházková",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 2,
+"jmeno": "Jana Mračková Vildumetzová",
+"g": "Ž",
+"ns": "ANO"
+},
+{
+"obvod": 3,
+"jmeno": "Miroslav Plevný",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 4,
+"jmeno": "Jan Paparega",
+"g": "M",
+"ns": "ProMOST"
+},
+{
+"obvod": 5,
+"jmeno": "Přemysl Rabas",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 6,
+"jmeno": "Ivo Trešl",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 7,
+"jmeno": "Daniela Kovářová",
+"g": "Ž",
+"ns": "NK"
+},
+{
+"obvod": 8,
+"jmeno": "Miroslav Kroc",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 9,
+"jmeno": "Karel Řehka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 10,
+"jmeno": "Tomáš Jirsa",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 11,
+"jmeno": "Jan Látka",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 12,
+"jmeno": "Tomáš Fiala",
+"g": "M",
+"ns": "NČ"
+},
+{
+"obvod": 13,
+"jmeno": "Marek Slabý",
+"g": "M",
+"ns": "T2020"
+},
+{
+"obvod": 14,
+"jmeno": "Zbyněk Sýkora",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 15,
+"jmeno": "Ladislav Med",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 16,
+"jmeno": "Jiří Oberfalzer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 17,
+"jmeno": "Pavel Fischer",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 18,
+"jmeno": "Petr Štěpánek",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 19,
+"jmeno": "Hana Kordová Marvanová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 20,
+"jmeno": "Jiří Drahoš",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 21,
+"jmeno": "Václav Láska",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 22,
+"jmeno": "Jan Pirk",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 23,
+"jmeno": "Vladimíra Ludková",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 24,
+"jmeno": "David Smoljak",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 25,
+"jmeno": "Jiří Růžička",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 26,
+"jmeno": "Miroslav Bárta",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 27,
+"jmeno": "Jiří Padevět",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 28,
+"jmeno": "Jarmila Smotlachová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 29,
+"jmeno": "Ondřej Štěrba",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 30,
+"jmeno": "Petr Paták",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 31,
+"jmeno": "Martin Krsek",
+"g": "M",
+"ns": "SEN 21"
+},
+{
+"obvod": 32,
+"jmeno": "Jan Schiller",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 33,
+"jmeno": "Zbyněk Linhart",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 34,
+"jmeno": "Michael Canov",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 35,
+"jmeno": "Lena Mlejnková",
+"g": "Ž",
+"ns": "SLK"
+},
+{
+"obvod": 36,
+"jmeno": "Martin Půta",
+"g": "M",
+"ns": "SLK"
+},
+{
+"obvod": 37,
+"jmeno": "Tomáš Czernin",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 38,
+"jmeno": "Ondřej Lochman",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 39,
+"jmeno": "Jan Sobotka",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 40,
+"jmeno": "Bohuslav Procházka",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 41,
+"jmeno": "Zdeněk Hraba",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 42,
+"jmeno": "Michael Kašpar",
+"g": "M",
+"ns": "STAN"
+},
+{
+"obvod": 43,
+"jmeno": "Miluše Horská",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 44,
+"jmeno": "Jan Tecl",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 45,
+"jmeno": "Zuzana Ceralová Petrofová",
+"g": "Ž",
+"ns": "ODS"
+},
+{
+"obvod": 46,
+"jmeno": "Petr Fiala",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 47,
+"jmeno": "Martin Červíček",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 48,
+"jmeno": "Jan Grulich",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 49,
+"jmeno": "Jaromíra Vítková",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 50,
+"jmeno": "David Šimek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 51,
+"jmeno": "Josef Klement",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 52,
+"jmeno": "Miloš Vystrčil",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 53,
+"jmeno": "Hana Žáková",
+"g": "Ž",
+"ns": "STAN"
+},
+{
+"obvod": 54,
+"jmeno": "Tomáš Třetina",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 55,
+"jmeno": "Tomáš Töpfer",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 56,
+"jmeno": "Róbert Šlachta",
+"g": "M",
+"ns": "PŘÍSAHA"
+},
+{
+"obvod": 57,
+"jmeno": "Jan Grolich",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 58,
+"jmeno": "Jiří Dušek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 59,
+"jmeno": "Břetislav Rychlík",
+"g": "M",
+"ns": "TOP 09"
+},
+{
+"obvod": 60,
+"jmeno": "Zdeněk Papoušek",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 61,
+"jmeno": "Lumír Kantor",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 62,
+"jmeno": "František Jura",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 63,
+"jmeno": "Jakub Navařík",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 64,
+"jmeno": "Ladislav Václavec",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 65,
+"jmeno": "Stanislav Balík",
+"g": "M",
+"ns": "NK"
+},
+{
+"obvod": 66,
+"jmeno": "Marek Ošťádal",
+"g": "M",
+"ns": "24/7"
+},
+{
+"obvod": 67,
+"jmeno": "Ivana Váňová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 68,
+"jmeno": "Tomáš Navrátil",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 69,
+"jmeno": "Petr Korč",
+"g": "M",
+"ns": "NMFM"
+},
+{
+"obvod": 70,
+"jmeno": "Zdeněk Nytra",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 71,
+"jmeno": "Martin Bednář",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 72,
+"jmeno": "Ondřej Šimetka",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 73,
+"jmeno": "Zdeněk Matušek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 74,
+"jmeno": "Petr Vícha",
+"g": "M",
+"ns": "SOCDEM"
+},
+{
+"obvod": 75,
+"jmeno": "Petr Kazík",
+"g": "M",
+"ns": "OK"
+},
+{
+"obvod": 76,
+"jmeno": "Jana Zwyrtek Hamplová",
+"g": "Ž",
+"ns": "NEZ"
+},
+{
+"obvod": 77,
+"jmeno": "Jiří Čunek",
+"g": "M",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 78,
+"jmeno": "Tomáš Goláň",
+"g": "M",
+"ns": "ODS"
+},
+{
+"obvod": 79,
+"jmeno": "Eva Rajchmanová",
+"g": "Ž",
+"ns": "KDU-ČSL"
+},
+{
+"obvod": 80,
+"jmeno": "Oldřich Hájek",
+"g": "M",
+"ns": "ANO"
+},
+{
+"obvod": 81,
+"jmeno": "Josef Bazala",
+"g": "M",
+"ns": "KDU-ČSL"
+}
+]
+}

@@ -1,0 +1,224 @@
+{
+  "seb449": {
+    "QB9.1 CZ": 26,
+    "QB9.1 EU28": 22,
+    "QB9.2 CZ": 26,
+    "QB9.2 EU28": 17,
+    "QB10 oblečení": [
+      10,
+      10
+    ],
+    "QB10 opilost": [
+      12,
+      12
+    ],
+    "QB10 flirt": [
+      17,
+      7
+    ],
+    "QB10 neřekla jasně ne": [
+      19,
+      10
+    ],
+    "QB10 sama v noci": [
+      9,
+      7
+    ],
+    "QB10 více partnerů": [
+      10,
+      7
+    ],
+    "QB10 šla s ním domů": [
+      18,
+      11
+    ],
+    "QB10 aspoň jedna": [
+      42,
+      27
+    ]
+  },
+  "fl544": {
+    "opilost": {
+      "eu": 16,
+      "cz": 32,
+      "eu_ne": 81,
+      "cz_ne": 65
+    },
+    "ne_znamena_ano": {
+      "eu": 9,
+      "cz": 14,
+      "eu_ne": 86,
+      "cz_ne": 77
+    },
+    "bez_souhlasu_v_paru": {
+      "eu": 5,
+      "cz": 8,
+      "eu_ne": 93,
+      "cz_ne": 90
+    },
+    "vymysleji": {
+      "eu": 17,
+      "cz": 23,
+      "eu_ne": 72,
+      "cz_ne": 67
+    }
+  },
+  "gbv_ipv_type": {
+    "PHY_SX CZ": 11.6,
+    "PHY_SX EU_V": 17.0,
+    "PSY CZ": 31.3,
+    "PSY EU_V": 29.9,
+    "PSY_PHY_THRT_SX CZ": 33.5,
+    "PSY_PHY_THRT_SX EU_V": 31.8
+  },
+  "gbv_any_rp": {
+    "ANY CZ": 57.7,
+    "ANY EU_V": 68.2,
+    "CLSPER CZ": 51.7,
+    "CLSPER EU_V": 63.7,
+    "POLC CZ": 11.0,
+    "POLC EU_V": 13.9
+  },
+  "vrazdy_partner": {
+    "roky": {
+      "2008": {
+        "F": 17,
+        "M": 8
+      },
+      "2009": {
+        "F": 15,
+        "M": 14
+      },
+      "2010": {
+        "F": 26,
+        "M": 10
+      },
+      "2011": {
+        "F": 20,
+        "M": 5
+      },
+      "2012": {
+        "F": 16,
+        "M": 11
+      },
+      "2013": {
+        "F": 12,
+        "M": 7
+      },
+      "2014": {
+        "F": 9,
+        "M": 8
+      },
+      "2015": {
+        "F": 12,
+        "M": 8
+      },
+      "2016": {
+        "F": 17,
+        "M": 3
+      },
+      "2017": {
+        "F": 13,
+        "M": 5
+      },
+      "2019": {
+        "F": 12,
+        "M": 1
+      },
+      "2020": {
+        "F": 14,
+        "M": 1
+      },
+      "2021": {
+        "F": 7,
+        "M": 4
+      },
+      "2022": {
+        "F": 11,
+        "M": 5
+      },
+      "2023": {
+        "F": 13,
+        "M": 3
+      },
+      "2024": {
+        "F": 10,
+        "M": 5
+      }
+    },
+    "zeny_od_2015": 109,
+    "muzi_od_2015": 35,
+    "podil_zen_pct": 75.7,
+    "roky_s_daty": [
+      2015,
+      2016,
+      2017,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "pomery_vyroku": {
+    "„Byla opilá, může si za to sama“": 2.0,
+    "„Flirtovala, tak je sex bez souhlasu omluvitelný“": 2.43,
+    "„Neřekla jasně ne, nebránila se“": 1.9,
+    "„Šla s ním domů“": 1.64,
+    "„Násilí na ženách často vyprovokuje oběť“": 1.53,
+    "„Když žena řekne ne, často myslí ano“": 1.56,
+    "„Ženy si obvinění vymýšlejí nebo přehánějí“": 1.35,
+    "„Co měla na sobě“ (vyzývavé oblečení)": 1.0
+  },
+  "dolozene": {
+    "apic_2024_ohrozeni": {
+      "zeny": 1477,
+      "muzi": 212,
+      "deti": 1452,
+      "zdroj": "Komentář APIC ke statistikám 2024, http://www.domaci-nasili.cz/wp-content/uploads/koment%C3%A1%C5%99-APIC-2024.pdf"
+    },
+    "apic_2025": {
+      "vykazani": 1640,
+      "deti_ohrozene": 3251,
+      "nasilnik_rodic_pct": 72,
+      "zdroj": "Komentář APIC ke statistikám 2025, http://www.domaci-nasili.cz/wp-content/uploads/koment%C3%A1%C5%99-APIC-2025.pdf"
+    },
+    "moller_2017": {
+      "n": 298,
+      "vyrazne_ztuhnuti_pct": 69.8,
+      "extremni_pct": 47.7,
+      "zdroj": "Möller, Söndergaard, Helström 2017, Acta Obstet Gynecol Scand 96:932–938, doi 10.1111/aogs.13174"
+    },
+    "lisak_2010": {
+      "krive_od": 2,
+      "krive_do": 10,
+      "zdroj": "Lisak a kol. 2010, Violence Against Women 16(12), doi 10.1177/1077801210387747"
+    },
+    "ferguson_malouff_2016": {
+      "potvrzene_krive_pct": 5.2,
+      "ci": [
+        3.0,
+        8.9
+      ],
+      "zdroj": "Ferguson & Malouff 2016, Archives of Sexual Behavior 45(5), doi 10.1007/s10508-015-0666-2 (abstrakt)"
+    },
+    "campbell_2003": {
+      "aOR_odlouceni_kontrolujici": 8.98,
+      "zdroj": "Campbell a kol. 2003, Am J Public Health 93(7), PMC1447915"
+    },
+    "iksp_rozsudky": {
+      "n": 106,
+      "deti_pritomny_pct": 91,
+      "podminka_pct": 54,
+      "zdroj": "IKSP, P. Přesličková 2025, prezentace https://iksp.gov.cz/storage/169/IKSP_workshop_obeti_prezentace_Preslickova.pdf"
+    },
+    "senat_istanbul_2024": {
+      "pro": 34,
+      "proti": 28,
+      "zdrzelo": 9,
+      "potreba": 36,
+      "zdroj": "Senát, 21. schůze 24. 1. 2024, hlasování č. 24, https://www.senat.cz/xqw/xervlet/pssenat/hlasy?G=22128&O=14"
+    }
+  }
+}

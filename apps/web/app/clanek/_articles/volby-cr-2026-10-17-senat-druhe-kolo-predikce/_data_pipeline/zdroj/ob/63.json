@@ -1,0 +1,19 @@
+{
+  "id" : "20261009/vysled/obvod/63.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":63},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Přerov",
+  "prehled" : [
+  [1,216,216,100,102995,42838,41.59,22,41840,40374,96.5]
+],
+  "existujePdf" : false,
+  "vysledky" : [
+  [1,"Obrtel Marek MUDr.","ČSNS","ČSNS","ČSNS",6073,15.04,null,null,false,false,2,2,2],
+  [2,"Vrána Petr Ing.","ANO","ANO","ANO",15192,37.62,null,null,false,false,768,768,768],
+  [3,"Navařík Jakub Mgr. Ph.D.","KDU+ODS+STA+TOP","ODS","ODS",15561,38.54,null,null,false,false,1531,53,53],
+  [4,"Chromec Dan","SPD","SPD","SPD",3548,8.78,null,null,false,false,1114,1114,1114]
+],
+  "postupuje" : [2,3],
+  "zvoleny" : null
+}

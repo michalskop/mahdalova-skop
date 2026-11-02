@@ -1,0 +1,658 @@
+{
+ "stav": "Nové složení Senátu po volbách 2026. Mandáty, které trvají: senat.cz k 1. 10. 2026; zvolení 2026: ČSÚ; u nově zvolených předpokládaný klub (kluby se ustálí po volbách).",
+ "kluby": [
+  {
+   "id": "stan",
+   "nazev": "Starostové a nezávislí",
+   "kratce": "STAN",
+   "barva": "#ff1a4a"
+  },
+  {
+   "id": "kdu",
+   "nazev": "KDU-ČSL a nezávislí",
+   "kratce": "KDU-ČSL",
+   "barva": "#ffcf02"
+  },
+  {
+   "id": "ods",
+   "nazev": "ODS a TOP 09",
+   "kratce": "ODS a TOP 09",
+   "barva": "#5e66d5"
+  },
+  {
+   "id": "nez",
+   "nazev": "nezařazení",
+   "kratce": "nezařazení",
+   "barva": "#9a9a92"
+  },
+  {
+   "id": "ano",
+   "nazev": "ANO",
+   "kratce": "ANO",
+   "barva": "#272a59"
+  }
+ ],
+ "sedadla": [
+  {
+   "jmeno": "Věra Procházková",
+   "obvod": 1,
+   "obvodNazev": "Karlovy Vary",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Jana Mračková Vildumetzová",
+   "obvod": 2,
+   "obvodNazev": "Sokolov",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Miroslav Plevný",
+   "obvod": 3,
+   "obvodNazev": "Cheb",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "STAN"
+  },
+  {
+   "jmeno": "Jan Paparega",
+   "obvod": 4,
+   "obvodNazev": "Most",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Přemysl Rabas",
+   "obvod": 5,
+   "obvodNazev": "Chomutov",
+   "klub": "nez",
+   "nove": false
+  },
+  {
+   "jmeno": "Ivo Trešl",
+   "obvod": 6,
+   "obvodNazev": "Louny",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "STAN"
+  },
+  {
+   "jmeno": "Daniela Kovářová",
+   "obvod": 7,
+   "obvodNazev": "Plzeň-město",
+   "klub": "nez",
+   "nove": false
+  },
+  {
+   "jmeno": "Miroslav Kroc",
+   "obvod": 8,
+   "obvodNazev": "Rokycany",
+   "klub": "stan",
+   "nove": false
+  },
+  {
+   "jmeno": "Karel Řehka",
+   "obvod": 9,
+   "obvodNazev": "Plzeň-město",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "STAN"
+  },
+  {
+   "jmeno": "Tomáš Jirsa",
+   "obvod": 10,
+   "obvodNazev": "Český Krumlov",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Jan Látka",
+   "obvod": 11,
+   "obvodNazev": "Domažlice",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Tomáš Fiala",
+   "obvod": 12,
+   "obvodNazev": "Strakonice",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 1,
+   "navrh": "Naše Česko"
+  },
+  {
+   "jmeno": "Marek Slabý",
+   "obvod": 13,
+   "obvodNazev": "Tábor",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Zbyněk Sýkora",
+   "obvod": 14,
+   "obvodNazev": "České Budějovice",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Ladislav Med",
+   "obvod": 15,
+   "obvodNazev": "Pelhřimov",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL, ODS, STAN, TOP 09, STO"
+  },
+  {
+   "jmeno": "Jiří Oberfalzer",
+   "obvod": 16,
+   "obvodNazev": "Beroun",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Pavel Fischer",
+   "obvod": 17,
+   "obvodNazev": "Praha 12",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Petr Štěpánek",
+   "obvod": 18,
+   "obvodNazev": "Příbram",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "STAN"
+  },
+  {
+   "jmeno": "Hana Kordová Marvanová",
+   "obvod": 19,
+   "obvodNazev": "Praha 11",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Jiří Drahoš",
+   "obvod": 20,
+   "obvodNazev": "Praha 4",
+   "klub": "stan",
+   "nove": false
+  },
+  {
+   "jmeno": "Václav Láska",
+   "obvod": 21,
+   "obvodNazev": "Praha 5",
+   "klub": "nez",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "SEN 21"
+  },
+  {
+   "jmeno": "Jan Pirk",
+   "obvod": 22,
+   "obvodNazev": "Praha 10",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Vladimíra Ludková",
+   "obvod": 23,
+   "obvodNazev": "Praha 8",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "David Smoljak",
+   "obvod": 24,
+   "obvodNazev": "Praha 9",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL, Zelení, STAN, Piráti, TOP 09"
+  },
+  {
+   "jmeno": "Jiří Růžička",
+   "obvod": 25,
+   "obvodNazev": "Praha 6",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Miroslav Bárta",
+   "obvod": 26,
+   "obvodNazev": "Praha 2",
+   "klub": "stan",
+   "nove": false
+  },
+  {
+   "jmeno": "Jiří Padevět",
+   "obvod": 27,
+   "obvodNazev": "Praha 1",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "ODS, STAN, Piráti, TOP 09"
+  },
+  {
+   "jmeno": "Jarmila Smotlachová",
+   "obvod": 28,
+   "obvodNazev": "Mělník",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Ondřej Štěrba",
+   "obvod": 29,
+   "obvodNazev": "Litoměřice",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Petr Paták",
+   "obvod": 30,
+   "obvodNazev": "Kladno",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "ODS"
+  },
+  {
+   "jmeno": "Martin Krsek",
+   "obvod": 31,
+   "obvodNazev": "Ústí nad Labem",
+   "klub": "nez",
+   "nove": false
+  },
+  {
+   "jmeno": "Jan Schiller",
+   "obvod": 32,
+   "obvodNazev": "Teplice",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Zbyněk Linhart",
+   "obvod": 33,
+   "obvodNazev": "Děčín",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 1,
+   "navrh": "STAN, SLK"
+  },
+  {
+   "jmeno": "Michael Canov",
+   "obvod": 34,
+   "obvodNazev": "Liberec",
+   "klub": "stan",
+   "nove": false
+  },
+  {
+   "jmeno": "Lena Mlejnková",
+   "obvod": 35,
+   "obvodNazev": "Jablonec nad Nisou",
+   "klub": "stan",
+   "nove": false
+  },
+  {
+   "jmeno": "Martin Půta",
+   "obvod": 36,
+   "obvodNazev": "Česká Lípa",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "Starostové pro Liberecký kraj"
+  },
+  {
+   "jmeno": "Tomáš Czernin",
+   "obvod": 37,
+   "obvodNazev": "Jičín",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Ondřej Lochman",
+   "obvod": 38,
+   "obvodNazev": "Mladá Boleslav",
+   "klub": "stan",
+   "nove": false
+  },
+  {
+   "jmeno": "Jan Sobotka",
+   "obvod": 39,
+   "obvodNazev": "Trutnov",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 1,
+   "navrh": "STAN"
+  },
+  {
+   "jmeno": "Bohuslav Procházka",
+   "obvod": 40,
+   "obvodNazev": "Kutná Hora",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "Zdeněk Hraba",
+   "obvod": 41,
+   "obvodNazev": "Benešov",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Michael Kašpar",
+   "obvod": 42,
+   "obvodNazev": "Kolín",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "STAN"
+  },
+  {
+   "jmeno": "Miluše Horská",
+   "obvod": 43,
+   "obvodNazev": "Pardubice",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "Jan Tecl",
+   "obvod": 44,
+   "obvodNazev": "Chrudim",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Zuzana Ceralová Petrofová",
+   "obvod": 45,
+   "obvodNazev": "Hradec Králové",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "ODS"
+  },
+  {
+   "jmeno": "Petr Fiala",
+   "obvod": 46,
+   "obvodNazev": "Ústí nad Orlicí",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "Martin Červíček",
+   "obvod": 47,
+   "obvodNazev": "Náchod",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Jan Grulich",
+   "obvod": 48,
+   "obvodNazev": "Rychnov nad Kněžnou",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 1,
+   "navrh": "KDU-ČSL, ODS, STAN, Piráti, TOP 09, LES"
+  },
+  {
+   "jmeno": "Jaromíra Vítková",
+   "obvod": 49,
+   "obvodNazev": "Blansko",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "David Šimek",
+   "obvod": 50,
+   "obvodNazev": "Svitavy",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "Josef Klement",
+   "obvod": 51,
+   "obvodNazev": "Žďár nad Sázavou",
+   "klub": "kdu",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL"
+  },
+  {
+   "jmeno": "Miloš Vystrčil",
+   "obvod": 52,
+   "obvodNazev": "Jihlava",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Hana Žáková",
+   "obvod": 53,
+   "obvodNazev": "Třebíč",
+   "klub": "stan",
+   "nove": false
+  },
+  {
+   "jmeno": "Tomáš Třetina",
+   "obvod": 54,
+   "obvodNazev": "Znojmo",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL, ODS, STAN, Piráti, TOP 09"
+  },
+  {
+   "jmeno": "Tomáš Töpfer",
+   "obvod": 55,
+   "obvodNazev": "Brno-město",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Róbert Šlachta",
+   "obvod": 56,
+   "obvodNazev": "Břeclav",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Jan Grolich",
+   "obvod": 57,
+   "obvodNazev": "Vyškov",
+   "klub": "kdu",
+   "nove": true,
+   "kolo": 1,
+   "navrh": "KDU-ČSL"
+  },
+  {
+   "jmeno": "Jiří Dušek",
+   "obvod": 58,
+   "obvodNazev": "Brno-město",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Břetislav Rychlík",
+   "obvod": 59,
+   "obvodNazev": "Brno-město",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Zdeněk Papoušek",
+   "obvod": 60,
+   "obvodNazev": "Brno-město",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL, ODS, Piráti, TOP 09, Fakt Brno"
+  },
+  {
+   "jmeno": "Lumír Kantor",
+   "obvod": 61,
+   "obvodNazev": "Olomouc",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "František Jura",
+   "obvod": 62,
+   "obvodNazev": "Prostějov",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Jakub Navařík",
+   "obvod": 63,
+   "obvodNazev": "Přerov",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL, ODS, STAN, TOP 09"
+  },
+  {
+   "jmeno": "Ladislav Václavec",
+   "obvod": 64,
+   "obvodNazev": "Bruntál",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Stanislav Balík",
+   "obvod": 65,
+   "obvodNazev": "Šumperk",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Marek Ošťádal",
+   "obvod": 66,
+   "obvodNazev": "Litovel",
+   "klub": "stan",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "24/7"
+  },
+  {
+   "jmeno": "Ivana Váňová",
+   "obvod": 67,
+   "obvodNazev": "Nový Jičín",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "Tomáš Navrátil",
+   "obvod": 68,
+   "obvodNazev": "Opava",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Petr Korč",
+   "obvod": 69,
+   "obvodNazev": "Frýdek-Místek",
+   "klub": "nez",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "Naše Město F-M"
+  },
+  {
+   "jmeno": "Zdeněk Nytra",
+   "obvod": 70,
+   "obvodNazev": "Ostrava-město",
+   "klub": "ods",
+   "nove": false
+  },
+  {
+   "jmeno": "Martin Bednář",
+   "obvod": 71,
+   "obvodNazev": "Ostrava-město",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Ondřej Šimetka",
+   "obvod": 72,
+   "obvodNazev": "Ostrava-město",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL, ODS, STAN, Piráti, TOP 09"
+  },
+  {
+   "jmeno": "Zdeněk Matušek",
+   "obvod": 73,
+   "obvodNazev": "Frýdek-Místek",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Petr Vícha",
+   "obvod": 74,
+   "obvodNazev": "Karviná",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Petr Kazík",
+   "obvod": 75,
+   "obvodNazev": "Karviná",
+   "klub": "nez",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "Osobnosti pro kraj"
+  },
+  {
+   "jmeno": "Jana Zwyrtek Hamplová",
+   "obvod": 76,
+   "obvodNazev": "Kroměříž",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Jiří Čunek",
+   "obvod": 77,
+   "obvodNazev": "Vsetín",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "Tomáš Goláň",
+   "obvod": 78,
+   "obvodNazev": "Zlín",
+   "klub": "ods",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL, ODS, TOP 09"
+  },
+  {
+   "jmeno": "Eva Rajchmanová",
+   "obvod": 79,
+   "obvodNazev": "Hodonín",
+   "klub": "kdu",
+   "nove": false
+  },
+  {
+   "jmeno": "Oldřich Hájek",
+   "obvod": 80,
+   "obvodNazev": "Zlín",
+   "klub": "ano",
+   "nove": false
+  },
+  {
+   "jmeno": "Josef Bazala",
+   "obvod": 81,
+   "obvodNazev": "Uherské Hradiště",
+   "klub": "kdu",
+   "nove": true,
+   "kolo": 2,
+   "navrh": "KDU-ČSL"
+  }
+ ]
+}

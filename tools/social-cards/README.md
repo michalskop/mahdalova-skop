@@ -109,6 +109,12 @@ oficiálně a mění to často — než spustíš širší kampaň, přepočíte
 Skript řeší jen obrázky. Texty (thready, captiony) mají hotové prompty pro
 Claude v `prompts/` — viz `prompts/README.md`.
 
+## Ponaučení z oprav
+
+- **Žádný barevný proužek nahoře** (17. 10. 2026, Kateřina): karmínový pruh přes horní okraj působil jako cizí šablona. Karta má nést náš vizuál, proto je z `template.html` odstraněný. Nevracet ho.
+- **Graf musí mít vysvětlivku přímo v obrázku**: řádek pod osou, co znamená sloupec nebo tečka, a pod roky kontext (např. premiér v den voleb jako závorky přes sloupce). Popisky nad každým sloupcem jen jedna hodnota, ať karta není přeplněná. Vzor: `volby-cr-2026-10-17-senat-2026-co-ukazaly-volby/_data_pipeline/grafy.py` (tytéž SVG jdou i do článku přes `<HtmlEmbed file="grafy/….html" title subtitle source />`, který je zabalí do ChartCard; na mobilu min. šířka 540 px a vodorovné posouvání).
+- **Windows**: Chromium se nastaví `SOCIAL_CARDS_CHROMIUM="C:/Program Files/Google/Chrome/Application/chrome.exe"`.
+
 ## Known issue, na který jsem narazil při stavbě
 
 Snap-confinované Chromium (`/snap/bin/chromium`) umí číst jen soubory pod

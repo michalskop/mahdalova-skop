@@ -1,0 +1,24 @@
+{
+  "id" : "20261009/vysled/obvod/42.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":42},
+  "generovano" : "2026-10-17T15:51:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Kolín",
+  "prehled" : [
+  [1,223,223,100,120460,52961,43.97,32,52299,50847,97.22],
+  [2,223,223,100,120415,25879,21.49,37,25872,25804,99.74]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 83,
+  "vysledky" : [
+  [1,"Brzobohatá Andrea","ANO","ANO","ANO",12988,25.54,6905,26.75,false,false,768,768,768],
+  [2,"Sehnal Pavel Ing.","APB","APB","APB",2108,4.14,0,0,false,false,1173,1173,1173],
+  [3,"Schulz Roman Mgr.","ODS+TOP 09","ODS","ODS",8773,17.25,0,0,false,false,687,53,53],
+  [4,"Třeštik František","JaSaN","JaSaN","JaSaN",632,1.24,0,0,false,false,1282,1282,1282],
+  [5,"Rynekr Jiří","KSČM","KSČM","KSČM",1193,2.34,0,0,false,false,47,47,47],
+  [6,"Dušek Antonín Ing.","SPD","SPD","SPD",2135,4.19,0,0,false,false,1114,1114,1114],
+  [7,"Kašpar Michael Mgr.","STAN","STAN","STAN",23018,45.26,18899,73.24,false,false,166,166,166]
+],
+  "postupuje" : [1,7],
+  "zvoleny" : 7
+}

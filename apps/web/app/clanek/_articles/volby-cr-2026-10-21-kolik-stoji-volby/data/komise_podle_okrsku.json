@@ -1,0 +1,270 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "V nejmenších okrscích stojí komise na voliče mnohonásobně víc",
+  "subtitle": "Základní odměny okrskové komise v Kč na voliče v seznamu, komunální a senátní volby 2026 – plně komise se zákonným minimem členů, světle komise, do které by delegovaly všechny strany a kandidáti"
+ },
+ "width": 600,
+ "height": 330,
+ "data": {
+  "values": [
+   {
+    "trida": "do 100 voličů",
+    "rada": "nejmenší povolená komise",
+    "v": 191,
+    "popis": "191 Kč",
+    "t_okrsky": "1 397 okrsků",
+    "t_volici": "99 512 voličů",
+    "t_min": "191 Kč",
+    "t_max": "324 Kč"
+   },
+   {
+    "trida": "do 100 voličů",
+    "rada": "plně obsazená komise",
+    "v": 324,
+    "popis": "324 Kč",
+    "t_okrsky": "1 397 okrsků",
+    "t_volici": "99 512 voličů",
+    "t_min": "191 Kč",
+    "t_max": "324 Kč"
+   },
+   {
+    "trida": "101–200 voličů",
+    "rada": "nejmenší povolená komise",
+    "v": 93,
+    "popis": "93 Kč",
+    "t_okrsky": "2 013 okrsků",
+    "t_volici": "296 088 voličů",
+    "t_min": "93 Kč",
+    "t_max": "163 Kč"
+   },
+   {
+    "trida": "101–200 voličů",
+    "rada": "plně obsazená komise",
+    "v": 163,
+    "popis": "163 Kč",
+    "t_okrsky": "2 013 okrsků",
+    "t_volici": "296 088 voličů",
+    "t_min": "93 Kč",
+    "t_max": "163 Kč"
+   },
+   {
+    "trida": "201–400 voličů",
+    "rada": "nejmenší povolená komise",
+    "v": 47,
+    "popis": "47 Kč",
+    "t_okrsky": "2 334 okrsků",
+    "t_volici": "675 930 voličů",
+    "t_min": "47 Kč",
+    "t_max": "89 Kč"
+   },
+   {
+    "trida": "201–400 voličů",
+    "rada": "plně obsazená komise",
+    "v": 89,
+    "popis": "89 Kč",
+    "t_okrsky": "2 334 okrsků",
+    "t_volici": "675 930 voličů",
+    "t_min": "47 Kč",
+    "t_max": "89 Kč"
+   },
+   {
+    "trida": "401–700 voličů",
+    "rada": "nejmenší povolená komise",
+    "v": 31,
+    "popis": "31 Kč",
+    "t_okrsky": "3 430 okrsků",
+    "t_volici": "1 929 963 voličů",
+    "t_min": "31 Kč",
+    "t_max": "85 Kč"
+   },
+   {
+    "trida": "401–700 voličů",
+    "rada": "plně obsazená komise",
+    "v": 85,
+    "popis": "85 Kč",
+    "t_okrsky": "3 430 okrsků",
+    "t_volici": "1 929 963 voličů",
+    "t_min": "31 Kč",
+    "t_max": "85 Kč"
+   },
+   {
+    "trida": "701–1 000 voličů",
+    "rada": "nejmenší povolená komise",
+    "v": 21,
+    "popis": "21 Kč",
+    "t_okrsky": "3 537 okrsků",
+    "t_volici": "2 955 976 voličů",
+    "t_min": "21 Kč",
+    "t_max": "62 Kč"
+   },
+   {
+    "trida": "701–1 000 voličů",
+    "rada": "plně obsazená komise",
+    "v": 62,
+    "popis": "62 Kč",
+    "t_okrsky": "3 537 okrsků",
+    "t_volici": "2 955 976 voličů",
+    "t_min": "21 Kč",
+    "t_max": "62 Kč"
+   },
+   {
+    "trida": "nad 1 000 voličů",
+    "rada": "nejmenší povolená komise",
+    "v": 14,
+    "popis": "14 Kč",
+    "t_okrsky": "1 840 okrsků",
+    "t_volici": "2 325 589 voličů",
+    "t_min": "14 Kč",
+    "t_max": "37 Kč"
+   },
+   {
+    "trida": "nad 1 000 voličů",
+    "rada": "plně obsazená komise",
+    "v": 37,
+    "popis": "37 Kč",
+    "t_okrsky": "1 840 okrsků",
+    "t_volici": "2 325 589 voličů",
+    "t_min": "14 Kč",
+    "t_max": "37 Kč"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "trida",
+   "type": "nominal",
+   "sort": [
+    "do 100 voličů",
+    "101–200 voličů",
+    "201–400 voličů",
+    "401–700 voličů",
+    "701–1 000 voličů",
+    "nad 1 000 voličů"
+   ],
+   "axis": {
+    "title": null,
+    "domain": false,
+    "ticks": false,
+    "labelFontSize": 13,
+    "labelPadding": 8,
+    "labelFontWeight": 700,
+    "labelLimit": 200
+   }
+  },
+  "yOffset": {
+   "field": "rada",
+   "type": "nominal",
+   "sort": [
+    "nejmenší povolená komise",
+    "plně obsazená komise"
+   ]
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "height": {
+     "band": 0.9
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       340
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       100,
+       200,
+       300
+      ],
+      "labelExpr": "datum.label + ' Kč'",
+      "gridColor": "#d4d4c8"
+     }
+    },
+    "color": {
+     "field": "rada",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "nejmenší povolená komise",
+       "plně obsazená komise"
+      ],
+      "range": [
+       "#4c4f8e",
+       "#bcc4df"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "trida",
+      "title": "Okrsky"
+     },
+     {
+      "field": "t_okrsky",
+      "title": "Počet"
+     },
+     {
+      "field": "t_volici",
+      "title": "Voličů v seznamu"
+     },
+     {
+      "field": "t_min",
+      "title": "Nejmenší komise na voliče"
+     },
+     {
+      "field": "t_max",
+      "title": "Plně obsazená komise na voliče"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 5,
+    "fontSize": 12,
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "field": "v",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "popis"
+    },
+    "fontWeight": {
+     "condition": {
+      "test": "datum.rada == 'nejmenší povolená komise'",
+      "value": 700
+     },
+     "value": 400
+    }
+   }
+  }
+ ],
+ "_source": "volby.gov.cz – otevřená data komunálních voleb 2026 (zápisy okrsků, počty kandidátek) a voleb do Senátu 2026 (obce v obvodech, kandidáti); odměny podle vyhlášky MV č. 353/2025 Sb. (předseda a zapisovatel 3 500 Kč, místopředseda 3 000 Kč, člen 2 500 Kč, souběh +800 Kč); výpočet DataTimes.cz",
+ "config": {
+  "legend": {
+   "disable": true
+  },
+  "view": {
+   "stroke": null
+  }
+ }
+}

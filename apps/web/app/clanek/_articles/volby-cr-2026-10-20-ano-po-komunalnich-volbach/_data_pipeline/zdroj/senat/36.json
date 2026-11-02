@@ -1,0 +1,22 @@
+{
+  "id" : "20261009/vysled/obvod/36.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":36},
+  "generovano" : "2026-10-17T16:30:47",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Česká Lípa",
+  "prehled" : [
+  [1,229,229,100,116352,44661,38.38,51,44088,43013,97.56],
+  [2,229,229,100,116329,25749,22.13,78,25745,25626,99.54]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 83,
+  "vysledky" : [
+  [1,"Vomáčka Vít Ing. MBA","ODS","ODS","ODS",5753,13.37,0,0,false,false,53,53,53],
+  [2,"Vosecký Jiří","NK","NK","BEZPP",6429,14.94,0,0,false,false,80,80,99],
+  [3,"Volfová Jitka Ing.","ANO","ANO","ANO",15078,35.05,11339,44.24,false,false,768,768,768],
+  [4,"Hamrský Leoš","KSČM","KSČM","KSČM",1701,3.95,0,0,false,false,47,47,47],
+  [5,"Půta Martin","SLK","SLK","SLK",14052,32.66,14287,55.75,false,false,703,703,703]
+],
+  "postupuje" : [3,5],
+  "zvoleny" : 5
+}

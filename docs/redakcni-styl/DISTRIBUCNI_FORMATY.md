@@ -32,7 +32,8 @@ udělat dva formáty pořádně než šest formálně.
 | Graf, mapa, infografika jako komponenta článku | čtenář webu | **rutina** — `VegaChart`/`ChartRow`, design viz `DESIGN.md` |
 | Tweet-stories (X, Bluesky, Threads) | rychlé šíření, odkaz zpět na web | **rutina** — viz níže |
 | Cover image / statistická karta | sdílení, náhled odkazu | **rutina** — stejná pipeline jako u tohoto článku (`_cover_pipeline/`) |
-| Instagram carousel | vizuální publikum, mladší/jiné než web | **rutina, ale samostatná výroba** — viz níže |
+| Instagram carousel | vizuální publikum, mladší/jiné než web | **povinná součást balíku** od 25. 10. 2026 — viz níže a `tools/COVER-VIZUALNI-IDENTITA.md` → *Balík výstupů* |
+| Animace mapy/grafu (MP4, GIF) a Reels | sítě, newsletter, messengery | **rutina u článků se změnou v čase nebo mezi místy** — MP4 hlavní, GIF odvozený; viz `tools/COVER-VIZUALNI-IDENTITA.md` → *Balík výstupů* |
 | Podcast (Spotify, Apple), ~15 min | poslechové publikum, dojíždění | **rutina v menší frekvenci** — viz níže; navazuje na Část IV |
 | Datový insight / myth-buster / podklad pro jiné redakce | novináři přebírající zjištění | **rutina, na vyžádání nebo proaktivně** — viz níže |
 | Aktivní rozeslání politikům a odborníkům | přímí adresáti zjištění | **rutina u relevantních témat** — je to kanál, ne žánr, viz níže |
@@ -81,6 +82,9 @@ zjednodušování dat). Výroba jde stejnou cestou jako cover image tohoto
 článku — HTML šablona přes headless Chromium, ne ruční obrázek v jiném
 nástroji, aby zůstala vizuální shoda s webem. Caption pod carouselem je
 krátké shrnutí + odkaz do bia, ne přelepený text z X threadu.
+Poslední slide je vždy poděkování a výzva k podpoře s QR kódem na
+podporu (od 29. 10. 2026, generátor ho přidává sám; podrobnosti
+v `tools/COVER-VIZUALNI-IDENTITA.md`, kapitola 8.1).
 
 ### Podcast, ~15 minut, „hutný"
 

@@ -1,0 +1,21 @@
+{
+  "id" : "20261009/vysled/obvod/81.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":81},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Uherské Hradiště",
+  "prehled" : [
+  [1,124,124,100,97147,45414,46.75,17,44986,43866,97.51]
+],
+  "existujePdf" : false,
+  "vysledky" : [
+  [1,"Březina Otakar","SD-SN","SD-SN","BEZPP",3126,7.12,null,null,false,false,143,143,99],
+  [2,"Zelienková Kristýna Ing.","ZVUK 12","ZVUK 12","BEZPP",4124,9.4,null,null,false,false,775,775,99],
+  [3,"Skyba David","SPD","SPD","SPD",1793,4.08,null,null,false,false,1114,1114,1114],
+  [4,"Vašica Jiří  DiS.","ANO","ANO","BEZPP",12434,28.34,null,null,false,false,768,768,99],
+  [5,"Balaštíková Margita Mgr.","HOČ","HOČ","HOČ",1414,3.22,null,null,false,false,1732,1732,1732],
+  [6,"Bazala Josef","KDU-ČSL","KDU-ČSL","KDU-ČSL",20975,47.81,null,null,false,false,1,1,1]
+],
+  "postupuje" : [4,6],
+  "zvoleny" : null
+}

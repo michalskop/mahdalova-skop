@@ -4,8 +4,11 @@ date: "2026-08-31"
 time: "10:18"
 author: "Kateřina Mahdalová"
 excerpt: "Česko má 6 258 obcí a jejich rozpočty dohromady odpovídají zhruba pětině výdajů státního rozpočtu. V komunálních volbách se ale nevolí starosta ani rada, jen zastupitelstvo. Vysvětlujeme, co radnice rozhodují samy, co za stát a kdo z vedení obce o čem rozhoduje."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["explainer"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "obce", "samospráva", "rozpočty"]
 promoted: 1

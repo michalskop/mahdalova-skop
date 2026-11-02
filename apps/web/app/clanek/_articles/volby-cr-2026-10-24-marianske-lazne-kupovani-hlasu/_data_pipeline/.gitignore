@@ -1,0 +1,4 @@
+# velké balíky ČSÚ (celostátní) – stáhnout podle hlavičky build.py
+zdroj/*.zip
+zdroj/reg/
+zdroj/data/

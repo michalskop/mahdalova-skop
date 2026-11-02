@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from 'react';
 import classes from './ArticleCard.module.css';
 import { AuthorByline } from './AuthorByline';
 import { fitFor, resolvePaletteColor } from '../lib/coverFit';
+import { formatCardDate } from '../lib/formatCardDate';
 
 interface ArticleCardProps {
   title: string;
@@ -20,6 +21,7 @@ interface ArticleCardProps {
   author: string;
   slug: string;
   coverImage: string | null;
+  /** Obrázek pro Instagram z frontmatteru – v kartě se nezobrazuje (odkaz „Instagram ↗“ zrušen 25. 10. 2026). */
   instagramImage?: string | null;
   tags: string[];
   articleBasePath?: string;
@@ -52,7 +54,6 @@ export function ArticleCard({
   author,
   slug,
   coverImage,
-  instagramImage,
   tags,
   articleBasePath = '/clanek',
   href,
@@ -148,7 +149,7 @@ export function ArticleCard({
         {title}
       </Text>
 
-      <Text fz="sm" c="brandNavy.9" lineClamp={4}>
+      <Text className={classes.excerpt} fz="sm" c="brandNavy.9" lineClamp={4}>
         {excerpt}
       </Text>
 
@@ -160,22 +161,13 @@ export function ArticleCard({
               inline
               c="brandNavy.9"
             >
-              {new Date(date).toLocaleDateString(locale)}
+              {formatCardDate(date, locale)}
             </Text>
           </div>
         </Center>
 
-        {/* Keep the optional social export inside the footer so horizontal cards
-            retain their three-row layout. It sits above the stretched article link. */}
         <Group gap={8} mr={0} style={{ justifyContent: 'flex-end' }}>
           <AuthorByline author={author} full={bylineFull} />
-          {instagramImage && (
-            <a href={instagramImage} target="_blank" rel="noopener noreferrer"
-              className={classes.instagramLink}
-              aria-label={`Instagram: ${title} – otevřít obrázek v nové kartě`}>
-              Instagram ↗
-            </a>
-          )}
         </Group>
       </Group>
     </Card>

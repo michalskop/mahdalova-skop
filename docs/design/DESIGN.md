@@ -325,6 +325,45 @@ The InfoBox left-border system is the most distinctive depth signal: a 4px solid
 
 ## 10. Charts and Data Visualization – Binding Standard (added 2026-07-09)
 
+### Before you send a chart – mandatory check (added 2026-10-28)
+
+Kateřina, 28. 10. 2026: charts in the UN commission article came out in a grey frame although the no-frame rule
+already existed (it was buried as a bar-chart detail further below). These four points apply to **every** chart, any
+mark type, and are checked on a real render on desktop **and** at 390 px mobile width before the chart is shown:
+
+1. **No frame around the plot area, ever.** No `view.stroke`, no axis `domain` lines, no `ticks`. Lines in the plot
+   are only labelled gridlines (`#d4d4c8`), and only where an axis is needed at all – with direct labels the value
+   axis is hidden (`axis: null`). `VegaChartImpl.tsx` sets `config.view.stroke: null` by default since 28. 10. 2026,
+   so a frame appears only if a spec asks for it explicitly – don't.
+2. **Direct labels: inside the bar when they fit, otherwise right after it.** Decide on the rendered pixel width, not
+   on the data value: Vega expression `datum.n / domainMax * width > labelWidthPx` (label width ≈ characters × 7.2 + 18
+   px at 12.5 px bold). White text on saturated bars, ink `#101432` on light/grey bars. Several small segments of one
+   stacked row share one label after the row („chlapci 237 · dívky 7“). Reference:
+   `kontext-2026-10-27-komise-osn-zlociny-proti-lidskosti-na-zapadnim-brehu/_data_pipeline/grafy.py`.
+3. **Nothing wraps or gets clipped badly.** Category labels short enough to leave the bars room on mobile (move exact
+   periods into the subtitle); non-breaking spaces in thousands (`1 080`), dates (`7. 10. 2023`), number + unit
+   (`16 let`, `60 %`) and after one-letter prepositions in title and subtitle; the footer `• data:` line fits on one
+   line – link text names the document briefly („Zpráva komise OSN A/81/430“), details go to the subtitle.
+4. **No empty band above the footer.** The chart canvas reserves at most the spec `height` + 20 px (component default
+   since 28. 10. 2026); don't pad low charts with extra `height`.
+5. **Line labels placed in data coordinates collide on mobile.** A direct label at a fixed x/y (e.g. „Likud v průběžném
+   součtu“ at x = 8 %) is ~45 % of the plot wide at 375 px, so it runs into lines that are clear on desktop. Put labels
+   above a series' peak or below its line where nothing else runs, keep end labels of close series on opposite sides
+   (one `baseline: bottom`, the other `baseline: top`), and check where a long label ends at 375 px. Vega line charts
+   draw in with an animation – wait a few seconds before judging a screenshot. Reference (29. 10. 2026):
+   `volby-izrael-2026-10-27-netanjahu-bez-vetsiny-ukazuje-predikce/_data_pipeline/predikce.py`.
+
+### Pictogram grids – icon charts (added 2026-10-29, approved by Kateřina: "naprosto nádherné")
+
+Icon grids are the preferred form for "X out of 100" statements and for evidence/policy overviews in the DPBP special. Kateřina orders further icon charts as needed, so use this style by default where a share or a count of people is the message.
+
+- **100 icons, 20 per row** (Tabler icons via `@tabler/icons-react`, `size="100%"`, `stroke` 1.6–2), one icon = one person/family/payment/child; max ~100 icons per chart.
+- **Two states only:** highlighted = the finding (brand `#de1743`; a lighter `#ffb3c0` for a third state), rest muted (`#d4d4c8` or `#c9c9bd`). Never red against green.
+- **The icon says what is counted:** woman (`IconWoman`), family home (`IconHome`), baby carriage (`IconBabyCarriage`), cash (`IconCash`). Same icon for both states, only colour and stroke change.
+- **Each row has a plain-language headline** stating the finding ("z každých 100 rodin by o druhém dítěti rozhodla odměna jen u 5"), no jargon like "z 100 milionů zaplatí 5 dítě navíc". Legend below with the same icons, accessible `role="img"` + `aria-label`.
+- **Card grids with icons** (`PolicyEvidenceCards`): always an even number of cards (2 × 2, 2 × 3), fixed two-column grid, one column on mobile. Evidence level as three dots. Single-letter prepositions and conjunctions get a non-breaking space (never "a" at a line end).
+- **Examples:** `BirthOrderPictogram` (ze 100 žen), `MilionKamJdou` (kam míří milion za druhé dítě), `PolicyEvidenceCards` (co podporuje rodičovství); all in `apps/web/components/dpbp/`.
+
 ### Default implementation for a new chart
 
 - Start with `apps/web/components/charts/VegaChart.tsx` / `VegaChartImpl.tsx` for every new chart, regardless of whether its marks are bars, columns, lines, dots or areas. Build a custom renderer only when the interaction or layout cannot be expressed through this shared component.
@@ -364,6 +403,9 @@ The Flourish template (see the charts "Presidential Pardons," "Presidents' Forei
 - **Legend: above the chart, centered, toggleable.** Legend items are square buttons with rounded corners. Use the shared `ChartLegend`; in Vega specs enable it with `_toggle_legend: true`. The optional `strikethrough` inactive style is reserved for cases where a stronger indication of a disabled series improves comprehension.
 - **The X-axis title belongs beside the axis** (right-aligned on the value-label row, bold), not on its own line below the chart – it saves vertical space. Watch for collisions with the last value label on narrow screens (fix by omitting the last gridline value).
 - **Prefer labels placed directly at the data** (at line ends, inside bars) over a legend and an axis with long names – the chart then reads without eye-jumping.
+- **Bar charts: gridlines only, no frame (added 2026-10-20).** Set `config.view.stroke: null`, axis `domain: false`, `ticks: false`, and explicit `axis.values` (e.g. `[0, 20, 40, 60, 80]`) so the only lines are labelled gridlines (`gridColor` `#d4d4c8`). No plot border above the first / below the last bar, no unlabelled line at the domain end (the headroom from the rule above stays invisible), no extra dark zero rule – the 0 gridline is enough. Reference: `volby-cr-2026-10-19-komu-patri-cesko-po-komunalnich-volbach/_data_pipeline/build.py` → `bars`.
+- **Ranking bars are sorted from the data, never by a hand-typed list (added 2026-10-20).** Sort categories by the value the chart is about (here the 2026 share, descending, on unrounded values so ties like 1,0 % × 1,0 % resolve correctly). A hard-coded order goes stale as soon as numbers change and puts e.g. Piráti 2,6 % above TOP 09 2,7 %.
+- **Maps in articles are React components in `ChartCard`, never a custom iframe (added 2026-10-20).** An iframe/HTML embed has no logo, no authors footer and sits in its own rounded frame. Municipality maps reuse the shared geometry (`volby-cr-2026-09-24-…/obce-geo.json`, faint white municipality borders on `#e9e9dd`, white region lines) – see `ObceStranyMap`, `ObceKandidatkyMap`, and `ObceVoliciMap` (proportional dots per party). Party switch buttons: the active state is beige `#d4d4c8` (background.7) with bold ink text and the party swatch – never an ink-blue fill, which merges with dark party colors (ANO, Piráti, TOP 09). Light party colors (KDU-ČSL `#ffcf02`, grey „místní a ostatní“, nezávislí) disappear on the beige land: give their dots and rings an outline in a darker shade of the same palette scale (KDU-ČSL `#a47d03`, místní `#6267a3`, nezávislí `#4c4f8e`) instead of white. Hover tooltips and the focus outline only where the selected party actually ran – the other municipalities are just the boundary underlay („X tu nekandidovala“ popups are noise).
 - **Technical note (Next.js):** write the font as `var(--font-roboto-condensed), Arial, sans-serif` – the literal `'Roboto Condensed'` webfont string fails to load and falls back to Arial. Don't specify fonts inside Vega specs – `VegaChartImpl` supplies them centrally.
 
 ### DataTimes.cz logo / signature

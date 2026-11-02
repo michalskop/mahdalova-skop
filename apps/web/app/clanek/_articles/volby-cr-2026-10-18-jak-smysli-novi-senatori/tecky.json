@@ -1,0 +1,656 @@
+{
+ "zdroj": "Volební kalkulačka 2026 – Senát (KohoVolit.eu / DataTimes), odpovědi kandidátů; zvolení podle ČSÚ",
+ "legenda": {
+  "p": "pro",
+  "n": "proti",
+  "v": "nevím / nemám jednoznačný názor",
+  "x": "kalkulačku nevyplnil/a"
+ },
+ "otazky": [
+  {
+   "q": 8,
+   "otazka": "Souhlasím se zařazením menstruačních potřeb do snížené sazby DPH.",
+   "blok": "prava",
+   "pro": 19,
+   "proti": 1,
+   "nevim": 1,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 16,
+   "otazka": "Má Česko ratifikovat Istanbulskou úmluvu?",
+   "blok": "prava",
+   "pro": 14,
+   "proti": 4,
+   "nevim": 3,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 23,
+   "otazka": "Má Česko umožnit uzavřít manželství párům stejného pohlaví?",
+   "blok": "prava",
+   "pro": 13,
+   "proti": 4,
+   "nevim": 4,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 24,
+   "otazka": "Má Česko zakotvit právo na interrupci v Ústavě?",
+   "blok": "prava",
+   "pro": 3,
+   "proti": 12,
+   "nevim": 6,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 2,
+   "otazka": "Má stát více pomáhat s financováním výstavby obecních nájemních bytů?",
+   "blok": "socialni",
+   "pro": 21,
+   "proti": 0,
+   "nevim": 0,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 6,
+   "otazka": "Mají lidé s vyššími příjmy platit vyšší daně než dnes?",
+   "blok": "socialni",
+   "pro": 7,
+   "proti": 11,
+   "nevim": 3,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 14,
+   "otazka": "Lidé pracující pro aplikace na rozvoz jídla či taxislužby by měli mít statut zaměstnanců se všemi sociálními jistotami namísto práce na živnostenský list.",
+   "blok": "socialni",
+   "pro": 8,
+   "proti": 6,
+   "nevim": 7,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 15,
+   "otazka": "Minimální mzda by měla ze zákona dosahovat alespoň poloviny průměrné mzdy v zemi.",
+   "blok": "socialni",
+   "pro": 11,
+   "proti": 6,
+   "nevim": 4,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 17,
+   "otazka": "Mají se dlouhodobě bezvýsledné exekuce automaticky zastavovat?",
+   "blok": "socialni",
+   "pro": 10,
+   "proti": 6,
+   "nevim": 5,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 9,
+   "otazka": "Má stát zrušit koncesionářské poplatky za veřejnoprávní média?",
+   "blok": "dalsi",
+   "pro": 0,
+   "proti": 21,
+   "nevim": 0,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 13,
+   "otazka": "Má Česko usnadnit zaměstnávání pracovníků ze zemí mimo EU?",
+   "blok": "dalsi",
+   "pro": 18,
+   "proti": 1,
+   "nevim": 2,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 31,
+   "otazka": "Má Česko zastropovat důchodový věk na 65 letech?",
+   "blok": "dalsi",
+   "pro": 1,
+   "proti": 15,
+   "nevim": 5,
+   "nevyplnil": 6,
+   "celkem": 27
+  },
+  {
+   "q": 33,
+   "otazka": "Má Česko zavést nulovou DPH na léky na předpis?",
+   "blok": "dalsi",
+   "pro": 4,
+   "proti": 11,
+   "nevim": 6,
+   "nevyplnil": 6,
+   "celkem": 27
+  }
+ ],
+ "senatori": [
+  {
+   "jmeno": "Miroslav Plevný",
+   "obvod": 3,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "v",
+    "2": "p",
+    "6": "p",
+    "14": "v",
+    "15": "v",
+    "17": "v",
+    "9": "n",
+    "13": "p",
+    "31": "v",
+    "33": "p"
+   }
+  },
+  {
+   "jmeno": "Ivo Trešl",
+   "obvod": 6,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "n",
+    "2": "p",
+    "6": "n",
+    "14": "v",
+    "15": "p",
+    "17": "n",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "v"
+   }
+  },
+  {
+   "jmeno": "Karel Řehka",
+   "obvod": 9,
+   "odpovedi": {
+    "8": "x",
+    "16": "x",
+    "23": "x",
+    "24": "x",
+    "2": "x",
+    "6": "x",
+    "14": "x",
+    "15": "x",
+    "17": "x",
+    "9": "x",
+    "13": "x",
+    "31": "x",
+    "33": "x"
+   }
+  },
+  {
+   "jmeno": "Tomáš Fiala",
+   "obvod": 12,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "v",
+    "24": "n",
+    "2": "p",
+    "6": "p",
+    "14": "v",
+    "15": "p",
+    "17": "n",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Ladislav Med",
+   "obvod": 15,
+   "odpovedi": {
+    "8": "p",
+    "16": "v",
+    "23": "v",
+    "24": "p",
+    "2": "p",
+    "6": "p",
+    "14": "n",
+    "15": "p",
+    "17": "n",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "p"
+   }
+  },
+  {
+   "jmeno": "Petr Štěpánek",
+   "obvod": 18,
+   "odpovedi": {
+    "8": "p",
+    "16": "n",
+    "23": "n",
+    "24": "n",
+    "2": "p",
+    "6": "p",
+    "14": "v",
+    "15": "v",
+    "17": "v",
+    "9": "n",
+    "13": "v",
+    "31": "n",
+    "33": "p"
+   }
+  },
+  {
+   "jmeno": "Václav Láska",
+   "obvod": 21,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "v",
+    "2": "p",
+    "6": "n",
+    "14": "p",
+    "15": "p",
+    "17": "n",
+    "9": "n",
+    "13": "p",
+    "31": "p",
+    "33": "p"
+   }
+  },
+  {
+   "jmeno": "David Smoljak",
+   "obvod": 24,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "v",
+    "2": "p",
+    "6": "v",
+    "14": "v",
+    "15": "v",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "v"
+   }
+  },
+  {
+   "jmeno": "Jiří Padevět",
+   "obvod": 27,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "p",
+    "2": "p",
+    "6": "n",
+    "14": "v",
+    "15": "p",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "v"
+   }
+  },
+  {
+   "jmeno": "Petr Paták",
+   "obvod": 30,
+   "odpovedi": {
+    "8": "p",
+    "16": "v",
+    "23": "v",
+    "24": "n",
+    "2": "p",
+    "6": "n",
+    "14": "n",
+    "15": "n",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "v",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Zbyněk Linhart",
+   "obvod": 33,
+   "odpovedi": {
+    "8": "x",
+    "16": "x",
+    "23": "x",
+    "24": "x",
+    "2": "x",
+    "6": "x",
+    "14": "x",
+    "15": "x",
+    "17": "x",
+    "9": "x",
+    "13": "x",
+    "31": "x",
+    "33": "x"
+   }
+  },
+  {
+   "jmeno": "Martin Půta",
+   "obvod": 36,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "n",
+    "2": "p",
+    "6": "p",
+    "14": "p",
+    "15": "n",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Jan Sobotka",
+   "obvod": 39,
+   "odpovedi": {
+    "8": "x",
+    "16": "x",
+    "23": "x",
+    "24": "x",
+    "2": "x",
+    "6": "x",
+    "14": "x",
+    "15": "x",
+    "17": "x",
+    "9": "x",
+    "13": "x",
+    "31": "x",
+    "33": "x"
+   }
+  },
+  {
+   "jmeno": "Michael Kašpar",
+   "obvod": 42,
+   "odpovedi": {
+    "8": "p",
+    "16": "v",
+    "23": "p",
+    "24": "v",
+    "2": "p",
+    "6": "n",
+    "14": "p",
+    "15": "p",
+    "17": "v",
+    "9": "n",
+    "13": "v",
+    "31": "v",
+    "33": "v"
+   }
+  },
+  {
+   "jmeno": "Zuzana Ceralová Petrofová",
+   "obvod": 45,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "n",
+    "2": "p",
+    "6": "n",
+    "14": "p",
+    "15": "n",
+    "17": "n",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Jan Grulich",
+   "obvod": 48,
+   "odpovedi": {
+    "8": "x",
+    "16": "x",
+    "23": "x",
+    "24": "x",
+    "2": "x",
+    "6": "x",
+    "14": "x",
+    "15": "x",
+    "17": "x",
+    "9": "x",
+    "13": "x",
+    "31": "x",
+    "33": "x"
+   }
+  },
+  {
+   "jmeno": "Josef Klement",
+   "obvod": 51,
+   "odpovedi": {
+    "8": "p",
+    "16": "n",
+    "23": "n",
+    "24": "n",
+    "2": "p",
+    "6": "p",
+    "14": "p",
+    "15": "n",
+    "17": "v",
+    "9": "n",
+    "13": "n",
+    "31": "n",
+    "33": "v"
+   }
+  },
+  {
+   "jmeno": "Tomáš Třetina",
+   "obvod": 54,
+   "odpovedi": {
+    "8": "n",
+    "16": "p",
+    "23": "p",
+    "24": "n",
+    "2": "p",
+    "6": "n",
+    "14": "n",
+    "15": "n",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Jan Grolich",
+   "obvod": 57,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "n",
+    "24": "n",
+    "2": "p",
+    "6": "v",
+    "14": "p",
+    "15": "p",
+    "17": "n",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Zdeněk Papoušek",
+   "obvod": 60,
+   "odpovedi": {
+    "8": "x",
+    "16": "x",
+    "23": "x",
+    "24": "x",
+    "2": "x",
+    "6": "x",
+    "14": "x",
+    "15": "x",
+    "17": "x",
+    "9": "x",
+    "13": "x",
+    "31": "x",
+    "33": "x"
+   }
+  },
+  {
+   "jmeno": "Jakub Navařík",
+   "obvod": 63,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "v",
+    "2": "p",
+    "6": "n",
+    "14": "p",
+    "15": "p",
+    "17": "v",
+    "9": "n",
+    "13": "p",
+    "31": "v",
+    "33": "v"
+   }
+  },
+  {
+   "jmeno": "Marek Ošťádal",
+   "obvod": 66,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "n",
+    "2": "p",
+    "6": "v",
+    "14": "v",
+    "15": "v",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "v",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Petr Korč",
+   "obvod": 69,
+   "odpovedi": {
+    "8": "x",
+    "16": "x",
+    "23": "x",
+    "24": "x",
+    "2": "x",
+    "6": "x",
+    "14": "x",
+    "15": "x",
+    "17": "x",
+    "9": "x",
+    "13": "x",
+    "31": "x",
+    "33": "x"
+   }
+  },
+  {
+   "jmeno": "Ondřej Šimetka",
+   "obvod": 72,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "v",
+    "2": "p",
+    "6": "n",
+    "14": "n",
+    "15": "p",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Petr Kazík",
+   "obvod": 75,
+   "odpovedi": {
+    "8": "p",
+    "16": "p",
+    "23": "p",
+    "24": "p",
+    "2": "p",
+    "6": "p",
+    "14": "p",
+    "15": "p",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Tomáš Goláň",
+   "obvod": 78,
+   "odpovedi": {
+    "8": "p",
+    "16": "n",
+    "23": "v",
+    "24": "n",
+    "2": "p",
+    "6": "n",
+    "14": "n",
+    "15": "n",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  },
+  {
+   "jmeno": "Josef Bazala",
+   "obvod": 81,
+   "odpovedi": {
+    "8": "v",
+    "16": "n",
+    "23": "n",
+    "24": "n",
+    "2": "p",
+    "6": "n",
+    "14": "n",
+    "15": "p",
+    "17": "p",
+    "9": "n",
+    "13": "p",
+    "31": "n",
+    "33": "n"
+   }
+  }
+ ]
+}

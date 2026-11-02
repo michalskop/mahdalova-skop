@@ -1,0 +1,22 @@
+{
+  "id" : "20261009/vysled/obvod/66.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":66},
+  "generovano" : "2026-10-17T15:47:17",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Litovel",
+  "prehled" : [
+  [1,229,229,100,109643,43880,40.02,17,43338,42094,97.13],
+  [2,229,229,100,109628,20271,18.49,25,20264,20176,99.57]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 82,
+  "vysledky" : [
+  [1,"Kohajda Michael doc. JUDr. Ph.D.","KDU-ČSL","KDU-ČSL","BEZPP",11972,28.44,0,0,false,false,1,1,99],
+  [2,"Jelínek Pavel Ing. PhD.","SPD","SPD","SPD",3948,9.37,0,0,false,false,1114,1114,1114],
+  [3,"Škurek Martin JUDr. Ph.D.","ANO","ANO","ANO",12118,28.78,6975,34.57,false,false,768,768,768],
+  [4,"Beil Zdeněk","Levice","Levice","Levice",512,1.21,0,0,false,false,74,74,74],
+  [5,"Ošťádal Marek","24/7","24/7","24/7",13544,32.17,13201,65.42,false,false,1747,1747,1747]
+],
+  "postupuje" : [3,5],
+  "zvoleny" : 5
+}

@@ -1,1 +1,4 @@
 scripts/git-hooks/* text eol=lf
+apps/web/app/clanek/_articles/*/images/*.gif filter=lfs diff=lfs merge=lfs -text
+apps/web/app/clanek/_articles/*/images/*.mp4 filter=lfs diff=lfs merge=lfs -text
+apps/web/app/clanek/_articles/*/images/*-animace.webp filter=lfs diff=lfs merge=lfs -text

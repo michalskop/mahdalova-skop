@@ -1,0 +1,37 @@
+#!/bin/sh
+# .githooks/pre-commit
+# Enforces the DataTimes media policy: No binary media committed to Git.
+# Media must be hosted on https://media.datatimes.org
+
+# Inspect only newly added files (--diff-filter=A) for backwards compatibility
+STAGED_MEDIA=$(git diff --cached --name-only --diff-filter=A | grep -iE '\.(png|jpe?g|webp|gif|mp4|webm|mov|tiff|svg)$')
+
+if [ -n "$STAGED_MEDIA" ]; then
+    echo ""
+    echo "====================================================================="
+    echo "⛔ COMMIT REJECTED: Staged binary media detected!"
+    echo "====================================================================="
+    echo ""
+    echo "The following newly added files must NOT be committed to Git:"
+    echo "$STAGED_MEDIA" | sed 's/^/  ❌ /'
+    echo ""
+    echo "Policy: Media belongs on the CDN (https://media.datatimes.org)."
+    echo ""
+    echo "How to fix:"
+    echo "  1. Upload the file(s) via the repository script:"
+    echo "     python scripts/upload_media.py --file <local-file> --target <project>/articles/YYYY/MM/<slug>/<file>"
+    echo "     (or: npm run upload:media -- --file <local-file> --target <target>)"
+    echo ""
+    echo "  2. Use the returned CDN URL in your markdown or code:"
+    echo "     src=\"https://media.datatimes.org/...\""
+    echo ""
+    echo "  3. Remove/unstage the local binary:"
+    echo "     git rm --cached <local-file>"
+    echo ""
+    echo "  (To bypass for essential UI icons: git commit --no-verify)"
+    echo "====================================================================="
+    echo ""
+    exit 1
+fi
+
+exit 0

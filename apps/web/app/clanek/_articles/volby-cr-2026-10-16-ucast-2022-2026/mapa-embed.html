@@ -1,0 +1,19 @@
+<!-- Interaktivní mapa účasti (images/ucast-mapa.html, generuje _data_pipeline/postav.py) v iframu.
+     Iframe drží styly mapy odděleně od webu; výšku si mapa hlásí sama přes postMessage. -->
+<div style="margin:24px 0 32px">
+  <iframe
+    id="dt-ucast-2022-2026"
+    src="/clanek/_articles/volby-cr-2026-10-16-ucast-2022-2026/images/ucast-mapa.html"
+    title="Interaktivní mapa: změna volební účasti v komunálních volbách 2026 proti roku 2022 po obcích"
+    style="display:block;width:100%;height:1400px;border:0;background:transparent"
+  ></iframe>
+</div>
+<script>
+  (function () {
+    var f = document.getElementById('dt-ucast-2022-2026');
+    window.addEventListener('message', function (e) {
+      if (!f || e.source !== f.contentWindow || !e.data || e.data.type !== 'dt-embed-height') return;
+      f.style.height = e.data.h + 'px';
+    });
+  })();
+</script>

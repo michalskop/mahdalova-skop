@@ -1,0 +1,76 @@
+{
+ "zdroj": "CBS, číselník obcí bycode2024 (stav 31. 12. 2024)",
+ "pocet_osad": 154,
+ "obyvatel_celkem": 514496,
+ "modiin_betar_illit": 161325,
+ "podil_modiin_betar_illit": 31.4,
+ "osad_pod_1000": 75,
+ "skupiny": [
+  {
+   "od": 0,
+   "do": 1000,
+   "pocet_osad": 75,
+   "obyvatel": 25168
+  },
+  {
+   "od": 1000,
+   "do": 5000,
+   "pocet_osad": 59,
+   "obyvatel": 134289
+  },
+  {
+   "od": 5000,
+   "do": 20000,
+   "pocet_osad": 15,
+   "obyvatel": 110574
+  },
+  {
+   "od": 20000,
+   "do": 10000000,
+   "pocet_osad": 5,
+   "obyvatel": 244465
+  }
+ ],
+ "nejvetsi": [
+  {
+   "nazev": "Modi'in Illit",
+   "obyv": 89627
+  },
+  {
+   "nazev": "Betar Illit",
+   "obyv": 71698
+  },
+  {
+   "nazev": "Ma'ale Adummim",
+   "obyv": 35845
+  },
+  {
+   "nazev": "Giv'at Ze'ev",
+   "obyv": 25105
+  },
+  {
+   "nazev": "Ari'el",
+   "obyv": 22190
+  },
+  {
+   "nazev": "Efrat",
+   "obyv": 12115
+  },
+  {
+   "nazev": "Qarne Shomeron",
+   "obyv": 10541
+  },
+  {
+   "nazev": "Oranit",
+   "obyv": 10088
+  },
+  {
+   "nazev": "Sha'ar Shomron",
+   "obyv": 8836
+  },
+  {
+   "nazev": "Alfe Menashe",
+   "obyv": 8038
+  }
+ ]
+}

@@ -1,0 +1,568 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Větrníky {odmítlo|#f76800} 20 z 21 obcí, {podpořil|#06677d} je jen Dětřichov",
+  "subtitle": "Podíl hlasů pro odpověď proti výstavbě a pro výstavbu v referendech 9.–10. 10. 2026, bez neplatných a prázdných lístků. Obce seřazené od nejjednoznačnějšího odmítnutí. Číslo vpravo je účast."
+ },
+ "_source": "Zápisy místních komisí o výsledku referenda na úředních deskách obcí; kontrola: MV ČR, Místní referenda – tabulka hlášení (16. 10. 2026); výpočet DataTimes.cz",
+ "_toggle_legend": true,
+ "width": "container",
+ "height": {
+  "step": 22
+ },
+ "data": {
+  "values": [
+   {
+    "obec": "Teplýšovice",
+    "odpověď": "proti výstavbě",
+    "podíl": 93.1,
+    "hlasy": 258,
+    "účast": 69.2,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Teplýšovice",
+    "odpověď": "pro výstavbu",
+    "podíl": 6.9,
+    "hlasy": 19,
+    "účast": 69.2,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Sklené",
+    "odpověď": "proti výstavbě",
+    "podíl": 93.1,
+    "hlasy": 81,
+    "účast": 53.7,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Sklené",
+    "odpověď": "pro výstavbu",
+    "podíl": 6.9,
+    "hlasy": 6,
+    "účast": 53.7,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kamenná Horka",
+    "odpověď": "proti výstavbě",
+    "podíl": 89.7,
+    "hlasy": 200,
+    "účast": 75.9,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kamenná Horka",
+    "odpověď": "pro výstavbu",
+    "podíl": 10.3,
+    "hlasy": 23,
+    "účast": 75.9,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Petroupim",
+    "odpověď": "proti výstavbě",
+    "podíl": 89.2,
+    "hlasy": 140,
+    "účast": 64.8,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Petroupim",
+    "odpověď": "pro výstavbu",
+    "podíl": 10.8,
+    "hlasy": 17,
+    "účast": 64.8,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Měčín",
+    "odpověď": "proti výstavbě",
+    "podíl": 87.8,
+    "hlasy": 441,
+    "účast": 54.9,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Měčín",
+    "odpověď": "pro výstavbu",
+    "podíl": 12.2,
+    "hlasy": 61,
+    "účast": 54.9,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Šebířov",
+    "odpověď": "proti výstavbě",
+    "podíl": 85.1,
+    "hlasy": 154,
+    "účast": 61.8,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Šebířov",
+    "odpověď": "pro výstavbu",
+    "podíl": 14.9,
+    "hlasy": 27,
+    "účast": 61.8,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Soběhrdy",
+    "odpověď": "proti výstavbě",
+    "podíl": 81.8,
+    "hlasy": 207,
+    "účast": 74.2,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Soběhrdy",
+    "odpověď": "pro výstavbu",
+    "podíl": 18.2,
+    "hlasy": 46,
+    "účast": 74.2,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Zátor",
+    "odpověď": "proti výstavbě",
+    "podíl": 78.5,
+    "hlasy": 496,
+    "účast": 68.4,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Zátor",
+    "odpověď": "pro výstavbu",
+    "podíl": 21.5,
+    "hlasy": 136,
+    "účast": 68.4,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Mikuleč",
+    "odpověď": "proti výstavbě",
+    "podíl": 74.8,
+    "hlasy": 113,
+    "účast": 78.5,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Mikuleč",
+    "odpověď": "pro výstavbu",
+    "podíl": 25.2,
+    "hlasy": 38,
+    "účast": 78.5,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Maršov u Úpice",
+    "odpověď": "proti výstavbě",
+    "podíl": 72.6,
+    "hlasy": 77,
+    "účast": 75.3,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Maršov u Úpice",
+    "odpověď": "pro výstavbu",
+    "podíl": 27.4,
+    "hlasy": 29,
+    "účast": 75.3,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Cítoliby",
+    "odpověď": "proti výstavbě",
+    "podíl": 72.2,
+    "hlasy": 368,
+    "účast": 59.3,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Cítoliby",
+    "odpověď": "pro výstavbu",
+    "podíl": 27.8,
+    "hlasy": 142,
+    "účast": 59.3,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kralovice",
+    "odpověď": "proti výstavbě",
+    "podíl": 70.6,
+    "hlasy": 980,
+    "účast": 51.4,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kralovice",
+    "odpověď": "pro výstavbu",
+    "podíl": 29.4,
+    "hlasy": 408,
+    "účast": 51.4,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Horní Benešov",
+    "odpověď": "proti výstavbě",
+    "podíl": 68.8,
+    "hlasy": 507,
+    "účast": 41.7,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Horní Benešov",
+    "odpověď": "pro výstavbu",
+    "podíl": 31.2,
+    "hlasy": 230,
+    "účast": 41.7,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Žihle",
+    "odpověď": "proti výstavbě",
+    "podíl": 63.8,
+    "hlasy": 355,
+    "účast": 53.0,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Žihle",
+    "odpověď": "pro výstavbu",
+    "podíl": 36.2,
+    "hlasy": 201,
+    "účast": 53.0,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kožlany",
+    "odpověď": "proti výstavbě",
+    "podíl": 63.3,
+    "hlasy": 297,
+    "účast": 42.2,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kožlany",
+    "odpověď": "pro výstavbu",
+    "podíl": 36.7,
+    "hlasy": 172,
+    "účast": 42.2,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kačice",
+    "odpověď": "proti výstavbě",
+    "podíl": 59.0,
+    "hlasy": 377,
+    "účast": 65.6,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Kačice",
+    "odpověď": "pro výstavbu",
+    "podíl": 41.0,
+    "hlasy": 262,
+    "účast": 65.6,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Radenín",
+    "odpověď": "proti výstavbě",
+    "podíl": 58.1,
+    "hlasy": 132,
+    "účast": 56.6,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Radenín",
+    "odpověď": "pro výstavbu",
+    "podíl": 41.9,
+    "hlasy": 95,
+    "účast": 56.6,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Petrovice",
+    "odpověď": "proti výstavbě",
+    "podíl": 54.5,
+    "hlasy": 109,
+    "účast": 82.9,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Petrovice",
+    "odpověď": "pro výstavbu",
+    "podíl": 45.5,
+    "hlasy": 91,
+    "účast": 82.9,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Staré Heřminovy",
+    "odpověď": "proti výstavbě",
+    "podíl": 54.2,
+    "hlasy": 71,
+    "účast": 77.8,
+    "pořadí": 0,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Staré Heřminovy",
+    "odpověď": "pro výstavbu",
+    "podíl": 45.8,
+    "hlasy": 60,
+    "účast": 77.8,
+    "pořadí": 1,
+    "typ": "bez konkrétního projektu"
+   },
+   {
+    "obec": "Bystrá nad Jizerou",
+    "odpověď": "proti výstavbě",
+    "podíl": 53.8,
+    "hlasy": 50,
+    "účast": 84.7,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Bystrá nad Jizerou",
+    "odpověď": "pro výstavbu",
+    "podíl": 46.2,
+    "hlasy": 43,
+    "účast": 84.7,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Dětřichov",
+    "odpověď": "proti výstavbě",
+    "podíl": 48.0,
+    "hlasy": 96,
+    "účast": 74.4,
+    "pořadí": 0,
+    "typ": "konkrétní projekt"
+   },
+   {
+    "obec": "Dětřichov",
+    "odpověď": "pro výstavbu",
+    "podíl": 52.0,
+    "hlasy": 104,
+    "účast": 74.4,
+    "pořadí": 1,
+    "typ": "konkrétní projekt"
+   }
+  ]
+ },
+ "encoding": {
+  "y": {
+   "field": "obec",
+   "type": "nominal",
+   "sort": [
+    "Teplýšovice",
+    "Sklené",
+    "Kamenná Horka",
+    "Petroupim",
+    "Měčín",
+    "Šebířov",
+    "Soběhrdy",
+    "Zátor",
+    "Mikuleč",
+    "Maršov u Úpice",
+    "Cítoliby",
+    "Kralovice",
+    "Horní Benešov",
+    "Žihle",
+    "Kožlany",
+    "Kačice",
+    "Radenín",
+    "Petrovice",
+    "Staré Heřminovy",
+    "Bystrá nad Jizerou",
+    "Dětřichov"
+   ],
+   "title": null,
+   "axis": {
+    "labelFontSize": 13,
+    "labelLimit": 160,
+    "ticks": false,
+    "domain": false
+   }
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": {
+     "band": 0.72
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "podíl",
+     "type": "quantitative",
+     "stack": "zero",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "title": null,
+     "axis": {
+      "values": [
+       0,
+       25,
+       50,
+       75,
+       100
+      ],
+      "labelExpr": "datum.value + ' %'",
+      "grid": true,
+      "gridColor": "#e8e3d2"
+     }
+    },
+    "color": {
+     "field": "odpověď",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "proti výstavbě",
+       "pro výstavbu"
+      ],
+      "range": [
+       "#f76800",
+       "#06677d"
+      ]
+     },
+     "legend": null
+    },
+    "order": {
+     "field": "pořadí"
+    },
+    "tooltip": [
+     {
+      "field": "obec",
+      "title": "Obec"
+     },
+     {
+      "field": "odpověď",
+      "title": "Odpověď"
+     },
+     {
+      "field": "hlasy",
+      "title": "Hlasů",
+      "format": ",.0f"
+     },
+     {
+      "field": "podíl",
+      "title": "Podíl, %",
+      "format": ".1f"
+     },
+     {
+      "field": "účast",
+      "title": "Účast, %",
+      "format": ".1f"
+     },
+     {
+      "field": "typ",
+      "title": "Hlasovalo se o"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum['odpověď'] == 'proti výstavbě'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 4,
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#ffffff"
+   },
+   "encoding": {
+    "x": {
+     "datum": 0
+    },
+    "text": {
+     "field": "podíl",
+     "type": "quantitative",
+     "format": ".0f"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum['odpověď'] == 'proti výstavbě'"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 6,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "x": {
+     "datum": 100
+    },
+    "text": {
+     "field": "účast",
+     "type": "quantitative",
+     "format": ".0f"
+    }
+   }
+  }
+ ],
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ }
+}

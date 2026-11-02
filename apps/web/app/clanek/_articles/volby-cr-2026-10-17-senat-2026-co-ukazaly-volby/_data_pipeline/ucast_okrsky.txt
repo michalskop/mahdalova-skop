@@ -1,0 +1,143 @@
+
+===== 2026 (vláda ANO + SPD + Motoristé) =====
+okrsků s oběma koly: 3917 | účast 1. kolo 43.15 % | 2. kolo 21.11 % | retence 48.9 %
+pětiny okrsků podle podílu vládních kandidátů v 1. kole (stejně voličů v každé):
+  1. pětina: vládní podíl  13.5 % | účast 1. k.  47.9 % | 2. k.  24.1 % | retence  50.4 %
+  2. pětina: vládní podíl  22.0 % | účast 1. k.  45.4 % | 2. k.  22.3 % | retence  49.0 %
+  3. pětina: vládní podíl  28.2 % | účast 1. k.  44.0 % | 2. k.  21.0 % | retence  47.8 %
+  4. pětina: vládní podíl  34.6 % | účast 1. k.  40.8 % | 2. k.  19.7 % | retence  48.2 %
+  5. pětina: vládní podíl  46.7 % | účast 1. k.  37.6 % | 2. k.  18.4 % | retence  49.0 %
+vážená korelace vládní podíl × retence: r = -0.03; sklon: +10 p. b. vládního podílu = -0.3 p. b. retence
+po obvodech: obvod | účast 1. k. | 2. k. | retence | vládní podíl 1. k.
+   3 |  36.8 % |  20.3 % |  55.4 % |  33.1 %
+   6 |  41.4 % |  19.4 % |  46.8 % |  37.2 %
+   9 |  40.7 % |  27.2 % |  66.8 % |  32.3 %
+  15 |  45.8 % |  23.3 % |  50.9 % |  33.4 %
+  18 |  46.0 % |  21.3 % |  46.3 % |  25.7 %
+  21 |  45.4 % |  22.7 % |  50.0 % |  18.5 %
+  24 |  44.8 % |  19.2 % |  42.9 % |  15.2 %
+  27 |  46.5 % |  25.4 % |  54.7 % |  12.6 %
+  30 |  42.1 % |  18.6 % |  44.0 % |  29.2 %
+  36 |  38.4 % |  22.1 % |  57.7 % |  35.7 %
+  42 |  44.0 % |  21.5 % |  48.9 % |  30.1 %
+  45 |  45.0 % |  24.0 % |  53.4 % |  24.2 %
+  51 |  50.1 % |  23.1 % |  46.2 % |  17.0 %
+  54 |  45.0 % |  20.8 % |  46.3 % |  22.6 %
+  60 |  49.3 % |  18.9 % |  38.4 % |  26.7 %
+  63 |  41.6 % |  23.0 % |  55.4 % |  46.9 %
+  66 |  40.0 % |  18.5 % |  46.2 % |  38.7 %
+  69 |  44.4 % |  21.4 % |  48.2 % |  13.3 %
+  72 |  39.5 % |  21.6 % |  54.6 % |  31.2 %
+  75 |  29.5 % |  13.1 % |  44.6 % |  47.1 %
+  78 |  45.5 % |  16.1 % |  35.3 % |  29.9 %
+  81 |  46.7 % |  23.1 % |  49.5 % |  32.7 %
+
+===== 2024 (vláda ODS + STAN + KDU-ČSL + TOP 09 + Piráti) =====
+okrsků s oběma koly: 4081 | účast 1. kolo 30.84 % | 2. kolo 17.52 % | retence 56.8 %
+pětiny okrsků podle podílu vládních kandidátů v 1. kole (stejně voličů v každé):
+  1. pětina: vládní podíl  15.0 % | účast 1. k.  29.2 % | 2. k.  17.3 % | retence  59.2 %
+  2. pětina: vládní podíl  31.7 % | účast 1. k.  29.8 % | 2. k.  16.3 % | retence  54.8 %
+  3. pětina: vládní podíl  41.3 % | účast 1. k.  30.1 % | 2. k.  16.5 % | retence  55.0 %
+  4. pětina: vládní podíl  50.7 % | účast 1. k.  31.6 % | 2. k.  18.3 % | retence  58.1 %
+  5. pětina: vládní podíl  65.3 % | účast 1. k.  33.5 % | 2. k.  19.1 % | retence  57.0 %
+vážená korelace vládní podíl × retence: r = -0.04; sklon: +10 p. b. vládního podílu = -0.3 p. b. retence
+po obvodech: obvod | účast 1. k. | 2. k. | retence | vládní podíl 1. k.
+   5 |  23.3 % |  13.6 % |  58.1 % |  29.1 %
+   8 |  30.7 % |  16.5 % |  53.7 % |  44.2 %
+  11 |  30.6 % |  16.2 % |  52.8 % |  40.0 %
+  14 |  35.0 % |  15.6 % |  44.4 % |  60.4 %
+  20 |  29.6 % |  18.8 % |  63.4 % |  47.6 %
+  23 |  28.6 % |  20.1 % |  70.4 % |  61.1 %
+  26 |  24.6 % |  15.1 % |  61.2 % |  50.0 %
+  29 |  31.0 % |  17.0 % |  54.7 % |  39.6 %
+  32 |  25.7 % |  15.0 % |  58.5 % |  24.9 %
+  35 |  32.5 % |  20.5 % |  63.2 % |  19.7 %
+  38 |  33.3 % |  20.7 % |  62.4 % |  49.8 %
+  41 |  35.3 % |  19.1 % |  54.1 % |  65.4 %
+  44 |  33.4 % |  18.8 % |  56.3 % |  30.9 %
+  47 |  34.5 % |  22.4 % |  64.8 % |  48.0 %
+  50 |  30.7 % |  13.6 % |  44.2 % |  47.9 %
+  53 |  34.7 % |  21.0 % |  60.6 % |  41.0 %
+  56 |  33.0 % |  14.6 % |  44.2 % |  35.7 %
+  59 |  25.8 % |  13.3 % |  51.6 % |  53.6 %
+  62 |  30.5 % |  12.1 % |  39.8 % |  37.6 %
+  65 |  27.4 % |  19.2 % |  70.1 % |   0.0 %
+  68 |  32.8 % |  23.3 % |  71.1 % |  33.2 %
+  80 |  31.5 % |  17.9 % |  57.0 % |  31.3 %
+
+===== 2024 – optika ANO + SPD (tehdy opozice) =====
+okrsků s oběma koly: 4081 | účast 1. kolo 30.84 % | 2. kolo 17.52 % | retence 56.8 %
+pětiny okrsků podle podílu vládních kandidátů v 1. kole (stejně voličů v každé):
+  1. pětina: vládní podíl   9.1 % | účast 1. k.  29.7 % | 2. k.  16.4 % | retence  55.1 %
+  2. pětina: vládní podíl  25.8 % | účast 1. k.  33.9 % | 2. k.  19.2 % | retence  56.6 %
+  3. pětina: vládní podíl  34.8 % | účast 1. k.  31.7 % | 2. k.  18.6 % | retence  58.6 %
+  4. pětina: vládní podíl  43.7 % | účast 1. k.  30.9 % | 2. k.  17.9 % | retence  57.9 %
+  5. pětina: vládní podíl  56.6 % | účast 1. k.  28.0 % | 2. k.  15.6 % | retence  55.7 %
+vážená korelace vládní podíl × retence: r = +0.04; sklon: +10 p. b. vládního podílu = +0.3 p. b. retence
+po obvodech: obvod | účast 1. k. | 2. k. | retence | vládní podíl 1. k.
+   5 |  23.3 % |  13.6 % |  58.1 % |   0.0 %
+   8 |  30.7 % |  16.5 % |  53.7 % |  44.9 %
+  11 |  30.6 % |  16.2 % |  52.8 % |  38.9 %
+  14 |  35.0 % |  15.6 % |  44.4 % |  28.4 %
+  20 |  29.6 % |  18.8 % |  63.4 % |  17.2 %
+  23 |  28.6 % |  20.1 % |  70.4 % |  27.9 %
+  26 |  24.6 % |  15.1 % |  61.2 % |  18.3 %
+  29 |  31.0 % |  17.0 % |  54.7 % |  44.6 %
+  32 |  25.7 % |  15.0 % |  58.5 % |  42.2 %
+  35 |  32.5 % |  20.5 % |  63.2 % |  39.2 %
+  38 |  33.3 % |  20.7 % |  62.4 % |  38.8 %
+  41 |  35.3 % |  19.1 % |  54.1 % |  31.9 %
+  44 |  33.4 % |  18.8 % |  56.3 % |  38.8 %
+  47 |  34.5 % |  22.4 % |  64.8 % |  31.4 %
+  50 |  30.7 % |  13.6 % |  44.2 % |   0.0 %
+  53 |  34.7 % |  21.0 % |  60.6 % |  36.8 %
+  56 |  33.0 % |  14.6 % |  44.2 % |  22.9 %
+  59 |  25.8 % |  13.3 % |  51.6 % |  36.3 %
+  62 |  30.5 % |  12.1 % |  39.8 % |  55.8 %
+  65 |  27.4 % |  19.2 % |  70.1 % |  50.3 %
+  68 |  32.8 % |  23.3 % |  71.1 % |  54.2 %
+  80 |  31.5 % |  17.9 % |  57.0 % |  37.6 %
+
+===== 2026: hlasy finalistů 1. kolo -> 2. kolo =====
+ 3 Plevný (STAN) 13659 -> 13846 (101 %) | Tsoukernik (ANO) 9227 -> 5558 (60 %)
+ 6 Trešl (STAN) 19872 -> 15033 (76 %) | Mikoláš (ANO) 11675 -> 7670 (66 %)
+ 9 Řehka (STAN) 12611 -> 15998 (127 %) | Kantorová (ANO) 10463 -> 10944 (105 %)
+15 Med (ODS) 14321 -> 15383 (107 %) | Kozár (ANO) 12758 -> 9490 (74 %)
+18 Štěpánek (STAN) 23305 -> 19020 (82 %) | Daňhová (ANO) 13446 -> 6593 (49 %)
+21 Láska (SEN 21) 14606 -> 12205 (84 %) | Sáblík (ODS) 12162 -> 10730 (88 %)
+24 Smoljak (STAN) 20232 -> 14739 (73 %) | Pecková (ODS) 9539 -> 3981 (42 %)
+27 Padevět (STAN) 17576 -> 13207 (75 %) | Čižinský (PRAHA SOBĚ) 9824 -> 6608 (67 %)
+30 Sucharda (Piráti) 14766 -> 10524 (71 %) | Paták (ODS) 14112 -> 11247 (80 %)
+36 Volfová (ANO) 15078 -> 11339 (75 %) | Půta (SLK) 14052 -> 14287 (102 %)
+42 Brzobohatá (ANO) 12988 -> 6905 (53 %) | Kašpar (STAN) 23018 -> 18899 (82 %)
+45 Ceralová (ODS) 10039 -> 15022 (150 %) | Dvořák (STAN) 11498 -> 9951 (87 %)
+51 Klement (KDU-ČSL) 11373 -> 11613 (102 %) | Šmarda (Volt) 12254 -> 9858 (80 %)
+54 Třetina (TOP 09) 14328 -> 12422 (87 %) | Kyněra (ANO) 8980 -> 7086 (79 %)
+60 Papoušek (ODS) 19395 -> 12051 (62 %) | Zitterbart (STAN) 11269 -> 6268 (56 %)
+63 Vrána (ANO) 15192 -> 10181 (67 %) | Navařík (ODS) 15561 -> 13451 (86 %)
+66 Škurek (ANO) 12118 -> 6975 (58 %) | Ošťádal (24/7) 13544 -> 13201 (97 %)
+69 Korč (NMFM) 14095 -> 11321 (80 %) | Pešatová (STAN) 15085 -> 10409 (69 %)
+72 Šimetka (ODS) 15542 -> 12524 (81 %) | Baránková (ANO) 10177 -> 6479 (64 %)
+75 Brzyszkowská (ANO) 8009 -> 5188 (65 %) | Kazík (OK) 3411 -> 5836 (171 %)
+78 Goláň (ODS) 15627 -> 10438 (67 %) | Mitáček (STAN) 10638 -> 6356 (60 %)
+81 Vašica (ANO) 12434 -> 7740 (62 %) | Bazala (KDU-ČSL) 20975 -> 14669 (70 %)
+
+Kandidáti ANO ve 2. kole (13): 1. kolo 152545 hlasů -> 2. kolo 102148 (67 %)
+Jejich soupeři (13):           1. kolo 204199 hlasů -> 2. kolo 184569 (90 %)
+
+===== Finalisté ANO × jejich soupeři: hlasy 2. kolo / 1. kolo =====
+2014: ANO 9 finalistů 84 % (vyhráli 4) | soupeři 83 % (vyhráli 5)
+2016: ANO 14 finalistů 96 % (vyhráli 3) | soupeři 108 % (vyhráli 11)
+2018: ANO 10 finalistů 75 % (vyhráli 1) | soupeři 86 % (vyhráli 9)
+2020: ANO 8 finalistů 68 % (vyhráli 1) | soupeři 124 % (vyhráli 7)
+2022: ANO 17 finalistů 78 % (vyhráli 2) | soupeři 96 % (vyhráli 15)
+2024: ANO 19 finalistů 83 % (vyhráli 6) | soupeři 108 % (vyhráli 13)
+2026: ANO 13 finalistů 67 % (vyhráli 0) | soupeři 90 % (vyhráli 13)
+
+===== 13 obvodů s ANO ve 2. kole: okrsky podle podílu finalisty ANO v 1. kole =====
+  1. pětina: kandidát ANO v 1. k. 17.6 % | účast 45.1 -> 23.8 % | retence 52.7 % | ANO hlasy 2./1. kolo  78 % | soupeř  90 %
+  2. pětina: kandidát ANO v 1. k. 24.0 % | účast 42.9 -> 21.9 % | retence 51.0 % | ANO hlasy 2./1. kolo  68 % | soupeř  88 %
+  3. pětina: kandidát ANO v 1. k. 28.4 % | účast 41.5 -> 20.6 % | retence 49.7 % | ANO hlasy 2./1. kolo  65 % | soupeř  89 %
+  4. pětina: kandidát ANO v 1. k. 33.3 % | účast 39.5 -> 19.9 % | retence 50.4 % | ANO hlasy 2./1. kolo  63 % | soupeř  89 %
+  5. pětina: kandidát ANO v 1. k. 41.7 % | účast 38.1 -> 20.1 % | retence 52.7 % | ANO hlasy 2./1. kolo  65 % | soupeř  99 %
+okrsků: 2594 | vážená korelace podíl kandidáta ANO × retence: r = -0.01

@@ -1,0 +1,119 @@
+{
+ "roky": {
+  "2006": {
+   "proti": 0,
+   "pro": 1,
+   "neplatné": 0
+  },
+  "2007": {
+   "proti": 1,
+   "pro": 2,
+   "neplatné": 2
+  },
+  "2008": {
+   "proti": 1,
+   "pro": 1,
+   "neplatné": 0
+  },
+  "2009": {
+   "proti": 4,
+   "pro": 0,
+   "neplatné": 1
+  },
+  "2010": {
+   "proti": 3,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2011": {
+   "proti": 0,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2012": {
+   "proti": 1,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2013": {
+   "proti": 1,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2014": {
+   "proti": 1,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2015": {
+   "proti": 0,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2016": {
+   "proti": 0,
+   "pro": 1,
+   "neplatné": 0
+  },
+  "2017": {
+   "proti": 0,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2018": {
+   "proti": 0,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2019": {
+   "proti": 1,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2020": {
+   "proti": 0,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2021": {
+   "proti": 1,
+   "pro": 0,
+   "neplatné": 0
+  },
+  "2022": {
+   "proti": 1,
+   "pro": 1,
+   "neplatné": 0
+  },
+  "2023": {
+   "proti": 4,
+   "pro": 5,
+   "neplatné": 1
+  },
+  "2024": {
+   "proti": 10,
+   "pro": 2,
+   "neplatné": 1
+  },
+  "2025": {
+   "proti": 13,
+   "pro": 12,
+   "neplatné": 0
+  },
+  "2026": {
+   "proti": 30,
+   "pro": 2,
+   "neplatné": 1
+  }
+ },
+ "kacice": {
+  "anketa": {
+   "pro": 209,
+   "proti": 168
+  },
+  "referendum": {
+   "pro": 262,
+   "proti": 377
+  }
+ }
+}

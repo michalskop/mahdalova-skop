@@ -1,0 +1,393 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Die Linke did best among people with the Abitur, slightly less well among university graduates",
+    "subtitle": "Party vote shares by highest level of education (%), Berlin, 20 September 2026"
+  },
+  "width": 600,
+  "height": 260,
+  "data": {
+    "values": [
+      {
+        "g": "Basic secondary (Hauptschule)",
+        "o": 1,
+        "p": "Die Linke",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "Intermediate certificate (Mittlere Reife)",
+        "o": 2,
+        "p": "Die Linke",
+        "v": 18,
+        "dy": 0
+      },
+      {
+        "g": "Upper secondary (Abitur)",
+        "o": 3,
+        "p": "Die Linke",
+        "v": 32,
+        "dy": 0
+      },
+      {
+        "g": "University degree",
+        "o": 4,
+        "p": "Die Linke",
+        "v": 28,
+        "dy": 0
+      },
+      {
+        "g": "Basic secondary (Hauptschule)",
+        "o": 1,
+        "p": "CDU",
+        "v": 27,
+        "dy": 0
+      },
+      {
+        "g": "Intermediate certificate (Mittlere Reife)",
+        "o": 2,
+        "p": "CDU",
+        "v": 21,
+        "dy": 0
+      },
+      {
+        "g": "Upper secondary (Abitur)",
+        "o": 3,
+        "p": "CDU",
+        "v": 17,
+        "dy": 0
+      },
+      {
+        "g": "University degree",
+        "o": 4,
+        "p": "CDU",
+        "v": 20,
+        "dy": -6
+      },
+      {
+        "g": "Basic secondary (Hauptschule)",
+        "o": 1,
+        "p": "AfD",
+        "v": 33,
+        "dy": 0
+      },
+      {
+        "g": "Intermediate certificate (Mittlere Reife)",
+        "o": 2,
+        "p": "AfD",
+        "v": 29,
+        "dy": 0
+      },
+      {
+        "g": "Upper secondary (Abitur)",
+        "o": 3,
+        "p": "AfD",
+        "v": 13,
+        "dy": 0
+      },
+      {
+        "g": "University degree",
+        "o": 4,
+        "p": "AfD",
+        "v": 7,
+        "dy": 0
+      },
+      {
+        "g": "Basic secondary (Hauptschule)",
+        "o": 1,
+        "p": "Greens",
+        "v": 4,
+        "dy": 0
+      },
+      {
+        "g": "Intermediate certificate (Mittlere Reife)",
+        "o": 2,
+        "p": "Greens",
+        "v": 6,
+        "dy": 0
+      },
+      {
+        "g": "Upper secondary (Abitur)",
+        "o": 3,
+        "p": "Greens",
+        "v": 14,
+        "dy": 0
+      },
+      {
+        "g": "University degree",
+        "o": 4,
+        "p": "Greens",
+        "v": 20,
+        "dy": 6
+      },
+      {
+        "g": "Basic secondary (Hauptschule)",
+        "o": 1,
+        "p": "SPD",
+        "v": 17,
+        "dy": 0
+      },
+      {
+        "g": "Intermediate certificate (Mittlere Reife)",
+        "o": 2,
+        "p": "SPD",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "Upper secondary (Abitur)",
+        "o": 3,
+        "p": "SPD",
+        "v": 11,
+        "dy": 0
+      },
+      {
+        "g": "University degree",
+        "o": 4,
+        "p": "SPD",
+        "v": 12,
+        "dy": 0
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "g",
+      "type": "nominal",
+      "sort": {
+        "field": "o"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 260
+      }
+    },
+    "x": {
+      "field": "v",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          50
+        ]
+      },
+      "axis": {
+        "title": null,
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "p",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Die Linke",
+          "CDU",
+          "AfD",
+          "Greens",
+          "SPD"
+        ],
+        "range": [
+          "#9f319e",
+          "#101432",
+          "#0e839e",
+          "#507e08",
+          "#e8412c"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#d4d4c8",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "value": "#d4d4c8"
+        },
+        "x": {
+          "aggregate": "min",
+          "field": "v"
+        },
+        "x2": {
+          "aggregate": "max",
+          "field": "v"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1,
+        "yOffset": -6
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Education"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Party"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Vote share (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == -6"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Education"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Party"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Vote share (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 0"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 140,
+        "opacity": 1,
+        "yOffset": 6
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "g",
+            "type": "nominal",
+            "title": "Education"
+          },
+          {
+            "field": "p",
+            "type": "nominal",
+            "title": "Party"
+          },
+          {
+            "field": "v",
+            "type": "quantitative",
+            "title": "Vote share (%)"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.dy == 6"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "yOffset": -6
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Die Linke' || datum.p == 'AfD'"
+        },
+        {
+          "filter": "datum.dy == -6"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Die Linke' || datum.p == 'AfD'"
+        },
+        {
+          "filter": "datum.dy == 0"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "yOffset": 6
+      },
+      "transform": [
+        {
+          "filter": "datum.p == 'Die Linke' || datum.p == 'AfD'"
+        },
+        {
+          "filter": "datum.dy == 6"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "Forschungsgruppe Wahlen for ZDF, election-day survey of 17,460 voters (graphics “Wer wählte …? nach Bildung”, 20 September 2026, 23:59)"
+}

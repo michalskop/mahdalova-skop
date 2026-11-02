@@ -1,0 +1,113 @@
+odpovědí bez testu: 116 | spárováno kandidátů: 111 | nespárováno: [('Jiří Vlenta', 'Plzeň- město, č.9', 0), ('Pecková', 'praha', 0)]
+
+Zvolení, kteří kalkulačku vyplnili: 21 z 27
+Finalisté (2. kolo nebo zvolen v 1. kole), kteří vyplnili: 41 z 49
+
+všichni, kdo vyplnili                      n=111 | práva: průměr  56.8 % | sociální: průměr  69.3 %
+zvolení                                    n= 21 | práva: průměr  71.4 % | sociální: průměr  70.5 %
+nezvolení                                  n= 90 | práva: průměr  53.3 % | sociální: průměr  69.0 %
+poražení ve 2. kole                        n= 20 | práva: průměr  65.8 % | sociální: průměr  66.8 %
+
+=== jednotlivé otázky: podíl Pro mezi zvolenými × poraženými ve 2. kole × všemi ===
+ 8 menstruační potřeby ve snížené DPH            zvolení 19/20   poražení 2. k. 20/20   všichni 99/107
+16 ratifikovat Istanbulskou úmluvu               zvolení 14/18   poražení 2. k. 9/15    všichni 41/94
+23 manželství pro páry stejného pohlaví          zvolení 13/17   poražení 2. k. 13/18   všichni 57/101
+24 právo na interrupci v Ústavě                  zvolení 3/15    poražení 2. k. 3/18    všichni 24/95
+ 2 stát víc pomáhá s obecními byty               zvolení 21/21   poražení 2. k. 20/20   všichni 106/110
+ 6 vyšší daně pro lidi s vyššími příjmy          zvolení 7/18    poražení 2. k. 4/19    všichni 39/101
+14 kurýři a řidiči aplikací jako zaměstnanci     zvolení 8/14    poražení 2. k. 5/13    všichni 48/84
+15 minimální mzda aspoň polovina průměrné        zvolení 11/17   poražení 2. k. 14/17   všichni 69/91
+17 automaticky zastavovat bezvýsledné exekuce    zvolení 10/16   poražení 2. k. 15/18   všichni 68/96
+
+=== zvolení jednotlivě (odpovědi na 8, 16, 23, 24) ===
+3 Miroslav Plevný | 8:Pro | 16:Pro | 23:Pro | 24:Nevím / nemám jednoznačný názor | práva 1.0 | soc 1.0
+6 Ivo Trešl | 8:Pro | 16:Pro | 23:Pro | 24:Proti | práva 0.75 | soc 0.5
+12 Tomáš Fiala | 8:Pro | 16:Pro | 23:Nevím / nemám jednoznačný názor | 24:Proti | práva 0.6666666666666666 | soc 0.75
+15 Ladislav Med | 8:Pro | 16:Nevím / nemám jednoznačný názor | 23:Nevím / nemám jednoznačný názor | 24:Pro | práva 1.0 | soc 0.6
+18 Petr Štěpánek | 8:Pro | 16:Proti | 23:Proti | 24:Proti | práva 0.25 | soc 1.0
+21 Václav Láska | 8:Pro | 16:Pro | 23:Pro | 24:Nevím / nemám jednoznačný názor | práva 1.0 | soc 0.6
+24 David Smoljak | 8:Pro | 16:Pro | 23:Pro | 24:Nevím / nemám jednoznačný názor | práva 1.0 | soc 1.0
+27 Jiří Padevět | 8:Pro | 16:Pro | 23:Pro | 24:Pro | práva 1.0 | soc 0.75
+30 Adéla Sucharda Šípová | 8:Pro | 16:Pro | 23:Pro | 24:Nevím / nemám jednoznačný názor | práva 1.0 | soc 1.0
+30 Petr Paták | 8:Pro | 16:Nevím / nemám jednoznačný názor | 23:Nevím / nemám jednoznačný názor | 24:Proti | práva 0.5 | soc 0.4
+36 Martin Půta | 8:Pro | 16:Pro | 23:Pro | 24:Proti | práva 0.75 | soc 0.8
+42 Michael Kašpar | 8:Pro | 16:Nevím / nemám jednoznačný názor | 23:Pro | 24:Nevím / nemám jednoznačný názor | práva 1.0 | soc 0.75
+45 Zuzana Ceralová Petrofová | 8:Pro | 16:Pro | 23:Pro | 24:Proti | práva 0.75 | soc 0.4
+51 Josef Klement | 8:Pro | 16:Proti | 23:Proti | 24:Proti | práva 0.25 | soc 0.75
+54 Tomáš Třetina | 8:Proti | 16:Pro | 23:Pro | 24:Proti | práva 0.5 | soc 0.4
+57 Jan Grolich | 8:Pro | 16:Pro | 23:Proti | 24:Proti | práva 0.5 | soc 0.75
+63 Jakub Navařík | 8:Pro | 16:Pro | 23:Pro | 24:Nevím / nemám jednoznačný názor | práva 1.0 | soc 0.75
+66 Marek Ošťádal | 8:Pro | 16:Pro | 23:Pro | 24:Proti | práva 0.75 | soc 1.0
+72 Ondřej Šimetka | 8:Pro | 16:Pro | 23:Pro | 24:Nevím / nemám jednoznačný názor | práva 1.0 | soc 0.6
+75 Petr Kazík | 8:Pro | 16:Pro | 23:Pro | 24:Pro | práva 1.0 | soc 1.0
+78 Tomáš Goláň | 8:Pro | 16:Proti | 23:Nevím / nemám jednoznačný názor | 24:Proti | práva 0.3333333333333333 | soc 0.4
+81 Josef Bazala | 8:Nevím / nemám jednoznačný názor | 16:Proti | 23:Proti | 24:Proti | práva 0.0 | soc 0.6
+
+Zvolení, kteří nevyplnili: ['9 Řehka', '33 Linhart', '39 Sobotka', '48 Grulich', '60 Papoušek', '69 Korč']
+
+=== podle pohlaví a strany (navrhující strana ČSÚ) ===
+ženy                                       n= 26 | práva: průměr  66.7 % | sociální: průměr  68.3 %
+muži                                       n= 85 | práva: průměr  53.7 % | sociální: průměr  69.6 %
+navrhla ANO                                n= 19 | práva: průměr  56.1 % | sociální: průměr  60.2 %
+navrhla SPD                                n= 11 | práva: průměr  38.6 % | sociální: průměr  69.5 %
+navrhla ODS                                n= 10 | práva: průměr  59.2 % | sociální: průměr  43.0 %
+navrhla STAN                               n= 10 | práva: průměr  77.5 % | sociální: průměr  76.0 %
+navrhla KDU-ČSL                            n=  4 | práva: průměr  25.0 % | sociální: průměr  77.5 %
+navrhla TOP 09                             n=  2 | práva: průměr  62.5 % | sociální: průměr  57.5 %
+ODS+STAN+KDU+TOP 09                        n= 26 | práva: průměr  61.2 % | sociální: průměr  62.1 %
+
+=== 27 obvodů: odcházející senátor – hlas k Istanbulu 2024 | nově zvolený – otázka 16 v kalkulačce ===
+ 3 Miroslav Plevný              pro          -> Miroslav Plevný                   Pro  (obhájil)
+ 6 Ivo Trešl                    pro          -> Ivo Trešl                    Pro  (obhájil)
+ 9 Lumír Aschenbrenner          proti        -> Karel Řehka                    nevyplnil
+12 Tomáš Fiala                  pro          -> Tomáš Fiala                    Pro  (obhájil)
+15 Jaroslav Chalupský           proti        -> Ladislav Med                      Nevím / nemám jednoznačný názor
+18 Petr Štěpánek                nepřítomen   -> Petr Štěpánek                 Proti  (obhájil)
+21 Václav Láska                 pro          -> Václav Láska                    Pro  (obhájil)
+24 David Smoljak                pro          -> David Smoljak                  Pro  (obhájil)
+27 Miroslava Němcová            nepřítomen   -> Jiří Padevět                  Pro
+30 Adéla Sucharda Šípová        pro          -> Petr Paták                    Nevím / nemám jednoznačný názor
+33 Zbyněk Linhart               nepřítomen   -> Zbyněk Linhart                  nevyplnil  (obhájil)
+36 Jiří Vosecký                 nepřítomen   -> Martin Půta                     Pro
+39 Jan Sobotka                  pro          -> Jan Sobotka                  nevyplnil  (obhájil)
+42 Pavel Kárník                 pro          -> Michael Kašpar                   Nevím / nemám jednoznačný názor
+45 Jan Holásek                  pro          -> Zuzana Ceralová Petrofová       Pro
+48 Jan Grulich                  pro          -> Jan Grulich                  nevyplnil  (obhájil)
+51 Josef Klement                proti        -> Josef Klement                  Proti  (obhájil)
+54 Tomáš Třetina                pro          -> Tomáš Třetina                  Pro  (obhájil)
+57 Karel Zitterbart             pro          -> Jan Grolich                  Pro
+60 Zdeněk Papoušek              nebyl v Senátu / nenalezen -> Zdeněk Papoušek                 nevyplnil  (obhájil)
+63 Jitka Seitlová               nepřítomen   -> Jakub Navařík                  Pro
+66 Marek Ošťádal                pro          -> Marek Ošťádal                  Pro  (obhájil)
+69 Helena Pešatová              pro          -> Petr Korč                     nevyplnil
+72 Ondřej Šimetka               pro          -> Ondřej Šimetka                  Pro  (obhájil)
+75 Ondřej Feber                 nepřítomen   -> Petr Kazík                    Pro
+78 Tomáš Goláň                  nepřítomen   -> Tomáš Goláň                    Proti  (obhájil)
+81 Josef Bazala                 proti        -> Josef Bazala                   Proti  (obhájil)
+
+odcházející: pro 15 | proti 4 | zdržel se 0 | nepřítomen 7 | nebyl 1
+noví (kalkulačka ot. 16): pro 14 | proti 4 | nevím 3 | nevyplnili 6
+
+uloženo: kalkulacka-index-detail.xlsx
+
+=== Citlivost: přísnější index „Pro / všechny otázky bloku“ (Nevím i nevyplněno = ne pro) ===
+zvolení                n= 21 práva  58.3 %  sociální  54.3 %
+nezvolení              n= 90 práva  47.8 %  sociální  60.7 %
+prohráli ve 2. kole    n= 20 práva  56.2 %  sociální  58.0 %
+ženy                   n= 26 práva  59.6 %  sociální  59.2 %
+muži                   n= 85 práva  46.8 %  sociální  59.5 %
+
+=== 27 zvolených: pro / proti / nevím / nevyplnili ===
+ 8 pro 19 | proti  1 | nevím  1 | nevyplnil 6 | Souhlasím se zařazením menstruačních potřeb do snížené sazby
+16 pro 14 | proti  4 | nevím  3 | nevyplnil 6 | Má Česko ratifikovat Istanbulskou úmluvu?
+23 pro 13 | proti  4 | nevím  4 | nevyplnil 6 | Má Česko umožnit uzavřít manželství párům stejného pohlaví?
+24 pro  3 | proti 12 | nevím  6 | nevyplnil 6 | Má Česko zakotvit právo na interrupci v Ústavě?
+ 2 pro 21 | proti  0 | nevím  0 | nevyplnil 6 | Má stát více pomáhat s financováním výstavby obecních nájemn
+ 6 pro  7 | proti 11 | nevím  3 | nevyplnil 6 | Mají lidé s vyššími příjmy platit vyšší daně než dnes?
+14 pro  8 | proti  6 | nevím  7 | nevyplnil 6 | Lidé pracující pro aplikace na rozvoz jídla či taxislužby by
+15 pro 11 | proti  6 | nevím  4 | nevyplnil 6 | Minimální mzda by měla ze zákona dosahovat alespoň poloviny 
+17 pro 10 | proti  6 | nevím  5 | nevyplnil 6 | Mají se dlouhodobě bezvýsledné exekuce automaticky zastavova
+ 9 pro  0 | proti 21 | nevím  0 | nevyplnil 6 | Má stát zrušit koncesionářské poplatky za veřejnoprávní médi
+13 pro 18 | proti  1 | nevím  2 | nevyplnil 6 | Má Česko usnadnit zaměstnávání pracovníků ze zemí mimo EU?
+31 pro  1 | proti 15 | nevím  5 | nevyplnil 6 | Má Česko zastropovat důchodový věk na 65 letech?
+33 pro  4 | proti 11 | nevím  6 | nevyplnil 6 | Má Česko zavést nulovou DPH na léky na předpis?

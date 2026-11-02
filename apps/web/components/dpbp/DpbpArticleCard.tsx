@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import VegaChart from '@/components/charts/VegaChart';
 import GenreBadge from './GenreBadge';
+import CardThumbImage from './CardThumbImage';
 import { hexToRgbString } from '@/utils/colorUtils';
 import styles from './DpbpArticleCard.module.css';
 
@@ -13,6 +14,8 @@ interface DpbpArticleCardProps {
   accent?: string;
   type?: string;
   image?: string;
+  /** Poměr stran obrázku (např. "1200 / 630"): náhled se zobrazí celý, ne jako ořezaný pruh. */
+  imageAspect?: string;
   stacked?: boolean;
 }
 
@@ -25,6 +28,7 @@ export default function DpbpArticleCard({
   accent = '#de1743',
   type = 'Analýza',
   image,
+  imageAspect,
   stacked = false,
 }: DpbpArticleCardProps) {
   return (
@@ -38,18 +42,24 @@ export default function DpbpArticleCard({
       }}
     >
       {(image || primaryChartSpec) && (
-        <div className={styles.thumb}>
+        <div className={styles.thumb} style={imageAspect ? { aspectRatio: imageAspect, height: 'auto' } : undefined}>
           {image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={image} alt="" className={styles.thumbImg} />
+            imageAspect ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={image} alt="" className={styles.thumbImg} />
+            ) : (
+              <CardThumbImage src={image} className={styles.thumbImg} />
+            )
           ) : (
             <VegaChart spec={primaryChartSpec!} mini />
           )}
         </div>
       )}
       <div className={styles.body}>
-        <GenreBadge topic={type} />
-        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.head}>
+          <h3 className={styles.title}>{title}</h3>
+          <GenreBadge topic={type} />
+        </div>
         <p className={styles.desc}>{excerpt}</p>
         <div className={styles.meta}>
           <span>{author}</span>

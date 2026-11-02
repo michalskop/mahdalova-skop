@@ -4,8 +4,11 @@ date: "2026-09-24"
 time: "07:47"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "V komunálních volbách 9. a 10. října bude mít 1 830 obcí jedinou kandidátku, v roce 1994 jich bylo 645. V 930 z nich je kandidátů přesně tolik, kolik je míst, nebo méně: zvoleni budou všichni a zastupitelstvo nebude mít náhradníky. Lidé z těchto obcí přitom k velkým volbám chodí stejně jako ostatní, komunální volby ale vynechávají."
-coverImage: "images/cover.jpg"
+coverImage: "images/cover-homepage.png"
+homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
+squareImage: "images/cover-square.png"
+instagramImage: "images/cover-instagram.png"
 filter: ["analýza"]
 tags: ["volby", "volby 2026", "komunální volby 2026", "komunální volby", "obce", "kandidáti", "politika", "data"]
 promoted: 1
@@ -101,7 +104,9 @@ Volby se letos podle registru kandidátů nekonají ani v Krchlebech na Rychnovs
 Z kandidátek nepoznáme, proč v obci vznikla jen jedna. Může jít o vyčerpání a nezájem, ale také o shodu na společném programu, nebo o to, že se kandidáti z různých skupin domluvili na jedné kandidátce předem. Nevíme ani, jak se rozhoduje uvnitř takového zastupitelstva. To by vyžadovalo zápisy z jednání, ne volební data. Shodu kandidátů napříč volbami hledáme podle jména a příjmení v téže obci. Změnu příjmení, například po sňatku, nezachytíme, takže podíl stejných lidí v zastupitelstvech je spíš mírně podhodnocený.
 
 ```infobox info
-**Jak jsme počítali.** Bereme zastupitelstva obcí v řádném termínu komunálních voleb, bez zastupitelstev městských částí a městských obvodů. Za roky 2002–2026 vycházíme z [otevřených dat volby.gov.cz](https://volby.gov.cz/opendata/opendata.htm), za roky [1994](https://volby.gov.cz/pls/kv1994/kv) a [1998](https://volby.gov.cz/pls/kv1998/kv) z výsledků zveřejněných obec po obci. Kandidátku počítáme, jen když na ní zůstal aspoň jeden platný kandidát. Údaje za rok 2026 jsou podle registrace kandidátů k 23. září, do voleb se ještě mohou kandidáti vzdát. Účast porovnáváme podle typu obce v komunálních volbách 2022 a podle počtu obyvatel v témže roce. Jména starostů jsou ze [Seznamu orgánů veřejné moci](https://www.czechpoint.cz/sovm/) ke 2. říjnu 2026; počítáme jen ta, která jsme našli mezi zastupiteli zvolenými v téže obci v roce 2022.
+**Jak jsme počítali**
+
+Bereme zastupitelstva obcí v řádném termínu komunálních voleb, bez zastupitelstev městských částí a městských obvodů. Za roky 2002–2026 vycházíme z [otevřených dat volby.gov.cz](https://volby.gov.cz/opendata/opendata.htm), za roky [1994](https://volby.gov.cz/pls/kv1994/kv) a [1998](https://volby.gov.cz/pls/kv1998/kv) z výsledků zveřejněných obec po obci. Kandidátku počítáme, jen když na ní zůstal aspoň jeden platný kandidát. Údaje za rok 2026 jsou podle registrace kandidátů k 23. září, do voleb se ještě mohou kandidáti vzdát. Účast porovnáváme podle typu obce v komunálních volbách 2022 a podle počtu obyvatel v témže roce. Jména starostů jsou ze [Seznamu orgánů veřejné moci](https://www.czechpoint.cz/sovm/) ke 2. říjnu 2026; počítáme jen ta, která jsme našli mezi zastupiteli zvolenými v téže obci v roce 2022.
 ```
 
 <RelatedArticles slugs={["volby-cr-2026-08-27-nejmene-kandidatu-do-obci-i-do-senatu", "volby-cr-2026-10-01-volebni-kalkulacka-komunalni-volby-2026", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen"]} heading="🔻🔻🔻" />

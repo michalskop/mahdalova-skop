@@ -1,0 +1,355 @@
+{
+ "tema": "Senátoři zvolení už v 1. kole (nadpoloviční většina), řádné volby do Senátu 1996–2026",
+ "vytvoreno": "2026-10-17",
+ "metoda": "Registr kandidátů ČSÚ (serk.csv), pole ZVOLEN_K1 = 1 (zvolen v 1. kole). Jen řádné volby (TYPVOLEB = 0 v sedatumvoleb.csv); doplňovací a opakované volby vynechány. Kontrola: žádný kandidát s URIZ_PR_K1 > 50 % bez příznaku ZVOLEN_K1 = 1. Strana = navrhující subjekt (volební strana) / politická příslušnost podle číselníků cvs.csv a cpp.csv.",
+ "verdikt": "5 v roce 2026 NENÍ samostatný rekord: stejně 5 jich bylo zvoleno v 1. kole i v roce 2024. Je to vyrovnané maximum od roku 1996 (1996: 4 z 81 obvodů, 2022: 3).",
+ "volby": [
+  {
+   "rok": 1996,
+   "datum_prvniho_dne": "19961116",
+   "obvodu_volenych": 81,
+   "zvoleno_v_1_kole": 4,
+   "zvoleni": [
+    {
+     "jmeno": "Milan Kondr",
+     "obvod": 22,
+     "nazev_obvodu": "Praha 10",
+     "navrhujici": "Občanská demokratická strana",
+     "prislusnost": "Občanská demokratická strana",
+     "hlasy_k1": 23583,
+     "proc_k1": 50.84
+    },
+    {
+     "jmeno": "Jan Koukal",
+     "obvod": 25,
+     "nazev_obvodu": "Praha 6",
+     "navrhujici": "Občanská demokratická strana",
+     "prislusnost": "Občanská demokratická strana",
+     "hlasy_k1": 25701,
+     "proc_k1": 54.13
+    },
+    {
+     "jmeno": "Vladimír Zeman",
+     "obvod": 26,
+     "nazev_obvodu": "Praha 2",
+     "navrhujici": "Občanská demokratická strana",
+     "prislusnost": "Občanská demokratická strana",
+     "hlasy_k1": 24167,
+     "proc_k1": 53.79
+    },
+    {
+     "jmeno": "Jan Zahradníček",
+     "obvod": 60,
+     "nazev_obvodu": "Brno-město",
+     "navrhujici": "KDU-ČSL",
+     "prislusnost": "KDU-ČSL",
+     "hlasy_k1": 19994,
+     "proc_k1": 50.06
+    }
+   ]
+  },
+  {
+   "rok": 1998,
+   "datum_prvniho_dne": "19981114",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 0,
+   "zvoleni": []
+  },
+  {
+   "rok": 2000,
+   "datum_prvniho_dne": "20001112",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 1,
+   "zvoleni": [
+    {
+     "jmeno": "Josef Zieleniec",
+     "obvod": 20,
+     "nazev_obvodu": "Praha 4",
+     "navrhujici": "Čtyřkoalice",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 17591,
+     "proc_k1": 52.11
+    }
+   ]
+  },
+  {
+   "rok": 2002,
+   "datum_prvniho_dne": "20021025",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 1,
+   "zvoleni": [
+    {
+     "jmeno": "Vladimír Železný",
+     "obvod": 54,
+     "nazev_obvodu": "Znojmo",
+     "navrhujici": "NEZÁVISLÍ",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 16997,
+     "proc_k1": 50.82
+    }
+   ]
+  },
+  {
+   "rok": 2004,
+   "datum_prvniho_dne": "20041105",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 1,
+   "zvoleni": [
+    {
+     "jmeno": "Jiří Šneberger",
+     "obvod": 7,
+     "nazev_obvodu": "Plzeň-město",
+     "navrhujici": "Občanská demokratická strana",
+     "prislusnost": "Občanská demokratická strana",
+     "hlasy_k1": 14650,
+     "proc_k1": 50.52
+    }
+   ]
+  },
+  {
+   "rok": 2006,
+   "datum_prvniho_dne": "20061020",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 0,
+   "zvoleni": []
+  },
+  {
+   "rok": 2008,
+   "datum_prvniho_dne": "20081017",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 1,
+   "zvoleni": [
+    {
+     "jmeno": "Radek Sušil",
+     "obvod": 75,
+     "nazev_obvodu": "Karviná",
+     "navrhujici": "Sociální demokracie",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 15254,
+     "proc_k1": 53.34
+    }
+   ]
+  },
+  {
+   "rok": 2010,
+   "datum_prvniho_dne": "20101015",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 0,
+   "zvoleni": []
+  },
+  {
+   "rok": 2012,
+   "datum_prvniho_dne": "20121012",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 0,
+   "zvoleni": []
+  },
+  {
+   "rok": 2014,
+   "datum_prvniho_dne": "20141010",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 0,
+   "zvoleni": []
+  },
+  {
+   "rok": 2016,
+   "datum_prvniho_dne": "20161007",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 0,
+   "zvoleni": []
+  },
+  {
+   "rok": 2018,
+   "datum_prvniho_dne": "20181005",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 2,
+   "zvoleni": [
+    {
+     "jmeno": "Jiří Drahoš",
+     "obvod": 20,
+     "nazev_obvodu": "Praha 4",
+     "navrhujici": "Koalice KDU,Zelení,STAN,TOP",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 20595,
+     "proc_k1": 52.65
+    },
+    {
+     "jmeno": "Jiří Čunek",
+     "obvod": 77,
+     "nazev_obvodu": "Vsetín",
+     "navrhujici": "KDU-ČSL",
+     "prislusnost": "KDU-ČSL",
+     "hlasy_k1": 24158,
+     "proc_k1": 51.59
+    }
+   ]
+  },
+  {
+   "rok": 2020,
+   "datum_prvniho_dne": "20201002",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 1,
+   "zvoleni": [
+    {
+     "jmeno": "Zbyněk Linhart",
+     "obvod": 33,
+     "nazev_obvodu": "Děčín",
+     "navrhujici": "Koalice STAN, SLK",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 15787,
+     "proc_k1": 52.77
+    }
+   ]
+  },
+  {
+   "rok": 2022,
+   "datum_prvniho_dne": "20220923",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 3,
+   "zvoleni": [
+    {
+     "jmeno": "Jiří Růžička",
+     "obvod": 25,
+     "nazev_obvodu": "Praha 6",
+     "navrhujici": "Koalice KDU-ČSL,ODS,STAN,TOP09",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 18301,
+     "proc_k1": 50.28
+    },
+    {
+     "jmeno": "Petr Fiala",
+     "obvod": 46,
+     "nazev_obvodu": "Ústí nad Orlicí",
+     "navrhujici": "Koalice KDU-ČSL, SproK",
+     "prislusnost": "Společně pro kraj",
+     "hlasy_k1": 24433,
+     "proc_k1": 65.66
+    },
+    {
+     "jmeno": "Ladislav Václavec",
+     "obvod": 64,
+     "nazev_obvodu": "Bruntál",
+     "navrhujici": "ANO 2011",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 19804,
+     "proc_k1": 58.85
+    }
+   ]
+  },
+  {
+   "rok": 2024,
+   "datum_prvniho_dne": "20240920",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 5,
+   "zvoleni": [
+    {
+     "jmeno": "Jana Mračková Vildumetzová",
+     "obvod": 2,
+     "nazev_obvodu": "Sokolov",
+     "navrhujici": "ANO 2011",
+     "prislusnost": "ANO 2011",
+     "hlasy_k1": 11424,
+     "proc_k1": 50.72
+    },
+    {
+     "jmeno": "Pavel Fischer",
+     "obvod": 17,
+     "nazev_obvodu": "Praha 12",
+     "navrhujici": "Koalice KDU-ČSL,ODS,STAN,TOP09",
+     "prislusnost": "Bez politické příslušnosti",
+     "hlasy_k1": 15638,
+     "proc_k1": 53.63
+    },
+    {
+     "jmeno": "Martin Bednář",
+     "obvod": 71,
+     "nazev_obvodu": "Ostrava-město",
+     "navrhujici": "ANO 2011",
+     "prislusnost": "ANO 2011",
+     "hlasy_k1": 11311,
+     "proc_k1": 51.84
+    },
+    {
+     "jmeno": "Petr Vícha",
+     "obvod": 74,
+     "nazev_obvodu": "Karviná",
+     "navrhujici": "Koalice SOCDEM, ANO",
+     "prislusnost": "Sociální demokracie",
+     "hlasy_k1": 13249,
+     "proc_k1": 58.33
+    },
+    {
+     "jmeno": "Jiří Čunek",
+     "obvod": 77,
+     "nazev_obvodu": "Vsetín",
+     "navrhujici": "KDU-ČSL",
+     "prislusnost": "KDU-ČSL",
+     "hlasy_k1": 16414,
+     "proc_k1": 56.76
+    }
+   ]
+  },
+  {
+   "rok": 2026,
+   "datum_prvniho_dne": "20261009",
+   "obvodu_volenych": 27,
+   "zvoleno_v_1_kole": 5,
+   "zvoleni": [
+    {
+     "jmeno": "Tomáš Fiala",
+     "obvod": 12,
+     "nazev_obvodu": "Strakonice",
+     "navrhujici": "Naše Česko",
+     "prislusnost_kod": 1722,
+     "hlasy_k1": 24643,
+     "proc_k1": 55.41
+    },
+    {
+     "jmeno": "Zbyněk Linhart",
+     "obvod": 33,
+     "nazev_obvodu": "Děčín",
+     "navrhujici": "Senátor za Děčínsko - České Švýcarsko",
+     "prislusnost_kod": 99,
+     "hlasy_k1": 17850,
+     "proc_k1": 52.22
+    },
+    {
+     "jmeno": "Jan Sobotka",
+     "obvod": 39,
+     "nazev_obvodu": "Trutnov",
+     "navrhujici": "STAROSTOVÉ A NEZÁVISLÍ",
+     "prislusnost_kod": 99,
+     "hlasy_k1": 23174,
+     "proc_k1": 58.42
+    },
+    {
+     "jmeno": "Jan Grulich",
+     "obvod": 48,
+     "nazev_obvodu": "Rychnov nad Kněžnou",
+     "navrhujici": "Honza Grulich - senátor z hor, společně TOP 09, ODS, KDU-ČSL, STAN, Piráti, LES",
+     "prislusnost_kod": 721,
+     "hlasy_k1": 28492,
+     "proc_k1": 62.19
+    },
+    {
+     "jmeno": "Jan Grolich",
+     "obvod": 57,
+     "nazev_obvodu": "Vyškov",
+     "navrhujici": "KDU-ČSL",
+     "prislusnost_kod": 1,
+     "hlasy_k1": 37071,
+     "proc_k1": 63.34
+    }
+   ]
+  }
+ ],
+ "zdroje": [
+  "https://www.volby.cz/opendata/senat_vse/senat_vse_opendata.htm",
+  "https://www.volby.cz/opendata/senat_vse/SENATreg20250118_csv.zip (serk.csv – registr kandidátů 1996–2025 vč. ZVOLEN_K1)",
+  "https://www.volby.cz/opendata/senat_vse/SENATciselniky20250118_csv.zip (sedatumvoleb.csv, cvs.csv, cpp.csv, secobv.csv)",
+  "https://www.volby.cz/opendata/senat_vse/SENATregPopis.htm (popis polí: ZVOLEN_K1 0 = nezvolen, 1 = zvolen, 2 = kandidát 2. kola)",
+  "https://www.volby.cz/opendata/se2026/se2026_opendata.htm",
+  "https://www.volby.cz/opendata/se2026/SE2026reg20261011_csv.zip (serk.csv 2026)"
+ ],
+ "poznamka": "Prezentace https://www.volby.cz/pls/senat/se?xjazyk=CZ (i volby.gov.cz) byla 17. 10. 2026 dočasně nedostupná (odstávková stránka), proto použita otevřená data ČSÚ."
+}

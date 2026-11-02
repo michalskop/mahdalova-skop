@@ -1,0 +1,21 @@
+{
+  "id" : "20261009/vysled/obvod/15.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":15},
+  "generovano" : "2026-10-15T15:10:07",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Pelhřimov",
+  "prehled" : [
+  [1,346,346,100,106619,48926,45.89,71,48399,46976,97.06]
+],
+  "existujePdf" : false,
+  "vysledky" : [
+  [1,"Chalupský Jaroslav Ing.","HSR","HSR","HSR",11799,25.11,null,null,false,false,1740,1740,1740],
+  [2,"Hodáč Pavel","KSČM","KSČM","KSČM",1356,2.88,null,null,false,false,47,47,47],
+  [3,"Med Ladislav","KDUODSSTANTOPST","ODS","ODS",14321,30.48,null,null,false,false,1648,53,53],
+  [4,"Pavlů Řádová Lucie Mgr.","SPD","SPD","SPD",2676,5.69,null,null,false,false,1114,1114,1114],
+  [5,"Kozár Michal Mgr. Ing. MBA","ANO","ANO","ANO",12758,27.15,null,null,false,false,768,768,768],
+  [6,"Kubisková Karolína Ing.","VÝZVA","VÝZVA","VÝZVA",4066,8.65,null,null,false,false,1704,1704,1704]
+],
+  "postupuje" : [3,5],
+  "zvoleny" : null
+}

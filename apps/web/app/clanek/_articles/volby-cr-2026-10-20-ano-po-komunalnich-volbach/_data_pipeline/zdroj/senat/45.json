@@ -1,0 +1,24 @@
+{
+  "id" : "20261009/vysled/obvod/45.json",
+  "param" : {"typ":"VYSL_OBVOD","datumvoleb":20261009,"obvod":45},
+  "generovano" : "2026-10-17T16:05:37",
+  "popis" : "Výsledek za senátní obvod",
+  "obvodNazev" : "Hradec Králové",
+  "prehled" : [
+  [1,192,192,100,104601,47069,45,32,46631,45752,98.11],
+  [2,192,192,100,104591,25111,24.01,51,25093,24973,99.52]
+],
+  "existujePdf" : true,
+  "velikostPdf" : 83,
+  "vysledky" : [
+  [1,"Nebeská Monika Ing.","NK","NK","BEZPP",6860,14.99,0,0,false,false,80,80,99],
+  [2,"Dryml Vladimír MUDr.","ČSSD","ČSSD","BEZPP",922,2.01,0,0,false,false,759,759,99],
+  [3,"Hůlková Jana  DiS.","ANO","ANO","ANO",8421,18.4,0,0,false,false,768,768,768],
+  [4,"Picek Ivan Mgr.","SPD","SPD","SPD",2439,5.33,0,0,false,false,1114,1114,1114],
+  [5,"Holásek Jan JUDr. LL.M.","VPM+HP+MY+RH+NČ","RH","RH",5573,12.18,0,0,false,false,1899,1267,1267],
+  [6,"Ceralová Petrofová Zuzana Mgr.","ODS","ODS","BEZPP",10039,21.94,15022,60.15,false,false,53,53,99],
+  [7,"Dvořák Martin Ing.","ZelSTANPiTOPHDK","STAN","STAN",11498,25.13,9951,39.84,false,false,1867,166,166]
+],
+  "postupuje" : [6,7],
+  "zvoleny" : 6
+}
