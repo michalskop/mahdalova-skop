@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/images/cover-homepage.png",
+      "otisk": "4fd0f9af87c10083",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/cover.config.cjs": "a3e3cdcf98bfe4c3",
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/motiv-homepage.svg": "8f10a68ceb7b70c7"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/images/cover-og.jpg",
+      "otisk": "17b08525870deac1",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/cover.config.cjs": "a3e3cdcf98bfe4c3",
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/motiv-og.svg": "bd499e39b8f2fcdd"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/images/cover-square.png",
+      "otisk": "b43d89ab646b841d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/cover.config.cjs": "a3e3cdcf98bfe4c3",
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/motiv-square.svg": "06a9b9d9ce6f8991"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/images/cover-instagram.png",
+      "otisk": "d87f608d593308e4",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/cover.config.cjs": "a3e3cdcf98bfe4c3",
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/motiv-instagram.svg": "8b195d8724f3156b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/images/cover-story.png",
+      "otisk": "a8853869fba29415",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/cover.config.cjs": "a3e3cdcf98bfe4c3",
+        "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/motiv-story.svg": "4ad4b5f4ea91562b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-03T10:53:51.741Z",
+  "clanek": "apps/web/app/clanek/_articles/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/index.md",
+  "titulekClanku": "Politici sahají na poplatky za ČT a rozhlas 35 let. Zrušit je chce poprvé vláda",
+  "texty": {
+    "stitek": "Kontext • Média veřejné služby",
+    "nadtitulek": "",
+    "titulek": "Poplatky za ČT a rozhlas chce poprvé zrušit vláda",
+    "podtitulek": "35 let politických pokusů sáhnout na peníze médií veřejné služby"
+  }
+}

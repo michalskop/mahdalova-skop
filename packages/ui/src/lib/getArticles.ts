@@ -57,6 +57,18 @@ export function parsePublishedAt(date: unknown, time?: unknown): PublishedAt {
   return { ms, hasTime: !!t };
 }
 
+/** Skutečný okamžik (UTC ms) pro „pražský čas na zdi“ z parsePublishedAt: odečte
+ * posun Europe/Prague platný v ten den (zimní +1 h, letní +2 h). */
+export function pragueWallToUtc(wallMs: number): number {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Prague', hourCycle: 'h23',
+    year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit',
+  }).formatToParts(new Date(wallMs));
+  const g = (k: string) => Number(parts.find((x) => x.type === k)?.value);
+  const offset = Date.UTC(g('year'), g('month') - 1, g('day'), g('hour'), g('minute')) - wallMs;
+  return wallMs - offset;
+}
+
 /** Přečte skrytý čas publikace z `<articlesDir>/<slug>/index.md`; když složka
  * neexistuje (např. dpbp články), použije jen `fallbackDate`. */
 export function readPublishedAt(articlesDir: string, slug: string, fallbackDate = ''): PublishedAt {
@@ -135,6 +147,9 @@ export async function getArticles({
 
   // Skrytý čas publikace – drží se mimo objekty Article (viz parsePublishedAt).
   const publishedAtBySlug = new Map<string, number>();
+  // Od kdy článek smí do výpisů: s vyplněným `time` až od toho pražského času
+  // (článek je do té doby živý jen na své URL), bez času jako dřív podle `date`.
+  const visibleFromBySlug = new Map<string, number>();
 
   const folderArticles = articleFolders
     .map((folder) => {
@@ -144,7 +159,9 @@ export async function getArticles({
       try {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data } = matter(fileContents);
-        publishedAtBySlug.set(folder, parsePublishedAt(data.date, data.time).ms);
+        const published = parsePublishedAt(data.date, data.time);
+        publishedAtBySlug.set(folder, published.ms);
+        if (published.hasTime) visibleFromBySlug.set(folder, pragueWallToUtc(published.ms));
         const homepageImage = resolveCoverImage(data.homepageImage, folder);
         const coverImage = homepageImage || resolveCoverImage(data.coverImage, folder);
 
@@ -173,7 +190,8 @@ export async function getArticles({
 
   const articles = [...folderArticles, ...extraArticles];
 
-  let filteredArticles = articles.filter(article => new Date(article.date) <= currentDate);
+  let filteredArticles = articles.filter(article =>
+    (visibleFromBySlug.get(article.slug) ?? new Date(article.date).getTime()) <= currentDate.getTime());
 
   if (filter) {
     filteredArticles = filteredArticles.filter(article => {
