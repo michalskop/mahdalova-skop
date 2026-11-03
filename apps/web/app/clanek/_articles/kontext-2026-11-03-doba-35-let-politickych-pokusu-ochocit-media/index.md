@@ -1,6 +1,7 @@
 ---
 title: "Politici sahají na poplatky za ČT a rozhlas 35 let. Zrušit je chce poprvé vláda"
 date: "2026-11-03"
+time: "14:00"
 author: "Kateřina Mahdalová"
 excerpt: "Spor o poplatky za Českou televizi a Český rozhlas je starý jako obě instituce. Politici je zvyšovali, chtěli je zmrazit nebo od nich osvobodit důchodce i ty, o nichž televize „odvysílala nepravdu“. Zrušit je a platit média ze státního rozpočtu ale poprvé navrhuje vláda. Kdo kdy na poplatky sahal, s jakou podporou a jakými argumenty."
 coverTitulek: "Poplatky<br>za ČT a rozhlas<br>chce poprvé<br>zrušit vláda"
