@@ -1,7 +1,7 @@
 ---
 title: "Politici sahají na poplatky za ČT a rozhlas 35 let. Zrušit je chce poprvé vláda"
 date: "2026-11-03"
-time: "14:00"
+time: "13:00"
 author: "Kateřina Mahdalová"
 excerpt: "Spor o poplatky za Českou televizi a Český rozhlas je starý jako obě instituce. Politici je zvyšovali, chtěli je zmrazit nebo od nich osvobodit důchodce i ty, o nichž televize „odvysílala nepravdu“. Zrušit je a platit média ze státního rozpočtu ale poprvé navrhuje vláda. Kdo kdy na poplatky sahal, s jakou podporou a jakými argumenty."
 coverTitulek: "Poplatky<br>za ČT a rozhlas<br>chce poprvé<br>zrušit vláda"
@@ -19,7 +19,7 @@ promoted: 1
 
 Zaměstnanci České televize a Českého rozhlasu dnes, v úterý 3. listopadu, stávkují celý den. Protestují proti vládnímu návrhu zákona, který ruší poplatky a nahrazuje je příspěvkem ze státního rozpočtu. Sněmovna ho [schválila v prvním čtení v sobotu 24. října ve 4.36 ráno](https://www.lupa.cz/aktuality/statni-financovani-ct-a-rozhlasu-se-posouva-do-druheho-cteni-hlasovalo-se-ve-4-36-rano/), po nočním jednání s omezenou rozpravou. Návrh zamítnout podpořilo 81 ze 177 přítomných poslanců.
 
-O poplatky se politici přou od vzniku obou institucí v roce 1991. Prošli jsme sněmovní tisky, jmenovitá hlasování na psp.cz, programová prohlášení vlád a dobové zpravodajství. Ze všech dohledaných pokusů vyplývá jedno: zrušení poplatků navrhovali už senátoři ODS, senátor Jan Veleba s prezidentem Milošem Zemanem i SPD. Jako vládní návrh ale přichází poprvé a poprvé také prošel prvním čtením ve Sněmovně. Dřívější návrhy skončily ve výborech, nebo se k prvnímu čtení vůbec nedostaly.
+O poplatky se politici přou od vzniku obou institucí v roce 1991. Prošli jsme sněmovní tisky, jmenovitá hlasování na psp.cz, programová prohlášení vlád a dobové zpravodajství. Ze všech dohledaných pokusů vyplývá jedno: zrušení poplatků navrhovali už senátoři ODS, senátor Jan Veleba s prezidentem Milošem Zemanem, Piráti i SPD. Jako vládní návrh ale přichází poprvé a poprvé také prošel prvním čtením ve Sněmovně. Dřívější návrhy skončily ve výborech, nebo se k prvnímu čtení vůbec nedostaly.
 
 Druhé zjištění se týká argumentů. Politici je v průběhu let měnili, a někteří i strany sporu. Kdo dnes poplatky ruší, je před pár lety sliboval zachovat, a kdo je dnes hájí, chtěl je kdysi zrušit.
 
@@ -48,6 +48,8 @@ Poprvé zrušení poplatků vážně navrhli v roce 2009 senátoři ODS. Richard
 Od roku 2015 přibývá další argument: obsah vysílání. Senátor Jan Veleba (Strana práv občanů) navrhl osvobodit od poplatku na pět let každého, o kom ČT nebo ČRo „prokazatelně odvysílaly nepravdu“. Prezident Miloš Zeman, čestný předseda jeho strany, [označil zrušení poplatků](https://ct24.ceskatelevize.cz/clanek/domaci/zeman-by-zrusil-koncesionarske-poplatky-sobotka-je-proti-135545) za „docela rozumný“ nápad. Premiér Bohuslav Sobotka (ČSSD) odpověděl, že poplatky zaručují nezávislost na byznysu i na vládě a zrušit je by byla „hrubá chyba“. Veleba návrh stáhl dřív, než se o něm hlasovalo.
 
 Ve stejném měsíci Andrej Babiš, tehdy ministr financí za ANO, [podle Hospodářských novin](https://www.mediaguru.cz/hn-hnuti-ano-uvazuje-o-navratu-reklamy-na-ct1) zvažoval nižší poplatek a návrat reklamy na ČT1. Řekl, že výdaje ČT „nikdo“ efektivně nekontroluje. Jeho holding Agrofert si tehdy stěžoval na reportáže ČT o Babišově střetu zájmů. Babiš nakonec uvedl, že „nejde o nějaký záměr“, a žádný návrh nepodal.
+
+Zrušení poplatků měli v programu pro sněmovní volby 2017 i Piráti. Ve [volebním programu „Černé na bílém“](https://www.pirati.cz/documents/235/program_cerne_na_bilem.pdf) stálo: „Zrušíme koncesionářské poplatky. Příjem ČT a ČRo nahradíme pevným podílem na výběru DPH.“ Nechtěli tedy roční příděl ze státního rozpočtu, o jehož výši rozhoduje vláda, ale předem danou část daně. Dnes Piráti poplatky hájí a v říjnu hlasovali s ostatní opozicí pro zamítnutí vládního návrhu. Na jejich starý program [připomněl](https://www.tiscali.cz/filip-turek-rypnul-do-demonstrantu-na-malostranskem-namesti-pripomnel-ze-poplatky-chteli-zrusit-i-pirati-a-ods-793873) při protestu proti zákonu Filip Turek (Motoristé).
 
 Tomio Okamura (SPD) po volbách v roce 2017 [ohlásil](https://spd.cz/tomio-okamura-prosazuji-zruseni-koncesionarskych-poplatku-ceske-televize-a-ceskeho-rozhlasu/), že chce poplatky zrušit a z ČT a ČRo udělat státní příspěvkové organizace. Hospodaření podle něj bylo netransparentní a zpravodajství nevyvážené. Je to jediný politik, který stejný cíl drží od té doby bez přestávky. Jeho strana v roce 2019 navrhla aspoň osvobodit od poplatku důchodce, invalidy a samoživitele, poplatek podle ní byl „svého druhu obecná daň“. Komunisté opakovaně navrhovali rozšířit osvobození pro lidi s nízkými příjmy. Žádný z těchto návrhů se nedostal přes první čtení.
 
