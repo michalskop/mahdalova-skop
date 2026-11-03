@@ -273,8 +273,16 @@ formátu*):**
   Na Windows tři pasti: (1) klíče musí ležet v `%USERPROFILE%\.datatimes-media.env` – Poznámkový blok přidá
   `.txt` a skript je pak nenajde; (2) v Git Bash spouštět s `MSYS_NO_PATHCONV=1` a cestu `--target` mít
   v proměnné ověřené předem – prázdná proměnná udělala z `/cover-og.jpg` klíč `C:/Program Files/Git/cover-og.jpg`;
-  (3) `.webp` nahraný z Windows dostane typ `application/octet-stream` (Python ho na Windows nezná), proto
-  covery zatím PNG/JPEG. Square, Instagram a story stejně PNG – Instagram WebP nebere.
+  (3) `.webp` nahraný z Windows dostal typ `application/octet-stream` (Python ho na Windows nezná).
+  Opraveno týž den ve skriptu: má vlastní tabulku typů (`.webp` → `image/webp`, `.svg`, `.avif`, `.mp4` …),
+  takže WebP z Windows už jde, a `--target` prázdný, s lomítkem na začátku nebo s dvojtečkou (`C:/…`, URL)
+  odmítne chybou místo nahrání. Ve výpisu kontrolovat `content_type` a `edge_content_type`. Square, Instagram
+  a story dál PNG – Instagram WebP nebere.
+  Hlídání binárek (nově přidaný obrázek či video v commitu = odmítnuto) běží v obou nastaveních
+  `core.hooksPath`: `scripts/git-hooks/pre-commit` volá `.githooks/pre-commit`. Doporučené je
+  `scripts/git-hooks` (jen tam běží i čas publikace, `checkArticles` a LFS pre-push). Výjimka:
+  `ALLOW_MEDIA_COMMIT=1 git commit …`, ne `--no-verify` (ten vypne i kontrolu článků). Podrobně
+  `docs/technicke/media-cdn.md`, kapitola 6.
 - *30. 10. 2026 – anglické covery DJS s logem DataTimes.org.* Delší nápis loga (o znak) stačí k tomu, aby logo
   sáhlo na motiv: u Žen na radnicích leželo logo přes řádek hejtmanů (ve čtverci a tím i v OG „čtverec s ušima“),
   opraveno posunem řádků výš. Po změně loga projít všechny formáty, nejen homepage. Převod českého coveru s koláží

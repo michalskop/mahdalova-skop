@@ -22,6 +22,57 @@ from pathlib import Path
 
 PUBLIC_CDN_BASE = os.getenv("MEDIA_CDN_BASE", "https://media.datatimes.org")
 
+# Explicit Content-Type map, checked before mimetypes.guess_type: on Windows the
+# mimetypes module reads the registry, which often lacks .webp (and can return
+# odd values for others), so the upload would fall back to application/octet-stream.
+CONTENT_TYPES = {
+    ".webp": "image/webp",
+    ".avif": "image/avif",
+    ".svg": "image/svg+xml",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".gif": "image/gif",
+    ".mp4": "video/mp4",
+    ".webm": "video/webm",
+    ".mov": "video/quicktime",
+    ".pdf": "application/pdf",
+}
+
+def guess_content_type(key: str) -> str:
+    ext = os.path.splitext(key)[1].lower()
+    if ext in CONTENT_TYPES:
+        return CONTENT_TYPES[ext]
+    mime_type, _ = mimetypes.guess_type(key)
+    return mime_type or "application/octet-stream"
+
+def validate_target(raw: str) -> str:
+    """Return the bucket key or exit. The key must be relative, e.g.
+    datatimes-cz/articles/2026/10/slug/cover.webp. Git Bash rewrites an argument
+    starting with '/' into a Windows path (/cover-og.jpg -> C:/Program Files/Git/cover-og.jpg),
+    so absolute paths, drive letters and anything with ':' are refused, not "fixed"."""
+    target = (raw or "").strip()
+    problem = None
+    if not target:
+        problem = "--target is empty"
+    elif target.startswith(("/", "\\")):
+        problem = "--target must be relative to the bucket (no leading slash)"
+    elif ":" in target:
+        problem = "--target contains ':' (drive letter, URL or a path rewritten by Git Bash)"
+    else:
+        target = target.replace("\\", "/")
+        parts = target.split("/")
+        if any(part in ("", ".", "..") for part in parts):
+            problem = "--target has an empty, '.' or '..' path segment"
+        elif not os.path.splitext(parts[-1])[1]:
+            problem = "--target must end with a file name including its extension"
+    if problem:
+        print(f"ERROR: {problem}: {raw!r}", file=sys.stderr)
+        print("Expected e.g. datatimes-cz/articles/2026/10/<slug>/cover.webp", file=sys.stderr)
+        print("(In Git Bash a path starting with '/' gets rewritten to C:/Program Files/Git/...)", file=sys.stderr)
+        sys.exit(1)
+    return target
+
 def load_env():
     """Cross-platform config loader from .env or ~/.datatimes-media.env"""
     paths = [
@@ -109,6 +160,8 @@ def main():
     parser.add_argument("--overwrite-unadvisable", action="store_true", help="Bypass collision refusal (not recommended)")
     args = parser.parse_args()
 
+    target_key = validate_target(args.target)
+
     local_path = Path(args.file).resolve()
     if not local_path.is_file():
         print(f"ERROR: Local file not found: {local_path}", file=sys.stderr)
@@ -119,8 +172,6 @@ def main():
         print("ERROR: Missing credentials. Please set B2_KEY_ID and B2_APPLICATION_KEY", file=sys.stderr)
         print("in .env or in ~/.datatimes-media.env (Linux/macOS) / %USERPROFILE%\\.datatimes-media.env (Windows)", file=sys.stderr)
         sys.exit(1)
-
-    target_key = args.target.strip("/").replace("\\", "/")
 
     # Authorize with B2
     try:
@@ -171,8 +222,7 @@ def main():
     upload_url = upload_info["uploadUrl"]
     upload_auth = upload_info["authorizationToken"]
 
-    mime_type, _ = mimetypes.guess_type(target_key)
-    content_type = mime_type or "application/octet-stream"
+    content_type = guess_content_type(target_key)
     file_sha1 = sha1_file(local_path)
     cache_control = urllib.parse.quote("public, max-age=31536000, immutable")
 
@@ -191,11 +241,13 @@ def main():
 
     public_url = f"{PUBLIC_CDN_BASE}/{target_key}"
 
-    # 3. Post-upload verification
+    # 3. Post-upload verification (Cloudflare answers 403 to the default Python-urllib User-Agent)
+    edge_content_type = None
     try:
-        req = urllib.request.Request(public_url, method="HEAD")
+        req = urllib.request.Request(public_url, method="HEAD", headers={"User-Agent": "datatimes-upload-media/1.0"})
         with urllib.request.urlopen(req, timeout=10) as r:
             verified = (r.status == 200)
+            edge_content_type = r.headers.get("Content-Type")
     except Exception:
         verified = False
 
@@ -204,7 +256,9 @@ def main():
         "url": public_url,
         "key": target_key,
         "bytes": local_path.stat().st_size,
-        "verified_at_edge": verified
+        "content_type": content_type,
+        "verified_at_edge": verified,
+        "edge_content_type": edge_content_type,
     }
     print(json.dumps(result, indent=2))
 
