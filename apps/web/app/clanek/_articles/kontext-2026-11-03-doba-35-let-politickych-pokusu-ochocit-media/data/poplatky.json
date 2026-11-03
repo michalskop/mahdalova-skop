@@ -1,0 +1,278 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Televizní poplatek se mezi lety 2008 a 2025 nezměnil",
+  "subtitle": "Měsíční poplatek domácnosti v korunách (do roku 1992 Kčs), nominálně, podle data účinnosti"
+ },
+ "width": 600,
+ "height": 260,
+ "data": {
+  "values": [
+   {
+    "d": "1991-04-01",
+    "s": "televizní",
+    "v": 50,
+    "od": "1991-04-01"
+   },
+   {
+    "d": "1991-04-01",
+    "s": "rozhlasový",
+    "v": 20,
+    "od": "1991-04-01"
+   },
+   {
+    "d": "1995-04-01",
+    "s": "televizní",
+    "v": 50,
+    "od": "1991-04-01"
+   },
+   {
+    "d": "1995-04-01",
+    "s": "rozhlasový",
+    "v": 20,
+    "od": "1991-04-01"
+   },
+   {
+    "d": "1995-04-01",
+    "s": "televizní",
+    "v": 50,
+    "od": "1995-04-01"
+   },
+   {
+    "d": "1995-04-01",
+    "s": "rozhlasový",
+    "v": 25,
+    "od": "1995-04-01"
+   },
+   {
+    "d": "1997-07-01",
+    "s": "televizní",
+    "v": 50,
+    "od": "1995-04-01"
+   },
+   {
+    "d": "1997-07-01",
+    "s": "rozhlasový",
+    "v": 25,
+    "od": "1995-04-01"
+   },
+   {
+    "d": "1997-07-01",
+    "s": "televizní",
+    "v": 75,
+    "od": "1997-07-01"
+   },
+   {
+    "d": "1997-07-01",
+    "s": "rozhlasový",
+    "v": 37,
+    "od": "1997-07-01"
+   },
+   {
+    "d": "2005-10-01",
+    "s": "televizní",
+    "v": 75,
+    "od": "1997-07-01"
+   },
+   {
+    "d": "2005-10-01",
+    "s": "rozhlasový",
+    "v": 37,
+    "od": "1997-07-01"
+   },
+   {
+    "d": "2005-10-01",
+    "s": "televizní",
+    "v": 100,
+    "od": "2005-10-01"
+   },
+   {
+    "d": "2005-10-01",
+    "s": "rozhlasový",
+    "v": 45,
+    "od": "2005-10-01"
+   },
+   {
+    "d": "2007-01-01",
+    "s": "televizní",
+    "v": 100,
+    "od": "2005-10-01"
+   },
+   {
+    "d": "2007-01-01",
+    "s": "rozhlasový",
+    "v": 45,
+    "od": "2005-10-01"
+   },
+   {
+    "d": "2007-01-01",
+    "s": "televizní",
+    "v": 120,
+    "od": "2007-01-01"
+   },
+   {
+    "d": "2007-01-01",
+    "s": "rozhlasový",
+    "v": 45,
+    "od": "2007-01-01"
+   },
+   {
+    "d": "2008-01-01",
+    "s": "televizní",
+    "v": 120,
+    "od": "2007-01-01"
+   },
+   {
+    "d": "2008-01-01",
+    "s": "rozhlasový",
+    "v": 45,
+    "od": "2007-01-01"
+   },
+   {
+    "d": "2008-01-01",
+    "s": "televizní",
+    "v": 135,
+    "od": "2008-01-01"
+   },
+   {
+    "d": "2008-01-01",
+    "s": "rozhlasový",
+    "v": 45,
+    "od": "2008-01-01"
+   },
+   {
+    "d": "2025-05-01",
+    "s": "televizní",
+    "v": 135,
+    "od": "2008-01-01"
+   },
+   {
+    "d": "2025-05-01",
+    "s": "rozhlasový",
+    "v": 45,
+    "od": "2008-01-01"
+   },
+   {
+    "d": "2025-05-01",
+    "s": "televizní",
+    "v": 150,
+    "od": "2025-05-01"
+   },
+   {
+    "d": "2025-05-01",
+    "s": "rozhlasový",
+    "v": 55,
+    "od": "2025-05-01"
+   },
+   {
+    "d": "2026-11-03",
+    "s": "televizní",
+    "v": 150,
+    "od": "2025-05-01",
+    "lab": "televizní 150 Kč"
+   },
+   {
+    "d": "2026-11-03",
+    "s": "rozhlasový",
+    "v": 55,
+    "od": "2025-05-01",
+    "lab": "rozhlasový 55 Kč"
+   }
+  ]
+ },
+ "encoding": {
+  "x": {
+   "field": "d",
+   "type": "temporal",
+   "axis": {
+    "title": null,
+    "format": "%Y",
+    "tickCount": 8,
+    "grid": false,
+    "domain": false,
+    "ticks": false
+   }
+  },
+  "y": {
+   "field": "v",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     0,
+     160
+    ]
+   },
+   "axis": {
+    "title": null,
+    "tickCount": 4,
+    "gridColor": "#d4d4c8",
+    "domain": false,
+    "ticks": false
+   }
+  },
+  "color": {
+   "field": "s",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "televizní",
+     "rozhlasový"
+    ],
+    "range": [
+     "#de1743",
+     "#06677d"
+    ]
+   },
+   "legend": null
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 3
+   },
+   "encoding": {
+    "tooltip": [
+     {
+      "field": "s",
+      "type": "nominal",
+      "title": "Poplatek"
+     },
+     {
+      "field": "od",
+      "type": "temporal",
+      "title": "Platí od",
+      "format": "%-d. %-m. %Y"
+     },
+     {
+      "field": "v",
+      "type": "quantitative",
+      "title": "Kč měsíčně"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.lab"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -4,
+    "dy": -10,
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "text": {
+     "field": "lab"
+    }
+   }
+  }
+ ],
+ "_source": "Sbírka zákonů (100/1991, 252/1994, 135/1997, 348/2005 Sb.), finance.cz, MediaGuru"
+}
