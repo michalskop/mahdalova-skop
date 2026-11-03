@@ -2,6 +2,7 @@
 // Použití: const { MOTIVY, ZADANI } = require('./piktogramy-02.cjs')(pomocne); MOTIVY se přidají k motivům generátoru, ZADANI = { id: { motiv, arg } }.
 // Pravidla: jedna zpráva na cover, zvýrazněná žlutě; ostatní barvou kapitoly; „chybějící“ část = přerušovaný obrys.
 module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
+  const halo = (fs_) => `stroke="${NAVY}" stroke-width="${(fs_ * 0.3).toFixed(1)}" paint-order="stroke" stroke-linejoin="round"`;
   const sk = (barva, duch, w = 3) => (duch ? `fill="none" stroke="${BILA}" stroke-opacity=".6" stroke-width="${w}" stroke-dasharray="7 6" vector-effect="non-scaling-stroke"` : `fill="${barva}"`);
   const nav = (duch) => (duch ? 'none' : NAVY);
   const g = (cx, cy, s, inner) => `<g transform="translate(${cx.toFixed(1)} ${cy.toFixed(1)}) scale(${s.toFixed(1)})">${inner}</g>`;
@@ -25,6 +26,14 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
 
   // legenda: [[barva|null (prázdný obrys), text]]
   const legenda = (x, y, f, polozky, typ) => polozky.map(([b, t], i) => ikona(typ, x + f * 0.65, y + i * f * 2.0 - f * 0.4, f * 1.5, b || BILA, !b) + T(x + f * 1.7, y + i * f * 2.0, t, 'start', BILA, f * 1.25, 600)).join('');
+
+  // vlaječky (poměr 3:2): CZ a JP
+  const vlajka = (kod, x, y, w, h) => {
+    const r = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h * 0.1}" fill="#f8f6f0"/>`;
+    if (kod === 'cz') return r + `<path d="M ${x} ${y + h / 2} H ${x + w} V ${y + h - h * 0.1} Q ${x + w} ${y + h} ${x + w - h * 0.1} ${y + h} H ${x + h * 0.1} Q ${x} ${y + h} ${x} ${y + h - h * 0.1} Z" fill="#d7141a"/><path d="M ${x} ${y} L ${x + w * 0.5} ${y + h / 2} L ${x} ${y + h} Z" fill="#11457e"/>`;
+    if (kod === 'no') return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h * 0.1}" fill="#ba0c2f"/><rect x="${x}" y="${y + h * 0.375}" width="${w}" height="${h * 0.25}" fill="#f8f6f0"/><rect x="${x + w * 0.27}" y="${y}" width="${h * 0.25}" height="${h}" fill="#f8f6f0"/><rect x="${x}" y="${y + h * 0.44}" width="${w}" height="${h * 0.12}" fill="#00205b"/><rect x="${x + w * 0.27 + h * 0.065}" y="${y}" width="${h * 0.12}" height="${h}" fill="#00205b"/>`;
+    return r + `<circle cx="${x + w / 2}" cy="${y + h / 2}" r="${h * 0.3}" fill="#bc002d"/>`;
+  };
 
   const MOTIVY = {
     // jedna mřížka ikon: skupiny = [[počet, barva, duch]], legenda dole
@@ -50,9 +59,26 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
       let s = '';
       radky.forEach((r, i) => {
         const y0 = i * lane + (lane - hh - kk) / 2;
-        s += T(0, y0 + f * 1.3, r.nazev, 'start', BILA, f * 1.3, 700) + (r.pozn ? T(w, y0 + f * 1.4, r.pozn, 'end', r.zv ? ZLU : BILA, f * 1.7, 700) : '');
+        const fw = r.vlajka ? f * 2.4 : 0; if (r.vlajka) s += vlajka(r.vlajka, 0, y0 + f * 0.1, fw, fw / 1.5); s += T(r.vlajka ? fw + f * 0.6 : 0, y0 + f * 1.3, r.nazev, 'start', BILA, f * 1.3, 700) + (r.pozn ? T(w, y0 + f * 1.4, r.pozn, 'end', r.zv ? ZLU : BILA, f * 1.7, 700) : '');
         let idx = 0;
         for (const [cnt, b, duch, typ] of r.skupiny) for (let j = 0; j < cnt; j++, idx++) s += ikona(typ || r.ikona, (idx + 0.5) * kk, y0 + hh + kk / 2, kk * 0.86, b, duch);
+      });
+      if (jednotka) s += T(0, h - f * 0.3, jednotka, 'start', BILA, f * 1.1, 500);
+      return svgWrap(w, h, s);
+    },
+    // jedna řada = jeden řádek: vlaječka, název, řada ikon, výsledek vpravo
+    radyVRadku(w, h, { radky, jednotka }) {
+      const f = fsOf(w), n = radky.length, rez = jednotka ? f * 1.9 : 0, lane = (h - rez) / n, fw = f * 2.0;
+      const nameW = f * 4.6, R = f * 4.9, L = fw + f * 0.6 + nameW, N = Math.max(...radky.map((r) => r.skupiny.reduce((a, g) => a + g[0], 0)));
+      const k = Math.min((w - L - R) / N, lane * 0.8);
+      let s = '';
+      radky.forEach((r, i) => {
+        const cy = lane * (i + 0.5);
+        if (r.vlajka) s += vlajka(r.vlajka, 0, cy - fw / 3, fw, fw / 1.5);
+        s += T(fw + f * 0.6, cy + f * 0.4, r.nazev, 'start', BILA, f * 1.15, 700);
+        let idx = 0;
+        for (const [cnt, b, duch] of r.skupiny) for (let j = 0; j < cnt; j++, idx++) s += ikona(r.ikona, L + (idx + 0.5) * k, cy, k * 0.9, b, duch);
+        if (r.pozn) { const fs_ = f * 1.75; s += `<text x="${w}" y="${(cy + fs_ * 0.35).toFixed(1)}" text-anchor="end" font-family="IBM Plex Sans, Arial, sans-serif" font-weight="700" font-size="${fs_.toFixed(1)}" ${halo(fs_)}>${[].concat(r.pozn).map(([t, b]) => `<tspan fill="${b}">${t}</tspan>`).join('')}</text>`; }
       });
       if (jednotka) s += T(0, h - f * 0.3, jednotka, 'start', BILA, f * 1.1, 500);
       return svgWrap(w, h, s);
@@ -113,6 +139,15 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
       s += T(x0, h * 0.52 + f * 2.2, pod, 'start', BILA, f * 1.2, 600);
       return svgWrap(w, h, s);
     },
+    // chybějící údaj: přerušovaný obrys s otazníkem
+    chybi(w, h, { co, jak }) {
+      const f = fsOf(w), q = h * 0.9;
+      let s = `<rect x="${f * 0.1}" y="${f * 0.1}" width="${w - f * 0.2}" height="${h - f * 0.2}" rx="${f * 1.2}" fill="${BILA}" fill-opacity=".05" stroke="${BILA}" stroke-opacity=".7" stroke-width="${f * 0.13}" stroke-dasharray="${f * 0.9} ${f * 0.6}"/>`;
+      s += `<text x="${(w - f * 2.2).toFixed(1)}" y="${(h * 0.5 + q * 0.34).toFixed(1)}" text-anchor="end" font-family="IBM Plex Serif, Georgia, serif" font-weight="700" font-size="${q.toFixed(1)}" fill="${CORAL}">?</text>`;
+      s += T(f * 2, h * 0.42, co, 'start', BILA, Math.min(f * 2.6, (w * 0.6) / (co.length * 0.52)), 700);
+      s += T(f * 2, h * 0.42 + f * 3.2, jak, 'start', ZLU, f * 1.9, 700);
+      return svgWrap(w, h, s);
+    },
     // diagnóza → platba
     diagnoza(w, h, { text }) {
       const f = fsOf(w), k = Math.min(h * 0.62, w * 0.24), cy = h * 0.4, x1 = w * 0.2, x2 = w * 0.8;
@@ -134,13 +169,13 @@ module.exports = ({ T, C, svgWrap, fsOf, CH, NAVY, BILA, ZLU, CORAL }) => {
     '04-sestry-a-skupinove-praxe': { motiv: 'rady2', arg: { jednotka: 'sestry na 1 000 obyvatel', radky: [{ nazev: 'Norsko', ikona: 'sestra', skupiny: [[16, CH]], pozn: '16' }, { nazev: 'Česko', ikona: 'sestra', skupiny: [[9, ZLU], [7, CH, true]], pozn: '9', zv: true }] } },
     '07-zubari': { motiv: 'zub', arg: { cislo: 'skoro 7 000', popis: ['zubních lékařů,', 'zhruba jako před pěti lety'] } },
     '09-nemocnice': { motiv: 'rady2', arg: { jednotka: 'nemocniční lůžka na 1 000 obyvatel', radky: [{ nazev: 'Česko', ikona: 'postel', skupiny: [[6, ZLU]], pozn: '6', zv: true }, { nazev: 'vyspělé země', ikona: 'postel', skupiny: [[4, CH]], pozn: '4' }] } },
-    '10-kdo-se-postara': { motiv: 'rady2', arg: { jednotka: 'ze sta korun na zdraví jde na péči o seniory', radky: [{ nazev: 'Evropa (průměr EU)', ikona: 'mince', skupiny: [[18, CH]], pozn: '18 Kč' }, { nazev: 'Česko', ikona: 'mince', skupiny: [[13, ZLU], [5, CH, true]], pozn: '13 Kč', zv: true }] } },
+    '10-kdo-se-postara': { motiv: 'radyVRadku', arg: { jednotka: 'pracovníci v péči o seniory na 100 seniorů', radky: [{ nazev: '', vlajka: 'cz', ikona: 'sestra', skupiny: [[2, ZLU]], pozn: [['2', ZLU]] }, { nazev: 'průměr', ikona: 'sestra', skupiny: [[5, CH]], pozn: [['5', BILA]] }, { nazev: '', vlajka: 'no', ikona: 'sestra', skupiny: [[13, CH]], pozn: [['13', BILA]] }] } },
     '11-kdo-vlastni-peci': { motiv: 'mrizka', arg: { ikona: 'dum', sloupce: 5, skupiny: [[25, ZLU]], bok: [['455 000', 3.4, ZLU], ['lidí je kapacita domovů,', 1.25, BILA, 600], ['které spravuje', 1.25, BILA, 600], ['25 největších korporací', 1.25, BILA, 600]] } },
     '12-treti-navrat-vojtecha': { motiv: 'platba', arg: { kdo: [['clovek', 'děti'], ['senior', 'senioři'], ['student', 'studenti']], puvodni: '21', nove: '13', pod: 'miliard navíc pro rok 2027' } },
-    '13-cekaci-doby': { motiv: 'dveCisla', arg: { sloupce: [{ n: '12', jmeno: 'průměr EU', b: CH }, { n: '2', jmeno: 'Česko', b: ZLU }], pod: 'z tisíce lidí' } },
+    '13-cekaci-doby': { motiv: 'chybi', arg: { co: 'Jak dlouho se čeká', jak: 'to se plošně neměří' } },
     '14-kolik-stoji-kdo-plati': { motiv: 'podil', arg: { cislo: '14 Kč', cast: 14, legenda: [[ZLU, 'platíme sami'], [CH, 'hradí veřejné peníze']] } },
     '15-sousede-stredni-evropa': { motiv: 'rady2', arg: { jednotka: 'každá mince je 1 koruna na zdraví na člověka (Česko = 10)', radky: [{ nazev: 'Česko', ikona: 'mince', skupiny: [[10, CH]], pozn: '10' }, { nazev: 'Rakousko', ikona: 'mince', skupiny: [[10, CH], [7, ZLU]], pozn: '17', zv: true }] } },
-    'svet-japonsko-stari': { motiv: 'rady2', arg: { jednotka: 'z každých deseti lidí jsou žlutí starší 65 let', radky: [{ nazev: 'Japonsko dnes', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '', zv: true }, { nazev: 'Česko kolem roku 2050', ikona: 'senior', skupiny: [[3, ZLU], [7, CH, false, 'clovek']], pozn: '' }] } },
+    'svet-japonsko-stari': { motiv: 'radyVRadku', arg: { jednotka: 'podíly lidí starších 65 let', radky: [{ nazev: '2026', vlajka: 'cz', ikona: 'senior', skupiny: [[2, ZLU], [8, CH]], pozn: [['2', ZLU], ['/', BILA], ['10', CH]] }, { nazev: '2050', vlajka: 'cz', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: [['3', ZLU], ['/', BILA], ['10', CH]] }, { nazev: '2026', vlajka: 'jp', ikona: 'senior', skupiny: [[3, ZLU], [7, CH]], pozn: [['3', ZLU], ['/', BILA], ['10', CH]], zv: true }] } },
     'svet-jizni-korea-lekari': { motiv: 'rady2', arg: { jednotka: 'symbol = 1 z 10 v Česku; plné jsou ty, které má Jižní Korea', radky: [{ nazev: 'Lékaři na obyvatele', ikona: 'lekar', skupiny: [[6, ZLU], [4, CH, true]], pozn: 'o 40 % méně', zv: true }, { nazev: 'Předčasná úmrtí', ikona: 'svicka', skupiny: [[5, ZLU], [5, CH, true]], pozn: 'o polovinu méně', zv: true }] } },
     'explainer-drg': { motiv: 'diagnoza', arg: {} },
   };

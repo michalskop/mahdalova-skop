@@ -100,3 +100,13 @@
 /clanek/volby-cr-2026-10-23-referenda-vetrne-elektrarny /clanek/analyza-2026-10-23-referenda-vetrne-elektrarny 301
 /clanek/volby-cr-2026-10-23-referenda-vetrne-elektrarny/ /clanek/analyza-2026-10-23-referenda-vetrne-elektrarny 301
 /clanek/_articles/volby-cr-2026-10-23-referenda-vetrne-elektrarny/* /clanek/_articles/analyza-2026-10-23-referenda-vetrne-elektrarny/:splat 301
+
+# Koalice ve velkých městech: datum vráceno na 26. 10. (2026-11-02)
+/clanek/volby-cr-2026-11-02-koalice-velka-mesta  /clanek/volby-cr-2026-10-26-koalice-velka-mesta  301
+/clanek/volby-cr-2026-11-02-koalice-velka-mesta/ /clanek/volby-cr-2026-10-26-koalice-velka-mesta 301
+/clanek/_articles/volby-cr-2026-11-02-koalice-velka-mesta/* /clanek/_articles/volby-cr-2026-10-26-koalice-velka-mesta/:splat 301
+
+# Ženy a preferenční hlasy: datum změněno v hubu na 26. 10. (2026-11-03); stará URL byla živá od 2. 11.
+/clanek/volby-cr-2026-11-02-zeny-preferencni-hlasy /clanek/volby-cr-2026-10-26-zeny-preferencni-hlasy 301
+/clanek/volby-cr-2026-11-02-zeny-preferencni-hlasy/ /clanek/volby-cr-2026-10-26-zeny-preferencni-hlasy 301
+/clanek/_articles/volby-cr-2026-11-02-zeny-preferencni-hlasy/* /clanek/_articles/volby-cr-2026-10-26-zeny-preferencni-hlasy/:splat 301

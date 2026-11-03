@@ -6,6 +6,15 @@
 # Inspect only newly added files (--diff-filter=A) for backwards compatibility
 STAGED_MEDIA=$(git diff --cached --name-only --diff-filter=A | grep -iE '\.(png|jpe?g|webp|gif|mp4|webm|mov|tiff|svg)$')
 
+# During a merge, skip files taken byte-for-byte from the merged branch: they were already committed there
+# (and checked by that commit's hook), so they are not new in this commit. Any change to them is still caught.
+MERGE_HEAD_FILE="$(git rev-parse --git-path MERGE_HEAD)"
+if [ -n "$STAGED_MEDIA" ] && [ -f "$MERGE_HEAD_FILE" ]; then
+    STAGED_MEDIA=$(echo "$STAGED_MEDIA" | while IFS= read -r f; do
+        [ "$(git rev-parse ":$f")" = "$(git rev-parse "MERGE_HEAD:$f" 2>/dev/null)" ] || echo "$f"
+    done)
+fi
+
 if [ -n "$STAGED_MEDIA" ]; then
     echo ""
     echo "====================================================================="
@@ -35,5 +44,7 @@ if [ -n "$STAGED_MEDIA" ]; then
 fi
 
 # With core.hooksPath=.githooks the article hooks in scripts/git-hooks/ would never run, and on 1 Nov 2026
-# broken frontmatter in 18 articles got committed unchecked. Always chain the article checks.
-exec "$(git rev-parse --show-toplevel)/scripts/git-hooks/pre-commit" "$@"
+# broken frontmatter in 18 articles got committed unchecked. Chain them; scripts/git-hooks/pre-commit calls
+# this file back for the binary check, so the variable stops the loop.
+[ -n "$DATATIMES_HOOK_CHAINED" ] && exit 0
+DATATIMES_HOOK_CHAINED=1 exec sh "$(git rev-parse --show-toplevel)/scripts/git-hooks/pre-commit" "$@"

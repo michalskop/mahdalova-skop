@@ -11,9 +11,14 @@ const ARTICLE_RE = /^apps\/[^/]+\/app\/(clanek|a)\/_articles\/[^/]+\/index\.md$/
 
 const git = (...args) => execFileSync('git', args, { encoding: 'utf8' });
 const root = git('rev-parse', '--show-toplevel').trim();
+// During a merge, articles taken unchanged from the merged branch are not new here; stamping them would
+// rewrite their sort time to the merge time.
+const mergeHead = fs.existsSync(path.resolve(git('rev-parse', '--git-path', 'MERGE_HEAD').trim()));
+const blob = (spec) => { try { return git('rev-parse', spec).trim(); } catch { return null; } };
 const added = git('diff', '--cached', '--name-only', '--diff-filter=A', '-z')
   .split('\0')
-  .filter((f) => ARTICLE_RE.test(f));
+  .filter((f) => ARTICLE_RE.test(f))
+  .filter((f) => !mergeHead || blob(`:${f}`) !== blob(`MERGE_HEAD:${f}`));
 
 if (added.length === 0) process.exit(0);
 

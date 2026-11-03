@@ -78,7 +78,10 @@ python scripts/upload_media.py \
 ### Features:
 1. **Collision Refusal (`--no-clobber`):** Exits with an error if the remote file already exists, protecting browser caches.
 2. **Auto Cache Headers:** Sends `Cache-Control: public, max-age=31536000, immutable`.
-3. **Machine-Readable JSON Output:** AI agents parse the returned JSON to extract the public URL automatically:
+3. **Explicit Content-Type map:** `.webp`, `.avif`, `.svg`, `.png`, `.jpg/.jpeg`, `.gif`, `.mp4`, `.webm`, `.mov`, `.pdf` get their type from a fixed table in the script; only other extensions fall back to Python's `mimetypes`. (On Windows `mimetypes` reads the registry, which usually lacks `.webp` – before 2026-11-01 WebP uploaded from Windows was served as `application/octet-stream`.)
+4. **Target validation:** `--target` must be a relative bucket key ending in a file name. Empty targets, a leading `/` or `\`, anything containing `:` (drive letters, URLs) and empty/`.`/`..` segments are refused with exit code 1 – never silently "fixed". In Git Bash an argument starting with `/` is rewritten to a Windows path (`/cover-og.jpg` → `C:/Program Files/Git/cover-og.jpg`); the script now rejects that instead of uploading under that key.
+5. **Machine-Readable JSON Output:** AI agents parse the returned JSON to extract the public URL automatically. `content_type` is what was sent; `verified_at_edge` / `edge_content_type` come from a GET request to the CDN after the upload (`verified_at_edge` is true only for HTTP 200, the expected Content-Type and the same SHA-1 as the uploaded file). An extension missing from the table is refused instead of being uploaded as `application/octet-stream`.
+   Read the URL with a JSON parser (`json.loads(out)["url"]`) or use `--url-only`, which prints just the URL. **Never cut the URL out of the JSON text** (grep/sed/split on a line): on 2026-11-01 this left `coverImage: "https://…/cover.webp","` in 18 articles.
    ```json
    {
      "status": "success",
@@ -86,21 +89,18 @@ python scripts/upload_media.py \
      "key": "datatimes-cz/articles/2026/10/slug/chart.webp",
      "bytes": 48210,
      "content_type": "image/webp",
-     "verified_at_edge": true
+     "verified_at_edge": true,
+     "edge_content_type": "image/webp"
    }
    ```
-   Read the URL with a JSON parser (`json.loads(out)["url"]`) or use `--url-only`, which prints just the URL.
-   **Never cut the URL out of the JSON text** (grep/sed/split on a line): on 1 Nov 2026 this left
-   `coverImage: "https://…/cover.webp","` in 18 articles.
-4. **Correct Content-Type on every OS:** `.webp`, `.avif` and `.svg` are registered explicitly (Python on Windows
-   does not know them and used to upload WebP as `application/octet-stream`). An unknown extension is refused.
-5. **Edge verification:** after uploading, the script GETs the public URL and checks HTTP 200, the Content-Type
-   and the SHA-1 of the bytes (`verified_at_edge`).
+   Test uploads go under `datatimes-cz/site/test/<name>-YYYY-MM-DD.<ext>` (never reuse a key).
 
 ### Fixing an object that is already published
 
 Never overwrite it. Upload the corrected (or identical, re-typed) file under a versioned name such as
-`cover-v2.webp`, verify the public URL, then update every reference in the same commit.
+`cover-v2.webp`, verify the public URL with a GET (HTTP 200, image Content-Type, the image decodes), then update
+every reference in the same commit. On 2026-11-03 the 49 WebP files served as `application/octet-stream`
+were fixed this way.
 
 ---
 
@@ -130,14 +130,25 @@ B2_APPLICATION_KEY="YOUR_APP_KEY"
 
 ---
 
-## 6. Pre-Commit Guardrail (`.githooks/pre-commit`)
+## 6. Pre-Commit Guardrail (`.githooks/pre-commit`, also run by `scripts/git-hooks/pre-commit`)
 
-A Git pre-commit hook is committed in `.githooks/pre-commit`.
-* **Activation:** `git config core.hooksPath .githooks` (runs automatically on `npm install`).
-* **Behavior:** Inspects only **newly added** files (`--diff-filter=A`). If a new binary image/video is staged, the commit is rejected with instructions.
+The check lives in `.githooks/pre-commit`. The repo has two hook directories and a machine uses one of them via `core.hooksPath`; the binary check runs in **both**:
+
+| `core.hooksPath` | pre-commit runs | pre-push runs |
+|---|---|---|
+| `scripts/git-hooks` (recommended) | binary check (calls `.githooks/pre-commit`) → hidden publish `time` → `checkArticles.js --staged` | `git lfs pre-push` (web animations in Git LFS) |
+| `.githooks` | binary check, then `scripts/git-hooks/pre-commit` (same as above) | `scripts/git-hooks/pre-push` |
+
+`checkArticles.js --staged` also parses the frontmatter of staged articles on **both** sites (any date) and rejects
+image fields with stray quotes/commas or a malformed CDN URL. `DATATIMES_HOOK_CHAINED` stops the two pre-commit
+hooks from calling each other in a loop.
+
+* **Merges:** while `MERGE_HEAD` exists, files taken byte-for-byte from the merged branch are skipped by the binary
+  check and by the publish-`time` hook (they were committed and checked there; stamping them would change their
+  sort time). A file changed during the merge, or a binary that is not on the merged branch, is still blocked.
+
+* **Activation (once per computer):** `git config core.hooksPath scripts/git-hooks`. Nothing sets it automatically on `npm install` (there is no `prepare` script). Check with `git config --show-origin --get-all core.hooksPath` – Claude worktrees may carry their own copy in `.git/worktrees/<name>/config.worktree`.
+* **Behavior:** Inspects only **newly added** files (`--diff-filter=A`). If a new image/video (`png, jpg/jpeg, webp, gif, mp4, webm, mov, tiff, svg`) is staged, the commit is rejected with instructions.
 * **Backwards Compatibility:** Modifying existing text in older articles that reference legacy files in `public/` is never blocked.
-* **Article checks are chained:** `.githooks/pre-commit` then runs `scripts/git-hooks/pre-commit` (publish time +
-  `apps/web/scripts/checkArticles.js --staged`, which parses the frontmatter of staged articles on both sites and
-  rejects image fields with stray quotes/commas or a malformed CDN URL). `.githooks/pre-push` runs the Git LFS
-  pre-push hook. Whichever hooks path a machine uses, all checks run.
-* **Emergency Bypass:** `git commit --no-verify` (for rare exceptions like essential favicon updates).
+* **Emergency Bypass:** with `scripts/git-hooks` use `ALLOW_MEDIA_COMMIT=1 git commit …` – it skips only the binary check, the article checks still run. `git commit --no-verify` skips every hook (including `checkArticles`), so use it only with `.githooks`, for rare exceptions like essential favicon updates.
+* Keep one copy of the rule: change extensions or messages in `.githooks/pre-commit`; `scripts/git-hooks/pre-commit` only calls it.

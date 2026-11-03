@@ -342,12 +342,16 @@ Ptáme se vždy na tři věci:
 
 **Změna URL publikovaného článku** = vždy 301 přesměrování ze staré URL v `apps/web/public/_redirects` (i s variantou se `/` a s `/clanek/_articles/<slug>/*` pro obrázky), oprava všech interních odkazů a `RelatedArticles`, přegenerování `sitemap.xml` a `llms.txt`. Starou URL, která už byla sdílená, nerušíme – jen přesměrováváme.
 
+**Změna data = změna URL.** Datum ve slugu musí sedět s `date`, jinak `checkArticles` zastaví build a na Cloudflare se nenasadí nic, ani ostatní změny z `main`. Hub to zatím nehlídá: když v něm změníš datum, commit projde do `main`, ale web zůstane na starém stavu, dokud se složka nepřejmenuje (s 301 jako výše). *(3. 11. 2026, ženy a preferenční hlasy: datum 26. 10. z hubu se nepropsalo.)*
+
 *Pravidlo platí od 2026-09-23 (po chybném přejmenování Steigerova profilu na slug bez rubriky a data). Vlastník: Kateřina Mahdalová.*
 
 ## Skrytý čas publikace (`time`)
 Vedle `date` nese frontmatter nepovinné pole `time: "HH:MM"` (pražský čas). **Nikde se nezobrazuje** – ani v článku, ani v JSON-LD, RSS, sitemapě či llms.txt; slouží jen k řazení článků ze stejného dne a k automatickému pořadí pásů na homepage: z červených **Voleb** a modrého **Výběru** jde hned pod Speciály ten, jehož nejnovější článek je aktuálnější, druhý pod newsletter (při stejném dni rozhoduje `time`, pokud ho mají oba; remíza = Volby nahoře).
 
 Čas **doplňuje automaticky git hook** při prvním commitu nového `index.md` (`scripts/git-hooks/`); ručně ho píšeme jen u článku commitnutého dopředu a zveřejněného později. Existující `time` hook nepřepisuje, články s budoucím datem přeskakuje. Instalace na novém počítači (jednou): `git config core.hooksPath scripts/git-hooks`.
+
+**Budoucí čas = článek živý jen na své URL, výpisy až od toho času.** Má-li článek dnešní `date` a `time` později než okamžik buildu, je po nasazení dostupný na své adrese (třeba ke kontrole), ale homepage, rubriky, štítky, RSS a boxy souvisejících článků ho vynechají. Do výpisů se dostane s prvním buildem po tom pražském čase, tedy až někdo po něm pushne do `main` (Cloudflare nestaví sám). Takhle se dá článek nasadit ke kontrole dopředu bez zdvojené URL s jiným datem. Mapa webu (`sitemap.xml`) a `llms.txt` čas ani datum nefiltrují. Hlídá to `packages/ui/src/lib/getArticles.ts` (`pragueWallToUtc`). *(3. 11. 2026, článek o poplatcích ČT a ČRo ke stávce: Michal ho schvaluje na živé URL, ve výpisech od 14:00.)*
 
 **Budoucí datum = článek mimo homepage až do dalšího buildu.** `getArticles` vyřazuje články s `date` v budoucnosti z homepage a výpisů podle data sestavení webu. Stránka na URL po pushi funguje hned, do výpisů se ale dostane až s prvním buildem v den data (tedy až někdo ten den pushne). Když má článek vyjít hned, dát mu dnešní datum; když budoucí, pushnout ho až v ten den. *(25. 10. 2026, článek o poruchách příjmu potravy.)*
 

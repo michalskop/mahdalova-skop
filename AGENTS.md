@@ -22,7 +22,7 @@
 ## Media storage & CDN (media.datatimes.org) - hard rule
 
 - **NEVER commit new binary media (PNG, JPEG, WebP, SVG, MP4) to Git.**
-- Staged binary media is automatically blocked by the `.githooks/pre-commit` hook.
+- Staged binary media is automatically blocked by the `.githooks/pre-commit` hook (also called from `scripts/git-hooks/pre-commit`).
 - When generating or adding visuals, charts, covers, or logos:
   1. Generate/export the image locally into a temporary or working directory (e.g. `work/` or the article's `_cover_pipeline/`).
   2. Upload to the CDN via the CLI script:

@@ -18,7 +18,7 @@ Komunální volby se rozhodují v obcích, ale rozdíly začínají už v jednot
 
 <SupportBanner float="left" />
 
-**Najděte svou obec:** do řádku nad mapou napište název obce nebo městské části. Když na okrsek najedete myší nebo na něj na mobilu klepnete, ukáže se vedle mapy jeho výsledek, účast a u každé kandidátky i to, kdo ji podává – strana, koalice, nebo sdružení nezávislých kandidátů. Každá mapa v článku umí ukázat kteroukoli obec, stačí v ní vyhledat jiný název.
+**Najděte svou obec:** do řádku nad mapou napište název obce nebo městské části. Když na okrsek najedete myší nebo na něj na mobilu klepnete, ukáže se vedle mapy (na mobilu pod ní) jeho výsledek, účast a u každé kandidátky i to, kdo ji podává – strana, koalice, nebo sdružení nezávislých kandidátů. Každá mapa v článku umí ukázat kteroukoli obec, stačí v ní vyhledat jiný název.
 
 ## Ústí nad Labem: Jedno Ústí s nadpoloviční většinou hlasů
 
@@ -105,5 +105,7 @@ V Olomouci zůstalo ANO první s 25,9 % (v roce 2022 mělo 31,8 %) a vyhrálo ve
 Každý volič v komunálních volbách rozděluje tolik hlasů, kolik má zastupitelstvo členů. Podíl kandidátky v okrsku proto počítáme jako její hlasy vydělené všemi platnými hlasy v okrsku, stejně jako ČSÚ u celé obce. Kandidátky s menším počtem kandidátů, než je mandátů, mohou mít v okrscích o něco nižší čísla, ČSÚ to u rozdělení mandátů přepočítává.
 
 Barvy celostátních stran jsou stejné ve všech obcích a v koalicích dostane kandidátka barvu nejsilnější strany. Místní sdružení a nezávislí kandidáti mají tlumené barvy, které se v každé obci přidělují podle pořadí. Srovnání s rokem 2022 se týká řádných komunálních voleb 23.–24. září 2022, bez dodatečných a opakovaných voleb.
+
+Pod okrsky je podkladová mapa OpenStreetMap se silnicemi, zástavbou, lesy a vodou, aby šlo najít vlastní ulici. Okrsky okolních obcí jsou jen šedým obrysem. Mapu přiblížíte tlačítky +/−, na počítači Ctrl + kolečkem, na mobilu dvěma prsty.
 
 <RelatedArticles heading="🔻🔻🔻" />

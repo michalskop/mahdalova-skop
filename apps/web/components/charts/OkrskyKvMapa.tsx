@@ -242,7 +242,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
     const vidim = vse || !male ? r : r.filter(([, v]) => v / plh >= 0.02);
     return (
       <>
-      <div style={{ display: 'grid', gridTemplateColumns: mand ? '12px 1fr auto 2.4em' : '12px 1fr auto', gap: '5px 8px', alignItems: 'center', fontSize: 13.5, lineHeight: 1.25 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: mand ? '12px 1fr auto 3.4em' : '12px 1fr auto', gap: '5px 8px', alignItems: 'center', fontSize: 13.5, lineHeight: 1.25 }}>
         {vidim.map(([i, v], k) => (
           <div key={i} style={{ display: 'contents' }}>
             <span style={{ width: 12, height: 12, background: L[i]?.c ?? NODATA, borderRadius: 2, border: '1px solid rgba(16,20,50,.25)' }} />
@@ -260,7 +260,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
       {male > 0 && (
         <button type="button" onClick={() => setVse((x) => !x)}
           style={{ marginTop: 8, padding: 0, border: 0, background: 'none', color: MUTED, fontFamily: FONT, fontSize: 13, textDecoration: 'underline', cursor: 'pointer' }}>
-          {vse ? 'Skrýt kandidátky pod 2 %' : `Zobrazit další (${male}) pod 2 %`}
+          {vse ? 'Skrýt kandidátky pod 2 %' : `Zobrazit další kandidátky pod 2 % (${male})`}
         </button>
       )}
       </>
@@ -287,7 +287,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
           <div style={{ color: MUTED, fontSize: 13, margin: '2px 0 10px' }}>
             {num(nOkr)} {pl(nOkr, 'okrsek', 'okrsky', 'okrsků')} · účast {pct(res.obal / Math.max(1, res.vol))}
           </div>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, fontSize: 11.5, color: MUTED, marginBottom: 2 }}><span>hlasy</span><span style={{ width: '2.4em', textAlign: 'right' }}>mand.</span></div>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10, fontSize: 11.5, color: MUTED, marginBottom: 2 }}><span>hlasy</span><span style={{ width: '4.4em', textAlign: 'right' }}>mandáty</span></div>
           <Rows r={res.order.map((i) => [i, res.tot.get(i)!] as [number, number])} mand />
           <div style={{ color: MUTED, fontSize: 12, marginTop: 10 }}>
             {side ? 'Najeďte myší na okrsek, kliknutím ho připnete.' : 'Klepněte na okrsek a uvidíte jeho výsledek.'}
@@ -306,7 +306,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
         <div ref={wrapRef} style={{ fontFamily: FONT, color: INK }}>
           {title && <div className="dpbp-chart-title" style={{ fontWeight: 700, lineHeight: 1.2, color: '#1a1a1a', marginBottom: 6 }}>{renderTitle(title.replace('{obec}', sel?.n ?? ''))}</div>}
           <div className="dpbp-chart-subtitle" style={{ lineHeight: 1.3, color: '#333333', marginBottom: 12 }}>
-            {subtitle ? renderSubtitle(subtitle) : `Komunální volby 2026, ${zastLabel}.`}
+            {subtitle ? renderSubtitle(subtitle) : `Komunální volby 2026, ${zastLabel}. Barva okrsku patří kandidátce, která v něm dostala nejvíc hlasů.`}
           </div>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 12px', marginBottom: 10 }}>
@@ -349,6 +349,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
           {/* legenda: kandidátky, které vyhrály aspoň jeden okrsek, s podílem hlasů v celé obci */}
           {res && legend.length > 0 && (
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 16px', fontSize: 13.5, marginBottom: 10 }}>
+              <span style={{ color: MUTED }}>Vítěz okrsku (podíl hlasů v celé obci):</span>
               {legend.map((i) => (
                 <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, maxWidth: '100%' }}>
                   <span style={{ flex: 'none', width: 13, height: 13, background: L[i]?.c, borderRadius: 2, border: '1px solid rgba(16,20,50,.25)' }} />
@@ -356,6 +357,19 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
                   <span style={{ color: MUTED, fontVariantNumeric: 'tabular-nums' }}>{pct(res.tot.get(i)! / Math.max(1, res.plhl))}</span>
                 </span>
               ))}
+              {/* šedé položky, aby čtenář nehádal: okolní obce a okrsky bez výsledků (jen když v obci jsou) */}
+              {feats && feats.rest.length > 0 && (
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: MUTED }}>
+                  <span style={{ flex: 'none', width: 13, height: 13, background: CONTEXT, borderRadius: 2, border: `1px solid ${MUTED}` }} />
+                  okolní obce
+                </span>
+              )}
+              {feats && feats.mine.some((f) => res.rows.get(f.properties.id)?.[4][0] == null) && (
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: MUTED }}>
+                  <span style={{ flex: 'none', width: 13, height: 13, background: NODATA, borderRadius: 2, border: '1px solid rgba(16,20,50,.25)' }} />
+                  bez výsledků
+                </span>
+              )}
             </div>
           )}
 
@@ -409,7 +423,7 @@ export default function OkrskyKvMapa({ dataUrl = '/data/kv2026-okrsky', defaultO
               )}
               {geo && res && (
                 <div style={{ fontSize: 12, color: MUTED, marginTop: 6 }}>
-                  {num(nOkr)} {pl(nOkr, 'okrsek', 'okrsky', 'okrsků')} · účast {pct(res.obal / Math.max(1, res.vol))} · přiblížíte Ctrl + kolečkem, dvěma prsty nebo tlačítky
+                  {num(nOkr)} {pl(nOkr, 'okrsek', 'okrsky', 'okrsků')} · účast {pct(res.obal / Math.max(1, res.vol))} · Přiblížení: Ctrl + kolečko, dva prsty nebo tlačítka + a −
                   <span style={{ display: 'block', marginTop: 2 }}>
                     <OsmAttribution color={MUTED} />
                   </span>

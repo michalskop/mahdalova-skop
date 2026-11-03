@@ -1,6 +1,18 @@
 #!/bin/sh
-# Doplní skrytý čas publikace (frontmatter `time`) do nově přidaných článků.
 # Instalace (jednou na počítač): git config core.hooksPath scripts/git-hooks
-node "$(git rev-parse --show-toplevel)/scripts/git-hooks/add-publish-time.mjs" || exit 1
+ROOT="$(git rev-parse --show-toplevel)"
+# Obrázky a videa nepatří do gitu, ale na CDN media.datatimes.org (docs/technicke/media-cdn.md).
+# Kontrolu nově přidaných souborů drží .githooks/pre-commit (platí i pro core.hooksPath .githooks);
+# tady ji jen voláme, aby běžela v obou nastaveních. Výjimka bez vypnutí ostatních kontrol:
+# ALLOW_MEDIA_COMMIT=1 git commit …  (--no-verify by přeskočil i kontrolu článků).
+if [ -z "$ALLOW_MEDIA_COMMIT" ]; then
+    sh "$ROOT/.githooks/pre-commit" || {
+        echo "Tady (core.hooksPath scripts/git-hooks) místo --no-verify použij ALLOW_MEDIA_COMMIT=1 git commit …,"
+        echo "ať dál běží čas publikace a kontrola článků."
+        exit 1
+    }
+fi
+# Doplní skrytý čas publikace (frontmatter `time`) do nově přidaných článků.
+node "$ROOT/scripts/git-hooks/add-publish-time.mjs" || exit 1
 # Kontrola nových článků podle redakčního manuálu (apps/web/scripts/checkArticles.js).
-node "$(git rev-parse --show-toplevel)/apps/web/scripts/checkArticles.js" --staged || exit 1
+node "$ROOT/apps/web/scripts/checkArticles.js" --staged || exit 1

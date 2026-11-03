@@ -1,0 +1,242 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Ženy na mateřské dostávají méně hlasů hlavně ve vesnicích a malých městech",
+    "subtitle": "O kolik procent víc, nebo méně hlasů dostala typická kandidátka než kandidáti na stejném místě stejně dlouhé kandidátky ve stejně velkých obcích. Obce podle počtu obyvatel, v každé skupině žije zhruba pětina obyvatel Česka. Obecní volby 2026."
+  },
+  "width": 600,
+  "height": {
+    "step": 30
+  },
+  "data": {
+    "values": [
+      {
+        "velikost": "do 1 000",
+        "skupina": "ženy na mateřské, rodičovské a v domácnosti",
+        "bonus": -14.1,
+        "popisek": "−14 %",
+        "kandidatu": 812
+      },
+      {
+        "velikost": "do 1 000",
+        "skupina": "ostatní ženy ve věku 25–44 let",
+        "bonus": -3.9,
+        "popisek": "−4 %",
+        "kandidatu": 8864
+      },
+      {
+        "velikost": "1 000–4 000",
+        "skupina": "ženy na mateřské, rodičovské a v domácnosti",
+        "bonus": -11.9,
+        "popisek": "−12 %",
+        "kandidatu": 376
+      },
+      {
+        "velikost": "1 000–4 000",
+        "skupina": "ostatní ženy ve věku 25–44 let",
+        "bonus": -1.4,
+        "popisek": "−1 %",
+        "kandidatu": 6667
+      },
+      {
+        "velikost": "4 000–20 000",
+        "skupina": "ženy na mateřské, rodičovské a v domácnosti",
+        "bonus": -6.6,
+        "popisek": "−7 %",
+        "kandidatu": 220
+      },
+      {
+        "velikost": "4 000–20 000",
+        "skupina": "ostatní ženy ve věku 25–44 let",
+        "bonus": 0.4,
+        "popisek": "0 %",
+        "kandidatu": 4301
+      },
+      {
+        "velikost": "20 000–100 000",
+        "skupina": "ženy na mateřské, rodičovské a v domácnosti",
+        "bonus": 0.6,
+        "popisek": "+1 %",
+        "kandidatu": 116
+      },
+      {
+        "velikost": "20 000–100 000",
+        "skupina": "ostatní ženy ve věku 25–44 let",
+        "bonus": 2.4,
+        "popisek": "+2 %",
+        "kandidatu": 2367
+      },
+      {
+        "velikost": "nad 100 000",
+        "skupina": "ženy na mateřské, rodičovské a v domácnosti",
+        "bonus": 1.9,
+        "popisek": "+2 %",
+        "kandidatu": 32
+      },
+      {
+        "velikost": "nad 100 000",
+        "skupina": "ostatní ženy ve věku 25–44 let",
+        "bonus": 2.6,
+        "popisek": "+3 %",
+        "kandidatu": 624
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "velikost",
+      "type": "nominal",
+      "sort": [
+        "do 1 000",
+        "1 000–4 000",
+        "4 000–20 000",
+        "20 000–100 000",
+        "nad 100 000"
+      ],
+      "axis": {
+        "title": "obyvatel obce",
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12,
+        "labelPadding": 8
+      }
+    },
+    "yOffset": {
+      "field": "skupina",
+      "sort": [
+        "ženy na mateřské, rodičovské a v domácnosti",
+        "ostatní ženy ve věku 25–44 let"
+      ]
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadius": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -16,
+              6
+            ]
+          },
+          "axis": {
+            "title": "hlasy navíc proti kandidátům na stejném místě (%)",
+            "grid": true,
+            "gridColor": "#e8e2d6",
+            "format": "+d"
+          }
+        },
+        "color": {
+          "field": "skupina",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "ženy na mateřské, rodičovské a v domácnosti",
+              "ostatní ženy ve věku 25–44 let"
+            ],
+            "range": [
+              "#f76800",
+              "#ffc89f"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "direction": "vertical",
+            "labelFontSize": 12,
+            "labelLimit": 400
+          }
+        },
+        "tooltip": [
+          {
+            "field": "skupina",
+            "title": "Kandidátky"
+          },
+          {
+            "field": "velikost",
+            "title": "Obce"
+          },
+          {
+            "field": "popisek",
+            "title": "Hlasy navíc"
+          },
+          {
+            "field": "kandidatu",
+            "title": "Kandidátek",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.bonus >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": 4,
+        "align": "left",
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.bonus < 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dx": -4,
+        "align": "right",
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "bonus",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "_source": "ČSÚ – registry kandidátů pro volby do zastupitelstev obcí 2018, 2022 a 2026 (stav 11. 10. 2026); pohlaví odvozené z příjmení a jména; výpočet DataTimes.cz"
+}
