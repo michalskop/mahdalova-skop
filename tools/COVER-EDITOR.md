@@ -264,6 +264,14 @@ na oko zbývá motiv, sdělení a celkový dojem:
 
 **Ponaučení z oprav (zapisovat sem, ať se chyby neopakují; co platí obecně, přenést do kapitoly *Kompozice podle
 formátu*):**
+- *3. 11. 2026 – oprava převodu coverů na CDN.* (1) Adresa z `scripts/upload_media.py` se čte jen jako JSON
+  (`json.loads(...)["url"]`) nebo přes `--url-only`; vyříznutím řádku `"url": "…",` vzniklo v 18 článcích
+  `coverImage: "https://…/cover.webp","`. (2) Nepoznala to žádná pojistka: s `core.hooksPath=.githooks` neběžel
+  pre-commit s `checkArticles.js`. `.githooks/pre-commit` ho teď spouští vždy a `checkArticles.js` čte frontmatter
+  obou webů bez ohledu na datum. (3) WebP nahraný z Windows měl typ `application/octet-stream` (49 souborů);
+  uploader typ teď nastavuje sám a po nahrání ho ověří přes GET. Publikované soubory se nepřepisují: opravené
+  kopie jsou pod názvem `-v2` a odkazy vedou na ně. (4) Každou adresu CDN ověřit přes GET: 200, obrazový
+  Content-Type a dekódovatelný obrázek; samotný HEAD nestačí.
 - *1. 11. 2026 – první covery na CDN (osadníci na Západním břehu).* Covery se do gitu necommitují
   (`docs/technicke/media-cdn.md`): generátor je vyrobí do `images/` u článku, `.gitignore` článku tu složku
   i vykreslené motivy (`_cover_pipeline/*.svg`, `*.png`) vynechá, pět souborů se nahraje

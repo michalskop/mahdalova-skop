@@ -6,10 +6,10 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "In the 14 cities and 8 Senate districts with counted results, between 38% and 76% of people who voted for ANO last year did not vote (median 54%). Among SPOLU voters, no more than 20% stayed away in 20 of the 22 places (median 7%). The estimates are based on polling-district results and two independent methods."
 coverTitulek: "Who stayed at home"
 coverPodtitulek: "About half of last year’s ANO voters did not turn out, of SPOLU voters 7%"
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-12-who-stayed-home/cover.webp"
-homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-12-who-stayed-home/cover.webp"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-12-who-stayed-home/cover-v2.webp"
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-12-who-stayed-home/cover-v2.webp"
 ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-12-who-stayed-home/cover-og.jpg"
-squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-12-who-stayed-home/cover-square.webp"
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-12-who-stayed-home/cover-square-v2.webp"
 filter: ["work"]
 tags: ["elections", "elections 2026", "municipal elections", "senate elections", "turnout", "ano", "spolu", "data"]
 promoted: 1

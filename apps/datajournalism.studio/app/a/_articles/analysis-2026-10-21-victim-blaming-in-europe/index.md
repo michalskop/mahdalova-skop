@@ -8,11 +8,11 @@ original: "https://www.datatimes.cz/clanek/analyza-2026-10-21-bingo-domaci-a-sex
 excerpt: "Thirty-two per cent of Czechs believe that a woman who was drunk is at least partly to blame for sexual violence, twice the European Union average. We took the statements from a bingo card circulating on social media and set them against data, research and the law."
 coverTitulek: "Czechs blame victims<br>of violence twice as often<br>as the rest of Europe"
 coverPodtitulek: "We compared common beliefs<br>with the actual data"
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover.webp"
-homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover.webp"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover-v2.webp"
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover-v2.webp"
 ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover-og.jpg"
-squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover-square.webp"
-instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover-instagram.webp"
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover-square-v2.webp"
+instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/analysis-2026-10-21-victim-blaming-in-europe/cover-instagram-v2.webp"
 filter: ["blog"]
 tags: ["sexual violence", "domestic violence", "victim blaming", "violence against women", "justice", "europe", "eurobarometer"]
 promoted: 1

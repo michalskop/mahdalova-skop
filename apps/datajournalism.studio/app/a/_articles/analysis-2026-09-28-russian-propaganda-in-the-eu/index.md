@@ -6,8 +6,8 @@ author: "Kateřina Mahdalová"
 excerpt: "Where society is least resilient to disinformation according to the Media Literacy Index 2026, people hold the most favourable view of Russia according to Eurobarometer. Two thirds of Czechs support sanctions against Russia, but fewer than a third support weapons for Ukraine. In Slovakia, roughly half of people adopt the Kremlin's account of the war, yet only a fifth to a quarter want to leave the European Union and NATO."
 coverTitulek: "Where Russian<br>propaganda works"
 coverPodtitulek: "Two thirds of Czechs back <span style='color:#33b9d9;font-weight:600'>sanctions</span>,<br>fewer than a third <span style='color:#c49ad8;font-weight:600'>weapons for Ukraine</span>"
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/analysis-2026-09-28-russian-propaganda-in-the-eu/cover.webp"
-homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/analysis-2026-09-28-russian-propaganda-in-the-eu/cover.webp"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/analysis-2026-09-28-russian-propaganda-in-the-eu/cover-v2.webp"
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/analysis-2026-09-28-russian-propaganda-in-the-eu/cover-v2.webp"
 ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/analysis-2026-09-28-russian-propaganda-in-the-eu/cover-og.jpg"
 filter: ["blog"]
 promoted: 1

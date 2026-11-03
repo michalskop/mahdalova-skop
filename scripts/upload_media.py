@@ -22,6 +22,11 @@ from pathlib import Path
 
 PUBLIC_CDN_BASE = os.getenv("MEDIA_CDN_BASE", "https://media.datatimes.org")
 
+# Python on Windows does not know these extensions, so .webp used to be uploaded as
+# application/octet-stream. Register them explicitly for identical results on every OS.
+for _mime, _ext in (("image/webp", ".webp"), ("image/avif", ".avif"), ("image/svg+xml", ".svg")):
+    mimetypes.add_type(_mime, _ext)
+
 def load_env():
     """Cross-platform config loader from .env or ~/.datatimes-media.env"""
     paths = [
@@ -107,6 +112,11 @@ def main():
     parser.add_argument("--file", required=True, help="Local file path")
     parser.add_argument("--target", required=True, help="Target path (e.g. datatimes-cz/articles/2026/10/slug/chart.webp)")
     parser.add_argument("--overwrite-unadvisable", action="store_true", help="Bypass collision refusal (not recommended)")
+    parser.add_argument(
+        "--url-only",
+        action="store_true",
+        help="Print only the public URL (for shell scripts; never cut the URL out of the JSON by hand)",
+    )
     args = parser.parse_args()
 
     local_path = Path(args.file).resolve()
@@ -172,7 +182,10 @@ def main():
     upload_auth = upload_info["authorizationToken"]
 
     mime_type, _ = mimetypes.guess_type(target_key)
-    content_type = mime_type or "application/octet-stream"
+    if not mime_type:
+        print(f"ERROR: Unknown content type for '{target_key}'; refusing to upload as application/octet-stream.", file=sys.stderr)
+        sys.exit(1)
+    content_type = mime_type
     file_sha1 = sha1_file(local_path)
     cache_control = urllib.parse.quote("public, max-age=31536000, immutable")
 
@@ -191,19 +204,33 @@ def main():
 
     public_url = f"{PUBLIC_CDN_BASE}/{target_key}"
 
-    # 3. Post-upload verification
+    # 3. Post-upload verification: GET the public URL and compare type and bytes with the upload.
+    edge_type = None
     try:
-        req = urllib.request.Request(public_url, method="HEAD")
-        with urllib.request.urlopen(req, timeout=10) as r:
-            verified = (r.status == 200)
+        req = urllib.request.Request(public_url, headers={"User-Agent": "datatimes-upload-media"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            edge_type = r.headers.get("Content-Type", "").split(";")[0].strip()
+            body = r.read()
+            verified = (
+                r.status == 200
+                and edge_type == content_type
+                and hashlib.sha1(body).hexdigest() == file_sha1
+            )
     except Exception:
         verified = False
+
+    if args.url_only:
+        print(public_url)
+        if not verified:
+            print(f"WARNING: public URL not verified (Content-Type at edge: {edge_type})", file=sys.stderr)
+        return
 
     result = {
         "status": "success",
         "url": public_url,
         "key": target_key,
         "bytes": local_path.stat().st_size,
+        "content_type": content_type,
         "verified_at_edge": verified
     }
     print(json.dumps(result, indent=2))

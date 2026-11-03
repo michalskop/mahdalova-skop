@@ -1,0 +1,4 @@
+#!/bin/sh
+# With core.hooksPath=.githooks, delegate to the Git LFS pre-push hook in scripts/git-hooks/ so web animations
+# (Git LFS) are uploaded before the push.
+exec "$(git rev-parse --show-toplevel)/scripts/git-hooks/pre-push" "$@"

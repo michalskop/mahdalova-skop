@@ -34,4 +34,6 @@ if [ -n "$STAGED_MEDIA" ]; then
     exit 1
 fi
 
-exit 0
+# With core.hooksPath=.githooks the article hooks in scripts/git-hooks/ would never run, and on 1 Nov 2026
+# broken frontmatter in 18 articles got committed unchecked. Always chain the article checks.
+exec "$(git rev-parse --show-toplevel)/scripts/git-hooks/pre-commit" "$@"

@@ -1,0 +1,3 @@
+# Cover exports live on the CDN media.datatimes.org, not in git (docs/technicke/media-cdn.md).
+# The generator writes them here; upload them with scripts/upload_media.py.
+images/

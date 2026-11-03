@@ -168,6 +168,41 @@ if (staged) {
   const touched = new Set(out.split('\n').map((l) => (l.match(/_articles\/([^/]+)\//) || [])[1]).filter(Boolean));
   candidates = candidates.filter((s) => touched.has(s));
 }
+
+// Frontmatter of every article on both sites (DataTimes.cz and Data Journalism Studio), whatever its date, must
+// parse, and image fields must hold a clean relative path or CDN URL. A broken header silently drops the article
+// from the site; on 1 Nov 2026 a CDN migration left `coverImage: "https://…/cover.webp","` in 18 articles.
+const djsArticlesDir = path.join(__dirname, '../../datajournalism.studio/app/a/_articles');
+const IMAGE_KEYS = ['coverImage', 'homepageImage', 'ogImage', 'squareImage', 'instagramImage', 'storyImage'];
+const CLEAN_CDN_URL = /^https:\/\/media\.datatimes\.org\/[A-Za-z0-9._~/-]+$/;
+const cleanImage = (v) => typeof v === 'string' && !/["',]\s*$|"/.test(v)
+  && (!v.includes('media.datatimes.org') || CLEAN_CDN_URL.test(v));
+const brokenFrontmatter = new Set();
+const stagedFiles = staged
+  ? require('child_process').execSync('git diff --cached --name-only --diff-filter=d', { encoding: 'utf8' }).split('\n')
+  : [];
+for (const [label, dir] of [['', articlesDir], ['datajournalism.studio: ', djsArticlesDir]]) {
+  for (const slug of fs.existsSync(dir) ? fs.readdirSync(dir) : []) {
+    const file = path.join(dir, slug, 'index.md');
+    if (!fs.existsSync(file)) continue;
+    if (staged && !stagedFiles.some((f) => f && path.join(REPO, f) === file)) continue;
+    if (args.length && !staged && !args.includes(slug)) continue;
+    let fm;
+    try {
+      fm = matter(fs.readFileSync(file, 'utf8'), { cache: false }).data;
+    } catch (e) {
+      brokenFrontmatter.add(slug);
+      err(label + slug, `frontmatter nejde načíst: ${String(e.message).split('\n')[0]}`);
+      continue;
+    }
+    for (const k of IMAGE_KEYS) {
+      if (fm[k] !== undefined && !cleanImage(fm[k])) {
+        err(label + slug, `${k} má neplatnou hodnotu ${JSON.stringify(fm[k])} (uvozovky nebo čárka navíc, nebo neplatná adresa CDN)`);
+      }
+    }
+  }
+}
+
 const slugs = args.length && !staged
   ? args
   : candidates
@@ -179,7 +214,7 @@ const slugs = args.length && !staged
         return date >= ENFORCED_FROM;
       });
 
-slugs.forEach(checkArticle);
+slugs.filter((slug) => !brokenFrontmatter.has(slug)).forEach(checkArticle);
 
 // YAML soubory, na které článek odkazuje (yamlFile="…", např. key-stats.yaml pro <KeyNumbers>), musí jít načíst –
 // rozbitý YAML shodí stránku článku („Article Not Found“). Platí pro všechny články bez ohledu na datum, protože

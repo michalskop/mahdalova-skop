@@ -6,11 +6,11 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "For the first time in the history of the Federal Republic, the CDU has failed to win seats in a state parliament. Our data prediction showed shortly after the count began that the party would stay below the five per cent threshold."
 coverTitulek: "CDU out of<br>the state<br>parliament"
 coverPodtitulek: "The DataTimes.cz model caught the debacle<br>right at the start of the count"
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover.webp"
-homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover.webp"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover-v2.webp"
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover-v2.webp"
 ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover-og.jpg"
-squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover-square.webp"
-instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover-instagram.webp"
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover-square-v2.webp"
+instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/09/elections-germany-2026-09-20-cdu-out-of-mecklenburg-parliament/cover-instagram-v2.webp"
 filter: ["work"]
 tags: ["elections", "germany", "mecklenburg-western pomerania", "cdu", "afd", "spd", "election predictions"]
 promoted: 1

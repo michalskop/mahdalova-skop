@@ -6,11 +6,11 @@ author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "The share of women on candidate lists for Czech municipal councils has been rising since 1994 and this year reached 35%. Among those elected, however, it is consistently four to five percentage points lower, and among mayors lower still. The larger the municipality and the higher the office, the fewer women."
 coverTitulek: "The higher up,<br>the fewer women"
 coverPodtitulek: "Women make up a third of municipal candidates,<br>but only a quarter of mayors"
-coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover.webp"
-homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover.webp"
+coverImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover-v2.webp"
+homepageImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover-v2.webp"
 ogImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover-og.jpg"
-squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover-square.webp"
-instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover-instagram.webp"
+squareImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover-square-v2.webp"
+instagramImage: "https://media.datatimes.org/datajournalism-studio/articles/2026/10/czech-elections-2026-10-02-women-in-town-halls/cover-instagram-v2.webp"
 filter: ["work"]
 tags: ["elections", "elections 2026", "municipal elections", "czechia", "women", "women in politics", "municipalities", "mayors", "data"]
 promoted: 1

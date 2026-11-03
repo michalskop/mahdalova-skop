@@ -84,9 +84,23 @@ python scripts/upload_media.py \
      "status": "success",
      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/10/slug/chart.webp",
      "key": "datatimes-cz/articles/2026/10/slug/chart.webp",
-     "bytes": 48210
+     "bytes": 48210,
+     "content_type": "image/webp",
+     "verified_at_edge": true
    }
    ```
+   Read the URL with a JSON parser (`json.loads(out)["url"]`) or use `--url-only`, which prints just the URL.
+   **Never cut the URL out of the JSON text** (grep/sed/split on a line): on 1 Nov 2026 this left
+   `coverImage: "https://…/cover.webp","` in 18 articles.
+4. **Correct Content-Type on every OS:** `.webp`, `.avif` and `.svg` are registered explicitly (Python on Windows
+   does not know them and used to upload WebP as `application/octet-stream`). An unknown extension is refused.
+5. **Edge verification:** after uploading, the script GETs the public URL and checks HTTP 200, the Content-Type
+   and the SHA-1 of the bytes (`verified_at_edge`).
+
+### Fixing an object that is already published
+
+Never overwrite it. Upload the corrected (or identical, re-typed) file under a versioned name such as
+`cover-v2.webp`, verify the public URL, then update every reference in the same commit.
 
 ---
 
@@ -122,4 +136,8 @@ A Git pre-commit hook is committed in `.githooks/pre-commit`.
 * **Activation:** `git config core.hooksPath .githooks` (runs automatically on `npm install`).
 * **Behavior:** Inspects only **newly added** files (`--diff-filter=A`). If a new binary image/video is staged, the commit is rejected with instructions.
 * **Backwards Compatibility:** Modifying existing text in older articles that reference legacy files in `public/` is never blocked.
+* **Article checks are chained:** `.githooks/pre-commit` then runs `scripts/git-hooks/pre-commit` (publish time +
+  `apps/web/scripts/checkArticles.js --staged`, which parses the frontmatter of staged articles on both sites and
+  rejects image fields with stray quotes/commas or a malformed CDN URL). `.githooks/pre-push` runs the Git LFS
+  pre-push hook. Whichever hooks path a machine uses, all checks run.
 * **Emergency Bypass:** `git commit --no-verify` (for rare exceptions like essential favicon updates).
