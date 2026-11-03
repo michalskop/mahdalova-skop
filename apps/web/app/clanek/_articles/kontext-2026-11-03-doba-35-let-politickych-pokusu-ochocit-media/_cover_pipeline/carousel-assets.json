@@ -1,0 +1,139 @@
+{
+  "assets": [
+    {
+      "file": "01.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/01.png",
+      "bytes": 953309,
+      "sha256": "8427fb8cff55d3af7252269dfb92ca30ee709e863d8db8db63c2f2868e12dd2e",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "02.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/02.png",
+      "bytes": 549984,
+      "sha256": "bcdae1f46e661e43c75e268506b7dc69f0a8eea73553ae5b0f42a39f087d7cde",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "03.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/03.png",
+      "bytes": 792362,
+      "sha256": "6feec2db84043ffb84b5d2ef6db63e1fd059ba7b8d023ae7c1280eca3aec2ebc",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "04.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/04.png",
+      "bytes": 770649,
+      "sha256": "e625f4ef1b059c8eb760eacf309889d20696f4015f164cffeaeef15748b8bf34",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "05.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/05-v2.png",
+      "bytes": 803749,
+      "sha256": "412f8de2546d21f71bfa3bf2074c7e46f1152fc3ccb11cb1175844da30cef03a",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "06.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/06.png",
+      "bytes": 786460,
+      "sha256": "c005118f0329e6038daf9512d1abdf923bff8409390cc9e0ad7f5c73216712ff",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "07.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/07.png",
+      "bytes": 808395,
+      "sha256": "a415bb8e473a9758d2641ae878bbf351e602c981a492c5a2b05bf5cfb8f5d1b4",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "08.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/08.png",
+      "bytes": 767464,
+      "sha256": "fca2ace6ee0e9dc85a318d3b218ce71369d3107feae15691e4a24af18cba0211",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "09.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/09.png",
+      "bytes": 741869,
+      "sha256": "ba8eccd35be3f52b1e9b37fb37f81e68a04fb083b489fe19c7dea12dadee0dcb",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "10.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/10.png",
+      "bytes": 664150,
+      "sha256": "aa571358b9d9048a66f0b6a79bbfc0b92c8d811fdda1c511b300bca96d3c79fc",
+      "contentType": "image/png",
+      "size": [
+        1080,
+        1350
+      ]
+    },
+    {
+      "file": "caption.txt",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/caption.txt",
+      "bytes": 490,
+      "sha256": "1bbd70adbb0a6663d3bbf6ac2fe7137e27c61d623e309d140bf9fcaa546a42b1",
+      "contentType": "text/plain"
+    },
+    {
+      "file": "carousel-arch.png",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/carousel-arch-v2.png",
+      "bytes": 451331,
+      "sha256": "b616b3cc3dc077631a5c052bbafa6523b82aa4cf018db9be02db469c0859440f",
+      "contentType": "image/png",
+      "size": [
+        1370,
+        740
+      ]
+    },
+    {
+      "file": "carousel.zip",
+      "url": "https://media.datatimes.org/datatimes-cz/articles/2026/11/kontext-2026-11-03-doba-35-let-politickych-pokusu-ochocit-media/social/carousel-2026-11-03-v1/carousel-v2.zip",
+      "bytes": 7631676,
+      "sha256": "ebae4778fc11e722e02b05e5f390f55bbfacb5570647ae8ad55933530351f3de",
+      "contentType": "application/zip"
+    }
+  ]
+}

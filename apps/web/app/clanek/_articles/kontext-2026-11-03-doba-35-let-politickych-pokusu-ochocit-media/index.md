@@ -87,12 +87,12 @@ Pravidla financování upravuje i [Evropský akt o svobodě médií](https://eur
 
 Iniciativa Veřejnoprávně, která stávku svolala, [požaduje](https://www.mediar.cz/vstoupime-do-tvrde-stavky-lidi-z-ct-a-rozhlasu-zadaji-stahnout-zakon-o-zruseni-poplatku/) stažení návrhu, otevřenou debatu o budoucím financování a zachování stability a nezávislosti obou médií. Mediální výbor projednávání přerušil do 10. prosince. Pak zákon čeká druhé a třetí čtení, Senát, který se už v lednu [postavil proti zrušení poplatků](https://www.lupa.cz/aktuality/senat-varuje-pred-zrusenim-televiznich-poplatku-obava-se-o-nezavislost-medii/), a prezident, jehož veto může Sněmovna přehlasovat 101 hlasy. Opozice chystá stížnost k Ústavnímu soudu. Do té doby se poplatky platí v dosavadní výši, 150 korun za televizi a 55 za rozhlas.
 
-**Oprava 3. 11. 2026:** Opravili jsme stranickou příslušnost Dalibora Matulky, upřesnili data a průběh starších návrhů i hlasování a doplnili, že výši navrhovaného státního příspěvku určuje zákon, nikoli každoroční rozhodnutí vlády.
-
 ```infobox
 **Jak jsme postupovali**
 
 Prošli jsme sněmovní tisky, které měnily zákony o České televizi, o Českém rozhlasu a o rozhlasových a televizních poplatcích (483/1991, 484/1991, 252/1994 a 348/2005 Sb.), jmenovitá hlasování a stenozáznamy na psp.cz, programová prohlášení vlád a dobové zpravodajství od roku 1991. Výše poplatků jsou ze Sbírky zákonů, částky v návrhu zákona z roku 2026 z vládního návrhu (sněmovní tisk 231) a ze zpráv o jeho schválení vládou. Za „pokus o zásah“ počítáme návrh zákona, pozměňovací návrh nebo veřejně ohlášený záměr politika či strany změnit výši poplatku, okruh plátců nebo způsob financování. Starší záměry, které nikdo nepodal jako návrh, mohly v přehledu chybět.
 ```
+
+<p><small><strong>Oprava 3. 11. 2026:</strong> Opravili jsme stranickou příslušnost Dalibora Matulky, upřesnili data a průběh starších návrhů i hlasování a doplnili, že výši navrhovaného státního příspěvku určuje zákon, nikoli každoroční rozhodnutí vlády.</small></p>
 
 <RelatedArticles heading="🔻🔻🔻" slugs={["komentar-2026-10-24-stojime-za-medii-verejne-sluzby","kontext-2026-01-03-ceska-a-slovenska-media-2025","explainer-2025-11-15-skutecna-hrozba-pro-nezavislost-bbc","explainer-2025-11-18-bbc-musi-uhajit-svou-nezavislost"]} />
