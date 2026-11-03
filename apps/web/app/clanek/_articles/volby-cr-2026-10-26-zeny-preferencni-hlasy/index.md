@@ -105,7 +105,7 @@ Vycházíme z [registru kandidátů pro volby do zastupitelstev obcí 2026](http
 
 **Mateřská:** povolání obsahuje mateřskou nebo rodičovskou dovolenou nebo domácnost, ne však mateřskou školu.
 
-Výpočty jsou v [datech k článku](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-11-02-zeny-preferencni-hlasy/_data_pipeline).
+Výpočty jsou v [datech k článku](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-10-26-zeny-preferencni-hlasy/_data_pipeline).
 ```
 
 <RelatedArticles heading="🔻🔻🔻" slugs={["volby-cr-2026-10-15-profese-zastupitelu", "volby-cr-2026-10-02-zeny-na-radnicich", "analyza-2025-03-08-zeny-v-politice-cim-vyse-tim-mene-zen", "analyza-2026-09-23-ceske-matky-predskolaku-vstupuji-na-pracovni-trh-nejmene-v-eu", "volby-cr-2026-09-02-jak-volit-do-zastupitelstva-obce", "volby-cr-2026-10-12-kdo-zustal-doma"]} />
