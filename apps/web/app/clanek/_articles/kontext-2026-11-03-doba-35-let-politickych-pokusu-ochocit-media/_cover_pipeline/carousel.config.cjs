@@ -76,7 +76,7 @@ module.exports = {
       zdroj: source(['2026-06-15', '2026-10-24']),
     },
     {
-      titulek: 'Návrh: 7,8 miliardy, asi o 15 % méně než plánované poplatky',
+      titulek: 'Návrh: 7,8 miliardy, asi o 15 % méně než plánované poplatky',
       obsahOd: 520,
       html: `<div class="cislo">${billions(total, 1)} mld.</div><p class="popis">státní příspěvek pro obě média v roce 2027</p>`
         + paragraph(`<strong>ČT ${billions(funding.CT, 2)} mld. Kč</strong><br><strong>ČRo ${billions(funding.CRO, 3)} mld. Kč</strong>`)
