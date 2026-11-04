@@ -13,14 +13,16 @@
 }
 .dt-us26 * { box-sizing: border-box; }
 .dt-us26-top { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
-.dt-us26-chamber { border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; background: #fff; }
+.dt-us26-chamber { position: relative; margin-bottom: 14px; border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; background: #fff; }
 .dt-us26-chamber h4 { margin: 0 0 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+.dt-us26-logo { position: absolute; top: 11px; right: 14px; display: inline-flex; align-items: center; gap: 7px; font-family: 'IBM Plex Serif', Georgia, serif; font-weight: 700; font-size: 17px; line-height: 1; color: var(--ink) !important; text-decoration: none !important; }
+.dt-us26-logo svg { width: 26px; height: 26px; display: block; }
 .dt-us26-big { font-size: 2.4rem; font-weight: 700; line-height: 1.1; color: var(--d3); }
 .dt-us26-big.r { color: var(--r3); }
 .dt-us26-sub { font-size: 0.85rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
 .dt-us26-bar { position: relative; height: 10px; border-radius: 5px; background: var(--r1); margin-top: 10px; overflow: hidden; }
 .dt-us26-bar span { position: absolute; left: 0; top: 0; bottom: 0; background: var(--d2); }
-.dt-us26-hemi { text-align: center; margin: 0 0 18px; }
+.dt-us26-hemi { text-align: center; margin: 0 0 22px; }
 .dt-us26-hemi svg { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; }
 .dt-us26-hemi p { margin: 4px 0 0; font-size: 0.9rem; }
 .dt-us26-hemi .d { color: var(--d3); font-weight: 700; }
@@ -60,11 +62,9 @@
 </style>
 
 <div class="dt-us26" id="dt-us26">
-  <div class="dt-us26-top">
-    <div class="dt-us26-chamber"><h4>Sněmovna reprezentantů</h4><div class="dt-us26-big" data-k="H-p">…</div><div class="dt-us26-sub" data-k="H-sub">Načítám živá data…</div><div class="dt-us26-bar"><span data-k="H-bar"></span></div></div>
-    <div class="dt-us26-chamber"><h4>Senát</h4><div class="dt-us26-big" data-k="S-p">…</div><div class="dt-us26-sub" data-k="S-sub"></div><div class="dt-us26-bar"><span data-k="S-bar"></span></div></div>
-  </div>
-  <div class="dt-us26-hemi"><h4 style="margin:0 0 6px;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:600">Odhad složení Sněmovny reprezentantů (435 křesel)</h4><svg data-k="hemi" viewBox="0 0 400 214" role="img" aria-label="Odhad rozložení křesel ve Sněmovně reprezentantů"></svg><p data-k="hemi-txt"></p></div>
+  <div class="dt-us26-chamber"><a class="dt-us26-logo" href="https://www.mahdalova-skop.cz/" target="_blank" rel="noopener"><svg viewBox="112 112 276 276" aria-hidden="true"><defs><linearGradient id="dtUs26GH" x1="1" x2="0.25" y1="0.5" y2="1"><stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="1"/><stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/></linearGradient></defs><g transform="rotate(-30 250 250)"><path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/><path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/><path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/><path fill="none" stroke="url(#dtUs26GH)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/></g></svg>DataTimes.cz</a><h4>Sněmovna reprezentantů</h4><div class="dt-us26-big" data-k="H-p">…</div><div class="dt-us26-sub" data-k="H-sub">Načítám živá data…</div><div class="dt-us26-bar"><span data-k="H-bar"></span></div></div>
+  <div class="dt-us26-hemi"><h4 style="margin:0 0 6px;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:600">Odhad rozložení 435 křesel</h4><svg data-k="hemi" viewBox="0 0 400 214" role="img" aria-label="Odhad rozložení křesel ve Sněmovně reprezentantů"></svg><p data-k="hemi-txt"></p></div>
+  <div class="dt-us26-chamber"><a class="dt-us26-logo" href="https://www.mahdalova-skop.cz/" target="_blank" rel="noopener"><svg viewBox="112 112 276 276" aria-hidden="true"><defs><linearGradient id="dtUs26GS" x1="1" x2="0.25" y1="0.5" y2="1"><stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="1"/><stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/></linearGradient></defs><g transform="rotate(-30 250 250)"><path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/><path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/><path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/><path fill="none" stroke="url(#dtUs26GS)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/></g></svg>DataTimes.cz</a><h4>Senát</h4><div class="dt-us26-big" data-k="S-p">…</div><div class="dt-us26-sub" data-k="S-sub"></div><div class="dt-us26-bar"><span data-k="S-bar"></span></div></div>
   <div class="dt-us26-tabs">
     <button type="button" data-kind="S" class="on">Senát</button>
     <button type="button" data-kind="G">Guvernéři</button>
