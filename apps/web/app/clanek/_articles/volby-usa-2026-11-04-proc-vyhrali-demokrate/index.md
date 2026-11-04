@@ -1,17 +1,17 @@
 ---
-title: "Trump prohrál volby, ve kterých nekandidoval"
+title: "Jak Trump prohrál republikánům Kongres"
 date: "2026-11-04"
 time: "12:39"
 author: "Kateřina Mahdalová"
 excerpt: "Demokraté získali v amerických volbách obě komory Kongresu a vzali republikánům sedm senátorských křesel, mimo jiné v Texasu a Kansasu. Voliči podle povolebního průzkumu AP trestali Trumpa za drahotu a válku s Íránem a shodnou se na tom komentátoři zleva i zprava. Prolomili přitom Senát, kde republikánská většina před volbami zastupovala menšinu Američanů."
-coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-homepage.png"
-homepageImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-homepage.png"
-ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-og.jpg"
-squareImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-square.png"
-instagramImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-instagram.png"
-storyImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-story.png"
-coverTitulek: "Trump<br>prohrál volby,<br>ve kterých<br>nekandidoval"
-coverPodtitulek: "Demokraté vzali republikánům Senát i Sněmovnu"
+coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-homepage-v2.png"
+homepageImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-homepage-v2.png"
+ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-og-v2.jpg"
+squareImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-square-v2.png"
+instagramImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-instagram-v2.png"
+storyImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-proc-vyhrali-demokrate/cover-story-v2.png"
+coverTitulek: "Jak Trump<br>prohrál<br>republikánům<br>Kongres"
+coverPodtitulek: "Voliči trestali drahotu a válku s Íránem"
 filter: ["analýza"]
 tags: ["volby", "USA", "americké volby 2026", "Kongres", "Donald Trump", "MAGA", "Senát USA"]
 promoted: 1
