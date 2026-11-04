@@ -522,3 +522,10 @@ svg = (f'<svg viewBox="-4 -10 {W + 8} {Hc + 40:.0f}" width="100%" role="img" xml
 (ART / 'sankey.html').write_text(f'<div class="dt-sankey">{svg}</div>\n<script>{JS}</script>\n', encoding='utf-8')
 p(f'sankey zapsán: sankey.html (výška {Hc:.0f} px)')
 (H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
+
+# ── Podklad pro carousel a animaci Sankey (_cover_pipeline/sankey.cjs) ──────
+sk = dict(uzly=[dict(n=s, barva=barva(s), tok=tok[s], koalic=pocet[s]) for s in poradi],
+          vazby=[dict(s=s, t=t, v=vazba(s, t), mesta=mesta_par[tuple(sorted((s, t), key=UZLY.index))])
+                 for s in poradi for t in poradi if s != t and vazba(s, t)],
+          koalic=len(koal))
+(ART / '_cover_pipeline' / 'sankey.json').write_text(json.dumps(sk, ensure_ascii=False, indent=1), encoding='utf-8')

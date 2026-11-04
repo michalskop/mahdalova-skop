@@ -91,8 +91,9 @@ const PODEKOVANI = {
     const vrstva = typeof s.svg === 'function' ? s.svg(KLIC)
       : s.svg && STORY ? `<svg xmlns="http://www.w3.org/2000/svg" width="${f.w}" height="${f.h}"><g transform="translate(0 ${POSUN})">${s.svg.replace(/^<svg[^>]*>/, '').replace(/<\/svg>$/, '')}</g></svg>`
       : s.svg;
+    // slide s vlastním coverem bez svg si nechá motiv coveru (např. tečkovou mapu ČR), jinak by zůstal prázdný (4. 11. 2026)
     const c = s.cover
-      ? { ...s.cover, logo: 'nahore', motiv: { typ: 'svg', svg: { [KLIC]: vrstva ?? prazdne } } }
+      ? { ...s.cover, logo: 'nahore', motiv: !vrstva && s.cover.motiv ? s.cover.motiv : { typ: 'svg', svg: { [KLIC]: vrstva ?? prazdne } } }
       : { ...cfg.cover, titulek: nbsp(s.titulek), pod: nbsp(s.pod), legenda: null, ikona: null, logo: 'nahore',
           format: { [KLIC]: { t: s.velikost ?? 66, sub: 32, kick: 24 } }, motiv: { typ: 'svg', svg: { [KLIC]: vrstva ?? prazdne } } };
     const page = await browser.newPage({ viewport: { width: f.w, height: f.h } });
