@@ -36,9 +36,17 @@
 .dt-us26-tile.sel { outline: 2px solid var(--ink); outline-offset: 1px; }
 .dt-us26-tile .cnt { position: absolute; bottom: 2px; left: 3px; right: 3px; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.35); overflow: hidden; }
 .dt-us26-tile .cnt i { display: block; height: 100%; background: var(--ink); }
-.dt-us26-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.78rem; color: var(--muted); margin: 12px 0 0; }
-.dt-us26-legend span { display: inline-flex; align-items: center; gap: 5px; }
-.dt-us26-legend b { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.dt-us26-legend { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 28px; margin: 14px 0 0; font-size: 0.78rem; color: var(--muted); max-width: 640px; }
+.dt-us26-scale { flex: 1 1 260px; max-width: 360px; }
+.dt-us26-scale .bar { display: flex; height: 12px; border-radius: 3px; overflow: hidden; }
+.dt-us26-scale .bar i { flex: 1; }
+.dt-us26-scale .lab { display: flex; justify-content: space-between; margin-top: 4px; }
+.dt-us26-key { display: flex; gap: 16px; padding-top: 0; }
+.dt-us26-key span { display: inline-flex; align-items: center; gap: 6px; }
+.dt-us26-key b { width: 16px; height: 16px; border-radius: 3px; display: inline-block; position: relative; }
+.dt-us26-key b.none { background: var(--none); border: 1px solid var(--line); }
+.dt-us26-key b.cnt { background: var(--d1); }
+.dt-us26-key b.cnt i { position: absolute; left: 2px; right: 2px; bottom: 2px; height: 3px; border-radius: 2px; background: var(--ink); width: 60%; }
 .dt-us26-detail { margin-top: 12px; min-height: 64px; border-left: 4px solid var(--ink); padding: 8px 12px; background: #faf9f5; font-size: 0.9rem; line-height: 1.45; }
 .dt-us26-detail strong { font-size: 1rem; }
 .dt-us26-foot { font-size: 0.78rem; color: var(--muted); margin-top: 12px; line-height: 1.45; }
@@ -63,17 +71,14 @@
   </div>
   <div class="dt-us26-grid" data-k="grid"></div>
   <div class="dt-us26-legend">
-    <span><b style="background:var(--d3)"></b>demokrat téměř jistě</span>
-    <span><b style="background:var(--d2)"></b>pravděpodobně D</span>
-    <span><b style="background:var(--d1)"></b>spíš D</span>
-    <span><b style="background:var(--tu)"></b>nerozhodnuto</span>
-    <span><b style="background:var(--r1)"></b>spíš R</span>
-    <span><b style="background:var(--r2)"></b>pravděpodobně R</span>
-    <span><b style="background:var(--r3)"></b>republikán téměř jistě</span>
-    <span><b style="background:var(--none)"></b>letos se nevolí</span>
+    <div class="dt-us26-scale">
+      <div class="bar"><i style="background:var(--d3)"></i><i style="background:var(--d2)"></i><i style="background:var(--d1)"></i><i style="background:var(--tu)"></i><i style="background:var(--r1)"></i><i style="background:var(--r2)"></i><i style="background:var(--r3)"></i></div>
+      <div class="lab"><span>◀ vede demokrat</span><span>vyrovnané</span><span>vede republikán ▶</span></div>
+    </div>
+    <div class="dt-us26-key"><span><b class="none"></b>nevolí se</span><span><b class="cnt"><i></i></b>sečteno</span></div>
   </div>
-  <div class="dt-us26-detail" data-k="detail">Klepněte na stát a uvidíte šanci kandidátů a kolik hlasů je sečteno.</div>
-  <div class="dt-us26-foot" data-k="foot">Data: predikční model DataTimes.cz, který se každou minutu přepočítává podle sečtených hlasů. Proužek dole na dlaždici ukazuje, kolik hlasů je ve státě sečteno.</div>
+  <div class="dt-us26-detail" data-k="detail">Klepněte na stát: kandidáti, šance, sečteno.</div>
+  <div class="dt-us26-foot" data-k="foot">Data: predikční model DataTimes.cz, obnova každou minutu.</div>
 </div>
 
 <script>
@@ -138,7 +143,7 @@
   }
   function detail(st) {
     var box = $('detail'), r = st && races[kind][st];
-    if (!r) { box.innerHTML = 'Klepněte na stát a uvidíte šanci kandidátů a kolik hlasů je sečteno.'; return; }
+    if (!r) { box.innerHTML = 'Klepněte na stát: kandidáti, šance, sečteno.'; return; }
     var c = (CANDS[kind] || {})[st], p = r.pd_m;
     var who = c ? 'Demokrat ' + c[0] + ' × republikán ' + c[1] + '<br>' : '';
     box.innerHTML = '<strong>' + NAMES[st] + ' – ' + (kind === 'S' ? 'Senát' : 'guvernér') + (/special/i.test(r.label) ? ' (doplňovací volba)' : '') + '</strong><br>' + who +
@@ -192,8 +197,8 @@
       var when = new Date(ov.t * 1000).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Prague' });
       var pr = ov.progress || {};
       var cov = function (k) { var c = pr[k] && pr[k].mix ? pr[k].mix.cov : null; return c === null ? '–' : pct(c, c < 0.1 ? 1 : 0); };
-      $('foot').innerHTML = '<b>Aktualizováno v ' + when + '</b> (náš čas) · sečteno hlasů: Senát ' + cov('S') + ', Sněmovna ' + cov('H') +
-        '. Data: predikční model DataTimes.cz, který se každou minutu přepočítává podle sečtených hlasů. Proužek dole na dlaždici ukazuje, kolik hlasů je ve státě sečteno.';
+      $('foot').innerHTML = '<b>Aktualizováno v ' + when + '</b> · sečteno: Senát ' + cov('S') + ', Sněmovna ' + cov('H') +
+        ' · Data: predikční model DataTimes.cz, obnova každou minutu.';
     }).catch(function () {
       $('H-sub').textContent = 'Živá data se teď nepodařilo načíst. Zkuste stránku za chvíli obnovit.';
     });
