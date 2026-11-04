@@ -1,5 +1,5 @@
 // Motiv coveru: dlaždicová mapa USA, dlaždice = stát, barva = šance demokrata v souboji o Senát
-// podle predikce DataTimes (senat-snapshot.json: stát → šance demokrata, stav 4. 11. 2026 0:23 SEČ).
+// podle predikce DataTimes (senat-snapshot.json: stát → šance demokrata, stav 4. 11. 2026 dopoledne, po vyhlášení AP).
 // Spuštění: node motiv.cjs → motiv-<format>.svg; pak node tools/cover-generator.cjs cover.config.cjs
 const fs = require('fs');
 const path = require('path');

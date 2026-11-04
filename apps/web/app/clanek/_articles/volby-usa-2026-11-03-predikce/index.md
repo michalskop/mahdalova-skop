@@ -1,29 +1,31 @@
 ---
-title: "Predikce DataTimes: Sněmovnu reprezentantů ovládnou demokraté"
+title: "Predikce DataTimes: Kongres ovládnou demokraté"
 date: "2026-11-03"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Demokraté získají většinu ve Sněmovně reprezentantů, ukazuje živá predikce DataTimes.cz: dává jim 97% šanci a odhaduje jim zhruba 240 z 435 křesel. Senát zůstává otevřený, šance demokratů je 76 %. Rozhodnou o něm hlavně Maine, Texas, Ohio, Aljaška, Iowa a Kansas. Mapa se přepočítává každou minutu podle sečtených hlasů."
-coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-predikce/cover-homepage.png"
-homepageImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-predikce/cover-homepage.png"
-ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-predikce/cover-og.jpg"
-squareImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-predikce/cover-square.png"
-instagramImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-predikce/cover-instagram.png"
-storyImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-predikce/cover-story.png"
-coverTitulek: "Sněmovnu<br>ovládnou<br>demokraté"
+excerpt: "Demokraté ovládnou obě komory amerického Kongresu, Sněmovnu reprezentantů i Senát. Agentura AP ve středu ráno vyhlásila jejich vítězství v obou. Predikce DataTimes.cz dávala demokratům většinu ve Sněmovně s 97% pravděpodobností už v úterý odpoledne, před zavřením prvních volebních místností. Živá mapa ukazuje, jak dopadly souboje v jednotlivých státech."
+coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-03-predikce/cover-homepage.png"
+homepageImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-03-predikce/cover-homepage.png"
+ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-03-predikce/cover-og.jpg"
+squareImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-03-predikce/cover-square.png"
+instagramImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-03-predikce/cover-instagram.png"
+storyImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-03-predikce/cover-story.png"
+coverTitulek: "Kongres<br>ovládnou<br>demokraté"
 coverPodtitulek: "Živá predikce, na mapě souboje o Senát"
 filter: ["analýza"]
 tags: ["volby", "USA", "americké volby 2026", "Kongres", "Donald Trump", "MAGA", "volební predikce"]
 promoted: 1
 ---
-Demokraté po úterních volbách ovládnou Sněmovnu reprezentantů, dolní komoru amerického Kongresu. Predikce DataTimes.cz jim dává 97% šanci a odhaduje jim zhruba 240 z 435 křesel, k většině potřebují 218. V Senátu je jejich šance 76 %, tam se rozhodne až během noci. Tak vypadal model ve středu 4. listopadu ve 0:23 SEČ, kdy byly sečtené první hlasy jen v Kentucky, Indianě a New Hampshiru. Republikáni teď ve Sněmovně drží 218 z 435 křesel a v Senátu 53 ze 100. Demokratům tedy stačí ve Sněmovně čistý zisk tří křesel, v Senátu čtyř.
+Demokraté po úterních volbách ovládnou obě komory amerického Kongresu, Sněmovnu reprezentantů i Senát. Agentura AP vyhlásila jejich vítězství v Senátu krátce před šestou ráno našeho času a ve Sněmovně v 7:25 ([Time](https://time.com/article/2026/11/03/midterm-elections-2026-key-races-live-results-polls-latest-news-updates/)). Demokraté získali republikánská senátorská křesla mimo jiné v Maine, Severní Karolíně, Texasu, Iowě, Kansasu a Jižní Karolíně.
+
+Predikce DataTimes.cz dávala demokratům většinu ve Sněmovně s 97% pravděpodobností nepřetržitě od úterního odpoledne, ještě před zavřením prvních volebních místností, a odhadovala jim zhruba 240 z 435 křesel. K většině potřebovali 218. U Senátu, kde demokraté potřebovali čistý zisk čtyř křesel, ukazovala ve středu ve 0:23 SEČ šanci 76 %, kdy byly sečtené první hlasy jen v Kentucky, Indianě a New Hampshiru. Ráno už obě komory ukazovala se stoprocentní jistotou. Republikáni před volbami drželi ve Sněmovně 218 z 435 křesel a v Senátu 53 ze 100.
 
 <RelatedArticles preset="sidebar" position="right" slugs={["volby-usa-2024-11-06-volby-vyhraje-trump-a-nebude-to-tesne", "volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit"]} heading="🔻🔻🔻" />
 
 Predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop stojí na průzkumech a výsledcích minulých voleb v jednotlivých okresech. Jak přibývají sečtené hlasy, model je porovnává s očekáváním a odhad přepočítává. Mapa níže se obnovuje každou minutu. Čím víc hlasů je sečteno, tím užší je nejistota.
 
-Model zatím odpovídá tomu, co čekali ostatní. Sázkový trh Polymarket dával ve stejnou chvíli demokratům 96% šanci na Sněmovnu a 79% na Senát. Model The Economist počítal s 93 % pro Sněmovnu ([přehled predikcí, USA Today](https://www.yahoo.com/news/politics/articles/democrats-win-midterm-election-today-155235507.html)).
+Predikce odpovídala tomu, co čekali ostatní. Sázkový trh Polymarket dával ve 0:23 demokratům 96% šanci na Sněmovnu a 79% na Senát. Model The Economist počítal s 93 % pro Sněmovnu ([přehled predikcí, USA Today](https://www.yahoo.com/news/politics/articles/democrats-win-midterm-election-today-155235507.html)).
 
-Republikáni jdou do voleb s nejméně oblíbeným prezidentem v polovině mandátu od Harryho Trumana. Trumpovo působení podle průměru průzkumů [Silver Bulletin](https://www.natesilver.net/p/trump-approval-rating) schvaluje zhruba 38 % Američanů a 59 % nesouhlasí. V obecné otázce, kterou stranu by lidé volili do Kongresu, vedou demokraté podle průměru [RealClearPolling](https://www.realclearpolling.com/polls/state-of-the-union/generic-congressional-vote) o 8,8 procentního bodu.
+Republikáni šli do voleb s nejméně oblíbeným prezidentem v polovině mandátu od Harryho Trumana. Trumpovo působení podle průměru průzkumů [Silver Bulletin](https://www.natesilver.net/p/trump-approval-rating) schvaluje zhruba 38 % Američanů a 59 % nesouhlasí. V obecné otázce, kterou stranu by lidé volili do Kongresu, vedli demokraté před volbami podle průměru [RealClearPolling](https://www.realclearpolling.com/polls/state-of-the-union/generic-congressional-vote) o 8,8 procentního bodu.
 
 ```infobox info
 **Jak číst mapu.** Dlaždice je stát, barva ukazuje šanci kandidáta podle naší predikce. Tmavě modrá znamená téměř jisté vítězství demokrata, tmavě červená republikána, béžová vyrovnaný souboj. Proužek dole na dlaždici ukazuje, kolik hlasů je ve státě sečteno. Klepnutím na stát zobrazíte kandidáty a čísla.
