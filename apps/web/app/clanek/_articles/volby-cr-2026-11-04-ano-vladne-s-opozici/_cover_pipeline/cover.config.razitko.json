@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/images/cover-homepage.png",
+      "otisk": "45e3baa7e29b2985",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/cover.config.cjs": "7f8334431d3c0e9b",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/mesta.json": "2e43d17cc3f8b08c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/images/cover-og.jpg",
+      "otisk": "2d6b382224482e6e",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/cover.config.cjs": "7f8334431d3c0e9b",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/mesta.json": "2e43d17cc3f8b08c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/images/cover-square.png",
+      "otisk": "8c4995e68483398c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/cover.config.cjs": "7f8334431d3c0e9b",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/mesta.json": "2e43d17cc3f8b08c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/images/cover-instagram.png",
+      "otisk": "75c89fe1b8adbc69",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/cover.config.cjs": "7f8334431d3c0e9b",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/mesta.json": "2e43d17cc3f8b08c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/images/cover-story.png",
+      "otisk": "15042206c7b97451",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/cover.config.cjs": "7f8334431d3c0e9b",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/mesta.json": "2e43d17cc3f8b08c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-04T09:07:54.931Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-ano-vladne-s-opozici/index.md",
+  "titulekClanku": "ANO vládne ve velkých městech se sněmovní opozicí. Se SPD a Motoristy nikde",
+  "texty": {
+    "stitek": "Analýza • Komunální volby 2026",
+    "nadtitulek": "",
+    "titulek": "Primátoři z ANO vládnou s opozicí",
+    "podtitulek": "Ve všech čtyřech velkých městech, kde zastupitelé zvolili primátora z ANO, vládne se stranami sněmovní opozice"
+  }
+}
