@@ -452,7 +452,7 @@ for n, a in koal:
         mesta_par.setdefault((x, y), []).append(NAZ.get(n, n))
 poradi = sorted(UZLY, key=lambda s: (s == 'místní hnutí', -pocet[s]))   # místní hnutí dospod
 barva = lambda s: TT_BARVY[s]
-W, LW, RW, GAP, KOEF, NW = 446, 124, 104, 13, 1.45, 9   # šířka, místo na popisky, mezera uzlů, px na koalici, šířka uzlu
+W, LW, RW, GAP, KOEF, NW = 468, 124, 126, 13, 1.45, 9   # šířka, místo na popisky, mezera uzlů, px na koalici, šířka uzlu
 tok = {s: sum(vazba(s, t) for t in UZLY if t != s) for s in UZLY}
 Hc = sum(tok[s] * KOEF for s in poradi) + GAP * (len(poradi) - 1)
 x0, x1 = LW, W - RW
@@ -478,25 +478,42 @@ for s in poradi:
              f"C{cx},{b0 + h:.1f} {cx},{a0 + h:.1f} {x0 + NW},{a0 + h:.1f} Z")
         mm = mesta_par[tuple(sorted((s, t), key=UZLY.index))]
         k = 'koalici' if v == 1 else 'koalicích'
-        cesty.append(f'<path d="{d}" fill="{barva(s)}" fill-opacity="{0.62 if s == "ANO" else 0.26}" class="l l-{UZLY.index(s)}">'
+        cesty.append(f'<path d="{d}" fill="{barva(s)}" fill-opacity="{0.62 if s == "ANO" else 0.26}" class="l" data-s="{s}" data-t="{t}" data-v="{v}">'
                      f'<title>{s} a {t}: spolu v {v} {k} ({", ".join(mm)})</title></path>')
-uzly, popisky = [], []
+# Uzly jsou přepínače (Kateřina 4. 11., jako ve Flourish): klik na stranu v levém nebo pravém sloupci zvýrazní
+# jen její pruhy a u partnerů na druhé straně ukáže počet společných koalic; druhý klik vrátí celý graf.
+uzly = []
 for s in poradi:
     h = tok[s] * KOEF
-    kk = f"{pocet[s]} {'koalice' if pocet[s] == 1 else 'koalice' if pocet[s] < 5 else 'koalic'}"
-    for x, ys in ((x0, yl[s]), (x1, yr[s])):
-        uzly.append(f'<rect x="{x}" y="{ys:.1f}" width="{NW}" height="{max(h, 2):.1f}" fill="{barva(s)}" stroke="#101432" stroke-width="{0.6 if s == "místní hnutí" else 0}"/>')
+    kk = f"{pocet[s]} {'koalice' if pocet[s] < 5 else 'koalic'}"
     tw = 700 if s == 'ANO' else 600
-    popisky.append(f'<text x="{x0 - 8}" y="{yl[s] + max(h, 2) / 2:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s}'
-                   f'<tspan x="{x0 - 8}" dy="16" font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>' if h > 22 else
-                   f'<text x="{x0 - 8}" y="{yl[s] + 1:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s} <tspan font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>')
-    popisky.append(f'<text x="{x1 + NW + 8}" y="{yr[s] + max(h, 2) / 2:.1f}" dominant-baseline="middle" font-weight="{tw}">{s}</text>')
+    rect = lambda x, ys: f'<rect x="{x}" y="{ys:.1f}" width="{NW}" height="{max(h, 2):.1f}" fill="{barva(s)}" stroke="#101432" stroke-width="{0.6 if s == "místní hnutí" else 0}"/>'
+    c = '<tspan class="c" font-weight="400" fill="#55597a"></tspan>'
+    lev = (f'<text x="{x0 - 8}" y="{yl[s] + max(h, 2) / 2:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s}{c}'
+           f'<tspan x="{x0 - 8}" dy="16" font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>' if h > 22 else
+           f'<text x="{x0 - 8}" y="{yl[s] + 1:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s}{c} <tspan font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>')
+    prav = f'<text x="{x1 + NW + 8}" y="{yr[s] + max(h, 2) / 2:.1f}" dominant-baseline="middle" font-weight="{tw}">{s}{c}</text>'
+    for side, obsah in (('L', rect(x0, yl[s]) + lev), ('R', rect(x1, yr[s]) + prav)):
+        uzly.append(f'<g class="n" data-n="{s}" data-side="{side}" role="button" tabindex="0" aria-label="Zvýraznit koalice: {s}">{obsah}</g>')
+CSS = ('.l{transition:fill-opacity .2s}.n{cursor:pointer;transition:opacity .2s}.n:focus{outline:none}'
+       'svg:not(.sel) .l:hover{fill-opacity:.85}svg.sel .l{fill-opacity:.05}svg.sel .l.on{fill-opacity:.8}'
+       'svg.sel .n{opacity:.3}svg.sel .n.on,svg.sel .n.p{opacity:1}')
+JS = ("(function(){document.querySelectorAll('.dt-sankey svg:not([data-init])').forEach(function(svg){"
+      "svg.setAttribute('data-init','1');var sel=null;"
+      "function clear(){svg.classList.remove('sel');svg.querySelectorAll('.on,.p').forEach(function(e){e.classList.remove('on','p')});"
+      "svg.querySelectorAll('.c').forEach(function(e){e.textContent=''})}"
+      "function pick(g){var n=g.getAttribute('data-n'),L=g.getAttribute('data-side')==='L',k=n+'|'+(L?'L':'R');clear();"
+      "if(sel===k){sel=null;return}sel=k;svg.classList.add('sel');g.classList.add('on');"
+      "svg.querySelectorAll('.l').forEach(function(p){if(p.getAttribute(L?'data-s':'data-t')!==n)return;p.classList.add('on');"
+      "var o=p.getAttribute(L?'data-t':'data-s');svg.querySelectorAll('.n[data-side=\"'+(L?'R':'L')+'\"]').forEach(function(og){"
+      "if(og.getAttribute('data-n')===o){og.classList.add('p');og.querySelector('.c').textContent=' · '+p.getAttribute('data-v')}})})}"
+      "svg.querySelectorAll('.n').forEach(function(g){g.addEventListener('click',function(){pick(g)});"
+      "g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(g)}})})})})();")
 svg = (f'<svg viewBox="-4 -10 {W + 8} {Hc + 40:.0f}" width="100%" role="img" xmlns="http://www.w3.org/2000/svg" '
        f'aria-label="Sankeyův diagram: kdo s kým sedí v 23 dohodnutých koalicích. ANO nejčastěji s místními hnutími (6) a s ODS (5), opoziční strany spolu nejčastěji (STAN a TOP 09 10, ODS se STAN, lidovci a TOP 09 po 9)." '
-       f'style="font-family:IBM Plex Sans,Arial,sans-serif;font-size:15px;fill:#101432;display:block;max-width:480px;margin:0 auto">'
-       f'<style>.l{{transition:fill-opacity .15s}} svg:hover .l{{fill-opacity:.12}} svg .l:hover{{fill-opacity:.85}}</style>'
-       f'<text x="{x0 + NW / 2}" y="-2" text-anchor="middle" font-size="11" fill="#55597a" dominant-baseline="auto"></text>'
-       + ''.join(cesty) + ''.join(uzly) + ''.join(popisky) + '</svg>')
-(ART / 'sankey.html').write_text(f'<div class="dt-sankey">{svg}</div>\n', encoding='utf-8')
+       f'style="font-family:IBM Plex Sans,Arial,sans-serif;font-size:15px;fill:#101432;display:block;max-width:500px;margin:0 auto">'
+       f'<style>{CSS}</style>'
+       + ''.join(cesty) + ''.join(uzly) + '</svg>')
+(ART / 'sankey.html').write_text(f'<div class="dt-sankey">{svg}</div>\n<script>{JS}</script>\n', encoding='utf-8')
 p(f'sankey zapsán: sankey.html (výška {Hc:.0f} px)')
 (H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
