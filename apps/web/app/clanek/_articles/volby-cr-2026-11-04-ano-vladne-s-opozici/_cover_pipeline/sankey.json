@@ -1,0 +1,809 @@
+{
+ "uzly": [
+  {
+   "n": "ODS",
+   "barva": "#5e66d5",
+   "tok": 52,
+   "koalic": 15
+  },
+  {
+   "n": "STAN",
+   "barva": "#ff1a4a",
+   "tok": 50,
+   "koalic": 13
+  },
+  {
+   "n": "KDU-ČSL",
+   "barva": "#ffcf02",
+   "tok": 51,
+   "koalic": 13
+  },
+  {
+   "n": "TOP 09",
+   "barva": "#812840",
+   "tok": 47,
+   "koalic": 11
+  },
+  {
+   "n": "ANO",
+   "barva": "#272a59",
+   "tok": 24,
+   "koalic": 10
+  },
+  {
+   "n": "Piráti",
+   "barva": "#111111",
+   "tok": 34,
+   "koalic": 8
+  },
+  {
+   "n": "Zelení",
+   "barva": "#639e0a",
+   "tok": 29,
+   "koalic": 8
+  },
+  {
+   "n": "SOCDEM",
+   "barva": "#f76800",
+   "tok": 1,
+   "koalic": 1
+  },
+  {
+   "n": "místní hnutí",
+   "barva": "#c3c6d8",
+   "tok": 54,
+   "koalic": 16
+  }
+ ],
+ "vazby": [
+  {
+   "s": "ODS",
+   "t": "STAN",
+   "v": 9,
+   "mesta": [
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Děčín",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Prostějov",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "ODS",
+   "t": "KDU-ČSL",
+   "v": 9,
+   "mesta": [
+    "Přerov",
+    "Havířov",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "ODS",
+   "t": "TOP 09",
+   "v": 9,
+   "mesta": [
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Prostějov",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "ODS",
+   "t": "ANO",
+   "v": 5,
+   "mesta": [
+    "Přerov",
+    "Kladno",
+    "Mladá Boleslav",
+    "Karlovy Vary",
+    "Havířov"
+   ]
+  },
+  {
+   "s": "ODS",
+   "t": "Piráti",
+   "v": 4,
+   "mesta": [
+    "Pardubice",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "ODS",
+   "t": "Zelení",
+   "v": 4,
+   "mesta": [
+    "Opava",
+    "Jablonec n. N.",
+    "Brno",
+    "Prostějov"
+   ]
+  },
+  {
+   "s": "ODS",
+   "t": "místní hnutí",
+   "v": 12,
+   "mesta": [
+    "Opava",
+    "Kladno",
+    "Mladá Boleslav",
+    "Karlovy Vary",
+    "Havířov",
+    "Pardubice",
+    "Děčín",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "STAN",
+   "t": "ODS",
+   "v": 9,
+   "mesta": [
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Děčín",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Prostějov",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "STAN",
+   "t": "KDU-ČSL",
+   "v": 9,
+   "mesta": [
+    "Olomouc",
+    "Plzeň",
+    "Havířov",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "STAN",
+   "t": "TOP 09",
+   "v": 10,
+   "mesta": [
+    "Olomouc",
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Prostějov",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "STAN",
+   "t": "ANO",
+   "v": 4,
+   "mesta": [
+    "Mladá Boleslav",
+    "Plzeň",
+    "Ostrava",
+    "Havířov"
+   ]
+  },
+  {
+   "s": "STAN",
+   "t": "Piráti",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "STAN",
+   "t": "Zelení",
+   "v": 4,
+   "mesta": [
+    "Olomouc",
+    "Hradec Králové",
+    "Brno",
+    "Prostějov"
+   ]
+  },
+  {
+   "s": "STAN",
+   "t": "místní hnutí",
+   "v": 9,
+   "mesta": [
+    "Olomouc",
+    "Mladá Boleslav",
+    "Ostrava",
+    "Havířov",
+    "Pardubice",
+    "Děčín",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "KDU-ČSL",
+   "t": "ODS",
+   "v": 9,
+   "mesta": [
+    "Přerov",
+    "Havířov",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "KDU-ČSL",
+   "t": "STAN",
+   "v": 9,
+   "mesta": [
+    "Olomouc",
+    "Plzeň",
+    "Havířov",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "KDU-ČSL",
+   "t": "TOP 09",
+   "v": 9,
+   "mesta": [
+    "Olomouc",
+    "Havířov",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "KDU-ČSL",
+   "t": "ANO",
+   "v": 4,
+   "mesta": [
+    "Přerov",
+    "Plzeň",
+    "Havířov",
+    "Teplice"
+   ]
+  },
+  {
+   "s": "KDU-ČSL",
+   "t": "Piráti",
+   "v": 7,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Teplice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "KDU-ČSL",
+   "t": "Zelení",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Jablonec n. N.",
+    "Teplice",
+    "Hradec Králové",
+    "Brno"
+   ]
+  },
+  {
+   "s": "KDU-ČSL",
+   "t": "místní hnutí",
+   "v": 8,
+   "mesta": [
+    "Olomouc",
+    "Havířov",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "TOP 09",
+   "t": "ODS",
+   "v": 9,
+   "mesta": [
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Prostějov",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "TOP 09",
+   "t": "STAN",
+   "v": 10,
+   "mesta": [
+    "Olomouc",
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Prostějov",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "TOP 09",
+   "t": "KDU-ČSL",
+   "v": 9,
+   "mesta": [
+    "Olomouc",
+    "Havířov",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín",
+    "Jihlava",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "TOP 09",
+   "t": "ANO",
+   "v": 2,
+   "mesta": [
+    "Mladá Boleslav",
+    "Havířov"
+   ]
+  },
+  {
+   "s": "TOP 09",
+   "t": "Piráti",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "TOP 09",
+   "t": "Zelení",
+   "v": 4,
+   "mesta": [
+    "Olomouc",
+    "Hradec Králové",
+    "Brno",
+    "Prostějov"
+   ]
+  },
+  {
+   "s": "TOP 09",
+   "t": "místní hnutí",
+   "v": 8,
+   "mesta": [
+    "Olomouc",
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "ODS",
+   "v": 5,
+   "mesta": [
+    "Přerov",
+    "Kladno",
+    "Mladá Boleslav",
+    "Karlovy Vary",
+    "Havířov"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "STAN",
+   "v": 4,
+   "mesta": [
+    "Mladá Boleslav",
+    "Plzeň",
+    "Ostrava",
+    "Havířov"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "KDU-ČSL",
+   "v": 4,
+   "mesta": [
+    "Přerov",
+    "Plzeň",
+    "Havířov",
+    "Teplice"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "TOP 09",
+   "v": 2,
+   "mesta": [
+    "Mladá Boleslav",
+    "Havířov"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "Piráti",
+   "v": 1,
+   "mesta": [
+    "Teplice"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "Zelení",
+   "v": 1,
+   "mesta": [
+    "Teplice"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "SOCDEM",
+   "v": 1,
+   "mesta": [
+    "Karviná"
+   ]
+  },
+  {
+   "s": "ANO",
+   "t": "místní hnutí",
+   "v": 6,
+   "mesta": [
+    "Kladno",
+    "Mladá Boleslav",
+    "Ostrava",
+    "Karlovy Vary",
+    "Havířov",
+    "Most"
+   ]
+  },
+  {
+   "s": "Piráti",
+   "t": "ODS",
+   "v": 4,
+   "mesta": [
+    "Pardubice",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "Piráti",
+   "t": "STAN",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "Piráti",
+   "t": "KDU-ČSL",
+   "v": 7,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Teplice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "Piráti",
+   "t": "TOP 09",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Hradec Králové",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "Piráti",
+   "t": "ANO",
+   "v": 1,
+   "mesta": [
+    "Teplice"
+   ]
+  },
+  {
+   "s": "Piráti",
+   "t": "Zelení",
+   "v": 6,
+   "mesta": [
+    "Olomouc",
+    "Jablonec n. N.",
+    "Liberec",
+    "Teplice",
+    "Hradec Králové",
+    "Brno"
+   ]
+  },
+  {
+   "s": "Piráti",
+   "t": "místní hnutí",
+   "v": 6,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Liberec",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "Zelení",
+   "t": "ODS",
+   "v": 4,
+   "mesta": [
+    "Opava",
+    "Jablonec n. N.",
+    "Brno",
+    "Prostějov"
+   ]
+  },
+  {
+   "s": "Zelení",
+   "t": "STAN",
+   "v": 4,
+   "mesta": [
+    "Olomouc",
+    "Hradec Králové",
+    "Brno",
+    "Prostějov"
+   ]
+  },
+  {
+   "s": "Zelení",
+   "t": "KDU-ČSL",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Jablonec n. N.",
+    "Teplice",
+    "Hradec Králové",
+    "Brno"
+   ]
+  },
+  {
+   "s": "Zelení",
+   "t": "TOP 09",
+   "v": 4,
+   "mesta": [
+    "Olomouc",
+    "Hradec Králové",
+    "Brno",
+    "Prostějov"
+   ]
+  },
+  {
+   "s": "Zelení",
+   "t": "ANO",
+   "v": 1,
+   "mesta": [
+    "Teplice"
+   ]
+  },
+  {
+   "s": "Zelení",
+   "t": "Piráti",
+   "v": 6,
+   "mesta": [
+    "Olomouc",
+    "Jablonec n. N.",
+    "Liberec",
+    "Teplice",
+    "Hradec Králové",
+    "Brno"
+   ]
+  },
+  {
+   "s": "Zelení",
+   "t": "místní hnutí",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Opava",
+    "Jablonec n. N.",
+    "Liberec",
+    "Brno"
+   ]
+  },
+  {
+   "s": "SOCDEM",
+   "t": "ANO",
+   "v": 1,
+   "mesta": [
+    "Karviná"
+   ]
+  },
+  {
+   "s": "místní hnutí",
+   "t": "ODS",
+   "v": 12,
+   "mesta": [
+    "Opava",
+    "Kladno",
+    "Mladá Boleslav",
+    "Karlovy Vary",
+    "Havířov",
+    "Pardubice",
+    "Děčín",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "místní hnutí",
+   "t": "STAN",
+   "v": 9,
+   "mesta": [
+    "Olomouc",
+    "Mladá Boleslav",
+    "Ostrava",
+    "Havířov",
+    "Pardubice",
+    "Děčín",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek"
+   ]
+  },
+  {
+   "s": "místní hnutí",
+   "t": "KDU-ČSL",
+   "v": 8,
+   "mesta": [
+    "Olomouc",
+    "Havířov",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "místní hnutí",
+   "t": "TOP 09",
+   "v": 8,
+   "mesta": [
+    "Olomouc",
+    "Mladá Boleslav",
+    "Havířov",
+    "Pardubice",
+    "Brno",
+    "Zlín",
+    "Frýdek-Místek",
+    "Třinec"
+   ]
+  },
+  {
+   "s": "místní hnutí",
+   "t": "ANO",
+   "v": 6,
+   "mesta": [
+    "Kladno",
+    "Mladá Boleslav",
+    "Ostrava",
+    "Karlovy Vary",
+    "Havířov",
+    "Most"
+   ]
+  },
+  {
+   "s": "místní hnutí",
+   "t": "Piráti",
+   "v": 6,
+   "mesta": [
+    "Olomouc",
+    "Pardubice",
+    "Jablonec n. N.",
+    "Liberec",
+    "Brno",
+    "Zlín"
+   ]
+  },
+  {
+   "s": "místní hnutí",
+   "t": "Zelení",
+   "v": 5,
+   "mesta": [
+    "Olomouc",
+    "Opava",
+    "Jablonec n. N.",
+    "Liberec",
+    "Brno"
+   ]
+  }
+ ],
+ "koalic": 23
+}

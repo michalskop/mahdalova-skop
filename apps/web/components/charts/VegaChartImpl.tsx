@@ -127,8 +127,10 @@ function escapeHtml(v: unknown): string {
 // Barvy sérií ze všech barevných škál specu (top-level i vrstvy): {Česko: '#de1743', …}.
 // Souhrnný tooltip za celou kategorii (např. skupina sloupců Česko × Rakousko) má
 // řádky pojmenované podle sérií – každý se pak obarví barvou své série.
+// Spec může přidat vlastní barvy jen pro tooltip: `_tooltip_colors: {ODS: '#5e66d5', …}` – např. barevné
+// tečky stran u složení kandidátky, i když graf sám barví podle tábora (koalice ve městech, 4. 11. 2026).
 function seriesColorMap(spec: Record<string, unknown>): Record<string, string> {
-  const map: Record<string, string> = {};
+  const map: Record<string, string> = { ...((spec._tooltip_colors as Record<string, string> | undefined) ?? {}) };
   const units = [spec, ...(Array.isArray(spec.layer) ? spec.layer as Record<string, unknown>[] : [])];
   for (const unit of units) {
     const scale = ((unit.encoding as Record<string, unknown> | undefined)?.color as
@@ -179,7 +181,9 @@ function makeDpbpTooltipHandler(seriesColors: Record<string, string> = {}): Tool
         // Víceřádková hodnota (seznam jmen) jde pod klíč přes celou šíři; řádky s tabulátorem
         // se rozdělí do sloupců (např. 2 × 17 jmen v grafu řádů u článku o státních vyznamenáních).
         if (typeof v === 'string' && v.includes('\n')) {
-          const rows = v.split('\n').map(l => `<tr>${l.split('\t').map(c => `<td>${escapeHtml(c)}</td>`).join('')}</tr>`).join('');
+          // položka seznamu, která má barvu série (strana ve složení kandidátky), dostane barevnou tečku
+          const dot = (c: string) => seriesColors[c] ? `<span class="dt-tt-swatch" style="background:${seriesColors[c]};border-radius:50%"></span>` : '';
+          const rows = v.split('\n').map(l => `<tr>${l.split('\t').map(c => `<td>${dot(c)}${escapeHtml(c)}</td>`).join('')}</tr>`).join('');
           html += `<tr><td class="key" colspan="2">${swatch}${escapeHtml(k)}</td></tr>`
             + `<tr><td colspan="2"><table class="dt-tt-list">${rows}</table></td></tr>`;
           continue;
@@ -255,6 +259,7 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
     _reveal_sequence: _rs,
     _click_detail: _cd,
     _facet_fill: _ff,
+    _tooltip_colors: _tc,
     ...rest
   } = spec as Record<string, unknown>;
   return { ...rest, title: null };
