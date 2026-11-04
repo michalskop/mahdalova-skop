@@ -85,7 +85,8 @@ Jména jsou zdroj nástrojů, ne pokyn napodobovat hlas. Výsledný rukopis mus�
 **Zakázané konstrukce a fráze:**
 - protichůdné vzorce „není to jen A, je to B" a „X není A, je to B" — napiš rovnou B; negaci nech jen pro vyvrácení skutečně rozšířeného omylu, nejvýš jednou za text;
 - klišé a vata: *fascinující, zajímavé, pozoruhodné, anatomie čehokoli, rentgen čehokoli, pod povrchem, za oponou, mechanismus* jako náhrada konkrétní kauzální věty, *v neposlední řadě, v tomto kontextu, jak jsme viděli, stojí za zmínku, je třeba podotknout*;
-- anglické kalky: *není to o tom, na denní bázi, adresovat problém, dělat rozdíl, game changer / měnit hru, ikonický* jako univerzální pochvala, *narativ* tam, kde stačí příběh nebo výklad, *poznámka pod čarou* jako metafora bezvýznamnosti.
+- anglické kalky: *není to o tom, na denní bázi, adresovat problém, dělat rozdíl, game changer / měnit hru, ikonický* jako univerzální pochvala, *narativ* tam, kde stačí příběh nebo výklad, *poznámka pod čarou* jako metafora bezvýznamnosti;
+- novotvary ze jmen stran: *republikánštější, republikánštěji, demokratičtější* (ve smyslu „víc pro demokraty“) a podobné stupňování stranických přívlastků. Napiš víc „republikánský“ (s uvozovkami), nebo raději konkrétně, komu výsledek přeje, a vždy vysvětli proč (které hlasy se sčítají dřív, které státy chybějí). *(4. 11. 2026, predikce amerických voleb.)*
 
 **Metafora** je dovolená, pokud něco přesně objasní a není klišé. Musí projít testem: dává obraz smysl i tomu, kdo větu slyší poprvé a nahlas? U datového tvrzení nesmí nahrazovat definici ani zvyšovat emoci. Pokud potřebuje dvojtečku s výčtem, aby fungovala, škrtni ji a napiš výčet rovnou. Jedna čerstvá metafora je silnější než řada obrazných přívlastků.
 
