@@ -1,12 +1,12 @@
 {
   "formaty": {
     "homepage": {
-      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-homepage.png",
-      "otisk": "ecb46f893a8d1f9b",
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/images/cover-homepage.png",
+      "otisk": "efa2d693bd947fbd",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-homepage.svg": "ecb537e7bcece8b0"
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/cover.config.cjs": "52c033794e0be55b",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/motiv-homepage.svg": "ac918defae93f9e6"
       },
       "kontrola": {
         "chyby": [],
@@ -15,12 +15,12 @@
       }
     },
     "og": {
-      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-og.jpg",
-      "otisk": "f691523b25c039cc",
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/images/cover-og.jpg",
+      "otisk": "871203df1d3228c6",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-og.svg": "c788989147dec301"
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/cover.config.cjs": "52c033794e0be55b",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/motiv-og.svg": "3f1cbf41a78c28ac"
       },
       "kontrola": {
         "chyby": [],
@@ -31,12 +31,12 @@
       }
     },
     "square": {
-      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-square.png",
-      "otisk": "beea61aa50b3900b",
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/images/cover-square.png",
+      "otisk": "3b72bd06db0c3cce",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-square.svg": "eba3988f74ce53d2"
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/cover.config.cjs": "52c033794e0be55b",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/motiv-square.svg": "16ba8e5a0de269dc"
       },
       "kontrola": {
         "chyby": [],
@@ -47,12 +47,12 @@
       }
     },
     "instagram": {
-      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-instagram.png",
-      "otisk": "d639b425e3419a3b",
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/images/cover-instagram.png",
+      "otisk": "92587536291325e7",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-instagram.svg": "c617c6ea733e5e18"
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/cover.config.cjs": "52c033794e0be55b",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/motiv-instagram.svg": "e47142d36d0ee958"
       },
       "kontrola": {
         "chyby": [],
@@ -61,12 +61,12 @@
       }
     },
     "story": {
-      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-story.png",
-      "otisk": "b06f9bc818c77278",
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/images/cover-story.png",
+      "otisk": "92439b12c3e70d5e",
       "vstupy": {
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
-        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-story.svg": "e84fa6bcac33d5a4"
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/cover.config.cjs": "52c033794e0be55b",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/motiv-story.svg": "dbe2f9a7e4fa3582"
       },
       "kontrola": {
         "chyby": [],
@@ -75,14 +75,14 @@
       }
     }
   },
-  "konfigurace": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-11-04T00:07:00.118Z",
-  "clanek": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/index.md",
-  "titulekClanku": "Predikce DataTimes: Sněmovnu reprezentantů ovládnou demokraté",
+  "konfigurace": "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-04T10:37:32.973Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-usa-2026-11-03-predikce/index.md",
+  "titulekClanku": "Predikce DataTimes: Kongres ovládnou demokraté",
   "texty": {
     "stitek": "Predikce • Volby v USA",
     "nadtitulek": "",
-    "titulek": "Sněmovnu ovládnou demokraté",
+    "titulek": "Kongres ovládnou demokraté",
     "podtitulek": "Živá predikce, na mapě souboje o Senát"
   }
 }
