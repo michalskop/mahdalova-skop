@@ -1,0 +1,90 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/images/cover-homepage.png",
+      "otisk": "39b554f132c97d29",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/cover.config.cjs": "8bb4e3141d1b56f5",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/mapa-pozice.json": "1582524019b33479",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/motiv-homepage.svg": "a2923e4ef49e9c75"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/images/cover-og.jpg",
+      "otisk": "6674b74a1d13ef48",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/cover.config.cjs": "8bb4e3141d1b56f5",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/mapa-pozice.json": "1582524019b33479",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/motiv-og.svg": "7aef31cfee59add3"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/images/cover-square.png",
+      "otisk": "81e757181b7bf3a9",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/cover.config.cjs": "8bb4e3141d1b56f5",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/mapa-pozice.json": "1582524019b33479",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/motiv-square.svg": "ba702a76b8d95bf4"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/images/cover-instagram.png",
+      "otisk": "0298a2495dc6435d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/cover.config.cjs": "8bb4e3141d1b56f5",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/mapa-pozice.json": "1582524019b33479",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/motiv-instagram.svg": "72e345808628af41"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/images/cover-story.png",
+      "otisk": "c99e2e55350eaffd",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/cover.config.cjs": "8bb4e3141d1b56f5",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/mapa-pozice.json": "1582524019b33479",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/motiv-story.svg": "6d4c88fe52094c04"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-04T11:29:32.473Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/index.md",
+  "titulekClanku": "Trump prohrál volby, ve kterých nekandidoval",
+  "texty": {
+    "stitek": "Analýza • Volby v USA",
+    "nadtitulek": "",
+    "titulek": "Trump prohrál volby, ve kterých nekandidoval",
+    "podtitulek": "Demokraté vzali republikánům Senát i Sněmovnu"
+  }
+}

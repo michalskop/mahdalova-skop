@@ -1,0 +1,5 @@
+# Obrázky a vykreslené motivy coverů patří na CDN media.datatimes.org, ne do gitu (docs/technicke/media-cdn.md).
+# Generátor je vyrábí sem; nahrávají se přes scripts/upload_media.py a frontmatter odkazuje na jejich URL.
+images/
+_cover_pipeline/*.svg
+_cover_pipeline/*.png

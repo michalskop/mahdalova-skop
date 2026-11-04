@@ -1,0 +1,5 @@
+Zdroj: US Census Bureau, Vintage 2025 State Population Totals (vydano 27. 1. 2026)
+URL: https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv
+Stazeno: 2026-11-04
+Zdroj CZ: CSU, Rychla informace Pohyb obyvatelstva - rok 2025 (31. 3. 2026), stav k 31. 12. 2025
+URL: https://csu.gov.cz/rychle-informace/pohyb-obyvatelstva-rok-2025

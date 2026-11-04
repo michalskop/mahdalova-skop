@@ -1,0 +1,51 @@
+stat,s1,s2
+Alabama,R,R
+Alaska,R,?
+Arizona,D,D
+Arkansas,R,R
+California,D,D
+Colorado,D,D
+Connecticut,D,D
+Delaware,D,D
+Florida,R,R
+Georgia,D,D
+Hawaii,D,D
+Idaho,R,R
+Illinois,D,D
+Indiana,R,R
+Iowa,R,D
+Kansas,R,D
+Kentucky,R,R
+Louisiana,R,R
+Maine,D,D
+Maryland,D,D
+Massachusetts,D,D
+Michigan,D,D
+Minnesota,D,D
+Mississippi,R,?
+Missouri,R,R
+Montana,R,R
+Nebraska,R,R
+Nevada,D,D
+New Hampshire,D,D
+New Jersey,D,D
+New Mexico,D,D
+New York,D,D
+North Carolina,R,D
+North Dakota,R,R
+Ohio,R,D
+Oklahoma,R,R
+Oregon,D,D
+Pennsylvania,R,D
+Rhode Island,D,D
+South Carolina,R,D
+South Dakota,R,R
+Tennessee,R,R
+Texas,R,D
+Utah,R,R
+Vermont,D,D
+Virginia,D,D
+Washington,D,D
+West Virginia,R,R
+Wisconsin,R,D
+Wyoming,R,R
