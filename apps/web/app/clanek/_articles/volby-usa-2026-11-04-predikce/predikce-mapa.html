@@ -1,0 +1,204 @@
+<style>
+.dt-us26 {
+  --ink: #101432;
+  --muted: #5b5f73;
+  --line: #e3e1d8;
+  --d3: #4a51ab; --d2: #697fe6; --d1: #a9b5f0;
+  --tu: #ece6d3;
+  --r1: #efa0af; --r2: #d85a74; --r3: #a03250;
+  --none: #f4f3ef;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  color: var(--ink);
+  margin: 1.5rem 0 2rem;
+}
+.dt-us26 * { box-sizing: border-box; }
+.dt-us26-top { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.dt-us26-chamber { border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; background: #fff; }
+.dt-us26-chamber h4 { margin: 0 0 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+.dt-us26-big { font-size: 2.4rem; font-weight: 700; line-height: 1.1; color: var(--d3); }
+.dt-us26-big.r { color: var(--r3); }
+.dt-us26-sub { font-size: 0.85rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+.dt-us26-bar { position: relative; height: 10px; border-radius: 5px; background: var(--r1); margin-top: 10px; overflow: hidden; }
+.dt-us26-bar span { position: absolute; left: 0; top: 0; bottom: 0; background: var(--d2); }
+.dt-us26-hemi { text-align: center; margin: 0 0 18px; }
+.dt-us26-hemi svg { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; }
+.dt-us26-hemi p { margin: 4px 0 0; font-size: 0.9rem; }
+.dt-us26-hemi .d { color: var(--d3); font-weight: 700; }
+.dt-us26-hemi .r { color: var(--r3); font-weight: 700; }
+.dt-us26-tabs { display: flex; gap: 6px; margin: 0 0 12px; }
+.dt-us26-tabs button { font: inherit; font-size: 0.9rem; font-weight: 600; padding: 6px 14px; border: 1px solid var(--ink); background: #fff; color: var(--ink); border-radius: 999px; cursor: pointer; }
+.dt-us26-tabs button.on { background: var(--ink); color: #fff; }
+.dt-us26-grid { display: grid; grid-template-columns: repeat(11, 1fr); gap: 4px; max-width: 640px; }
+.dt-us26-tile { aspect-ratio: 1; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; background: var(--none); color: #a3a5b3; cursor: default; line-height: 1.05; position: relative; }
+.dt-us26-tile small { font-size: 0.66rem; font-weight: 500; }
+.dt-us26-tile.race { cursor: pointer; color: var(--ink); }
+.dt-us26-tile.dark { color: #fff; }
+.dt-us26-tile.sel { outline: 2px solid var(--ink); outline-offset: 1px; }
+.dt-us26-tile .cnt { position: absolute; bottom: 2px; left: 3px; right: 3px; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.35); overflow: hidden; }
+.dt-us26-tile .cnt i { display: block; height: 100%; background: var(--ink); }
+.dt-us26-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.78rem; color: var(--muted); margin: 12px 0 0; }
+.dt-us26-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.dt-us26-legend b { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.dt-us26-detail { margin-top: 12px; min-height: 64px; border-left: 4px solid var(--ink); padding: 8px 12px; background: #faf9f5; font-size: 0.9rem; line-height: 1.45; }
+.dt-us26-detail strong { font-size: 1rem; }
+.dt-us26-foot { font-size: 0.78rem; color: var(--muted); margin-top: 12px; line-height: 1.45; }
+.dt-us26-foot a { color: var(--ink); }
+@media (max-width: 560px) {
+  .dt-us26-top { grid-template-columns: 1fr; }
+  .dt-us26-grid { gap: 2px; }
+  .dt-us26-tile { font-size: 0.62rem; border-radius: 3px; }
+  .dt-us26-tile small { display: none; }
+}
+</style>
+
+<div class="dt-us26" id="dt-us26">
+  <div class="dt-us26-top">
+    <div class="dt-us26-chamber"><h4>Sněmovna reprezentantů</h4><div class="dt-us26-big" data-k="H-p">…</div><div class="dt-us26-sub" data-k="H-sub">Načítám živá data…</div><div class="dt-us26-bar"><span data-k="H-bar"></span></div></div>
+    <div class="dt-us26-chamber"><h4>Senát</h4><div class="dt-us26-big" data-k="S-p">…</div><div class="dt-us26-sub" data-k="S-sub"></div><div class="dt-us26-bar"><span data-k="S-bar"></span></div></div>
+  </div>
+  <div class="dt-us26-hemi"><h4 style="margin:0 0 6px;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:600">Odhad složení Sněmovny reprezentantů (435 křesel)</h4><svg data-k="hemi" viewBox="0 0 400 214" role="img" aria-label="Odhad rozložení křesel ve Sněmovně reprezentantů"></svg><p data-k="hemi-txt"></p></div>
+  <div class="dt-us26-tabs">
+    <button type="button" data-kind="S" class="on">Senát</button>
+    <button type="button" data-kind="G">Guvernéři</button>
+  </div>
+  <div class="dt-us26-grid" data-k="grid"></div>
+  <div class="dt-us26-legend">
+    <span><b style="background:var(--d3)"></b>demokrat téměř jistě</span>
+    <span><b style="background:var(--d2)"></b>pravděpodobně D</span>
+    <span><b style="background:var(--d1)"></b>spíš D</span>
+    <span><b style="background:var(--tu)"></b>nerozhodnuto</span>
+    <span><b style="background:var(--r1)"></b>spíš R</span>
+    <span><b style="background:var(--r2)"></b>pravděpodobně R</span>
+    <span><b style="background:var(--r3)"></b>republikán téměř jistě</span>
+    <span><b style="background:var(--none)"></b>letos se nevolí</span>
+  </div>
+  <div class="dt-us26-detail" data-k="detail">Klepněte na stát a uvidíte šanci kandidátů a kolik hlasů je sečteno.</div>
+  <div class="dt-us26-foot" data-k="foot">Data: predikční model DataTimes.cz, který se každou minutu přepočítává podle sečtených hlasů. Proužek dole na dlaždici ukazuje, kolik hlasů je ve státě sečteno.</div>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('dt-us26');
+  if (!root || root.dataset.init) return;
+  root.dataset.init = '1';
+  var API = 'https://us2026.datatimes.org/api/';
+  var LAYOUT = {
+    AK:[0,0], ME:[10,0], VT:[9,1], NH:[10,1],
+    WA:[0,2], ID:[1,2], MT:[2,2], ND:[3,2], MN:[4,2], IL:[5,2], WI:[6,2], MI:[7,2], NY:[8,2], RI:[9,2], MA:[10,2],
+    OR:[0,3], NV:[1,3], WY:[2,3], SD:[3,3], IA:[4,3], IN:[5,3], OH:[6,3], PA:[7,3], NJ:[8,3], CT:[9,3],
+    CA:[0,4], UT:[1,4], CO:[2,4], NE:[3,4], MO:[4,4], KY:[5,4], WV:[6,4], VA:[7,4], MD:[8,4], DE:[9,4],
+    AZ:[1,5], NM:[2,5], KS:[3,5], AR:[4,5], TN:[5,5], NC:[6,5], SC:[7,5], DC:[8,5],
+    OK:[3,6], LA:[4,6], MS:[5,6], AL:[6,6], GA:[7,6],
+    HI:[0,7], TX:[3,7], FL:[8,7]
+  };
+  var NAMES = {AL:'Alabama',AK:'Aljaška',AZ:'Arizona',AR:'Arkansas',CA:'Kalifornie',CO:'Colorado',CT:'Connecticut',DE:'Delaware',DC:'District of Columbia',FL:'Florida',GA:'Georgie',HI:'Havaj',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'Nové Mexiko',NY:'New York',NC:'Severní Karolína',ND:'Severní Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pensylvánie',RI:'Rhode Island',SC:'Jižní Karolína',SD:'Jižní Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginie',WA:'Washington',WV:'Západní Virginie',WI:'Wisconsin',WY:'Wyoming'};
+  var CANDS = {
+    S: {NC:['Roy Cooper','Michael Whatley'],GA:['Jon Ossoff','Mike Collins'],NH:['Chris Pappas','John E. Sununu'],MN:['Peggy Flanagan','Michele Tafoya'],MI:['Abdul El-Sayed','Mike Rogers'],ME:['Troy Jackson','Susan Collins'],KS:['Adam Hamilton','Roger Marshall'],TX:['James Talarico','Ken Paxton'],OH:['Sherrod Brown','Jon Husted'],AK:['Mary Peltola','Dan Sullivan'],IA:['Josh Turek','Ashley Hinson'],SC:['Annie Andrews','Darline Graham'],NE:['Dan Osborn (nezávislý)','Pete Ricketts'],FL:['Angie Nixon','Ashley Moody']},
+    G: {GA:['Keisha Lance Bottoms','Rick Jackson'],NV:['Aaron Ford','Joe Lombardo'],KS:['Cindy Holscher','Ty Masterson'],TX:['Gina Hinojosa','Greg Abbott'],FL:['David Jolly','Byron Donalds'],WI:['David Crowley','Tom Tiffany'],OH:['Amy Acton','Vivek Ramaswamy'],IA:['Rob Sand','Zach Lahn'],AK:['Jonathan Kreiss-Tomkins','Bernadette Wilson'],MI:['Jocelyn Benson','John James'],AZ:['Katie Hobbs','Andy Biggs'],NH:['Cinde Warmington','Kelly Ayotte'],PA:['Josh Shapiro','–'],NY:['Kathy Hochul','Bruce Blakeman']}
+  };
+  var kind = 'S', races = {}, sel = null;
+  function $(k) { return root.querySelector('[data-k="' + k + '"]'); }
+  function pct(x, d) { return (x * 100).toFixed(d || 0).replace('.', ',') + ' %'; }
+  function bucket(p) {
+    if (p >= 0.95) return ['--d3', 1, 'demokrat téměř jistě'];
+    if (p >= 0.75) return ['--d2', 1, 'pravděpodobně demokrat'];
+    if (p >= 0.6) return ['--d1', 0, 'spíš demokrat'];
+    if (p > 0.4) return ['--tu', 0, 'nerozhodnuto'];
+    if (p > 0.25) return ['--r1', 0, 'spíš republikán'];
+    if (p > 0.05) return ['--r2', 1, 'pravděpodobně republikán'];
+    return ['--r3', 1, 'republikán téměř jistě'];
+  }
+  function chamber(c, ch, pc, need) {
+    var p = pc, d = p >= 0.5;
+    var big = $(c + '-p');
+    big.textContent = d ? pct(p) : pct(1 - p);
+    big.className = 'dt-us26-big' + (d ? '' : ' r');
+    $(c + '-bar').style.width = (p * 100) + '%';
+    $(c + '-sub').innerHTML = 'šance, že ' + (d ? 'většinu získají <b>demokraté</b>' : 'většinu udrží <b>republikáni</b>') +
+      '<br>odhad křesel demokratů: <b>' + Math.round(ch.mean) + '</b> (90 % rozpětí ' + ch.p5 + '–' + ch.p95 + '; většina = ' + need + ')';
+  }
+  // půlkruh 435 křesel: 12 řad, křesla seřazená podle úhlu, demokraté zleva
+  var SEATS = (function () {
+    var rows = 12, r0 = 80, r1 = 190, rad = [], tot = 0, out = [];
+    for (var i = 0; i < rows; i++) { rad.push(r0 + (r1 - r0) * i / (rows - 1)); tot += rad[i]; }
+    var left = 435;
+    rad.forEach(function (r, i) {
+      var n = i === rows - 1 ? left : Math.round(435 * r / tot); left -= n;
+      for (var j = 0; j < n; j++) { var a = Math.PI * (1 - j / (n - 1)); out.push([200 + r * Math.cos(a), 200 - r * Math.sin(a), a]); }
+    });
+    return out.sort(function (x, y) { return y[2] - x[2]; });
+  })();
+  function hemi(nD) {
+    var s = '';
+    SEATS.forEach(function (p, i) { s += '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="4.1" fill="' + (i < nD ? '#4a51ab' : '#a03250') + '"/>'; });
+    s += '<line x1="200" y1="4" x2="200" y2="194" stroke="#101432" stroke-width="1.5" stroke-dasharray="4 3"/>';
+    s += '<text x="200" y="212" text-anchor="middle" font-size="11" fill="#101432" font-weight="600" dy="-4">218 = většina</text>';
+    $('hemi').innerHTML = s;
+    $('hemi-txt').innerHTML = '<span class="d">demokraté ' + nD + '</span> · <span class="r">republikáni ' + (435 - nD) + '</span> (střední odhad modelu)';
+  }
+  function detail(st) {
+    var box = $('detail'), r = st && races[kind][st];
+    if (!r) { box.innerHTML = 'Klepněte na stát a uvidíte šanci kandidátů a kolik hlasů je sečteno.'; return; }
+    var c = (CANDS[kind] || {})[st], p = r.pd_m;
+    var who = c ? 'Demokrat ' + c[0] + ' × republikán ' + c[1] + '<br>' : '';
+    box.innerHTML = '<strong>' + NAMES[st] + ' – ' + (kind === 'S' ? 'Senát' : 'guvernér') + (/special/i.test(r.label) ? ' (doplňovací volba)' : '') + '</strong><br>' + who +
+      'Šance demokrata: <b>' + pct(p) + '</b> (' + bucket(p)[2] + ') · odhad podílu hlasů D: ' + pct(r.d_m, 1) +
+      ' · sečteno: ' + pct(r.counted || 0);
+  }
+  function draw() {
+    var g = $('grid'); g.innerHTML = '';
+    Object.keys(LAYOUT).forEach(function (st) {
+      var pos = LAYOUT[st], r = races[kind][st], t = document.createElement('div');
+      t.className = 'dt-us26-tile';
+      t.style.gridColumn = pos[0] + 1; t.style.gridRow = pos[1] + 1;
+      if (r) {
+        var b = bucket(r.pd_m);
+        t.className += ' race' + (b[1] ? ' dark' : '') + (sel === st ? ' sel' : '');
+        t.style.background = 'var(' + b[0] + ')';
+        t.innerHTML = st + '<small>' + Math.round((r.pd_m >= 0.5 ? r.pd_m : 1 - r.pd_m) * 100) + ' % ' + (r.pd_m >= 0.5 ? 'D' : 'R') + '</small>' +
+          '<span class="cnt"><i style="width:' + Math.min(100, (r.counted || 0) * 100) + '%"></i></span>';
+        t.title = NAMES[st];
+        t.onclick = function () { sel = st; draw(); detail(st); };
+      } else {
+        t.textContent = st;
+      }
+      g.appendChild(t);
+    });
+    detail(sel);
+  }
+  root.querySelectorAll('.dt-us26-tabs button').forEach(function (b) {
+    b.onclick = function () {
+      kind = b.dataset.kind; sel = null;
+      root.querySelectorAll('.dt-us26-tabs button').forEach(function (x) { x.className = x === b ? 'on' : ''; });
+      draw();
+    };
+  });
+  function load() {
+    Promise.all([
+      fetch(API + 'races.json?t=' + Date.now()).then(function (r) { return r.json(); }),
+      fetch(API + 'overview.json?t=' + Date.now()).then(function (r) { return r.json(); })
+    ]).then(function (res) {
+      var rc = res[0], ov = res[1], cols = rc.cols;
+      races = { S: {}, G: {} };
+      rc.rows.forEach(function (row) {
+        var o = {}; cols.forEach(function (c, i) { o[c] = row[i]; });
+        if (o.kind === 'S' || o.kind === 'G') races[o.kind][o.st] = o;
+      });
+      var mix = ov.chambers.mix;
+      chamber('H', mix.House, ov.p_control.H, 218);
+      hemi(Math.round(mix.House.mean));
+      chamber('S', mix.Senate, ov.p_control.S, 51);
+      draw();
+      var when = new Date(ov.t * 1000).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Prague' });
+      var pr = ov.progress || {};
+      var cov = function (k) { var c = pr[k] && pr[k].mix ? pr[k].mix.cov : null; return c === null ? '–' : pct(c, c < 0.1 ? 1 : 0); };
+      $('foot').innerHTML = '<b>Aktualizováno v ' + when + '</b> (náš čas) · sečteno hlasů: Senát ' + cov('S') + ', Sněmovna ' + cov('H') +
+        '. Data: predikční model DataTimes.cz, který se každou minutu přepočítává podle sečtených hlasů. Proužek dole na dlaždici ukazuje, kolik hlasů je ve státě sečteno.';
+    }).catch(function () {
+      $('H-sub').textContent = 'Živá data se teď nepodařilo načíst. Zkuste stránku za chvíli obnovit.';
+    });
+  }
+  load();
+  setInterval(function () { if (document.body.contains(root)) load(); }, 60000);
+})();
+</script>

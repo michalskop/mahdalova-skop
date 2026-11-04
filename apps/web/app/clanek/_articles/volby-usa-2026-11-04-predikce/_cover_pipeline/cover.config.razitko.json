@@ -1,0 +1,88 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-homepage.png",
+      "otisk": "ecb46f893a8d1f9b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-homepage.svg": "ecb537e7bcece8b0"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-og.jpg",
+      "otisk": "f691523b25c039cc",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-og.svg": "c788989147dec301"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-square.png",
+      "otisk": "beea61aa50b3900b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-square.svg": "eba3988f74ce53d2"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-instagram.png",
+      "otisk": "d639b425e3419a3b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-instagram.svg": "c617c6ea733e5e18"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/images/cover-story.png",
+      "otisk": "b06f9bc818c77278",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs": "043c3431385867ce",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/mapa-pozice.json": "5f63f571454b2460",
+        "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/motiv-story.svg": "e84fa6bcac33d5a4"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-04T00:07:00.118Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-usa-2026-11-04-predikce/index.md",
+  "titulekClanku": "Predikce DataTimes: Sněmovnu reprezentantů ovládnou demokraté",
+  "texty": {
+    "stitek": "Predikce • Volby v USA",
+    "nadtitulek": "",
+    "titulek": "Sněmovnu ovládnou demokraté",
+    "podtitulek": "Živá predikce, na mapě souboje o Senát"
+  }
+}
