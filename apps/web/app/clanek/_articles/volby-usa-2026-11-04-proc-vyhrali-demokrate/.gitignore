@@ -7,3 +7,4 @@ _cover_pipeline/*.png
 # Surová data mapy okresů (velká; snapshot výsledků z neveřejného modelu a hranice us-atlas) – zdroj v _data_pipeline/okresy.mjs
 _data_pipeline/raw/vysledky-okresy.json
 _data_pipeline/raw/counties-albers-10m.json
+_data_pipeline/raw/zavody.json

@@ -104,6 +104,29 @@ for (const kind of ['H', 'S', 'G']) {
   const sd = v.reduce((a, x) => a + x[0], 0), sa = v.reduce((a, x) => a + x[0] + x[1], 0);
   console.log(`${kind}: okresy D ${dw}, R ${v.length - dw} (R ${(100 * (v.length - dw) / v.length).toFixed(0)} %), hlasy D ${(100 * sd / sa).toFixed(1)} % ze dvou stran`);
 }
+// Sněmovní obvody: sečtené hlasy a těžiště (průměr těžišť okresů vážený očekávanými hlasy) -> obvody.json pro kartogram 1 obvod = 1 pole
+// Obvody bez souboje demokrata s republikánem (v okresních datech chybí) doplní raw/zavody.json (seznam 435 závodů a jejich hodnocení)
+const centroidId = Object.fromEntries(fc.features.map((f) => [f.id, p.centroid(f)]));
+const obv = {};
+for (const r of rows) {
+  if (r.kind !== 'H') continue;
+  const o = (obv[r.race] = obv[r.race] || { label: r.label, st: r.st, d: 0, r: 0, c: 0, e: 0, sx: 0, sy: 0, w: 0 });
+  o.d += r.votes_d || 0; o.r += r.votes_r || 0; o.c += r.counted || 0; o.e += r.expected || 0;
+  const id = match(r.st, r.unit);
+  const ids = id ? [id] : geoms.filter((g) => g.id.startsWith(FIPS[r.st])).map((g) => g.id); // Aljaška, Connecticut: celý stát
+  for (const i of ids) { const c = centroidId[i]; const w = (r.expected || 1) / ids.length; o.sx += c[0] * w; o.sy += c[1] * w; o.w += w; }
+}
+const zav = JSON.parse(fs.readFileSync(path.join(RAW, 'zavody.json'), 'utf8'));
+const obvody = zav.rows.map((x) => Object.fromEntries(zav.cols.map((c, i) => [c, x[i]]))).filter((x) => x.kind === 'H').map((z) => {
+  const o = obv[z.id];
+  if (o && o.d + o.r > 0) return [z.label, z.st, o.d, o.r, o.e ? Math.round((1000 * o.c) / o.e) / 10 : null, z.st === 'AK' ? 2 : 0, +(o.sx / o.w).toFixed(1), +(o.sy / o.w).toFixed(1)];
+  const strana = /D$/.test(z.fc_rating) ? 'D' : 'R'; // bez souboje D × R: barva podle strany, která obvod podle předvolebního hodnocení drží
+  return [z.label, z.st, strana === 'D' ? 1 : 0, strana === 'R' ? 1 : 0, null, 3, null, null];
+});
+const dObv = obvody.filter((o) => o[5] !== 2 && o[2] > o[3]).length;
+console.log(`obvody: ${obvody.length}, demokraté vedou nebo bez soupeře v ${dObv}, republikáni v ${obvody.filter((o) => o[5] !== 2 && o[3] > o[2]).length}, Aljaška ${obvody.filter((o) => o[5] === 2).length}; bez souboje D×R ${obvody.filter((o) => o[5] === 3).length}`);
+fs.writeFileSync(path.join(__dirname, 'obvody.json'), JSON.stringify(obvody));
+
 const stav = new Date(src.t * 1000).toLocaleString('cs-CZ', { timeZone: 'Europe/Prague', day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit' });
 const out = { stav, okresy, hranice, obrys, vrstvy: ven };
 const f = path.join(__dirname, '..', 'okresy-mapa.json');
