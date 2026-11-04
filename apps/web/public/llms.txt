@@ -22,8 +22,8 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
 
 ### Volební analýzy a modely
 - [Glosa: Dezinformace jako nikdy](https://www.mahdalova-skop.cz/clanek/komentar-2025-01-22-dezinformace-jako-nikdy)
+- [ANO vládne ve velkých městech se sněmovní opozicí. Se SPD a Motoristy nikde](https://www.mahdalova-skop.cz/clanek/volby-cr-2026-11-04-ano-vladne-s-opozici)
 - [Predikce DataTimes: Sněmovnu reprezentantů ovládnou demokraté](https://www.mahdalova-skop.cz/clanek/volby-usa-2026-11-03-predikce)
-- [Osadníci útočí čím dál častěji, palestinský stát nechce ani Netanjahu, ani Eisenkot](https://www.mahdalova-skop.cz/clanek/analyza-2026-10-31-osadnici-na-zapadnim-brehu)
 
 ### Ekonomika a ceny
 - [Neschopenek přibylo, prostonaných dnů ubylo. Návrat karenční doby data nepodporují](https://www.mahdalova-skop.cz/clanek/analyza-2026-09-24-navrat-karencni-doby-nedava-smysl)
