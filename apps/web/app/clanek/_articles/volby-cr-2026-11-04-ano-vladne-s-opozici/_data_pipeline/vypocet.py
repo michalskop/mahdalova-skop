@@ -464,7 +464,7 @@ def pozice():
     return out
 yl, yr = pozice(), pozice()
 offl = dict(yl); offr = dict(yr)
-cesty = []
+cesty, prechody = [], []
 for s in poradi:
     for t in poradi:
         v = vazba(s, t) if s != t else 0
@@ -478,7 +478,12 @@ for s in poradi:
              f"C{cx},{b0 + h:.1f} {cx},{a0 + h:.1f} {x0 + NW},{a0 + h:.1f} Z")
         mm = mesta_par[tuple(sorted((s, t), key=UZLY.index))]
         k = 'koalici' if v == 1 else 'koalicích'
-        cesty.append(f'<path d="{d}" fill="{barva(s)}" fill-opacity="{0.62 if s == "ANO" else 0.26}" class="l" data-s="{s}" data-t="{t}" data-v="{v}">'
+        # přechod barvy strany vlevo → šedá uprostřed → barva partnera vpravo (Kateřina 4. 11., jako Flourish)
+        gid = f'sg{len(cesty)}'
+        prechody.append(f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="{x0 + NW}" y1="0" x2="{x1}" y2="0">'
+                        f'<stop offset="0" stop-color="{barva(s)}"/><stop offset="0.5" stop-color="#b9bccb"/>'
+                        f'<stop offset="1" stop-color="{barva(t)}"/></linearGradient>')
+        cesty.append(f'<path d="{d}" fill="url(#{gid})" fill-opacity="{0.7 if s == "ANO" else 0.38}" class="l" data-s="{s}" data-t="{t}" data-v="{v}">'
                      f'<title>{s} a {t}: spolu v {v} {k} ({", ".join(mm)})</title></path>')
 # Uzly jsou přepínače (Kateřina 4. 11., jako ve Flourish): klik na stranu v levém nebo pravém sloupci zvýrazní
 # jen její pruhy a u partnerů na druhé straně ukáže počet společných koalic; druhý klik vrátí celý graf.
@@ -512,7 +517,7 @@ JS = ("(function(){document.querySelectorAll('.dt-sankey svg:not([data-init])').
 svg = (f'<svg viewBox="-4 -10 {W + 8} {Hc + 40:.0f}" width="100%" role="img" xmlns="http://www.w3.org/2000/svg" '
        f'aria-label="Sankeyův diagram: kdo s kým sedí v 23 dohodnutých koalicích. ANO nejčastěji s místními hnutími (6) a s ODS (5), opoziční strany spolu nejčastěji (STAN a TOP 09 10, ODS se STAN, lidovci a TOP 09 po 9)." '
        f'style="font-family:IBM Plex Sans,Arial,sans-serif;font-size:15px;fill:#101432;display:block;max-width:500px;margin:0 auto">'
-       f'<style>{CSS}</style>'
+       f'<style>{CSS}</style><defs>{"".join(prechody)}</defs>'
        + ''.join(cesty) + ''.join(uzly) + '</svg>')
 (ART / 'sankey.html').write_text(f'<div class="dt-sankey">{svg}</div>\n<script>{JS}</script>\n', encoding='utf-8')
 p(f'sankey zapsán: sankey.html (výška {Hc:.0f} px)')
