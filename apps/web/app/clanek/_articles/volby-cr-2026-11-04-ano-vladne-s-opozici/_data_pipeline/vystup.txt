@@ -362,3 +362,42 @@ Graf – Koalice bez ANO: 14
 Graf – Jedná se nebo čeká na soud: 3
 
 graf zapsán: data/koalice.json
+
+==============================================================================
+SANKEY – KDO S KÝM V 23 DOHODNUTÝCH KOALICÍCH
+==============================================================================
+   Olomouc: STAN, KDU-ČSL, TOP 09, Piráti, Zelení, místní hnutí
+   Opava: ODS, Zelení, místní hnutí
+   Přerov: ANO, ODS, KDU-ČSL
+   Kladno: ANO, ODS, místní hnutí
+   Mladá Boleslav: ANO, ODS, STAN, TOP 09, místní hnutí
+   Plzeň: ANO, STAN, KDU-ČSL
+   Ostrava: ANO, STAN, místní hnutí
+   Karlovy Vary: ANO, ODS, místní hnutí
+   Havířov: ANO, ODS, STAN, KDU-ČSL, TOP 09, místní hnutí
+   Pardubice: ODS, STAN, KDU-ČSL, TOP 09, Piráti, místní hnutí
+   Děčín: ODS, STAN, místní hnutí
+   Jablonec nad Nisou: ODS, KDU-ČSL, Piráti, Zelení, místní hnutí
+   Liberec: Piráti, Zelení, místní hnutí
+   Most: ANO, místní hnutí
+   Teplice: ANO, KDU-ČSL, Piráti, Zelení
+   Hradec Králové: STAN, KDU-ČSL, TOP 09, Piráti, Zelení
+   Brno: ODS, STAN, KDU-ČSL, TOP 09, Piráti, Zelení, místní hnutí
+   Zlín: ODS, STAN, KDU-ČSL, TOP 09, Piráti, místní hnutí
+   Jihlava: ODS, STAN, KDU-ČSL, TOP 09
+   Prostějov: ODS, STAN, TOP 09, Zelení
+   Frýdek-Místek: ODS, STAN, KDU-ČSL, TOP 09, místní hnutí
+   Třinec: ODS, KDU-ČSL, TOP 09, místní hnutí
+   Karviná: ANO, SOCDEM
+v kolika koalicích: ANO 10; ODS 15; STAN 13; KDU-ČSL 13; TOP 09 11; Piráti 8; Zelení 8; SOCDEM 1; místní hnutí 16
+   ANO           → ODS 5, STAN 4, KDU-ČSL 4, TOP 09 2, Piráti 1, Zelení 1, SOCDEM 1, místní hnutí 6
+   ODS           → ANO 5, STAN 9, KDU-ČSL 9, TOP 09 9, Piráti 4, Zelení 4, místní hnutí 12
+   STAN          → ANO 4, ODS 9, KDU-ČSL 9, TOP 09 10, Piráti 5, Zelení 4, místní hnutí 9
+   KDU-ČSL       → ANO 4, ODS 9, STAN 9, TOP 09 9, Piráti 7, Zelení 5, místní hnutí 8
+   TOP 09        → ANO 2, ODS 9, STAN 10, KDU-ČSL 9, Piráti 5, Zelení 4, místní hnutí 8
+   Piráti        → ANO 1, ODS 4, STAN 5, KDU-ČSL 7, TOP 09 5, Zelení 6, místní hnutí 6
+   Zelení        → ANO 1, ODS 4, STAN 4, KDU-ČSL 5, TOP 09 4, Piráti 6, místní hnutí 5
+   SOCDEM        → ANO 1
+   místní hnutí  → ANO 6, ODS 12, STAN 9, KDU-ČSL 8, TOP 09 8, Piráti 6, Zelení 5
+SPD, Motoristé, PRO v koalici: 0
+sankey zapsán: sankey.html (výška 600 px)

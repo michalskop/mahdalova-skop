@@ -315,6 +315,26 @@ spec2 = {
 (ART / 'data' / 'vitezove.json').write_text(json.dumps(spec2, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 p('graf zapsán: data/vitezove.json')
 
+# Složení kandidátky do tooltipu: každá strana s barvou jako v ostatních volebních článcích (Komu patří Česko,
+# 19. 10.), nezávislí šedomodře, místní hnutí a ostatní světle (Kateřina 4. 11.: tečky stran v tooltipu).
+STRANY = {'768': ('ANO', '#272a59'), '1114': ('SPD', '#a47d03'), '166': ('STAN', '#ff1a4a'), '53': ('ODS', '#5e66d5'),
+          '720': ('Piráti', '#111111'), '1': ('KDU-ČSL', '#ffcf02'), '721': ('TOP 09', '#812840'),
+          '1178': ('Motoristé', '#1a9fbd'), '7': ('SOCDEM', '#f76800'), '47': ('KSČM', '#c5143c'), '5': ('Zelení', '#639e0a'),
+          '714': ('Svobodní', '#0e926a'), '1265': ('PRO', '#9f319e'), '1245': ('Přísaha', '#a9b5f0'),
+          '1227': ('Trikolora', '#ffb3c0'), '1298': ('Stačilo!', '#c5143c')}
+NEZ_ZKR = {'NK', 'NEZ', 'Nestran.'}
+TT_BARVY = {n: b for n, b in STRANY.values()} | {'nezávislí': '#8a8fb0', 'místní hnutí': '#c3c6d8'}
+
+
+def slozeni(l):
+    out = []
+    for x in l['slo']:
+        n = STRANY[x][0] if x in STRANY else 'nezávislí' if cvs.get(x) in NEZ_ZKR else 'místní hnutí'
+        if n not in out:
+            out.append(n)
+    return '\n'.join(out)
+
+
 # ── Graf: složení zastupitelstev, koalice plně, ostatní světle ──────────────
 SKUP = [('ANO v dohodnuté koalici', lambda m: m['ano_v'] and m['stav'] != 'jedna'),
         ('Koalice bez ANO', lambda m: m['stav'] in ('smlouva', 'dohoda', 'sama') and not m['ano_v']),
@@ -338,7 +358,8 @@ for i, (sk, f) in enumerate(SKUP):
             rows.append(dict(mesto=y, kand=l['nazev'], mand=l['m'], z=m['mand'], x0=round(x0 / m['mand'] * 100, 2),
                              x1=round((x0 + l['m']) / m['mand'] * 100, 2), tabor=TAB_POPIS[tabor(l)],
                              vkoalici='v koalici' if v else 'mimo koalici', poradi=j,
-                             stav=STAV_POPIS[m['stav']], koal=f"{m['km']} z {m['mand']}" if m['km'] else '–'))
+                             stav=STAV_POPIS[m['stav']], koal=f"{m['km']} z {m['mand']}" if m['km'] else '–',
+                             slozeni=slozeni(l)))
             x0 += l['m']
     if i < len(SKUP) - 1:
         domena.append(f'mezera-{i}')
@@ -357,6 +378,7 @@ spec = {
     'title': {'text': 'ANO vládne v deseti velkých městech, v osmi z nich se stranami sněmovní opozice',
               'subtitle': 'Rozdělení mandátů v zastupitelstvech 26 statutárních měst a Prahy; plnou barvou kandidátky v dohodnuté koalici, světle ostatní. Stav 4. 11. 2026'},
     '_source': 'ČSÚ – otevřená data komunálních voleb 2026 (mandáty, složení kandidátek); koalice podle zpráv ČTK a regionálních médií ke 4. 11. 2026; mandáty v Karviné a Mostě po rozhodnutí soudů; výpočet DataTimes.cz',
+    '_tooltip_colors': TT_BARVY,
     'width': 600, 'height': 620,
     'data': {'values': rows},
     'layer': [
@@ -372,7 +394,8 @@ spec = {
                          'legend': None},
              'tooltip': [{'field': 'mesto', 'title': 'Město'}, {'field': 'kand', 'title': 'Kandidátka'},
                          {'field': 'mand', 'title': 'Mandátů'}, {'field': 'vkoalici', 'title': 'Koalice'},
-                         {'field': 'koal', 'title': 'Koalice má mandátů'}, {'field': 'stav', 'title': 'Stav'}]}},
+                         {'field': 'koal', 'title': 'Koalice má mandátů'}, {'field': 'stav', 'title': 'Stav'},
+                         {'field': 'slozeni', 'title': 'Složení kandidátky'}]}},
         {'mark': {'type': 'rule', 'strokeDash': [4, 3], 'strokeWidth': 1.5},
          'encoding': {'x': {'datum': 50, 'type': 'quantitative'}, 'color': {'value': '#101432'}}},
     ],
@@ -390,3 +413,90 @@ cov = [dict(nazev=m['nazev'], obyv=m['obyv'],
 (ART / '_cover_pipeline').mkdir(exist_ok=True)
 (ART / '_cover_pipeline' / 'mesta.json').write_text(json.dumps(cov, ensure_ascii=False, indent=0), encoding='utf-8')
 print('cover: _cover_pipeline/mesta.json', Counter(c['role'] for c in cov))
+
+# ── Sankey: kdo s kým sedí v dohodnutých koalicích (23 koalic ve 27 městech) ─
+# Uzel = strana podle složení kandidátek v koalici (ČSÚ); „místní hnutí“ = kandidátka bez celostátní strany
+# (jen nezávislí nebo místní hnutí). Vazba A–B = počet koalic, ve kterých jsou A i B (i na společné kandidátce).
+UZLY = ['ANO', 'ODS', 'STAN', 'KDU-ČSL', 'TOP 09', 'Piráti', 'Zelení', 'SOCDEM', 'místní hnutí']
+def aktery(m):
+    os_ = {l['os']: l for l in m['L']}
+    a = set()
+    for x in m['c']['kl']:
+        l = os_[x]
+        jm = {STRANY[s][0] for s in l['slo'] if s in STRANY}
+        a |= jm if jm else {'místní hnutí'}
+    return a
+koal = [(m['nazev'], aktery(m)) for m in mesta if m['c']['kl'] and m['stav'] in ('smlouva', 'dohoda')]
+p('\n' + '=' * 78 + f'\nSANKEY – KDO S KÝM V {len(koal)} DOHODNUTÝCH KOALICÍCH\n' + '=' * 78)
+mimo = sorted({s for _, a in koal for s in a} - set(UZLY))
+assert not mimo, mimo
+for n, a in koal:
+    p(f"   {n}: {', '.join(s for s in UZLY if s in a)}")
+pocet = Counter(s for _, a in koal for s in a)
+par = Counter()
+for _, a in koal:
+    for x, y in combinations(sorted(a, key=UZLY.index), 2):
+        par[(x, y)] += 1
+p('v kolika koalicích: ' + '; '.join(f'{s} {pocet[s]}' for s in UZLY))
+for s in UZLY:
+    p(f"   {s:13} → " + ', '.join(f"{t} {par.get((s, t), par.get((t, s), 0))}" for t in UZLY if t != s and par.get((s, t), par.get((t, s), 0))))
+p(f"SPD, Motoristé, PRO v koalici: {sum(1 for _, a in koal if a & {'SPD', 'Motoristé', 'PRO'})}")
+(H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
+
+# ── Sankey jako statické SVG (sankey.html → <HtmlEmbed> v ChartCard) ────────
+def vazba(a, b):
+    return par.get((a, b), par.get((b, a), 0))
+mesta_par = {}
+for n, a in koal:
+    for x, y in combinations(sorted(a, key=UZLY.index), 2):
+        mesta_par.setdefault((x, y), []).append(NAZ.get(n, n))
+poradi = sorted(UZLY, key=lambda s: (s == 'místní hnutí', -pocet[s]))   # místní hnutí dospod
+barva = lambda s: TT_BARVY[s]
+W, LW, RW, GAP, KOEF, NW = 446, 124, 104, 13, 1.45, 9   # šířka, místo na popisky, mezera uzlů, px na koalici, šířka uzlu
+tok = {s: sum(vazba(s, t) for t in UZLY if t != s) for s in UZLY}
+Hc = sum(tok[s] * KOEF for s in poradi) + GAP * (len(poradi) - 1)
+x0, x1 = LW, W - RW
+def pozice():
+    y, out = 0, {}
+    for s in poradi:
+        out[s] = y
+        y += tok[s] * KOEF + GAP
+    return out
+yl, yr = pozice(), pozice()
+offl = dict(yl); offr = dict(yr)
+cesty = []
+for s in poradi:
+    for t in poradi:
+        v = vazba(s, t) if s != t else 0
+        if not v:
+            continue
+        h = v * KOEF
+        a0, b0 = offl[s], offr[t]
+        offl[s] += h; offr[t] += h
+        cx = (x0 + NW + x1) / 2
+        d = (f"M{x0 + NW},{a0:.1f} C{cx},{a0:.1f} {cx},{b0:.1f} {x1},{b0:.1f} L{x1},{b0 + h:.1f} "
+             f"C{cx},{b0 + h:.1f} {cx},{a0 + h:.1f} {x0 + NW},{a0 + h:.1f} Z")
+        mm = mesta_par[tuple(sorted((s, t), key=UZLY.index))]
+        k = 'koalici' if v == 1 else 'koalicích'
+        cesty.append(f'<path d="{d}" fill="{barva(s)}" fill-opacity="{0.62 if s == "ANO" else 0.26}" class="l l-{UZLY.index(s)}">'
+                     f'<title>{s} a {t}: spolu v {v} {k} ({", ".join(mm)})</title></path>')
+uzly, popisky = [], []
+for s in poradi:
+    h = tok[s] * KOEF
+    kk = f"{pocet[s]} {'koalice' if pocet[s] == 1 else 'koalice' if pocet[s] < 5 else 'koalic'}"
+    for x, ys in ((x0, yl[s]), (x1, yr[s])):
+        uzly.append(f'<rect x="{x}" y="{ys:.1f}" width="{NW}" height="{max(h, 2):.1f}" fill="{barva(s)}" stroke="#101432" stroke-width="{0.6 if s == "místní hnutí" else 0}"/>')
+    tw = 700 if s == 'ANO' else 600
+    popisky.append(f'<text x="{x0 - 8}" y="{yl[s] + max(h, 2) / 2:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s}'
+                   f'<tspan x="{x0 - 8}" dy="16" font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>' if h > 22 else
+                   f'<text x="{x0 - 8}" y="{yl[s] + 1:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s} <tspan font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>')
+    popisky.append(f'<text x="{x1 + NW + 8}" y="{yr[s] + max(h, 2) / 2:.1f}" dominant-baseline="middle" font-weight="{tw}">{s}</text>')
+svg = (f'<svg viewBox="-4 -10 {W + 8} {Hc + 40:.0f}" width="100%" role="img" xmlns="http://www.w3.org/2000/svg" '
+       f'aria-label="Sankeyův diagram: kdo s kým sedí v 23 dohodnutých koalicích. ANO nejčastěji s místními hnutími (6) a s ODS (5), opoziční strany spolu nejčastěji (STAN a TOP 09 10, ODS se STAN, lidovci a TOP 09 po 9)." '
+       f'style="font-family:IBM Plex Sans,Arial,sans-serif;font-size:15px;fill:#101432;display:block;max-width:480px;margin:0 auto">'
+       f'<style>.l{{transition:fill-opacity .15s}} svg:hover .l{{fill-opacity:.12}} svg .l:hover{{fill-opacity:.85}}</style>'
+       f'<text x="{x0 + NW / 2}" y="-2" text-anchor="middle" font-size="11" fill="#55597a" dominant-baseline="auto"></text>'
+       + ''.join(cesty) + ''.join(uzly) + ''.join(popisky) + '</svg>')
+(ART / 'sankey.html').write_text(f'<div class="dt-sankey">{svg}</div>\n', encoding='utf-8')
+p(f'sankey zapsán: sankey.html (výška {Hc:.0f} px)')
+(H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')

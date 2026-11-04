@@ -28,7 +28,7 @@ V Plzni zvolili Zarzyckého 33 hlasy, proti bylo 11 opozičních zastupitelů z 
 
 <VegaChart dataFile="data/koalice.json" />
 
-Graf ukazuje, jak jsou rozdělena křesla v každém zastupitelstvu. Plnou barvou jsou kandidátky v dohodnuté koalici, světle ty mimo ni. Barva říká, do kterého celostátního tábora kandidátka patří: tmavě modrá je ANO, okrová SPD, Motoristé a PRO, tyrkysová strany sněmovní opozice nebo jejich společné kandidátky, šedá místní hnutí a ostatní. Okrovou plnou barvu v grafu nenajdete. Graf neříká, kdo v koalicích bude mít víc vlivu, než odpovídá počtu mandátů.
+Graf ukazuje, jak jsou rozdělena křesla v každém zastupitelstvu. Plnou barvou jsou kandidátky v dohodnuté koalici, světle ty mimo ni. Barva říká, do kterého celostátního tábora kandidátka patří: tmavě modrá je ANO, okrová SPD, Motoristé a PRO, tyrkysová strany sněmovní opozice nebo jejich společné kandidátky, šedá místní hnutí a ostatní. Okrovou plnou barvu v grafu nenajdete. Po najetí myší ukáže graf u každé kandidátky i její složení podle ČSÚ, s barvou každé strany. Graf neříká, kdo v koalicích bude mít víc vlivu, než odpovídá počtu mandátů.
 
 ## Bez ANO zvolili primátory Brno, Hradec Králové, Jihlava a Frýdek-Místek
 
@@ -49,6 +49,14 @@ Desátou koalici s ANO podepsalo vítězné sdružení Žijeme pro Karvinou, kte
 V Mostě soud změnil výsledek ve prospěch vítěze. Krajský soud v Ústí nad Labem zjistil, že komise v okrsku 30 špatně sečetla hlasy hnutí VIZE pro Most: místo 616 jich bylo 1 786. Kandidátka Piráti, Zelení a Starostové přišla o oba mandáty, jeden získal ProMOST a druhý VIZE pro Most ([Mostecký deník](https://mostecky.denik.cz/komunalni-volby/most-soud-volby-vysledek-mandaty-promost-vize-zeleni/)). ProMOST má teď 23 ze 45 křesel, tedy většinu sám. Koalice s ANO, kterou podepsal 29. října, podle deníku platí dál a primátorem má zůstat Marek Hrvol (ProMOST).
 
 Most a Karviná jsou jediná dvě velká města, kde ANO vládne bez strany sněmovní opozice. V obou je jeho partnerem místní hnutí, které volby vyhrálo, a v obou sedí v zastupitelstvu i SPD, v Mostě na společné kandidátce s Motoristy. Do koalice nevstoupila ani v jednom.
+
+## ANO se v koalicích nejčastěji potkává s místními hnutími a s ODS
+
+Z 23 dohodnutých koalic ve velkých městech je ANO v deseti. Nejčastěji v nich sedí s místními hnutími (šestkrát) a s ODS (pětkrát), se STAN a s lidovci po čtyřech, s TOP 09 dvakrát, s Piráty, Zelenými a SOCDEM po jedné. Strany sněmovní opozice spolu vládnou častěji: STAN s TOP 09 v deseti koalicích, ODS se STAN, s lidovci i s TOP 09 v devíti. SPD, Motoristé ani PRO nejsou v žádné.
+
+<HtmlEmbed file="sankey.html" title="ANO se v koalicích nejčastěji potkává s místními hnutími a s ODS" subtitle="Kdo s kým sedí v 23 dohodnutých koalicích ve 26 statutárních městech a v Praze. Šířka pruhu = počet koalic, ve kterých jsou obě strany spolu. SPD, Motoristé ani PRO nejsou v žádné. Stav 4. 11. 2026" source="ČSÚ – složení kandidátek komunálních voleb 2026; koalice podle zpráv ČTK a regionálních médií ke 4. 11. 2026; výpočet DataTimes.cz" />
+
+Každý pruh spojuje dvě strany, které vládnou spolu aspoň v jednom městě. Vlevo je strana, vpravo její partner, takže každá dvojice je v grafu dvakrát. Po najetí myší na pruh se ukáže, o která města jde. Strana se počítá i tehdy, když je v koalici jen na společné kandidátce, například ODS s TOP 09 v Brně. Místní hnutí jsou kandidátky bez celostátní strany, regionální hnutí jako Starostové pro Liberecký kraj patří k nim. Graf neříká, jak se strany spojují mimo velká města: koalice v ostatních obcích nikdo souhrnně neeviduje a většina obcí vedení teprve volí.
 
 ## Praha, Ostrava a Budějovice zvolí vedení až v dalších dnech a týdnech
 
