@@ -51,11 +51,13 @@ Hnutí MAGA se ale přes rok štěpilo. Kongresmanka Marjorie Taylor Greeneová,
 
 Demokraté postavili kampaň na cenách a životních nákladech. Na začátku roku skončily zvýšené dotace ke zdravotnímu pojištění podle Obamacare a pojistné dotovaným lidem podle odhadu nadace KFF v průměru víc než zdvojnásobilo ([AP](https://abcnews.go.com/Business/wireStory/health-subsidies-expire-launching-millions-americans-2026-steep-insurance-hikes-128827993)).
 
-## Ve středu ráno budou čísla vypadat republikánštěji
+## Průběžná čísla v noci klamou, nejdřív jedním směrem, pak druhým
 
 Volební místnosti se zavírají postupně od půlnoci našeho času, poslední na Aljašce v 7:00 SEČ. Rychle sčítají Florida, Ohio, Severní Karolína a Texas. Kalifornie přijímá hlasy poštou ještě sedm dní po volbách, Maine a Aljaška používají preferenční hlasování, které se může počítat i dva týdny.
 
-Ve středu ráno proto bývá celostátní součet hlasů pro Sněmovnu o dva až tři body republikánštější než konečný výsledek, upozorňuje [Axios](https://www.axios.com/2026/11/03/2026-midterm-election-results-red-mirage-senate-races). Naše predikce s tím počítá, protože odhaduje i hlasy, které sečtené ještě nejsou. V letech 2022 i 2024 média vyhlásila vítěze Sněmovny zhruba osm dní po volbách ([NBC](https://www.nbcnews.com/politics/2026-election/decision-desk-will-know-senate-house-control-rcna603038)).
+Záleží totiž na tom, které hlasy se sčítají dřív. Většina států nejdřív zveřejní hlasy odevzdané předem, poštou a v předčasném hlasování, a ty letos dávali hlavně voliči demokratů. První hodinu po zavření místností proto výsledky vypadají víc „demokratické“, než nakonec budou. Pak přicházejí hlasy z volebního dne, kdy chodí volit víc republikánů, a čísla se posouvají k nim.
+
+Ve středu ráno je to naopak. Chybí velká část hlasů z Kalifornie a dalších západních států, kde vedou demokraté a kde se sčítá pomalu. Celostátní součet hlasů pro Sněmovnu je proto ráno obvykle o dva až tři body víc „republikánský“, než bude konečný výsledek, upozorňuje [Axios](https://www.axios.com/2026/11/03/2026-midterm-election-results-red-mirage-senate-races). Naše predikce s oběma posuny počítá, protože odhaduje i hlasy, které sečtené ještě nejsou. V letech 2022 i 2024 média vyhlásila vítěze Sněmovny zhruba osm dní po volbách ([NBC](https://www.nbcnews.com/politics/2026-election/decision-desk-will-know-senate-house-control-rcna603038)).
 
 Případné druhé kolo v Georgii by se konalo 1. prosince. Pokud se Senát rozhodne až v Maine nebo na Aljašce, výsledek nebude jasný dřív než v polovině listopadu.
 
