@@ -1,7 +1,6 @@
 ---
 title: "Predikce DataTimes: Sněmovnu reprezentantů ovládnou demokraté"
-date: "2026-11-04"
-time: "00:33"
+date: "2026-11-03"
 author: "Kateřina Mahdalová & Michal Škop"
 excerpt: "Demokraté získají většinu ve Sněmovně reprezentantů, ukazuje živá predikce DataTimes.cz: dává jim 97% šanci a odhaduje jim zhruba 240 z 435 křesel. Senát zůstává otevřený, šance demokratů je 76 %. Rozhodnou o něm hlavně Maine, Texas, Ohio, Aljaška, Iowa a Kansas. Mapa se přepočítává každou minutu podle sečtených hlasů."
 coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/volby-usa-2026-11-04-predikce/cover-homepage.png"
@@ -16,7 +15,7 @@ filter: ["analýza"]
 tags: ["volby", "USA", "americké volby 2026", "Kongres", "Donald Trump", "MAGA", "volební predikce"]
 promoted: 1
 ---
-Demokraté po úterních volbách ovládnou Sněmovnu reprezentantů, dolní komoru amerického Kongresu. Predikce DataTimes.cz jim dává 97% šanci a odhaduje jim zhruba 240 z 435 křesel, k většině potřebují 218. V Senátu je jejich šance 76 %, tam se rozhodne až během noci. Tak vypadal model ve 0:23 SEČ, kdy byly sečtené první hlasy jen v Kentucky, Indianě a New Hampshiru. Republikáni teď ve Sněmovně drží 218 z 435 křesel a v Senátu 53 ze 100. Demokratům tedy stačí ve Sněmovně čistý zisk tří křesel, v Senátu čtyř.
+Demokraté po úterních volbách ovládnou Sněmovnu reprezentantů, dolní komoru amerického Kongresu. Predikce DataTimes.cz jim dává 97% šanci a odhaduje jim zhruba 240 z 435 křesel, k většině potřebují 218. V Senátu je jejich šance 76 %, tam se rozhodne až během noci. Tak vypadal model ve středu 4. listopadu ve 0:23 SEČ, kdy byly sečtené první hlasy jen v Kentucky, Indianě a New Hampshiru. Republikáni teď ve Sněmovně drží 218 z 435 křesel a v Senátu 53 ze 100. Demokratům tedy stačí ve Sněmovně čistý zisk tří křesel, v Senátu čtyř.
 
 <RelatedArticles preset="sidebar" position="right" slugs={["volby-usa-2024-11-06-volby-vyhraje-trump-a-nebude-to-tesne", "volby-usa-2024-11-05-predikce-ktera-se-vam-nebude-libit"]} heading="🔻🔻🔻" />
 
