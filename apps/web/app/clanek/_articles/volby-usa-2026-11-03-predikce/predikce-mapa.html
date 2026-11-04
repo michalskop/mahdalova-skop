@@ -22,6 +22,13 @@
 .dt-us26-sub { font-size: 0.85rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
 .dt-us26-bar { position: relative; height: 10px; border-radius: 5px; background: var(--r1); margin-top: 10px; overflow: hidden; }
 .dt-us26-bar span { position: absolute; left: 0; top: 0; bottom: 0; background: var(--d2); }
+.dt-us26-seats { margin: 12px 0 0; font-size: 0.8rem; color: var(--muted); }
+.dt-us26-seats .row { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; line-height: 1.3; }
+.dt-us26-seats .row b.d { color: var(--d3); } .dt-us26-seats .row b.r { color: var(--r3); }
+.dt-us26-seats .track { position: relative; display: flex; height: 16px; border-radius: 3px; overflow: hidden; background: #e7e5de; }
+.dt-us26-seats .track i { display: block; height: 100%; }
+.dt-us26-seats .maj { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); }
+.dt-us26-seats .note { margin-top: 4px; text-align: center; font-size: 0.72rem; }
 .dt-us26-hemi { text-align: center; margin: 0 0 22px; }
 .dt-us26-hemi svg { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; }
 .dt-us26-hemi p { margin: 4px 0 0; font-size: 0.9rem; }
@@ -62,9 +69,9 @@
 </style>
 
 <div class="dt-us26" id="dt-us26">
-  <div class="dt-us26-chamber"><a class="dt-us26-logo" href="https://www.mahdalova-skop.cz/" target="_blank" rel="noopener"><svg viewBox="112 112 276 276" aria-hidden="true"><defs><linearGradient id="dtUs26GH" x1="1" x2="0.25" y1="0.5" y2="1"><stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="1"/><stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/></linearGradient></defs><g transform="rotate(-30 250 250)"><path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/><path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/><path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/><path fill="none" stroke="url(#dtUs26GH)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/></g></svg>DataTimes.cz</a><h4>Sněmovna reprezentantů</h4><div class="dt-us26-big" data-k="H-p">…</div><div class="dt-us26-sub" data-k="H-sub">Načítám živá data…</div><div class="dt-us26-bar"><span data-k="H-bar"></span></div></div>
+  <div class="dt-us26-chamber"><a class="dt-us26-logo" href="https://www.mahdalova-skop.cz/" target="_blank" rel="noopener"><svg viewBox="112 112 276 276" aria-hidden="true"><defs><linearGradient id="dtUs26GH" x1="1" x2="0.25" y1="0.5" y2="1"><stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="1"/><stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/></linearGradient></defs><g transform="rotate(-30 250 250)"><path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/><path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/><path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/><path fill="none" stroke="url(#dtUs26GH)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/></g></svg>DataTimes.cz</a><h4>Sněmovna reprezentantů</h4><div class="dt-us26-big" data-k="H-p">…</div><div class="dt-us26-sub" data-k="H-sub">Načítám živá data…</div><div class="dt-us26-bar"><span data-k="H-bar"></span></div><div class="dt-us26-seats" data-k="H-seats"></div></div>
   <div class="dt-us26-hemi"><h4 style="margin:0 0 6px;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:600">Odhad rozložení 435 křesel</h4><svg data-k="hemi" viewBox="0 0 400 214" role="img" aria-label="Odhad rozložení křesel ve Sněmovně reprezentantů"></svg><p data-k="hemi-txt"></p></div>
-  <div class="dt-us26-chamber"><a class="dt-us26-logo" href="https://www.mahdalova-skop.cz/" target="_blank" rel="noopener"><svg viewBox="112 112 276 276" aria-hidden="true"><defs><linearGradient id="dtUs26GS" x1="1" x2="0.25" y1="0.5" y2="1"><stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="1"/><stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/></linearGradient></defs><g transform="rotate(-30 250 250)"><path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/><path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/><path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/><path fill="none" stroke="url(#dtUs26GS)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/></g></svg>DataTimes.cz</a><h4>Senát</h4><div class="dt-us26-big" data-k="S-p">…</div><div class="dt-us26-sub" data-k="S-sub"></div><div class="dt-us26-bar"><span data-k="S-bar"></span></div></div>
+  <div class="dt-us26-chamber"><a class="dt-us26-logo" href="https://www.mahdalova-skop.cz/" target="_blank" rel="noopener"><svg viewBox="112 112 276 276" aria-hidden="true"><defs><linearGradient id="dtUs26GS" x1="1" x2="0.25" y1="0.5" y2="1"><stop offset="0%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="0"/><stop offset="50%" stop-color="#ffdc33" stop-opacity="1"/><stop offset="100%" stop-color="#ffdc33" stop-opacity="1"/></linearGradient></defs><g transform="rotate(-30 250 250)"><path fill="none" stroke="#ffdc33" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/><path fill="none" stroke="#f76800" stroke-width="76" stroke-linecap="round" d="M 336.6025403784439 300 A 100 100 0 0 0 250 150"/><path fill="none" stroke="#de1743" stroke-width="76" stroke-linecap="round" d="M 250 150 A 100 100 0 0 0 250 350"/><path fill="none" stroke="url(#dtUs26GS)" stroke-width="76" stroke-linecap="round" d="M 250 350 A 100 100 0 0 0 336.60254037844385 300"/></g></svg>DataTimes.cz</a><h4>Senát</h4><div class="dt-us26-big" data-k="S-p">…</div><div class="dt-us26-sub" data-k="S-sub"></div><div class="dt-us26-bar"><span data-k="S-bar"></span></div><div class="dt-us26-seats" data-k="S-seats"></div></div>
   <div class="dt-us26-tabs">
     <button type="button" data-kind="S" class="on">Senát</button>
     <button type="button" data-kind="G">Guvernéři</button>
@@ -141,6 +148,25 @@
     $('hemi').innerHTML = s;
     $('hemi-txt').innerHTML = '<span class="d">demokraté ' + nD + '</span> · <span class="r">republikáni ' + (435 - nD) + '</span> (střední odhad modelu)';
   }
+  // pruh křesel: jisté podle modelu (šance ≥ 99 % a sečteno ≥ 50 %) / vede / nesečteno; Senát včetně křesel, která se letos nevolí
+  function seats(c, list, total, need, notD, notR) {
+    var dS = notD, dL = 0, rS = notR, rL = 0, open = 0;
+    list.forEach(function (r) {
+      var cnt = r.counted || 0, p = r.pd_m;
+      if (cnt <= 0) open++;
+      else if (p >= 0.99 && cnt >= 0.5) dS++;
+      else if (p <= 0.01 && cnt >= 0.5) rS++;
+      else if (p >= 0.5) dL++;
+      else rL++;
+    });
+    var w = function (n) { return (100 * n / total) + '%'; };
+    var notes = notD ? ' (vč. ' + notD + ' D a ' + notR + ' R, která se letos nevolí)' : '';
+    $(c + '-seats').innerHTML =
+      '<div class="row"><span><b class="d">D ' + (dS + dL) + '</b> · ' + dS + ' jistě, ' + dL + ' vede</span><span>' + open + ' nesečteno</span><span>' + rL + ' vede, ' + rS + ' jistě · <b class="r">R ' + (rS + rL) + '</b></span></div>' +
+      '<div class="track"><i style="width:' + w(dS) + ';background:var(--d3)"></i><i style="width:' + w(dL) + ';background:var(--d1)"></i><i style="flex:1"></i><i style="width:' + w(rL) + ';background:var(--r1)"></i><i style="width:' + w(rS) + ';background:var(--r3)"></i>' +
+      '<span class="maj" style="left:calc(' + (100 * (need - 0.5) / total) + '% - 1px)"></span></div>' +
+      '<div class="note">' + need + ' křesel = většina · jistě = podle modelu, ne oficiální vyhlášení' + notes + '</div>';
+  }
   function detail(st) {
     var box = $('detail'), r = st && races[kind][st];
     if (!r) { box.innerHTML = 'Klepněte na stát: kandidáti, šance, sečteno.'; return; }
@@ -184,15 +210,17 @@
       fetch(API + 'overview.json?t=' + Date.now()).then(function (r) { return r.json(); })
     ]).then(function (res) {
       var rc = res[0], ov = res[1], cols = rc.cols;
-      races = { S: {}, G: {} };
+      races = { S: {}, G: {} }; var house = [];
       rc.rows.forEach(function (row) {
         var o = {}; cols.forEach(function (c, i) { o[c] = row[i]; });
-        if (o.kind === 'S' || o.kind === 'G') races[o.kind][o.st] = o;
+        if (o.kind === 'S' || o.kind === 'G') races[o.kind][o.st] = o; else if (o.kind === 'H') house.push(o);
       });
       var mix = ov.chambers.mix;
       chamber('H', mix.House, ov.p_control.H, 218);
       hemi(Math.round(mix.House.mean));
       chamber('S', mix.Senate, ov.p_control.S, 51);
+      seats('H', house, 435, 218, 0, 0);
+      seats('S', Object.keys(races.S).map(function (k) { return races.S[k]; }), 100, 51, 34, 31);
       draw();
       var when = new Date(ov.t * 1000).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Prague' });
       var pr = ov.progress || {};
