@@ -1,0 +1,135 @@
+<style>
+.dt-ok { font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #101432; position: relative; }
+.dt-ok-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 2px 0 10px; }
+.dt-ok-tabs button { font: inherit; font-size: 0.88rem; font-weight: 600; border: 1px solid #c9d0f5; background: #fff; color: #101432; border-radius: 999px; padding: 5px 14px; cursor: pointer; }
+.dt-ok-tabs button[aria-pressed="true"] { background: #101432; border-color: #101432; color: #fff; }
+.dt-ok-svg { width: 100%; height: auto; display: block; touch-action: manipulation; }
+.dt-ok-svg path.o { stroke: #fff; stroke-width: 0.15; }
+.dt-ok-svg path.o:hover, .dt-ok-svg path.o.on { stroke: #101432; stroke-width: 1.2; }
+.dt-ok-leg { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 22px; font-size: 0.78rem; color: #5b5f73; margin-top: 8px; }
+.dt-ok-bar { width: 300px; max-width: 100%; }
+.dt-ok-cap { display: flex; justify-content: space-between; margin-bottom: 3px; }
+.dt-ok-cap span:first-child { color: #383d82; font-weight: 600; } .dt-ok-cap span:last-child { color: #812840; font-weight: 600; }
+.dt-ok-sw { display: flex; height: 11px; } .dt-ok-sw i { flex: 1; }
+.dt-ok-tk { display: grid; grid-template-columns: repeat(8, 1fr); margin-top: 2px; font-size: 0.72rem; }
+.dt-ok-tk span { text-align: center; transform: translateX(50%); white-space: nowrap; }
+.dt-ok-un { text-align: center; font-size: 0.72rem; }
+.dt-ok-nic b { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+.dt-ok-tip { position: absolute; pointer-events: none; background: #fff; border: 1px solid #d8dbe6; border-radius: 4px; box-shadow: 0 4px 14px rgba(16,20,50,.15); font-size: 0.82rem; line-height: 1.35; min-width: 190px; max-width: 250px; display: none; z-index: 5; overflow: hidden; }
+.dt-ok-tip .h { color: #fff; font-weight: 700; padding: 5px 9px; }
+.dt-ok-tip .b { padding: 6px 9px 7px; color: #101432; }
+.dt-ok-tip .r { display: flex; justify-content: space-between; gap: 10px; }
+.dt-ok-tip .r span:first-child b { display: inline-block; width: 9px; height: 9px; margin-right: 5px; }
+.dt-ok-tip .n { color: #5b5f73; font-size: 0.76rem; margin-top: 3px; }
+.dt-ok-load { font-size: 0.85rem; color: #5b5f73; padding: 30px 0; text-align: center; }
+</style>
+<div class="dt-ok" id="dt-ok-root">
+  <div class="dt-ok-tabs" role="group" aria-label="Volba">
+    <button type="button" data-k="H" aria-pressed="true">Sněmovna</button>
+    <button type="button" data-k="S" aria-pressed="false">Senát</button>
+    <button type="button" data-k="G" aria-pressed="false">Guvernéři</button>
+  </div>
+  <div class="dt-ok-map"><div class="dt-ok-load">Načítám mapu…</div></div>
+  <div class="dt-ok-leg">
+    <div class="dt-ok-bar">
+      <div class="dt-ok-cap"><span>demokraté</span><span>republikáni</span></div>
+      <div class="dt-ok-sw"><i style="background:#272a59"></i><i style="background:#4a51ab"></i><i style="background:#899aeb"></i><i style="background:#c9d0f5"></i><i style="background:#f5c4c9"></i><i style="background:#e87c91"></i><i style="background:#bb3a5d"></i><i style="background:#621d30"></i></div>
+      <div class="dt-ok-tk"><span>40</span><span>20</span><span>10</span><span>0</span><span>10</span><span>20</span><span>40</span></div>
+      <div class="dt-ok-un">náskok vítěze v procentních bodech</div>
+    </div>
+    <span class="dt-ok-nic"><b style="background:#ece6d3"></b><span class="dt-ok-none">bez údajů</span></span>
+  </div>
+  <div class="dt-ok-tip"></div>
+</div>
+<script>
+(function () {
+  var root = document.getElementById('dt-ok-root');
+  if (!root || root.getAttribute('data-ok')) return;
+  root.setAttribute('data-ok', '1');
+  var URL = '/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/okresy-mapa.json';
+  var D = ['#c9d0f5', '#899aeb', '#4a51ab', '#272a59'], R = ['#f5c4c9', '#e87c91', '#bb3a5d', '#621d30'];
+  var NIC = '#ece6d3';
+  var NAZEV = { H: 'Sněmovna reprezentantů', S: 'Senát', G: 'guvernér' };
+  var NONE = { H: 'bez údajů', S: 'bez údajů nebo bez voleb do Senátu', G: 'bez údajů nebo bez voleb guvernéra' };
+  var STATY = { AL: 'Alabama', AK: 'Aljaška', AZ: 'Arizona', AR: 'Arkansas', CA: 'Kalifornie', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgie', HI: 'Havaj', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'Nové Mexiko', NY: 'New York', NC: 'Severní Karolína', ND: 'Severní Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pensylvánie', RI: 'Rhode Island', SC: 'Jižní Karolína', SD: 'Jižní Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginie', WA: 'Washington', WV: 'Západní Virginie', WI: 'Wisconsin', WY: 'Wyoming' };
+  var data, paths = [], k = 'H', aktivni = null;
+  var map = root.querySelector('.dt-ok-map'), tip = root.querySelector('.dt-ok-tip');
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+  function pct(x) { return (Math.round(x * 10) / 10).toFixed(1).replace('.', ',') + ' %'; }
+  function barva(v) {
+    if (!v || v[0] + v[1] === 0 || v[3] === 2) return NIC;
+    var m = 100 * (v[0] - v[1]) / (v[0] + v[1]), a = Math.abs(m), i = a >= 40 ? 3 : a >= 20 ? 2 : a >= 10 ? 1 : 0;
+    return m >= 0 ? D[i] : R[i];
+  }
+  function kresli() {
+    var vr = data.vrstvy[k];
+    for (var i = 0; i < paths.length; i++) paths[i].setAttribute('fill', barva(vr[i]));
+    root.querySelector('.dt-ok-none').textContent = NONE[k];
+    var b = root.querySelectorAll('.dt-ok-tabs button');
+    for (var j = 0; j < b.length; j++) b[j].setAttribute('aria-pressed', b[j].getAttribute('data-k') === k ? 'true' : 'false');
+    if (aktivni !== null) ukaz(aktivni);
+  }
+  function ukaz(i, ev) {
+    var o = data.okresy[i], v = data.vrstvy[k][i], st = STATY[o[2]] || o[2];
+    var h, body;
+    if (v && v[3] === 2) {
+      h = '<div class="h" style="background:#5b5f73">' + st + '</div>';
+      body = '<div class="b">Aljaška volí preferenčně. O vítězi rozhodne přepočet podle pořadí preferencí 18. listopadu, výsledek proto barvou neukazujeme.</div>';
+    } else if (!v || v[0] + v[1] === 0) {
+      h = '<div class="h" style="background:#5b5f73">' + o[1] + ', ' + st + '</div>';
+      body = '<div class="b">' + NONE[k].charAt(0).toUpperCase() + NONE[k].slice(1) + '.</div>';
+    } else {
+      var s = v[0] + v[1], m = 100 * (v[0] - v[1]) / s, win = m >= 0;
+      h = '<div class="h" style="background:' + (win ? '#4a51ab' : '#a03250') + '">' + (v[3] ? st + ' (celý stát)' : o[1] + ', ' + st) + '</div>';
+      body = '<div class="b">' +
+        '<div class="r"><span><b style="background:#4a51ab"></b>' + (k === 'S' && o[2] === 'NE' ? 'nezávislý Dan Osborn' : 'demokraté') + '</span><span>' + pct(100 * v[0] / s) + '</span></div>' +
+        '<div class="r"><span><b style="background:#a03250"></b>republikáni</span><span>' + pct(100 * v[1] / s) + '</span></div>' +
+        '<div class="n">' + (win ? (k === 'S' && o[2] === 'NE' ? 'Osborn' : 'Demokraté') : 'Republikáni') + ' o ' + pct(Math.abs(m)).replace(' %', '') + ' bodu, ' + fmt(s) + ' hlasů pro obě strany' +
+        (v[2] !== null && v[2] < 98 ? '; sečteno asi ' + Math.round(Math.min(v[2], 100)) + ' %' : '') + '.' +
+        (v[3] === 1 ? ' ' + st + ' hlásí výsledky po jiných obvodech než okresech, barva platí pro celý stát.' : '') + '</div></div>';
+    }
+    tip.innerHTML = h + body;
+    tip.style.display = 'block';
+    if (ev) {
+      var r = root.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
+      var w = tip.offsetWidth, hh = tip.offsetHeight;
+      var left = x + 14 + w > r.width ? x - w - 14 : x + 14;
+      tip.style.left = Math.max(0, left) + 'px';
+      tip.style.top = Math.max(0, y - hh - 10) + 'px';
+    }
+  }
+  function skryj() { tip.style.display = 'none'; if (aktivni !== null && paths[aktivni]) paths[aktivni].classList.remove('on'); aktivni = null; }
+  root.querySelector('.dt-ok-tabs').addEventListener('click', function (e) {
+    var t = e.target.closest('button'); if (!t || !data) return; k = t.getAttribute('data-k'); kresli();
+  });
+  fetch(URL).then(function (r) { return r.json(); }).then(function (d) {
+    data = d;
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 975 610'); svg.setAttribute('class', 'dt-ok-svg');
+    svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'Mapa výsledků amerických voleb 2026 po okresech');
+    var g = document.createElementNS(NS, 'g');
+    d.okresy.forEach(function (o, i) {
+      var p = document.createElementNS(NS, 'path'); p.setAttribute('d', o[3]); p.setAttribute('class', 'o'); p.setAttribute('data-i', i);
+      g.appendChild(p); paths.push(p);
+    });
+    svg.appendChild(g);
+    var hr = document.createElementNS(NS, 'path'); hr.setAttribute('d', d.hranice);
+    hr.setAttribute('fill', 'none'); hr.setAttribute('stroke', '#fff'); hr.setAttribute('stroke-width', '1.1'); hr.setAttribute('pointer-events', 'none');
+    svg.appendChild(hr);
+    map.innerHTML = ''; map.appendChild(svg);
+    svg.addEventListener('mousemove', function (e) {
+      var t = e.target; if (!t.getAttribute || t.getAttribute('data-i') === null) { skryj(); return; }
+      var i = +t.getAttribute('data-i');
+      if (aktivni !== i) { if (aktivni !== null) paths[aktivni].classList.remove('on'); aktivni = i; t.classList.add('on'); }
+      ukaz(i, e);
+    });
+    svg.addEventListener('mouseleave', skryj);
+    svg.addEventListener('click', function (e) {
+      var t = e.target; if (!t.getAttribute || t.getAttribute('data-i') === null) { skryj(); return; }
+      var i = +t.getAttribute('data-i'); if (aktivni !== null) paths[aktivni].classList.remove('on'); aktivni = i; t.classList.add('on'); ukaz(i, e);
+    });
+    var st = root.querySelector('.dt-ok-stav'); if (st) st.textContent = d.stav;
+    kresli();
+  }).catch(function () { map.innerHTML = '<div class="dt-ok-load">Mapu se nepodařilo načíst.</div>'; });
+})();
+</script>
