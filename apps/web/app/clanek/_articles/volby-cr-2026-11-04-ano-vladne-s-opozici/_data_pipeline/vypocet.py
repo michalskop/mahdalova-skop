@@ -492,7 +492,7 @@ for s in poradi:
     h = tok[s] * KOEF
     kk = f"{pocet[s]} {'koalice' if pocet[s] < 5 else 'koalic'}"
     tw = 700 if s == 'ANO' else 600
-    rect = lambda x, ys: f'<rect x="{x}" y="{ys:.1f}" width="{NW}" height="{max(h, 2):.1f}" fill="{barva(s)}" stroke="#101432" stroke-width="{0.6 if s == "místní hnutí" else 0}"/>'
+    rect = lambda x, ys: f'<rect x="{x}" y="{ys:.1f}" width="{NW}" height="{max(h, 2):.1f}" fill="{barva(s)}"/>'
     c = '<tspan class="c" font-weight="400" fill="#55597a"></tspan>'
     lev = (f'<text x="{x0 - 8}" y="{yl[s] + max(h, 2) / 2:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s}{c}'
            f'<tspan x="{x0 - 8}" dy="16" font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>' if h > 22 else
