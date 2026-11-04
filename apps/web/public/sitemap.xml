@@ -954,4 +954,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-usa-2026-11-04-proc-vyhrali-demokrate</loc>
+    <lastmod>2026-11-04T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
