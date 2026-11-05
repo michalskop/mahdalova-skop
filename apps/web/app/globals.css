@@ -33,6 +33,9 @@
   --dt-bleed-pull: calc(-1 * clamp(0px, (100vw - 100%) / 2 - var(--dt-bleed-gutter), var(--dt-bleed-out)));
 }
 
+/* Široký graf (<HtmlEmbed wide />): vyčnívá do okrajů na obě strany stejně daleko jako fotky ven. */
+.dt-wide { margin-left: var(--dt-bleed-pull); margin-right: var(--dt-bleed-pull); }
+
 /* Oválné tagy/badge (rubriky „ANALÝZA"/„KONTEXT", tag pill v kartách…): svislé
    centrování verzálek PLOŠNĚ na celém webu (jeden zdroj pravdy). Verzálky nemají
    dolní dotažnice, takže defaultní řádkový box je posadí opticky moc vysoko;

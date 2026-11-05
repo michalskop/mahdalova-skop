@@ -450,11 +450,14 @@ export function ArticleRenderer({
 
     // S titulkem (title/subtitle/source) se vložené HTML – typicky statický SVG graf – zabalí do ChartCard
     // (stejný rámeček, logo a zdroj jako ostatní grafy); bez titulku zůstává holý embed (mapy, iframy).
-    HtmlEmbed: ({ file, title, subtitle, source, ...rest }) => {
+    // `wide` = graf vyčnívá z textového sloupce do okrajů na obě strany (sdílené --dt-bleed-pull jako fotky;
+    // na mobilu se nic nemění). Pro grafy, kterým sloupec nestačí (Sankey v článku o koalicích, 5. 11. 2026).
+    HtmlEmbed: ({ file, title, subtitle, source, wide, ...rest }) => {
       const htmlEmbedData = (mdxSource.scope as any)?.htmlEmbedData as Record<string, string> | undefined;
       const htmlContent = file ? htmlEmbedData?.[file] : undefined;
       const embed = <HtmlEmbed file={file} slug={slug} htmlContent={htmlContent} {...rest} />;
-      return title || subtitle || source ? <ChartCard title={title} subtitle={subtitle} source={source}>{embed}</ChartCard> : embed;
+      const out = title || subtitle || source ? <ChartCard title={title} subtitle={subtitle} source={source}>{embed}</ChartCard> : embed;
+      return wide ? <div className="dt-wide">{out}</div> : out;
     },
 
     AttendanceSwarm: ({ dataFile, title, subtitle, source }: { dataFile?: string; title?: string; subtitle?: string; source?: string }) => {

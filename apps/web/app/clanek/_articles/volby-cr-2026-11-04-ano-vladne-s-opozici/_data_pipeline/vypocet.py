@@ -455,7 +455,7 @@ for n, a in koal:
     for x, y in combinations(sorted(a, key=UZLY.index), 2):
         mesta_par.setdefault((x, y), []).append(NAZ.get(n, n))
 mesta_strany = {s: [NAZ.get(n, n) for n, a in koal if s in a] for s in UZLY}
-poradi = sorted(UZLY, key=lambda s: (s == 'místní hnutí', -pocet[s]))   # místní hnutí dospod
+poradi = sorted(UZLY, key=lambda s: (s == 'místní hnutí', s.casefold()))   # strany abecedně jako vždy u nás (Kateřina 5. 11.), místní hnutí dospod
 barva = lambda s: TT_BARVY[s]
 tok = {s: sum(vazba(s, t) for t in UZLY if t != s) for s in UZLY}
 SK_DATA = dict(
@@ -487,7 +487,11 @@ document.querySelectorAll('.dt-sankey:not([data-init])').forEach(function(root){
   root.setAttribute('data-init','1');var sel=null,id='sk'+Math.random().toString(36).slice(2,7);
   function kresli(){
     var W=root.clientWidth;if(!W)return;var mob=W<560,fs=mob?12:14,fm=mob?10.5:12,nw=mob?8:10;
-    var lw=mob?92:Math.min(170,Math.max(120,W*.17)),rw=mob?96:Math.min(170,Math.max(120,W*.17));
+    // místo na popisky podle skutečně nejdelšího textu, ať vlákna dostanou co nejvíc šířky (Kateřina 5. 11.: bez zbytečných okrajů)
+    var mer=el('svg',{width:0,height:0},root),mL=0,mR=0;mer.style.cssText='position:absolute;visibility:hidden;font-family:"IBM Plex Sans",Arial,sans-serif';
+    function sir(t,f,w){var e=el('text',{'font-size':f,'font-weight':w},mer);e.textContent=t;var v=e.getComputedTextLength();mer.removeChild(e);return v}
+    D.uzly.forEach(function(u){mL=Math.max(mL,sir(u.n+' · 12',fs,700),sir(koal(u.k),fm,400));mR=Math.max(mR,sir(u.n+' · 12',fs,700))});
+    root.removeChild(mer);var lw=Math.ceil(mL)+12,rw=Math.ceil(mR)+12;
     var x0=lw,x1=W-rw-nw,gap=mob?12:14,H=mob?500:Math.min(640,Math.max(540,W*.62)),sum=0;
     D.uzly.forEach(function(u){sum+=u.tok});var k=(H-gap*(D.uzly.length-1))/sum,y={},c=0;
     D.uzly.forEach(function(u){y[u.n]=c;c+=Math.max(u.tok*k,3)+gap});
@@ -510,6 +514,8 @@ document.querySelectorAll('.dt-sankey:not([data-init])').forEach(function(root){
     D.uzly.forEach(function(u){var h=Math.max(u.tok*k,3),ym=y[u.n]+h/2,tw=u.n==='ANO'?700:600;
       ['L','R'].forEach(function(side){var g=el('g',{tabindex:0,role:'button','aria-label':'Zvýraznit koalice: '+u.n},gN);g.style.cursor='pointer';g.style.outline='none';
         g.n=u.n;g.side=side;uzly.push(g);
+        var hz=Math.max(h,fs*1.8);// klikací plocha: celý popisek a blok, aspoň na výšku písma (malý SOCDEM)
+        el('rect',{x:side==='L'?0:x1,y:ym-hz/2,width:side==='L'?x0+nw:W-x1,height:hz,fill:'transparent'},g);
         el('rect',{x:side==='L'?x0:x1,y:y[u.n],width:nw,height:h,fill:u.b,rx:1.5},g);
         if(side==='L'){var dvere=h>fs*2.3;
           var t1=text(x0-10,dvere?ym-fs*.45:ym,u.n,{a:'end',w:tw,p:g});g.cnt=el('tspan',{fill:SEDA,'font-weight':400},t1);
