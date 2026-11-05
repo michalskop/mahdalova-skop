@@ -443,138 +443,106 @@ for s in UZLY:
 p(f"SPD, Motoristé, PRO v koalici: {sum(1 for _, a in koal if a & {'SPD', 'Motoristé', 'PRO'})}")
 (H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
 
-# ── Sankey jako statické SVG (sankey.html → <HtmlEmbed> v ChartCard) ────────
+# ── Sankey: responzivní graf kreslený v prohlížeči (sankey.html → <HtmlEmbed> v ChartCard) ──
+# Kateřina 5. 11. 2026: graf se roztahuje na šířku článku (vlákna se prodlouží, písmo zůstává 14 px, na mobilu 12 px),
+# detail vlákna i strany ukazuje plovoucí tooltip v našem stylu (DESIGN.md §10: béžová karta, lišta v barvě položky,
+# řádky ink blue), ne panel pod grafem. Klik na stranu zvýrazní její vlákna a u partnerů ukáže počty (druhý klik vrátí),
+# vlákna mají přechod barva strany → šedá → barva partnera. Data a pořadí stejné jako dřív, kreslí je JS níže.
 def vazba(a, b):
     return par.get((a, b), par.get((b, a), 0))
 mesta_par = {}
 for n, a in koal:
     for x, y in combinations(sorted(a, key=UZLY.index), 2):
         mesta_par.setdefault((x, y), []).append(NAZ.get(n, n))
+mesta_strany = {s: [NAZ.get(n, n) for n, a in koal if s in a] for s in UZLY}
 poradi = sorted(UZLY, key=lambda s: (s == 'místní hnutí', -pocet[s]))   # místní hnutí dospod
 barva = lambda s: TT_BARVY[s]
-W, LW, RW, GAP, KOEF, NW = 468, 124, 126, 13, 1.45, 9   # šířka, místo na popisky, mezera uzlů, px na koalici, šířka uzlu
 tok = {s: sum(vazba(s, t) for t in UZLY if t != s) for s in UZLY}
-Hc = sum(tok[s] * KOEF for s in poradi) + GAP * (len(poradi) - 1)
-x0, x1 = LW, W - RW
-def pozice():
-    y, out = 0, {}
-    for s in poradi:
-        out[s] = y
-        y += tok[s] * KOEF + GAP
-    return out
-yl, yr = pozice(), pozice()
-offl = dict(yl); offr = dict(yr)
-cesty, prechody = [], []
-for s in poradi:
-    for t in poradi:
-        v = vazba(s, t) if s != t else 0
-        if not v:
-            continue
-        h = v * KOEF
-        a0, b0 = offl[s], offr[t]
-        offl[s] += h; offr[t] += h
-        cx = (x0 + NW + x1) / 2
-        d = (f"M{x0 + NW},{a0:.1f} C{cx},{a0:.1f} {cx},{b0:.1f} {x1},{b0:.1f} L{x1},{b0 + h:.1f} "
-             f"C{cx},{b0 + h:.1f} {cx},{a0 + h:.1f} {x0 + NW},{a0 + h:.1f} Z")
-        mm = mesta_par[tuple(sorted((s, t), key=UZLY.index))]
-        k = 'koalici' if v == 1 else 'koalicích'
-        # přechod barvy strany vlevo → šedá uprostřed → barva partnera vpravo (Kateřina 4. 11., jako Flourish)
-        gid = f'sg{len(cesty)}'
-        prechody.append(f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="{x0 + NW}" y1="0" x2="{x1}" y2="0">'
-                        f'<stop offset="0" stop-color="{barva(s)}"/><stop offset="0.5" stop-color="#b9bccb"/>'
-                        f'<stop offset="1" stop-color="{barva(t)}"/></linearGradient>')
-        cesty.append(f'<path d="{d}" fill="url(#{gid})" fill-opacity="{0.7 if s == "ANO" else 0.38}" class="l" data-s="{s}" data-t="{t}" data-v="{v}">'
-                     f'<title>{s} a {t}: spolu v {v} {k} ({", ".join(mm)})</title></path>')
-# Uzly jsou přepínače (Kateřina 4. 11., jako ve Flourish): klik na stranu v levém nebo pravém sloupci zvýrazní
-# jen její pruhy a u partnerů na druhé straně ukáže počet společných koalic; druhý klik vrátí celý graf.
-uzly = []
-for s in poradi:
-    h = tok[s] * KOEF
-    kk = f"{pocet[s]} {'koalice' if pocet[s] < 5 else 'koalic'}"
-    tw = 700 if s == 'ANO' else 600
-    rect = lambda x, ys: f'<rect x="{x}" y="{ys:.1f}" width="{NW}" height="{max(h, 2):.1f}" fill="{barva(s)}"/>'
-    c = '<tspan class="c" font-weight="400" fill="#55597a"></tspan>'
-    lev = (f'<text x="{x0 - 8}" y="{yl[s] + max(h, 2) / 2:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s}{c}'
-           f'<tspan x="{x0 - 8}" dy="16" font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>' if h > 22 else
-           f'<text x="{x0 - 8}" y="{yl[s] + 1:.1f}" text-anchor="end" dominant-baseline="middle" font-weight="{tw}">{s}{c} <tspan font-weight="400" font-size="12.5" fill="#55597a">{kk}</tspan></text>')
-    prav = f'<text x="{x1 + NW + 8}" y="{yr[s] + max(h, 2) / 2:.1f}" dominant-baseline="middle" font-weight="{tw}">{s}{c}</text>'
-    for side, obsah in (('L', rect(x0, yl[s]) + lev), ('R', rect(x1, yr[s]) + prav)):
-        uzly.append(f'<g class="n" data-n="{s}" data-side="{side}" role="button" tabindex="0" aria-label="Zvýraznit koalice: {s}">{obsah}</g>')
-CSS = ('.l{transition:fill-opacity .2s}.n{cursor:pointer;transition:opacity .2s}.n:focus{outline:none}'
-       'svg:not(.sel) .l:hover{fill-opacity:.85}svg.sel .l{fill-opacity:.05}svg.sel .l.on{fill-opacity:.8}'
-       'svg.sel .n{opacity:.3}svg.sel .n.on,svg.sel .n.p{opacity:1}')
-JS = ("(function(){document.querySelectorAll('.dt-sankey svg:not([data-init])').forEach(function(svg){"
-      "svg.setAttribute('data-init','1');var sel=null;"
-      "function clear(){svg.classList.remove('sel');svg.querySelectorAll('.on,.p').forEach(function(e){e.classList.remove('on','p')});"
-      "svg.querySelectorAll('.c').forEach(function(e){e.textContent=''})}"
-      "function pick(g){var n=g.getAttribute('data-n'),L=g.getAttribute('data-side')==='L',k=n+'|'+(L?'L':'R');clear();"
-      "if(sel===k){sel=null;return}sel=k;svg.classList.add('sel');g.classList.add('on');"
-      "svg.querySelectorAll('.l').forEach(function(p){if(p.getAttribute(L?'data-s':'data-t')!==n)return;p.classList.add('on');"
-      "var o=p.getAttribute(L?'data-t':'data-s');svg.querySelectorAll('.n[data-side=\"'+(L?'R':'L')+'\"]').forEach(function(og){"
-      "if(og.getAttribute('data-n')===o){og.classList.add('p');og.querySelector('.c').textContent=' · '+p.getAttribute('data-v')}})})}"
-      "svg.querySelectorAll('.n').forEach(function(g){g.addEventListener('click',function(){pick(g)});"
-      "g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(g)}})})})})();")
-svg = (f'<svg viewBox="-4 -10 {W + 8} {Hc + 40:.0f}" width="100%" role="img" xmlns="http://www.w3.org/2000/svg" '
-       f'aria-label="Sankeyův diagram: kdo s kým sedí v 23 dohodnutých koalicích. ANO nejčastěji s místními hnutími (6) a s ODS (5), opoziční strany spolu nejčastěji (STAN a TOP 09 10, ODS se STAN, lidovci a TOP 09 po 9)." '
-       f'style="font-family:IBM Plex Sans,Arial,sans-serif;font-size:15px;fill:#101432;display:block;max-width:500px;margin:0 auto">'
-       f'<style>{CSS}</style><defs>{"".join(prechody)}</defs>'
-       + ''.join(cesty) + ''.join(uzly) + '</svg>')
-JS += r'''
-(function () {
-  document.querySelectorAll('.dt-sankey').forEach(function (root) {
-    const svg = root.querySelector('svg');
-    svg.style.maxWidth = '100%';
-    svg.setAttribute('role', 'group');
-    const style = document.createElement('style');
-    style.textContent = '.dt-sankey{position:relative;width:100%}.dt-sankey svg.sel .l:not(.on){pointer-events:none}.dt-sankey .l{cursor:pointer}.dt-sankey .l:focus{outline:2px solid #101432}.dt-sankey .detail{position:sticky;bottom:12px;box-sizing:border-box;width:100%;padding:18px 48px 18px 20px;background:#fff;color:#101432;border:1px solid #c3c6d8;border-top:3px solid #de1743;border-radius:8px;box-shadow:0 4px 20px #10143222;font:16px/1.5 "IBM Plex Sans",Arial,sans-serif}.dt-sankey .detail[hidden]{display:none}.dt-sankey .detail button{position:absolute;right:8px;top:8px;width:36px;height:36px;border:0;background:transparent;color:#101432;font-size:24px;cursor:pointer}';
-    root.appendChild(style);
-    const panel = document.createElement('div');
-    panel.className = 'detail';
-    panel.hidden = true;
-    panel.setAttribute('role', 'region');
-    panel.setAttribute('aria-label', 'Detail koalice');
-    const content = document.createElement('div');
-    content.setAttribute('aria-live', 'polite');
-    const close = document.createElement('button');
-    close.type = 'button';
-    close.textContent = '×';
-    close.setAttribute('aria-label', 'Zavřít detail');
-    panel.append(content, close);
-    root.appendChild(panel);
-    let pinned = false;
-    let active = null;
-    function hide() { panel.hidden = true; pinned = false; }
-    close.addEventListener('click', function () { hide(); if (active) active.focus(); });
-    root.addEventListener('keydown', function (event) { if (event.key === 'Escape') hide(); });
-    svg.querySelectorAll('.n').forEach(function (node) { node.addEventListener('click', hide); });
-    svg.querySelectorAll('.l').forEach(function (path) {
-      const title = path.querySelector('title');
-      const label = title ? title.textContent : '';
-      if (title) title.remove();
-      path.setAttribute('tabindex', '0');
-      path.setAttribute('role', 'button');
-      path.setAttribute('aria-label', label);
-      function show(pin) {
-        if (svg.classList.contains('sel') && !path.classList.contains('on')) return;
-        if (pinned && !pin) return;
-        active = path;
-        pinned = pin;
-        content.textContent = label;
-        panel.hidden = false;
-      }
-      path.addEventListener('pointerenter', function () { show(false); });
-      path.addEventListener('focus', function () { show(false); });
-      path.addEventListener('click', function () { show(true); });
-      path.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); show(true); }
+SK_DATA = dict(
+    uzly=[dict(n=s, b=barva(s), tok=tok[s], k=pocet[s], m=mesta_strany[s]) for s in poradi],
+    vazby=[dict(s=s, t=t, v=vazba(s, t), m=mesta_par[tuple(sorted((s, t), key=UZLY.index))])
+           for s in poradi for t in poradi if s != t and vazba(s, t)])
+SK_JS = r'''
+(function(){
+var D=__DATA__,NS='http://www.w3.org/2000/svg',INK='#101432',SEDA='#55597a',STRED='#b9bccb';
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function svetla(h){var r=parseInt(h.substr(1,2),16)/255,g=parseInt(h.substr(3,2),16)/255,b=parseInt(h.substr(5,2),16)/255;
+  function l(c){return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)}return .2126*l(r)+.7152*l(g)+.0722*l(b)>.45}
+function koal(n){return n+' '+(n===1?'koalice':n<5?'koalice':'koalic')}
+function vKoal(n){return 'v '+n+' '+(n===1?'koalici':'koalicích')}
+var tt=document.getElementById('dt-sk-tt');
+if(!tt){tt=document.createElement('div');tt.id='dt-sk-tt';document.body.appendChild(tt);
+  var st=document.createElement('style');st.textContent=
+  '#dt-sk-tt{position:fixed;z-index:9999;display:none;pointer-events:none;max-width:300px;background:rgba(248,246,240,.97);border:1px solid #e8e3d2;border-radius:7px;box-shadow:0 4px 10px rgba(16,20,50,.14);color:#101432;font:13px/1.4 "IBM Plex Sans",Arial,sans-serif;overflow:hidden}'+
+  '#dt-sk-tt.on{display:block}#dt-sk-tt .h{font-weight:700;font-size:13.5px;padding:5px 12px;display:flex;align-items:center;gap:7px}'+
+  '#dt-sk-tt .h i{width:9px;height:9px;border-radius:50%;flex:none;box-shadow:0 0 0 1.5px #f8f6f0}'+
+  '#dt-sk-tt .b{padding:6px 12px 8px}#dt-sk-tt .b strong{font-weight:700}#dt-sk-tt .m{margin-top:3px;font-size:12.5px}';
+  document.head.appendChild(st)}
+function ukaz(html,head,ev){tt.innerHTML='<div class="h" style="background:'+head+';color:'+(svetla(head)?INK:'#fff')+'">'+html.h+'</div><div class="b">'+html.b+'</div>';
+  tt.classList.add('on');posun(ev)}
+function posun(ev){var p=12,w=tt.offsetWidth,h=tt.offsetHeight,x=ev.clientX+p+w>innerWidth?ev.clientX-w-p:ev.clientX+p,y=ev.clientY+p+h>innerHeight?ev.clientY-h-p:ev.clientY+p;
+  tt.style.left=Math.max(8,x)+'px';tt.style.top=Math.max(8,y)+'px'}
+function schovej(){tt.classList.remove('on')}
+document.querySelectorAll('.dt-sankey:not([data-init])').forEach(function(root){
+  root.setAttribute('data-init','1');var sel=null,id='sk'+Math.random().toString(36).slice(2,7);
+  function kresli(){
+    var W=root.clientWidth;if(!W)return;var mob=W<560,fs=mob?12:14,fm=mob?10.5:12,nw=mob?8:10;
+    var lw=mob?92:Math.min(170,Math.max(120,W*.17)),rw=mob?96:Math.min(170,Math.max(120,W*.17));
+    var x0=lw,x1=W-rw-nw,gap=mob?12:14,H=mob?500:Math.min(640,Math.max(540,W*.62)),sum=0;
+    D.uzly.forEach(function(u){sum+=u.tok});var k=(H-gap*(D.uzly.length-1))/sum,y={},c=0;
+    D.uzly.forEach(function(u){y[u.n]=c;c+=Math.max(u.tok*k,3)+gap});
+    root.innerHTML='';var svg=el('svg',{width:W,height:H+4,viewBox:'0 -2 '+W+' '+(H+4),role:'img','aria-label':root.getAttribute('data-alt')||''},root);
+    svg.style.cssText='display:block;font-family:"IBM Plex Sans",Arial,sans-serif;overflow:visible';
+    var defs=el('defs',{},svg),gL=el('g',{},svg),gN=el('g',{},svg),oL={},oR={},cx=(x0+nw+x1)/2;
+    for(var n in y){oL[n]=y[n];oR[n]=y[n]}
+    var barva={};D.uzly.forEach(function(u){barva[u.n]=u.b});
+    var cesty=[],uzly=[];
+    D.vazby.forEach(function(v,i){var h=v.v*k,a=oL[v.s],b=oR[v.t];oL[v.s]+=h;oR[v.t]+=h;
+      var gr=el('linearGradient',{id:id+'g'+i,gradientUnits:'userSpaceOnUse',x1:x0+nw,y1:0,x2:x1,y2:0},defs);
+      el('stop',{offset:0,'stop-color':barva[v.s]},gr);el('stop',{offset:.5,'stop-color':STRED},gr);el('stop',{offset:1,'stop-color':barva[v.t]},gr);
+      var p=el('path',{d:'M'+(x0+nw)+','+a+' C'+cx+','+a+' '+cx+','+b+' '+x1+','+b+' L'+x1+','+(b+h)+' C'+cx+','+(b+h)+' '+cx+','+(a+h)+' '+(x0+nw)+','+(a+h)+' Z',
+        fill:'url(#'+id+'g'+i+')'},gL);p.v=v;cesty.push(p);
+      function info(e){if(sel&&!p.on)return;ukaz({h:v.s+' + '+v.t,b:'Společných koalic: <strong>'+v.v+'</strong><div class="m">'+v.m.join(', ')+'</div>'},barva[v.s],e)}
+      p.addEventListener('pointermove',info);p.addEventListener('pointerdown',info);
+      p.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')schovej()});
+    });
+    function text(x,yy,s,o){var t=el('text',{x:x,y:yy,'font-size':o.fs||fs,'font-weight':o.w||600,fill:o.fill||INK,'text-anchor':o.a||'start','dominant-baseline':'middle'},o.p);t.textContent=s;return t}
+    D.uzly.forEach(function(u){var h=Math.max(u.tok*k,3),ym=y[u.n]+h/2,tw=u.n==='ANO'?700:600;
+      ['L','R'].forEach(function(side){var g=el('g',{tabindex:0,role:'button','aria-label':'Zvýraznit koalice: '+u.n},gN);g.style.cursor='pointer';g.style.outline='none';
+        g.n=u.n;g.side=side;uzly.push(g);
+        el('rect',{x:side==='L'?x0:x1,y:y[u.n],width:nw,height:h,fill:u.b,rx:1.5},g);
+        if(side==='L'){var dvere=h>fs*2.3;
+          var t1=text(x0-10,dvere?ym-fs*.45:ym,u.n,{a:'end',w:tw,p:g});g.cnt=el('tspan',{fill:SEDA,'font-weight':400},t1);
+          if(dvere)text(x0-10,ym+fs*.6,koal(u.k),{a:'end',w:400,fs:fm,fill:SEDA,p:g});
+          else{var ts=el('tspan',{'font-size':fm,fill:SEDA,'font-weight':400},t1);ts.textContent=' '+u.k}}
+        else{var t2=text(x1+nw+10,ym,u.n,{w:tw,p:g});g.cnt=el('tspan',{fill:SEDA,'font-weight':400},t2)}
+        g.addEventListener('click',function(){sel=sel&&sel.n===u.n&&sel.side===side?null:{n:u.n,side:side};stav();schovej()});
+        g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();g.dispatchEvent(new Event('click'))}});
+        g.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;ukaz({h:u.n,b:'Koalic: <strong>'+u.k+'</strong><div class="m">'+u.m.join(', ')+'</div>'},u.b,e)});
+        g.addEventListener('pointerleave',schovej);
       });
     });
-  });
+    function stav(){var pr={};
+      cesty.forEach(function(p){var on=sel&&(sel.side==='L'?p.v.s:p.v.t)===sel.n;p.on=on;
+        if(on)pr[sel.side==='L'?p.v.t:p.v.s]=p.v.v;
+        p.setAttribute('fill-opacity',sel?(on?.85:.05):(p.v.s==='ANO'?.7:.38));p.style.pointerEvents=sel&&!on?'none':'auto'});
+      uzly.forEach(function(g){var hl=!sel||(g.n===sel.n&&g.side===sel.side)||(g.side!==sel.side&&g.n in pr);
+        g.setAttribute('opacity',hl?1:.3);g.cnt.textContent=sel&&g.side!==sel.side&&g.n in pr?' · '+pr[g.n]:''})}
+    stav();
+  }
+  kresli();var sirka=root.clientWidth;
+  if(window.ResizeObserver)new ResizeObserver(function(){if(Math.abs(root.clientWidth-sirka)>4){sirka=root.clientWidth;kresli()}}).observe(root);
+  document.addEventListener('pointerdown',function(e){if(!(e.target.closest&&e.target.closest('.dt-sankey')))schovej()});
+  root.addEventListener('pointerleave',schovej);
+});
 })();
-
 '''
-(ART / 'sankey.html').write_text(f'<div class="dt-sankey">{svg}</div>\n<script>{JS}</script>\n', encoding='utf-8')
-p(f'sankey zapsán: sankey.html (výška {Hc:.0f} px)')
+ALT = ('Sankeyův diagram: kdo s kým vládne v 23 dohodnutých koalicích. ANO nejčastěji s místními hnutími (6) a s ODS (5), '
+       'opoziční strany spolu častěji (STAN a TOP 09 10, ODS se STAN, lidovci a TOP 09 po 9).')
+(ART / 'sankey.html').write_text(
+    f'<div class="dt-sankey" data-alt="{ALT}" style="width:100%;min-height:500px"></div>\n'
+    f'<script>{SK_JS.replace("__DATA__", json.dumps(SK_DATA, ensure_ascii=False))}</script>\n', encoding='utf-8')
+p('sankey zapsán: sankey.html (responzivní, kreslí JS)')
 (H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
 
 # ── Podklad pro carousel a animaci Sankey (_cover_pipeline/sankey.cjs) ──────

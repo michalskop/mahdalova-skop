@@ -400,4 +400,4 @@ v kolika koalicích: ANO 10; ODS 15; STAN 13; KDU-ČSL 13; TOP 09 11; Piráti 8;
    SOCDEM        → ANO 1
    místní hnutí  → ANO 6, ODS 12, STAN 9, KDU-ČSL 8, TOP 09 8, Piráti 6, Zelení 5
 SPD, Motoristé, PRO v koalici: 0
-sankey zapsán: sankey.html (výška 600 px)
+sankey zapsán: sankey.html (responzivní, kreslí JS)
