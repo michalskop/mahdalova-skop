@@ -1,0 +1,60 @@
+{
+  "sit": "bluesky",
+  "navazuje_na": "volby-usa-2026-11-04-proc-vyhrali-demokrate.bluesky.json",
+  "prispevky": [
+    {
+      "text": "Naše zjištění: americký Senát zvýhodňuje malé státy. Z 50 států je 41 menších než Česko. Žije v nich 48,8 % Američanů, ale mají 82 ze 100 senátorů. Kalifornie má 67krát víc obyvatel než Wyoming a stejný počet hlasů v Senátu."
+    },
+    {
+      "text": "Republikánská většina 53 senátorů proto před volbami zastupovala jen 46,6 % Američanů. Vlna ale přelila i státy, kde Trump v roce 2024 vyhrál o dvouciferný rozdíl: Texas, Kansas, Iowu a Ohio. Nových 54 demokratických senátorů zastupuje 63,4 % obyvatel.",
+      "obrazek": "obrazky/senat-graf.png",
+      "alt": "Pruhový graf DataTimes.cz. Před volbami: demokraté 47 senátorů zastupujících 53,4 % obyvatel, republikáni 53 senátorů zastupujících 46,6 %. Po volbách 2026: demokraté 54 senátorů a 63,4 % obyvatel, republikáni 44 senátorů a 36,1 %, Mississippi a Aljaška zatím nerozhodnuté. Zdroj: výpočet DataTimes.cz z odhadů US Census Bureau a výsledků podle AP."
+    },
+    {
+      "text": "Podle povolebního průzkumu AP schvaluje Trumpovo působení 38 % voličů a 62 % ne. Voliči do 30 let se v roce 2024 dělili mezi Trumpa a Harrisovou zhruba napůl, letos volili demokraty asi v poměru sedm ku třem."
+    },
+    {
+      "text": "V článku: jak jsme zastoupení obyvatel v Senátu počítali, co demokratický Kongres zmůže proti Trumpovu vetu a o čem voliči rozhodli v referendech.",
+      "odkaz": "https://www.mahdalova-skop.cz/clanek/volby-usa-2026-11-04-proc-vyhrali-demokrate"
+    },
+    {
+      "text": "Mapa výsledků po okresech: republikáni vyhráli skoro čtyři pětiny okresů, demokraté většinu hlasů. V článku si přepnete Sněmovnu, Senát a guvernéry a po najetí na okres uvidíte jeho výsledek.",
+      "obrazek": "obrazky/okresy-mapa.png",
+      "alt": "Mapa USA po okresech, volby do Sněmovny reprezentantů 2026. Barva ukazuje náskok vítěze v procentních bodech, modrá demokraté, červená republikáni. Venkovské okresy na Středozápadě, Jihu a v horských státech jsou převážně tmavě červené, modré jsou velká města, pobřeží, Nová Anglie, Havaj, okolí řeky Mississippi a jih Texasu. Zdroj: průběžné výsledky z The New York Times a Civic API, zpracování DataTimes.cz, stav 4. 11. 2026."
+    }
+  ],
+  "cas_zverejneni": "po schválení",
+  "schvalil": "Kateřina",
+  "zverejneno": [
+    {
+      "kdy": "2026-11-05T02:01:56.937Z",
+      "uri": "at://did:plc:pvucjq3zqvwz5a2bu2zpvmey/app.bsky.feed.post/3mzjrkqyr2q27",
+      "cid": "bafyreigv4vffaee2px3tvxtgerpypqprywuigmm74qnjavrasctfntucai",
+      "url": "https://bsky.app/profile/katemahdalova.bsky.social/post/3mzjrkqyr2q27"
+    },
+    {
+      "kdy": "2026-11-05T02:01:58.396Z",
+      "uri": "at://did:plc:pvucjq3zqvwz5a2bu2zpvmey/app.bsky.feed.post/3mzjrks53sk2l",
+      "cid": "bafyreidrbwko32zvwmziqvlhxse3srdicmfsrsylzkh6r3qgutxdshppxy",
+      "url": "https://bsky.app/profile/katemahdalova.bsky.social/post/3mzjrks53sk2l"
+    },
+    {
+      "kdy": "2026-11-05T02:01:59.020Z",
+      "uri": "at://did:plc:pvucjq3zqvwz5a2bu2zpvmey/app.bsky.feed.post/3mzjrksqgep2c",
+      "cid": "bafyreifr7nudl7dwszjjhepc2xg2hzlbmw6zmyntuicoxzxa54m5mfwcua",
+      "url": "https://bsky.app/profile/katemahdalova.bsky.social/post/3mzjrksqgep2c"
+    },
+    {
+      "kdy": "2026-11-05T02:02:00.151Z",
+      "uri": "at://did:plc:pvucjq3zqvwz5a2bu2zpvmey/app.bsky.feed.post/3mzjrktswfr23",
+      "cid": "bafyreihtijicmqdryd4h65h3ilfoshib5osxp6bxhiajs2saemmkfcnada",
+      "url": "https://bsky.app/profile/katemahdalova.bsky.social/post/3mzjrktswfr23"
+    },
+    {
+      "kdy": "2026-11-05T07:55:32.825Z",
+      "uri": "at://did:plc:pvucjq3zqvwz5a2bu2zpvmey/app.bsky.feed.post/3mzkfcztatb2n",
+      "cid": "bafyreiecbdpxewgp3wrv6npaub3vhe7raxmnocl7wrqs5u3llii73l2sbm",
+      "url": "https://bsky.app/profile/katemahdalova.bsky.social/post/3mzkfcztatb2n"
+    }
+  ]
+}
