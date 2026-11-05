@@ -519,6 +519,60 @@ svg = (f'<svg viewBox="-4 -10 {W + 8} {Hc + 40:.0f}" width="100%" role="img" xml
        f'style="font-family:IBM Plex Sans,Arial,sans-serif;font-size:15px;fill:#101432;display:block;max-width:500px;margin:0 auto">'
        f'<style>{CSS}</style><defs>{"".join(prechody)}</defs>'
        + ''.join(cesty) + ''.join(uzly) + '</svg>')
+JS += r'''
+(function () {
+  document.querySelectorAll('.dt-sankey').forEach(function (root) {
+    const svg = root.querySelector('svg');
+    svg.style.maxWidth = '100%';
+    svg.setAttribute('role', 'group');
+    const style = document.createElement('style');
+    style.textContent = '.dt-sankey{position:relative;width:100%}.dt-sankey svg.sel .l:not(.on){pointer-events:none}.dt-sankey .l{cursor:pointer}.dt-sankey .l:focus{outline:2px solid #101432}.dt-sankey .detail{position:sticky;bottom:12px;box-sizing:border-box;width:100%;padding:18px 48px 18px 20px;background:#fff;color:#101432;border:1px solid #c3c6d8;border-top:3px solid #de1743;border-radius:8px;box-shadow:0 4px 20px #10143222;font:16px/1.5 "IBM Plex Sans",Arial,sans-serif}.dt-sankey .detail[hidden]{display:none}.dt-sankey .detail button{position:absolute;right:8px;top:8px;width:36px;height:36px;border:0;background:transparent;color:#101432;font-size:24px;cursor:pointer}';
+    root.appendChild(style);
+    const panel = document.createElement('div');
+    panel.className = 'detail';
+    panel.hidden = true;
+    panel.setAttribute('role', 'region');
+    panel.setAttribute('aria-label', 'Detail koalice');
+    const content = document.createElement('div');
+    content.setAttribute('aria-live', 'polite');
+    const close = document.createElement('button');
+    close.type = 'button';
+    close.textContent = '×';
+    close.setAttribute('aria-label', 'Zavřít detail');
+    panel.append(content, close);
+    root.appendChild(panel);
+    let pinned = false;
+    let active = null;
+    function hide() { panel.hidden = true; pinned = false; }
+    close.addEventListener('click', function () { hide(); if (active) active.focus(); });
+    root.addEventListener('keydown', function (event) { if (event.key === 'Escape') hide(); });
+    svg.querySelectorAll('.n').forEach(function (node) { node.addEventListener('click', hide); });
+    svg.querySelectorAll('.l').forEach(function (path) {
+      const title = path.querySelector('title');
+      const label = title ? title.textContent : '';
+      if (title) title.remove();
+      path.setAttribute('tabindex', '0');
+      path.setAttribute('role', 'button');
+      path.setAttribute('aria-label', label);
+      function show(pin) {
+        if (svg.classList.contains('sel') && !path.classList.contains('on')) return;
+        if (pinned && !pin) return;
+        active = path;
+        pinned = pin;
+        content.textContent = label;
+        panel.hidden = false;
+      }
+      path.addEventListener('pointerenter', function () { show(false); });
+      path.addEventListener('focus', function () { show(false); });
+      path.addEventListener('click', function () { show(true); });
+      path.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); show(true); }
+      });
+    });
+  });
+})();
+
+'''
 (ART / 'sankey.html').write_text(f'<div class="dt-sankey">{svg}</div>\n<script>{JS}</script>\n', encoding='utf-8')
 p(f'sankey zapsán: sankey.html (výška {Hc:.0f} px)')
 (H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
@@ -529,3 +583,4 @@ sk = dict(uzly=[dict(n=s, barva=barva(s), tok=tok[s], koalic=pocet[s]) for s in 
                  for s in poradi for t in poradi if s != t and vazba(s, t)],
           koalic=len(koal))
 (ART / '_cover_pipeline' / 'sankey.json').write_text(json.dumps(sk, ensure_ascii=False, indent=1), encoding='utf-8')
+
