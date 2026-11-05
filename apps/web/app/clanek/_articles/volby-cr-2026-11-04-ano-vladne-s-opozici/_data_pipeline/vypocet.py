@@ -455,6 +455,14 @@ for n, a in koal:
     for x, y in combinations(sorted(a, key=UZLY.index), 2):
         mesta_par.setdefault((x, y), []).append(NAZ.get(n, n))
 mesta_strany = {s: [NAZ.get(n, n) for n, a in koal if s in a] for s in UZLY}
+# města v tooltipu abecedně podle české abecedy (Kateřina 5. 11.: ať se v nich čtenář orientuje)
+def cz(t):
+    t = t.casefold()
+    for x, y in (('č', 'c~'), ('ř', 'r~'), ('š', 's~'), ('ž', 'z~'), ('ch', 'h~')):
+        t = t.replace(x, y)
+    return t.translate(str.maketrans('áéěíóúůýňťď', 'aeeiouuyntd'))
+mesta_strany = {s: sorted(m, key=cz) for s, m in mesta_strany.items()}
+mesta_par = {k: sorted(m, key=cz) for k, m in mesta_par.items()}
 poradi = sorted(UZLY, key=lambda s: (s == 'místní hnutí', s.casefold()))   # strany abecedně jako vždy u nás (Kateřina 5. 11.), místní hnutí dospod
 barva = lambda s: TT_BARVY[s]
 tok = {s: sum(vazba(s, t) for t in UZLY if t != s) for s in UZLY}
