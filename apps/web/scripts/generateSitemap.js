@@ -18,7 +18,9 @@ function getArticleSlugs() {
   try {
     const items = fs.readdirSync(articlesDir, { withFileTypes: true });
     return items
-      .filter(item => item.isDirectory() && !item.name.startsWith('zzz-') && !EXCLUDED_SLUGS.includes(item.name))
+      // jen složky s index.md: data grafů konceptu (článek zatím jen v hubu) nejsou článek
+      .filter(item => item.isDirectory() && !item.name.startsWith('zzz-') && !EXCLUDED_SLUGS.includes(item.name)
+        && fs.existsSync(path.join(articlesDir, item.name, 'index.md')))
       .map(item => item.name)
       .sort();
   } catch (error) {

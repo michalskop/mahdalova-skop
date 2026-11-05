@@ -23,6 +23,8 @@ export async function getAllTags() {
 
     articleFolders.forEach((folder) => {
       const fullPath = path.join(articlesDirectory, folder, 'index.md');
+      // složka bez index.md (data grafů konceptu, článek zatím jen v hubu) není článek
+      if (!fs.existsSync(fullPath)) return;
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const { data } = matter(fileContents);
 

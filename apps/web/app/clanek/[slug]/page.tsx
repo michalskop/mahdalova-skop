@@ -81,7 +81,8 @@ export async function generateStaticParams() {
   try {
     const articles = fs.readdirSync(articlesDirectory, { withFileTypes: true });
     const slugs = articles
-      .filter(dirent => dirent.isDirectory() && !EXCLUDED_SLUGS.includes(dirent.name))
+      .filter(dirent => dirent.isDirectory() && !EXCLUDED_SLUGS.includes(dirent.name)
+        && fs.existsSync(path.join(articlesDirectory, dirent.name, 'index.md')))
       .map(dirent => ({ slug: dirent.name }));
     return slugs;
   } catch (error) {
