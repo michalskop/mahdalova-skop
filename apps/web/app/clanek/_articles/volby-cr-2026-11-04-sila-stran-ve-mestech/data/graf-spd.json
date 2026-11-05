@@ -1,0 +1,1248 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Změna podpory {SPD|#a47d03} ve 30 největších městech",
+  "subtitle": "Komunální volby 2022 a 2026, podíl hlasů v %: ○ 2022, ● 2026. Koalice rozděleny podle zvolených. Seřazeno podle změny, vpravo v procentních bodech."
+ },
+ "_source": "ČSÚ, volby.cz – registry kandidátů a výsledky komunálních voleb 2022 a 2026; hlasy koalic rozděleny podle toho, koho ze zvolených navrhla která strana",
+ "width": 600,
+ "height": {
+  "step": 27
+ },
+ "data": {
+  "values": [
+   {
+    "obec": "Opava",
+    "poradi": 0,
+    "zmena": "−9,5",
+    "v22": 9.85,
+    "v26": 0.34,
+    "lo": 0.34,
+    "hi": 9.85,
+    "lo_txt": "0,3",
+    "hi_txt": "9,8",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "9,8 %",
+    "t_26": "0,3 %",
+    "t_z": "−9,5 p. b.",
+    "t_m": "5 → 0",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Děčín",
+    "poradi": 1,
+    "zmena": "−8,9",
+    "v22": 15.2,
+    "v26": 6.26,
+    "lo": 6.26,
+    "hi": 15.2,
+    "lo_txt": "6,3",
+    "hi_txt": "15,2",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "15,2 %",
+    "t_26": "6,3 %",
+    "t_z": "−8,9 p. b.",
+    "t_m": "5 → 2",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Teplice",
+    "poradi": 2,
+    "zmena": "−8,3",
+    "v22": 14.33,
+    "v26": 5.98,
+    "lo": 5.98,
+    "hi": 14.33,
+    "lo_txt": "6,0",
+    "hi_txt": "14,3",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "14,3 %",
+    "t_26": "6,0 %",
+    "t_z": "−8,3 p. b.",
+    "t_m": "4 → 1",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Prostějov",
+    "poradi": 3,
+    "zmena": "−8,2",
+    "v22": 15.02,
+    "v26": 6.79,
+    "lo": 6.79,
+    "hi": 15.02,
+    "lo_txt": "6,8",
+    "hi_txt": "15,0",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "15,0 %",
+    "t_26": "6,8 %",
+    "t_z": "−8,2 p. b.",
+    "t_m": "6 → 2",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Ostrava",
+    "poradi": 4,
+    "zmena": "−7,1",
+    "v22": 11.62,
+    "v26": 4.55,
+    "lo": 4.55,
+    "hi": 11.62,
+    "lo_txt": "4,5",
+    "hi_txt": "11,6",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "11,6 %",
+    "t_26": "4,5 %",
+    "t_z": "−7,1 p. b.",
+    "t_m": "7 → 0",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Frýdek-Místek",
+    "poradi": 5,
+    "zmena": "−6,6",
+    "v22": 11.75,
+    "v26": 5.15,
+    "lo": 5.15,
+    "hi": 11.75,
+    "lo_txt": "5,2",
+    "hi_txt": "11,8",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "11,8 %",
+    "t_26": "5,2 %",
+    "t_z": "−6,6 p. b.",
+    "t_m": "5 → 2",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Přerov",
+    "poradi": 6,
+    "zmena": "−6,0",
+    "v22": 15.17,
+    "v26": 9.12,
+    "lo": 9.12,
+    "hi": 15.17,
+    "lo_txt": "9,1",
+    "hi_txt": "15,2",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "15,2 %",
+    "t_26": "9,1 %",
+    "t_z": "−6,0 p. b.",
+    "t_m": "6 → 3",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Ústí nad Labem",
+    "poradi": 7,
+    "zmena": "−5,9",
+    "v22": 8.74,
+    "v26": 2.81,
+    "lo": 2.81,
+    "hi": 8.74,
+    "lo_txt": "2,8",
+    "hi_txt": "8,7",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "8,7 %",
+    "t_26": "2,8 %",
+    "t_z": "−5,9 p. b.",
+    "t_m": "4 → 1",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Havířov",
+    "poradi": 8,
+    "zmena": "−5,9",
+    "v22": 12.82,
+    "v26": 6.95,
+    "lo": 6.95,
+    "hi": 12.82,
+    "lo_txt": "7,0",
+    "hi_txt": "12,8",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "12,8 %",
+    "t_26": "7,0 %",
+    "t_z": "−5,9 p. b.",
+    "t_m": "6 → 3",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Jablonec nad Nisou",
+    "poradi": 9,
+    "zmena": "−5,6",
+    "v22": 12.52,
+    "v26": 6.93,
+    "lo": 6.93,
+    "hi": 12.52,
+    "lo_txt": "6,9",
+    "hi_txt": "12,5",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "12,5 %",
+    "t_26": "6,9 %",
+    "t_z": "−5,6 p. b.",
+    "t_m": "4 → 2",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Liberec",
+    "poradi": 10,
+    "zmena": "−5,4",
+    "v22": 10.01,
+    "v26": 4.6,
+    "lo": 4.6,
+    "hi": 10.01,
+    "lo_txt": "4,6",
+    "hi_txt": "10,0",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "10,0 %",
+    "t_26": "4,6 %",
+    "t_z": "−5,4 p. b.",
+    "t_m": "4 → 0",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Chomutov",
+    "poradi": 11,
+    "zmena": "−5,0",
+    "v22": 7.99,
+    "v26": 3.0,
+    "lo": 3.0,
+    "hi": 7.99,
+    "lo_txt": "3,0",
+    "hi_txt": "8,0",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "8,0 %",
+    "t_26": "3,0 %",
+    "t_z": "−5,0 p. b.",
+    "t_m": "3 → 1",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Brno",
+    "poradi": 12,
+    "zmena": "−4,9",
+    "v22": 8.15,
+    "v26": 3.27,
+    "lo": 3.27,
+    "hi": 8.15,
+    "lo_txt": "3,3",
+    "hi_txt": "8,2",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "8,2 %",
+    "t_26": "3,3 %",
+    "t_z": "−4,9 p. b.",
+    "t_m": "5 → 0",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "České Budějovice",
+    "poradi": 13,
+    "zmena": "−4,8",
+    "v22": 8.45,
+    "v26": 3.67,
+    "lo": 3.67,
+    "hi": 8.45,
+    "lo_txt": "3,7",
+    "hi_txt": "8,4",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "8,4 %",
+    "t_26": "3,7 %",
+    "t_z": "−4,8 p. b.",
+    "t_m": "4 → 0",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Kladno",
+    "poradi": 14,
+    "zmena": "−4,4",
+    "v22": 8.35,
+    "v26": 3.94,
+    "lo": 3.94,
+    "hi": 8.35,
+    "lo_txt": "3,9",
+    "hi_txt": "8,3",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "8,3 %",
+    "t_26": "3,9 %",
+    "t_z": "−4,4 p. b.",
+    "t_m": "3 → 0",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Karviná",
+    "poradi": 15,
+    "zmena": "−4,4",
+    "v22": 9.4,
+    "v26": 5.0,
+    "lo": 5.0,
+    "hi": 9.4,
+    "lo_txt": "5,0",
+    "hi_txt": "9,4",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "9,4 %",
+    "t_26": "5,0 %",
+    "t_z": "−4,4 p. b.",
+    "t_m": "4 → 0",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Plzeň",
+    "poradi": 16,
+    "zmena": "−4,4",
+    "v22": 7.38,
+    "v26": 3.01,
+    "lo": 3.01,
+    "hi": 7.38,
+    "lo_txt": "3,0",
+    "hi_txt": "7,4",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "7,4 %",
+    "t_26": "3,0 %",
+    "t_z": "−4,4 p. b.",
+    "t_m": "4 → 0",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Česká Lípa",
+    "poradi": 17,
+    "zmena": "−4,0",
+    "v22": 9.94,
+    "v26": 5.89,
+    "lo": 5.89,
+    "hi": 9.94,
+    "lo_txt": "5,9",
+    "hi_txt": "9,9",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "9,9 %",
+    "t_26": "5,9 %",
+    "t_z": "−4,0 p. b.",
+    "t_m": "3 → 1",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Karlovy Vary",
+    "poradi": 18,
+    "zmena": "−4,0",
+    "v22": 10.82,
+    "v26": 6.82,
+    "lo": 6.82,
+    "hi": 10.82,
+    "lo_txt": "6,8",
+    "hi_txt": "10,8",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "10,8 %",
+    "t_26": "6,8 %",
+    "t_z": "−4,0 p. b.",
+    "t_m": "4 → 2",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Zlín",
+    "poradi": 19,
+    "zmena": "−3,9",
+    "v22": 9.36,
+    "v26": 5.5,
+    "lo": 5.5,
+    "hi": 9.36,
+    "lo_txt": "5,5",
+    "hi_txt": "9,4",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "9,4 %",
+    "t_26": "5,5 %",
+    "t_z": "−3,9 p. b.",
+    "t_m": "4 → 2",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Mladá Boleslav",
+    "poradi": 20,
+    "zmena": "−3,3",
+    "v22": 9.35,
+    "v26": 6.05,
+    "lo": 6.05,
+    "hi": 9.35,
+    "lo_txt": "6,0",
+    "hi_txt": "9,3",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "9,3 %",
+    "t_26": "6,0 %",
+    "t_z": "−3,3 p. b.",
+    "t_m": "3 → 2",
+    "t_jak": "samostatně"
+   },
+   {
+    "obec": "Jihlava",
+    "poradi": 21,
+    "zmena": "−3,3",
+    "v22": 9.96,
+    "v26": 6.7,
+    "lo": 6.7,
+    "hi": 9.96,
+    "lo_txt": "6,7",
+    "hi_txt": "10,0",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "10,0 %",
+    "t_26": "6,7 %",
+    "t_z": "−3,3 p. b.",
+    "t_m": "4 → 3",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Most",
+    "poradi": 22,
+    "zmena": "−3,0",
+    "v22": 8.07,
+    "v26": 5.06,
+    "lo": 5.06,
+    "hi": 8.07,
+    "lo_txt": "5,1",
+    "hi_txt": "8,1",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "8,1 %",
+    "t_26": "5,1 %",
+    "t_z": "−3,0 p. b.",
+    "t_m": "4 → 2",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Hradec Králové",
+    "poradi": 23,
+    "zmena": "−2,9",
+    "v22": 6.49,
+    "v26": 3.58,
+    "lo": 3.58,
+    "hi": 6.49,
+    "lo_txt": "3,6",
+    "hi_txt": "6,5",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "6,5 %",
+    "t_26": "3,6 %",
+    "t_z": "−2,9 p. b.",
+    "t_m": "3 → 0",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Olomouc",
+    "poradi": 24,
+    "zmena": "−2,5",
+    "v22": 6.85,
+    "v26": 4.37,
+    "lo": 4.37,
+    "hi": 6.85,
+    "lo_txt": "4,4",
+    "hi_txt": "6,8",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "6,8 %",
+    "t_26": "4,4 %",
+    "t_z": "−2,5 p. b.",
+    "t_m": "3 → 2",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Znojmo",
+    "poradi": 25,
+    "zmena": "−2,4",
+    "v22": 8.72,
+    "v26": 6.37,
+    "lo": 6.37,
+    "hi": 8.72,
+    "lo_txt": "6,4",
+    "hi_txt": "8,7",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "8,7 %",
+    "t_26": "6,4 %",
+    "t_z": "−2,4 p. b.",
+    "t_m": "3 → 2",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Pardubice",
+    "poradi": 26,
+    "zmena": "−2,2",
+    "v22": 7.81,
+    "v26": 5.6,
+    "lo": 5.6,
+    "hi": 7.81,
+    "lo_txt": "5,6",
+    "hi_txt": "7,8",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "7,8 %",
+    "t_26": "5,6 %",
+    "t_z": "−2,2 p. b.",
+    "t_m": "3 → 2",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Třebíč",
+    "poradi": 27,
+    "zmena": "−1,7",
+    "v22": 3.74,
+    "v26": 2.0,
+    "lo": 2.0,
+    "hi": 3.74,
+    "lo_txt": "2,0",
+    "hi_txt": "3,7",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "3,7 %",
+    "t_26": "2,0 %",
+    "t_z": "−1,7 p. b.",
+    "t_m": "1 → 0",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Praha",
+    "poradi": 28,
+    "zmena": "−0,1",
+    "v22": 3.45,
+    "v26": 3.37,
+    "lo": 3.37,
+    "hi": 3.45,
+    "lo_txt": "3,4",
+    "hi_txt": "3,5",
+    "lo_je_22": false,
+    "hi_je_22": true,
+    "smer": "oba",
+    "t_22": "3,5 %",
+    "t_26": "3,4 %",
+    "t_z": "−0,1 p. b.",
+    "t_m": "2 → 0",
+    "t_jak": "v koalici"
+   },
+   {
+    "obec": "Tábor",
+    "poradi": 29,
+    "zmena": "+0,4",
+    "v22": 3.48,
+    "v26": 3.9,
+    "lo": 3.48,
+    "hi": 3.9,
+    "lo_txt": "3,5",
+    "hi_txt": "3,9",
+    "lo_je_22": true,
+    "hi_je_22": false,
+    "smer": "oba",
+    "t_22": "3,5 %",
+    "t_26": "3,9 %",
+    "t_z": "+0,4 p. b.",
+    "t_m": "1 → 1",
+    "t_jak": "v koalici"
+   }
+  ]
+ },
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "params": [
+    {
+     "name": "radek",
+     "select": {
+      "type": "point",
+      "fields": [
+       "obec"
+      ],
+      "on": "pointerover",
+      "clear": "pointerout"
+     }
+    }
+   ],
+   "mark": {
+    "type": "bar",
+    "fill": "#a47d03",
+    "cornerRadius": 2,
+    "height": {
+     "band": 1
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "obec",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "scale": {
+      "paddingInner": 0,
+      "paddingOuter": 0.15
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": {
+       "expr": "width < 360 ? 11.5 : 13"
+      },
+      "labelColor": "#101432",
+      "labelLimit": {
+       "expr": "width < 360 ? 95 : 130"
+      }
+     }
+    },
+    "x": {
+     "value": 0
+    },
+    "x2": {
+     "value": "width"
+    },
+    "fillOpacity": {
+     "condition": {
+      "param": "radek",
+      "empty": false,
+      "value": 0.1
+     },
+     "value": 0
+    },
+    "tooltip": [
+     {
+      "field": "obec",
+      "title": "Město"
+     },
+     {
+      "field": "t_22",
+      "title": "Podíl hlasů 2022"
+     },
+     {
+      "field": "t_26",
+      "title": "Podíl hlasů 2026"
+     },
+     {
+      "field": "t_z",
+      "title": "Změna"
+     },
+     {
+      "field": "t_m",
+      "title": "Zastupitelé 2022 → 2026"
+     },
+     {
+      "field": "t_jak",
+      "title": "Kandidovala v roce 2026"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 3.5,
+    "strokeCap": "butt",
+    "color": "#a47d03",
+    "opacity": 0.4
+   },
+   "encoding": {
+    "y": {
+     "field": "obec",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "scale": {
+      "paddingInner": 0,
+      "paddingOuter": 0.15
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": {
+       "expr": "width < 360 ? 11.5 : 13"
+      },
+      "labelColor": "#101432",
+      "labelLimit": {
+       "expr": "width < 360 ? 95 : 130"
+      }
+     }
+    },
+    "x": {
+     "field": "v22",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.0,
+       20
+      ],
+      "nice": false,
+      "zero": false,
+      "clamp": true,
+      "range": [
+       0,
+       {
+        "expr": "width - 58"
+       }
+      ]
+     },
+     "axis": {
+      "orient": "top",
+      "title": null,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "grid": true,
+      "gridColor": "#d9d6cb",
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 4,
+      "labelFontSize": 11,
+      "labelColor": "#666666",
+      "labelOverlap": true,
+      "labelExpr": "width < 300 && datum.value % 10 != 0 ? '' : datum.value + ' %'"
+     }
+    },
+    "x2": {
+     "field": "v26"
+    },
+    "tooltip": [
+     {
+      "field": "obec",
+      "title": "Město"
+     },
+     {
+      "field": "t_22",
+      "title": "Podíl hlasů 2022"
+     },
+     {
+      "field": "t_26",
+      "title": "Podíl hlasů 2026"
+     },
+     {
+      "field": "t_z",
+      "title": "Změna"
+     },
+     {
+      "field": "t_m",
+      "title": "Zastupitelé 2022 → 2026"
+     },
+     {
+      "field": "t_jak",
+      "title": "Kandidovala v roce 2026"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "fill": "#f8f6f0",
+    "stroke": "#a47d03",
+    "strokeWidth": 2.2,
+    "size": 80,
+    "opacity": 1
+   },
+   "encoding": {
+    "y": {
+     "field": "obec",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "scale": {
+      "paddingInner": 0,
+      "paddingOuter": 0.15
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": {
+       "expr": "width < 360 ? 11.5 : 13"
+      },
+      "labelColor": "#101432",
+      "labelLimit": {
+       "expr": "width < 360 ? 95 : 130"
+      }
+     }
+    },
+    "x": {
+     "field": "v22",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.0,
+       20
+      ],
+      "nice": false,
+      "zero": false,
+      "clamp": true,
+      "range": [
+       0,
+       {
+        "expr": "width - 58"
+       }
+      ]
+     },
+     "axis": {
+      "orient": "top",
+      "title": null,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "grid": true,
+      "gridColor": "#d9d6cb",
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 4,
+      "labelFontSize": 11,
+      "labelColor": "#666666",
+      "labelOverlap": true,
+      "labelExpr": "width < 300 && datum.value % 10 != 0 ? '' : datum.value + ' %'"
+     }
+    },
+    "tooltip": [
+     {
+      "field": "obec",
+      "title": "Město"
+     },
+     {
+      "field": "t_22",
+      "title": "Podíl hlasů 2022"
+     },
+     {
+      "field": "t_26",
+      "title": "Podíl hlasů 2026"
+     },
+     {
+      "field": "t_z",
+      "title": "Změna"
+     },
+     {
+      "field": "t_m",
+      "title": "Zastupitelé 2022 → 2026"
+     },
+     {
+      "field": "t_jak",
+      "title": "Kandidovala v roce 2026"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "fill": "#a47d03",
+    "size": 100,
+    "opacity": 1,
+    "stroke": "#f8f6f0",
+    "strokeWidth": 0.8
+   },
+   "encoding": {
+    "y": {
+     "field": "obec",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "scale": {
+      "paddingInner": 0,
+      "paddingOuter": 0.15
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": {
+       "expr": "width < 360 ? 11.5 : 13"
+      },
+      "labelColor": "#101432",
+      "labelLimit": {
+       "expr": "width < 360 ? 95 : 130"
+      }
+     }
+    },
+    "x": {
+     "field": "v26",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.0,
+       20
+      ],
+      "nice": false,
+      "zero": false,
+      "clamp": true,
+      "range": [
+       0,
+       {
+        "expr": "width - 58"
+       }
+      ]
+     },
+     "axis": {
+      "orient": "top",
+      "title": null,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "grid": true,
+      "gridColor": "#d9d6cb",
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 4,
+      "labelFontSize": 11,
+      "labelColor": "#666666",
+      "labelOverlap": true,
+      "labelExpr": "width < 300 && datum.value % 10 != 0 ? '' : datum.value + ' %'"
+     }
+    },
+    "tooltip": [
+     {
+      "field": "obec",
+      "title": "Město"
+     },
+     {
+      "field": "t_22",
+      "title": "Podíl hlasů 2022"
+     },
+     {
+      "field": "t_26",
+      "title": "Podíl hlasů 2026"
+     },
+     {
+      "field": "t_z",
+      "title": "Změna"
+     },
+     {
+      "field": "t_m",
+      "title": "Zastupitelé 2022 → 2026"
+     },
+     {
+      "field": "t_jak",
+      "title": "Kandidovala v roce 2026"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -9,
+    "fontSize": 11.5,
+    "opacity": {
+     "expr": "width >= 380 ? 1 : 0"
+    }
+   },
+   "transform": [
+    {
+     "filter": "datum.smer == 'oba'"
+    }
+   ],
+   "encoding": {
+    "y": {
+     "field": "obec",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "scale": {
+      "paddingInner": 0,
+      "paddingOuter": 0.15
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": {
+       "expr": "width < 360 ? 11.5 : 13"
+      },
+      "labelColor": "#101432",
+      "labelLimit": {
+       "expr": "width < 360 ? 95 : 130"
+      }
+     }
+    },
+    "x": {
+     "field": "lo",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.0,
+       20
+      ],
+      "nice": false,
+      "zero": false,
+      "clamp": true,
+      "range": [
+       0,
+       {
+        "expr": "width - 58"
+       }
+      ]
+     },
+     "axis": {
+      "orient": "top",
+      "title": null,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "grid": true,
+      "gridColor": "#d9d6cb",
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 4,
+      "labelFontSize": 11,
+      "labelColor": "#666666",
+      "labelOverlap": true,
+      "labelExpr": "width < 300 && datum.value % 10 != 0 ? '' : datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "lo_txt"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.lo_je_22",
+      "value": "#666666"
+     },
+     "value": "#101432"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 9,
+    "fontSize": 11.5,
+    "opacity": {
+     "expr": "width >= 380 ? 1 : 0"
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "obec",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "scale": {
+      "paddingInner": 0,
+      "paddingOuter": 0.15
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": {
+       "expr": "width < 360 ? 11.5 : 13"
+      },
+      "labelColor": "#101432",
+      "labelLimit": {
+       "expr": "width < 360 ? 95 : 130"
+      }
+     }
+    },
+    "x": {
+     "field": "hi",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.0,
+       20
+      ],
+      "nice": false,
+      "zero": false,
+      "clamp": true,
+      "range": [
+       0,
+       {
+        "expr": "width - 58"
+       }
+      ]
+     },
+     "axis": {
+      "orient": "top",
+      "title": null,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "grid": true,
+      "gridColor": "#d9d6cb",
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 4,
+      "labelFontSize": 11,
+      "labelColor": "#666666",
+      "labelOverlap": true,
+      "labelExpr": "width < 300 && datum.value % 10 != 0 ? '' : datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "hi_txt"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.hi_je_22",
+      "value": "#666666"
+     },
+     "value": "#101432"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "fontSize": {
+     "expr": "width < 360 ? 11.5 : 13"
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "obec",
+     "type": "nominal",
+     "sort": {
+      "field": "poradi"
+     },
+     "scale": {
+      "paddingInner": 0,
+      "paddingOuter": 0.15
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "labelFontSize": {
+       "expr": "width < 360 ? 11.5 : 13"
+      },
+      "labelColor": "#101432",
+      "labelLimit": {
+       "expr": "width < 360 ? 95 : 130"
+      }
+     }
+    },
+    "x": {
+     "value": "width"
+    },
+    "text": {
+     "field": "zmena"
+    },
+    "fontWeight": {
+     "condition": {
+      "test": "datum.smer == 'oba'",
+      "value": 700
+     },
+     "value": 400
+    },
+    "color": {
+     "condition": {
+      "test": "datum.smer == 'oba'",
+      "value": "#101432"
+     },
+     "value": "#666666"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "t": "změna"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "bottom",
+    "fontSize": 11,
+    "color": "#666666"
+   },
+   "encoding": {
+    "x": {
+     "value": "width"
+    },
+    "y": {
+     "value": -4
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  }
+ ]
+}
