@@ -379,6 +379,7 @@ spec = {
               'subtitle': 'Rozdělení mandátů v zastupitelstvech 26 statutárních měst a Prahy; plnou barvou kandidátky v dohodnuté koalici, světle ostatní. Stav 4. 11. 2026'},
     '_source': 'ČSÚ – otevřená data komunálních voleb 2026 (mandáty, složení kandidátek); koalice podle zpráv ČTK a regionálních médií ke 4. 11. 2026; mandáty v Karviné a Mostě po rozhodnutí soudů; výpočet DataTimes.cz',
     '_tooltip_colors': TT_BARVY,
+    'config': {'view': {'stroke': None}},  # bez rámečku plochy i mimo web (hub, carousel): Vega jinak kreslí šedý obdélník
     'width': 600, 'height': 620,
     'data': {'values': rows},
     'layer': [
