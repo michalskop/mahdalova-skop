@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/images/cover-homepage.png",
+      "otisk": "538aa55d0058e41a",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "4bd5812e39bec2f8",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/images/cover-og.jpg",
+      "otisk": "49df6be066011a87",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "4bd5812e39bec2f8",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/images/cover-square.png",
+      "otisk": "4364951230100a2f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "4bd5812e39bec2f8",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/images/cover-instagram.png",
+      "otisk": "f648f97495f5e741",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "4bd5812e39bec2f8",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/images/cover-story.png",
+      "otisk": "3aa45e803aa9b4dd",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "4bd5812e39bec2f8",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-05T21:48:07.074Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-cr-2026-11-05-presuny-volicu-kraje/index.md",
+  "titulekClanku": "ANO bralo nové voliče hlavně mezi nevoliči. V Praze jich přišlo nejméně",
+  "texty": {
+    "stitek": "Analýza • Přesuny voličů",
+    "nadtitulek": "",
+    "titulek": "Odkud ANO bralo voliče",
+    "podtitulek": "Čtyři z deseti voličů ANO v roce 2025 hnutí o čtyři roky dřív nevolili"
+  }
+}

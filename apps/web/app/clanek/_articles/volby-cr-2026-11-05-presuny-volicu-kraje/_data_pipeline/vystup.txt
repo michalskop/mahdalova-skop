@@ -1,0 +1,152 @@
+strany 2021: ['ANO', 'KSČM', 'Nevoliči', 'Ostatní', 'PirSTAN', 'Přísaha', 'SOCDEM', 'SPD', 'SPOLU']
+strany 2025: ['ANO', 'Motoristé', 'Nevoliči', 'Ostatní', 'Piráti', 'SPD', 'SPOLU', 'STAN', 'Stačilo!']
+
+==============================================================================
+ANO 2025: ODKUD PŘIŠLI VOLIČI (odhad modelu, zaokrouhleno)
+==============================================================================
+
+Česko: voliči ANO 2025 ≈ 1 969 tis.; z nich volili ANO už 2021 1 180 tis. (60 %), noví 789 tis. (40 %)
+   noví odkud: Nevoliči 320 tis. (16 %), SPD 180 tis. (9 %), SOCDEM 117 tis. (6 %), KSČM 82 tis. (4 %), Přísaha 60 tis. (3 %), Ostatní 23 tis. (1 %), PirSTAN 5 tis. (0 %), SPOLU 2 tis. (0 %)
+   voliči ANO 2021 ≈ 1 471 tis.; zůstali 1 180 tis. (80 %); odešli: Nevoliči 83 tis., Motoristé 49 tis., Stačilo! 38 tis., SPD 36 tis., STAN 30 tis., Piráti 24 tis., Ostatní 17 tis., SPOLU 14 tis.
+   bilance ANO: přišlo 789 tis., odešlo 291 tis.
+
+Hlavní město Praha: voliči ANO 2025 ≈ 127 tis.; z nich volili ANO už 2021 90 tis. (71 %), noví 37 tis. (29 %)
+   noví odkud: SOCDEM 10 tis. (8 %), Nevoliči 10 tis. (8 %), Přísaha 5 tis. (4 %), SPD 5 tis. (4 %), KSČM 5 tis. (4 %), SPOLU 1 tis. (1 %), Ostatní 1 tis. (1 %)
+   voliči ANO 2021 ≈ 119 tis.; zůstali 90 tis. (76 %); odešli: Nevoliči 10 tis., STAN 5 tis., SPOLU 5 tis., Motoristé 5 tis., Ostatní 2 tis., Stačilo! 1 tis., Piráti 1 tis.
+   bilance ANO: přišlo 37 tis., odešlo 29 tis.
+
+Středočeský: voliči ANO 2025 ≈ 238 tis.; z nich volili ANO už 2021 140 tis. (59 %), noví 98 tis. (41 %)
+   noví odkud: Nevoliči 40 tis. (17 %), SOCDEM 20 tis. (8 %), KSČM 15 tis. (6 %), SPD 15 tis. (6 %), Přísaha 5 tis. (2 %), Ostatní 2 tis. (1 %), PirSTAN 1 tis. (0 %)
+   voliči ANO 2021 ≈ 179 tis.; zůstali 140 tis. (78 %); odešli: SPD 10 tis., Nevoliči 10 tis., Ostatní 5 tis., Motoristé 5 tis., Stačilo! 5 tis., STAN 2 tis., Piráti 1 tis., SPOLU 1 tis.
+   bilance ANO: přišlo 98 tis., odešlo 39 tis.
+
+Jihočeský: voliči ANO 2025 ≈ 120 tis.; z nich volili ANO už 2021 70 tis. (58 %), noví 50 tis. (42 %)
+   noví odkud: Nevoliči 20 tis. (17 %), SOCDEM 10 tis. (8 %), SPD 10 tis. (8 %), KSČM 5 tis. (4 %), Přísaha 5 tis. (4 %)
+   voliči ANO 2021 ≈ 90 tis.; zůstali 70 tis. (78 %); odešli: Motoristé 5 tis., Nevoliči 5 tis., Stačilo! 5 tis., SPD 2 tis., SPOLU 1 tis., Piráti 1 tis., Ostatní 1 tis.
+   bilance ANO: přišlo 50 tis., odešlo 20 tis.
+
+Plzeňský: voliči ANO 2025 ≈ 116 tis.; z nich volili ANO už 2021 70 tis. (60 %), noví 46 tis. (40 %)
+   noví odkud: Nevoliči 20 tis. (17 %), SPD 10 tis. (9 %), KSČM 5 tis. (4 %), SOCDEM 5 tis. (4 %), Přísaha 5 tis. (4 %), Ostatní 1 tis. (1 %)
+   voliči ANO 2021 ≈ 83 tis.; zůstali 70 tis. (84 %); odešli: Nevoliči 5 tis., Motoristé 5 tis., Ostatní 1 tis., SPOLU 1 tis., Piráti 1 tis.
+   bilance ANO: přišlo 46 tis., odešlo 13 tis.
+
+Karlovarský: voliči ANO 2025 ≈ 55 tis.; z nich volili ANO už 2021 30 tis. (55 %), noví 25 tis. (45 %)
+   noví odkud: Nevoliči 10 tis. (18 %), SPD 10 tis. (18 %), KSČM 2 tis. (4 %), SOCDEM 2 tis. (4 %), Ostatní 1 tis. (2 %)
+   voliči ANO 2021 ≈ 34 tis.; zůstali 30 tis. (88 %); odešli: SPOLU 1 tis., Stačilo! 1 tis., Nevoliči 1 tis., Ostatní 1 tis.
+   bilance ANO: přišlo 25 tis., odešlo 4 tis.
+
+Ústecký: voliči ANO 2025 ≈ 182 tis.; z nich volili ANO už 2021 120 tis. (66 %), noví 62 tis. (34 %)
+   noví odkud: Nevoliči 30 tis. (16 %), SPD 15 tis. (8 %), Ostatní 5 tis. (3 %), KSČM 5 tis. (3 %), SOCDEM 5 tis. (3 %), Přísaha 1 tis. (1 %), PirSTAN 1 tis. (1 %)
+   voliči ANO 2021 ≈ 145 tis.; zůstali 120 tis. (83 %); odešli: SPD 5 tis., Motoristé 5 tis., STAN 5 tis., Stačilo! 5 tis., Ostatní 2 tis., Nevoliči 2 tis., SPOLU 1 tis.
+   bilance ANO: přišlo 62 tis., odešlo 25 tis.
+
+Liberecký: voliči ANO 2025 ≈ 81 tis.; z nich volili ANO už 2021 50 tis. (62 %), noví 31 tis. (38 %)
+   noví odkud: Nevoliči 15 tis. (19 %), SPD 10 tis. (12 %), SOCDEM 5 tis. (6 %), Přísaha 1 tis. (1 %)
+   voliči ANO 2021 ≈ 58 tis.; zůstali 50 tis. (86 %); odešli: Nevoliči 5 tis., Piráti 1 tis., Stačilo! 1 tis., Ostatní 1 tis.
+   bilance ANO: přišlo 31 tis., odešlo 8 tis.
+
+Královéhradecký: voliči ANO 2025 ≈ 97 tis.; z nich volili ANO už 2021 60 tis. (62 %), noví 37 tis. (38 %)
+   noví odkud: Nevoliči 15 tis. (15 %), KSČM 5 tis. (5 %), Přísaha 5 tis. (5 %), SPD 5 tis. (5 %), SOCDEM 5 tis. (5 %), Ostatní 2 tis. (2 %)
+   voliči ANO 2021 ≈ 80 tis.; zůstali 60 tis. (75 %); odešli: STAN 5 tis., SPD 5 tis., Nevoliči 5 tis., Stačilo! 2 tis., Piráti 1 tis., Ostatní 1 tis., Motoristé 1 tis.
+   bilance ANO: přišlo 37 tis., odešlo 20 tis.
+
+Pardubický: voliči ANO 2025 ≈ 108 tis.; z nich volili ANO už 2021 60 tis. (56 %), noví 48 tis. (44 %)
+   noví odkud: Nevoliči 20 tis. (19 %), SPD 10 tis. (9 %), SOCDEM 10 tis. (9 %), KSČM 5 tis. (5 %), Přísaha 1 tis. (1 %), PirSTAN 1 tis. (1 %), Ostatní 1 tis. (1 %)
+   voliči ANO 2021 ≈ 81 tis.; zůstali 60 tis. (74 %); odešli: Piráti 5 tis., Nevoliči 5 tis., Motoristé 5 tis., SPD 5 tis., Stačilo! 1 tis.
+   bilance ANO: přišlo 48 tis., odešlo 21 tis.
+
+Vysočina: voliči ANO 2025 ≈ 109 tis.; z nich volili ANO už 2021 60 tis. (55 %), noví 49 tis. (45 %)
+   noví odkud: Nevoliči 15 tis. (14 %), SPD 10 tis. (9 %), SOCDEM 10 tis. (9 %), Ostatní 5 tis. (5 %), KSČM 5 tis. (5 %), Přísaha 2 tis. (2 %), PirSTAN 1 tis. (1 %), SPOLU 1 tis. (1 %)
+   voliči ANO 2021 ≈ 77 tis.; zůstali 60 tis. (78 %); odešli: Nevoliči 5 tis., Stačilo! 5 tis., STAN 2 tis., Motoristé 2 tis., SPD 1 tis., Piráti 1 tis., SPOLU 1 tis.
+   bilance ANO: přišlo 49 tis., odešlo 17 tis.
+
+Jihomoravský: voliči ANO 2025 ≈ 221 tis.; z nich volili ANO už 2021 130 tis. (59 %), noví 91 tis. (41 %)
+   noví odkud: Nevoliči 40 tis. (18 %), SPD 20 tis. (9 %), Přísaha 15 tis. (7 %), KSČM 10 tis. (5 %), SOCDEM 5 tis. (2 %), Ostatní 1 tis. (0 %)
+   voliči ANO 2021 ≈ 157 tis.; zůstali 130 tis. (83 %); odešli: Nevoliči 10 tis., STAN 5 tis., Motoristé 5 tis., SPD 5 tis., Piráti 1 tis., SPOLU 1 tis.
+   bilance ANO: přišlo 91 tis., odešlo 27 tis.
+
+Olomoucký: voliči ANO 2025 ≈ 131 tis.; z nich volili ANO už 2021 80 tis. (61 %), noví 51 tis. (39 %)
+   noví odkud: Nevoliči 20 tis. (15 %), SPD 15 tis. (11 %), KSČM 5 tis. (4 %), Přísaha 5 tis. (4 %), SOCDEM 5 tis. (4 %), Ostatní 1 tis. (1 %)
+   voliči ANO 2021 ≈ 101 tis.; zůstali 80 tis. (79 %); odešli: Nevoliči 5 tis., Motoristé 5 tis., Stačilo! 5 tis., SPD 2 tis., SPOLU 1 tis., STAN 1 tis., Piráti 1 tis., Ostatní 1 tis.
+   bilance ANO: přišlo 51 tis., odešlo 21 tis.
+
+Zlínský: voliči ANO 2025 ≈ 123 tis.; z nich volili ANO už 2021 70 tis. (57 %), noví 53 tis. (43 %)
+   noví odkud: Nevoliči 15 tis. (12 %), SPD 15 tis. (12 %), SOCDEM 10 tis. (8 %), Přísaha 5 tis. (4 %), KSČM 5 tis. (4 %), Ostatní 2 tis. (2 %), PirSTAN 1 tis. (1 %)
+   voliči ANO 2021 ≈ 86 tis.; zůstali 70 tis. (81 %); odešli: Nevoliči 5 tis., Piráti 5 tis., Stačilo! 2 tis., SPD 1 tis., SPOLU 1 tis., Motoristé 1 tis., Ostatní 1 tis.
+   bilance ANO: přišlo 53 tis., odešlo 16 tis.
+
+Moravskoslezský: voliči ANO 2025 ≈ 261 tis.; z nich volili ANO už 2021 150 tis. (57 %), noví 111 tis. (43 %)
+   noví odkud: Nevoliči 50 tis. (19 %), SPD 30 tis. (11 %), SOCDEM 15 tis. (6 %), KSČM 10 tis. (4 %), Přísaha 5 tis. (2 %), Ostatní 1 tis. (0 %)
+   voliči ANO 2021 ≈ 181 tis.; zůstali 150 tis. (83 %); odešli: Nevoliči 10 tis., STAN 5 tis., Piráti 5 tis., Stačilo! 5 tis., Motoristé 5 tis., Ostatní 1 tis.
+   bilance ANO: přišlo 111 tis., odešlo 31 tis.
+
+Podíl bývalých nevoličů mezi voliči ANO 2025 (sestupně):
+   Moravskoslezský      19.2 %
+   Liberecký            18.5 %
+   Pardubický           18.5 %
+   Karlovarský          18.2 %
+   Jihomoravský         18.1 %
+   Plzeňský             17.2 %
+   Středočeský          16.8 %
+   Jihočeský            16.7 %
+   Ústecký              16.5 %
+   Královéhradecký      15.5 %
+   Olomoucký            15.3 %
+   Vysočina             13.8 %
+   Zlínský              12.2 %
+   Hlavní město Praha    7.9 %
+
+Podíl bývalých voličů SPD mezi voliči ANO 2025 (sestupně):
+   Karlovarský          18.2 %
+   Liberecký            12.3 %
+   Zlínský              12.2 %
+   Moravskoslezský      11.5 %
+   Olomoucký            11.5 %
+   Pardubický            9.3 %
+   Vysočina              9.2 %
+   Jihomoravský          9.0 %
+   Plzeňský              8.6 %
+   Jihočeský             8.3 %
+   Ústecký               8.2 %
+   Středočeský           6.3 %
+   Královéhradecký       5.2 %
+   Hlavní město Praha    3.9 %
+
+Podíl bývalých voličů SOCDEM a KSČM mezi voliči ANO 2025 (sestupně):
+   Středočeský          14.7 %
+   Pardubický           13.9 %
+   Vysočina             13.8 %
+   Jihočeský            12.5 %
+   Zlínský              12.2 %
+   Hlavní město Praha   11.8 %
+   Královéhradecký      10.3 %
+   Moravskoslezský       9.6 %
+   Plzeňský              8.6 %
+   Olomoucký             7.6 %
+   Karlovarský           7.3 %
+   Jihomoravský          6.8 %
+   Liberecký             6.2 %
+   Ústecký               5.5 %
+
+Kam odešli voliči ANO 2021 (podíl z voličů ANO 2021, ČR):
+   ANO            1 180 tis.  80.2 %
+   Nevoliči          83 tis.   5.6 %
+   Motoristé         49 tis.   3.3 %
+   Stačilo!          38 tis.   2.6 %
+   SPD               36 tis.   2.4 %
+   STAN              30 tis.   2.0 %
+   Piráti            24 tis.   1.6 %
+   Ostatní           17 tis.   1.2 %
+   SPOLU             14 tis.   1.0 %
+
+Největší přesuny v ČR (mimo setrvání a nevoliče → nevoliče):
+   PirSTAN → Piráti: 320 tis.
+   Nevoliči → ANO: 320 tis.
+   PirSTAN → STAN: 265 tis.
+   SPOLU → STAN: 205 tis.
+   SPD → ANO: 180 tis.
+   PirSTAN → SPOLU: 146 tis.
+   SOCDEM → ANO: 117 tis.
+
+graf zapsán: data/puvod-ano.json
+sankey zapsán: sankey.html; pořadí 2021: ['ANO', 'KSČM', 'PirSTAN', 'Přísaha', 'SOCDEM', 'SPD', 'SPOLU', 'Ostatní', 'Nevoliči'] 2025: ['ANO', 'Motoristé', 'Piráti', 'SPD', 'SPOLU', 'STAN', 'Stačilo!', 'Ostatní', 'Nevoliči']
