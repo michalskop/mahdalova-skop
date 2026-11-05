@@ -386,7 +386,7 @@ spec = {
          'encoding': {
              'y': Y,
              'x': {'field': 'x0', 'type': 'quantitative', 'scale': {'domain': [0, 100]},
-                   'axis': {'title': None, 'values': [0, 25, 50, 75, 100], 'labelExpr': "datum.value + ' %'", 'grid': True}},
+                   'axis': {'title': None, 'values': [0, 25, 50, 75, 100], 'labelExpr': "datum.value + ' %'", 'grid': False, 'domain': False, 'ticks': False}},  # bez rámečku kolem pruhů (Kateřina 5. 11.): žádná mřížka na 0 a 100 %, žádná osová čára,
              'x2': {'field': 'x1'},
              'color': {'field': 'tabor', 'type': 'nominal', 'scale': {'domain': list(BARVY), 'range': list(BARVY.values())},
                        'legend': {'title': None, 'orient': 'top', 'columns': 2, 'labelLimit': 300}},
