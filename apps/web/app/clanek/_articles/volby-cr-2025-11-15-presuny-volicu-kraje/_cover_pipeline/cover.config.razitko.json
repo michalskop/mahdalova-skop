@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/images/cover-homepage.png",
+      "otisk": "bccb84a4876ca3f7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "729323756641914c",
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/images/cover-og.jpg",
+      "otisk": "b242a1ca5ca70b4c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "729323756641914c",
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/images/cover-square.png",
+      "otisk": "de9d9544954dfa95",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "729323756641914c",
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/images/cover-instagram.png",
+      "otisk": "bbf4ec0c0e3b197f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "729323756641914c",
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/images/cover-story.png",
+      "otisk": "332b8658b05c4723",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs": "729323756641914c",
+        "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/toky-cr.json": "d52982efebb63444"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-06T10:44:09.606Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-cr-2025-11-15-presuny-volicu-kraje/index.md",
+  "titulekClanku": "Voliči Pirátů a Starostů se rozešli podle krajů. V Praze šli k Pirátům, ve středních Čechách ke STAN",
+  "texty": {
+    "stitek": "Analýza • Přesuny voličů",
+    "nadtitulek": "",
+    "titulek": "Kam odešli voliči",
+    "podtitulek": "Přesuny mezi sněmovními volbami 2021 a 2025 po krajích"
+  }
+}

@@ -147,6 +147,69 @@ Největší přesuny v ČR (mimo setrvání a nevoliče → nevoliče):
    SPD → ANO: 180 tis.
    PirSTAN → SPOLU: 146 tis.
    SOCDEM → ANO: 117 tis.
-
-graf zapsán: data/puvod-ano.json
 sankey zapsán: sankey.html; pořadí 2021: ['ANO', 'KSČM', 'PirSTAN', 'Přísaha', 'SOCDEM', 'SPD', 'SPOLU', 'Ostatní', 'Nevoliči'] 2025: ['ANO', 'Motoristé', 'Piráti', 'SPD', 'SPOLU', 'STAN', 'Stačilo!', 'Ostatní', 'Nevoliči']
+
+==============================================================================
+VŠECHNY STRANY (odhad modelu, zaokrouhleno)
+==============================================================================
+
+Kam šli voliči PirSTAN 2021:
+   Česko                  834 tis.  Piráti 38 %, STAN 32 %, SPOLU 18 %, Nevoliči 8 %, Motoristé 1 %
+   Hlavní město Praha     142 tis.  Piráti 63 %, STAN 21 %, SPOLU 14 %, Ostatní 1 %, Motoristé 1 %
+   Středočeský            128 tis.  STAN 47 %, Piráti 23 %, SPOLU 16 %, Nevoliči 8 %, Motoristé 4 %
+   Jihočeský               42 tis.  Piráti 36 %, SPOLU 24 %, STAN 24 %, Nevoliči 12 %, Ostatní 2 %
+   Plzeňský                44 tis.  Piráti 34 %, STAN 23 %, SPOLU 23 %, Nevoliči 11 %, SPD 2 %
+   Karlovarský             18 tis.  Nevoliči 28 %, STAN 28 %, Piráti 28 %, SPD 6 %, Ostatní 6 %
+   Ústecký                 55 tis.  STAN 36 %, Piráti 27 %, SPOLU 18 %, Nevoliči 9 %, Stačilo! 2 %
+   Liberecký               49 tis.  STAN 41 %, Piráti 31 %, SPOLU 10 %, Nevoliči 10 %, Ostatní 4 %
+   Královéhradecký         47 tis.  STAN 43 %, Piráti 32 %, SPOLU 11 %, Nevoliči 11 %, Stačilo! 2 %
+   Pardubický              41 tis.  STAN 37 %, SPOLU 24 %, Piráti 24 %, Nevoliči 12 %, ANO 2 %
+   Vysočina                33 tis.  Piráti 30 %, STAN 30 %, SPOLU 15 %, Nevoliči 15 %, ANO 3 %
+   Jihomoravský            81 tis.  Piráti 49 %, SPOLU 25 %, STAN 25 %, Nevoliči 1 %
+   Olomoucký               40 tis.  Piráti 38 %, STAN 38 %, SPOLU 25 %
+   Zlínský                 46 tis.  STAN 33 %, Piráti 33 %, SPOLU 22 %, Nevoliči 11 %, ANO 2 %
+   Moravskoslezský         68 tis.  Piráti 44 %, STAN 22 %, Nevoliči 15 %, SPOLU 15 %, SPD 1 %
+
+Kam šli voliči SPOLU 2021:
+   Česko                1 531 tis.  SPOLU 71 %, STAN 13 %, Piráti 6 %, Motoristé 5 %, Nevoliči 4 %
+   Hlavní město Praha     273 tis.  SPOLU 73 %, STAN 15 %, Nevoliči 5 %, Motoristé 4 %, Piráti 2 %
+   Středočeský            194 tis.  SPOLU 72 %, STAN 10 %, Piráti 10 %, Motoristé 5 %, Nevoliči 1 %
+   Jihočeský               93 tis.  SPOLU 65 %, STAN 16 %, Nevoliči 5 %, Motoristé 5 %, Piráti 5 %
+   Plzeňský                78 tis.  SPOLU 64 %, STAN 13 %, Nevoliči 6 %, Piráti 6 %, Motoristé 6 %
+   Karlovarský             22 tis.  SPOLU 68 %, STAN 23 %, Piráti 5 %, Motoristé 5 %
+   Ústecký                 76 tis.  SPOLU 66 %, STAN 13 %, Piráti 13 %, Motoristé 7 %, Nevoliči 1 %
+   Liberecký               51 tis.  SPOLU 59 %, STAN 20 %, Motoristé 10 %, Piráti 10 %, SPD 2 %
+   Královéhradecký         85 tis.  SPOLU 71 %, STAN 12 %, Nevoliči 6 %, Motoristé 6 %, Piráti 6 %
+   Pardubický              86 tis.  SPOLU 70 %, STAN 12 %, Nevoliči 6 %, Motoristé 6 %, Piráti 6 %
+   Vysočina                88 tis.  SPOLU 68 %, STAN 11 %, Piráti 6 %, Nevoliči 6 %, Motoristé 6 %
+   Jihomoravský           192 tis.  SPOLU 78 %, STAN 10 %, Piráti 5 %, Nevoliči 3 %, Motoristé 3 %
+   Olomoucký               88 tis.  SPOLU 68 %, STAN 17 %, Piráti 6 %, Motoristé 6 %, Nevoliči 1 %
+   Zlínský                 82 tis.  SPOLU 73 %, STAN 12 %, Nevoliči 6 %, Motoristé 6 %, SPD 1 %
+   Moravskoslezský        123 tis.  SPOLU 73 %, STAN 16 %, Motoristé 4 %, Piráti 4 %, Stačilo! 1 %
+
+Kam šli voliči SPD 2021:
+   Česko                  501 tis.  SPD 37 %, ANO 36 %, Motoristé 14 %, Stačilo! 7 %, Ostatní 3 %
+   Hlavní město Praha      27 tis.  SPD 37 %, ANO 19 %, Motoristé 19 %, Ostatní 7 %, Stačilo! 7 %
+   Středočeský             47 tis.  SPD 43 %, ANO 32 %, Motoristé 21 %, Nevoliči 2 %, Ostatní 2 %
+   Jihočeský               28 tis.  ANO 36 %, SPD 36 %, Motoristé 18 %, Ostatní 7 %, Nevoliči 4 %
+   Plzeňský                26 tis.  SPD 38 %, ANO 38 %, Motoristé 19 %, Nevoliči 4 %
+   Karlovarský             23 tis.  ANO 43 %, Motoristé 22 %, SPD 22 %, Ostatní 4 %, Stačilo! 4 %
+   Ústecký                 45 tis.  SPD 44 %, ANO 33 %, Motoristé 11 %, Stačilo! 11 %
+   Liberecký               27 tis.  SPD 37 %, ANO 37 %, Motoristé 19 %, Ostatní 4 %, Nevoliči 4 %
+   Královéhradecký         26 tis.  SPD 38 %, ANO 19 %, Motoristé 19 %, Stačilo! 8 %, Ostatní 8 %
+   Pardubický              30 tis.  ANO 33 %, SPD 33 %, Motoristé 17 %, Ostatní 7 %, Stačilo! 7 %
+   Vysočina                23 tis.  ANO 43 %, SPD 43 %, Piráti 4 %, Stačilo! 4 %, Ostatní 4 %
+   Jihomoravský            53 tis.  SPD 38 %, ANO 38 %, Motoristé 9 %, Stačilo! 9 %, Ostatní 4 %
+   Olomoucký               43 tis.  SPD 35 %, ANO 35 %, Motoristé 12 %, Stačilo! 12 %, Nevoliči 5 %
+   Zlínský                 41 tis.  SPD 37 %, ANO 37 %, Motoristé 12 %, Stačilo! 12 %, Ostatní 2 %
+   Moravskoslezský         62 tis.  ANO 48 %, SPD 32 %, Stačilo! 8 %, Motoristé 8 %, Piráti 2 %
+
+Odkud voliči STAN 2025 (ČR, 595 tis.): PirSTAN 45 %, SPOLU 34 %, Ostatní 5 %, ANO 5 %, SOCDEM 5 %, Přísaha 3 %, Nevoliči 3 %, SPD 0 %
+
+Odkud voliči Piráti 2025 (ČR, 495 tis.): PirSTAN 65 %, SPOLU 17 %, Nevoliči 7 %, ANO 5 %, Přísaha 3 %, Ostatní 2 %, SOCDEM 1 %, SPD 1 %
+
+Odkud voliči Motoristé 2025 (ČR, 415 tis.): Ostatní 21 %, SPOLU 18 %, SPD 17 %, Nevoliči 14 %, ANO 12 %, Přísaha 10 %, SOCDEM 5 %, PirSTAN 3 %, KSČM 1 %
+
+Odkud voliči Stačilo! 2025 (ČR, 253 tis.): KSČM 32 %, ANO 15 %, SPD 13 %, Ostatní 12 %, Nevoliči 11 %, SOCDEM 10 %, Přísaha 4 %, PirSTAN 2 %, SPOLU 1 %
+
+grafy zapsány: data/pirstan-kraje.json, data/odkud-strany.json

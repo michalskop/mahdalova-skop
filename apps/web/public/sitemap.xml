@@ -667,6 +667,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2025-11-15-presuny-volicu-kraje</loc>
+    <lastmod>2025-11-15T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-08-06-komunalni-volby-2026</loc>
     <lastmod>2026-08-06T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -849,12 +855,6 @@
   <url>
     <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-11-04-ano-vladne-s-opozici</loc>
     <lastmod>2026-11-04T00:00:00.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mahdalova-skop.cz/clanek/volby-cr-2026-11-05-presuny-volicu-kraje</loc>
-    <lastmod>2026-11-05T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -6,7 +6,7 @@
 # Model stojí na výsledcích ve volebních okrscích (ČSÚ); kontrolu odhadu proti skutečným výsledkům po okrscích
 # obsahují Michalovy soubory region_NN_points.csv (nejsou součástí repa).
 #
-# Spuštění: python vypocet.py → vystup.txt, ../data/puvod-ano.json (Vega-Lite), ../sankey.html (responzivní Sankey)
+# Spuštění: python vypocet.py → vystup.txt, ../data/pirstan-kraje.json a ../data/odkud-strany.json (Vega-Lite), ../sankey.html (Sankey)
 import csv, json, sys
 from collections import defaultdict
 from pathlib import Path
@@ -87,31 +87,6 @@ for (a, b), v in sorted(cr.items(), key=lambda x: -x[1]):
     if a != b and v >= 100000:
         p(f"   {a} → {b}: {tis(v)}")
 
-# ── Graf: odkud přišli voliči ANO 2025 v krajích (100% pruhy) ───────────────
-BARVY = {'ANO už 2021': '#272a59', 'nevoliči': '#8f9dc9', 'SPD': '#a47d03', 'SOCDEM': '#f76800', 'KSČM': '#c5143c', 'ostatní': '#c3c6d8'}
-PORADI_K = ['Česko'] + [kraj_kratce(k).replace(' kraj', '') for k, _ in nev]
-spec = {
-    '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
-    'title': {'text': 'V Praze přišlo k ANO nejméně nových voličů', 'subtitle': 'Odhad modelu: koho volili v roce 2021 lidé, kteří v roce 2025 volili ANO (podíl z voličů ANO, %). Kraje podle podílu bývalých nevoličů'},
-    '_source': 'Odhad přesunů voličů mezi sněmovními volbami 2021 a 2025 (ekologická inference, Michal Škop) z výsledků ČSÚ po okrscích; výpočet DataTimes.cz',
-    'config': {'view': {'stroke': None}},
-    'width': 600, 'height': 470,
-    'data': {'values': radky},
-    'mark': {'type': 'bar', 'stroke': '#ffffff', 'strokeWidth': 1},
-    'encoding': {
-        'y': {'field': 'kraj', 'type': 'nominal', 'sort': PORADI_K, 'axis': {'title': None, 'domain': False, 'ticks': False, 'labelFontSize': 13,
-              'labelFontWeight': {'expr': "datum.value == 'Česko' ? 800 : 500"}}},
-        'x': {'field': 'podil', 'type': 'quantitative', 'stack': 'normalize',
-              'axis': {'title': None, 'format': '.0%', 'values': [0, 0.25, 0.5, 0.75, 1], 'grid': False, 'domain': False, 'ticks': False}},
-        'color': {'field': 'puvod', 'type': 'nominal', 'scale': {'domain': list(BARVY), 'range': list(BARVY.values())},
-                  'legend': {'title': None, 'orient': 'top', 'columns': 2}},
-        'order': {'field': 'poradi', 'type': 'quantitative'},
-        'tooltip': [{'field': 'kraj', 'title': 'Oblast'}, {'field': 'puvod', 'title': 'Odkud'}, {'field': 'podil', 'title': 'Podíl z voličů ANO (%)', 'format': '.0f'}],
-    },
-}
-(ART / 'data').mkdir(exist_ok=True)
-(ART / 'data' / 'puvod-ano.json').write_text(json.dumps(spec, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-p('\ngraf zapsán: data/puvod-ano.json')
 
 (H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
 print('\n'.join(OUT))
@@ -142,3 +117,73 @@ p('sankey zapsán: sankey.html; pořadí 2021:', SK['L'], '2025:', SK['R'])
 (ART / '_cover_pipeline').mkdir(exist_ok=True)
 (ART / '_cover_pipeline' / 'toky-cr.json').write_text(json.dumps(dict(L=SK['L'], R=SK['R'], barvy=BARVA_S,
     t=[[a, b, v] for (a, b), v in sorted(cr.items())]), ensure_ascii=False, indent=0), encoding='utf-8')
+
+# ── Všechny strany: kam šli voliči koalic 2021, odkud mají voliče strany 2025 ──
+# (Kateřina 6. 11. 2026: článek o všech stranách po krajích, ne jen o ANO)
+p('\n' + '=' * 78 + '\nVŠECHNY STRANY (odhad modelu, zaokrouhleno)\n' + '=' * 78)
+for s21 in ['PirSTAN', 'SPOLU', 'SPD']:
+    p(f'\nKam šli voliči {s21} 2021:')
+    for k in ['Česko'] + KRAJE:
+        d = z(toky[k], s21); c = sum(d.values())
+        p(f"   {k:20} {tis(c):>10}  " + ', '.join(f"{b} {v / c * 100:.0f} %" for b, v in sorted(d.items(), key=lambda x: -x[1])[:5]))
+for s25 in ['STAN', 'Piráti', 'Motoristé', 'Stačilo!']:
+    d = do(cr, s25); c = sum(d.values())
+    p(f"\nOdkud voliči {s25} 2025 (ČR, {tis(c)}): " + ', '.join(f"{a} {v / c * 100:.0f} %" for a, v in sorted(d.items(), key=lambda x: -x[1])))
+
+# Graf 1: kam šli voliči Pirátů a Starostů z roku 2021, po krajích (100% pruhy)
+KAM = ['Piráti', 'STAN', 'SPOLU', 'Nevoliči', 'ostatní']
+B1 = {'Piráti': '#111111', 'STAN': '#ff1a4a', 'SPOLU': '#5e66d5', 'Nevoliči': '#8f9dc9', 'ostatní': '#c3c6d8'}
+r1 = []
+for k in ['Česko'] + KRAJE:
+    d = z(toky[k], 'PirSTAN'); c = sum(d.values()); sg = defaultdict(int)
+    for b, v in d.items():
+        sg[b if b in KAM else 'ostatní'] += v
+    for i, g in enumerate(KAM):
+        r1.append(dict(kraj=k if k == 'Česko' else kraj_kratce(k).replace(' kraj', ''), kam='nevoliči' if g == 'Nevoliči' else g,
+                       podil=round(sg[g] / c * 100, 1), poradi=i))
+pir = lambda k: z(toky[k], 'PirSTAN').get('Piráti', 0) / sum(z(toky[k], 'PirSTAN').values())
+POR1 = ['Česko'] + [kraj_kratce(k).replace(' kraj', '') for k in sorted(KRAJE, key=lambda k: -pir(k))]
+def pruhy(rows, pole, barvy, poradi_y, titul, podtitul, osa_y):
+    dom = list(barvy)
+    return {
+        '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
+        'title': {'text': titul, 'subtitle': podtitul},
+        '_source': 'Odhad přesunů voličů mezi sněmovními volbami 2021 a 2025 (ekologická inference, Michal Škop) z výsledků ČSÚ ve 14 532 okrscích; výpočet DataTimes.cz',
+        'config': {'view': {'stroke': None}},
+        'width': 600, 'height': 30 * len(poradi_y),
+        'data': {'values': rows},
+        'mark': {'type': 'bar', 'stroke': '#ffffff', 'strokeWidth': 1},
+        'encoding': {
+            'y': {'field': osa_y, 'type': 'nominal', 'sort': poradi_y, 'axis': {'title': None, 'domain': False, 'ticks': False, 'labelFontSize': 13,
+                  'labelFontWeight': {'expr': "datum.value == 'Česko' ? 800 : 500"}}},
+            'x': {'field': 'podil', 'type': 'quantitative', 'stack': 'normalize',
+                  'axis': {'title': None, 'format': '.0%', 'values': [0, 0.25, 0.5, 0.75, 1], 'grid': False, 'domain': False, 'ticks': False}},
+            'color': {'field': pole, 'type': 'nominal', 'scale': {'domain': [d if d != 'Nevoliči' else 'nevoliči' for d in dom], 'range': list(barvy.values())},
+                      'legend': {'title': None, 'orient': 'top', 'columns': 3}},
+            'order': {'field': 'poradi', 'type': 'quantitative'},
+            'tooltip': [{'field': osa_y, 'title': 'Oblast' if osa_y == 'kraj' else 'Strana 2025'}, {'field': pole, 'title': 'Kam' if pole == 'kam' else 'Odkud'},
+                        {'field': 'podil', 'title': 'Podíl (%)', 'format': '.0f'}],
+        },
+    }
+spec1 = pruhy(r1, 'kam', B1, POR1, 'V Praze volili Piráty, ve středních Čechách STAN',
+              'Odhad modelu: koho volili v roce 2025 lidé, kteří v roce 2021 volili koalici Pirátů a Starostů (%). Kraje podle podílu Pirátů', 'kraj')
+spec1['encoding']['color']['legend']['columns'] = 2  # dlouhé názvy krajů ubírají místo, na mobilu by třetí sloupec vyčníval
+(ART / 'data' / 'pirstan-kraje.json').write_text(json.dumps(spec1, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+
+# Graf 2: z koho se skládají voliči stran v roce 2025 (Česko)
+ODKUD = ['ANO', 'SPOLU', 'PirSTAN', 'SPD', 'KSČM', 'SOCDEM', 'Nevoliči', 'ostatní']
+B2 = {g: (BARVA_S[g] if g in BARVA_S else '#c3c6d8') for g in ODKUD}
+B2['Nevoliči'] = '#8f9dc9'
+r2 = []
+STRANY25 = abc([s for s in R if s not in ('Nevoliči', 'Ostatní')])
+for s25 in STRANY25:
+    d = do(cr, s25); c = sum(d.values()); sg = defaultdict(int)
+    for a, v in d.items():
+        sg[a if a in ODKUD else 'ostatní'] += v
+    for i, g in enumerate(ODKUD):
+        r2.append(dict(strana=s25, odkud='nevoliči' if g == 'Nevoliči' else g, podil=round(sg[g] / c * 100, 1), poradi=i))
+spec2 = pruhy(r2, 'odkud', B2, STRANY25, 'Motoristé získali voliče od všech stran, Stačilo! hlavně od komunistů',
+              'Odhad modelu: koho volili v roce 2021 voliči jednotlivých stran v roce 2025 (%), celé Česko', 'strana')
+(ART / 'data' / 'odkud-strany.json').write_text(json.dumps(spec2, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+p('\ngrafy zapsány: data/pirstan-kraje.json, data/odkud-strany.json')
+(H / 'vystup.txt').write_text('\n'.join(OUT) + '\n', encoding='utf-8')
