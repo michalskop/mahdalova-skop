@@ -1,0 +1,5 @@
+Zdroj: Congressional District Hexmap, verze 3.2 (2026), Daniel Donner for The Downballot
+URL: https://the-db.co/maps (zalozka Congressional District Hexmap; shapefile CDs HexCDv32.zip, States HexStv30.zip)
+Licence: Creative Commons Attribution 4.0 International (http://creativecommons.org/licenses/by/4.0/) - uvest autora a odkaz https://the-db.co/maps
+Stazeno: 2026-11-06
+Prevod: shapefile -> GeoJSON (souradnice zaokrouhlene na 4 des. mista, beze zmeny tvaru); kreslit planarne x = lon, y = -lat

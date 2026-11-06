@@ -94,8 +94,11 @@
       var r = root.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
       var w = tip.offsetWidth, hh = tip.offsetHeight;
       var left = x + 14 + w > r.width ? x - w - 14 : x + 14;
-      tip.style.left = Math.max(0, left) + 'px';
-      tip.style.top = Math.max(0, y - hh - 10) + 'px';
+      if (left < 0) left = Math.max(0, Math.min(r.width - w, x - w / 2));
+      tip.style.left = left + 'px';
+      // nad kurzorem; když nahoře není místo, pod ním (jinak tooltip na mobilu zakryje okres, na který čtenář ukazuje)
+      var top = y - hh - 14;
+      tip.style.top = (top < 0 ? y + 18 : top) + 'px';
     }
   }
   function skryj() { tip.style.display = 'none'; if (aktivni !== null && paths[aktivni]) paths[aktivni].classList.remove('on'); aktivni = null; }
@@ -124,6 +127,8 @@
       ukaz(i, e);
     });
     svg.addEventListener('mouseleave', skryj);
+    // na dotyku zavře tooltip klepnutí mimo mapu
+    document.addEventListener('click', function (e) { if (!svg.contains(e.target)) skryj(); });
     svg.addEventListener('click', function (e) {
       var t = e.target; if (!t.getAttribute || t.getAttribute('data-i') === null) { skryj(); return; }
       var i = +t.getAttribute('data-i'); if (aktivni !== null) paths[aktivni].classList.remove('on'); aktivni = i; t.classList.add('on'); ukaz(i, e);

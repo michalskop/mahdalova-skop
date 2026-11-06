@@ -1074,6 +1074,8 @@ rules for English sites, so the Czech look never leaks into English text:
 
 *Ponaučení (30. 10. 2026, podkladová mapa okrsků):* dlaždice CARTO (Positron, Voyager) od roku 2026 bez API klíče vracejí jen obrázek „API KEY REQUIRED“; ZTM ČÚZK (`ZTM_WM`) je pro podklad přeplněná kódy obcí a katastrálními hranicemi.
 
+*Ponaučení (6. 11. 2026, USA mapy okresů a obvodů):* tooltip ručně psaných map (`HtmlEmbed`) se dával nad kurzor a při nedostatku místa jen „přilepil“ na horní okraj (`Math.max(0, y - h - 10)`), takže na mobilu zakryl obvod, na který čtenář ukazuje (243 ze 435 obvodů). Pravidlo: tooltip nad kurzor, a když nahoře není místo, **pod** kurzor (`top < 0 ? y + 18 : top`), nikdy přes ukazovaný prvek; na dotyku se zavírá klepnutím mimo mapu (`document` click mimo `svg`). Ověřit skriptem: projet všechny prvky mapy na šířce 375 i 1280 px a spočítat, kolikrát střed prvku leží uvnitř tooltipu (má být 0).
+
 *Ponaučení (17. 10. 2026, Senát 2. kolo):* první verze mapy vítězů měla dominantní tečky a obvody se slévaly; tooltip míchal klub s kandidátkou, takže nebylo poznat, proč má obhájce (Grulich, kandidátka KDU-ČSL, ODS, STAN, Piráti, TOP 09 a LES) barvu klubu ODS a TOP 09.
 
 ---

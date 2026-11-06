@@ -1,0 +1,121 @@
+<style>
+.dt-hx { font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #101432; position: relative; }
+.dt-hx-svg { width: 100%; height: auto; display: block; touch-action: manipulation; }
+.dt-hx-svg path.x { stroke: #f8f6f0; stroke-width: 0.6; stroke-linejoin: round; }
+.dt-hx-svg path.x:hover, .dt-hx-svg path.x.on { stroke: #101432; stroke-width: 2; }
+.dt-hx-svg text { font-size: 13px; font-weight: 700; fill: #fff; paint-order: stroke; stroke: rgba(16,20,50,.55); stroke-width: 2.4px; pointer-events: none; text-anchor: middle; dominant-baseline: central; }
+.dt-hx-leg { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 22px; font-size: 0.78rem; color: #5b5f73; margin-top: 8px; }
+.dt-hx-bar { width: 300px; max-width: 100%; }
+.dt-hx-cap { display: flex; justify-content: space-between; margin-bottom: 3px; }
+.dt-hx-cap span:first-child { color: #383d82; font-weight: 600; } .dt-hx-cap span:last-child { color: #812840; font-weight: 600; }
+.dt-hx-sw { display: flex; height: 11px; } .dt-hx-sw i { flex: 1; }
+.dt-hx-tk { display: grid; grid-template-columns: repeat(8, 1fr); margin-top: 2px; font-size: 0.72rem; }
+.dt-hx-tk span { text-align: center; transform: translateX(50%); white-space: nowrap; }
+.dt-hx-un { text-align: center; font-size: 0.72rem; }
+.dt-hx-key { display: flex; align-items: center; gap: 6px; }
+.dt-hx-key i { display: inline-block; width: 13px; height: 13px; border-radius: 2px; }
+.dt-hx-tip { position: absolute; pointer-events: none; background: #fff; border: 1px solid #d8dbe6; border-radius: 4px; box-shadow: 0 4px 14px rgba(16,20,50,.15); font-size: 0.82rem; line-height: 1.35; min-width: 190px; max-width: 250px; display: none; z-index: 5; overflow: hidden; }
+.dt-hx-tip .h { color: #fff; font-weight: 700; padding: 5px 9px; }
+.dt-hx-tip .b { padding: 6px 9px 7px; color: #101432; }
+.dt-hx-tip .r { display: flex; justify-content: space-between; gap: 10px; }
+.dt-hx-tip .r span:first-child b { display: inline-block; width: 9px; height: 9px; margin-right: 5px; }
+.dt-hx-tip .n { color: #5b5f73; font-size: 0.76rem; margin-top: 3px; }
+.dt-hx-load { font-size: 0.85rem; color: #5b5f73; padding: 30px 0; text-align: center; }
+</style>
+<div class="dt-hx" id="dt-hx-root">
+  <div class="dt-hx-map"><div class="dt-hx-load">Načítám mapu obvodů…</div></div>
+  <div class="dt-hx-leg">
+    <div class="dt-hx-bar">
+      <div class="dt-hx-cap"><span>demokraté</span><span>republikáni</span></div>
+      <div class="dt-hx-sw"><i style="background:#272a59"></i><i style="background:#4a51ab"></i><i style="background:#899aeb"></i><i style="background:#c9d0f5"></i><i style="background:#f5c4c9"></i><i style="background:#e87c91"></i><i style="background:#bb3a5d"></i><i style="background:#621d30"></i></div>
+      <div class="dt-hx-tk"><span>40</span><span>20</span><span>10</span><span>0</span><span>10</span><span>20</span><span>40</span></div>
+      <div class="dt-hx-un">náskok v obvodu v procentních bodech</div>
+    </div>
+    <span class="dt-hx-key"><i style="background:#ece6d3"></i>Aljaška: rozhodne přepočet preferencí</span>
+  </div>
+  <div class="dt-hx-tip"></div>
+</div>
+<script>
+(function () {
+  var root = document.getElementById('dt-hx-root');
+  if (!root || root.getAttribute('data-ok')) return;
+  root.setAttribute('data-ok', '1');
+  var BASE = '/clanek/_articles/volby-usa-2026-11-04-proc-vyhrali-demokrate/';
+  var D = ['#c9d0f5', '#899aeb', '#4a51ab', '#272a59'], Rc = ['#f5c4c9', '#e87c91', '#bb3a5d', '#621d30'];
+  var STATY = { AL: 'Alabama', AK: 'Aljaška', AZ: 'Arizona', AR: 'Arkansas', CA: 'Kalifornie', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgie', HI: 'Havaj', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'Nové Mexiko', NY: 'New York', NC: 'Severní Karolína', ND: 'Severní Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pensylvánie', RI: 'Rhode Island', SC: 'Jižní Karolína', SD: 'Jižní Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginie', WA: 'Washington', WV: 'Západní Virginie', WI: 'Wisconsin', WY: 'Wyoming' };
+  var JEDEN = { AK: 1, DE: 1, ND: 1, SD: 1, VT: 1, WY: 1 };
+  var map = root.querySelector('.dt-hx-map'), tip = root.querySelector('.dt-hx-tip'), data, aktivni = null, paths = [];
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+  function pct(x) { return (Math.round(x * 10) / 10).toFixed(1).replace('.', ',') + ' %'; }
+  function nazev(o) { return (JEDEN[o[1]] ? 'jediný obvod' : o[0].split('-')[1] + '. obvod') + ', ' + (STATY[o[1]] || o[1]); }
+  function barva(o) {
+    if (o[5] === 2) return '#ece6d3';
+    if (o[5] === 3) return o[2] ? D[3] : Rc[3];
+    var m = 100 * (o[2] - o[3]) / (o[2] + o[3]), a = Math.abs(m), i = a >= 40 ? 3 : a >= 20 ? 2 : a >= 10 ? 1 : 0;
+    return m >= 0 ? D[i] : Rc[i];
+  }
+  function obsah(o) {
+    if (o[5] === 3) return '<div class="h" style="background:' + (o[2] ? '#4a51ab' : '#a03250') + '">' + nazev(o) + '</div><div class="b">Bez souboje demokrata s republikánem (kandidát bez soupeře, nebo dva kandidáti téže strany). Obvod připadne ' + (o[2] ? 'demokratům' : 'republikánům') + '.</div>';
+    if (o[5] === 2) return '<div class="h" style="background:#5b5f73">' + nazev(o) + '</div><div class="b">Aljaška volí preferenčně. O vítězi rozhodne přepočet podle pořadí preferencí 18. listopadu.</div>';
+    var s = o[2] + o[3], win = o[2] >= o[3];
+    return '<div class="h" style="background:' + (win ? '#4a51ab' : '#a03250') + '">' + nazev(o) + '</div>' +
+      '<div class="b"><div class="r"><span><b style="background:#4a51ab"></b>demokraté</span><span>' + pct(100 * o[2] / s) + '</span></div>' +
+      '<div class="r"><span><b style="background:#a03250"></b>republikáni</span><span>' + pct(100 * o[3] / s) + '</span></div>' +
+      '<div class="n">' + fmt(s) + ' hlasů pro obě strany' + (o[4] !== null && o[4] < 98 ? '; sečteno asi ' + Math.round(Math.min(o[4], 100)) + ' %' : '') + '</div></div>';
+  }
+  // tooltip nad kurzorem; když nahoře není místo, pod ním – nikdy přes obvod, na který čtenář ukazuje
+  function umisti(ev) {
+    var r = root.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top, w = tip.offsetWidth, hh = tip.offsetHeight;
+    var left = x + 14 + w > r.width ? x - w - 14 : x + 14;
+    if (left < 0) left = Math.max(0, Math.min(r.width - w, x - w / 2));
+    var top = y - hh - 14;
+    if (top < 0) top = y + 18;
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  }
+  function ukaz(ci, ev) {
+    tip.innerHTML = obsah(data.obvody[ci]); tip.style.display = 'block';
+    if (ev) umisti(ev);
+  }
+  function zvyrazni(ci) {
+    if (aktivni === ci) return;
+    if (aktivni !== null) paths[aktivni].classList.remove('on');
+    paths[ci].classList.add('on'); paths[ci].parentNode.appendChild(paths[ci]); // obrys navrch
+    aktivni = ci;
+  }
+  function skryj() { tip.style.display = 'none'; if (aktivni !== null) paths[aktivni].classList.remove('on'); aktivni = null; }
+  function kresli(d) {
+    data = d;
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg'), pad = 4;
+    svg.setAttribute('viewBox', (-pad) + ' ' + (-pad) + ' ' + (d.w + 2 * pad) + ' ' + (d.h + 2 * pad));
+    svg.setAttribute('class', 'dt-hx-svg'); svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'Mapa 435 obvodů do Sněmovny reprezentantů 2026, každý obvod stejně velký, barva podle náskoku vítěze');
+    var g = document.createElementNS(NS, 'g'), pocet = {};
+    d.obvody.forEach(function (o, i) {
+      var p = document.createElementNS(NS, 'path'); p.setAttribute('d', o[6]); p.setAttribute('class', 'x');
+      p.setAttribute('fill', barva(o)); p.setAttribute('data-c', i);
+      g.appendChild(p); paths.push(p); pocet[o[1]] = (pocet[o[1]] || 0) + 1;
+    });
+    svg.appendChild(g);
+    var hr = '';
+    d.staty.forEach(function (s) { hr += s[1]; });
+    var halo = document.createElementNS(NS, 'path'); halo.setAttribute('d', hr); halo.setAttribute('fill', 'none'); halo.setAttribute('stroke', '#f8f6f0'); halo.setAttribute('stroke-width', '3'); halo.setAttribute('stroke-linejoin', 'round'); halo.setAttribute('pointer-events', 'none');
+    var line = halo.cloneNode(); line.setAttribute('stroke', '#101432'); line.setAttribute('stroke-width', '1.1');
+    var top = document.createElementNS(NS, 'g'); top.appendChild(halo); top.appendChild(line);
+    d.staty.forEach(function (s) {
+      if ((pocet[s[0]] || 0) < 6) return;
+      var t = document.createElementNS(NS, 'text'); t.setAttribute('x', s[2]); t.setAttribute('y', s[3]); t.textContent = s[0]; top.appendChild(t);
+    });
+    svg.appendChild(top);
+    map.innerHTML = ''; map.appendChild(svg);
+    function nad(e) {
+      var t = e.target; if (!t.getAttribute || t.getAttribute('data-c') === null) { skryj(); return; }
+      var ci = +t.getAttribute('data-c'); zvyrazni(ci); ukaz(ci, e);
+    }
+    svg.addEventListener('mousemove', nad); svg.addEventListener('click', nad); svg.addEventListener('mouseleave', skryj);
+    // na dotyku zavře tooltip klepnutí mimo mapu
+    document.addEventListener('click', function (e) { if (!svg.contains(e.target)) skryj(); });
+  }
+  fetch(BASE + 'hexmapa-obvody.json').then(function (r) { return r.json(); }).then(kresli)
+    .catch(function () { map.innerHTML = '<div class="dt-hx-load">Mapu se nepodařilo načíst.</div>'; });
+})();
+</script>
