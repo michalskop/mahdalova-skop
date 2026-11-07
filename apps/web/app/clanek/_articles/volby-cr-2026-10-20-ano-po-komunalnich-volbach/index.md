@@ -53,7 +53,7 @@ Krajská města ale nejsou celé Česko. V [menších obcích ANO letos přibír
 Letošní podzim tak ANO prohrálo na dvou místech, kde rozhodují voliči ochotní přijít k méně sledovaným volbám: ve druhém kole Senátu a ve velkých městech. Podpora partnerů z vlády by na tom v Senátu změnila nanejvýš jedno křeslo.
 
 ```infobox
-**Jak počítáme**
+**Jak jsme to počítali**
 
 Kandidát ANO nebo SPD je ten, koho strana navrhla. U SPD počítáme i kandidáty, které navrhla v koalici s PRO nebo se Svobodnými a Trikolórou. Ve Znojmě a v České Lípě SPD nikoho nepostavila. Chybějící hlasy jsou rozdíl hlasů vítěze a kandidáta ANO ve druhém kole. Hlasy SPD jsou hlasy jejího kandidáta v prvním kole; kolik jeho voličů by ve druhém kole přišlo a koho by volili, nevíme. Podíl lidí, kteří přišli i ke druhému kolu, je počet vydaných obálek ve druhém kole k počtu v prvním.
 

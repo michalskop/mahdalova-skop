@@ -776,7 +776,7 @@ dump('rozdil-zeny-muzi.json', {
          'encoding': {'x': {'field': 'od', 'type': 'quantitative'}, 'text': {'field': 'popisek'}}},
     ],
     'config': {'view': {'stroke': None}},
-    '_source': SOURCE + '; srovnání uvnitř kandidátky (viz Jak jsme počítali)',
+    '_source': SOURCE + '; srovnání uvnitř kandidátky (viz Jak jsme to počítali)',
 })
 print('\n  PÁRY PROFESÍ – kontrola obhajoby mandátu (stejné definice jako v grafu):')
 for lab, f in PARY[1:6]:

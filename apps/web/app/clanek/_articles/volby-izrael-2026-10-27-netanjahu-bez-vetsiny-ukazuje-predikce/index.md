@@ -61,7 +61,7 @@ Netanjahuovi chybí k většině osm mandátů, Eisenkotovi třináct. Většina
 Proč arabští voliči letos přišli v rekordním počtu, kdo jak volil a jaké koalice připadají v úvahu, rozebíráme v [samostatném článku](/clanek/analyza-2026-10-28-izraelske-volby-arabske-strany-rozhodnou/).
 
 ```infobox
-**Jak jsme počítali**
+**Jak jsme to počítali**
 
 Predikce dvojice datových novinářů Kateřina Mahdalová & Michal Škop vychází z průběžných výsledků po volebních místnostech, které zveřejňuje [Ústřední volební komise](https://votes26.bechirot.gov.il/). Každou sečtenou místnost model porovná s výsledkem téže místnosti v roce 2022. Místnosti, které se za čtyři roky změnily, páruje se sousedními místnostmi a nakonec s obcí. Podle posunu v sečtených místnostech odhaduje výsledek těch nesečtených a připočítává očekávané dvojité obálky, které komise vede zvlášť. Mandáty rozděluje stejně jako komise: uzavírací klauzule 3,25 %, D'Hondtova metoda (v Izraeli metoda Bader-Ofer) a dohody stran o přebytkových hlasech. Intervaly udávají rozpětí, do kterého podle modelu s 90% pravděpodobností padne konečný výsledek. Netanjahuův blok tvoří Likud, Šas, Sjednocený judaismus Tóry, Ocma jehudit a Náboženský sionismus, Eisenkotův blok Jašar, Bejachad, Demokraté a Jisra'el bejtenu.
 ```

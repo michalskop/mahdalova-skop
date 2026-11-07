@@ -53,7 +53,7 @@ Malé státy dnes většinou volí republikány, a tak republikánská většina
 <HtmlEmbed file="senat-graf.html" title="Republikánská většina v Senátu zastupovala menšinu Američanů" subtitle="Rozdělení 100 senátorů a obyvatel jejich států; každý senátor zastupuje polovinu obyvatel svého státu" source="Výpočet DataTimes.cz z odhadů obyvatel US Census Bureau k 1. 7. 2025 a výsledků voleb podle AP, stav 4. 11. 2026" />
 
 ```infobox info
-**Jak jsme počítali**
+**Jak jsme to počítali**
 
 Počty obyvatel států jsou odhady amerického statistického úřadu US Census Bureau k 1. červenci 2025 ([Vintage 2025](https://www.census.gov/data/datasets/time-series/demo/popest/2020s-state-total.html)), bez District of Columbia a Portorika, které senátory nemají. Česko mělo podle [ČSÚ](https://csu.gov.cz/rychle-informace/pohyb-obyvatelstva-rok-2025) k 31. 12. 2025 celkem 10 915 839 obyvatel. Každému senátorovi přičítáme polovinu obyvatel jeho státu. Nezávislé senátory Bernieho Sanderse a Angusa Kinga počítáme k demokratům, protože s nimi hlasují. Složení po volbách odpovídá výrokům AP ve středu dopoledne našeho času, Mississippi a Aljaška jsou zatím nerozhodnuté.
 ```

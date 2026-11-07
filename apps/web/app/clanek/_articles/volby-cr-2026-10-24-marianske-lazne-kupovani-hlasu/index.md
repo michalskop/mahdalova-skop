@@ -58,7 +58,7 @@ Výpočet nic neříká o tom, jestli k uplácení došlo. Výsledek Našeho Če
 Kdo jinému nabídne nebo poskytne peníze za to, aby volil v rozporu se svou vůlí, se podle [§ 351 trestního zákoníku](https://www.zakonyprolidi.cz/cs/2009-40#p351) dopouští trestného činu maření přípravy a průběhu voleb. Hrozí za něj šest měsíců až tři roky vězení. O platnosti voleb rozhoduje krajský soud. Podle [Plzeňského deníku](https://plzensky.denik.cz/komunalni-volby/soud-v-plzni-prijal-26-stiznosti-na-volby-v-18-obcich-a-obvodech-na-zapade-cech/) dostal Krajský soud v Plzni do pátečního konce lhůty návrh i k volbám v Mariánských Lázních, kdo ho podal a proč, ale zveřejněno není. Volby soud zneplatní, jen pokud porušení zákona [hrubě ovlivnilo jejich výsledek](https://www.zakonyprolidi.cz/cs/2001-491#p60). K té otázce přepočet přispívá tím, že ukazuje, kolik koupených hlasů by na změnu výsledku stačilo.
 
 ```infobox info
-**Jak počítáme**
+**Jak jsme to počítali**
 
 Vycházíme z otevřených dat ČSÚ o komunálních volbách 2026: výsledků všech 17 okrsků v Mariánských Lázních a registru kandidátů včetně pořadí náhradníků. Skript nejdřív zopakuje oficiální rozdělení mandátů: pětiprocentní hranici, d'Hondtovu metodu a přednostní hlasy. Dostane přesně týchž 21 zastupitelů jako ČSÚ. Potom odečítá Našemu Česku po 21 hlasech za každý celý lístek, stejný počet hlasů ubírá z celkového součtu platných hlasů a mandáty rozdělí znovu. Hlasy ostatních kandidátek se nemění, takže zůstává i pořadí jejich kandidátů a mandát dostane první náhradník. [Skript i výsledky kandidátek v CSV](https://github.com/michalskop/mahdalova-skop/tree/main/apps/web/app/clanek/_articles/volby-cr-2026-10-24-marianske-lazne-kupovani-hlasu/_data_pipeline) jsou veřejně na GitHubu.
 ```

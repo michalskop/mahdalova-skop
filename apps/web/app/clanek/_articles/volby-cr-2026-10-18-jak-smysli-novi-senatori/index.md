@@ -82,7 +82,7 @@ Strop důchodového věku na 65 letech podporuje jediný nový senátor. Reforma
 <SenatTecky dataUrl="/clanek/_articles/volby-cr-2026-10-18-jak-smysli-novi-senatori/tecky.json" q={33} />
 
 ```infobox
-**Jak počítáme**
+**Jak jsme to počítali**
 
 Odpovědi pocházejí z dotazníku naší senátní Volební kalkulačky, který kandidáti a kandidátky vyplňovali na přelomu září a října 2026. Spárovali jsme je se zvolenými podle výsledků ČSÚ. U každé otázky počítáme odpovědi „pro“ z celých 27 zvolených. Tečky jsou seřazené: pro, nevím, proti, nevyplnil/a. Citace jsou z komentářů, které kandidáti ke svým odpovědím připsali, upravili jsme jen překlepy.
 ```

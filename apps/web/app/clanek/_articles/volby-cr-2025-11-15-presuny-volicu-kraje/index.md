@@ -53,7 +53,7 @@ Z voličů SPD z roku 2021 jí v roce 2025 zůstalo 37 %. Skoro stejný podíl, 
 Motoristé sobě nemají žádnou převažující skupinu voličů. Pětina z nich v roce 2021 volila menší strany, 18 % SPOLU, 17 % SPD, 14 % nevolilo a 12 % volilo ANO. Stačilo! stojí na bývalých voličích komunistů (32 %), dalších 15 % volilo v roce 2021 ANO, 13 % SPD a 10 % sociální demokraty.
 
 ```infobox
-**Jak jsme počítali**
+**Jak jsme to počítali**
 
 Přesuny voličů jsme odhadli metodou ekologické inference. Model porovnává výsledky stejných volebních okrsků v letech 2021 a 2025: když v okrscích, kde v roce 2021 silně vedla SPD, v roce 2025 výrazně posílilo ANO, odhadne, kolik voličů přešlo. Nejde o průzkum, nikoho jsme se neptali. Výpočet stojí na výsledcích ČSÚ ve 14 532 okrscích a každý kraj počítá zvlášť.
 
