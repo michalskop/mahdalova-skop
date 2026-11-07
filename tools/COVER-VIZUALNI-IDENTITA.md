@@ -187,7 +187,7 @@ Platí pro všechno, co jde ven na web nebo na sociální sítě (článek, spec
 
 1. Slide 1 = cover-instagram (hák: hlavní zjištění), nebo **otázka k tipování** („U kterého prezidenta mají ženy největší podíl?“), na kterou odpoví další slidy.
 2. Slidy 2 až n−2 = po jednom zjištění na slide: graf nebo mapa z článku překreslené na výšku 4:5, velké popisky, titulek slidu je tvrzení (stejné jako titulek grafu v článku).
-3. Předposlední slide = jak jsme to počítali a co data neříkají (jednou dvěma větami).
+3. Předposlední slide = jak to počítáme a co data neříkají (jednou dvěma větami).
 4. Poslední slide = **výzva k interakci** + „Celý článek na DataTimes.cz“ a odkaz v biu; u citlivých témat kontakt na pomoc (např. Linka Anabell).
 
 ### 8.1 Výzva k interakci: v každém carouselu (povinné)

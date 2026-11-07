@@ -85,7 +85,7 @@ Herzog den po volbách strany vyzval, aby přišly na konzultace „s otevřenou
 Na počtu arabských poslanců teď záleží víc než kdykoli předtím. Jestli se jejich hlasy promění ve vliv, rozhodnou židovské strany: zda vezmou podporu, kterou jim Ra'am i Společná kandidátka nabízejí, nebo půjdou za několik měsíců znovu k urnám se stejnou aritmetikou.
 
 ```infobox
-**Jak jsme to počítali**
+**Jak to počítáme**
 
 Přepočet mandátů vychází z hlasů, které zveřejnila [Ústřední volební komise pro volby do 26. Knesetu](https://votes26.bechirot.gov.il/) (stav 29. 10. 2026 v 7:37, sečteno 11 920 volebních místností, z dvojitých obálek zatím 29 tisíc hlasů). Účast a hlasy po obcích pocházejí z výsledků komise po obcích za roky 2026 a 2022. Rozdělení obcí na židovské, arabské, beduínské kmeny v Negevu a smíšená města vychází z číselníku izraelského statistického úřadu; patnáct obcí s drúzskou většinou tvoří samostatnou skupinu. Účast v obcích nezahrnuje dvojité obálky, protože je komise obcím nepřičítá. Netanjahuův blok tvoří Likud, Šas, Sjednocený judaismus Tóry, Ocma jehudit a Náboženský sionismus, Eisenkotův blok Jašar, Bejachad, Demokraté a Jisra'el bejtenu.
 ```

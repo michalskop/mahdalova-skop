@@ -70,7 +70,7 @@ V Českých Budějovicích vyhrálo s 15 ze 45 mandátů Naše Česko jihočesk�
 Z 20 lidí, které koalice ohlásily jako budoucí primátory a primátorky, jsou tři ženy: Andrea Pfeffer Ferklová v Karlových Varech, Iveta Kočí Palkovská v Havířově a Pavlína Springerová v Hradci Králové. V Liberci, ve Zlíně a v Prostějově koalice jméno zatím neoznámily. V Prostějově se rozhoduje mezi dvěma ženami, Janou Jílkovou (Na rovinu!) a Miladou Sokolovou (ODS), ve Zlíně mezi Věrou Stojar a Čestmírem Vančurou. V roce 2022 vzešly ze statutárních měst [čtyři primátorky](/clanek/volby-cr-2026-10-02-zeny-na-radnicich). Kolik žen zasedne ve vedení měst a obcí, spočítáme po ustavujících zasedáních. Podle dosavadních dohod se poměr liší město od města. V Brně mají být všechny čtyři náměstkyně ženy, v Mladé Boleslavi podle [Boleslavského deníku](https://boleslavsky.denik.cz/komunalni-volby/mlada-boleslav-komunalni-volby-vedeni-mesta-koalice-opozice/) nebude v jedenáctičlenné radě ani jedna.
 
 ```infobox
-**Jak jsme to počítali**
+**Jak to počítáme**
 
 Do přehledu patří 26 statutárních měst a Praha, tedy zastupitelstva, která ČSÚ vede jako zastupitelstvo statutárního města a hlavního města. Koalice je dohodnutá, pokud strany podepsaly koaliční smlouvu nebo memorandum, případně dohodu veřejně oznámily. Stav jsme převzali ze zpráv ČTK, ČT24 a regionálních médií ke 2. 11. 2026, odkaz je v textu u každého města. Jména jsou ohlášení kandidáti. Zvolí je až ustavující zasedání.
 

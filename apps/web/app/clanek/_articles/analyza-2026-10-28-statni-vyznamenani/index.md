@@ -39,7 +39,7 @@ Prezident vybírá z toho, co mu navrhnou vláda, poslanci, senátoři a veřejn
 Kolik vyznamenání jednotliví prezidenti rozdali, za jaké zásluhy a jaké spory jejich výběr provázely, rozebíráme v [samostatném článku](/clanek/analyza-2026-10-28-statni-vyznamenani-komu/).
 
 ```infobox info
-**Jak jsme to počítali**
+**Jak to počítáme**
 
 Základem jsou čtyři oficiální seznamy vyznamenaných na hrad.cz ve stavu k 27. 10. 2026 (stažené přes Internet Archive a ověřené proti živé verzi webu). Obsahují 1 377 záznamů, z toho dva zdvojené a tři z letošního roku (prezidenti pobaltských států při státní návštěvě). Vynechali jsme také dva řády Václava Havla z roku 2003, které mu po odchodu z funkce propůjčil parlament, ne prezident. K nim jsme 29. 10. 2026 doplnili 51 vyznamenání z 28. října 2026 podle tiskové zprávy Hradu (seznamy na hrad.cz je zatím neobsahují). Analyzujeme 1 424 vyznamenání z let 1995–2026. Seznamy Hradu uvádějí jen rok, ne datum. 
 

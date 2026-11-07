@@ -38,7 +38,7 @@ OBRÁZEK: carousel/03.png
 
 5/ Odpůrci se propojují a jezdí k nim i řečníci ze Slovenska. Ruskou stopu v kampaních zatím nikdo nedoložil. Kampaň vedou i investoři: nabízejí obcím peníze a levnější elektřinu.
 
-6/ Hlasovat budou ještě Břidličná (30. 10.), Úpice (7. 11.) a Tatce (27. 11.). V článku je, co si před hlasováním ohlídat, i jak jsme to počítali.
+6/ Hlasovat budou ještě Břidličná (30. 10.), Úpice (7. 11.) a Tatce (27. 11.). V článku je, co si před hlasováním ohlídat, i jak to počítáme.
 
 ## Bluesky (odkaz smí být hned v prvním příspěvku)
 

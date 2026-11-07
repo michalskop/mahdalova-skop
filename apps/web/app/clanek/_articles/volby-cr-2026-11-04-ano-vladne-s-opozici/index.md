@@ -69,7 +69,7 @@ V Českých Budějovicích se 9. listopadu zastupitelé jen zavážou slibem, no
 Jinde se čeká na soudy. Liberec, kde má být primátorem Lukáš Hájek (Starostové pro Liberecký kraj), počítá s 19. listopadem ([ČT24](https://ct24.ceskatelevize.cz/clanek/domaci/vetsina-krajskych-mest-uz-zna-nove-koalice-praha-a-ceske-budejovice-dal-jednaji-379243)), Zlín podle [Zlínského deníku](https://zlinsky.denik.cz/komunalni-volby/komunalni-volby-zlin-povede-koalice-trojbloku-stan-a-zlin-21-primator-bude-mit-stan-ci-zlin-21-smlouva/) zvolí primátora nejspíš až začátkem prosince. V Havířově se zasedání svolá do 15 dnů od pravomocného rozhodnutí soudu ([Karvinský deník](https://karvinsky.denik.cz/komunalni-volby/volebni-komise-havirov-odmeny-vyplaty-soud/)), na soud čeká i Ústí nad Labem. V Chomutově soud 3. listopadu našel chybu v sčítání hlasů, mandáty se ale nemění a koalice dohodnutá není ([Chomutovský deník](https://chomutovsky.denik.cz/zpravy-region/soud-chyby-scitani-hlasy-chomutov-zastupitele/)). V Karlových Varech, kde má koalice ANO, Karlovaráků a ODS nejtěsnější většinu 18 z 35, se podle primátorky koalice v plném počtu sejde až 16. listopadu ([Karlovarský deník](https://karlovarsky.denik.cz/komunalni-volby/komunalni-volby-soud-plzen-karlovarsky-kraj/)).
 
 ```infobox
-**Jak jsme to počítali**
+**Jak to počítáme**
 
 Do přehledu patří 26 statutárních měst a Praha, tedy zastupitelstva, která ČSÚ vede jako zastupitelstvo statutárního města a hlavního města. Koalice je dohodnutá, pokud strany podepsaly koaliční smlouvu nebo memorandum, případně dohodu veřejně oznámily. Stav jsme převzali ze zpráv ČTK, ČT24 a regionálních médií ke 4. 11. 2026, odkaz je v textu u každého města. U měst, kde zastupitelstvo ještě nezasedalo, jsou jména ohlášení kandidáti.
 

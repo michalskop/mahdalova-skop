@@ -84,7 +84,7 @@ V místech, kde silně volí vládní strany, chodí k volbám méně lidí už 
 <HtmlEmbed file="grafy/ucast.html" title="Účast ve druhém kole byla nejvyšší od roku 2010" subtitle="Účast ve druhém kole senátních voleb (vydané obálky / voliči v seznamu), řádné volby 1998–2026" source="ČSÚ – okrsková data senátních voleb 1996–2025 a výsledky 2026; výpočet DataTimes.cz" />
 
 ```infobox
-**Jak jsme to počítali**
+**Jak to počítáme**
 
 Strana senátora je strana, která ho navrhla, ne klub. Za vládní bereme strany, které byly ve vládě v den voleb (2006 menšinová vláda ODS v demisi, 2024 včetně Pirátů). Obhajoba znamená, že dosavadní senátor obvodu kandidoval ve stejném obvodu. Účast je podíl vydaných obálek na počtu voličů v seznamu, stejně jako ji počítá ČSÚ. Pohlaví v registru ČSÚ chybí, určili jsme ho podle jména a výsledky porovnali s Fórem 50 % a databází IPU Parline. Všechna čísla počítá jeden skript z otevřených dat ČSÚ; výsledky letošních voleb jsou ze 17. 10. 2026 po sečtení všech okrsků, před oficiálním vyhlášením.
 ```

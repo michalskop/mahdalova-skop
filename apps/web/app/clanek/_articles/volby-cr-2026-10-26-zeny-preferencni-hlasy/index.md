@@ -87,7 +87,7 @@ Rozdíl mizí také s velikostí obce. V obcích do tisíce obyvatel dostala že
 Jestli bude v zastupitelstvu víc žen, se tedy rozhoduje hlavně při sestavování kandidátek. A tam se strany a sdružení liší. Sdružení nezávislých kandidátů měla na kandidátkách 35,0 % žen a ženu v čele 30,2 % z nich. Politické strany, hnutí a koalice měly na kandidátkách žen víc, 37,1 %, ale ženu postavily do čela 21,9 % kandidátek. Mezi zvolenými za sdružení nezávislých je 31,7 % žen, za strany 29,1 %.
 
 ```infobox info
-**Jak jsme to počítali**
+**Jak to počítáme**
 
 Vycházíme z [registru kandidátů pro volby do zastupitelstev obcí 2026](https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm), který Český statistický úřad zveřejnil 11. října 2026, a ze stejných registrů pro roky [2022](https://volby.gov.cz/opendata/kv2022/kv2022_opendata.htm) a [2018](https://volby.gov.cz/opendata/kv2018/kv2018_opendata.htm). Registr uvádí u každého kandidáta jméno, věk, povolání, pořadí na kandidátce, počet hlasů a to, zda byl zvolen. Pohlaví neuvádí.
 
