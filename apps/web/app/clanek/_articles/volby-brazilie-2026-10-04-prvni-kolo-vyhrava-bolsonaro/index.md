@@ -76,7 +76,7 @@ Do druhého kola se v Brazílii šlo ve všech prezidentských volbách od roku 
 
 <BrazilCandidatesBars />
 
-Tři z menších kandidátů stojí napravo od Luly: Renan Santos, spoluzakladatel Hnutí za svobodnou Brazílii (MBL), které v letech 2015–2016 organizovalo masové protesty za sesazení Lulovy nástupkyně Dilmy Rousseffové, bývalý guvernér státu Goiás Ronaldo Caiado a bývalý guvernér Minas Gerais Romeu Zema ([The Rio Times](https://www.riotimesonline.com/brazil-elections-2026-complete-guide/)). Dohromady mají podle predikce 4,7 procenta. Kdyby se všichni jejich voliči ve druhém kole přidali k Fláviovi Bolsonarovi, měl by 51,7 procenta. Hlasy se ale mezi koly nikdy nepřelévají celé – část voličů zůstane doma, část přejde k soupeři.
+Tři z menších kandidátů stojí napravo od Luly: Renan Santos, spoluzakladatel Hnutí za svobodnou Brazílii (MBL), které v letech 2015–2016 organizovalo masové protesty za sesazení Lulovy nástupkyně Dilmy Rousseff, bývalý guvernér státu Goiás Ronaldo Caiado a bývalý guvernér Minas Gerais Romeu Zema ([The Rio Times](https://www.riotimesonline.com/brazil-elections-2026-complete-guide/)). Dohromady mají podle predikce 4,7 procenta. Kdyby se všichni jejich voliči ve druhém kole přidali k Fláviovi Bolsonarovi, měl by 51,7 procenta. Hlasy se ale mezi koly nikdy nepřelévají celé – část voličů zůstane doma, část přejde k soupeři.
 
 Poslední průzkumy pro druhé kolo ukazují vyrovnaný souboj: AtlasIntel naměřil 50 na 50 procent platných hlasů, Datafolha 47 ku 46 pro Lulu, Quaest 44 ku 42 pro Flávia Bolsonara ([The Rio Times](https://www.riotimesonline.com/brazil-final-polls-before-the-vote-lula-flavio-datafolha-quaest-2026/)). Jenže stejné agentury v prvním kole Flávia Bolsonara podcenily.
 

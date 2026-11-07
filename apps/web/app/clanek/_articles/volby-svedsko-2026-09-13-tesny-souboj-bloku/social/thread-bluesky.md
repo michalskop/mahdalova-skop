@@ -49,7 +49,7 @@ jsou z Wikimedia Commons (CC BY), kredit je u nich v článku.
    shodu na vládě. Levice chce vlastní ministerstva, Centristé odmítají
    vládnout společně s ní.
    IMAGE: images/andersson.jpg
-   ALT: Portrét Magdaleny Anderssonové, kandidátky červeno-zeleného bloku na
+   ALT: Portrét Magdaleny Andersson, kandidátky červeno-zeleného bloku na
    premiérku, v Göteborgu v dubnu 2026.
 
 N/ Výsledky zatím neznáme, místnosti se zavírají ve 20:00 SELČ. V článku

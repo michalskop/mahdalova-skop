@@ -2,7 +2,7 @@
 title: "V nejtěsnějším odhadu švédských voleb dělí bloky jediný mandát"
 date: "2026-09-13"
 author: "Kateřina Mahdalová & Michal Škop"
-excerpt: "Švédsko dnes od 8:00 do 20:00 volí nový Riksdag. Poslední průzkumy z 4.–11. září dávají červeno-zelenému bloku Magdaleny Anderssonové náskok 45,9–51,5 % proti 47,8–49,0 % vládní koalice Ulfa Kristerssona – v nejtěsnějším odhadu jde o rozdíl jediného mandátu, 175 ku 174. Poprvé v historii by přitom mohli vládní křesla získat nacionalističtí Švédští demokraté, pokud pravice zvítězí: v březnu na tom uzavřeli dohodu s Liberály, kteří sami jsou nad čtyřprocentním prahem jen s malou rezervou."
+excerpt: "Švédsko dnes od 8:00 do 20:00 volí nový Riksdag. Poslední průzkumy z 4.–11. září dávají červeno-zelenému bloku Magdaleny Andersson náskok 45,9–51,5 % proti 47,8–49,0 % vládní koalice Ulfa Kristerssona – v nejtěsnějším odhadu jde o rozdíl jediného mandátu, 175 ku 174. Poprvé v historii by přitom mohli vládní křesla získat nacionalističtí Švédští demokraté, pokud pravice zvítězí: v březnu na tom uzavřeli dohodu s Liberály, kteří sami jsou nad čtyřprocentním prahem jen s malou rezervou."
 coverImage: "images/cover-homepage.png"
 homepageImage: "images/cover-homepage.png"
 ogImage: "images/cover-og.jpg"
@@ -53,7 +53,7 @@ Dohoda ale zatěžuje právě Liberály, kteří se v žádném z pěti posledn�
 
 ## Červeno-zelení mají kandidátku na premiérku, ne dohodu o vládě
 
-<Figure src="images/andersson.jpg" side="right" alt="Magdalena Anderssonová v Göteborgu v dubnu 2026" caption="Magdalena Andersson (S), kandidátka červeno-zeleného bloku na premiérku – úřad krátce vedla už v letech 2021–2022. Foto: [Axadem, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Magdalena_Andersson_Gothenburg_2026-04-10_02_(cropped).jpg) (CC BY 4.0)." />
+<Figure src="images/andersson.jpg" side="right" alt="Magdalena Andersson v Göteborgu v dubnu 2026" caption="Magdalena Andersson (S), kandidátka červeno-zeleného bloku na premiérku – úřad krátce vedla už v letech 2021–2022. Foto: [Axadem, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Magdalena_Andersson_Gothenburg_2026-04-10_02_(cropped).jpg) (CC BY 4.0)." />
 
 Na druhé straně má červeno-zelený blok jasnou kandidátku na premiérku, ale žádnou shodu na tom, jak by koalice měla vypadat. Strana Levice prohlásila, že bude hlasovat proti jakékoli vládě, ve které nedostane vlastní ministerstva – to je oproti minulým volbám posun, kdy socialdemokratickou menšinovou vládu podporovala zvenčí bez nároku na křesla. Centristé naopak chtějí vládu s S, Zelenými a Křesťanskými demokraty, ale odmítají v ní sedět společně s Levicí. Podle Wikipedie by k sestavení vlády byly potřeba hlasy všech čtyř opozičních stran, jejich požadavky se ale přímo vylučují ([Next Swedish general election, Wikipedia](https://en.wikipedia.org/wiki/Next_Swedish_general_election)).
 

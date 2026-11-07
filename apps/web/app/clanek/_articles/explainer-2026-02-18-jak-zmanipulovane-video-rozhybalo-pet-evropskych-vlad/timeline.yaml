@@ -20,7 +20,7 @@ facetGroups:
 events:
   - date: "2026-02-07"
     title: "Albanese vystupuje na fóru Al-Džazíry v Dauhá"
-    description: 'Francesca Albanese se přes videohovor účastní panelu o mezinárodním právu na mediálním fóru Al-Džazíry. Ve tříminutovém příspěvku kritizuje systém vyzbrojování Izraele a říká: „My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně, nyní vidíme, že jako lidstvo máme společného nepřítele." Mluví o systému, nikoli o státu. Na panelu s ní sedí mj. Fatou Bensoudová, bývalá prokurátorka ICC.'
+    description: 'Francesca Albanese se přes videohovor účastní panelu o mezinárodním právu na mediálním fóru Al-Džazíry. Ve tříminutovém příspěvku kritizuje systém vyzbrojování Izraele a říká: „My, kteří nekontrolujeme velké finanční kapitály, algoritmy a zbraně, nyní vidíme, že jako lidstvo máme společného nepřítele." Mluví o systému, nikoli o státu. Na panelu s ní sedí mj. Fatou Bensouda, bývalá prokurátorka ICC.'
     side: "left"
     facets:
       actor: "un"
@@ -54,7 +54,7 @@ events:
 
   - date: "2026-02-09"
     title: "Francouzští poslanci píšou Barrotovi"
-    description: 'Skupina asi 50 poslanců strany Renaissance včetně Caroline Yadanové posílá dopis ministru zahraničí Barrotovi. Označují v něm výroky Albanese za antisemitské a citují přitom zkrácené video. Podle France24 Observateurs tentýž den zveřejňuje zkrácený sestřih také izraelská ambasáda ve Francii.'
+    description: 'Skupina asi 50 poslanců strany Renaissance včetně Caroline Yadan posílá dopis ministru zahraničí Barrotovi. Označují v něm výroky Albanese za antisemitské a citují přitom zkrácené video. Podle France24 Observateurs tentýž den zveřejňuje zkrácený sestřih také izraelská ambasáda ve Francii.'
     side: "right"
     facets:
       actor: "gov"
@@ -74,7 +74,7 @@ events:
 
   - date: "2026-02-11"
     title: "Barrot požaduje rezignaci Albanese"
-    description: 'Francouzský ministr zahraničí Jean-Noël Barrot v reakci na interpelaci poslankyně Yadanové prohlašuje před Národním shromážděním: „Francie bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky, které necílí na izraelskou vládu, ale na Izrael jako národ." Oznamuje, že Francie bude na zasedání Rady OSN pro lidská práva 23. února požadovat odvolání Albanese.'
+    description: 'Francouzský ministr zahraničí Jean-Noël Barrot v reakci na interpelaci poslankyně Yadan prohlašuje před Národním shromážděním: „Francie bezvýhradně odsuzuje tyto nehorázné a zavrženíhodné výroky, které necílí na izraelskou vládu, ale na Izrael jako národ." Oznamuje, že Francie bude na zasedání Rady OSN pro lidská práva 23. února požadovat odvolání Albanese.'
     side: "right"
     facets:
       actor: "gov"
@@ -143,7 +143,7 @@ events:
 
   - date: "2026-02-14"
     title: "Více než 100 umělců podpořilo Albanese"
-    description: 'Otevřený dopis organizace Artists for Palestine podpořilo přes 100 kulturních osobností včetně Marka Ruffala, Javiera Bardema, Annie Lennox a nobelistky Annie Ernauxové.'
+    description: 'Otevřený dopis organizace Artists for Palestine podpořilo přes 100 kulturních osobností včetně Marka Ruffala, Javiera Bardema, Annie Lennox a nobelistky Annie Ernaux.'
     side: "left"
     facets:
       actor: "ngo"
@@ -163,7 +163,7 @@ events:
 
   - date: "2026-02-15"
     title: "Amnesty International požaduje omluvy"
-    description: 'Generální tajemnice Amnesty International Agnès Callamardová vydává prohlášení: „Je zavrženíhodné, že ministři zaútočili na Albanese na základě záměrně zkráceného videa." Požaduje veřejné omluvy a stažení výzev k rezignaci.'
+    description: 'Generální tajemnice Amnesty International Agnès Callamard vydává prohlášení: „Je zavrženíhodné, že ministři zaútočili na Albanese na základě záměrně zkráceného videa." Požaduje veřejné omluvy a stažení výzev k rezignaci.'
     side: "left"
     facets:
       actor: "ngo"

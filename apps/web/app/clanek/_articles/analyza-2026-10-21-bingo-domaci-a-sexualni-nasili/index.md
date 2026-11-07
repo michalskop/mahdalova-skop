@@ -61,7 +61,7 @@ Copyright ©2015 Emmeline May and Blue Seat Studios, [originální video Tea Con
 
 Že násilí na ženách „často vyprovokuje oběť“, si v roce 2016 myslelo 26 procent Čechů a 17 procent lidí v EU. Na samotné oblečení se Češi dívají stejně jako zbytek Unie, na „provokování“ obecně ale přísněji. Podobný výrok zkoumal v roce 2021 i [průzkum agentury Kantar pro IKEA](https://www.ikea.com/cz/cs/newsroom/corporate-news/vyzkum-ikea-domaci-nasili-je-v-ceske-spolecnosti-zatizeno-mnoha-stereotypy-pubd508a147), podle kterého k domácímu násilí dochází i proto, že ho žena „vyprovokuje“, podle 56 procent dotázaných. Ten ale zveřejnil jen zadavatel bez přesného znění otázek, a proto ho nelze s Eurobarometrem srovnávat.
 
-Jak podobné otázky zní, když je položíte oběti jiného trestného činu, ukázal v roce 2017 skeč _What were you wearing?_ (Co jste měl na sobě?) z pořadu Tracey Ullmanové na britské BBC One. Policistka v něm vyslýchá muže, kterého okradl lupič s nožem, a místo po pachateli pátrá po tom, jestli oběť neměla na sobě příliš drahý oblek, jestli nepila a proč nekřičela. Podobný obrat použila už v roce 1975 americká právnička Connie Borkenhagenová v textu _The Rape of Mr. Smith_.
+Jak podobné otázky zní, když je položíte oběti jiného trestného činu, ukázal v roce 2017 skeč _What were you wearing?_ (Co jste měl na sobě?) z pořadu Tracey Ullmanové na britské BBC One. Policistka v něm vyslýchá muže, kterého okradl lupič s nožem, a místo po pachateli pátrá po tom, jestli oběť neměla na sobě příliš drahý oblek, jestli nepila a proč nekřičela. Podobný obrat použila už v roce 1975 americká právnička Connie Borkenhagen v textu _The Rape of Mr. Smith_.
 
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/51-hepLP8J4" title="What were you wearing? – Tracey Ullman's Show, BBC" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -97,7 +97,7 @@ Nejtěžší násilí ale dopadá hlavně na ženy. Podle [Eurostatu](https://ec
 
 Často se opakuje, že oběť odchází z násilného vztahu v průměru sedmkrát, než odejde natrvalo. Toto číslo nemá dohledatelný zdroj. Doložené je, že odchody a návraty jsou běžné. Ve [studii z azylového domu](https://doi.org/10.1177/0886260502017003005) se dvě třetiny žen už dřív k partnerovi vrátily.
 
-Proč odchod není snadný, ukazuje [americká studie Jacquelyn Campbellové](https://pmc.ncbi.nlm.nih.gov/articles/PMC1447915/) z roku 2003, která srovnala 220 zavražděných žen s 343 týranými ženami, které přežily. Když žena odešla od partnera, který ji silně kontroloval, bylo riziko, že ji zabije, zhruba devětkrát vyšší. Odchod tak rizikovou situaci často vyhrotí, místo aby ji ukončil.
+Proč odchod není snadný, ukazuje [americká studie Jacquelyn Campbell](https://pmc.ncbi.nlm.nih.gov/articles/PMC1447915/) z roku 2003, která srovnala 220 zavražděných žen s 343 týranými ženami, které přežily. Když žena odešla od partnera, který ji silně kontroloval, bylo riziko, že ji zabije, zhruba devětkrát vyšší. Odchod tak rizikovou situaci často vyhrotí, místo aby ji ukončil.
 
 Česká policie může násilníka ze společného bydlení vykázat na deset dní. Intervenční centra loni podle [komentáře APIC](http://www.domaci-nasili.cz/wp-content/uploads/koment%C3%A1%C5%99-APIC-2025.pdf) evidovala 1 640 vykázání, nejvíc od zavedení tohoto opatření v roce 2007.
 

@@ -15,8 +15,8 @@ Kateřina Mahdalová: Twitter pod Muskem je dezinformační ráj, seriózní zdr
 Kateřina Mahdalová
 21. ledna 2025
 Čtení na 2 minuty
-Zleva: Priscilla Chanová, zakladatel společnosti Meta Mark Zuckerberg, Lauren Sanchezová, zakladatel společnosti Amazon Jeff Bezos, generální ředitel společnosti Google Sundar Pichai a generální ředitel společnosti Tesla Elon Musk na inaugurace nově zvoleného amerického prezidenta Donalda Trumpa v Rotundě Kapitolu USA ve Washingtonu, 20. 1. 2025 (FOTO: ČTK / DPA / Chip Somodevilla)
-Zleva: Priscilla Chanová, zakladatel společnosti Meta Mark Zuckerberg, Lauren Sanchezová, zakladatel společnosti Amazon Jeff Bezos, generální ředitel společnosti Google Sundar Pichai a generální ředitel společnosti Tesla Elon Musk na inaugurace nově zvoleného amerického prezidenta Donalda Trumpa v Rotundě Kapitolu USA ve Washingtonu, 20. 1. 2025 (FOTO: ČTK / DPA / Chip Somodevilla)
+Zleva: Priscilla Chanová, zakladatel společnosti Meta Mark Zuckerberg, Lauren Sanchez, zakladatel společnosti Amazon Jeff Bezos, generální ředitel společnosti Google Sundar Pichai a generální ředitel společnosti Tesla Elon Musk na inaugurace nově zvoleného amerického prezidenta Donalda Trumpa v Rotundě Kapitolu USA ve Washingtonu, 20. 1. 2025 (FOTO: ČTK / DPA / Chip Somodevilla)
+Zleva: Priscilla Chanová, zakladatel společnosti Meta Mark Zuckerberg, Lauren Sanchez, zakladatel společnosti Amazon Jeff Bezos, generální ředitel společnosti Google Sundar Pichai a generální ředitel společnosti Tesla Elon Musk na inaugurace nově zvoleného amerického prezidenta Donalda Trumpa v Rotundě Kapitolu USA ve Washingtonu, 20. 1. 2025 (FOTO: ČTK / DPA / Chip Somodevilla)
 Nepotismus, izolace, bezohlednost, oslabování demokratických procesů a neomezená moc v rukou těch, kteří už ji mají – těšíte se? Ta doba není za rohem, už je dávno tady. Filtrování nepohodlných informací běží na plné obrátky, a přibližně třetina lidí se záměrně vyhýbá médiím, sociálním sítím i dalším zdrojům informací.
 AUDIO ČLÁNKU
 

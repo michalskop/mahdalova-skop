@@ -48,7 +48,7 @@ Evropská komise okamžitě zahájila vyšetřování TikToku. Zajímá se před
 1. **Doporučovací algoritmy** – jak mohly být zmanipulovány?  
 2. **Politickou reklamu** – proč nebyla označena a jak se jí podařilo obejít pravidla platformy?  
 
-Podle nařízení o digitálních službách (DSA) hrozí TikToku pokuta až **6 % ročního obratu**, nebo dokonce zákaz působení v EU. Ursula von der Leyenová zdůraznila, že ochrana demokratických procesů musí být prioritou všech platforem.  
+Podle nařízení o digitálních službách (DSA) hrozí TikToku pokuta až **6 % ročního obratu**, nebo dokonce zákaz působení v EU. Ursula von der Leyen zdůraznila, že ochrana demokratických procesů musí být prioritou všech platforem.  
 
 ## Selhaly instituce, nebo systém?  
 

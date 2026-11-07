@@ -114,6 +114,7 @@ Výchozí je čeština (mahdalova-skop.cz). **Projekt určuje jazyk a lokalizaci
 
 ## Lidé, jména a citace
 - **První zmínka**: celé jméno a role (Terezie Štyglerová, vedoucí oddělení demografické statistiky ČSÚ), dál příjmení.
+- **Cizí ženská příjmení nepřechylujeme**, a to ani v pádech: Ursula von der Leyen, Angela Merkel, Kamala Harris, „vláda Goldy Meir“, „porazil Susan Collins“. Původní tvar zachováme i u jmen končících na -a (Mary Peltola, Fatou Bensouda, Irina Busygina). Skloňuje se jen křestní jméno. Když nesklonné příjmení znejasní, kdo je podmět, větu přestavíme („proč Kneissl tíhne k Rusku“, ne „proč Rusko Kneissl přitahuje“). Výjimky: data převzatá z oficiálního seznamu (např. seznamy vyznamenaných Hradu v grafech) necháváme v tvaru, v jakém je instituce zveřejnila (Margaret Thatcherová), ve vlastním textu ale píšeme původní tvar. Češky a Slovenky s cizím příjmením píšeme v jejich úředním tvaru (Pavlína Springerová, Eliška Wagnerová). Ženy, které se samy píšou přechýleně, píšeme jejich vlastním tvarem (Helena Shanaáhová, Milada Blekastadová). *(7. 11. 2026: plošná oprava ve 20 článcích, grafy vyznamenání ponechány podle Hradu.)*
 - **Zájmena**: pokud je neznáme a nejsou uvedená, volíme neutrální formulaci; nedovozujeme je ze jména.
 - **Historické názvy** (státy, instituce) ponecháváme v dobové podobě, nepřepisujeme mechanicky na dnešní hranice.
 - **Citace**: přesná, editace bez změny smyslu; vsuvky do [hranatých závorek], vypuštění do výpustky. Necitujeme nikoho tak, aby to obrátilo jeho smysl.

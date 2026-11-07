@@ -108,7 +108,7 @@ Trump často střídá strategie bez předchozí analýzy, přeskakuje mezi slib
 
 Trumpova „reciproční cla“ ve skutečnosti **trestají spojence a narušují globální stabilitu**. Nejde o spravedlivější světový obchod, ale o **vnitropolitický kalkul**, který může mít globální následky.
 
-Pro Evropu je to varování: **Spojené státy zůstávají silou, ale nikoliv předvídatelnou.** A v tomto „obráceném světě“, jak jej popsala šéfka ECB Christine Lagardeová, **se Evropa bude muset o to víc spolehnout sama na sebe.**
+Pro Evropu je to varování: **Spojené státy zůstávají silou, ale nikoliv předvídatelnou.** A v tomto „obráceném světě“, jak jej popsala šéfka ECB Christine Lagarde, **se Evropa bude muset o to víc spolehnout sama na sebe.**
 
 Šéfka Evropské centrální banky Christine Lagarde mluví o „obráceném světě“, ve kterém se rozpadá dosavadní struktura – kde USA byly pilířem multilateralismu, Evropa se mohla spolehnout na pravidla, a globální obchod přispíval ke stabilitě. Nové kroky Trumpovy administrativy ohrožují tuto architekturu – a nutí Evropu budovat vlastní soběstačnost, například v oblasti energetiky, obrany i strategických technologií.
 
