@@ -1,5 +1,5 @@
 ---
-title: "ANO vládne ve velkých městech se sněmovní opozicí. Se SPD a Motoristy nikde"
+title: "ANO vládne ve velkých městech se sněmovní opozicí. S Motoristy a SPD nikde"
 date: "2026-11-04"
 time: "10:12"
 author: "Kateřina Mahdalová & Michal Škop"
@@ -24,7 +24,7 @@ Nejvýrazněji se celostátní fronty rozcházejí v Přerově. Je to jediné z 
 
 V Mladé Boleslavi dostal Bouška 28 hlasů ze 30 přítomných, tedy víc, než má koalice (25 z 33). Prvním náměstkem je Daniel Marek ze STAN, dalším Michal Koliáš z ODS. Koalice před zasedáním změnila podobu vedení: místní Hlas pro Boleslav v ní zůstal, náměstka už ale nemá a náměstků jsou tři místo čtyř ([ČTK](https://www.ceskenoviny.cz/zpravy/primatorem-mlade-boleslavi-je-bouska-koalice-zmenila-podobu-vedeni-mesta/2890068)).
 
-V Plzni zvolili Zarzyckého 33 hlasy, proti bylo 11 opozičních zastupitelů z ODS a Chceme Plzeň ([ČT24](https://ct24.ceskatelevize.cz/clanek/domaci/vetsina-krajskych-mest-uz-zna-nove-koalice-praha-a-ceske-budejovice-dal-jednaji-379243)). Vládne se STAN a s kandidátkou Pro Plzeň s podporou lidovců. V Teplicích je Štábl primátorem díky koalici ANO s Volbou pro Teplice, kterou podle ČSÚ tvoří KDU-ČSL, Zelení, Piráti a nezávislí. Prvním náměstkem je Petr Slavíček z Volby pro Teplice a vítězná ODS jde do opozice ([ČTK na Echo24](https://m.echo24.cz/a/HnDwr/zpravy-domov-primatorem-teplic-se-stal-opet-stabl-z-ano)).
+V Plzni zvolili Zarzyckého 33 hlasy, proti bylo 11 opozičních zastupitelů z ODS a Chceme Plzeň ([ČT24](https://ct24.ceskatelevize.cz/clanek/domaci/vetsina-krajskych-mest-uz-zna-nove-koalice-praha-a-ceske-budejovice-dal-jednaji-379243)). Vládne se STAN a s kandidátkou Pro Plzeň s podporou lidovců. V Teplicích je Štábl primátorem díky koalici ANO s Volbou pro Teplice, kterou podle ČSÚ tvoří KDU-ČSL, Zelení, Piráti a nezávislí. Prvním náměstkem je Petr Slavíček z Volby pro Teplice a ([vítězná ODS jde do opozice](https://www.ceskenoviny.cz/zpravy/2893229).
 
 <VegaChart dataFile="data/koalice.json" />
 
