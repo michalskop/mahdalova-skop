@@ -4,6 +4,8 @@ import { site } from '../sites/index.ts';
 import { ui, paths } from '../i18n.ts';
 import social from '../../../../packages/site-content/social.json';
 const { title, wide = false } = Astro.props;
+// One canonical address per page: the main domain, never www.
+const canonical = new URL(Astro.url.pathname, `https://${site.domain}`).href;
 const t = ui[site.lang];
 const p = paths[site.lang];
 const accounts = social.accounts.filter((a) => a.url);
@@ -17,6 +19,7 @@ const LOGO = 'https://media.datatimes.org/shared/branding/datatimes-donut-2026-1
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title === site.name ? site.name : `${title} – ${site.name}`}</title>
     <meta name="description" content={site.tagline} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href={FAVICON} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" />
