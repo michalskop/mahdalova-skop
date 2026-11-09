@@ -1,0 +1,89 @@
+## Česko celkem (součet toků 8 307 000)
+ANO udrželo: 1 180 000; přišlo 789 000, odešlo 291 000
+  do ANO odkud: Nevoliči 320 000, SPD 180 000, SOCDEM 117 000, KSČM 82 000, Přísaha 60 000, Ostatní 23 000, PirSTAN 5 000, SPOLU 2 000
+  z ANO kam: Nevoliči 83 000, Motoristé 49 000, Stačilo! 38 000, SPD 36 000, STAN 30 000, Piráti 24 000, Ostatní 17 000, SPOLU 14 000
+  největší přesuny: PirSTAN → Piráti 320 000; Nevoliči → ANO 320 000; PirSTAN → STAN 265 000; SPOLU → STAN 205 000; SPD → ANO 180 000; PirSTAN → SPOLU 146 000
+
+## Hlavní město Praha (součet toků 942 000)
+ANO udrželo: 90 000; přišlo 37 000, odešlo 29 000
+  do ANO odkud: SOCDEM 10 000, Nevoliči 10 000, Přísaha 5 000, SPD 5 000, KSČM 5 000, SPOLU 1 000, Ostatní 1 000
+  z ANO kam: Nevoliči 10 000, STAN 5 000, SPOLU 5 000, Motoristé 5 000, Ostatní 2 000, Stačilo! 1 000, Piráti 1 000
+  největší přesuny: PirSTAN → Piráti 90 000; SPOLU → STAN 40 000; PirSTAN → STAN 30 000; PirSTAN → SPOLU 20 000; SPOLU → Nevoliči 15 000; SPOLU → Motoristé 10 000
+
+## Středočeský (součet toků 1 004 000)
+ANO udrželo: 140 000; přišlo 98 000, odešlo 39 000
+  do ANO odkud: Nevoliči 40 000, SOCDEM 20 000, KSČM 15 000, SPD 15 000, Přísaha 5 000, Ostatní 2 000, PirSTAN 1 000
+  z ANO kam: SPD 10 000, Nevoliči 10 000, Ostatní 5 000, Motoristé 5 000, Stačilo! 5 000, STAN 2 000, Piráti 1 000, SPOLU 1 000
+  největší přesuny: PirSTAN → STAN 60 000; Nevoliči → ANO 40 000; PirSTAN → Piráti 30 000; SPOLU → STAN 20 000; SPOLU → Piráti 20 000; SOCDEM → ANO 20 000
+
+## Jihočeský (součet toků 500 000)
+ANO udrželo: 70 000; přišlo 50 000, odešlo 20 000
+  do ANO odkud: Nevoliči 20 000, SOCDEM 10 000, SPD 10 000, KSČM 5 000, Přísaha 5 000
+  z ANO kam: Motoristé 5 000, Nevoliči 5 000, Stačilo! 5 000, SPD 2 000, SPOLU 1 000, Piráti 1 000, Ostatní 1 000
+  největší přesuny: Nevoliči → ANO 20 000; SPOLU → STAN 15 000; PirSTAN → Piráti 15 000; SPD → ANO 10 000; SOCDEM → ANO 10 000; PirSTAN → STAN 10 000
+
+## Plzeňský (součet toků 447 000)
+ANO udrželo: 70 000; přišlo 46 000, odešlo 13 000
+  do ANO odkud: Nevoliči 20 000, SPD 10 000, KSČM 5 000, SOCDEM 5 000, Přísaha 5 000, Ostatní 1 000
+  z ANO kam: Nevoliči 5 000, Motoristé 5 000, Ostatní 1 000, SPOLU 1 000, Piráti 1 000
+  největší přesuny: Nevoliči → ANO 20 000; PirSTAN → Piráti 15 000; SPOLU → STAN 10 000; SPD → ANO 10 000; PirSTAN → STAN 10 000; PirSTAN → SPOLU 10 000
+
+## Karlovarský (součet toků 213 000)
+ANO udrželo: 30 000; přišlo 25 000, odešlo 4 000
+  do ANO odkud: Nevoliči 10 000, SPD 10 000, KSČM 2 000, SOCDEM 2 000, Ostatní 1 000
+  z ANO kam: SPOLU 1 000, Stačilo! 1 000, Nevoliči 1 000, Ostatní 1 000
+  největší přesuny: SPD → ANO 10 000; Nevoliči → ANO 10 000; SPOLU → STAN 5 000; SPD → Motoristé 5 000; PirSTAN → STAN 5 000; PirSTAN → Piráti 5 000
+
+## Ústecký (součet toků 691 000)
+ANO udrželo: 120 000; přišlo 62 000, odešlo 25 000
+  do ANO odkud: Nevoliči 30 000, SPD 15 000, Ostatní 5 000, KSČM 5 000, SOCDEM 5 000, Přísaha 1 000, PirSTAN 1 000
+  z ANO kam: SPD 5 000, Motoristé 5 000, STAN 5 000, Stačilo! 5 000, Ostatní 2 000, Nevoliči 2 000, SPOLU 1 000
+  největší přesuny: Nevoliči → ANO 30 000; PirSTAN → STAN 20 000; SPD → ANO 15 000; PirSTAN → Piráti 15 000; SPOLU → STAN 10 000; SPOLU → Piráti 10 000
+
+## Liberecký (součet toků 350 000)
+ANO udrželo: 50 000; přišlo 31 000, odešlo 8 000
+  do ANO odkud: Nevoliči 15 000, SPD 10 000, SOCDEM 5 000, Přísaha 1 000
+  z ANO kam: Nevoliči 5 000, Piráti 1 000, Stačilo! 1 000, Ostatní 1 000
+  největší přesuny: PirSTAN → STAN 20 000; PirSTAN → Piráti 15 000; Nevoliči → ANO 15 000; SPOLU → STAN 10 000; SPD → ANO 10 000; SPOLU → Piráti 5 000
+
+## Královéhradecký (součet toků 443 000)
+ANO udrželo: 60 000; přišlo 37 000, odešlo 20 000
+  do ANO odkud: Nevoliči 15 000, KSČM 5 000, Přísaha 5 000, SPD 5 000, SOCDEM 5 000, Ostatní 2 000
+  z ANO kam: STAN 5 000, SPD 5 000, Nevoliči 5 000, Stačilo! 2 000, Piráti 1 000, Ostatní 1 000, Motoristé 1 000
+  největší přesuny: PirSTAN → STAN 20 000; PirSTAN → Piráti 15 000; Nevoliči → ANO 15 000; SPOLU → STAN 10 000; SPOLU → Piráti 5 000; SPOLU → Nevoliči 5 000
+
+## Pardubický (součet toků 438 000)
+ANO udrželo: 60 000; přišlo 48 000, odešlo 21 000
+  do ANO odkud: Nevoliči 20 000, SPD 10 000, SOCDEM 10 000, KSČM 5 000, Přísaha 1 000, PirSTAN 1 000, Ostatní 1 000
+  z ANO kam: Piráti 5 000, Nevoliči 5 000, Motoristé 5 000, SPD 5 000, Stačilo! 1 000
+  největší přesuny: Nevoliči → ANO 20 000; PirSTAN → STAN 15 000; SPOLU → STAN 10 000; SPD → ANO 10 000; SOCDEM → ANO 10 000; PirSTAN → SPOLU 10 000
+
+## Vysočina (součet toků 415 000)
+ANO udrželo: 60 000; přišlo 49 000, odešlo 17 000
+  do ANO odkud: Nevoliči 15 000, SPD 10 000, SOCDEM 10 000, Ostatní 5 000, KSČM 5 000, Přísaha 2 000, PirSTAN 1 000, SPOLU 1 000
+  z ANO kam: Nevoliči 5 000, Stačilo! 5 000, STAN 2 000, Motoristé 2 000, SPD 1 000, Piráti 1 000, SPOLU 1 000
+  největší přesuny: Nevoliči → ANO 15 000; SPOLU → STAN 10 000; SPD → ANO 10 000; SOCDEM → ANO 10 000; PirSTAN → STAN 10 000; PirSTAN → Piráti 10 000
+
+## Jihomoravský (součet toků 937 000)
+ANO udrželo: 130 000; přišlo 91 000, odešlo 27 000
+  do ANO odkud: Nevoliči 40 000, SPD 20 000, Přísaha 15 000, KSČM 10 000, SOCDEM 5 000, Ostatní 1 000
+  z ANO kam: Nevoliči 10 000, STAN 5 000, Motoristé 5 000, SPD 5 000, Piráti 1 000, SPOLU 1 000
+  největší přesuny: PirSTAN → Piráti 40 000; Nevoliči → ANO 40 000; SPOLU → STAN 20 000; SPD → ANO 20 000; PirSTAN → STAN 20 000; PirSTAN → SPOLU 20 000
+
+## Olomoucký (součet toků 515 000)
+ANO udrželo: 80 000; přišlo 51 000, odešlo 21 000
+  do ANO odkud: Nevoliči 20 000, SPD 15 000, KSČM 5 000, Přísaha 5 000, SOCDEM 5 000, Ostatní 1 000
+  z ANO kam: Nevoliči 5 000, Motoristé 5 000, Stačilo! 5 000, SPD 2 000, SPOLU 1 000, STAN 1 000, Piráti 1 000, Ostatní 1 000
+  největší přesuny: Nevoliči → ANO 20 000; SPOLU → STAN 15 000; SPD → ANO 15 000; PirSTAN → STAN 15 000; PirSTAN → Piráti 15 000; PirSTAN → SPOLU 10 000
+
+## Zlínský (součet toků 462 000)
+ANO udrželo: 70 000; přišlo 53 000, odešlo 16 000
+  do ANO odkud: Nevoliči 15 000, SPD 15 000, SOCDEM 10 000, Přísaha 5 000, KSČM 5 000, Ostatní 2 000, PirSTAN 1 000
+  z ANO kam: Nevoliči 5 000, Piráti 5 000, Stačilo! 2 000, SPD 1 000, SPOLU 1 000, Motoristé 1 000, Ostatní 1 000
+  největší přesuny: SPD → ANO 15 000; PirSTAN → STAN 15 000; PirSTAN → Piráti 15 000; Nevoliči → ANO 15 000; SPOLU → STAN 10 000; SOCDEM → ANO 10 000
+
+## Moravskoslezský (součet toků 950 000)
+ANO udrželo: 150 000; přišlo 111 000, odešlo 31 000
+  do ANO odkud: Nevoliči 50 000, SPD 30 000, SOCDEM 15 000, KSČM 10 000, Přísaha 5 000, Ostatní 1 000
+  z ANO kam: Nevoliči 10 000, STAN 5 000, Piráti 5 000, Stačilo! 5 000, Motoristé 5 000, Ostatní 1 000
+  největší přesuny: Nevoliči → ANO 50 000; SPD → ANO 30 000; PirSTAN → Piráti 30 000; SPOLU → STAN 20 000; SOCDEM → ANO 15 000; PirSTAN → STAN 15 000

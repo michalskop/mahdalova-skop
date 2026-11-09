@@ -1,0 +1,141 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Musk sám dal víc než tři největší demokratičtí dárci dohromady",
+    "subtitle": "Největší individuální dárci kampaně 2026, miliony dolarů. Červeně napojení na republikány, modře na demokraty."
+  },
+  "width": 600,
+  "height": 230,
+  "data": {
+    "values": [
+      {
+        "n": "Elon Musk",
+        "v": 446,
+        "tabor": "republikáni",
+        "popisek": "446 mil. USD",
+        "barva": "#de1743"
+      },
+      {
+        "n": "Elizabeth a Richard Uihleinovi",
+        "v": 150,
+        "tabor": "republikáni",
+        "popisek": "150 mil. USD",
+        "barva": "#de1743"
+      },
+      {
+        "n": "Jeff a Janine Yassovi",
+        "v": 110,
+        "tabor": "republikáni",
+        "popisek": "110 mil. USD",
+        "barva": "#de1743"
+      },
+      {
+        "n": "George Soros",
+        "v": 102,
+        "tabor": "demokraté",
+        "popisek": "102 mil. USD",
+        "barva": "#5e66d5"
+      },
+      {
+        "n": "Mike Bloomberg",
+        "v": 84,
+        "tabor": "demokraté",
+        "popisek": "84 mil. USD",
+        "barva": "#5e66d5"
+      },
+      {
+        "n": "Reid Hoffman a Michelle Yee",
+        "v": 41,
+        "tabor": "demokraté",
+        "popisek": "41 mil. USD",
+        "barva": "#5e66d5"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "n",
+      "type": "nominal",
+      "sort": [
+        "Elon Musk",
+        "Elizabeth a Richard Uihleinovi",
+        "Jeff a Janine Yassovi",
+        "George Soros",
+        "Mike Bloomberg",
+        "Reid Hoffman a Michelle Yee"
+      ],
+      "axis": {
+        "title": null,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12,
+        "labelLimit": 260
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "height": 22
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              500
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "n",
+            "title": "Dárce"
+          },
+          {
+            "field": "popisek",
+            "title": "Částka"
+          },
+          {
+            "field": "tabor",
+            "title": "Napojení"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "_source": "[Al Jazeera podle dat FEC, 27. 10. 2026](https://www.aljazeera.com/news/2026/10/27/tracking-the-money-the-biggest-donors-in-the-2026-us-midterm-elections), 50 největších dárců a organizací."
+}
