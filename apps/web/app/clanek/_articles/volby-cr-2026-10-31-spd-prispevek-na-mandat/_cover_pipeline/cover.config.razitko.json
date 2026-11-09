@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/images/cover-homepage.png",
+      "otisk": "b55d306781e2299f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/cover.config.cjs": "d7ff3a341aabac25",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/motiv-homepage.svg": "c4f984ee967f4e21"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/images/cover-og.jpg",
+      "otisk": "eaf34dc9ee89114c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/cover.config.cjs": "d7ff3a341aabac25",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/motiv-og.svg": "ecbdb01525f35643"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/images/cover-square.png",
+      "otisk": "5c2e647c3fe96b5d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/cover.config.cjs": "d7ff3a341aabac25",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/motiv-square.svg": "155632ed4e317581"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/images/cover-instagram.png",
+      "otisk": "db5a4c5fbcbfd94e",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/cover.config.cjs": "d7ff3a341aabac25",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/motiv-instagram.svg": "5d8aaa5bfe18d2e8"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/images/cover-story.png",
+      "otisk": "252f82598880a5c0",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/cover.config.cjs": "d7ff3a341aabac25",
+        "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/motiv-story.svg": "28a0757832b85bc5"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-09T11:33:04.009Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-cr-2026-10-31-spd-prispevek-na-mandat/index.md",
+  "titulekClanku": "SPD přišla v obcích o dvě třetiny zastupitelů. Od státu kvůli tomu ztratí půl milionu korun ročně",
+  "texty": {
+    "stitek": "Komunální volby 2026 • Peníze stran",
+    "nadtitulek": "",
+    "titulek": "SPD přišla o dvě třetiny zastupitelů",
+    "podtitulek": "Od státu ztratí peníze jen za dva pražské, 500 tisíc korun ročně"
+  }
+}

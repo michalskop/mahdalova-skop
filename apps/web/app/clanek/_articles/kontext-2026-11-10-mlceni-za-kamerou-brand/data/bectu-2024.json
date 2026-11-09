@@ -1,0 +1,149 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Přes 60 % dotázaných obtěžování nenahlásilo ze strachu o kariéru",
+    "subtitle": "Průzkum odborového svazu Bectu mezi 225 lidmi z britských kreativních odvětví, květen 2024. Podíl dotázaných v %. Nejde o reprezentativní vzorek."
+  },
+  "width": 600,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "otazka": "Zažili nebo viděli šikanu či obtěžování kvůli pohlaví",
+        "v": 92,
+        "popisek": "92 %",
+        "zneni": "92% ... witnessed or experienced bullying or harassment on grounds of their sex or gender",
+        "barva": "#101432"
+      },
+      {
+        "otazka": "Zažili nebo viděli sexuální obtěžování",
+        "v": 85,
+        "popisek": "85 %",
+        "zneni": "85 per cent ... experienced or witnessed an incident of sexual harassment",
+        "barva": "#101432"
+      },
+      {
+        "otazka": "Zažili nechtěné dotyky, objetí či polibky",
+        "v": 60,
+        "popisek": "6 z 10",
+        "zneni": "six in ten ... experienced unwanted and/or inappropriate touching, hugging or kissing",
+        "barva": "#101432"
+      },
+      {
+        "otazka": "Zažili vážné sexuální napadení v práci",
+        "v": 20,
+        "popisek": "1 z 5",
+        "zneni": "One in five ... have experienced a serious sexual assault while at work",
+        "barva": "#101432"
+      },
+      {
+        "otazka": "Nenahlásili ze strachu o kariéru",
+        "v": 60,
+        "popisek": "přes 60 %",
+        "zneni": "More than 60% chose not to report an incident because they were worried it would negatively impact their career",
+        "barva": "#de1743"
+      },
+      {
+        "otazka": "Věří, že odvětví účinně jedná",
+        "v": 13,
+        "popisek": "13 %",
+        "zneni": "just 13% ... confident that the industry is taking effective action",
+        "barva": "#de1743"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "otazka",
+      "type": "nominal",
+      "sort": [
+        "Zažili nebo viděli šikanu či obtěžování kvůli pohlaví",
+        "Zažili nebo viděli sexuální obtěžování",
+        "Zažili nechtěné dotyky, objetí či polibky",
+        "Zažili vážné sexuální napadení v práci",
+        "Nenahlásili ze strachu o kariéru",
+        "Věří, že odvětví účinně jedná"
+      ],
+      "axis": {
+        "title": null,
+        "ticks": false,
+        "domain": false,
+        "labelFontSize": 12,
+        "labelLimit": 330
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "height": 22
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#e8e3d2",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "otazka",
+            "title": "Otázka"
+          },
+          {
+            "field": "popisek",
+            "title": "Podíl"
+          },
+          {
+            "field": "zneni",
+            "title": "Znění v tiskové zprávě Bectu"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "_source": "[Bectu, tisková zpráva 30. 5. 2024](https://bectu.org.uk/news/bectu-calls-on-creative-industries-to-get-behind-independent-standards-authority-as-9-in-10-creative-workers-say-they-have-been-sexually-harassed-at-work); počet dotázaných [Screen Global Production](https://www.screenglobalproduction.com/news/2024/06/03/uk-creative-industry-workers-sexual-assault-survey). Hodnoty „6 z 10“, „1 z 5“ a „přes 60 %“ zpráva uvádí jen slovně."
+}

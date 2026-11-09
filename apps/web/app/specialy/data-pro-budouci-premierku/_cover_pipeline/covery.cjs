@@ -210,6 +210,16 @@ const MOTIVY = {
     });
     return svgWrap(w, h, s);
   },
+  // 20: podle sčítání 2021 tvořili důchodci lehce přes 10 % zaměstnaných (ČSÚ); 1 postava = 1 % zaměstnaných
+  desatina(w, h) {
+    const f = fsOf(w), total = 100, filled = 10, c = 20, rows = 5;
+    const k = Math.min((w * 0.96) / c, (h - f * 4.4) / rows), gx = (w - k * c) / 2;
+    const osoba = (cx, cy, b) => C(cx, cy - k * 0.14, k * 0.17, b) + `<path d="M ${(cx - k * 0.3).toFixed(1)} ${(cy + k * 0.36).toFixed(1)} Q ${(cx - k * 0.3).toFixed(1)} ${(cy + k * 0.06).toFixed(1)} ${cx.toFixed(1)} ${(cy + k * 0.06).toFixed(1)} Q ${(cx + k * 0.3).toFixed(1)} ${(cy + k * 0.06).toFixed(1)} ${(cx + k * 0.3).toFixed(1)} ${(cy + k * 0.36).toFixed(1)} Z" fill="${b}"/>`;
+    let s = '';
+    for (let i = 0; i < total; i++) s += osoba(gx + ((i % c) + 0.5) * k, (Math.floor(i / c) + 0.5) * k, i >= total - filled ? CRIMSON : SED);
+    s += `<text font-family="IBM Plex Sans" font-size="${f * 1.05}" font-weight="600" fill="${BILA}"><tspan x="${gx}" y="${k * rows + f * 1.6}"><tspan fill="${CORAL}">●</tspan> důchodci: lehce přes 10 % zaměstnaných</tspan><tspan x="${gx}" y="${k * rows + f * 3.0}" fill-opacity=".8">1 postava = 1 % zaměstnaných, sčítání 2021</tspan></text>`;
+    return svgWrap(w, h, s);
+  },
   // 08: v jeslích a školkách je 7,9 % dětí do tří let, v EU 40,6 % (Eurostat 2025); 1 tečka = 1 % (zaokrouhleno)
   bloky(w, h) {
     const f = fsOf(w), R = 5, cols = [2, 9], mez = 2.2, celkem = cols[0] + cols[1] + mez, k = Math.min(w / celkem, (h - f * 4) / R), x0 = (w - k * celkem) / 2;
@@ -241,6 +251,7 @@ const DEF = {
     spec: { min: 1.1, max: 2.0, hlavicka: ['rok 2021', 'rok 2024'], rady: [{ n: 'Švédsko', a: 1.67, b: 1.43 }, { n: 'Francie', a: 1.83, b: 1.61, barva: '#899aeb' }, { n: 'Maďarsko', a: 1.63, b: 1.41, barva: '#ffcf02' }, { n: 'Kanada', a: 1.44, b: 1.25, barva: '#4fd6b4' }] } },
   '19-plodnost-muzu': { rubrika: 'Explainer', motiv: 'kolecka', logoVpravo: true, posun: { homepage: 0.05, square: 0.04, og: 0.04, instagram: 0.02, story: 0.012 }, titulek: 'Plodnost mužů se dá spočítat, vychází o 10 až 17 % níž než u žen', pod: 'V roce 2024 vychází na jednoho muže 1,14 až 1,23 dítěte, na jednu ženu 1,37',
     spec: { pozn: '1 kolečko = 1 dítě, rok 2024', rady: [{ n: 'na jednu ženu', v: 1.37 }, { n: 'na jednoho muže', v: 1.23 }, { n: 'k obnově populace', v: 2.1, obrys: true }] } },
+  '20-pracujici-duchodci': { motiv: 'desatina', titulek: 'Stát odpouští pracujícím důchodcům odvody.<br>Zda to funguje, nikdo neví', pod: 'Slevu 6,5 % z hrubé mzdy využívalo v říjnu 2025 asi 145&nbsp;600 lidí, za deset měsíců stála přes 3,56 miliardy korun' },
   '08-politicke-sliby': { motiv: 'bloky', titulek: 'Jesle a školky má v Česku 8 % dětí do tří let', pod: 'V Evropské unii je to 40,6 %, dostupná péče o děti patří k nejúčinnějším opatřením' },
 };
 

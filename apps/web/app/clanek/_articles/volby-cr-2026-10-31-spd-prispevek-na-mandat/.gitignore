@@ -1,0 +1,5 @@
+# Vykreslené motivy a náhledy kontroly coverů (velké, generují se z motiv.cjs) do gitu nepatří.
+# Covery patří na CDN media.datatimes.org (docs/technicke/media-cdn.md).
+_cover_pipeline/*.svg
+_cover_pipeline/*.png
+images/cover-*

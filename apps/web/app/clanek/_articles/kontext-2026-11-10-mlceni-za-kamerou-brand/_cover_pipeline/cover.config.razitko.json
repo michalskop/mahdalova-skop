@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/images/cover-homepage.png",
+      "otisk": "0a20e02eae8ca8c6",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/cover.config.cjs": "8e5e7224f8ea416d",
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/motiv-homepage.svg": "8e2e7a42e5dec17f"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/images/cover-og.jpg",
+      "otisk": "db648915f20d16ba",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/cover.config.cjs": "8e5e7224f8ea416d",
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/motiv-og.svg": "f5051cb183b4765c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/images/cover-square.png",
+      "otisk": "5b555e454df9be24",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/cover.config.cjs": "8e5e7224f8ea416d",
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/motiv-square.svg": "3c9e9d95e7aa6c7a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/images/cover-instagram.png",
+      "otisk": "5d64c4028e1cc676",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/cover.config.cjs": "8e5e7224f8ea416d",
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/motiv-instagram.svg": "ae51e5ff7cb5bb80"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/images/cover-story.png",
+      "otisk": "7a0a884303488221",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/cover.config.cjs": "8e5e7224f8ea416d",
+        "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/motiv-story.svg": "7a7d6cddbb968f49"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-09T11:29:31.283Z",
+  "clanek": "apps/web/app/clanek/_articles/kontext-2026-11-10-mlceni-za-kamerou-brand/index.md",
+  "titulekClanku": "Šest z deseti dotázaných z britských médií obtěžování nenahlásilo. Případ Russella Branda ukazuje proč",
+  "texty": {
+    "stitek": "Kontext • Velká Británie • Média",
+    "nadtitulek": "",
+    "titulek": "Šest z deseti obtěžování nenahlásilo",
+    "podtitulek": "Lidé z britských médií a zábavy mlčí ze strachu o práci. Případ Russella Branda ukazuje proč"
+  }
+}
