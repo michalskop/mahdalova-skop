@@ -1,0 +1,203 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Po zavedení cla {od 1. července|#de1743} spadl počet položek v levných zásilkách na necelou pětinu června",
+    "subtitle": "Položky zboží v zásilkách do 150 eur dovezených do Česka ze zemí mimo EU, průměr za měsíc v milionech"
+  },
+  "width": "container",
+  "height": {
+    "step": 30
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "obdobi": "2023",
+        "poradi": 0,
+        "prumer": 0.25,
+        "clo": "před clem",
+        "t_prumer": "0,2 mil.",
+        "t_celkem": "3,0 mil.",
+        "zdroj": "zhruba 3 mil. položek (ČTK)"
+      },
+      {
+        "obdobi": "2024",
+        "poradi": 1,
+        "prumer": 1.92,
+        "clo": "před clem",
+        "t_prumer": "1,9 mil.",
+        "t_celkem": "23,0 mil.",
+        "zdroj": "23 mil. položek (výroční zpráva Celní správy)"
+      },
+      {
+        "obdobi": "2025",
+        "poradi": 2,
+        "prumer": 8.75,
+        "clo": "před clem",
+        "t_prumer": "8,8 mil.",
+        "t_celkem": "105,0 mil.",
+        "zdroj": "zhruba 105 mil. položek (e15 podle Celní správy)"
+      },
+      {
+        "obdobi": "led–kvě 2026",
+        "poradi": 3,
+        "prumer": 18.6,
+        "clo": "před clem",
+        "t_prumer": "18,6 mil.",
+        "t_celkem": "93,0 mil.",
+        "zdroj": "přes 93 mil. položek (e15 podle Celní správy)"
+      },
+      {
+        "obdobi": "červen 2026",
+        "poradi": 4,
+        "prumer": 13.6,
+        "clo": "před clem",
+        "t_prumer": "13,6 mil.",
+        "t_celkem": "13,6 mil.",
+        "zdroj": "13,6 mil. položek (ČTK podle Celní správy)"
+      },
+      {
+        "obdobi": "červenec 2026",
+        "poradi": 5,
+        "prumer": 3.6,
+        "clo": "od zavedení cla",
+        "t_prumer": "3,6 mil.",
+        "t_celkem": "3,6 mil.",
+        "zdroj": "3,6 mil. položek (ČTK podle Celní správy)"
+      },
+      {
+        "obdobi": "srpen 2026",
+        "poradi": 6,
+        "prumer": 3.0,
+        "clo": "od zavedení cla",
+        "t_prumer": "3,0 mil.",
+        "t_celkem": "3,0 mil.",
+        "zdroj": "dopočet: červenec a srpen 6,6 mil. (Celní správa), z toho červenec 3,6 mil."
+      },
+      {
+        "obdobi": "září 2026",
+        "poradi": 7,
+        "prumer": 2.6,
+        "clo": "od zavedení cla",
+        "t_prumer": "2,6 mil.",
+        "t_celkem": "2,6 mil.",
+        "zdroj": "2,6 mil. položek (ČTK podle Celní správy)"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "obdobi",
+      "type": "nominal",
+      "sort": [
+        "2023",
+        "2024",
+        "2025",
+        "led–kvě 2026",
+        "červen 2026",
+        "červenec 2026",
+        "srpen 2026",
+        "září 2026"
+      ],
+      "axis": {
+        "title": null,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelLimit": 200
+      }
+    },
+    "x": {
+      "field": "prumer",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          20
+        ]
+      },
+      "axis": {
+        "title": null,
+        "grid": false,
+        "domain": false,
+        "ticks": false,
+        "values": [
+          0,
+          5,
+          10,
+          15,
+          20
+        ],
+        "labelExpr": "datum.value + ' mil.'"
+      }
+    },
+    "color": {
+      "field": "clo",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "před clem",
+          "od zavedení cla"
+        ],
+        "range": [
+          "#6267a3",
+          "#de1743"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "obdobi",
+        "title": "Období"
+      },
+      {
+        "field": "t_prumer",
+        "title": "Průměr za měsíc"
+      },
+      {
+        "field": "t_celkem",
+        "title": "Za celé období"
+      },
+      {
+        "field": "zdroj",
+        "title": "Zdroj"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.72
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontWeight": 700,
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "prumer",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "color": {
+          "value": "#101432"
+        }
+      }
+    }
+  ],
+  "_source": "Celní správa ČR podle [ČTK, 26. 10. 2026](https://www.ceskenoviny.cz/zpravy/2893157), [e15, 24. 6. 2026](https://www.e15.cz/byznys/obchod-a-sluzby/cesi-vykoupili-temu-pocet-levnych-zasilek-z-ciny-letos-prudce-stoupl-ted-je-nakupum-za-par-korun-konec-1433805) a [výroční zprávy Celní správy za rok 2025](https://celnisprava.gov.cz/cz/statistiky/Documents/V%C3%BDro%C4%8Dn%C3%AD%20zpr%C3%A1va%20o%20%C4%8Dinnosti%20Celn%C3%AD%20spr%C3%A1vy%20%C4%8CR%20za%20tok%20%202025.pdf); srpen dopočten z údaje za červenec a srpen 2026; výpočet DataTimes"
+}

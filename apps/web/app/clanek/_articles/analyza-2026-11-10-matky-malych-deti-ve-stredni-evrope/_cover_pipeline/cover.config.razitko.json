@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/images/cover-homepage.png",
+      "otisk": "34fa951b2aef5a3d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/cover.config.cjs": "ffb3eb7aeefb7e58",
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/motiv-homepage.svg": "3a2da11ff3a7d3bc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/images/cover-og.jpg",
+      "otisk": "2da4ca8096fa292c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/cover.config.cjs": "ffb3eb7aeefb7e58",
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/motiv-og.svg": "b73b8d6c6032df85"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/images/cover-square.png",
+      "otisk": "590bb7f7fd12f522",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/cover.config.cjs": "ffb3eb7aeefb7e58",
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/motiv-square.svg": "ab4b16c375997909"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/images/cover-instagram.png",
+      "otisk": "682f6ead9653bd25",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/cover.config.cjs": "ffb3eb7aeefb7e58",
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/motiv-instagram.svg": "ceb1fd584d4e48fa"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/images/cover-story.png",
+      "otisk": "cbbf2e13b3d36f24",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/cover.config.cjs": "ffb3eb7aeefb7e58",
+        "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/motiv-story.svg": "7f134cbeeb2bc1f4"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-09T11:38:31.632Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-10-matky-malych-deti-ve-stredni-evrope/index.md",
+  "titulekClanku": "S batoletem pracuje na Slovensku a v Maďarsku podobně málo matek jako v Česku. Statistika je jen vede jinak",
+  "texty": {
+    "stitek": "Matky a práce • Střední Evropa",
+    "nadtitulek": "",
+    "titulek": "Stejně málo, jen jinak spočítané",
+    "podtitulek": "S dítětem do tří let skutečně pracuje 11 % Češek, 9 % Slovenek a 16 % Maďarek"
+  }
+}

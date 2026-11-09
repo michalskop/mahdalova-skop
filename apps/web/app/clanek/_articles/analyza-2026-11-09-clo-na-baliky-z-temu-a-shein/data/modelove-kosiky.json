@@ -1,0 +1,305 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Clo|#de1743} a {poplatek|#6267a3} zdraží levný nákup z Číny o 61 až 122 %",
+    "subtitle": "Cena modelového nákupu v korunách od 1. listopadu 2026; každá věc je jiný druh zboží, tedy jiná položka. Prodejce clo i poplatek přenese na zákazníka (kurz ČNB 24,345 Kč/€)"
+  },
+  "width": "container",
+  "height": {
+    "step": 44
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "kosik": "1 věc za 150 Kč",
+        "poradi": 0,
+        "slozka": "cena zboží",
+        "sp": 0,
+        "castka": 150,
+        "celkem": 271.73,
+        "narust": "+81 %",
+        "t_zbozi": "150 Kč",
+        "t_po7": "223 Kč",
+        "t_po11": "272 Kč",
+        "popisek": "272 Kč (+81 %)"
+      },
+      {
+        "kosik": "1 věc za 150 Kč",
+        "poradi": 0,
+        "slozka": "clo 3 € za položku",
+        "sp": 1,
+        "castka": 73.03,
+        "celkem": 271.73,
+        "narust": "+81 %",
+        "t_zbozi": "150 Kč",
+        "t_po7": "223 Kč",
+        "t_po11": "272 Kč",
+        "popisek": "272 Kč (+81 %)"
+      },
+      {
+        "kosik": "1 věc za 150 Kč",
+        "poradi": 0,
+        "slozka": "poplatek 2 € za položku",
+        "sp": 2,
+        "castka": 48.69,
+        "celkem": 271.73,
+        "narust": "+81 %",
+        "t_zbozi": "150 Kč",
+        "t_po7": "223 Kč",
+        "t_po11": "272 Kč",
+        "popisek": "272 Kč (+81 %)"
+      },
+      {
+        "kosik": "5 věcí po 100 Kč",
+        "poradi": 1,
+        "slozka": "cena zboží",
+        "sp": 0,
+        "castka": 500,
+        "celkem": 1108.62,
+        "narust": "+122 %",
+        "t_zbozi": "500 Kč",
+        "t_po7": "865 Kč",
+        "t_po11": "1 109 Kč",
+        "popisek": "1 109 Kč (+122 %)"
+      },
+      {
+        "kosik": "5 věcí po 100 Kč",
+        "poradi": 1,
+        "slozka": "clo 3 € za položku",
+        "sp": 1,
+        "castka": 365.17,
+        "celkem": 1108.62,
+        "narust": "+122 %",
+        "t_zbozi": "500 Kč",
+        "t_po7": "865 Kč",
+        "t_po11": "1 109 Kč",
+        "popisek": "1 109 Kč (+122 %)"
+      },
+      {
+        "kosik": "5 věcí po 100 Kč",
+        "poradi": 1,
+        "slozka": "poplatek 2 € za položku",
+        "sp": 2,
+        "castka": 243.45,
+        "celkem": 1108.62,
+        "narust": "+122 %",
+        "t_zbozi": "500 Kč",
+        "t_po7": "865 Kč",
+        "t_po11": "1 109 Kč",
+        "popisek": "1 109 Kč (+122 %)"
+      },
+      {
+        "kosik": "10 věcí po 200 Kč",
+        "poradi": 2,
+        "slozka": "cena zboží",
+        "sp": 0,
+        "castka": 2000,
+        "celkem": 3217.25,
+        "narust": "+61 %",
+        "t_zbozi": "2 000 Kč",
+        "t_po7": "2 730 Kč",
+        "t_po11": "3 217 Kč",
+        "popisek": "3 217 Kč (+61 %)"
+      },
+      {
+        "kosik": "10 věcí po 200 Kč",
+        "poradi": 2,
+        "slozka": "clo 3 € za položku",
+        "sp": 1,
+        "castka": 730.35,
+        "celkem": 3217.25,
+        "narust": "+61 %",
+        "t_zbozi": "2 000 Kč",
+        "t_po7": "2 730 Kč",
+        "t_po11": "3 217 Kč",
+        "popisek": "3 217 Kč (+61 %)"
+      },
+      {
+        "kosik": "10 věcí po 200 Kč",
+        "poradi": 2,
+        "slozka": "poplatek 2 € za položku",
+        "sp": 2,
+        "castka": 486.9,
+        "celkem": 3217.25,
+        "narust": "+61 %",
+        "t_zbozi": "2 000 Kč",
+        "t_po7": "2 730 Kč",
+        "t_po11": "3 217 Kč",
+        "popisek": "3 217 Kč (+61 %)"
+      }
+    ]
+  },
+  "_toggle_legend": true,
+  "encoding": {
+    "color": {
+      "field": "slozka",
+      "type": "nominal",
+      "sort": [
+        "cena zboží",
+        "clo 3 € za položku",
+        "poplatek 2 € za položku"
+      ],
+      "legend": null,
+      "scale": {
+        "domain": [
+          "cena zboží",
+          "clo 3 € za položku",
+          "poplatek 2 € za položku"
+        ],
+        "range": [
+          "#bcbcb0",
+          "#de1743",
+          "#6267a3"
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "kosik",
+          "type": "nominal",
+          "sort": [
+            "1 věc za 150 Kč",
+            "5 věcí po 100 Kč",
+            "10 věcí po 200 Kč"
+          ],
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelLimit": 200
+          }
+        },
+        "x": {
+          "field": "castka",
+          "type": "quantitative",
+          "stack": "zero",
+          "scale": {
+            "domain": [
+              0,
+              4000
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              1000,
+              2000,
+              3000,
+              4000
+            ],
+            "labelExpr": "format(datum.value, ',') + ' Kč'"
+          }
+        },
+        "order": {
+          "field": "sp"
+        },
+        "tooltip": [
+          {
+            "field": "kosik",
+            "title": "Nákup"
+          },
+          {
+            "field": "t_zbozi",
+            "title": "Do 30. 6. 2026"
+          },
+          {
+            "field": "t_po7",
+            "title": "Od 1. 7. (clo 3 €)"
+          },
+          {
+            "field": "t_po11",
+            "title": "Od 1. 11. (+ poplatek 2 €)"
+          },
+          {
+            "field": "narust",
+            "title": "Zdražení celkem"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sp == 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontWeight": 700,
+        "fontSize": 11
+      },
+      "encoding": {
+        "y": {
+          "field": "kosik",
+          "type": "nominal",
+          "sort": [
+            "1 věc za 150 Kč",
+            "5 věcí po 100 Kč",
+            "10 věcí po 200 Kč"
+          ],
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelLimit": 200
+          }
+        },
+        "x": {
+          "field": "celkem",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        },
+        "color": {
+          "value": "#101432"
+        },
+        "tooltip": [
+          {
+            "field": "kosik",
+            "title": "Nákup"
+          },
+          {
+            "field": "t_zbozi",
+            "title": "Do 30. 6. 2026"
+          },
+          {
+            "field": "t_po7",
+            "title": "Od 1. 7. (clo 3 €)"
+          },
+          {
+            "field": "t_po11",
+            "title": "Od 1. 11. (+ poplatek 2 €)"
+          },
+          {
+            "field": "narust",
+            "title": "Zdražení celkem"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "Výpočet DataTimes: clo 3 € a poplatek 2 € za každou položku, kurz ČNB vyhlášený 6. 11. 2026 (24,345 Kč/€); cena zboží včetně DPH, bez DPH z cla"
+}

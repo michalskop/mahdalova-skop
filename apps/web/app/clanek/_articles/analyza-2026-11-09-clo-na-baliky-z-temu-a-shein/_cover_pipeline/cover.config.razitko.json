@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-homepage.png",
+      "otisk": "e99fae7e07d3fb08",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-homepage.svg": "7c0e693258b8c814"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-og.jpg",
+      "otisk": "5f6e5109a790d111",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-og.svg": "39c3c6c58b08e83a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-square.png",
+      "otisk": "ff0727c8253de383",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-square.svg": "e94c867a12e70127"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-instagram.png",
+      "otisk": "054f1009dccfb73b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-instagram.svg": "2313df2d88802ba9"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-story.png",
+      "otisk": "bca3c8043b19d9e4",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-story.svg": "bf3bcb62a21e2649"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-09T11:43:25.364Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/index.md",
+  "titulekClanku": "Clo srazilo levné balíky z Číny o čtyři pětiny. Od listopadu přidává EU další 2 eura za každou položku",
+  "texty": {
+    "stitek": "Balíky z Číny • Clo",
+    "nadtitulek": "",
+    "titulek": "Clo srazilo balíky z Číny o čtyři pětiny",
+    "podtitulek": "Od listopadu přibývá poplatek 2 eura za každou položku"
+  }
+}

@@ -1,0 +1,20 @@
+LMF1.2.C Česko 0–2 roky 20,4
+LMF1.2.C Česko 3–5 let 74,5
+LMF1.2.C Česko 6–14 let 91,8
+LMF1.2.C Průměr EU 0–2 roky 64,9
+LMF1.2.C Průměr EU 3–5 let 73,7
+LMF1.2.C Průměr EU 6–14 let 79,6
+LMF1.2.F Česko celkem 20,4 pracuje 11,1 mateřská 9,2 rodičovská 0,0
+LMF1.2.F Slovensko celkem 62,6 pracuje 9,1 mateřská 9,4 rodičovská 44,1
+LMF1.2.F Maďarsko celkem 69,6 pracuje 16,3 mateřská 0,7 rodičovská 52,6
+LMF1.2.F Polsko celkem 63,5 pracuje 41,7 mateřská 15,2 rodičovská 6,5
+LMF1.2.F Rakousko celkem 65,0 pracuje 32,3 mateřská 5,1 rodičovská 27,6
+LMF1.2.F Německo celkem 61,7 pracuje 38,8 mateřská 4,2 rodičovská 18,7
+LMF1.2.F Průměr EU celkem 64,9 pracuje 45,3 mateřská 9,3 rodičovská 10,3
+lfst_hheredch Česko matky <6 51,5 bez dětí 90,8 matky 6-11 93,3 poměr 56,7
+lfst_hheredch Slovensko matky <6 70,3 bez dětí 83,7 matky 6-11 87,8 poměr 84,0
+lfst_hheredch Maďarsko matky <6 77,5 bez dětí 87,8 matky 6-11 84,8 poměr 88,3
+lfst_hheredch Polsko matky <6 73,9 bez dětí 86,8 matky 6-11 82,7 poměr 85,1
+lfst_hheredch Rakousko matky <6 74,9 bez dětí 84,6 matky 6-11 83,7 poměr 88,5
+lfst_hheredch Německo matky <6 69,8 bez dětí 86,6 matky 6-11 82,3 poměr 80,6
+lfst_hheredch Průměr EU matky <6 70,1 bez dětí 81,2 matky 6-11 78,4 poměr 86,3

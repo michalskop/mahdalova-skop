@@ -1,0 +1,541 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Skutečně pracuje s batoletem na {Slovensku a v Maďarsku|#272a59} podobně málo matek jako v {Česku|#de1743}",
+    "subtitle": "Matky dětí do tří let, které statistika vede jako zaměstnané, ženy 15–64 let (%, 2021); číslo za pruhem = celkem"
+  },
+  "width": "container",
+  "height": {
+    "step": 30
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "zeme": "Česko",
+        "kategorie": "skutečně pracuje",
+        "poradi": 0,
+        "hodnota": 11.1,
+        "celkem": 20.4,
+        "cz": true,
+        "t_prac": "11,1 %",
+        "t_mat": "9,2 %",
+        "t_rod": "0,0 %",
+        "t_tot": "20,4 %"
+      },
+      {
+        "zeme": "Česko",
+        "kategorie": "na mateřské, vedená jako zaměstnaná",
+        "poradi": 1,
+        "hodnota": 9.2,
+        "celkem": 20.4,
+        "cz": true,
+        "t_prac": "11,1 %",
+        "t_mat": "9,2 %",
+        "t_rod": "0,0 %",
+        "t_tot": "20,4 %"
+      },
+      {
+        "zeme": "Česko",
+        "kategorie": "na rodičovské, vedená jako zaměstnaná",
+        "poradi": 2,
+        "hodnota": 0,
+        "celkem": 20.4,
+        "cz": true,
+        "t_prac": "11,1 %",
+        "t_mat": "9,2 %",
+        "t_rod": "0,0 %",
+        "t_tot": "20,4 %"
+      },
+      {
+        "zeme": "Slovensko",
+        "kategorie": "skutečně pracuje",
+        "poradi": 0,
+        "hodnota": 9.1,
+        "celkem": 62.6,
+        "cz": false,
+        "t_prac": "9,1 %",
+        "t_mat": "9,4 %",
+        "t_rod": "44,1 %",
+        "t_tot": "62,6 %"
+      },
+      {
+        "zeme": "Slovensko",
+        "kategorie": "na mateřské, vedená jako zaměstnaná",
+        "poradi": 1,
+        "hodnota": 9.4,
+        "celkem": 62.6,
+        "cz": false,
+        "t_prac": "9,1 %",
+        "t_mat": "9,4 %",
+        "t_rod": "44,1 %",
+        "t_tot": "62,6 %"
+      },
+      {
+        "zeme": "Slovensko",
+        "kategorie": "na rodičovské, vedená jako zaměstnaná",
+        "poradi": 2,
+        "hodnota": 44.1,
+        "celkem": 62.6,
+        "cz": false,
+        "t_prac": "9,1 %",
+        "t_mat": "9,4 %",
+        "t_rod": "44,1 %",
+        "t_tot": "62,6 %"
+      },
+      {
+        "zeme": "Maďarsko",
+        "kategorie": "skutečně pracuje",
+        "poradi": 0,
+        "hodnota": 16.3,
+        "celkem": 69.6,
+        "cz": false,
+        "t_prac": "16,3 %",
+        "t_mat": "0,7 %",
+        "t_rod": "52,6 %",
+        "t_tot": "69,6 %"
+      },
+      {
+        "zeme": "Maďarsko",
+        "kategorie": "na mateřské, vedená jako zaměstnaná",
+        "poradi": 1,
+        "hodnota": 0.7,
+        "celkem": 69.6,
+        "cz": false,
+        "t_prac": "16,3 %",
+        "t_mat": "0,7 %",
+        "t_rod": "52,6 %",
+        "t_tot": "69,6 %"
+      },
+      {
+        "zeme": "Maďarsko",
+        "kategorie": "na rodičovské, vedená jako zaměstnaná",
+        "poradi": 2,
+        "hodnota": 52.6,
+        "celkem": 69.6,
+        "cz": false,
+        "t_prac": "16,3 %",
+        "t_mat": "0,7 %",
+        "t_rod": "52,6 %",
+        "t_tot": "69,6 %"
+      },
+      {
+        "zeme": "Polsko",
+        "kategorie": "skutečně pracuje",
+        "poradi": 0,
+        "hodnota": 41.7,
+        "celkem": 63.5,
+        "cz": false,
+        "t_prac": "41,7 %",
+        "t_mat": "15,2 %",
+        "t_rod": "6,5 %",
+        "t_tot": "63,5 %"
+      },
+      {
+        "zeme": "Polsko",
+        "kategorie": "na mateřské, vedená jako zaměstnaná",
+        "poradi": 1,
+        "hodnota": 15.2,
+        "celkem": 63.5,
+        "cz": false,
+        "t_prac": "41,7 %",
+        "t_mat": "15,2 %",
+        "t_rod": "6,5 %",
+        "t_tot": "63,5 %"
+      },
+      {
+        "zeme": "Polsko",
+        "kategorie": "na rodičovské, vedená jako zaměstnaná",
+        "poradi": 2,
+        "hodnota": 6.5,
+        "celkem": 63.5,
+        "cz": false,
+        "t_prac": "41,7 %",
+        "t_mat": "15,2 %",
+        "t_rod": "6,5 %",
+        "t_tot": "63,5 %"
+      },
+      {
+        "zeme": "Rakousko",
+        "kategorie": "skutečně pracuje",
+        "poradi": 0,
+        "hodnota": 32.3,
+        "celkem": 65.0,
+        "cz": false,
+        "t_prac": "32,3 %",
+        "t_mat": "5,1 %",
+        "t_rod": "27,6 %",
+        "t_tot": "65,0 %"
+      },
+      {
+        "zeme": "Rakousko",
+        "kategorie": "na mateřské, vedená jako zaměstnaná",
+        "poradi": 1,
+        "hodnota": 5.1,
+        "celkem": 65.0,
+        "cz": false,
+        "t_prac": "32,3 %",
+        "t_mat": "5,1 %",
+        "t_rod": "27,6 %",
+        "t_tot": "65,0 %"
+      },
+      {
+        "zeme": "Rakousko",
+        "kategorie": "na rodičovské, vedená jako zaměstnaná",
+        "poradi": 2,
+        "hodnota": 27.6,
+        "celkem": 65.0,
+        "cz": false,
+        "t_prac": "32,3 %",
+        "t_mat": "5,1 %",
+        "t_rod": "27,6 %",
+        "t_tot": "65,0 %"
+      },
+      {
+        "zeme": "Německo",
+        "kategorie": "skutečně pracuje",
+        "poradi": 0,
+        "hodnota": 38.8,
+        "celkem": 61.7,
+        "cz": false,
+        "t_prac": "38,8 %",
+        "t_mat": "4,2 %",
+        "t_rod": "18,7 %",
+        "t_tot": "61,7 %"
+      },
+      {
+        "zeme": "Německo",
+        "kategorie": "na mateřské, vedená jako zaměstnaná",
+        "poradi": 1,
+        "hodnota": 4.2,
+        "celkem": 61.7,
+        "cz": false,
+        "t_prac": "38,8 %",
+        "t_mat": "4,2 %",
+        "t_rod": "18,7 %",
+        "t_tot": "61,7 %"
+      },
+      {
+        "zeme": "Německo",
+        "kategorie": "na rodičovské, vedená jako zaměstnaná",
+        "poradi": 2,
+        "hodnota": 18.7,
+        "celkem": 61.7,
+        "cz": false,
+        "t_prac": "38,8 %",
+        "t_mat": "4,2 %",
+        "t_rod": "18,7 %",
+        "t_tot": "61,7 %"
+      },
+      {
+        "zeme": "Průměr EU",
+        "kategorie": "skutečně pracuje",
+        "poradi": 0,
+        "hodnota": 45.3,
+        "celkem": 64.9,
+        "cz": false,
+        "t_prac": "45,3 %",
+        "t_mat": "9,3 %",
+        "t_rod": "10,3 %",
+        "t_tot": "64,9 %"
+      },
+      {
+        "zeme": "Průměr EU",
+        "kategorie": "na mateřské, vedená jako zaměstnaná",
+        "poradi": 1,
+        "hodnota": 9.3,
+        "celkem": 64.9,
+        "cz": false,
+        "t_prac": "45,3 %",
+        "t_mat": "9,3 %",
+        "t_rod": "10,3 %",
+        "t_tot": "64,9 %"
+      },
+      {
+        "zeme": "Průměr EU",
+        "kategorie": "na rodičovské, vedená jako zaměstnaná",
+        "poradi": 2,
+        "hodnota": 10.3,
+        "celkem": 64.9,
+        "cz": false,
+        "t_prac": "45,3 %",
+        "t_mat": "9,3 %",
+        "t_rod": "10,3 %",
+        "t_tot": "64,9 %"
+      }
+    ]
+  },
+  "_toggle_legend": true,
+  "_legend_hide_mode": "filter",
+  "encoding": {
+    "color": {
+      "field": "kategorie",
+      "type": "nominal",
+      "sort": [
+        "skutečně pracuje",
+        "na mateřské, vedená jako zaměstnaná",
+        "na rodičovské, vedená jako zaměstnaná"
+      ],
+      "legend": null,
+      "scale": {
+        "domain": [
+          "skutečně pracuje",
+          "na mateřské, vedená jako zaměstnaná",
+          "na rodičovské, vedená jako zaměstnaná"
+        ],
+        "range": [
+          "#de1743",
+          "#8f9dc9",
+          "#d2d8e9"
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.72
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": [
+            "Slovensko",
+            "Česko",
+            "Maďarsko",
+            "Rakousko",
+            "Německo",
+            "Polsko",
+            "Průměr EU"
+          ],
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelPadding": 6,
+            "labelFontSize": 12,
+            "labelColor": {
+              "expr": "datum.value == 'Česko' ? '#de1743' : '#101432'"
+            },
+            "labelFontWeight": {
+              "expr": "datum.value == 'Česko' ? 700 : 400"
+            }
+          }
+        },
+        "x": {
+          "field": "hodnota",
+          "type": "quantitative",
+          "stack": "zero",
+          "scale": {
+            "domain": [
+              0,
+              80
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "order": {
+          "field": "poradi"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t_prac",
+            "title": "Skutečně pracuje"
+          },
+          {
+            "field": "t_mat",
+            "title": "Na mateřské, vedená jako zaměstnaná"
+          },
+          {
+            "field": "t_rod",
+            "title": "Na rodičovské, vedená jako zaměstnaná"
+          },
+          {
+            "field": "t_tot",
+            "title": "Statistika vede jako zaměstnané celkem"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.poradi == 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": [
+            "Slovensko",
+            "Česko",
+            "Maďarsko",
+            "Rakousko",
+            "Německo",
+            "Polsko",
+            "Průměr EU"
+          ],
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelPadding": 6,
+            "labelFontSize": 12,
+            "labelColor": {
+              "expr": "datum.value == 'Česko' ? '#de1743' : '#101432'"
+            },
+            "labelFontWeight": {
+              "expr": "datum.value == 'Česko' ? 700 : 400"
+            }
+          }
+        },
+        "x": {
+          "field": "celkem",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#101432"
+        },
+        "text": {
+          "field": "celkem",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t_prac",
+            "title": "Skutečně pracuje"
+          },
+          {
+            "field": "t_mat",
+            "title": "Na mateřské, vedená jako zaměstnaná"
+          },
+          {
+            "field": "t_rod",
+            "title": "Na rodičovské, vedená jako zaměstnaná"
+          },
+          {
+            "field": "t_tot",
+            "title": "Statistika vede jako zaměstnané celkem"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.poradi == 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -4,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": [
+            "Slovensko",
+            "Česko",
+            "Maďarsko",
+            "Rakousko",
+            "Německo",
+            "Polsko",
+            "Průměr EU"
+          ],
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelPadding": 6,
+            "labelFontSize": 12,
+            "labelColor": {
+              "expr": "datum.value == 'Česko' ? '#de1743' : '#101432'"
+            },
+            "labelFontWeight": {
+              "expr": "datum.value == 'Česko' ? 700 : 400"
+            }
+          }
+        },
+        "x": {
+          "field": "hodnota",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "text": {
+          "field": "hodnota",
+          "type": "quantitative",
+          "format": ".1f"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t_prac",
+            "title": "Skutečně pracuje"
+          },
+          {
+            "field": "t_mat",
+            "title": "Na mateřské, vedená jako zaměstnaná"
+          },
+          {
+            "field": "t_rod",
+            "title": "Na rodičovské, vedená jako zaměstnaná"
+          },
+          {
+            "field": "t_tot",
+            "title": "Statistika vede jako zaměstnané celkem"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[OECD Family Database, ukazatel LMF1.2 Maternal employment](https://www.oecd.org/en/data/datasets/oecd-family-database.html), data 2021, ženy 15–64 let (Chart LMF1.2.F)"
+}

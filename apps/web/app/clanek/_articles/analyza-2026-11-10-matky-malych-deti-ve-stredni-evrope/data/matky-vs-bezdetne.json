@@ -1,0 +1,185 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Proti ženám bez dětí zaostávají matky malých dětí v {Česku|#de1743} mnohem víc než jinde ve střední Evropě",
+    "subtitle": "Zaměstnanost matek s dítětem do 6 let jako % zaměstnanosti žen bez dětí v téže zemi, ženy 25–49 let (2025)"
+  },
+  "width": "container",
+  "height": {
+    "step": 30
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "zeme": "Česko",
+        "pomer": 56.7,
+        "matky": "51,5 %",
+        "bezdetne": "90,8 %",
+        "skupina": "cz"
+      },
+      {
+        "zeme": "Slovensko",
+        "pomer": 84.0,
+        "matky": "70,3 %",
+        "bezdetne": "83,7 %",
+        "skupina": "ost"
+      },
+      {
+        "zeme": "Maďarsko",
+        "pomer": 88.3,
+        "matky": "77,5 %",
+        "bezdetne": "87,8 %",
+        "skupina": "ost"
+      },
+      {
+        "zeme": "Polsko",
+        "pomer": 85.1,
+        "matky": "73,9 %",
+        "bezdetne": "86,8 %",
+        "skupina": "ost"
+      },
+      {
+        "zeme": "Rakousko",
+        "pomer": 88.5,
+        "matky": "74,9 %",
+        "bezdetne": "84,6 %",
+        "skupina": "ost"
+      },
+      {
+        "zeme": "Německo",
+        "pomer": 80.6,
+        "matky": "69,8 %",
+        "bezdetne": "86,6 %",
+        "skupina": "ost"
+      },
+      {
+        "zeme": "Průměr EU",
+        "pomer": 86.3,
+        "matky": "70,1 %",
+        "bezdetne": "81,2 %",
+        "skupina": "eu"
+      }
+    ]
+  },
+  "encoding": {
+    "y": {
+      "field": "zeme",
+      "type": "nominal",
+      "sort": [
+        "Česko",
+        "Německo",
+        "Slovensko",
+        "Polsko",
+        "Průměr EU",
+        "Maďarsko",
+        "Rakousko"
+      ],
+      "axis": {
+        "title": null,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelColor": {
+          "expr": "datum.value == 'Česko' ? '#de1743' : '#101432'"
+        },
+        "labelFontWeight": {
+          "expr": "datum.value == 'Česko' ? 700 : 400"
+        }
+      }
+    },
+    "x": {
+      "field": "pomer",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": null,
+        "grid": false,
+        "domain": false,
+        "ticks": false,
+        "values": [
+          0,
+          25,
+          50,
+          75,
+          100
+        ],
+        "labelExpr": "datum.value + ' %'"
+      }
+    },
+    "color": {
+      "field": "skupina",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "cz",
+          "eu",
+          "ost"
+        ],
+        "range": [
+          "#de1743",
+          "#6267a3",
+          "#bcbcb0"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "zeme",
+        "title": "Země"
+      },
+      {
+        "field": "matky",
+        "title": "Matky dítěte do 6 let zaměstnané"
+      },
+      {
+        "field": "bezdetne",
+        "title": "Ženy bez dětí zaměstnané"
+      },
+      {
+        "field": "pomer",
+        "title": "Poměr (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.72
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontWeight": 700,
+        "fontSize": 11,
+        "color": "#101432"
+      },
+      "encoding": {
+        "text": {
+          "field": "pomer",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "_source": "[Eurostat, míra zaměstnanosti podle počtu a věku dětí (lfst_hheredch)](https://ec.europa.eu/eurostat/databrowser/view/lfst_hheredch/default/table?lang=en), 2025, ženy 25–49 let; výpočet DataTimes"
+}
