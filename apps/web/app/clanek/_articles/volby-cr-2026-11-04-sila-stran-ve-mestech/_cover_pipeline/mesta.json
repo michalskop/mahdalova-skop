@@ -1,0 +1,182 @@
+[
+ {
+  "nazev": "Praha hl.m.",
+  "obyv": 1407084,
+  "stan22": 7.77,
+  "stan26": 23.17
+ },
+ {
+  "nazev": "Brno",
+  "obyv": 404296,
+  "stan22": 8.55,
+  "stan26": 12.17
+ },
+ {
+  "nazev": "Ostrava",
+  "obyv": 280853,
+  "stan22": 1.7,
+  "stan26": 9.77
+ },
+ {
+  "nazev": "Plzeň",
+  "obyv": 187863,
+  "stan22": 7.71,
+  "stan26": 17.98
+ },
+ {
+  "nazev": "Liberec",
+  "obyv": 108214,
+  "stan22": 0.0,
+  "stan26": 0.0
+ },
+ {
+  "nazev": "Olomouc",
+  "obyv": 105297,
+  "stan22": 5.67,
+  "stan26": 19.73
+ },
+ {
+  "nazev": "České Budějovice",
+  "obyv": 97128,
+  "stan22": 4.21,
+  "stan26": 5.8
+ },
+ {
+  "nazev": "Hradec Králové",
+  "obyv": 93534,
+  "stan22": 3.34,
+  "stan26": 11.86
+ },
+ {
+  "nazev": "Pardubice",
+  "obyv": 92713,
+  "stan22": 1.8,
+  "stan26": 11.65
+ },
+ {
+  "nazev": "Ústí nad Labem",
+  "obyv": 90035,
+  "stan22": 3.37,
+  "stan26": 6.99
+ },
+ {
+  "nazev": "Zlín",
+  "obyv": 74917,
+  "stan22": 7.33,
+  "stan26": 20.12
+ },
+ {
+  "nazev": "Kladno",
+  "obyv": 69728,
+  "stan22": 5.5,
+  "stan26": 8.58
+ },
+ {
+  "nazev": "Havířov",
+  "obyv": 67998,
+  "stan22": 2.18,
+  "stan26": 4.53
+ },
+ {
+  "nazev": "Most",
+  "obyv": 63160,
+  "stan22": 0.0,
+  "stan26": 0.0
+ },
+ {
+  "nazev": "Opava",
+  "obyv": 54881,
+  "stan22": 0.0,
+  "stan26": 0.0
+ },
+ {
+  "nazev": "Jihlava",
+  "obyv": 53686,
+  "stan22": 9.34,
+  "stan26": 12.03
+ },
+ {
+  "nazev": "Frýdek-Místek",
+  "obyv": 53164,
+  "stan22": 0.0,
+  "stan26": 0.0
+ },
+ {
+  "nazev": "Teplice",
+  "obyv": 50856,
+  "stan22": 0.0,
+  "stan26": 0.0
+ },
+ {
+  "nazev": "Karlovy Vary",
+  "obyv": 48788,
+  "stan22": 5.46,
+  "stan26": 15.35
+ },
+ {
+  "nazev": "Karviná",
+  "obyv": 48684,
+  "stan22": 1.65,
+  "stan26": 4.13
+ },
+ {
+  "nazev": "Mladá Boleslav",
+  "obyv": 47874,
+  "stan22": 12.47,
+  "stan26": 19.03
+ },
+ {
+  "nazev": "Chomutov",
+  "obyv": 46560,
+  "stan22": 6.09,
+  "stan26": 7.63
+ },
+ {
+  "nazev": "Jablonec nad Nisou",
+  "obyv": 46206,
+  "stan22": 0.0,
+  "stan26": 0.0
+ },
+ {
+  "nazev": "Děčín",
+  "obyv": 46003,
+  "stan22": 4.11,
+  "stan26": 11.78
+ },
+ {
+  "nazev": "Prostějov",
+  "obyv": 43236,
+  "stan22": 7.87,
+  "stan26": 12.39
+ },
+ {
+  "nazev": "Přerov",
+  "obyv": 40492,
+  "stan22": 2.33,
+  "stan26": 2.93
+ },
+ {
+  "nazev": "Česká Lípa",
+  "obyv": 36364,
+  "stan22": 0.0,
+  "stan26": 0.0
+ },
+ {
+  "nazev": "Třebíč",
+  "obyv": 34476,
+  "stan22": 2.61,
+  "stan26": 10.72
+ },
+ {
+  "nazev": "Tábor",
+  "obyv": 34339,
+  "stan22": 0.0,
+  "stan26": 8.41
+ },
+ {
+  "nazev": "Znojmo",
+  "obyv": 33989,
+  "stan22": 2.88,
+  "stan26": 8.71
+ }
+]

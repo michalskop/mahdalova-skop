@@ -1,0 +1,74 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/images/cover-homepage.png",
+      "otisk": "addb824e3715de8a",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/_cover_pipeline/cover.config.cjs": "7b3e4bcf904bb750"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/images/cover-og.jpg",
+      "otisk": "ae0352235e3f84ed",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/_cover_pipeline/cover.config.cjs": "7b3e4bcf904bb750"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/images/cover-square.png",
+      "otisk": "c7f5327b52b287c4",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/_cover_pipeline/cover.config.cjs": "7b3e4bcf904bb750"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/images/cover-instagram.png",
+      "otisk": "fcc05330fa95941d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/_cover_pipeline/cover.config.cjs": "7b3e4bcf904bb750"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/images/cover-story.png",
+      "otisk": "fae239c7ce3b5840",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/_cover_pipeline/cover.config.cjs": "7b3e4bcf904bb750"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-09T11:28:07.190Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-cr-2026-11-02-senat-pojistka-demokracie/index.md",
+  "titulekClanku": "Senát jako pojistka: vláda má v horní komoře 15 z 81 hlasů. Bez ní nezmění ústavu ani volební zákon",
+  "texty": {
+    "stitek": "Analýza • Senát po volbách 2026",
+    "nadtitulek": "",
+    "titulek": "Vláda má v Senátu 15 z 81 hlasů",
+    "podtitulek": "Bez horní komory nezmění ústavu ani volební zákon"
+  }
+}

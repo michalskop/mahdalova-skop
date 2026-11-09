@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/images/cover-homepage.png",
+      "otisk": "d9a01030dc26c818",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/cover.config.cjs": "32ddbfc9cf9e194c",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/mesta.json": "4704dc367f4d0a66"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/images/cover-og.jpg",
+      "otisk": "b46a39b98ac8d529",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/cover.config.cjs": "32ddbfc9cf9e194c",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/mesta.json": "4704dc367f4d0a66"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/images/cover-square.png",
+      "otisk": "94abe798a5ffe2eb",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/cover.config.cjs": "32ddbfc9cf9e194c",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/mesta.json": "4704dc367f4d0a66"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/images/cover-instagram.png",
+      "otisk": "c758135a8558eb32",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/cover.config.cjs": "32ddbfc9cf9e194c",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/mesta.json": "4704dc367f4d0a66"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/images/cover-story.png",
+      "otisk": "b5ecb581901f558e",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/cover.config.cjs": "32ddbfc9cf9e194c",
+        "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/mesta.json": "4704dc367f4d0a66"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-09T11:25:58.074Z",
+  "clanek": "apps/web/app/clanek/_articles/volby-cr-2026-11-04-sila-stran-ve-mestech/index.md",
+  "titulekClanku": "Velká města se přelila ke Starostům",
+  "texty": {
+    "stitek": "Analýza • Síla stran ve velkých městech",
+    "nadtitulek": "",
+    "titulek": "Velká města se přelila ke Starostům",
+    "podtitulek": "Podíl STAN ve 30 největších městech vzrostl z 5,6 na 14,7 procenta"
+  }
+}
