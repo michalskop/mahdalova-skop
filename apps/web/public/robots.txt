@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /nahled/
 
 # Explicit opt-in for AI crawling and indexing
 User-agent: GPTBot

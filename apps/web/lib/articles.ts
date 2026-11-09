@@ -2,82 +2,18 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import yaml from 'js-yaml';
 import { serialize } from 'next-mdx-remote/serialize';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
-import { remarkBoxPlugin } from './remark-box-plugin';
-import { remarkFlourishPlugin } from './remark-flourish-plugin';
-import { remarkGalleryPlugin } from './remark-gallery-plugin';
-import { remarkFlagPlugin } from './remark-flag-plugin';
-import { remarkCzechTypography } from './remark-czech-typography';
-import type { ScrollyContent } from '@/types/scrolly';
-import type { TimelineContent } from '@/types/timeline';
 import { getArticles } from '@/components/common/getArticles';
+import { ARTICLE_MDX_OPTIONS, loadArticleData, rankRelatedPool } from './articleData';
 
+// Načítání dat a pluginy Markdownu jsou v lib/articleData.ts – sdílí je náhled konceptu v hubu (app/nahled).
 
 const articlesDirectory = path.join(process.cwd(), 'app/clanek/_articles');
-
-function parseCsv(content: string) {
-  const text = content.replace(/^\uFEFF/, '');
-  const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
-  if (!lines.length) return { headers: [] as string[], rows: [] as Record<string, string>[] };
-
-  const detectDelimiter = (line: string) => {
-    const commas = (line.match(/,/g) || []).length;
-    const semis = (line.match(/;/g) || []).length;
-    return semis > commas ? ';' : ',';
-  };
-
-  const delimiter = detectDelimiter(lines[0]);
-
-  const parseLine = (line: string) => {
-    const out: string[] = [];
-    let cur = '';
-    let inQuotes = false;
-
-    for (let i = 0; i < line.length; i++) {
-      const ch = line[i];
-      if (ch === '"') {
-        if (inQuotes && line[i + 1] === '"') {
-          cur += '"';
-          i++;
-          continue;
-        }
-        inQuotes = !inQuotes;
-        continue;
-      }
-
-      if (!inQuotes && ch === delimiter) {
-        out.push(cur.trim());
-        cur = '';
-        continue;
-      }
-
-      cur += ch;
-    }
-
-    out.push(cur.trim());
-    return out;
-  };
-
-  const headers = parseLine(lines[0]).map((h) => h.replace(/^"|"$/g, '').trim());
-  const rows = lines.slice(1).map((line) => {
-    const cells = parseLine(line).map((c) => c.replace(/^"|"$/g, ''));
-    const rec: Record<string, string> = {};
-    headers.forEach((h, idx) => {
-      rec[h] = cells[idx] ?? '';
-    });
-    return rec;
-  });
-
-  return { headers, rows };
-}
 
 export async function getArticleBySlug(directorySlug: string) {
   const articleDir = path.join(articlesDirectory, directorySlug);
   const fullPath = path.join(articleDir, 'index.md');
-  
+
   if (!fs.existsSync(fullPath)) {
     throw new Error(`Article ${directorySlug} not found`);
   }
@@ -86,182 +22,21 @@ export async function getArticleBySlug(directorySlug: string) {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  // Optional raw HTML include
-  let htmlContent: string | null = null;
-  if (typeof data.htmlInclude === 'string' && data.htmlInclude.trim().length > 0) {
-    const htmlPath = path.join(articleDir, data.htmlInclude);
-    if (!fs.existsSync(htmlPath)) {
-      throw new Error(`htmlInclude file not found: ${directorySlug}/${data.htmlInclude}`);
-    }
-    htmlContent = fs.readFileSync(htmlPath, 'utf8');
-  }
-
-  // Check for and load scrollytelling.yaml if it exists
-  let scrollyContent: ScrollyContent | null = null;
-  const scrollyPath = path.join(articleDir, 'scrollytelling.yaml');
-  if (fs.existsSync(scrollyPath)) {
-    const scrollyFile = fs.readFileSync(scrollyPath, 'utf8');
-    scrollyContent = yaml.load(scrollyFile) as ScrollyContent;
-  }
-
-  // Find and load data for Timeline / RouteTimeline components (same YAML
-  // format, supports multiple instances)
-  const timelineData: Record<string, TimelineContent> = {};
-  const timelineRegex = /<(?:Route)?Timeline\b[^>]*yamlFile="([^"]+)"[^>]*\/>/g;
-  let timelineMatch: RegExpExecArray | null;
-  while ((timelineMatch = timelineRegex.exec(content)) !== null) {
-    const yamlFile = timelineMatch[1];
-    if (!yamlFile) continue;
-    if (timelineData[yamlFile]) continue;
-    const timelinePath = path.join(articleDir, yamlFile);
-    if (!fs.existsSync(timelinePath)) {
-      throw new Error(`Timeline yaml file not found: ${directorySlug}/${yamlFile}`);
-    }
-    const timelineFile = fs.readFileSync(timelinePath, 'utf8');
-    timelineData[yamlFile] = yaml.load(timelineFile) as TimelineContent;
-  }
-
-  // Find and load data for KeyNumbers components (supports multiple instances)
-  const keyNumbersData: Record<string, any> = {};
-  const keyNumbersRegex = /<KeyNumbers[^>]*yamlFile="([^"]+)"[^>]*\/?>/g;
-  let keyNumbersMatch: RegExpExecArray | null;
-  while ((keyNumbersMatch = keyNumbersRegex.exec(content)) !== null) {
-    const yamlFile = keyNumbersMatch[1];
-    if (!yamlFile) continue;
-    if (keyNumbersData[yamlFile]) continue;
-    const yamlPath = path.join(articleDir, yamlFile);
-    if (!fs.existsSync(yamlPath)) {
-      throw new Error(`KeyNumbers yaml file not found: ${directorySlug}/${yamlFile}`);
-    }
-    const yamlContent = fs.readFileSync(yamlPath, 'utf8');
-    keyNumbersData[yamlFile] = yaml.load(yamlContent);
-  }
-
-  // Find and load data for StyledTable (CSV-backed tables; supports multiple instances)
-  const styledTableData: Record<string, { headers: string[]; rows: Record<string, string>[] }> = {};
-  const styledTableRegex = /<StyledTable[^>]*csvFile="([^"]+)"[^>]*\/?>/g;
-  let styledMatch: RegExpExecArray | null;
-  while ((styledMatch = styledTableRegex.exec(content)) !== null) {
-    const csvFile = styledMatch[1];
-    if (!csvFile) continue;
-    if (styledTableData[csvFile]) continue;
-
-    const csvPath = path.join(articleDir, csvFile);
-    if (!fs.existsSync(csvPath)) {
-      throw new Error(`StyledTable csvFile not found: ${directorySlug}/${csvFile}`);
-    }
-
-    const csvContent = fs.readFileSync(csvPath, 'utf8');
-    styledTableData[csvFile] = parseCsv(csvContent);
-  }
-
-  // Find and load data for AttendanceSwarm components (JSON files)
-  const attendanceSwarmData: Record<string, any[]> = {};
-  const swarmRegex = /<AttendanceSwarm[^>]*dataFile="([^"]+)"[^>]*\/?>/g;
-  let swarmMatch: RegExpExecArray | null;
-  while ((swarmMatch = swarmRegex.exec(content)) !== null) {
-    const dataFile = swarmMatch[1];
-    if (!dataFile || attendanceSwarmData[dataFile]) continue;
-    const filePath = path.join(articleDir, dataFile);
-    if (!fs.existsSync(filePath)) {
-      throw new Error(`AttendanceSwarm dataFile not found: ${directorySlug}/${dataFile}`);
-    }
-    attendanceSwarmData[dataFile] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  }
-
-  // Find and load Vega-Lite spec JSON files for VegaChart components (supports multiple instances)
-  const vegaChartData: Record<string, any> = {};
-  const vegaChartRegex = /<VegaChart[^>]*dataFile="([^"]+)"[^>]*\/?>/g;
-  let vegaChartMatch: RegExpExecArray | null;
-  while ((vegaChartMatch = vegaChartRegex.exec(content)) !== null) {
-    const dataFile = vegaChartMatch[1];
-    if (!dataFile || vegaChartData[dataFile]) continue;
-    const filePath = path.join(articleDir, dataFile);
-    if (!fs.existsSync(filePath)) {
-      throw new Error(`VegaChart dataFile not found: ${directorySlug}/${dataFile}`);
-    }
-    vegaChartData[dataFile] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  }
-
-  // Find and load HTML files for HtmlEmbed components (supports multiple instances)
-  const htmlEmbedData: Record<string, string> = {};
-  const htmlEmbedRegex = /<HtmlEmbed[^>]*file="([^"]+)"[^>]*\/?>/g;
-  let htmlMatch: RegExpExecArray | null;
-  while ((htmlMatch = htmlEmbedRegex.exec(content)) !== null) {
-    const htmlFile = htmlMatch[1];
-    if (!htmlFile) continue;
-    if (htmlEmbedData[htmlFile]) continue;
-
-    // Security: only allow .html files
-    if (!htmlFile.endsWith('.html')) {
-      throw new Error(`HtmlEmbed only supports .html files: ${directorySlug}/${htmlFile}`);
-    }
-
-    const htmlPath = path.join(articleDir, htmlFile);
-    if (!fs.existsSync(htmlPath)) {
-      throw new Error(`HtmlEmbed file not found: ${directorySlug}/${htmlFile}`);
-    }
-
-    htmlEmbedData[htmlFile] = fs.readFileSync(htmlPath, 'utf8');
-  }
-
-    // Find and load data for KalkulackaTable
-  let tableData: any[] = [];
-  const tableRegex = /<MotionsStancesTable[^>]*dataFile="([^"]+)"/;
-  const match = content.match(tableRegex);
-
-  if (match && match[1]) {
-    const dataFilePath = path.join(articleDir, match[1]);
-    if (fs.existsSync(dataFilePath)) {
-      try {
-        const dataFileContent = fs.readFileSync(dataFilePath, 'utf8');
-        tableData = JSON.parse(dataFileContent);
-      } catch (e) {
-        console.error(`Failed to parse JSON from ${dataFilePath}`, e);
-      }
-    }
-  }
-
-  // Optional: load osobnosti.json (medailonky for the inline <Person> component).
-  // The whole map is injected once; markdown references entries by id.
-  let personsData: Record<string, any> = {};
-  const personsPath = path.join(articleDir, 'osobnosti.json');
-  if (fs.existsSync(personsPath)) {
-    try {
-      personsData = JSON.parse(fs.readFileSync(personsPath, 'utf8'));
-    } catch (e) {
-      console.error(`Failed to parse JSON from ${personsPath}`, e);
-    }
-  }
+  const readFile = async (rel: string) => {
+    const p = path.join(articleDir, rel);
+    return fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : null;
+  };
+  const { htmlContent, scrollyContent, scope } = await loadArticleData(content, data, readFile, directorySlug);
 
   // Pre-fetch article pool for RelatedArticles MDX component
-  const relatedArticlesPool = await getArticles(9999, undefined, true);
   // Pořadí podle příbuznosti: nejvíc společných tagů s tímto článkem první, jinak původní pořadí (stabilní řazení).
   // Z čela poolu bere RelatedArticles automatický výběr i doplnění dolního boxu na násobek tří.
-  const ownTags = new Set<string>((data.tags || []).map((t: string) => t.toLowerCase()));
-  const shared = (a: { tags?: string[] }) => (a.tags || []).filter((t) => ownTags.has(t.toLowerCase())).length;
-  const filteredPool = relatedArticlesPool
-    .filter(a => a.slug !== directorySlug)
-    .map((a, i) => ({ a, i, s: shared(a) }))
-    .sort((x, y) => y.s - x.s || x.i - y.i)
-    .map(x => x.a);
+  const relatedArticlesPool = await getArticles(9999, undefined, true);
+  const filteredPool = rankRelatedPool(relatedArticlesPool, directorySlug, data.tags || []);
 
   const mdxSource = await serialize(content, {
-    scope: {
-      tableData: tableData,
-      timelineData: timelineData,
-      keyNumbersData: keyNumbersData,
-      styledTableData: styledTableData,
-      htmlEmbedData: htmlEmbedData,
-      attendanceSwarmData: attendanceSwarmData,
-      vegaChartData: vegaChartData,
-      personsData: personsData,
-      relatedArticlesPool: filteredPool,
-    },
-    mdxOptions: {
-      remarkPlugins: [remarkGfm, remarkBoxPlugin, remarkFlourishPlugin, remarkGalleryPlugin, remarkFlagPlugin, remarkCzechTypography],
-      rehypePlugins: [[rehypeRaw, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement', 'mdxFlowExpression', 'mdxTextExpression', 'mdxjsEsm'] }]],
-    },
+    scope: { ...scope, relatedArticlesPool: filteredPool },
+    mdxOptions: ARTICLE_MDX_OPTIONS,
   });
 
   // Use the directory name as the slug

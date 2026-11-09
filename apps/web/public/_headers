@@ -3,3 +3,13 @@
   Link: </llms.txt>; rel="alternate"; type="text/plain"; title="LLM Context"
   Link: </sitemap.xml>; rel="sitemap"; type="application/xml"
   Link: </robots.txt>; rel="alternate"; type="text/plain"; title="Robots"
+
+# Náhled konceptu (app/nahled): smí ho vložit jen hub, nikdy do vyhledávačů.
+/nahled
+  Content-Security-Policy: frame-ancestors https://hub.datatimes.cz http://localhost:8788 http://127.0.0.1:8788
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache
+/nahled/*
+  Content-Security-Policy: frame-ancestors https://hub.datatimes.cz http://localhost:8788 http://127.0.0.1:8788
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache
