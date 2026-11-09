@@ -1,0 +1,18 @@
+/* DataTimes design tokens – plain CSS, usable by any app (Astro now, Next.js later).
+   Source of truth for values: apps/web/app/providers/ThemeProvider.tsx and packages/ui/DESIGN.md.
+   Keep in sync when the palette changes. */
+:root {
+  --dt-brand: #de1743;          /* brand.6 – crimson: H1/H2, links, accents */
+  --dt-brand-dark: #a81134;     /* brand.8 */
+  --dt-ink: #101432;            /* brandNavy.9 – body text */
+  --dt-yellow: #efb704;         /* yellow.7 – the dots in the logotype (as on snemovna.datatimes.cz) */
+  --dt-navy: #6267a3;           /* brandNavy.6 */
+  --dt-paper: #fdfbf7;          /* background.1 – page */
+  --dt-paper-2: #f8f6f0;        /* background.2 – blocks */
+  --dt-line: #e8e8dc;          /* background.6 – borders */
+
+  --dt-font-body: 'IBM Plex Serif', Georgia, serif;
+  --dt-font-heading: 'IBM Plex Sans', system-ui, sans-serif;
+
+  --dt-measure: 736px;          /* reading column */
+}

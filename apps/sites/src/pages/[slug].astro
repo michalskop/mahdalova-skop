@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../sites/index.ts';
+import { ui, paths, formatDate } from '../i18n.ts';
+import { getPage, getImpact } from '../content.ts';
+export function getStaticPaths() {
+  const p = paths[site.lang];
+  return [
+    { params: { slug: p.about.replaceAll('/', '') }, props: { kind: 'about' } },
+    { params: { slug: p.impact.replaceAll('/', '') }, props: { kind: 'impact' } },
+  ];
+}
+const { kind } = Astro.props;
+const t = ui[site.lang];
+const page = kind === 'about' ? getPage('about') : null;
+const items = kind === 'impact' ? getImpact() : [];
+const Content = page?.Content;
+const title = kind === 'about' ? page.frontmatter.title : t.impact;
+---
+<Base title={title}><main class="wrap">
+  <h1>{title}</h1>
+  {kind === 'about' && <Content />}
+  {kind === 'impact' && items.length === 0 && <p>{t.impactSoon}</p>}
+  {kind === 'impact' && items.map((m) => (
+    <article class="card"><p class="date">{formatDate(m.frontmatter.date, site.lang)}</p><h3>{m.frontmatter.title}</h3><m.Content /></article>
+  ))}
+</main></Base>

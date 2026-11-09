@@ -1,0 +1,40 @@
+---
+import '../styles/base.css';
+import { site } from '../sites/index.ts';
+import { ui, paths } from '../i18n.ts';
+import social from '../../../../packages/site-content/social.json';
+const { title, wide = false } = Astro.props;
+const t = ui[site.lang];
+const p = paths[site.lang];
+const accounts = social.accounts.filter((a) => a.url);
+const FAVICON = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22 viewBox=%22110 110 280 280%22%3E %3Cpath title=%22yellow%22 fill=%22none%22 stroke=%22%23ffdc33%22 stroke-width=%2276%22 stroke-linecap=%22round%22 d=%22M 234.7876613810083 348.8361510467761 A 100 100 0 0 0 336.60254037844385 300%22/%3E %3Cpath title=%22orange%22 fill=%22none%22 stroke=%22%23f76800%22 stroke-width=%2276%22 stroke-linecap=%22round%22 d=%22M 163.39745962155612 200.0 A 100 100 0 0 0 234.7876613810083 348.8361510467761%22/%3E %3Cpath title=%22red%22 fill=%22none%22 stroke=%22%23de1743%22 stroke-width=%2276%22 stroke-linecap=%22round%22 d=%22M 336.6025403784439 300 A 100 100 0 0 0 163.39745962155612 200%22/%3E %3Cpath title=%22yellow fix%22 fill=%22none%22 stroke=%22%23ffdc33%22 stroke-width=%2276%22 stroke-linecap=%22round%22 d=%22M 335.7167300702112 301.50380749100543 A 100 100 0 0 0 336.60254037844385 300%22/%3E %3C/svg%3E';
+const LOGO = 'https://media.datatimes.org/shared/branding/datatimes-donut-2026-10.svg';
+---
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title === site.name ? site.name : `${title} – ${site.name}`}</title>
+    <meta name="description" content={site.tagline} />
+    <link rel="icon" type="image/svg+xml" href={FAVICON} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" />
+  </head>
+  <body class={wide ? 'wide' : ''}>
+    <header class="top"><div class="wrap wrap-wide">
+      <a href="/" class="brand"><img src={LOGO} alt="" /><span class="logotype"><span class="lt-name">{site.name}</span><span class="lt-dot">.</span><span class="lt-tld">{site.id}</span></span></a>
+      <span class="badge">{site.perspective}</span>
+      <nav>
+        <a href={p.about}>{t.about}</a>
+        <a href={p.impact}>{t.impact}</a>
+      </nav>
+    </div></header>
+    <slot />
+    <footer><div class="wrap wrap-wide">
+      <p>{t.by}</p>
+      <p><a href="https://datatimes.cz">{t.mainSite} → DataTimes.cz</a></p>
+      {accounts.length > 0 && <ul>{accounts.map((a) => <li><a href={a.url} rel="me">{a.label}</a></li>)}</ul>}
+    </div></footer>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../sites/index.ts';
+import { ui, paths, formatDate } from '../i18n.ts';
+import { getPage, getImpact } from '../content.ts';
+const t = ui[site.lang];
+const p = paths[site.lang];
+const home = getPage('home').frontmatter;
+const latest = getImpact().slice(0, 3);
+---
+<Base title={site.name} wide>
+  <section class="hero"><div class="wrap wrap-wide">
+    <p class="badge">{site.perspective}</p>
+    <h1>{home.title}</h1>
+    <p class="lead">{home.lead}</p>
+    <p class="actions">
+      <a class="btn" href={p.about}>{t.about}</a>
+      <a class="btn ghost" href={p.impact}>{t.impact}</a>
+    </p>
+  </div></section>
+
+  <section class="band"><div class="wrap wrap-wide grid">
+    {home.pillars.map((x: any) => (
+      <div class="card"><h3>{x.title}</h3><p>{x.text}</p></div>
+    ))}
+  </div></section>
+
+  {home.featured && (
+  <section><div class="wrap wrap-wide">
+    <p class="kicker">{t.featured}</p>
+    <article class="card feature">
+      <p class="date">{formatDate(home.featured.date, site.lang)} · {home.featured.author}</p>
+      <h2><a href={home.featured.url}>{home.featured.title}</a></h2>
+      <p>{home.featured.summary}</p>
+      <h3>{t.numbers}</h3>
+      <ul>{home.featured.numbers.map((n: string) => <li>{n}</li>)}</ul>
+      <p><a class="btn" href={home.featured.url}>{t.original} →</a></p>
+      <p class="note">{home.featured.note}</p>
+    </article>
+  </div></section>
+  )}
+
+  {latest.length > 0 && <section><div class="wrap wrap-wide">
+    <h2>{t.latest}</h2>
+    <div class="grid">
+      {latest.map((m) => (
+        <article class="card"><p class="date">{formatDate(m.frontmatter.date, site.lang)}</p><h3>{m.frontmatter.title}</h3><m.Content /></article>
+      ))}
+    </div>
+    <p><a href={p.impact}>{t.all} →</a></p>
+  </div></section>}
+
+  <section class="band cta"><div class="wrap wrap-wide">
+    <h2>DataTimes.cz</h2>
+    <p>{t.mainSite}</p>
+    <p><a class="btn" href="https://datatimes.cz">DataTimes.cz →</a></p>
+  </div></section>
+</Base>
