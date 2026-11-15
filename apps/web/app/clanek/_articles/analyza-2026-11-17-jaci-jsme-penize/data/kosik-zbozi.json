@@ -1,0 +1,3513 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Z jedné výplaty {dnes|#de1743} koupíme šestkrát víc kuřat, chleba zhruba stejně",
+  "subtitle": "Kolik koupí průměrná čistá měsíční mzda: jedna ikona = desetina nákupu z roku 1989. Ceny v prosinci, mzda 2 504 Kčs (1989) a 38 288 Kč (2025)"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "polozka": "Kuře",
+    "x": 0,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 1,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 2,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 3,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 4,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 5,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 6,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 7,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 8,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 9,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "meat",
+    "t_rok": "1989",
+    "t_mnozstvi": "83 kg",
+    "t_cena": "30,00 Kčs"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 0,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 1,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 2,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 3,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 4,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 5,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 6,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 7,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 8,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 9,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 10,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 11,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 12,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 13,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 14,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 15,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 16,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 17,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 18,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 19,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 0,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 1,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 2,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 3,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 4,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 5,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 6,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 7,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 8,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 9,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 10,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 11,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 12,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 13,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 14,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 15,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 16,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 17,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 18,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 19,
+    "y": 3.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 0,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 1,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 2,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 3,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 4,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 5,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 6,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 7,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 8,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 9,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 10,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 11,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 12,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 13,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 14,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 15,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 16,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 17,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 18,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 19,
+    "y": 4.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 0,
+    "y": 5.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 1,
+    "y": 5.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 2,
+    "y": 5.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Kuře",
+    "x": 3,
+    "y": 5.65,
+    "stav": "dnes",
+    "ikona": "meat",
+    "t_rok": "2025",
+    "t_mnozstvi": "537 kg",
+    "t_cena": "71,29 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 0,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 1,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 2,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 3,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 4,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 5,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 6,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 7,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 8,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 9,
+    "y": 7.800000000000001,
+    "stav": "tehdy",
+    "ikona": "egg",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 926 ks",
+    "t_cena": "13,00 Kčs"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 0,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 1,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 2,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 3,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 4,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 5,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 6,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 7,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 8,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 9,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 10,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 11,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 12,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 13,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 14,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 15,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 16,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 17,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 18,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 19,
+    "y": 8.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 0,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 1,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 2,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 3,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 4,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 5,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 6,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 7,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 8,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 9,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 10,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 11,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 12,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 13,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 14,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 15,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 16,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Vejce",
+    "x": 17,
+    "y": 9.8,
+    "stav": "dnes",
+    "ikona": "egg",
+    "t_rok": "2025",
+    "t_mnozstvi": "7 227 ks",
+    "t_cena": "52,98 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 0,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 1,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 2,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 3,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 4,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 5,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 6,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 7,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 8,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 9,
+    "y": 11.950000000000001,
+    "stav": "tehdy",
+    "ikona": "cube",
+    "t_rok": "1989",
+    "t_mnozstvi": "63 kg",
+    "t_cena": "40,00 Kčs"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 0,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 1,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 2,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 3,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 4,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 5,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 6,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 7,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 8,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 9,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 10,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 11,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 12,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 13,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 14,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 15,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 16,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 17,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 18,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 19,
+    "y": 12.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 0,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 1,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 2,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 3,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 4,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 5,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 6,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 7,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 8,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 9,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 10,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 11,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Máslo",
+    "x": 12,
+    "y": 13.950000000000001,
+    "stav": "dnes",
+    "ikona": "cube",
+    "t_rok": "2025",
+    "t_mnozstvi": "206 kg",
+    "t_cena": "186,13 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 0,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 1,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 2,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 3,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 4,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 5,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 6,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 7,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 8,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 9,
+    "y": 16.1,
+    "stav": "tehdy",
+    "ikona": "beer",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 002 lahví",
+    "t_cena": "2,50 Kčs"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 0,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 1,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 2,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 3,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 4,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 5,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 6,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 7,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 8,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 9,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 10,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 11,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 12,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 13,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 14,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 15,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 16,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 17,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 18,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 19,
+    "y": 17.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 0,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 1,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 2,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 3,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 4,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 5,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 6,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 7,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 8,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Pivo lahvové",
+    "x": 9,
+    "y": 18.1,
+    "stav": "dnes",
+    "ikona": "beer",
+    "t_rok": "2025",
+    "t_mnozstvi": "3 020 lahví",
+    "t_cena": "12,68 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 0,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 1,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 2,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 3,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 4,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 5,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 6,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 7,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 8,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 9,
+    "y": 20.25,
+    "stav": "tehdy",
+    "ikona": "paper-bag",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 565 kg",
+    "t_cena": "1,60 Kčs"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 0,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 1,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 2,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 3,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 4,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 5,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 6,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 7,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 8,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 9,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 10,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 11,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 12,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 13,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 14,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 15,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 16,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Brambory",
+    "x": 17,
+    "y": 21.25,
+    "stav": "dnes",
+    "ikona": "paper-bag",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 838 kg",
+    "t_cena": "13,49 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 0,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 1,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 2,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 3,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 4,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 5,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 6,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 7,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 8,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 9,
+    "y": 23.4,
+    "stav": "tehdy",
+    "ikona": "milk",
+    "t_rok": "1989",
+    "t_mnozstvi": "1 252 l",
+    "t_cena": "2,00 Kčs"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 0,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 1,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 2,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 3,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 4,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 5,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 6,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 7,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 8,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 9,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 10,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Mléko",
+    "x": 11,
+    "y": 24.4,
+    "stav": "dnes",
+    "ikona": "milk",
+    "t_rok": "2025",
+    "t_mnozstvi": "1 556 l",
+    "t_cena": "24,60 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 0,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 1,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 2,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 3,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 4,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 5,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 6,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 7,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 8,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 9,
+    "y": 26.549999999999997,
+    "stav": "tehdy",
+    "ikona": "bread",
+    "t_rok": "1989",
+    "t_mnozstvi": "894 kg",
+    "t_cena": "2,80 Kčs"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 0,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 1,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 2,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 3,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 4,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 5,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 6,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 7,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   },
+   {
+    "polozka": "Chléb",
+    "x": 8,
+    "y": 27.549999999999997,
+    "stav": "dnes",
+    "ikona": "bread",
+    "t_rok": "2025",
+    "t_mnozstvi": "848 kg",
+    "t_cena": "45,14 Kč"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'beer'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M -0.25 0.75 h 0.5 a 0.0833 0.0833 0 0 0 0.0833 -0.0833 v -0.3021 c 0 -0.1164 0.0242 -0.2312 0.0704 -0.3354 l 0.0258 -0.0583 c 0.0463 -0.1042 0.0704 -0.1878 0.0704 -0.3042 v -0.3333 a 0.0833 0.0833 0 0 0 -0.0833 -0.0833 h -0.8333 a 0.0833 0.0833 0 0 0 -0.0833 0.0833 v 0.3333 c 0 0.1164 0.0242 0.2 0.0704 0.3042 l 0.0258 0.0583 a 0.8276 0.8276 0 0 1 0.0704 0.3354 v 0.3021 a 0.0833 0.0833 0 0 0 0.0833 0.0833 z M -0.5 -0.3333 h 1",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'bread'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M 0.5 -0.6667 a 0.25 0.25 0 0 1 0.1667 0.4363 v 0.7304 a 0.1667 0.1667 0 0 1 -0.1667 0.1667 h -1 a 0.1667 0.1667 0 0 1 -0.1667 -0.1667 v -0.7303 a 0.25 0.25 0 0 1 0.152 -0.4359 h 1.0147 v -0.0004 z",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'cube'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M 0.75 0.334 v -0.6682 a 0.165 0.165 0 0 0 -0.0833 -0.1431 l -0.5833 -0.334 a 0.168 0.168 0 0 0 -0.1667 0 l -0.5833 0.334 c -0.0516 0.0296 -0.0833 0.0842 -0.0833 0.1432 v 0.6682 c 0 0.0591 0.0318 0.1136 0.0833 0.1431 l 0.5833 0.334 a 0.168 0.168 0 0 0 0.1667 0 l 0.5833 -0.334 c 0.0516 -0.0296 0.0833 -0.0842 0.0833 -0.1432 z M 0 0.8333 v -0.8333 M 0 0 l 0.7275 -0.42 M -0.7275 -0.42 l 0.7275 0.42",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'egg'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M 0.5833 0.1736 c 0 0.3462 -0.2472 0.5617 -0.5833 0.5764 c -0.35 0 -0.5833 -0.2302 -0.5833 -0.5764 c 0 -0.4615 0.2917 -0.9242 0.5833 -0.9236 c 0.2917 0.0006 0.5833 0.4621 0.5833 0.9236 z",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'meat'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M 0.135 -0.3015 l 0.1638 -0.1639 a 0.1667 0.1667 0 1 1 0.2845 -0.1179 a 0.1667 0.1667 0 1 1 -0.1178 0.2845 l -0.1517 0.1517 M -0.508 0.5497 c 0.2278 0.2278 0.4917 0.3333 0.5892 0.2358 c 0.0977 -0.0977 -0.0078 -0.3615 -0.2357 -0.5892 c -0.2278 -0.2278 -0.4917 -0.3333 -0.5892 -0.2358 c -0.0977 0.0977 0.0078 0.3615 0.2357 0.5892 z M -0.375 0.3333 l 0.0833 0.0833 M 0.0812 0.7854 c 0.3254 -0.3255 0.4046 -0.774 0.1767 -1.0018 c -0.2278 -0.2278 -0.6763 -0.1487 -1.0017 0.1767",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'milk'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M -0.3333 -0.5 h 0.6667 v -0.1667 a 0.0833 0.0833 0 0 0 -0.0833 -0.0833 h -0.5 a 0.0833 0.0833 0 0 0 -0.0833 0.0833 v 0.1667 z M 0.3333 -0.5 l 0.0912 0.1466 a 0.5 0.5 0 0 1 0.0755 0.2642 v 0.6726 a 0.1667 0.1667 0 0 1 -0.1667 0.1667 h -0.6667 a 0.1667 0.1667 0 0 1 -0.1667 -0.1667 v -0.6726 a 0.5 0.5 0 0 1 0.0755 -0.2642 l 0.0912 -0.1466 M 0 0.3333 m -0.1667 0 a 0.1667 0.1667 0 1 0 0.3333 0 a 0.1667 0.1667 0 1 0 -0.3333 0 M -0.1667 -0.1667 h 0.3333",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'paper-bag'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M -0.3333 -0.75 h 0.6667 a 0.1667 0.1667 0 0 1 0.1667 0.1667 v 0.1517 a 0.4167 0.4167 0 0 0 0.044 0.1863 l 0.0787 0.1573 a 0.4167 0.4167 0 0 1 0.044 0.1863 v 0.485 a 0.1667 0.1667 0 0 1 -0.1667 0.1667 h -1 a 0.1667 0.1667 0 0 1 -0.1667 -0.1667 v -0.485 a 0.4167 0.4167 0 0 1 0.044 -0.1863 l 0.1227 -0.2453 v -0.25 a 0.1667 0.1667 0 0 1 0.1667 -0.1667 z M 0.1667 0.25 m -0.1667 0 a 0.1667 0.1667 0 1 0 0.3333 0 a 0.1667 0.1667 0 1 0 -0.3333 0 M -0.5 0.75 a 0.1667 0.1667 0 0 0 0.1667 -0.1667 v -0.485 a 0.4167 0.4167 0 0 0 -0.044 -0.1863 l -0.1227 -0.2453 M -0.0833 -0.4167 h 0.1667",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "y": 0.73,
+      "text": "Kuře: 83 → 537 kg"
+     },
+     {
+      "y": 6.880000000000001,
+      "text": "Vejce: 1 926 → 7 227 ks"
+     },
+     {
+      "y": 11.030000000000001,
+      "text": "Máslo: 63 → 206 kg"
+     },
+     {
+      "y": 15.180000000000001,
+      "text": "Pivo lahvové: 1 002 → 3 020 lahví"
+     },
+     {
+      "y": 19.33,
+      "text": "Brambory: 1 565 → 2 838 kg"
+     },
+     {
+      "y": 22.479999999999997,
+      "text": "Mléko: 1 252 → 1 556 l"
+     },
+     {
+      "y": 25.629999999999995,
+      "text": "Chléb: 894 → 848 kg"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 12.5,
+    "fontWeight": 700,
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "datum": -2.6,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "y": 1.65,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 2.65,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 7.800000000000001,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 8.8,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 11.950000000000001,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 12.950000000000001,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 16.1,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 17.1,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 20.25,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 21.25,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 23.4,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 24.4,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 26.549999999999997,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 27.549999999999997,
+      "text": "2025",
+      "stav": "dnes"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 11
+   },
+   "encoding": {
+    "x": {
+     "datum": -2.6,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       28.349999999999998
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "text": {
+     "field": "text"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#333333",
+       "#de1743"
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 03.04 a 13.07](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes",
+ "height": 680
+}

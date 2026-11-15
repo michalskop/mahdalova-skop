@@ -9,6 +9,7 @@ import {
   type PublishedAt,
 } from '@repo/ui/lib/getArticles';
 import { getDpbpArticles } from './getDpbpArticles';
+import { JACI_JSME_HREF } from '@/lib/jaciJsme';
 
 export type { Article, PublishedAt } from '@repo/ui/lib/getArticles';
 export { comparePublishedAt } from '@repo/ui/lib/getArticles';
@@ -78,6 +79,8 @@ const ARTICLE_HREF_OVERRIDES: Record<string, string> = {
     '/specialy/data-pro-budouci-premierku/01-demografie',
   'data-pro-budouci-premierku-02-demografie-plodnost':
     '/specialy/data-pro-budouci-premierku/01-demografie/01-proc-klesa-plodnost',
+  // Kapitoly speciálu „Jací jsme byli, jací jsme“ (seznam v kapitoly.json speciálu)
+  ...JACI_JSME_HREF,
 };
 
 export async function getArticles(

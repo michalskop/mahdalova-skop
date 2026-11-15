@@ -1,0 +1,891 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Vysokoškoláků je skoro třikrát víc než v roce 1989 a víc než šestina z nich jsou {cizinci|#de1743}",
+    "subtitle": "Studenti veřejných a soukromých vysokých škol k 31. 12., 1989–2025; šedě s českým občanstvím, červeně cizinci"
+  },
+  "width": "container",
+  "height": 260,
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1989,
+        "skupina": "s českým občanstvím",
+        "n": 110021.0,
+        "poradi": 1,
+        "celk": 112980.0,
+        "t_c": "110 021",
+        "t_z": "2 959 (2,6 %)",
+        "t_celk": "112 980"
+      },
+      {
+        "rok": 1989,
+        "skupina": "cizinci",
+        "n": 2959.0,
+        "poradi": 2,
+        "celk": 112980.0,
+        "t_c": "110 021",
+        "t_z": "2 959 (2,6 %)",
+        "t_celk": "112 980"
+      },
+      {
+        "rok": 1990,
+        "skupina": "s českým občanstvím",
+        "n": 115072.0,
+        "poradi": 1,
+        "celk": 118194.0,
+        "t_c": "115 072",
+        "t_z": "3 122 (2,6 %)",
+        "t_celk": "118 194"
+      },
+      {
+        "rok": 1990,
+        "skupina": "cizinci",
+        "n": 3122.0,
+        "poradi": 2,
+        "celk": 118194.0,
+        "t_c": "115 072",
+        "t_z": "3 122 (2,6 %)",
+        "t_celk": "118 194"
+      },
+      {
+        "rok": 1991,
+        "skupina": "s českým občanstvím",
+        "n": 110883.0,
+        "poradi": 1,
+        "celk": 113654.0,
+        "t_c": "110 883",
+        "t_z": "2 771 (2,4 %)",
+        "t_celk": "113 654"
+      },
+      {
+        "rok": 1991,
+        "skupina": "cizinci",
+        "n": 2771.0,
+        "poradi": 2,
+        "celk": 113654.0,
+        "t_c": "110 883",
+        "t_z": "2 771 (2,4 %)",
+        "t_celk": "113 654"
+      },
+      {
+        "rok": 1992,
+        "skupina": "s českým občanstvím",
+        "n": 115132.0,
+        "poradi": 1,
+        "celk": 117637.0,
+        "t_c": "115 132",
+        "t_z": "2 505 (2,1 %)",
+        "t_celk": "117 637"
+      },
+      {
+        "rok": 1992,
+        "skupina": "cizinci",
+        "n": 2505.0,
+        "poradi": 2,
+        "celk": 117637.0,
+        "t_c": "115 132",
+        "t_z": "2 505 (2,1 %)",
+        "t_celk": "117 637"
+      },
+      {
+        "rok": 1993,
+        "skupina": "s českým občanstvím",
+        "n": 123523.0,
+        "poradi": 1,
+        "celk": 127137.0,
+        "t_c": "123 523",
+        "t_z": "3 614 (2,8 %)",
+        "t_celk": "127 137"
+      },
+      {
+        "rok": 1993,
+        "skupina": "cizinci",
+        "n": 3614.0,
+        "poradi": 2,
+        "celk": 127137.0,
+        "t_c": "123 523",
+        "t_z": "3 614 (2,8 %)",
+        "t_celk": "127 137"
+      },
+      {
+        "rok": 1994,
+        "skupina": "s českým občanstvím",
+        "n": 133342.0,
+        "poradi": 1,
+        "celk": 136566.0,
+        "t_c": "133 342",
+        "t_z": "3 224 (2,4 %)",
+        "t_celk": "136 566"
+      },
+      {
+        "rok": 1994,
+        "skupina": "cizinci",
+        "n": 3224.0,
+        "poradi": 2,
+        "celk": 136566.0,
+        "t_c": "133 342",
+        "t_z": "3 224 (2,4 %)",
+        "t_celk": "136 566"
+      },
+      {
+        "rok": 1995,
+        "skupina": "s českým občanstvím",
+        "n": 145148.0,
+        "poradi": 1,
+        "celk": 148433.0,
+        "t_c": "145 148",
+        "t_z": "3 285 (2,2 %)",
+        "t_celk": "148 433"
+      },
+      {
+        "rok": 1995,
+        "skupina": "cizinci",
+        "n": 3285.0,
+        "poradi": 2,
+        "celk": 148433.0,
+        "t_c": "145 148",
+        "t_z": "3 285 (2,2 %)",
+        "t_celk": "148 433"
+      },
+      {
+        "rok": 1996,
+        "skupina": "s českým občanstvím",
+        "n": 162402.0,
+        "poradi": 1,
+        "celk": 166123.0,
+        "t_c": "162 402",
+        "t_z": "3 721 (2,2 %)",
+        "t_celk": "166 123"
+      },
+      {
+        "rok": 1996,
+        "skupina": "cizinci",
+        "n": 3721.0,
+        "poradi": 2,
+        "celk": 166123.0,
+        "t_c": "162 402",
+        "t_z": "3 721 (2,2 %)",
+        "t_celk": "166 123"
+      },
+      {
+        "rok": 1997,
+        "skupina": "s českým občanstvím",
+        "n": 173826.0,
+        "poradi": 1,
+        "celk": 177723.0,
+        "t_c": "173 826",
+        "t_z": "3 897 (2,2 %)",
+        "t_celk": "177 723"
+      },
+      {
+        "rok": 1997,
+        "skupina": "cizinci",
+        "n": 3897.0,
+        "poradi": 2,
+        "celk": 177723.0,
+        "t_c": "173 826",
+        "t_z": "3 897 (2,2 %)",
+        "t_celk": "177 723"
+      },
+      {
+        "rok": 1998,
+        "skupina": "s českým občanstvím",
+        "n": 182745.0,
+        "poradi": 1,
+        "celk": 187148.0,
+        "t_c": "182 745",
+        "t_z": "4 403 (2,4 %)",
+        "t_celk": "187 148"
+      },
+      {
+        "rok": 1998,
+        "skupina": "cizinci",
+        "n": 4403.0,
+        "poradi": 2,
+        "celk": 187148.0,
+        "t_c": "182 745",
+        "t_z": "4 403 (2,4 %)",
+        "t_celk": "187 148"
+      },
+      {
+        "rok": 1999,
+        "skupina": "s českým občanstvím",
+        "n": 193493.0,
+        "poradi": 1,
+        "celk": 198961.0,
+        "t_c": "193 493",
+        "t_z": "5 468 (2,7 %)",
+        "t_celk": "198 961"
+      },
+      {
+        "rok": 1999,
+        "skupina": "cizinci",
+        "n": 5468.0,
+        "poradi": 2,
+        "celk": 198961.0,
+        "t_c": "193 493",
+        "t_z": "5 468 (2,7 %)",
+        "t_celk": "198 961"
+      },
+      {
+        "rok": 2000,
+        "skupina": "s českým občanstvím",
+        "n": 201818.0,
+        "poradi": 1,
+        "celk": 209298.0,
+        "t_c": "201 818",
+        "t_z": "7 480 (3,6 %)",
+        "t_celk": "209 298"
+      },
+      {
+        "rok": 2000,
+        "skupina": "cizinci",
+        "n": 7480.0,
+        "poradi": 2,
+        "celk": 209298.0,
+        "t_c": "201 818",
+        "t_z": "7 480 (3,6 %)",
+        "t_celk": "209 298"
+      },
+      {
+        "rok": 2001,
+        "skupina": "s českým občanstvím",
+        "n": 194686.0,
+        "poradi": 1,
+        "celk": 203449.0,
+        "t_c": "194 686",
+        "t_z": "8 763 (4,3 %)",
+        "t_celk": "203 449"
+      },
+      {
+        "rok": 2001,
+        "skupina": "cizinci",
+        "n": 8763.0,
+        "poradi": 2,
+        "celk": 203449.0,
+        "t_c": "194 686",
+        "t_z": "8 763 (4,3 %)",
+        "t_celk": "203 449"
+      },
+      {
+        "rok": 2002,
+        "skupina": "s českým občanstvím",
+        "n": 209128.0,
+        "poradi": 1,
+        "celk": 220178.0,
+        "t_c": "209 128",
+        "t_z": "11 050 (5,0 %)",
+        "t_celk": "220 178"
+      },
+      {
+        "rok": 2002,
+        "skupina": "cizinci",
+        "n": 11050.0,
+        "poradi": 2,
+        "celk": 220178.0,
+        "t_c": "209 128",
+        "t_z": "11 050 (5,0 %)",
+        "t_celk": "220 178"
+      },
+      {
+        "rok": 2003,
+        "skupina": "s českým občanstvím",
+        "n": 230658.0,
+        "poradi": 1,
+        "celk": 243718.0,
+        "t_c": "230 658",
+        "t_z": "13 060 (5,4 %)",
+        "t_celk": "243 718"
+      },
+      {
+        "rok": 2003,
+        "skupina": "cizinci",
+        "n": 13060.0,
+        "poradi": 2,
+        "celk": 243718.0,
+        "t_c": "230 658",
+        "t_z": "13 060 (5,4 %)",
+        "t_celk": "243 718"
+      },
+      {
+        "rok": 2004,
+        "skupina": "s českým občanstvím",
+        "n": 247724.0,
+        "poradi": 1,
+        "celk": 264772.0,
+        "t_c": "247 724",
+        "t_z": "17 048 (6,4 %)",
+        "t_celk": "264 772"
+      },
+      {
+        "rok": 2004,
+        "skupina": "cizinci",
+        "n": 17048.0,
+        "poradi": 2,
+        "celk": 264772.0,
+        "t_c": "247 724",
+        "t_z": "17 048 (6,4 %)",
+        "t_celk": "264 772"
+      },
+      {
+        "rok": 2005,
+        "skupina": "s českým občanstvím",
+        "n": 268592.0,
+        "poradi": 1,
+        "celk": 289465.0,
+        "t_c": "268 592",
+        "t_z": "20 873 (7,2 %)",
+        "t_celk": "289 465"
+      },
+      {
+        "rok": 2005,
+        "skupina": "cizinci",
+        "n": 20873.0,
+        "poradi": 2,
+        "celk": 289465.0,
+        "t_c": "268 592",
+        "t_z": "20 873 (7,2 %)",
+        "t_celk": "289 465"
+      },
+      {
+        "rok": 2006,
+        "skupina": "s českým občanstvím",
+        "n": 292322.0,
+        "poradi": 1,
+        "celk": 316178.0,
+        "t_c": "292 322",
+        "t_z": "23 856 (7,5 %)",
+        "t_celk": "316 178"
+      },
+      {
+        "rok": 2006,
+        "skupina": "cizinci",
+        "n": 23856.0,
+        "poradi": 2,
+        "celk": 316178.0,
+        "t_c": "292 322",
+        "t_z": "23 856 (7,5 %)",
+        "t_celk": "316 178"
+      },
+      {
+        "rok": 2007,
+        "skupina": "s českým občanstvím",
+        "n": 316910.0,
+        "poradi": 1,
+        "celk": 343945.0,
+        "t_c": "316 910",
+        "t_z": "27 035 (7,9 %)",
+        "t_celk": "343 945"
+      },
+      {
+        "rok": 2007,
+        "skupina": "cizinci",
+        "n": 27035.0,
+        "poradi": 2,
+        "celk": 343945.0,
+        "t_c": "316 910",
+        "t_z": "27 035 (7,9 %)",
+        "t_celk": "343 945"
+      },
+      {
+        "rok": 2008,
+        "skupina": "s českým občanstvím",
+        "n": 337937.0,
+        "poradi": 1,
+        "celk": 368052.0,
+        "t_c": "337 937",
+        "t_z": "30 115 (8,2 %)",
+        "t_celk": "368 052"
+      },
+      {
+        "rok": 2008,
+        "skupina": "cizinci",
+        "n": 30115.0,
+        "poradi": 2,
+        "celk": 368052.0,
+        "t_c": "337 937",
+        "t_z": "30 115 (8,2 %)",
+        "t_celk": "368 052"
+      },
+      {
+        "rok": 2009,
+        "skupina": "s českým občanstvím",
+        "n": 354569.0,
+        "poradi": 1,
+        "celk": 388991.0,
+        "t_c": "354 569",
+        "t_z": "34 422 (8,8 %)",
+        "t_celk": "388 991"
+      },
+      {
+        "rok": 2009,
+        "skupina": "cizinci",
+        "n": 34422.0,
+        "poradi": 2,
+        "celk": 388991.0,
+        "t_c": "354 569",
+        "t_z": "34 422 (8,8 %)",
+        "t_celk": "388 991"
+      },
+      {
+        "rok": 2010,
+        "skupina": "s českým občanstvím",
+        "n": 358489.0,
+        "poradi": 1,
+        "celk": 395986.0,
+        "t_c": "358 489",
+        "t_z": "37 497 (9,5 %)",
+        "t_celk": "395 986"
+      },
+      {
+        "rok": 2010,
+        "skupina": "cizinci",
+        "n": 37497.0,
+        "poradi": 2,
+        "celk": 395986.0,
+        "t_c": "358 489",
+        "t_z": "37 497 (9,5 %)",
+        "t_celk": "395 986"
+      },
+      {
+        "rok": 2011,
+        "skupina": "s českým občanstvím",
+        "n": 353335.0,
+        "poradi": 1,
+        "celk": 392039.0,
+        "t_c": "353 335",
+        "t_z": "38 704 (9,9 %)",
+        "t_celk": "392 039"
+      },
+      {
+        "rok": 2011,
+        "skupina": "cizinci",
+        "n": 38704.0,
+        "poradi": 2,
+        "celk": 392039.0,
+        "t_c": "353 335",
+        "t_z": "38 704 (9,9 %)",
+        "t_celk": "392 039"
+      },
+      {
+        "rok": 2012,
+        "skupina": "s českým občanstvím",
+        "n": 341468.0,
+        "poradi": 1,
+        "celk": 380891.0,
+        "t_c": "341 468",
+        "t_z": "39 423 (10,4 %)",
+        "t_celk": "380 891"
+      },
+      {
+        "rok": 2012,
+        "skupina": "cizinci",
+        "n": 39423.0,
+        "poradi": 2,
+        "celk": 380891.0,
+        "t_c": "341 468",
+        "t_z": "39 423 (10,4 %)",
+        "t_celk": "380 891"
+      },
+      {
+        "rok": 2013,
+        "skupina": "s českým občanstvím",
+        "n": 327449.0,
+        "poradi": 1,
+        "celk": 367770.0,
+        "t_c": "327 449",
+        "t_z": "40 321 (11,0 %)",
+        "t_celk": "367 770"
+      },
+      {
+        "rok": 2013,
+        "skupina": "cizinci",
+        "n": 40321.0,
+        "poradi": 2,
+        "celk": 367770.0,
+        "t_c": "327 449",
+        "t_z": "40 321 (11,0 %)",
+        "t_celk": "367 770"
+      },
+      {
+        "rok": 2014,
+        "skupina": "s českým občanstvím",
+        "n": 305904.0,
+        "poradi": 1,
+        "celk": 346801.0,
+        "t_c": "305 904",
+        "t_z": "40 897 (11,8 %)",
+        "t_celk": "346 801"
+      },
+      {
+        "rok": 2014,
+        "skupina": "cizinci",
+        "n": 40897.0,
+        "poradi": 2,
+        "celk": 346801.0,
+        "t_c": "305 904",
+        "t_z": "40 897 (11,8 %)",
+        "t_celk": "346 801"
+      },
+      {
+        "rok": 2015,
+        "skupina": "s českým občanstvím",
+        "n": 284416.0,
+        "poradi": 1,
+        "celk": 326423.0,
+        "t_c": "284 416",
+        "t_z": "42 007 (12,9 %)",
+        "t_celk": "326 423"
+      },
+      {
+        "rok": 2015,
+        "skupina": "cizinci",
+        "n": 42007.0,
+        "poradi": 2,
+        "celk": 326423.0,
+        "t_c": "284 416",
+        "t_z": "42 007 (12,9 %)",
+        "t_celk": "326 423"
+      },
+      {
+        "rok": 2016,
+        "skupina": "s českým občanstvím",
+        "n": 267616.0,
+        "poradi": 1,
+        "celk": 311045.0,
+        "t_c": "267 616",
+        "t_z": "43 429 (14,0 %)",
+        "t_celk": "311 045"
+      },
+      {
+        "rok": 2016,
+        "skupina": "cizinci",
+        "n": 43429.0,
+        "poradi": 2,
+        "celk": 311045.0,
+        "t_c": "267 616",
+        "t_z": "43 429 (14,0 %)",
+        "t_celk": "311 045"
+      },
+      {
+        "rok": 2017,
+        "skupina": "s českým občanstvím",
+        "n": 255022.0,
+        "poradi": 1,
+        "celk": 298665.0,
+        "t_c": "255 022",
+        "t_z": "43 643 (14,6 %)",
+        "t_celk": "298 665"
+      },
+      {
+        "rok": 2017,
+        "skupina": "cizinci",
+        "n": 43643.0,
+        "poradi": 2,
+        "celk": 298665.0,
+        "t_c": "255 022",
+        "t_z": "43 643 (14,6 %)",
+        "t_celk": "298 665"
+      },
+      {
+        "rok": 2018,
+        "skupina": "s českým občanstvím",
+        "n": 245019.0,
+        "poradi": 1,
+        "celk": 289659.0,
+        "t_c": "245 019",
+        "t_z": "44 640 (15,4 %)",
+        "t_celk": "289 659"
+      },
+      {
+        "rok": 2018,
+        "skupina": "cizinci",
+        "n": 44640.0,
+        "poradi": 2,
+        "celk": 289659.0,
+        "t_c": "245 019",
+        "t_z": "44 640 (15,4 %)",
+        "t_celk": "289 659"
+      },
+      {
+        "rok": 2019,
+        "skupina": "s českým občanstvím",
+        "n": 242305.0,
+        "poradi": 1,
+        "celk": 288587.0,
+        "t_c": "242 305",
+        "t_z": "46 282 (16,0 %)",
+        "t_celk": "288 587"
+      },
+      {
+        "rok": 2019,
+        "skupina": "cizinci",
+        "n": 46282.0,
+        "poradi": 2,
+        "celk": 288587.0,
+        "t_c": "242 305",
+        "t_z": "46 282 (16,0 %)",
+        "t_celk": "288 587"
+      },
+      {
+        "rok": 2020,
+        "skupina": "s českým občanstvím",
+        "n": 249148.0,
+        "poradi": 1,
+        "celk": 298986.0,
+        "t_c": "249 148",
+        "t_z": "49 838 (16,7 %)",
+        "t_celk": "298 986"
+      },
+      {
+        "rok": 2020,
+        "skupina": "cizinci",
+        "n": 49838.0,
+        "poradi": 2,
+        "celk": 298986.0,
+        "t_c": "249 148",
+        "t_z": "49 838 (16,7 %)",
+        "t_celk": "298 986"
+      },
+      {
+        "rok": 2021,
+        "skupina": "s českým občanstvím",
+        "n": 251907.0,
+        "poradi": 1,
+        "celk": 303625.0,
+        "t_c": "251 907",
+        "t_z": "51 718 (17,0 %)",
+        "t_celk": "303 625"
+      },
+      {
+        "rok": 2021,
+        "skupina": "cizinci",
+        "n": 51718.0,
+        "poradi": 2,
+        "celk": 303625.0,
+        "t_c": "251 907",
+        "t_z": "51 718 (17,0 %)",
+        "t_celk": "303 625"
+      },
+      {
+        "rok": 2022,
+        "skupina": "s českým občanstvím",
+        "n": 249700.0,
+        "poradi": 1,
+        "celk": 304303.0,
+        "t_c": "249 700",
+        "t_z": "54 603 (17,9 %)",
+        "t_celk": "304 303"
+      },
+      {
+        "rok": 2022,
+        "skupina": "cizinci",
+        "n": 54603.0,
+        "poradi": 2,
+        "celk": 304303.0,
+        "t_c": "249 700",
+        "t_z": "54 603 (17,9 %)",
+        "t_celk": "304 303"
+      },
+      {
+        "rok": 2023,
+        "skupina": "s českým občanstvím",
+        "n": 253160.0,
+        "poradi": 1,
+        "celk": 308518.0,
+        "t_c": "253 160",
+        "t_z": "55 358 (17,9 %)",
+        "t_celk": "308 518"
+      },
+      {
+        "rok": 2023,
+        "skupina": "cizinci",
+        "n": 55358.0,
+        "poradi": 2,
+        "celk": 308518.0,
+        "t_c": "253 160",
+        "t_z": "55 358 (17,9 %)",
+        "t_celk": "308 518"
+      },
+      {
+        "rok": 2024,
+        "skupina": "s českým občanstvím",
+        "n": 258812.0,
+        "poradi": 1,
+        "celk": 314715.0,
+        "t_c": "258 812",
+        "t_z": "55 903 (17,8 %)",
+        "t_celk": "314 715"
+      },
+      {
+        "rok": 2024,
+        "skupina": "cizinci",
+        "n": 55903.0,
+        "poradi": 2,
+        "celk": 314715.0,
+        "t_c": "258 812",
+        "t_z": "55 903 (17,8 %)",
+        "t_celk": "314 715"
+      },
+      {
+        "rok": 2025,
+        "skupina": "s českým občanstvím",
+        "n": 271585.0,
+        "poradi": 1,
+        "celk": 330547.0,
+        "t_c": "271 585",
+        "t_z": "58 962 (17,8 %)",
+        "t_celk": "330 547"
+      },
+      {
+        "rok": 2025,
+        "skupina": "cizinci",
+        "n": 58962.0,
+        "poradi": 2,
+        "celk": 330547.0,
+        "t_c": "271 585",
+        "t_z": "58 962 (17,8 %)",
+        "t_celk": "330 547"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.8
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2020,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "stack": "zero",
+          "scale": {
+            "domain": [
+              0,
+              440000
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              100000,
+              200000,
+              300000,
+              400000
+            ],
+            "format": ",d"
+          }
+        },
+        "color": {
+          "field": "skupina",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "s českým občanstvím",
+              "cizinci"
+            ],
+            "range": [
+              "#c9c9bd",
+              "#de1743"
+            ]
+          }
+        },
+        "order": {
+          "field": "poradi"
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t_celk",
+            "title": "Studenti celkem"
+          },
+          {
+            "field": "t_c",
+            "title": "s českým občanstvím"
+          },
+          {
+            "field": "t_z",
+            "title": "cizinci"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.skupina == 'cizinci' && (datum.rok == 1989 || datum.rok == 2010 || datum.rok == 2025)"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2020,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "celk",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t_celk"
+        }
+      }
+    }
+  ],
+  "_source": "MŠMT podle ČSÚ, [Česko od roku 1989 v číslech, Tab. 12.06](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026)"
+}

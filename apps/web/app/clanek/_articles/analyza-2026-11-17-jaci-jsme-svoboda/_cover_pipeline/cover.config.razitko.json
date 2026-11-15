@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/images/cover-homepage.png",
+      "otisk": "08706c6d39190e85",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/cover.config.cjs": "dac91bb0738cd2f3",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/motiv-homepage.svg": "5c2fad087ab6230c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/images/cover-og.jpg",
+      "otisk": "c2df3be8de59ea78",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/cover.config.cjs": "dac91bb0738cd2f3",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/motiv-og.svg": "433afdb80af6346d"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/images/cover-square.png",
+      "otisk": "d5088c73bb2d146d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/cover.config.cjs": "dac91bb0738cd2f3",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/motiv-square.svg": "33a53833d058233d"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/images/cover-instagram.png",
+      "otisk": "17d02128973de084",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/cover.config.cjs": "dac91bb0738cd2f3",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/motiv-instagram.svg": "c8f5498f7bbb7002"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/images/cover-story.png",
+      "otisk": "6c9a3bdfba94e6f9",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/cover.config.cjs": "dac91bb0738cd2f3",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/motiv-story.svg": "bb3382853064bc62"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:34:34.828Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/index.md",
+  "titulekClanku": "Lidé hodnotí svobodu projevu hůř než před pěti lety",
+  "texty": {
+    "stitek": "1989 × 2026 • Svoboda",
+    "nadtitulek": "",
+    "titulek": "Svobodu projevu chválí méně lidí než před pěti lety",
+    "podtitulek": "Za lepší než před rokem 1989 ji má 57 % lidí, v roce 2019 to bylo 74 %. Za horší ji má 21 %, dvakrát víc než tehdy"
+  }
+}

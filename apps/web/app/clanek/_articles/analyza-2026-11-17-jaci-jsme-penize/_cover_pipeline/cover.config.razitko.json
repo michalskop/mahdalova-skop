@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/images/cover-homepage.png",
+      "otisk": "7a91fa814b828e09",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/cover.config.cjs": "6ed76a15da7f7e6f",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/motiv-homepage.svg": "3512b9501186ba8d"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/images/cover-og.jpg",
+      "otisk": "3d0a900dd5d2bb8f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/cover.config.cjs": "6ed76a15da7f7e6f",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/motiv-og.svg": "52172bf6cc4f8e66"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/images/cover-square.png",
+      "otisk": "c81d66422bc2a8dd",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/cover.config.cjs": "6ed76a15da7f7e6f",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/motiv-square.svg": "d56400d095f26a14"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/images/cover-instagram.png",
+      "otisk": "5668fb441107d74b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/cover.config.cjs": "6ed76a15da7f7e6f",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/motiv-instagram.svg": "85f58229be558aa3"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/images/cover-story.png",
+      "otisk": "ed9561ddb2d5ead2",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/cover.config.cjs": "6ed76a15da7f7e6f",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/motiv-story.svg": "3cfdd386aed94271"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:10:09.181Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/index.md",
+  "titulekClanku": "Za výplatu dnes koupíme víc jídla než v roce 1989, ale méně služeb",
+  "texty": {
+    "stitek": "1989 × 2026 • Peníze",
+    "nadtitulek": "",
+    "titulek": "Z výplaty koupíme víc kuřat, na kadeřníka zbude míň",
+    "podtitulek": "Průměrná čistá mzda dnes koupí šestkrát víc kuřat než v roce 1989, ale jen necelou třetinu pánských stříhání"
+  }
+}

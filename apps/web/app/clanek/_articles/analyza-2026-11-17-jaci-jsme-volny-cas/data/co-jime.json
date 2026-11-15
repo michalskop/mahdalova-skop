@@ -1,0 +1,565 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Češi jedí {dnes|#de1743} víc drůbeže a jižního ovoce, hovězího ubylo na třetinu",
+  "subtitle": "Spotřeba na obyvatele v kilogramech za rok; modře 1989, červeně 2024"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "ukazatel": "Drůbež",
+    "tehdy": 13.0,
+    "dnes": 30.85,
+    "t_tehdy": "13,0 kg (1989)",
+    "t_dnes": "30,9 kg (2024)",
+    "l_tehdy": "13,0",
+    "l_dnes": "30,9",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Jižní ovoce",
+    "tehdy": 16.9,
+    "dnes": 38.09,
+    "t_tehdy": "16,9 kg (1989)",
+    "t_dnes": "38,1 kg (2024)",
+    "l_tehdy": "16,9",
+    "l_dnes": "38,1",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Banány",
+    "tehdy": 3.3,
+    "dnes": 12.65,
+    "t_tehdy": "3,3 kg (1989)",
+    "t_dnes": "12,7 kg (2024)",
+    "l_tehdy": "3,3",
+    "l_dnes": "12,7",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Zelenina",
+    "tehdy": 68.7,
+    "dnes": 91.62,
+    "t_tehdy": "68,7 kg (1989)",
+    "t_dnes": "91,6 kg (2024)",
+    "l_tehdy": "68,7",
+    "l_dnes": "91,6",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Sýry",
+    "tehdy": 7.8,
+    "dnes": 14.59,
+    "t_tehdy": "7,8 kg (1989)",
+    "t_dnes": "14,6 kg (2024)",
+    "l_tehdy": "7,8",
+    "l_dnes": "14,6",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Pšeničné pečivo",
+    "tehdy": 33.0,
+    "dnes": 53.03,
+    "t_tehdy": "33,0 kg (1989)",
+    "t_dnes": "53,0 kg (2024)",
+    "l_tehdy": "33,0",
+    "l_dnes": "53,0",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Hovězí maso",
+    "tehdy": 30.0,
+    "dnes": 9.1,
+    "t_tehdy": "30,0 kg (1989)",
+    "t_dnes": "9,1 kg (2024)",
+    "l_tehdy": "30,0",
+    "l_dnes": "9,1",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Chléb",
+    "tehdy": 56.8,
+    "dnes": 39.48,
+    "t_tehdy": "56,8 kg (1989)",
+    "t_dnes": "39,5 kg (2024)",
+    "l_tehdy": "56,8",
+    "l_dnes": "39,5",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Brambory",
+    "tehdy": 82.8,
+    "dnes": 70.22,
+    "t_tehdy": "82,8 kg (1989)",
+    "t_dnes": "70,2 kg (2024)",
+    "l_tehdy": "82,8",
+    "l_dnes": "70,2",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Máslo",
+    "tehdy": 9.4,
+    "dnes": 5.2,
+    "t_tehdy": "9,4 kg (1989)",
+    "t_dnes": "5,2 kg (2024)",
+    "l_tehdy": "9,4",
+    "l_dnes": "5,2",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Cukr",
+    "tehdy": 39.8,
+    "dnes": 30.76,
+    "t_tehdy": "39,8 kg (1989)",
+    "t_dnes": "30,8 kg (2024)",
+    "l_tehdy": "39,8",
+    "l_dnes": "30,8",
+    "vlevo_dnes": true
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -11,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "datum": -10,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     }
+    },
+    "text": {
+     "field": "ukazatel"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 3,
+    "color": "#bcbcb0"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     },
+     "field": "tehdy"
+    },
+    "x2": {
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     },
+     "field": "tehdy"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     },
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -10,
+       105
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ]
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 03.02](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes",
+ "height": {
+  "step": 52
+ }
+}

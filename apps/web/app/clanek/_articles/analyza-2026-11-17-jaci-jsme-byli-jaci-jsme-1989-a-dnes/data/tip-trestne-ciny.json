@@ -1,0 +1,20 @@
+{
+  "title": "Tipněte si: kolik trestných činů policie zaregistrovala loni?",
+  "otazka": "V roce 1989 policie zaregistrovala 120 768 trestných činů. Kolik jich bylo v roce 2025?",
+  "jednotka": "trestných činů",
+  "min": 0,
+  "max": 500000,
+  "krok": 1000,
+  "vychozi": 120768,
+  "desetinna": 0,
+  "tehdy": {
+    "rok": 1989,
+    "hodnota": 120768
+  },
+  "dnes": {
+    "rok": 2025,
+    "hodnota": 170051
+  },
+  "vysvetleni": "Trestných činů je dnes víc než v roce 1989, ale nejvíc jich bylo po revoluci: vrcholu dosáhla registrovaná kriminalita v roce 1999 s 426 626 činy a od té doby klesá. Čísla z doby před revolucí nemusí být s dnešními plně srovnatelná, protože o registraci rozhodovala tehdejší policie.",
+  "zdroj": "[IKSP z dat Policie ČR](https://iksp.gov.cz/storage/169/Trendy-kriminality-v-Ceske-republice-v-roce-2023-z-pohledu-statistiky-Policie-CR_Diblikova.pdf); [ČSÚ, Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026), Tab. 14.01"
+}

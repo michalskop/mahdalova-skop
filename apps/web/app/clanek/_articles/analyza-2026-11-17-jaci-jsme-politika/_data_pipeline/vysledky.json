@@ -1,0 +1,789 @@
+{
+ "snemovna": [
+  {
+   "volby": "ČNR 1990",
+   "rok": 1990,
+   "zeny_pct": 13.0,
+   "vek": 44.1,
+   "zeny_n": 26,
+   "poslancu": 200,
+   "vek_muzi": 43.8,
+   "vek_zeny": 46.0,
+   "do_39": 71,
+   "od_60": 20
+  },
+  {
+   "volby": "ČNR 1992",
+   "rok": 1992,
+   "zeny_pct": 10.5,
+   "vek": 43.2,
+   "zeny_n": 21,
+   "poslancu": 200,
+   "vek_muzi": 43.1,
+   "vek_zeny": 44.1,
+   "do_39": 67,
+   "od_60": 7
+  },
+  {
+   "volby": "PS 1996",
+   "rok": 1996,
+   "zeny_pct": 15.0,
+   "vek": 43.8,
+   "zeny_n": 30,
+   "poslancu": 200,
+   "vek_muzi": 44.0,
+   "vek_zeny": 43.2,
+   "do_39": 59,
+   "od_60": 6
+  },
+  {
+   "volby": "PS 1998",
+   "rok": 1998,
+   "zeny_pct": 15.0,
+   "vek": 45.2,
+   "zeny_n": 30,
+   "poslancu": 200,
+   "vek_muzi": 45.4,
+   "vek_zeny": 43.8,
+   "do_39": 49,
+   "od_60": 12
+  },
+  {
+   "volby": "PS 2002",
+   "rok": 2002,
+   "zeny_pct": 17.0,
+   "vek": 46.9,
+   "zeny_n": 34,
+   "poslancu": 200,
+   "vek_muzi": 47.0,
+   "vek_zeny": 46.1,
+   "do_39": 47,
+   "od_60": 11
+  },
+  {
+   "volby": "PS 2006",
+   "rok": 2006,
+   "zeny_pct": 15.5,
+   "vek": 47.9,
+   "zeny_n": 31,
+   "poslancu": 200,
+   "vek_muzi": 48.1,
+   "vek_zeny": 46.9,
+   "do_39": 36,
+   "od_60": 16
+  },
+  {
+   "volby": "PS 2010",
+   "rok": 2010,
+   "zeny_pct": 22.0,
+   "vek": 47.2,
+   "zeny_n": 44,
+   "poslancu": 200,
+   "vek_muzi": 47.7,
+   "vek_zeny": 45.5,
+   "do_39": 51,
+   "od_60": 23
+  },
+  {
+   "volby": "PS 2013",
+   "rok": 2013,
+   "zeny_pct": 19.5,
+   "vek": 49.9,
+   "zeny_n": 39,
+   "poslancu": 200,
+   "vek_muzi": 50.3,
+   "vek_zeny": 48.6,
+   "do_39": 38,
+   "od_60": 39
+  },
+  {
+   "volby": "PS 2017",
+   "rok": 2017,
+   "zeny_pct": 22.0,
+   "vek": 47.4,
+   "zeny_n": 44,
+   "poslancu": 200,
+   "vek_muzi": 47.7,
+   "vek_zeny": 46.6,
+   "do_39": 52,
+   "od_60": 32
+  },
+  {
+   "volby": "PS 2021",
+   "rok": 2021,
+   "zeny_pct": 25.0,
+   "vek": 49.8,
+   "zeny_n": 50,
+   "poslancu": 200,
+   "vek_muzi": 50.4,
+   "vek_zeny": 48.1,
+   "do_39": 32,
+   "od_60": 31
+  },
+  {
+   "volby": "PS 2025",
+   "rok": 2025,
+   "zeny_pct": 33.5,
+   "vek": 48.8,
+   "zeny_n": 67,
+   "poslancu": 200,
+   "vek_muzi": 50.2,
+   "vek_zeny": 46.0,
+   "do_39": 39,
+   "od_60": 33
+  }
+ ],
+ "cnr_1989": {
+  "popis": "ČNR (zvolená 1986 na jednotné kandidátce NF)",
+  "den": "1989-11-17",
+  "clenu": 198,
+  "zen": 55,
+  "zeny_pct": 27.8,
+  "vek": 50.6,
+  "vek_n": 197,
+  "nejmladsi": 30.4,
+  "nejstarsi": 89.9
+ },
+ "ps_2026": {
+  "popis": "Poslanecká sněmovna (zvolená 2025)",
+  "den": "2026-11-14",
+  "clenu": 200,
+  "zen": 66,
+  "zeny_pct": 33.0,
+  "vek": 50.2,
+  "vek_n": 199,
+  "nejmladsi": 22.3,
+  "nejstarsi": 76.7
+ },
+ "ps_2025_kontrola": {
+  "popis": "Poslanecká sněmovna – kontrola proti ČSÚ",
+  "den": "2025-10-04",
+  "clenu": 200,
+  "zen": 67,
+  "zeny_pct": 33.5,
+  "vek": 49.3,
+  "vek_n": 200,
+  "nejmladsi": 21.2,
+  "nejstarsi": 75.6
+ },
+ "strany": [
+  {
+   "volby": "ČNR 1990",
+   "kandidovalo": 13,
+   "s_mandaty": 4,
+   "soucet": 200,
+   "strany": {
+    "OF": 127,
+    "KDU-ČSL": 19,
+    "KSČM": 32,
+    "HSD-SMS": 22
+   }
+  },
+  {
+   "volby": "ČNR 1992",
+   "kandidovalo": 19,
+   "s_mandaty": 8,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 15,
+    "SOCDEM": 16,
+    "KSČM": 35,
+    "ODS": 76,
+    "HSD-SMS": 14,
+    "LSU": 16,
+    "ODA": 14,
+    "SPR-RSČ": 14
+   }
+  },
+  {
+   "volby": "PS 1996",
+   "kandidovalo": 16,
+   "s_mandaty": 6,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 18,
+    "SOCDEM": 61,
+    "KSČM": 22,
+    "ODS": 68,
+    "ODA": 13,
+    "SPR-RSČ": 18
+   }
+  },
+  {
+   "volby": "PS 1998",
+   "kandidovalo": 13,
+   "s_mandaty": 5,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 20,
+    "SOCDEM": 74,
+    "KSČM": 24,
+    "ODS": 63,
+    "US-DEU": 19
+   }
+  },
+  {
+   "volby": "PS 2002",
+   "kandidovalo": 28,
+   "s_mandaty": 5,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 22,
+    "SOCDEM": 70,
+    "KSČM": 41,
+    "ODS": 58,
+    "US-DEU": 9
+   }
+  },
+  {
+   "volby": "PS 2006",
+   "kandidovalo": 26,
+   "s_mandaty": 5,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 13,
+    "SOCDEM": 74,
+    "KSČM": 26,
+    "ODS": 81,
+    "Zelení": 6
+   }
+  },
+  {
+   "volby": "PS 2010",
+   "kandidovalo": 26,
+   "s_mandaty": 5,
+   "soucet": 200,
+   "strany": {
+    "SOCDEM": 56,
+    "KSČM": 26,
+    "ODS": 53,
+    "TOP": 41,
+    "VV": 24
+   }
+  },
+  {
+   "volby": "PS 2013",
+   "kandidovalo": 23,
+   "s_mandaty": 7,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 14,
+    "SOCDEM": 50,
+    "KSČM": 33,
+    "ODS": 16,
+    "TOP": 26,
+    "ANO": 47,
+    "Úsvit": 14
+   }
+  },
+  {
+   "volby": "PS 2017",
+   "kandidovalo": 31,
+   "s_mandaty": 9,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 10,
+    "SOCDEM": 15,
+    "KSČM": 15,
+    "ODS": 25,
+    "TOP": 7,
+    "ANO": 78,
+    "Piráti": 22,
+    "SPD": 22,
+    "STAN": 6
+   }
+  },
+  {
+   "volby": "PS 2021",
+   "kandidovalo": 22,
+   "s_mandaty": 7,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 23,
+    "ODS": 34,
+    "TOP": 14,
+    "ANO": 72,
+    "Piráti": 4,
+    "SPD": 20,
+    "STAN": 33
+   }
+  },
+  {
+   "volby": "PS 2025",
+   "kandidovalo": 26,
+   "s_mandaty": 8,
+   "soucet": 200,
+   "strany": {
+    "KDU-ČSL": 16,
+    "ODS": 27,
+    "TOP": 9,
+    "ANO": 80,
+    "Piráti": 18,
+    "SPD": 15,
+    "STAN": 22,
+    "AUTO": 13
+   }
+  }
+ ],
+ "cnr1990_mandaty": {
+  "OF": 127,
+  "KSČ": 32,
+  "MORSL": 22,
+  "KDU": 19
+ },
+ "senat": [
+  {
+   "rok": 1996,
+   "zvoleno": 81,
+   "zeny_pct": 11.1,
+   "zeny_n": 9,
+   "vek": 53.1
+  },
+  {
+   "rok": 1998,
+   "zvoleno": 27,
+   "zeny_pct": 11.1,
+   "zeny_n": 3,
+   "vek": 52.4
+  },
+  {
+   "rok": 2000,
+   "zvoleno": 27,
+   "zeny_pct": 14.8,
+   "zeny_n": 4,
+   "vek": 49.7
+  },
+  {
+   "rok": 2002,
+   "zvoleno": 27,
+   "zeny_pct": 11.1,
+   "zeny_n": 3,
+   "vek": 50.9
+  },
+  {
+   "rok": 2004,
+   "zvoleno": 27,
+   "zeny_pct": 11.1,
+   "zeny_n": 3,
+   "vek": 53.2
+  },
+  {
+   "rok": 2006,
+   "zvoleno": 27,
+   "zeny_pct": 22.2,
+   "zeny_n": 6,
+   "vek": 52.9
+  },
+  {
+   "rok": 2008,
+   "zvoleno": 27,
+   "zeny_pct": 18.5,
+   "zeny_n": 5,
+   "vek": 53.7
+  },
+  {
+   "rok": 2010,
+   "zvoleno": 27,
+   "zeny_pct": 14.8,
+   "zeny_n": 4,
+   "vek": 54.2
+  },
+  {
+   "rok": 2012,
+   "zvoleno": 27,
+   "zeny_pct": 18.5,
+   "zeny_n": 5,
+   "vek": 57.0
+  },
+  {
+   "rok": 2014,
+   "zvoleno": 27,
+   "zeny_pct": 18.5,
+   "zeny_n": 5,
+   "vek": 56.8
+  },
+  {
+   "rok": 2016,
+   "zvoleno": 27,
+   "zeny_pct": 22.2,
+   "zeny_n": 6,
+   "vek": 57.0
+  },
+  {
+   "rok": 2018,
+   "zvoleno": 27,
+   "zeny_pct": 7.4,
+   "zeny_n": 2,
+   "vek": 54.4
+  },
+  {
+   "rok": 2020,
+   "zvoleno": 27,
+   "zeny_pct": 14.8,
+   "zeny_n": 4,
+   "vek": 54.7
+  },
+  {
+   "rok": 2022,
+   "zvoleno": 27,
+   "zeny_pct": 33.3,
+   "zeny_n": 9,
+   "vek": 59.0
+  },
+  {
+   "rok": 2024,
+   "zvoleno": 27,
+   "zeny_pct": 14.8,
+   "zeny_n": 4,
+   "vek": 53.7
+  },
+  {
+   "rok": 2026,
+   "zvoleno": 27,
+   "zeny_pct": 3.7,
+   "zeny_n": 1,
+   "vek": 56.1
+  }
+ ],
+ "senat_2026_slozeni": {
+  "senatoru": 81,
+  "zen": 14,
+  "zeny_pct": 17.3
+ },
+ "funkce": [
+  {
+   "funkce": "Prezident",
+   "jmeno": "Václav Havel",
+   "zena": 0,
+   "od": "1989-12-29",
+   "do": "1992-07-20"
+  },
+  {
+   "funkce": "Prezident",
+   "jmeno": "Václav Havel",
+   "zena": 0,
+   "od": "1993-02-02",
+   "do": "2003-02-02"
+  },
+  {
+   "funkce": "Prezident",
+   "jmeno": "Václav Klaus",
+   "zena": 0,
+   "od": "2003-03-07",
+   "do": "2013-03-07"
+  },
+  {
+   "funkce": "Prezident",
+   "jmeno": "Miloš Zeman",
+   "zena": 0,
+   "od": "2013-03-08",
+   "do": "2023-03-08"
+  },
+  {
+   "funkce": "Prezident",
+   "jmeno": "Petr Pavel",
+   "zena": 0,
+   "od": "2023-03-09",
+   "do": null
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "František Pitra",
+   "zena": 0,
+   "od": "1988-10-12",
+   "do": "1990-02-06"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Petr Pithart",
+   "zena": 0,
+   "od": "1990-02-06",
+   "do": "1992-07-02"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Václav Klaus",
+   "zena": 0,
+   "od": "1992-07-02",
+   "do": "1998-01-02"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Josef Tošovský",
+   "zena": 0,
+   "od": "1998-01-02",
+   "do": "1998-07-17"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Miloš Zeman",
+   "zena": 0,
+   "od": "1998-07-17",
+   "do": "2002-07-12"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Vladimír Špidla",
+   "zena": 0,
+   "od": "2002-07-15",
+   "do": "2004-08-04"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Stanislav Gross",
+   "zena": 0,
+   "od": "2004-08-04",
+   "do": "2005-04-25"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Jiří Paroubek",
+   "zena": 0,
+   "od": "2005-04-25",
+   "do": "2006-08-16"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Mirek Topolánek",
+   "zena": 0,
+   "od": "2006-09-04",
+   "do": "2009-05-08"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Jan Fischer",
+   "zena": 0,
+   "od": "2009-04-09",
+   "do": "2010-07-13"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Petr Nečas",
+   "zena": 0,
+   "od": "2010-06-28",
+   "do": "2013-07-10"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Jiří Rusnok",
+   "zena": 0,
+   "od": "2013-06-25",
+   "do": "2014-01-29"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Bohuslav Sobotka",
+   "zena": 0,
+   "od": "2014-01-29",
+   "do": "2017-12-13"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Andrej Babiš",
+   "zena": 0,
+   "od": "2017-12-06",
+   "do": "2021-12-17"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Petr Fiala",
+   "zena": 0,
+   "od": "2021-11-28",
+   "do": "2025-12-09"
+  },
+  {
+   "funkce": "Předseda vlády",
+   "jmeno": "Andrej Babiš",
+   "zena": 0,
+   "od": "2025-12-09",
+   "do": null
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Josef Kempný",
+   "zena": 0,
+   "od": "1981-06-18",
+   "do": "1989-12-18"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Jaroslav Šafařík",
+   "zena": 0,
+   "od": "1989-12-18",
+   "do": "1990-06-26"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Dagmar Burešová",
+   "zena": 1,
+   "od": "1990-06-26",
+   "do": "1992-06-29"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Milan Uhde",
+   "zena": 0,
+   "od": "1992-06-29",
+   "do": "1996-06-06"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Miloš Zeman",
+   "zena": 0,
+   "od": "1996-06-27",
+   "do": "1998-06-19"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Václav Klaus",
+   "zena": 0,
+   "od": "1998-07-17",
+   "do": "2002-06-20"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Lubomír Zaorálek",
+   "zena": 0,
+   "od": "2002-07-11",
+   "do": "2006-06-15"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Miloslav Vlček",
+   "zena": 0,
+   "od": "2006-08-14",
+   "do": "2010-04-30"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Miroslava Němcová",
+   "zena": 1,
+   "od": "2010-06-24",
+   "do": "2013-08-28"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Jan Hamáček",
+   "zena": 0,
+   "od": "2013-11-27",
+   "do": "2017-10-26"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Radek Vondráček",
+   "zena": 0,
+   "od": "2017-11-22",
+   "do": "2021-10-20"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Markéta Pekarová Adamová",
+   "zena": 1,
+   "od": "2021-11-10",
+   "do": "2025-10-08"
+  },
+  {
+   "funkce": "Předseda ČNR a Sněmovny",
+   "jmeno": "Tomio Okamura",
+   "zena": 0,
+   "od": "2025-11-05",
+   "do": null
+  },
+  {
+   "funkce": "Předseda Senátu",
+   "jmeno": "Petr Pithart",
+   "zena": 0,
+   "od": "1996",
+   "do": "1998"
+  },
+  {
+   "funkce": "Předseda Senátu",
+   "jmeno": "Libuše Benešová",
+   "zena": 1,
+   "od": "1998",
+   "do": "2000"
+  },
+  {
+   "funkce": "Předseda Senátu",
+   "jmeno": "Petr Pithart",
+   "zena": 0,
+   "od": "2000",
+   "do": "2004"
+  },
+  {
+   "funkce": "Předseda Senátu",
+   "jmeno": "Přemysl Sobotka",
+   "zena": 0,
+   "od": "2004",
+   "do": "2010"
+  },
+  {
+   "funkce": "Předseda Senátu",
+   "jmeno": "Milan Štěch",
+   "zena": 0,
+   "od": "2010",
+   "do": "2018"
+  },
+  {
+   "funkce": "Předseda Senátu",
+   "jmeno": "Jaroslav Kubera",
+   "zena": 0,
+   "od": "2018",
+   "do": "2020"
+  },
+  {
+   "funkce": "Předseda Senátu",
+   "jmeno": "Miloš Vystrčil",
+   "zena": 0,
+   "od": "2020",
+   "do": null
+  }
+ ],
+ "vyznamenani": [
+  {
+   "prezident": "Václav Havel",
+   "vse": 546,
+   "zeny": 71,
+   "pct": 13.0,
+   "rady": 180,
+   "rady_zeny": 16,
+   "rady_pct": 8.9,
+   "roky": "1995–2003"
+  },
+  {
+   "prezident": "Václav Klaus",
+   "vse": 228,
+   "zeny": 37,
+   "pct": 16.2,
+   "rady": 72,
+   "rady_zeny": 11,
+   "rady_pct": 15.3,
+   "roky": "2003–2012"
+  },
+  {
+   "prezident": "Miloš Zeman",
+   "vse": 420,
+   "zeny": 64,
+   "pct": 15.2,
+   "rady": 86,
+   "rady_zeny": 8,
+   "rady_pct": 9.3,
+   "roky": "2013–2023"
+  },
+  {
+   "prezident": "Petr Pavel",
+   "vse": 228,
+   "zeny": 65,
+   "pct": 28.5,
+   "rady": 54,
+   "rady_zeny": 17,
+   "rady_pct": 31.5,
+   "roky": "2023–2026"
+  }
+ ],
+ "vyznamenani_predchudci": {
+  "zeny": 172,
+  "vse": 1194,
+  "pct": 14.4
+ }
+}

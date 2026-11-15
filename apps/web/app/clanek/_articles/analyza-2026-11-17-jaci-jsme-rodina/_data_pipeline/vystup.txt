@@ -1,0 +1,68 @@
+== TEHDY × DNES (Tab. 01.01, Tab. 11.03) ==
+snatky: 1989 = 81262 → 2025 = 42548
+vek_nevest: 1989 = 21.8 → 2025 = 30.9
+vek_zenichu: 1989 = 24.6 → 2025 = 32.8
+rozvody: 1989 = 31376 → 2025 = 21231
+rozvodovost_pct: 1989 = 37.1 → 2025 = 41.0
+delka_manzelstvi: 1989 = 10.3 → 2025 = 13.7
+rozv_s_detmi_pct: 1989 = 72.1 → 2025 = 59.0
+narozeni: 1989 = 128356 → 2025 = 77636
+mimo_pct: 1989 = 7.9 → 2025 = 46.8
+matky_do19: 1989 = 17467 → 2025 = 1592
+matky_nad40: 1989 = 665 → 2025 = 3941
+vek_matky_prvni: 1989 = 22.5 → 2025 = 29.2
+plodnost: 1989 = 1.87 → 2025 = 1.28
+upt: 1989 = 111683 → 2023 = 15088
+stav_svobodni: 1989 = 37.2 → 2025 = 44.5
+stav_zenati: 1989 = 49.7 → 2025 = 37.3
+stav_rozvedeni: 1989 = 5.4 → 2025 = 11.6
+stav_ovdoveli: 1989 = 7.6 → 2025 = 6.6
+deti_0_14_pct: 1989 = 21.7 → 2025 = 15.1
+dom_jednotlivcu_pct: 1961 = 17.0 → 2021 = 39.1
+osob_na_domacnost: 1970 = 2.89 → 2021 = 2.15
+
+== KDY SE ZLOM STAL ==
+sňatky 1990 = 90953 (maximum řady: 1990), 1995 = 54956, pokles 1990→1995 o 39.6 %
+sňatky 1995–2025: min 42548 (2025), max 57804 (1997)
+sňatky na 1 000 obyvatel: 1989 7.8, 2025 3.9
+věk svobodných nevěst: 1989 21.8, 1995 24.6, 2005 28.1, 2015 29.8, 2025 30.9
+věk nevěst 1989→2005 +6.3, 2005→2025 +2.8; rozdíl ženich − nevěsta 1989 2.8, 2025 1.9
+sňatky 1990 − 1989 = 9691
+narození 1995 = 96097, pokles 1990→1995 o 26.4 %
+sňatky 2025 = 42548; 2025 je minimum celé řady: True
+narození 1990 = 130564, minimum 90. let 1999 = 89471, pokles o 31.5 %
+narození 2025 = 77636; 2025 je minimum celé řady 1989–2025: True
+narození 2021 = 111793 → 2025 = 77636, pokles o 30.6 %
+plodnost minimum 1999 = 1.13; maximum po roce 2000: 2021 = 1.83
+plodnost 1995 = 1.278, 2025 = 1.282
+plodnost 1990 = 1.89, 1996 = 1.19
+mimo manželství poprvé ≥ 10 %: 1992 (10.7 %)
+mimo manželství poprvé ≥ 20 %: 1999 (20.6 %)
+mimo manželství poprvé ≥ 30 %: 2004 (30.6 %)
+mimo manželství poprvé ≥ 40 %: 2010 (40.3 %)
+mimo manželství maximum 2017 = 49.0 %; od 2015 v pásmu 46.8–49.0 %
+mimo manželství 2025 = 36355 dětí z 77636
+věk matky při 1. dítěti poprvé ≥ 25: 2001 (25.34)
+věk matky při 1. dítěti poprvé ≥ 28: 2013 (28.08)
+věk matky při 1. dítěti 1992 = 22.5, 2005 = 26.6 (+4.1 za 13 let); 2005→2025 +2.6
+porody do 19 let: maximum 1991 = 20045, 2000 = 4468 (pokles o 78 %), 2025 = 1592
+podíl dětí matek do 19 let: 1989 13.6 %, 2025 2.1 %
+porody nad 40 let: 1989 = 665, 2025 = 3941 (×5.9), maximum 2021 = 4828
+matek nad 40 poprvé víc než matek do 19: 2014 (3075 × 2734)
+UPT 1989 = 111683; poprvé pod polovinou 1989 v roce 1994 (54836); 1995 = 49531; poslední 2023 = 15088
+svobodní poprvé víc než ženatí/vdané: 2014 (svobodní 41.27 %, ženatí 40.54 %)
+rodinný stav 2025: svobodní 44.5 %, ženatí 37.3 %, rozvedení 11.6 %, ovdovělí 6.6 %
+úhrnná rozvodovost maximum 2010 = 50.0 %; 1989 = 37.1 %, 2025 = 41.0 %
+rozvody 1999 = 23657 (výkyv; 1998 = 32363, 2000 = 29704)
+rozvody po 20+ letech: 1989 4047 = 12.9 % rozvodů; 2025 5690 = 26.8 %
+rozvody do 1 roku: 1989 2825 = 9.0 %; 2025 776 = 3.7 %
+rozvody s nezletilými dětmi: 1989 72.1 % (~22622 rozvodů), 2025 59.0 % (~12523 rozvodů)
+domácnosti jednotlivců (sčítání): 1961 17.0 %, 1970 19.9 %, 1980 23.7 %, 1991 26.3 %, 2001 30.3 %, 2011 32.5 %, 2021 39.1 %
+nárůst 2011→2021 o 6.6 p. b. (největší za desetiletí: 6)
+osob na hospodařící domácnost: 1970 2.89, 1980 2.70, 1991 2.57, 2001 2.41, 2011 2.34, 2021 2.15
+
+== GRAFY ==
+G1 narození 128356.0 89471.0 111793.0 77636.0 sňatky 81262.0 90953.0 42548.0
+G2 mimo manželství {1989: 7.9, 1999: 20.6, 2010: 40.3, 2017: 49.0, 2025: 46.8}
+G3 rodinný stav, překřížení 2014 {'svobodní': (37.2, 44.5), 'ženatí a vdané': (49.7, 37.3), 'rozvedení': (5.4, 11.6), 'ovdovělí': (7.6, 6.6)}
+G4 domácnosti jednotlivců {1961: 17.0, 1970: 19.9, 1980: 23.7, 1991: 26.3, 2001: 30.3, 2011: 32.5, 2021: 39.1}

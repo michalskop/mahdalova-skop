@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/images/cover-homepage.png",
+      "otisk": "42d84f35c27d7f82",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/cover.config.cjs": "ab32fae01ae3d802",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/motiv-homepage.svg": "5451b054b8b140cc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/images/cover-og.jpg",
+      "otisk": "72514716be324da6",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/cover.config.cjs": "ab32fae01ae3d802",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/motiv-og.svg": "bfebc496e57eae48"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/images/cover-square.png",
+      "otisk": "4f2e98fe0548fff9",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/cover.config.cjs": "ab32fae01ae3d802",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/motiv-square.svg": "66077adcbb0ed150"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/images/cover-instagram.png",
+      "otisk": "1f19848842b9300a",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/cover.config.cjs": "ab32fae01ae3d802",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/motiv-instagram.svg": "d097c60b43b87767"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/images/cover-story.png",
+      "otisk": "b7a758479c344e53",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/cover.config.cjs": "ab32fae01ae3d802",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/motiv-story.svg": "72faafa0e6022474"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:15:48.339Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/index.md",
+  "titulekClanku": "Vysokou školu má skoro třikrát víc dospělých než po revoluci, ženy častěji než muži",
+  "texty": {
+    "stitek": "1989 × 2026 • Vzdělávání",
+    "nadtitulek": "",
+    "titulek": "Vysokoškolaček je skoro čtyřikrát víc než po revoluci",
+    "podtitulek": "Vysokoškoláků dvakrát. V roce 1991 měly diplom 218 tisíc žen, v roce 2021 už 823 tisíc"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/images/cover-homepage.png",
+      "otisk": "51ccd9bf3ba4f1e2",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/cover.config.cjs": "1979e2ecca243692",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/motiv-homepage.svg": "6550b66bfe452bdd"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/images/cover-og.jpg",
+      "otisk": "09982d3693da146d",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/cover.config.cjs": "1979e2ecca243692",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/motiv-og.svg": "604ce10a0042ef48"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/images/cover-square.png",
+      "otisk": "2d230976258d1f39",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/cover.config.cjs": "1979e2ecca243692",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/motiv-square.svg": "557846dbcd5c0c43"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/images/cover-instagram.png",
+      "otisk": "f1f4bb8221aca18b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/cover.config.cjs": "1979e2ecca243692",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/motiv-instagram.svg": "2e0d314ea0b0cad1"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/images/cover-story.png",
+      "otisk": "a1ececbabee66a95",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/cover.config.cjs": "1979e2ecca243692",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/motiv-story.svg": "3ab7aceef74d05fc"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:12:08.401Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/index.md",
+  "titulekClanku": "Čtvrtina bytů je dnes v osobním vlastnictví, po revoluci to nebylo ani procento",
+  "texty": {
+    "stitek": "1989 × 2026 • Bydlení",
+    "nadtitulek": "",
+    "titulek": "Většina bytů patří těm, kdo v nich bydlí",
+    "podtitulek": "Vlastníci bydlí v 61 % obydlených bytů, v roce 1991 to bylo 38 %"
+  }
+}

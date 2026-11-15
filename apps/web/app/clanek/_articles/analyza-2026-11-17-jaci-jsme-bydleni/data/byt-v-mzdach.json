@@ -1,0 +1,203 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Průměrný byt o 60 m² stojí {89 hrubých měsíčních mezd|#de1743}, v roce 2019 to bylo 68",
+    "subtitle": "Cena bytu o 60 m² za průměrnou kupní cenu bytů v Česku, vydělená průměrnou hrubou měsíční mzdou, 2019–2025"
+  },
+  "width": "container",
+  "height": 240,
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 2019,
+        "v": 68.2,
+        "barva": "#c9c9bd",
+        "popisek": "68",
+        "t": "68 mezd",
+        "op": 1
+      },
+      {
+        "rok": 2020,
+        "v": 73.1,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "73 mezd",
+        "op": 1
+      },
+      {
+        "rok": 2021,
+        "v": 85.4,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "85 mezd",
+        "op": 1
+      },
+      {
+        "rok": 2022,
+        "v": 92.8,
+        "barva": "#c9c9bd",
+        "popisek": "93",
+        "t": "93 mezd",
+        "op": 1
+      },
+      {
+        "rok": 2023,
+        "v": 82.2,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "82 mezd",
+        "op": 1
+      },
+      {
+        "rok": 2024,
+        "v": 83.5,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "84 mezd",
+        "op": 1
+      },
+      {
+        "rok": 2025,
+        "v": 89.3,
+        "barva": "#de1743",
+        "popisek": "89",
+        "t": "89 mezd",
+        "op": 1
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.8
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "values": [
+              2019,
+              2022,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "format": ",d"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        },
+        "opacity": {
+          "field": "op",
+          "type": "quantitative",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Byt 60 m² v hrubých mzdách"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "values": [
+              2019,
+              2022,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "format": ",d"
+          }
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [průměrné kupní ceny nemovitostí (data ČÚZK)](https://csu.gov.cz/ceny-nemovitosti) a [Tab. 13.07](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes"
+}

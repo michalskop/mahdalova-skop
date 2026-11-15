@@ -1,0 +1,119 @@
+== SPOTŘEBA POTRAVIN NA OBYVATELE (Tab. 03.02) ==
+  Brambory: 1989 82,8 → 2024 70,2 kg (× 0.85)
+  Zelenina: 1989 68,7 → 2024 91,6 kg (× 1.33)
+  Chléb: 1989 56,8 → 2024 39,5 kg (× 0.70)
+  Pšeničné pečivo: 1989 33,0 → 2024 53,0 kg (× 1.61)
+  Vepřové maso: 1989 49,9 → 2024 43,2 kg (× 0.87)
+  Cukr: 1989 39,8 → 2024 30,8 kg (× 0.77)
+  Jižní ovoce: 1989 16,9 → 2024 38,1 kg (× 2.25)
+  Drůbež: 1989 13,0 → 2024 30,9 kg (× 2.37)
+  Sýry: 1989 7,8 → 2024 14,6 kg (× 1.87)
+  Banány: 1989 3,3 → 2024 12,7 kg (× 3.83)
+  Hovězí maso: 1989 30,0 → 2024 9,1 kg (× 0.30)
+  Máslo: 1989 9,4 → 2024 5,2 kg (× 0.55)
+  Maso celkem: 1989 97,4 → 2024 85,3 kg (× 0.88)
+  Konzumní mléko: 1989 94,3 → 2024 57,6 kg (× 0.61)
+  Vejce: 1989 336,0 → 2024 238,0 ks (× 0.71)
+  Ovoce celkem: 1989 70,5 → 2024 84,4 kg (× 1.20)
+  Rajčata: 1989 5,1 → 2024 12,8 kg (× 2.50)
+  Rýže: 1989 3,9 → 2024 8,6 kg (× 2.21)
+  Minerální a nealko nápoje celkem: 1989 108,5 → 2024 232,7 l (× 2.14)
+  Minerální vody: 1989 14,1 → 2024 52,5 l (× 3.73)
+  Limonády: 1989 46,0 → 2024 85,9 l (× 1.87)
+  nealko maximum: 2008 297.0
+  Sladkosti (čokoláda, čokoládové a jiné cukrovinky, cukrářské výrobky): 1989 12,1 → 2024 18,7 kg (× 1.54)
+== KULTURA (Tab. 12.09) ==
+  Kina (počet): 1989 2 025 → 2024 1 251  (× 0.62)
+  Návštěvy kin (tis.): 1989 51 453 → 2024 13 041 tis. (× 0.25)
+  Představení v kinech (tis.): 1989 541 → 2024 521 tis. (× 0.96)
+  minimum kin: 2005 530.0 | minimum návštěv mimo 2020–21: (8370.825, 1999) | 2019: 18319.0
+  návštěvy kina na obyvatele: 1989 4.97 | 2024 1.2 | 2019: 1.71
+  Návštěvníci státních, krajských a městských divadel (tis.): 1989 6 291 → 2024 3 305 tis. (× 0.53)
+  Návštěvníci všech divadel (tis., od 1995): 1995 5 247 → 2025 6 491 tis. (× 1.24)
+  Divadla se stálým souborem (do 2002 jen státní): 1989 67 → 2025 235  (× 3.51)
+  Veřejné knihovny: 1989 5 751 → 2025 5 097  (× 0.89)
+  Registrovaní čtenáři (tis.): 1989 1 708 → 2025 1 255 tis. (× 0.73)
+  Výpůjčky (tis.): 1989 62 102 → 2025 29 756 tis. (× 0.48)
+  výpůjčky 2024: 41551.0 | maximum: 2004 72875.0 | 2025 nová metodika bez prodloužení výpůjček (pozn. 3 tabulky)
+  výpůjčky na obyvatele 1989: 6.0 2024: 3.8
+  Muzea a galerie: 1989 185 → 2025 458  (× 2.48)
+  Návštěvníci muzeí a galerií (tis.): 1989 13 815 → 2025 13 936 tis. (× 1.01)
+  muzea návštěvy na obyvatele 1989: 1.33 2025: 1.28
+  Návštěvníci památkových objektů (tis., od 1990): 1990 5 999 → 2025 15 452 tis. (× 2.58)
+  Památkové objekty zpřístupněné (od 1990): 1990 121 → 2025 378  (× 3.12)
+  Koncerty hudebních souborů (orchestry, komorní soubory, sbory): 1989 3 328 → 2024 2 427  (× 0.73)
+  Návštěvníci vlastních koncertů hudebních souborů (tis., od 2001): 2001 441,6 → 2024 472,9 tis. (× 1.07)
+  koncerty 2019: 3219.0
+  Výstavy muzeí a galerií: 1989 3 221 → 2025 3 686  (× 1.14)
+  kino minus: pokles návštěv 1989 → posl. %: 74.7
+== TISK A KNIHY (Tab. 12.10) ==
+  Knihy (tituly) 1989: 3767.0 | 2000 stará/nová řada: 11965.0 11965.0 | 2025: 14708.0 | maximum: 2011 18985.0
+  Noviny a časopisy (nové členění): 2000 3 295 → 2025 4 574 titulů (× 1.39)
+  deníky (nové členění): 2000 103 → 2025 60 titulů (× 0.58)
+  týdeníky (nové členění): 2000 271 → 2024 72 titulů (× 0.27)
+  čtrnáctideníky (nové členění): 2000 1 462 → 2024 586 titulů (× 0.40)
+  ostatní (nové členění): 2000 1 459 → 2024 4 180 titulů (× 2.86)
+  dětské knihy (nové členění): 2000 579 → 2025 2 477 titulů (× 4.28)
+  beletrie (nové členění): 2001 3 726 → 2025 5 810 titulů (× 1.56)
+== ROZHLAS A TELEVIZE (Tab. 12.11, 12.12) ==
+  Rozhlas: hodiny vysílání (veřejnoprávní + soukromé): 1989 43 240 | 2005 559 989 | 2024 730 900 | × 17 | hodin denně 1989 118.5, 2024 1997
+  TV: hodiny vysílání (veřejnoprávní + soukromé): 1989 7 776 | 2005 342 309 | 2024 1 446 700 | × 186 | hodin denně 1989 21.3, 2024 3953
+  Rozhlas: programy: první rok 2015 118 | 2024 108
+  Rozhlas: celostátní: první rok 2015 14 | 2024 32
+  TV: programy: první rok 2016 352 | 2024 335
+  TV: celostátní: první rok 2016 28 | 2024 49
+== TELEFONY, POČÍTAČ, INTERNET (Tab. 08.02, 08.03) ==
+  Pevné linky na 100 obyvatel: 1989 15,0 → 2023 3,4  (× 0.22)
+  pevné linky maximum: 2001 37.48194766517911
+  Aktivní SIM karty na 100 obyvatel: 1995 0,4 → 2023 142,7  (× 321.48)
+  mobilů víc než pevných linek poprvé: 2000 42.25374337191885 vs 35.51672587840156
+  Domácnosti s počítačem %: 1989 1,8 → 2025 83,5 % (× 46.40)
+  Domácnosti s internetem %: 2001 5,8 → 2025 90,0 % (× 15.53)
+  Domácnosti seniorů 65+ s internetem %: 2012 11,2 → 2025 60,3 % (× 5.38)
+  Domácnosti s dětmi s internetem %: 2001 9,7 → 2025 99,4 % (× 10.27)
+  internet má aspoň polovina domácností od roku 2010 55.95366037650976
+== UBYTOVACÍ ZAŘÍZENÍ A HOSTÉ (Tab. 10.01) ==
+  Ubytovací zařízení: 1989 2 863 → 2025 10 012  (× 3.50)
+  Lůžka: 1989 342 246 → 2025 562 467  (× 1.64)
+  Hosté (tis.): 1989 9 108 → 2025 23 540 tis. (× 2.58)
+  Hosté rezidenti (tis.): 1989 5 904 → 2025 12 640 tis. (× 2.14)
+  Hosté nerezidenti (tis.): 1989 3 204 → 2025 10 900 tis. (× 3.40)
+  Přenocování (tis.): 1989 28 715 → 2025 59 102 tis. (× 2.06)
+  Přenocování rezidentů (tis., od 1995): 1995 13 514 → 2025 32 362 tis. (× 2.39)
+  Průměrný počet přenocování: 1989 3,10 → 2025 2,51  (× 0.81)
+  Průměrný počet přenocování rezidentů (od 1995): 1995 3,70 → 2025 2,56  (× 0.69)
+  rezidenti 2019: 11107.866000000002 | 2020: 8052.274 | podíl rezidentů na hostech 1989: 64.8 % 2025: 53.7 %
+  počet obyvatel (tis.) 1989: 10362.102 2024: 10909.5 2025: 10915.839
+== CESTY REZIDENTŮ 15+ (ČSÚ tab. 4.1.0, 4.2.0, 4.2.2) ==
+  delší cesty celkem (tis.): 2011 11 475 → 2025 13 856 (+20.8 %)
+  delší cesty v ČR (tis.): 2011 7 222 → 2025 7 435 (+2.9 %)
+  delší cesty do zahraničí (tis.): 2011 4 252 → 2025 6 421 (+51.0 %)
+  kratší cesty celkem (tis.): 2011 22 510 → 2025 15 189 (-32.5 %)
+  kratší cesty v ČR (tis.): 2011 21 483 → 2025 13 609 (-36.7 %)
+  kratší cesty do zahraničí (tis.): 2011 1 027 → 2025 1 580 (+53.9 %)
+  delší do zahraničí 2019 / 2020 / 2022: 5103 1639 5254
+  podíl zahraničí na delších cestách: 2011 37.1 % 2025 46.3 %
+  2011: vlastní rekreační zařízení 2 227 tis. = 30.8 % delších cest po ČR | letadlo 1 494 tis. | auto 7 653 | zájezd CK 2 088 | účel rekreace 8 644
+  2025: vlastní rekreační zařízení 2 292 tis. = 30.8 % delších cest po ČR | letadlo 3 018 tis. | auto 9 317 | zájezd CK 2 986 | účel rekreace 11 352
+  letadlo × 2.02, zájezdy × 1.43
+  TOP CÍLE 2011 [('Chorvatsko', 793, '18.6 %'), ('Itálie', 563, '13.2 %'), ('Slovensko', 535, '12.6 %'), ('Řecko', 318, '7.5 %'), ('Rakousko', 261, '6.1 %'), ('Španělsko', 231, '5.4 %'), ('Francie', 214, '5.0 %'), ('Egypt', 208, '4.9 %')]
+  TOP CÍLE 2019 [('Chorvatsko', 740, '14.5 %'), ('Slovensko', 697, '13.7 %'), ('Itálie', 605, '11.9 %'), ('Rakousko', 409, '8.0 %'), ('Řecko', 407, '8.0 %'), ('Turecko', 324, '6.3 %'), ('Egypt', 234, '4.6 %'), ('Španělsko', 184, '3.6 %')]
+  TOP CÍLE 2025 [('Itálie', 905, '14.1 %'), ('Chorvatsko', 712, '11.1 %'), ('Egypt', 570, '8.9 %'), ('Rakousko', 512, '8.0 %'), ('Řecko', 473, '7.4 %'), ('Slovensko', 448, '7.0 %'), ('Turecko', 368, '5.7 %'), ('Španělsko', 344, '5.4 %')]
+== DOVOLENÁ (Eurostat ilc_mdes02, % lidí, kteří si nemohou dovolit týden dovolené mimo domov) ==
+  CZ: 2005 40.6 | max 2012 43.5 | min 2022 18.0 | 2025 19.0 | EU27 2010 38.8 2025 27.5
+  CZ pod hranicí chudoby (60 % mediánu): 2012 81.3 | 2025 55.7
+  CZ samoživitelé s dětmi (A1_DCH): 2025 37.4
+  GRAF destinace [('Itálie', 13.2, 14.1), ('Chorvatsko', 18.6, 11.1), ('Egypt', 4.9, 8.9), ('Rakousko', 6.1, 8.0), ('Řecko', 7.5, 7.4), ('Slovensko', 12.6, 7.0), ('Turecko', 4.0, 5.7), ('Španělsko', 5.4, 5.4)]
+== ČETBA ==
+  čtenáři 15+ (aspoň 1 kniha za rok), NK: {2007: 83, 2010: 79, 2013: 84, 2018: 78, 2023: 73} | N: ['2007, N=1551', '2010, N=1550', '2013, N=1584', '2018, N=2007', '2023, N=2010']
+  Trávníček 2024: přečte za rok v průměru (\d+,\d) knih \(v roc → ('9,9', '12,6', '3', '5')
+  Trávníček 2024: Celkem (\d+) % obyvatel České republiky starš → ('73', '78')
+  Trávníček 2024: za rok (\d+,\d) knihy . ženy (\d+,\d) knihy → ('6,8', '12,6')
+  Trávníček 2024: elektronické knihy \((\d+) % populace; v roce → ('31', '18')
+  Trávníček 2024: Audioknihy alespoň občas poslouchá (\d+) % po → ('37', '14')
+  Trávníček 2024: navštívilo i v roce 2023 (\d+) % obyvatel → ('28',)
+  Trávníček 2024: Sběr dat realizovala mezi (.{0,40}?) společno → ('25. květnem a 20. červnem 2023',)
+  Eurostat 2022, 16+, nepřečetli žádnou knihu: CZ 35.8 EU27 47.2 | 10 a více knih: CZ 17.2 EU27 13.8
+== POHYB (EHIS, sport a jízda na kole mimo práci, minut týdně, 15+) ==
+  CZ: 0 minut 2014 47.4 2019 51.9 | 150+ minut 2014 28.4 2019 25.1
+  EU27_2020: 0 minut 2014 49.8 2019 47.3 | 150+ minut 2014 29.9 2019 32.7

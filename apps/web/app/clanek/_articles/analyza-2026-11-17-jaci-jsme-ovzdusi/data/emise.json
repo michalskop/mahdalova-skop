@@ -1,0 +1,599 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Emise oxidu siřičitého skoro zmizely, {benzo[a]pyrenu|#de1743} se vypouští stejně jako v roce 2000",
+  "subtitle": "Roční emise v Česku v % roku 1990 (100 % = 1 754 tis. t oxidu siřičitého, 79,7 t benzo[a]pyrenu); 1990–2023"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "rok": 1990,
+    "latka": "oxid siřičitý",
+    "index": 100.0,
+    "t": "1 753,8 tis. t (100 % roku 1990)"
+   },
+   {
+    "rok": 1990,
+    "latka": "benzo[a]pyren",
+    "index": 100.0,
+    "t": "79,7 t (100 % roku 1990)"
+   },
+   {
+    "rok": 1991,
+    "latka": "oxid siřičitý",
+    "index": 94.1,
+    "t": "1 649,7 tis. t (94 % roku 1990)"
+   },
+   {
+    "rok": 1991,
+    "latka": "benzo[a]pyren",
+    "index": 88.9,
+    "t": "70,9 t (89 % roku 1990)"
+   },
+   {
+    "rok": 1992,
+    "latka": "oxid siřičitý",
+    "index": 78.8,
+    "t": "1 382,0 tis. t (79 % roku 1990)"
+   },
+   {
+    "rok": 1992,
+    "latka": "benzo[a]pyren",
+    "index": 80.5,
+    "t": "64,2 t (81 % roku 1990)"
+   },
+   {
+    "rok": 1993,
+    "latka": "oxid siřičitý",
+    "index": 74.3,
+    "t": "1 302,4 tis. t (74 % roku 1990)"
+   },
+   {
+    "rok": 1993,
+    "latka": "benzo[a]pyren",
+    "index": 72.9,
+    "t": "58,1 t (73 % roku 1990)"
+   },
+   {
+    "rok": 1994,
+    "latka": "oxid siřičitý",
+    "index": 66.1,
+    "t": "1 159,0 tis. t (66 % roku 1990)"
+   },
+   {
+    "rok": 1994,
+    "latka": "benzo[a]pyren",
+    "index": 69.9,
+    "t": "55,7 t (70 % roku 1990)"
+   },
+   {
+    "rok": 1995,
+    "latka": "oxid siřičitý",
+    "index": 60.4,
+    "t": "1 058,8 tis. t (60 % roku 1990)"
+   },
+   {
+    "rok": 1995,
+    "latka": "benzo[a]pyren",
+    "index": 66.1,
+    "t": "52,7 t (66 % roku 1990)"
+   },
+   {
+    "rok": 1996,
+    "latka": "oxid siřičitý",
+    "index": 52.1,
+    "t": "914,3 tis. t (52 % roku 1990)"
+   },
+   {
+    "rok": 1996,
+    "latka": "benzo[a]pyren",
+    "index": 61.1,
+    "t": "48,7 t (61 % roku 1990)"
+   },
+   {
+    "rok": 1997,
+    "latka": "oxid siřičitý",
+    "index": 39.6,
+    "t": "694,4 tis. t (40 % roku 1990)"
+   },
+   {
+    "rok": 1997,
+    "latka": "benzo[a]pyren",
+    "index": 53.4,
+    "t": "42,6 t (53 % roku 1990)"
+   },
+   {
+    "rok": 1998,
+    "latka": "oxid siřičitý",
+    "index": 24.3,
+    "t": "425,3 tis. t (24 % roku 1990)"
+   },
+   {
+    "rok": 1998,
+    "latka": "benzo[a]pyren",
+    "index": 46.2,
+    "t": "36,8 t (46 % roku 1990)"
+   },
+   {
+    "rok": 1999,
+    "latka": "oxid siřičitý",
+    "index": 13.2,
+    "t": "231,9 tis. t (13 % roku 1990)"
+   },
+   {
+    "rok": 1999,
+    "latka": "benzo[a]pyren",
+    "index": 18.0,
+    "t": "14,3 t (18 % roku 1990)"
+   },
+   {
+    "rok": 2000,
+    "latka": "oxid siřičitý",
+    "index": 13.3,
+    "t": "233,7 tis. t (13 % roku 1990)"
+   },
+   {
+    "rok": 2000,
+    "latka": "benzo[a]pyren",
+    "index": 18.8,
+    "t": "15,0 t (19 % roku 1990)"
+   },
+   {
+    "rok": 2001,
+    "latka": "oxid siřičitý",
+    "index": 13.0,
+    "t": "228,7 tis. t (13 % roku 1990)"
+   },
+   {
+    "rok": 2001,
+    "latka": "benzo[a]pyren",
+    "index": 19.8,
+    "t": "15,8 t (20 % roku 1990)"
+   },
+   {
+    "rok": 2002,
+    "latka": "oxid siřičitý",
+    "index": 12.7,
+    "t": "223,4 tis. t (13 % roku 1990)"
+   },
+   {
+    "rok": 2002,
+    "latka": "benzo[a]pyren",
+    "index": 19.3,
+    "t": "15,4 t (19 % roku 1990)"
+   },
+   {
+    "rok": 2003,
+    "latka": "oxid siřičitý",
+    "index": 12.5,
+    "t": "218,4 tis. t (12 % roku 1990)"
+   },
+   {
+    "rok": 2003,
+    "latka": "benzo[a]pyren",
+    "index": 19.7,
+    "t": "15,7 t (20 % roku 1990)"
+   },
+   {
+    "rok": 2004,
+    "latka": "oxid siřičitý",
+    "index": 12.3,
+    "t": "215,1 tis. t (12 % roku 1990)"
+   },
+   {
+    "rok": 2004,
+    "latka": "benzo[a]pyren",
+    "index": 20.1,
+    "t": "16,0 t (20 % roku 1990)"
+   },
+   {
+    "rok": 2005,
+    "latka": "oxid siřičitý",
+    "index": 11.9,
+    "t": "208,5 tis. t (12 % roku 1990)"
+   },
+   {
+    "rok": 2005,
+    "latka": "benzo[a]pyren",
+    "index": 18.7,
+    "t": "14,9 t (19 % roku 1990)"
+   },
+   {
+    "rok": 2006,
+    "latka": "oxid siřičitý",
+    "index": 11.8,
+    "t": "206,8 tis. t (12 % roku 1990)"
+   },
+   {
+    "rok": 2006,
+    "latka": "benzo[a]pyren",
+    "index": 19.5,
+    "t": "15,6 t (20 % roku 1990)"
+   },
+   {
+    "rok": 2007,
+    "latka": "oxid siřičitý",
+    "index": 12.1,
+    "t": "212,1 tis. t (12 % roku 1990)"
+   },
+   {
+    "rok": 2007,
+    "latka": "benzo[a]pyren",
+    "index": 19.3,
+    "t": "15,4 t (19 % roku 1990)"
+   },
+   {
+    "rok": 2008,
+    "latka": "oxid siřičitý",
+    "index": 9.7,
+    "t": "170,1 tis. t (10 % roku 1990)"
+   },
+   {
+    "rok": 2008,
+    "latka": "benzo[a]pyren",
+    "index": 19.7,
+    "t": "15,7 t (20 % roku 1990)"
+   },
+   {
+    "rok": 2009,
+    "latka": "oxid siřičitý",
+    "index": 9.6,
+    "t": "168,8 tis. t (10 % roku 1990)"
+   },
+   {
+    "rok": 2009,
+    "latka": "benzo[a]pyren",
+    "index": 21.2,
+    "t": "16,9 t (21 % roku 1990)"
+   },
+   {
+    "rok": 2010,
+    "latka": "oxid siřičitý",
+    "index": 9.3,
+    "t": "163,9 tis. t (9 % roku 1990)"
+   },
+   {
+    "rok": 2010,
+    "latka": "benzo[a]pyren",
+    "index": 23.5,
+    "t": "18,7 t (24 % roku 1990)"
+   },
+   {
+    "rok": 2011,
+    "latka": "oxid siřičitý",
+    "index": 9.6,
+    "t": "167,5 tis. t (10 % roku 1990)"
+   },
+   {
+    "rok": 2011,
+    "latka": "benzo[a]pyren",
+    "index": 23.7,
+    "t": "18,9 t (24 % roku 1990)"
+   },
+   {
+    "rok": 2012,
+    "latka": "oxid siřičitý",
+    "index": 9.1,
+    "t": "160,2 tis. t (9 % roku 1990)"
+   },
+   {
+    "rok": 2012,
+    "latka": "benzo[a]pyren",
+    "index": 25.0,
+    "t": "20,0 t (25 % roku 1990)"
+   },
+   {
+    "rok": 2013,
+    "latka": "oxid siřičitý",
+    "index": 8.3,
+    "t": "145,3 tis. t (8 % roku 1990)"
+   },
+   {
+    "rok": 2013,
+    "latka": "benzo[a]pyren",
+    "index": 25.9,
+    "t": "20,6 t (26 % roku 1990)"
+   },
+   {
+    "rok": 2014,
+    "latka": "oxid siřičitý",
+    "index": 7.7,
+    "t": "134,5 tis. t (8 % roku 1990)"
+   },
+   {
+    "rok": 2014,
+    "latka": "benzo[a]pyren",
+    "index": 25.2,
+    "t": "20,1 t (25 % roku 1990)"
+   },
+   {
+    "rok": 2015,
+    "latka": "oxid siřičitý",
+    "index": 7.4,
+    "t": "129,9 tis. t (7 % roku 1990)"
+   },
+   {
+    "rok": 2015,
+    "latka": "benzo[a]pyren",
+    "index": 26.3,
+    "t": "21,0 t (26 % roku 1990)"
+   },
+   {
+    "rok": 2016,
+    "latka": "oxid siřičitý",
+    "index": 6.6,
+    "t": "115,6 tis. t (7 % roku 1990)"
+   },
+   {
+    "rok": 2016,
+    "latka": "benzo[a]pyren",
+    "index": 25.7,
+    "t": "20,5 t (26 % roku 1990)"
+   },
+   {
+    "rok": 2017,
+    "latka": "oxid siřičitý",
+    "index": 6.3,
+    "t": "109,7 tis. t (6 % roku 1990)"
+   },
+   {
+    "rok": 2017,
+    "latka": "benzo[a]pyren",
+    "index": 25.4,
+    "t": "20,2 t (25 % roku 1990)"
+   },
+   {
+    "rok": 2018,
+    "latka": "oxid siřičitý",
+    "index": 5.5,
+    "t": "96,6 tis. t (6 % roku 1990)"
+   },
+   {
+    "rok": 2018,
+    "latka": "benzo[a]pyren",
+    "index": 24.7,
+    "t": "19,7 t (25 % roku 1990)"
+   },
+   {
+    "rok": 2019,
+    "latka": "oxid siřičitý",
+    "index": 4.5,
+    "t": "79,1 tis. t (5 % roku 1990)"
+   },
+   {
+    "rok": 2019,
+    "latka": "benzo[a]pyren",
+    "index": 23.9,
+    "t": "19,1 t (24 % roku 1990)"
+   },
+   {
+    "rok": 2020,
+    "latka": "oxid siřičitý",
+    "index": 3.8,
+    "t": "67,1 tis. t (4 % roku 1990)"
+   },
+   {
+    "rok": 2020,
+    "latka": "benzo[a]pyren",
+    "index": 23.4,
+    "t": "18,7 t (23 % roku 1990)"
+   },
+   {
+    "rok": 2021,
+    "latka": "oxid siřičitý",
+    "index": 3.4,
+    "t": "60,2 tis. t (3 % roku 1990)"
+   },
+   {
+    "rok": 2021,
+    "latka": "benzo[a]pyren",
+    "index": 24.4,
+    "t": "19,5 t (24 % roku 1990)"
+   },
+   {
+    "rok": 2022,
+    "latka": "oxid siřičitý",
+    "index": 3.7,
+    "t": "64,2 tis. t (4 % roku 1990)"
+   },
+   {
+    "rok": 2022,
+    "latka": "benzo[a]pyren",
+    "index": 22.5,
+    "t": "17,9 t (22 % roku 1990)"
+   },
+   {
+    "rok": 2023,
+    "latka": "oxid siřičitý",
+    "index": 2.8,
+    "t": "48,5 tis. t (3 % roku 1990)",
+    "popisek": "oxid siřičitý 3 %"
+   },
+   {
+    "rok": 2023,
+    "latka": "benzo[a]pyren",
+    "index": 18.6,
+    "t": "14,8 t (19 % roku 1990)",
+    "popisek": "benzo[a]pyren 19 %"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1990,
+       2023
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1990,
+       2000,
+       2010,
+       2023
+      ]
+     }
+    },
+    "y": {
+     "field": "index",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       110
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       25,
+       50,
+       75,
+       100
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "latka",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "oxid siřičitý",
+       "benzo[a]pyren"
+      ],
+      "range": [
+       "#6267a3",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "latka",
+      "title": "Látka"
+     },
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t",
+      "title": "Emise"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.rok == 2023"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "bottom",
+    "dy": -8,
+    "fontSize": 12,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1990,
+       2023
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1990,
+       2000,
+       2010,
+       2023
+      ]
+     }
+    },
+    "y": {
+     "field": "index",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       110
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       25,
+       50,
+       75,
+       100
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "popisek"
+    },
+    "color": {
+     "field": "latka",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "oxid siřičitý",
+       "benzo[a]pyren"
+      ],
+      "range": [
+       "#6267a3",
+       "#de1743"
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "_source": "ČHMÚ, [emisní inventura](https://opendata.chmi.cz/air_quality/products/emissions/inventory/CZ-Annex-I-rev18-11-1990-2023-v11.xlsx); výpočet DataTimes",
+ "height": 260
+}

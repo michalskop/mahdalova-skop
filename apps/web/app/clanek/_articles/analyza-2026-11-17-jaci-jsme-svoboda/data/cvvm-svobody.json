@@ -1,0 +1,386 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Svobodu projevu hodnotí lidé {v roce 2024|#de1743} lépe než před rokem 1989 méně často než {v roce 2019|#6267a3}",
+    "subtitle": "Podíl lidí, podle nichž je dnes situace lidí jako oni v dané oblasti „mnohem či trochu lepší“ než před rokem 1989, v %"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "oblast": "Studovat, pracovat a cestovat do zahraničí",
+        "tehdy": 82,
+        "dnes": 77,
+        "l_t": "82",
+        "l_d": "77",
+        "vlevo": true,
+        "t_t": "lépe 82 %, hůř 8 %",
+        "t_d": "lépe 77 %, hůř 17 %"
+      },
+      {
+        "oblast": "Svobodný přístup k informacím",
+        "tehdy": 73,
+        "dnes": 64,
+        "l_t": "73",
+        "l_d": "64",
+        "vlevo": true,
+        "t_t": "lépe 73 %, hůř 10 %",
+        "t_d": "lépe 64 %, hůř 21 %"
+      },
+      {
+        "oblast": "Svobodně se účastnit veřejného života",
+        "tehdy": 67,
+        "dnes": 61,
+        "l_t": "67",
+        "l_d": "61",
+        "vlevo": true,
+        "t_t": "lépe 67 %, hůř 8 %",
+        "t_d": "lépe 61 %, hůř 14 %"
+      },
+      {
+        "oblast": "Vyjádřit svůj názor",
+        "tehdy": 74,
+        "dnes": 57,
+        "l_t": "74",
+        "l_d": "57",
+        "vlevo": true,
+        "t_t": "lépe 74 %, hůř 10 %",
+        "t_d": "lépe 57 %, hůř 21 %"
+      },
+      {
+        "oblast": "Ovlivňovat politická rozhodnutí",
+        "tehdy": 45,
+        "dnes": 42,
+        "l_t": "45",
+        "l_d": "42",
+        "vlevo": true,
+        "t_t": "lépe 45 %, hůř 16 %",
+        "t_d": "lépe 42 %, hůř 27 %"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -9,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "datum": 0,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          }
+        },
+        "text": {
+          "field": "oblast"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#bcbcb0"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "tehdy"
+        },
+        "x2": {
+          "field": "dnes"
+        },
+        "tooltip": [
+          {
+            "field": "oblast",
+            "title": "Oblast"
+          },
+          {
+            "field": "t_t",
+            "title": "2019"
+          },
+          {
+            "field": "t_d",
+            "title": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 140,
+        "opacity": 1,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "tehdy"
+        },
+        "tooltip": [
+          {
+            "field": "oblast",
+            "title": "Oblast"
+          },
+          {
+            "field": "t_t",
+            "title": "2019"
+          },
+          {
+            "field": "t_d",
+            "title": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 140,
+        "opacity": 1,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "dnes"
+        },
+        "tooltip": [
+          {
+            "field": "oblast",
+            "title": "Oblast"
+          },
+          {
+            "field": "t_t",
+            "title": "2019"
+          },
+          {
+            "field": "t_d",
+            "title": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 9,
+        "fontSize": 11,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "tehdy"
+        },
+        "text": {
+          "field": "l_t"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -9,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "dnes"
+        },
+        "text": {
+          "field": "l_d"
+        }
+      }
+    }
+  ],
+  "_source": "CVVM SOÚ AV ČR, [Třicet pět let od sametové revoluce](https://cvvm.soc.cas.cz/images/articles/files/5889/pd241111.pdf), tab. 4; 2024: 922 respondentů 15+",
+  "height": {
+    "step": 46
+  }
+}

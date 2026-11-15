@@ -1,0 +1,1026 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Reálná mzda je {skoro dvojnásobná|#de1743}, i když dvakrát prudce klesla",
+  "subtitle": "Kupní síla průměrné hrubé mzdy a průměrného starobního důchodu očištěná o inflaci, rok 1989 = 100. 2025 předběžně"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "rok": 1989,
+    "rada": "Reálná mzda",
+    "v": 100.0,
+    "t": "100,0"
+   },
+   {
+    "rok": 1989,
+    "rada": "Reálný starobní důchod",
+    "v": 100.0,
+    "t": "100,0"
+   },
+   {
+    "rok": 1990,
+    "rada": "Reálná mzda",
+    "v": 94.5,
+    "t": "94,5"
+   },
+   {
+    "rok": 1990,
+    "rada": "Reálný starobní důchod",
+    "v": 98.5,
+    "t": "98,5"
+   },
+   {
+    "rok": 1991,
+    "rada": "Reálná mzda",
+    "v": 69.6,
+    "t": "69,6"
+   },
+   {
+    "rok": 1991,
+    "rada": "Reálný starobní důchod",
+    "v": 75.5,
+    "t": "75,5"
+   },
+   {
+    "rok": 1992,
+    "rada": "Reálná mzda",
+    "v": 76.8,
+    "t": "76,8"
+   },
+   {
+    "rok": 1992,
+    "rada": "Reálný starobní důchod",
+    "v": 74.3,
+    "t": "74,3"
+   },
+   {
+    "rok": 1993,
+    "rada": "Reálná mzda",
+    "v": 79.7,
+    "t": "79,7"
+   },
+   {
+    "rok": 1993,
+    "rada": "Reálný starobní důchod",
+    "v": 70.5,
+    "t": "70,5"
+   },
+   {
+    "rok": 1994,
+    "rada": "Reálná mzda",
+    "v": 85.9,
+    "t": "85,9"
+   },
+   {
+    "rok": 1994,
+    "rada": "Reálný starobní důchod",
+    "v": 71.0,
+    "t": "71,0"
+   },
+   {
+    "rok": 1995,
+    "rada": "Reálná mzda",
+    "v": 93.3,
+    "t": "93,3"
+   },
+   {
+    "rok": 1995,
+    "rada": "Reálný starobní důchod",
+    "v": 75.3,
+    "t": "75,3"
+   },
+   {
+    "rok": 1996,
+    "rada": "Reálná mzda",
+    "v": 101.5,
+    "t": "101,5"
+   },
+   {
+    "rok": 1996,
+    "rada": "Reálný starobní důchod",
+    "v": 81.0,
+    "t": "81,0"
+   },
+   {
+    "rok": 1997,
+    "rada": "Reálná mzda",
+    "v": 102.8,
+    "t": "102,8"
+   },
+   {
+    "rok": 1997,
+    "rada": "Reálný starobní důchod",
+    "v": 84.7,
+    "t": "84,7"
+   },
+   {
+    "rok": 1998,
+    "rada": "Reálná mzda",
+    "v": 101.3,
+    "t": "101,3"
+   },
+   {
+    "rok": 1998,
+    "rada": "Reálný starobní důchod",
+    "v": 82.8,
+    "t": "82,8"
+   },
+   {
+    "rok": 1999,
+    "rada": "Reálná mzda",
+    "v": 107.6,
+    "t": "107,6"
+   },
+   {
+    "rok": 1999,
+    "rada": "Reálný starobní důchod",
+    "v": 86.3,
+    "t": "86,3"
+   },
+   {
+    "rok": 2000,
+    "rada": "Reálná mzda",
+    "v": 110.0,
+    "t": "110,0"
+   },
+   {
+    "rok": 2000,
+    "rada": "Reálný starobní důchod",
+    "v": 85.9,
+    "t": "85,9"
+   },
+   {
+    "rok": 2001,
+    "rada": "Reálná mzda",
+    "v": 114.3,
+    "t": "114,3"
+   },
+   {
+    "rok": 2001,
+    "rada": "Reálný starobní důchod",
+    "v": 86.2,
+    "t": "86,2"
+   },
+   {
+    "rok": 2002,
+    "rada": "Reálná mzda",
+    "v": 121.3,
+    "t": "121,3"
+   },
+   {
+    "rok": 2002,
+    "rada": "Reálný starobní důchod",
+    "v": 90.5,
+    "t": "90,5"
+   },
+   {
+    "rok": 2003,
+    "rada": "Reálná mzda",
+    "v": 128.2,
+    "t": "128,2"
+   },
+   {
+    "rok": 2003,
+    "rada": "Reálný starobní důchod",
+    "v": 93.3,
+    "t": "93,3"
+   },
+   {
+    "rok": 2004,
+    "rada": "Reálná mzda",
+    "v": 132.5,
+    "t": "132,5"
+   },
+   {
+    "rok": 2004,
+    "rada": "Reálný starobní důchod",
+    "v": 92.8,
+    "t": "92,8"
+   },
+   {
+    "rok": 2005,
+    "rada": "Reálná mzda",
+    "v": 136.5,
+    "t": "136,5"
+   },
+   {
+    "rok": 2005,
+    "rada": "Reálný starobní důchod",
+    "v": 96.5,
+    "t": "96,5"
+   },
+   {
+    "rok": 2006,
+    "rada": "Reálná mzda",
+    "v": 142.0,
+    "t": "142,0"
+   },
+   {
+    "rok": 2006,
+    "rada": "Reálný starobní důchod",
+    "v": 98.5,
+    "t": "98,5"
+   },
+   {
+    "rok": 2007,
+    "rada": "Reálná mzda",
+    "v": 148.1,
+    "t": "148,1"
+   },
+   {
+    "rok": 2007,
+    "rada": "Reálný starobní důchod",
+    "v": 101.5,
+    "t": "101,5"
+   },
+   {
+    "rok": 2008,
+    "rada": "Reálná mzda",
+    "v": 150.1,
+    "t": "150,1"
+   },
+   {
+    "rok": 2008,
+    "rada": "Reálný starobní důchod",
+    "v": 100.4,
+    "t": "100,4"
+   },
+   {
+    "rok": 2009,
+    "rada": "Reálná mzda",
+    "v": 153.6,
+    "t": "153,6"
+   },
+   {
+    "rok": 2009,
+    "rada": "Reálný starobní důchod",
+    "v": 106.1,
+    "t": "106,1"
+   },
+   {
+    "rok": 2010,
+    "rada": "Reálná mzda",
+    "v": 154.7,
+    "t": "154,7"
+   },
+   {
+    "rok": 2010,
+    "rada": "Reálný starobní důchod",
+    "v": 104.7,
+    "t": "104,7"
+   },
+   {
+    "rok": 2011,
+    "rada": "Reálná mzda",
+    "v": 155.6,
+    "t": "155,6"
+   },
+   {
+    "rok": 2011,
+    "rada": "Reálný starobní důchod",
+    "v": 106.1,
+    "t": "106,1"
+   },
+   {
+    "rok": 2012,
+    "rada": "Reálná mzda",
+    "v": 154.4,
+    "t": "154,4"
+   },
+   {
+    "rok": 2012,
+    "rada": "Reálný starobní důchod",
+    "v": 103.7,
+    "t": "103,7"
+   },
+   {
+    "rok": 2013,
+    "rada": "Reálná mzda",
+    "v": 152.0,
+    "t": "152,0"
+   },
+   {
+    "rok": 2013,
+    "rada": "Reálný starobní důchod",
+    "v": 103.5,
+    "t": "103,5"
+   },
+   {
+    "rok": 2014,
+    "rada": "Reálná mzda",
+    "v": 155.8,
+    "t": "155,8"
+   },
+   {
+    "rok": 2014,
+    "rada": "Reálný starobní důchod",
+    "v": 104.5,
+    "t": "104,5"
+   },
+   {
+    "rok": 2015,
+    "rada": "Reálná mzda",
+    "v": 160.4,
+    "t": "160,4"
+   },
+   {
+    "rok": 2015,
+    "rada": "Reálný starobní důchod",
+    "v": 106.9,
+    "t": "106,9"
+   },
+   {
+    "rok": 2016,
+    "rada": "Reálná mzda",
+    "v": 166.3,
+    "t": "166,3"
+   },
+   {
+    "rok": 2016,
+    "rada": "Reálný starobní důchod",
+    "v": 107.3,
+    "t": "107,3"
+   },
+   {
+    "rok": 2017,
+    "rada": "Reálná mzda",
+    "v": 173.3,
+    "t": "173,3"
+   },
+   {
+    "rok": 2017,
+    "rada": "Reálný starobní důchod",
+    "v": 108.6,
+    "t": "108,6"
+   },
+   {
+    "rok": 2018,
+    "rada": "Reálná mzda",
+    "v": 183.5,
+    "t": "183,5"
+   },
+   {
+    "rok": 2018,
+    "rada": "Reálný starobní důchod",
+    "v": 111.7,
+    "t": "111,7"
+   },
+   {
+    "rok": 2019,
+    "rada": "Reálná mzda",
+    "v": 192.7,
+    "t": "192,7"
+   },
+   {
+    "rok": 2019,
+    "rada": "Reálný starobní důchod",
+    "v": 117.7,
+    "t": "117,7"
+   },
+   {
+    "rok": 2020,
+    "rada": "Reálná mzda",
+    "v": 195.4,
+    "t": "195,4"
+   },
+   {
+    "rok": 2020,
+    "rada": "Reálný starobní důchod",
+    "v": 122.4,
+    "t": "122,4"
+   },
+   {
+    "rok": 2021,
+    "rada": "Reálná mzda",
+    "v": 199.1,
+    "t": "199,1"
+   },
+   {
+    "rok": 2021,
+    "rada": "Reálný starobní důchod",
+    "v": 126.8,
+    "t": "126,8"
+   },
+   {
+    "rok": 2022,
+    "rada": "Reálná mzda",
+    "v": 180.4,
+    "t": "180,4"
+   },
+   {
+    "rok": 2022,
+    "rada": "Reálný starobní důchod",
+    "v": 122.1,
+    "t": "122,1"
+   },
+   {
+    "rok": 2023,
+    "rada": "Reálná mzda",
+    "v": 174.6,
+    "t": "174,6"
+   },
+   {
+    "rok": 2023,
+    "rada": "Reálný starobní důchod",
+    "v": 125.2,
+    "t": "125,2"
+   },
+   {
+    "rok": 2024,
+    "rada": "Reálná mzda",
+    "v": 181.8,
+    "t": "181,8"
+   },
+   {
+    "rok": 2024,
+    "rada": "Reálný starobní důchod",
+    "v": 126.7,
+    "t": "126,7"
+   },
+   {
+    "rok": 2025,
+    "rada": "Reálná mzda",
+    "v": 189.0,
+    "t": "189,0"
+   },
+   {
+    "rok": 2025,
+    "rada": "Reálný starobní důchod",
+    "v": 126.1,
+    "t": "126,1"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "rule",
+    "color": "#101432",
+    "strokeDash": [
+     3,
+     3
+    ],
+    "strokeWidth": 1
+   },
+   "data": {
+    "values": [
+     {
+      "v": 100
+     }
+    ]
+   },
+   "encoding": {
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5,
+    "interpolate": "monotone"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "color": {
+     "field": "rada",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "Reálná mzda",
+       "Reálný starobní důchod"
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rada",
+      "title": "Řada"
+     },
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t",
+      "title": "Index (1989 = 100)"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1991,
+      "v": 69.6,
+      "text": "1991: 70"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": 16,
+    "align": "left"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2023,
+      "v": 174.6,
+      "text": "2023: 175"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": 16,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 189.0,
+      "text": "189"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": -10,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2005,
+      "v": 136.5,
+      "text": "mzda"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": -12,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2005,
+      "v": 96.5,
+      "text": "starobní důchod"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#6267a3",
+    "dy": 18,
+    "align": "left"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 126.1,
+      "text": "126"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#6267a3",
+    "dy": 16,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       50,
+       215
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       50,
+       100,
+       150,
+       200
+      ]
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 13.08](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes (řetězení meziročních indexů)",
+ "height": 280
+}

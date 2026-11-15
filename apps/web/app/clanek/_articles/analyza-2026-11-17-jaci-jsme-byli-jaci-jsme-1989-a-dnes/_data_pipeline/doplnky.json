@@ -1,0 +1,233 @@
+[
+ {
+  "okruh": "Víra (sčítání)",
+  "ukazatel": "Věřící (všichni, kdo víru uvedli)",
+  "tehdy": 43.9,
+  "rok_tehdy": 1991,
+  "dnes": 22.2,
+  "rok_dnes": 2021,
+  "jednotka": "% obyvatel",
+  "zdroj": "ČSÚ, SLDB 1991 a 2021",
+  "pozn": "2021 včetně věřících bez církve (9.1 %); otázka dobrovolná, 1991 nezjištěno 16.2 %, 2021 neuvedeno 30.1 %"
+ },
+ {
+  "okruh": "Víra (sčítání)",
+  "ukazatel": "Římskokatolická církev",
+  "tehdy": 39.0,
+  "rok_tehdy": 1991,
+  "dnes": 7.0,
+  "rok_dnes": 2021,
+  "jednotka": "% obyvatel",
+  "zdroj": "ČSÚ, SLDB 1991 a 2021",
+  "pozn": "2021 jen přihlášení k církvi; další 2,2 % uvedlo „katolická víra“ bez církve"
+ },
+ {
+  "okruh": "Víra (sčítání)",
+  "ukazatel": "Bez víry / bez vyznání",
+  "tehdy": 39.9,
+  "rok_tehdy": 1991,
+  "dnes": 47.8,
+  "rok_dnes": 2021,
+  "jednotka": "% obyvatel",
+  "zdroj": "ČSÚ, SLDB 1991 a 2021",
+  "pozn": ""
+ },
+ {
+  "okruh": "Svoboda a politika",
+  "ukazatel": "Účast ve sněmovních volbách",
+  "tehdy": 96.8,
+  "rok_tehdy": 1990,
+  "dnes": 68.9,
+  "rok_dnes": 2025,
+  "jednotka": "%",
+  "zdroj": "ČSÚ, Voliči, účast, hlasy",
+  "pozn": "1990 volby do České národní rady (první svobodné)"
+ },
+ {
+  "okruh": "Svoboda a politika",
+  "ukazatel": "Dny pracovního klidu (svátky) za rok",
+  "tehdy": 7,
+  "rok_tehdy": 1989,
+  "dnes": 13,
+  "rok_dnes": 2026,
+  "jednotka": "dní",
+  "zdroj": "zák. 93/1951 Sb. ve znění 141/1988 Sb.; zák. 245/2000 Sb.",
+  "pozn": "1989: státní svátky 9. 5. a 28. 10.; významné dny 25. 2. (Vítězný únor), 29. 8., 7. 11. (VŘSR). Dnes navíc 5. 7., 6. 7., 28. 9., 17. 11., Velký pátek, Štědrý den; Den vítězství z 9. na 8. 5."
+ },
+ {
+  "okruh": "Svoboda a politika",
+  "ukazatel": "Registrované trestné činy",
+  "tehdy": 120768,
+  "rok_tehdy": 1989,
+  "dnes": 170051,
+  "rok_dnes": 2025,
+  "jednotka": "počet",
+  "zdroj": "IKSP, Trendy kriminality 2023, příl. 1 (Policie ČR); ČSÚ Tab. 14.01",
+  "pozn": "vrchol 1999: 426626; 1990: 216852"
+ },
+ {
+  "okruh": "Peníze a bydlení",
+  "ukazatel": "Osobní auta na 1 000 obyvatel",
+  "tehdy": 234,
+  "rok_tehdy": 1990,
+  "dnes": 621,
+  "rok_dnes": 2025,
+  "jednotka": "aut",
+  "zdroj": "Eurostat road_eqs_carhab",
+  "pozn": "registr obsahuje i neodhlášená neexistující auta – skutečný počet je nižší"
+ },
+ {
+  "okruh": "Peníze a bydlení",
+  "ukazatel": "Postavit rodinný dům (náklady výstavby)",
+  "tehdy": 101.0,
+  "rok_tehdy": 1989,
+  "dnes": 117.0,
+  "rok_dnes": 2024,
+  "jednotka": "hrubých měsíčních mezd",
+  "zdroj": "ČSÚ Tab. 11.01 + 13.07",
+  "pozn": "jen investiční náklady stavby, bez pozemku; 1989 319 tis. Kčs, 2024 5335 tis. Kč"
+ },
+ {
+  "okruh": "Peníze a bydlení",
+  "ukazatel": "1 m² nového rodinného domu (náklady výstavby)",
+  "tehdy": 0.82,
+  "rok_tehdy": 1989,
+  "dnes": 0.84,
+  "rok_dnes": 2024,
+  "jednotka": "hrubých měsíčních mezd",
+  "zdroj": "ČSÚ Tab. 11.01 + 13.07",
+  "pozn": "stavba je vůči mzdě zhruba stejně drahá; zdražily hlavně pozemky a hotové byty na trhu"
+ },
+ {
+  "okruh": "Peníze a bydlení",
+  "ukazatel": "Byt 60 m² za průměrnou cenu",
+  "tehdy": null,
+  "rok_tehdy": 1989,
+  "dnes": 89.0,
+  "rok_dnes": 2025,
+  "jednotka": "hrubých měsíčních mezd",
+  "zdroj": "ČSÚ ceny nemovitostí + Tab. 13.07",
+  "pozn": "72410 Kč/m² (ČR 2025) = 7.4 ročních hrubých mezd; v roce 1989 trh s byty neexistoval"
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Možnost studovat, pracovat, cestovat do zahraničí: dnes lepší / horší než před 1989",
+  "tehdy": 77,
+  "rok_tehdy": "lepší",
+  "dnes": 17,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Přístup ke vzdělání: dnes lepší / horší než před 1989",
+  "tehdy": 65,
+  "rok_tehdy": "lepší",
+  "dnes": 14,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Svobodný přístup k informacím: dnes lepší / horší než před 1989",
+  "tehdy": 64,
+  "rok_tehdy": "lepší",
+  "dnes": 21,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Životní úroveň: dnes lepší / horší než před 1989",
+  "tehdy": 57,
+  "rok_tehdy": "lepší",
+  "dnes": 20,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Možnost vyjádřit názor: dnes lepší / horší než před 1989",
+  "tehdy": 57,
+  "rok_tehdy": "lepší",
+  "dnes": 21,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Zdravotní péče: dnes lepší / horší než před 1989",
+  "tehdy": 55,
+  "rok_tehdy": "lepší",
+  "dnes": 20,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Pracovní příležitosti: dnes lepší / horší než před 1989",
+  "tehdy": 55,
+  "rok_tehdy": "lepší",
+  "dnes": 25,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Sociální jistoty: dnes lepší / horší než před 1989",
+  "tehdy": 38,
+  "rok_tehdy": "lepší",
+  "dnes": 40,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Bezpečnost občanů, kriminalita: dnes lepší / horší než před 1989",
+  "tehdy": 32,
+  "rok_tehdy": "lepší",
+  "dnes": 42,
+  "rok_dnes": "horší",
+  "jednotka": "% dotázaných",
+  "zdroj": "CVVM SOÚ AV ČR, Naše společnost 6–8/2024, pd241111, Tab. 4",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Současné poměry lepší / horší než před listopadem 1989",
+  "tehdy": 43,
+  "rok_tehdy": "lepší",
+  "dnes": 16,
+  "rok_dnes": "horší",
+  "jednotka": "% (37 % napůl)",
+  "zdroj": "CVVM pd241111",
+  "pozn": ""
+ },
+ {
+  "okruh": "Jak to vidíme (CVVM 2024)",
+  "ukazatel": "Hodnotí listopad 1989 kladně / záporně",
+  "tehdy": 68,
+  "rok_tehdy": "kladně",
+  "dnes": 12,
+  "rok_dnes": "záporně",
+  "jednotka": "%",
+  "zdroj": "CVVM pd241111",
+  "pozn": ""
+ }
+]

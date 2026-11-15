@@ -1,0 +1,43 @@
+{
+  "title": "Dnešní třicátníci mají častěji vysokou školu a méně často jsou v manželství",
+  "subtitle": "Lidé ve věku 30–39 let při sčítání 1991 a 2021, podíl v %. Posuňte jezdcem z roku 1991 do roku 2021.",
+  "jednotka": "%",
+  "max": 100,
+  "desetinna": 1,
+  "popisek_tehdy": "1991",
+  "popisek_dnes": "2021",
+  "polozky": [
+    {
+      "nazev": "S vysokou školou",
+      "tehdy": 11.7,
+      "dnes": 32.9
+    },
+    {
+      "nazev": "Ženatí a vdané",
+      "tehdy": 80.8,
+      "dnes": 42.2
+    },
+    {
+      "nazev": "Svobodní",
+      "tehdy": 8.8,
+      "dnes": 51.4
+    },
+    {
+      "nazev": "Rozvedení",
+      "tehdy": 9.6,
+      "dnes": 6.1
+    },
+    {
+      "nazev": "Ženy bez dítěte",
+      "tehdy": 6.6,
+      "dnes": 26.3
+    },
+    {
+      "nazev": "Pracují",
+      "tehdy": 90.4,
+      "dnes": 81.1,
+      "pozn": "nepočítá ženy na mateřské ani nezaměstnané"
+    }
+  ],
+  "zdroj": "[ČSÚ, sčítání 1991 – pramenné dílo](https://csu.gov.cz/obyvatelstvo1991), Tab. 5, 12, 29, 32; [ČSÚ, sčítání 2021 – otevřená data](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data)"
+}

@@ -1,0 +1,472 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Poslanci jsou {skoro o pět let starší|#de1743} než po volbách 1990, {senátoři|#6267a3} o tři roky",
+    "subtitle": "Průměrný věk zvolených poslanců a nově zvolených senátorů v den voleb (Senát volí každé dva roky třetinu, v roce 1996 všech 81)"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1990,
+        "vek": 44.1,
+        "komora": "Poslanci",
+        "t": "44,1 roku",
+        "volby": "ČNR 1990",
+        "popisek": "44,1",
+        "nahore": false
+      },
+      {
+        "rok": 1992,
+        "vek": 43.2,
+        "komora": "Poslanci",
+        "t": "43,2 roku",
+        "volby": "ČNR 1992"
+      },
+      {
+        "rok": 1996,
+        "vek": 43.8,
+        "komora": "Poslanci",
+        "t": "43,8 roku",
+        "volby": "PS 1996"
+      },
+      {
+        "rok": 1998,
+        "vek": 45.2,
+        "komora": "Poslanci",
+        "t": "45,2 roku",
+        "volby": "PS 1998"
+      },
+      {
+        "rok": 2002,
+        "vek": 46.9,
+        "komora": "Poslanci",
+        "t": "46,9 roku",
+        "volby": "PS 2002"
+      },
+      {
+        "rok": 2006,
+        "vek": 47.9,
+        "komora": "Poslanci",
+        "t": "47,9 roku",
+        "volby": "PS 2006"
+      },
+      {
+        "rok": 2010,
+        "vek": 47.2,
+        "komora": "Poslanci",
+        "t": "47,2 roku",
+        "volby": "PS 2010"
+      },
+      {
+        "rok": 2013,
+        "vek": 49.9,
+        "komora": "Poslanci",
+        "t": "49,9 roku",
+        "volby": "PS 2013"
+      },
+      {
+        "rok": 2017,
+        "vek": 47.4,
+        "komora": "Poslanci",
+        "t": "47,4 roku",
+        "volby": "PS 2017"
+      },
+      {
+        "rok": 2021,
+        "vek": 49.8,
+        "komora": "Poslanci",
+        "t": "49,8 roku",
+        "volby": "PS 2021"
+      },
+      {
+        "rok": 2025,
+        "vek": 48.8,
+        "komora": "Poslanci",
+        "t": "48,8 roku",
+        "volby": "PS 2025",
+        "popisek": "48,8",
+        "nahore": false
+      },
+      {
+        "rok": 1996,
+        "vek": 53.1,
+        "komora": "Senátoři",
+        "t": "53,1 roku",
+        "volby": "Senát 1996 (81 zvolených)",
+        "popisek": "53,1",
+        "nahore": true
+      },
+      {
+        "rok": 1998,
+        "vek": 52.4,
+        "komora": "Senátoři",
+        "t": "52,4 roku",
+        "volby": "Senát 1998 (27 zvolených)"
+      },
+      {
+        "rok": 2000,
+        "vek": 49.7,
+        "komora": "Senátoři",
+        "t": "49,7 roku",
+        "volby": "Senát 2000 (27 zvolených)"
+      },
+      {
+        "rok": 2002,
+        "vek": 50.9,
+        "komora": "Senátoři",
+        "t": "50,9 roku",
+        "volby": "Senát 2002 (27 zvolených)"
+      },
+      {
+        "rok": 2004,
+        "vek": 53.2,
+        "komora": "Senátoři",
+        "t": "53,2 roku",
+        "volby": "Senát 2004 (27 zvolených)"
+      },
+      {
+        "rok": 2006,
+        "vek": 52.9,
+        "komora": "Senátoři",
+        "t": "52,9 roku",
+        "volby": "Senát 2006 (27 zvolených)"
+      },
+      {
+        "rok": 2008,
+        "vek": 53.7,
+        "komora": "Senátoři",
+        "t": "53,7 roku",
+        "volby": "Senát 2008 (27 zvolených)"
+      },
+      {
+        "rok": 2010,
+        "vek": 54.2,
+        "komora": "Senátoři",
+        "t": "54,2 roku",
+        "volby": "Senát 2010 (27 zvolených)"
+      },
+      {
+        "rok": 2012,
+        "vek": 57.0,
+        "komora": "Senátoři",
+        "t": "57,0 roku",
+        "volby": "Senát 2012 (27 zvolených)"
+      },
+      {
+        "rok": 2014,
+        "vek": 56.8,
+        "komora": "Senátoři",
+        "t": "56,8 roku",
+        "volby": "Senát 2014 (27 zvolených)"
+      },
+      {
+        "rok": 2016,
+        "vek": 57.0,
+        "komora": "Senátoři",
+        "t": "57,0 roku",
+        "volby": "Senát 2016 (27 zvolených)"
+      },
+      {
+        "rok": 2018,
+        "vek": 54.4,
+        "komora": "Senátoři",
+        "t": "54,4 roku",
+        "volby": "Senát 2018 (27 zvolených)"
+      },
+      {
+        "rok": 2020,
+        "vek": 54.7,
+        "komora": "Senátoři",
+        "t": "54,7 roku",
+        "volby": "Senát 2020 (27 zvolených)"
+      },
+      {
+        "rok": 2022,
+        "vek": 59.0,
+        "komora": "Senátoři",
+        "t": "59,0 roku",
+        "volby": "Senát 2022 (27 zvolených)"
+      },
+      {
+        "rok": 2024,
+        "vek": 53.7,
+        "komora": "Senátoři",
+        "t": "53,7 roku",
+        "volby": "Senát 2024 (27 zvolených)"
+      },
+      {
+        "rok": 2026,
+        "vek": 56.1,
+        "komora": "Senátoři",
+        "t": "56,1 roku",
+        "volby": "Senát 2026 (27 zvolených)",
+        "popisek": "56,1",
+        "nahore": true
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "point": {
+          "size": 36,
+          "filled": true
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2027
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2020,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "vek",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              40,
+              62
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ]
+          }
+        },
+        "color": {
+          "field": "komora",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Poslanci",
+              "Senátoři"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "volby",
+            "title": "Volby"
+          },
+          {
+            "field": "t",
+            "title": "Průměrný věk zvolených"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1990,
+            "vek": 44.1,
+            "komora": "Poslanci",
+            "t": "44,1 roku",
+            "volby": "ČNR 1990",
+            "popisek": "44,1",
+            "nahore": false
+          },
+          {
+            "rok": 2025,
+            "vek": 48.8,
+            "komora": "Poslanci",
+            "t": "48,8 roku",
+            "volby": "PS 2025",
+            "popisek": "48,8",
+            "nahore": false
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "dy": 16,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2027
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2020,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "vek",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              40,
+              62
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ]
+          }
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1996,
+            "vek": 53.1,
+            "komora": "Senátoři",
+            "t": "53,1 roku",
+            "volby": "Senát 1996 (81 zvolených)",
+            "popisek": "53,1",
+            "nahore": true
+          },
+          {
+            "rok": 2026,
+            "vek": 56.1,
+            "komora": "Senátoři",
+            "t": "56,1 roku",
+            "volby": "Senát 2026 (27 zvolených)",
+            "popisek": "56,1",
+            "nahore": true
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2027
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2020,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "vek",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              40,
+              62
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ]
+          }
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, volby do [Sněmovny](https://csu.gov.cz/produkty/volby-do-cnr-a-ps-pcr) a [Senátu](https://csu.gov.cz/produkty/volby-do-senatu-pcr)",
+  "height": 260,
+  "_toggle_legend": true
+}

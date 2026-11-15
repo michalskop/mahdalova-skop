@@ -1,0 +1,85 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/images/cover-homepage.png",
+      "otisk": "9241060ebd3b34f7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/cover.config.cjs": "b5a0472c880417e4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/motiv-homepage.svg": "ac4eb2d283ad5a8e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/images/cover-og.jpg",
+      "otisk": "a4dae2f19dd2a4ba",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/cover.config.cjs": "b5a0472c880417e4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/motiv-og.svg": "ad70e5de17de3a7e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/images/cover-square.png",
+      "otisk": "e3559af9440bf52b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/cover.config.cjs": "b5a0472c880417e4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/motiv-square.svg": "e5f6f000d836207f"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/images/cover-instagram.png",
+      "otisk": "32e74dc9cda662f4",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/cover.config.cjs": "b5a0472c880417e4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/motiv-instagram.svg": "f76ee1df6168eda6"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/images/cover-story.png",
+      "otisk": "065c9fc9cc2ff56a",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/cover.config.cjs": "b5a0472c880417e4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/motiv-story.svg": "8c4825d37c9eb089"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": [
+          "podtitulek: podklad pod textem (leží na světlé části motivu)"
+        ]
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T21:08:52.396Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/index.md",
+  "titulekClanku": "Síra z ovzduší zmizela, kouř z domácích komínů zůstal",
+  "texty": {
+    "stitek": "1989 × 2026 • Ovzduší",
+    "nadtitulek": "",
+    "titulek": "Síra z ovzduší zmizela, kouř z domácích komínů zůstal",
+    "podtitulek": "Emise síry klesly o 97 %. Kouř z domácích komínů je dnes hlavním zdrojem rakovinotvorného benzo[a]pyrenu"
+  }
+}

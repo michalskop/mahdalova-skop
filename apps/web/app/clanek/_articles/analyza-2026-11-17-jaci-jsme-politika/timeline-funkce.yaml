@@ -1,0 +1,88 @@
+# Vlnovka <RouteTimeline yamlFile="timeline-funkce.yaml" /> – kdo stál v čele státu, vlády, ČNR/Sněmovny a Senátu.
+# Ověřeno 14. 11. 2026 v primárních zdrojích (uloženo v archivu statisticka-data/cesko/parlament/vrcholne-funkce/20261114
+# a parlament/psp-poslanci-opendata/20261114): vlada.gov.cz (rejstřík předsedů vlád, vláda Fialy, současná vláda),
+# otevřená data psp.cz (funkce předsedů PS, vlády, prezidenta), stenoprotokoly psp.cz, senat.cz (almanach 30 let Senátu,
+# titulní strana 12. 11. 2026). Seznam funkcí a dat je i ve FUNKCE v _data_pipeline/vypocet.py.
+title: "Kdo vedl stát, vládu a parlament"
+subtitle: "Prezidenti, předsedové české vlády, České národní rady, Sněmovny a Senátu od prosince 1989"
+theme: trikolora
+
+events:
+  - date: "1989-12-29"
+    title: "Havel prezidentem, ČNR s novým předsedou"
+    description: >-
+      Federální shromáždění zvolilo Václava Havla prezidentem Československa
+      (<a href="https://www.psp.cz/eknih/1986fs/slsn/stenprot/021schuz/s021001.htm" target="_blank" rel="noopener noreferrer">stenoprotokol</a>).
+      Česká národní rada, zvolená ještě v roce 1986 na jednotné kandidátce Národní fronty, už 18. prosince odvolala
+      předsedu Josefa Kempného a zvolila Jaroslava Šafaříka
+      (<a href="https://www.psp.cz/eknih/1986cnr/stenprot/017schuz/s017002.htm" target="_blank" rel="noopener noreferrer">stenoprotokol</a>).
+
+  - date: "1990-02-06"
+    title: "Petr Pithart v čele české vlády"
+    description: >-
+      Českou vládu převzal od Františka Pitry signatář Charty 77 a představitel Koordinačního centra Občanského fóra
+      Petr Pithart. Ve stejný den složilo v České národní radě slib 64 nových poslanců, které rada bez voleb kooptovala.
+
+  - date: "1990-06-26"
+    title: "Dagmar Burešová první předsedkyní ČNR"
+    description: >-
+      Po prvních svobodných volbách získalo Občanské fórum 127 z 200 křesel. Do čela České národní rady zvolili poslanci
+      právničku Dagmar Burešovou
+      (<a href="https://www.psp.cz/eknih/1990cnr/stenprot/001schuz/s001003.htm" target="_blank" rel="noopener noreferrer">stenoprotokol</a>).
+      Žena pak vedla dolní komoru znovu až za dvacet let.
+
+  - date: "1992-07-02"
+    title: "Klaus premiérem, Havel odchází"
+    description: >-
+      Po volbách 1992 vedl českou vládu Václav Klaus z ODS, Českou národní radu spisovatel Milan Uhde.
+      Václav Havel se 20. července 1992 vzdal funkce prezidenta federace, když ho Federální shromáždění po volbách
+      znovu nezvolilo (<a href="https://ct24.ceskatelevize.cz/clanek/svet/pred-25-lety-vyhlasilo-slovensko-svrchovanost-a-prezident-havel-abdikoval-93405" target="_blank" rel="noopener noreferrer">ČT24</a>).
+
+  - date: "1993-01-26"
+    title: "První prezident samostatného Česka"
+    description: >-
+      Poslanecká sněmovna, v kterou se proměnila Česká národní rada, zvolila Václava Havla prvním prezidentem
+      České republiky (<a href="https://www.psp.cz/eknih/1993ps/stenprot/002schuz/2-1.html" target="_blank" rel="noopener noreferrer">stenoprotokol</a>).
+      Funkci zastával do února 2003.
+
+  - date: "1996"
+    title: "Vzniká Senát, Zeman vede Sněmovnu"
+    description: >-
+      V roce 1996 se poprvé volilo všech 81 senátorů. Prvním předsedou Senátu se stal Petr Pithart.
+      Předsedou Sněmovny byl po volbách 1996 Miloš Zeman z ČSSD.
+
+  - date: "1998"
+    title: "Zeman premiérem, Klaus předsedou Sněmovny"
+    description: >-
+      Po pádu Klausovy vlády vedl do července 1998 vládu Josef Tošovský. Po volbách se premiérem stal Miloš Zeman a předsedou
+      Sněmovny Václav Klaus. V čele Senátu stála v letech 1998–2000 Libuše Benešová, zatím jediná žena v této funkci.
+
+  - date: "2010-06-24"
+    title: "Miroslava Němcová první předsedkyní Sněmovny"
+    description: >-
+      Po Dagmar Burešové vedla dolní komoru znovu žena: Miroslava Němcová z ODS. Vládu převzal Petr Nečas,
+      Senát v letech 2010–2018 Milan Štěch z ČSSD.
+
+  - date: "2013-03-08"
+    title: "Zeman prvním přímo zvoleným prezidentem"
+    description: >-
+      Prezidenta poprvé nevolil parlament, ale voliči. Miloš Zeman tak zastával všechny tři nejvyšší funkce: vedl
+      Sněmovnu, vládu i stát. Stejně Václav Klaus, kterého parlament zvolil prezidentem v letech 2003 a 2008.
+
+  - date: "2021-11-10"
+    title: "Druhá předsedkyně Sněmovny"
+    description: >-
+      Sněmovnu vedla Markéta Pekarová Adamová z TOP 09, vládu od 28. listopadu Petr Fiala z ODS.
+      Senát od roku 2020 vede Miloš Vystrčil z ODS.
+
+  - date: "2023-03-09"
+    title: "Petr Pavel prezidentem"
+    description: >-
+      Petr Pavel vyhrál přímou volbu a stal se čtvrtým prezidentem České republiky. Ženám za něj připadá dvakrát
+      větší podíl státních vyznamenání než za jeho předchůdců.
+
+  - date: "2025-12-09"
+    title: "Babiš znovu premiérem, Okamura v čele Sněmovny"
+    description: >-
+      Po volbách 2025 vede Sněmovnu od 5. listopadu Tomio Okamura z SPD, vládu od prosince Andrej Babiš z ANO.
+      Senát po říjnových volbách poprvé zasedne 19. listopadu 2026, do té doby ho vede Miloš Vystrčil.

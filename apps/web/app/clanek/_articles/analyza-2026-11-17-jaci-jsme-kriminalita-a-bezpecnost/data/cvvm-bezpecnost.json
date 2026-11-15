@@ -1,0 +1,272 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Bezpečnost proti době před rokem 1989 hodnotí {hůř|#6267a3} 42 % lidí, v roce 2014 to bylo 60 %",
+    "subtitle": "Je dnes situace lidí jako vy v oblasti bezpečnosti občanů a kriminality lepší, nebo horší než před rokem 1989? Odpovědi „mnohem či trochu lepší“ a „trochu či mnohem horší“ v %"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 2014,
+        "hod": "lepší",
+        "p": 16,
+        "l": "16 %"
+      },
+      {
+        "rok": 2014,
+        "hod": "horší",
+        "p": 60,
+        "l": "60 %"
+      },
+      {
+        "rok": 2015,
+        "hod": "lepší",
+        "p": 21,
+        "l": "21 %"
+      },
+      {
+        "rok": 2015,
+        "hod": "horší",
+        "p": 53,
+        "l": "53 %"
+      },
+      {
+        "rok": 2016,
+        "hod": "lepší",
+        "p": 17,
+        "l": "17 %"
+      },
+      {
+        "rok": 2016,
+        "hod": "horší",
+        "p": 58,
+        "l": "58 %"
+      },
+      {
+        "rok": 2019,
+        "hod": "lepší",
+        "p": 27,
+        "l": "27 %"
+      },
+      {
+        "rok": 2019,
+        "hod": "horší",
+        "p": 47,
+        "l": "47 %"
+      },
+      {
+        "rok": 2024,
+        "hod": "lepší",
+        "p": 32,
+        "l": "32 %"
+      },
+      {
+        "rok": 2024,
+        "hod": "horší",
+        "p": 42,
+        "l": "42 %"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "point": {
+          "size": 60,
+          "filled": true
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2013.3,
+              2024.7
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "format": "d",
+            "grid": false,
+            "values": [
+              2014,
+              2015,
+              2016,
+              2019,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "p",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              75
+            ]
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "hod",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "lepší",
+              "horší"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "hod",
+            "title": "Hodnocení"
+          },
+          {
+            "field": "l",
+            "title": "Podíl"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "dy": -12
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              2013.3,
+              2024.7
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "format": "d",
+            "grid": false,
+            "values": [
+              2014,
+              2015,
+              2016,
+              2019,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "p",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              75
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "l"
+        },
+        "color": {
+          "field": "hod",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "lepší",
+              "horší"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "align": "center"
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 2021.5,
+            "p": 51,
+            "hod": "horší"
+          },
+          {
+            "rok": 2021.5,
+            "p": 23,
+            "hod": "lepší"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "p",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "hod"
+        },
+        "color": {
+          "field": "hod",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "lepší",
+              "horší"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "_source": "CVVM SOÚ AV ČR, [Třicet pět let od sametové revoluce](https://cvvm.soc.cas.cz/images/articles/files/5889/pd241111.pdf), tab. 4; 2024: 922 respondentů 15+",
+  "height": 220
+}

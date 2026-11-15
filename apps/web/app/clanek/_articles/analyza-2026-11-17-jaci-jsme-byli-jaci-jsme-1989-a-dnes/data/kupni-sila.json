@@ -1,0 +1,266 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Za výplatu dnes koupíme {víc zboží|#de1743}, ale {méně služeb|#6267a3} než v roce 1989",
+    "subtitle": "Kolikrát víc kusů koupí průměrná čistá mzda než v roce 1989 (1 = stejně); auto Škoda 2023, ostatní 2025. Výrobky se změnily, srovnání je orientační"
+  },
+  "width": "container",
+  "height": {
+    "step": 30
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "zbozi": "Automatická pračka",
+        "pomer": 9.9,
+        "skup": "víc",
+        "popisek": "9,9×",
+        "rok_d": "2025",
+        "t": "9,90krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Lednička s mrazákem",
+        "pomer": 7.74,
+        "skup": "víc",
+        "popisek": "7,7×",
+        "rok_d": "2025",
+        "t": "7,74krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Vejce",
+        "pomer": 3.75,
+        "skup": "víc",
+        "popisek": "3,8×",
+        "rok_d": "2025",
+        "t": "3,75krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Benzin",
+        "pomer": 3.61,
+        "skup": "víc",
+        "popisek": "3,6×",
+        "rok_d": "2025",
+        "t": "3,61krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Máslo",
+        "pomer": 3.29,
+        "skup": "víc",
+        "popisek": "3,3×",
+        "rok_d": "2025",
+        "t": "3,29krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Pivo (lahvové výčepní)",
+        "pomer": 3.01,
+        "skup": "víc",
+        "popisek": "3,0×",
+        "rok_d": "2025",
+        "t": "3,01krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Auto Škoda",
+        "pomer": 2.77,
+        "skup": "víc",
+        "popisek": "2,8×",
+        "rok_d": "2023",
+        "t": "2,77krát tolik jako v roce 1989 (srovnání s rokem 2023)"
+      },
+      {
+        "zbozi": "Jízdní kolo",
+        "pomer": 1.44,
+        "skup": "víc",
+        "popisek": "1,4×",
+        "rok_d": "2025",
+        "t": "1,44krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Mléko",
+        "pomer": 1.24,
+        "skup": "víc",
+        "popisek": "1,2×",
+        "rok_d": "2025",
+        "t": "1,24krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Chléb",
+        "pomer": 0.95,
+        "skup": "míň",
+        "popisek": "0,9×",
+        "rok_d": "2025",
+        "t": "0,95krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Jízdenka MHD",
+        "pomer": 0.91,
+        "skup": "míň",
+        "popisek": "0,9×",
+        "rok_d": "2025",
+        "t": "0,91krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Lístek do kina",
+        "pomer": 0.64,
+        "skup": "míň",
+        "popisek": "0,6×",
+        "rok_d": "2025",
+        "t": "0,64krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      },
+      {
+        "zbozi": "Pánský kadeřník",
+        "pomer": 0.28,
+        "skup": "míň",
+        "popisek": "0,3×",
+        "rok_d": "2025",
+        "t": "0,28krát tolik jako v roce 1989 (srovnání s rokem 2025)"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "zbozi",
+          "type": "nominal",
+          "sort": null,
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelLimit": 200
+          }
+        },
+        "x": {
+          "field": "pomer",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              12.5
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              1,
+              2,
+              4,
+              6,
+              8,
+              10
+            ],
+            "labelExpr": "datum.value + '×'"
+          }
+        },
+        "color": {
+          "field": "skup",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "víc",
+              "míň"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "zbozi",
+            "title": "Zboží"
+          },
+          {
+            "field": "t",
+            "title": "Za průměrnou čistou mzdu"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontWeight": 700,
+        "fontSize": 11,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "zbozi",
+          "type": "nominal",
+          "sort": null,
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelLimit": 200
+          }
+        },
+        "x": {
+          "field": "pomer",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "popisek"
+        },
+        "tooltip": [
+          {
+            "field": "zbozi",
+            "title": "Zboží"
+          },
+          {
+            "field": "t",
+            "title": "Za průměrnou čistou mzdu"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ]
+      },
+      "data": {
+        "values": [
+          {
+            "x": 1
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 03.04 a 13.07](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes"
+}

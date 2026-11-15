@@ -1,0 +1,48 @@
+{
+  "title": "Česko zestárlo a přestalo spěchat k oltáři",
+  "subtitle": "Podíl v %; posuňte jezdcem z roku 1989 do dneška. Víra podle sčítání 1991 a 2021.",
+  "jednotka": "%",
+  "max": 100,
+  "desetinna": 1,
+  "popisek_tehdy": "1989",
+  "popisek_dnes": "2025",
+  "polozky": [
+    {
+      "nazev": "Lidé starší 65 let",
+      "tehdy": 12.5,
+      "rok_tehdy": 1989,
+      "dnes": 20.8,
+      "rok_dnes": 2025
+    },
+    {
+      "nazev": "Děti do 14 let",
+      "tehdy": 21.7,
+      "rok_tehdy": 1989,
+      "dnes": 15.1,
+      "rok_dnes": 2025
+    },
+    {
+      "nazev": "Děti narozené mimo manželství",
+      "tehdy": 7.9,
+      "rok_tehdy": 1989,
+      "dnes": 46.8,
+      "rok_dnes": 2025
+    },
+    {
+      "nazev": "Domácnosti s počítačem",
+      "tehdy": 1.8,
+      "rok_tehdy": 1989,
+      "dnes": 83.5,
+      "rok_dnes": 2025
+    },
+    {
+      "nazev": "Věřící (sčítání)",
+      "tehdy": 43.9,
+      "rok_tehdy": 1991,
+      "dnes": 22.2,
+      "rok_dnes": 2021,
+      "pozn": "otázka na víru je dobrovolná"
+    }
+  ],
+  "zdroj": "[ČSÚ, Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); [ČSÚ, sčítání 1991 a 2021](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data)"
+}

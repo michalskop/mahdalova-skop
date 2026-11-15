@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/images/cover-homepage.png",
+      "otisk": "63fe05f35a47114c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/cover.config.cjs": "acd7392c56a4305e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/motiv-homepage.svg": "10953f5776d9e7a4"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/images/cover-og.jpg",
+      "otisk": "102f89b6c18b352b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/cover.config.cjs": "acd7392c56a4305e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/motiv-og.svg": "55b80a0c99500367"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/images/cover-square.png",
+      "otisk": "97f016e880fe2e2c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/cover.config.cjs": "acd7392c56a4305e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/motiv-square.svg": "1fcb32125389f7bf"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/images/cover-instagram.png",
+      "otisk": "0a05651c34d80fd5",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/cover.config.cjs": "acd7392c56a4305e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/motiv-instagram.svg": "787bdd6cd23480b4"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/images/cover-story.png",
+      "otisk": "8ec01e911a41d3fa",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/cover.config.cjs": "acd7392c56a4305e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/motiv-story.svg": "77954d7486b4514e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:31:03.837Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/index.md",
+  "titulekClanku": "Žijeme déle, děti máme později a za výplatu koupíme skoro dvakrát víc než v roce 1989",
+  "texty": {
+    "stitek": "1989 × 2026 • Přehled",
+    "nadtitulek": "",
+    "titulek": "Žijeme skoro o devět let déle",
+    "podtitulek": "Děti máme později a za výplatu koupíme skoro dvakrát víc než v roce 1989"
+  }
+}

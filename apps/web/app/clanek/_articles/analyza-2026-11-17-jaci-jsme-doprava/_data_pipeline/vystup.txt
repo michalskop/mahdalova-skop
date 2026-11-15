@@ -1,0 +1,140 @@
+auta_1000_tehdy = [1990, 234]  Eurostat road_eqs_carhab, osobní auta na 1 000 obyvatel
+auta_1000_dnes = [2025, 621]  
+auta_1000_pomer = 2.65  
+sru_auta_na_100_domacnosti_1989 = 57.7  ČSÚ SRÚ Tab. 1/5, POČET aut na 100 domácností
+sru_auta_na_100_domacnosti_2003 = 68.3  
+silc_domacnosti_celkem = 4591654  SILC 2025, počet domácností
+silc_ma_auto_pct = 73.1  SILC 2025 Tab. 1d, % domácností s osobním autem
+silc_ma_auto_pocet = 3356499  dopočet: domácnosti × podíl
+silc_nemuze_dovolit_pct = 5.4  % domácností, které by auto chtěly, ale nemohou si ho dovolit
+silc_duchodci_ma_auto_pct = 49.6  
+silc_nezamestnani_ma_auto_pct = 27.8  
+silc_duchodci_nemuze_pct = 6.8  
+silc_auto_velikost_obce {'s_pracujicimi': {'do 999': 94.5, '1 000–4 999': 93.7, '5 000–9 999': 85.3, '10 000–49 999': 84.3, '50 000–99 999': 80.5, '100 000 a víc': 76.1}, 'bez_pracujicich': {'do 999': 63.1, '1 000–4 999': 51.8, '5 000–9 999': 44, '10 000–49 999': 46.7, '50 000–99 999': 39.8, '100 000 a víc': 37.2}} (Tab. 12d, % domácností s autem)
+silc_auto_velikost_obce vsechny (vážený průměr) {'do 999': 84.5, '1 000–4 999': 80.2, '5 000–9 999': 71.5, '10 000–49 999': 71.8, '50 000–99 999': 66.8, '100 000 a víc': 63.8} {'do 999': 718308, '1 000–4 999': 942642, '5 000–9 999': 440768, '10 000–49 999': 979201, '50 000–99 999': 394441, '100 000 a víc': 1116293}
+oa_1997 = 3391541.0  Ročenka dopravy 1998, tab. 522, OA registrované k 31. 12. 1997
+oa_1997_palivo = {'benzín': 3123451.0, 'nafta': 259209.0, 'elektřina': 13.0, 'ostatní': 8868.0}  
+oa_1997_pres10let_pct = 60.1  
+oa_2025 = 6774399.0  Ročenka dopravy 2025, tab. 4.2.3
+oa_2025_palivo = {'benzín': 3920021.0, 'nafta': 2638015.0, 'elektřina': 57611.0, 'LPG': 123041.0, 'CNG/LNG': 22916.0, 'vodík': 29.0, 'bioethanol': 3111.0, 'ostatní': 9655.0}  
+oa_2025_plugin = {'benzín': 44351.0, 'nafta': 9609.0}  plug-in hybridy, zahrnuté v benzínových a naftových
+oa_2025_pres10let_pct = 63.4  
+oa_2025_do2let_pct = 9.5  
+oa_1997_do2let_pct = 8.8  
+palivo_podil_1997 = {'benzín': 92.1, 'nafta': 7.64, 'elektřina': 0.0, 'ostatní': 0.26}  
+palivo_podil_2025 = {'benzín': 57.87, 'nafta': 38.94, 'elektřina': 0.85, 'LPG': 1.82, 'CNG/LNG': 0.34, 'vodík': 0.0, 'bioethanol': 0.05, 'ostatní': 0.14}  
+plyn_2025 = 145957.0  
+
+RSV dnes (aktivni): 6670683 aut
+  znacky: [('ŠKODA', 2281431, 34.2), ('VOLKSWAGEN', 731504, 11.0), ('FORD', 408271, 6.1), ('HYUNDAI', 296853, 4.5), ('PEUGEOT', 263494, 4.0), ('RENAULT', 260239, 3.9), ('TOYOTA', 205524, 3.1), ('OPEL', 194945, 2.9), ('MERCEDES-BENZ', 169421, 2.5), ('BMW', 164354, 2.5), ('DACIA', 152233, 2.3), ('KIA', 147862, 2.2)]
+  modely: [('ŠKODA OCTAVIA', 747839, 11.2), ('ŠKODA FABIA', 555656, 8.3), ('VOLKSWAGEN GOLF', 200804, 3.0), ('ŠKODA SUPERB', 162388, 2.4), ('VOLKSWAGEN PASSAT', 151227, 2.3), ('FORD FOCUS', 101111, 1.5), ('HYUNDAI I 30', 90725, 1.4), ('ŠKODA FELICIA', 90724, 1.4)]
+  palivo: {'benzín': (3877707, 58.1), 'nafta': (2477187, 37.1), 'LPG (+benzín)': (116857, 1.8), 'elektřina (BEV)': (82017, 1.2), 'hybrid': (75272, 1.1), 'CNG/LNG': (21389, 0.3), 'plug-in/hybrid (el. + spal.)': (10584, 0.2), 'jiné/neuvedeno': (9641, 0.1), 'vodík': (29, 0.0)}
+  kw_median: 81
+  kw_n: 6270540
+  kw_n_pct: 94.0
+  vek_prumer: 17.0
+  vek_median: 15.3
+
+RSV 1989 (proxy_1989_registrace_v_CR_do_1989): 2155149 aut
+  znacky: [('ŠKODA', 1256825, 58.3), ('VAZ', 210963, 9.8), ('FIAT', 118984, 5.5), ('TRABANT', 99075, 4.6), ('MOSKVIČ', 73045, 3.4), ('WARTBURG', 67191, 3.1), ('FORD', 32287, 1.5), ('DACIA', 29056, 1.3), ('RENAULT', 28412, 1.3), ('VOLKSWAGEN', 25515, 1.2), ('VOLHA', 22906, 1.1), ('OPEL', 20189, 0.9)]
+  modely: [('ŠKODA 120', 367646, 17.1), ('ŠKODA 105', 272750, 12.7), ('ŠKODA 100', 194467, 9.0), ('TRABANT 601', 95233, 4.4), ('VAZ 2101', 91726, 4.3), ('ŠKODA 110', 85914, 4.0), ('ŠKODA 1000', 85897, 4.0), ('ŠKODA 136', 58370, 2.7)]
+  palivo: {'benzín': (2090728, 97.0), 'nafta': (59249, 2.7), 'LPG (+benzín)': (2675, 0.1), 'jiné/neuvedeno': (2492, 0.1), 'hybrid': (3, 0.0), 'elektřina (BEV)': (1, 0.0), 'plug-in/hybrid (el. + spal.)': (1, 0.0)}
+  kw_median: 36
+  kw_n: 1080832
+  kw_n_pct: 50.2
+  vek_prumer: None
+  vek_median: None
+
+RSV stara (aktivni_prvni_registrace_pred_1990): 477940 aut
+  znacky: [('ŠKODA', 224963, 47.1), ('VAZ', 48406, 10.1), ('FIAT', 32095, 6.7), ('TRABANT', 21003, 4.4), ('FORD', 14284, 3.0), ('VOLKSWAGEN', 12747, 2.7), ('WARTBURG', 12513, 2.6), ('MOSKVIČ', 11538, 2.4), ('RENAULT', 9988, 2.1), ('OPEL', 9376, 2.0), ('MERCEDES-BENZ', 7416, 1.6), ('PEUGEOT', 5755, 1.2)]
+  modely: [('ŠKODA 120', 63548, 13.3), ('ŠKODA 105', 47702, 10.0), ('ŠKODA 100', 32277, 6.8), ('VAZ 2101', 19691, 4.1), ('TRABANT 601', 19059, 4.0), ('ŠKODA 1000', 16349, 3.4), ('ŠKODA 110', 15711, 3.3), ('ŠKODA OCTAVIA', 10824, 2.3)]
+  palivo: {'benzín': (452235, 94.6), 'nafta': (23231, 4.9), 'jiné/neuvedeno': (1417, 0.3), 'LPG (+benzín)': (1052, 0.2), 'hybrid': (3, 0.0), 'plug-in/hybrid (el. + spal.)': (2, 0.0)}
+  kw_median: 36
+  kw_n: 223373
+  kw_n_pct: 46.7
+  vek_prumer: 49.8
+  vek_median: 48.0
+rsv_graf_znacky (podíl % do 1989 → dnes): [('Škoda', 58.32, 34.2), ('Lada (VAZ)', 9.79, 0.78), ('Fiat', 5.52, 2.02), ('Trabant', 4.6, 0.32), ('Volkswagen', 1.18, 10.97), ('Ford', 1.5, 6.12), ('Hyundai', 0.01, 4.45)]
+rsv_aktivni = 6670683  RSV 1. 11. 2026, osobní auta (M1) ve stavu PROVOZOVANÉ
+rsv_1989_zaznamu = 2155149  M1 s 1. registrací v ČR do 31. 12. 1989, všechny statusy (orientační obraz)
+rsv_stara_provozovana = 477940  PROVOZOVANÉ s 1. registrací před 1990 – horní mez
+rsv_stara_podil_pct = 7.2  podíl na autech v provozu
+rsv_skoda_dnes_pct = 34.2  
+rsv_skoda_1989_pct = 58.3  
+rsv_skoda_dnes = 2281431  
+rsv_benzin_1989_pct = 97.0  
+rsv_elektro_dnes = (82017, 1.2)  
+rsv_kw_median = [36, 81]  medián výkonu kW: do 1989 → dnes
+rsv_kw_pomer = 2.25  
+rsv_plugin_dnes = 10584  plug-in hybridy podle volného textu paliva v RSV
+oa_2025_plugin_celkem = 53960.0  plug-in hybridy podle Ročenky 2025 – pro srovnání, RSV je podhodnocuje
+rsv_octavia = ('ŠKODA OCTAVIA', 747839, 11.2)  všechny varianty řady (Combi, RS, Scout…)
+vlak_1997_mil = 202.9  Ročenka dopravy 1998, tab. 611
+bus_1997_mil = 465.0  tab. 611, veřejná silniční doprava mimo autobusovou MHD
+iad_1997_mil = 1850.0  tab. 611, individuální silniční přeprava osob (odhad MD)
+vlak_2025_mil = 192.308525  Ročenka dopravy 2025, tab. 5.1.1
+bus_2025_mil = 352.6  
+iad_2025_mil = 2848.46  odhad MD, předběžně
+mhd_2025_mil = 2003.1  
+vlak_zmena_pct = -5.2  
+bus_zmena_pct = -24.2  
+iad_zmena_pct = 54.0  
+cestujici_rada (mil.) {1997: {'vlak': 202.9, 'bus': 465.0, 'zdroj': 'ČSÚ'}, 1998: {'vlak': 182.9, 'bus': 456.0, 'zdroj': 'ČSÚ'}, 1999: {'vlak': 177.0, 'bus': 446.9, 'zdroj': 'ČSÚ'}, 2000: {'vlak': 184.7, 'bus': 438.9, 'zdroj': 'ČSÚ'}, 2001: {'vlak': 190.7, 'bus': 435.9, 'zdroj': 'ČSÚ'}, 2002: {'vlak': 177.2, 'bus': 406.1, 'zdroj': 'ČSÚ'}, 2003: {'vlak': 174.2, 'bus': 417.0, 'zdroj': 'ČSÚ'}, 2004: {'vlak': 180.9, 'bus': 418.6, 'zdroj': 'ČSÚ'}, 2005: {'vlak': 180.3, 'bus': 388.3, 'zdroj': 'ČSÚ'}, 2006: {'vlak': 183.0, 'bus': 387.7, 'zdroj': 'ČSÚ'}, 2007: {'vlak': 184.2, 'bus': 375.0, 'zdroj': 'ČSÚ'}, 2008: {'vlak': 177.4, 'bus': 373.4, 'zdroj': 'ČSÚ'}, 2009: {'vlak': 165.0, 'bus': 367.6, 'zdroj': 'ČSÚ'}, 2010: {'vlak': 164.8, 'bus': 372.5, 'zdroj': 'ČSÚ'}, 2011: {'vlak': 167.9, 'bus': 364.6, 'zdroj': 'ČSÚ'}, 2012: {'vlak': 172.8, 'bus': 345.0, 'zdroj': 'ČSÚ'}, 2013: {'vlak': 174.5, 'bus': 338.0, 'zdroj': 'ČSÚ'}, 2014: {'vlak': 176.1, 'bus': 349.5, 'zdroj': 'ČSÚ'}, 2015: {'vlak': 176.6, 'bus': 350.9, 'zdroj': 'ČSÚ'}, 2016: {'vlak': 179.2, 'bus': 332.8, 'zdroj': 'ČSÚ'}, 2017: {'vlak': 183.0, 'bus': 329.7, 'zdroj': 'ČSÚ'}, 2018: {'vlak': 189.5, 'bus': 340.2, 'zdroj': 'ČSÚ'}, 2019: {'vlak': 194.2, 'bus': 355.6, 'zdroj': 'ČSÚ'}, 2020: {'vlak': 129.1, 'bus': 233.0, 'zdroj': 'ČSÚ'}, 2021: {'vlak': 133.8, 'bus': 249.7, 'zdroj': 'ČSÚ'}, 2022: {'vlak': 174.9, 'bus': 334.8, 'zdroj': 'ČSÚ'}, 2023: {'vlak': 184.6, 'bus': 347.0, 'zdroj': 'ČSÚ'}, 2024: {'vlak': 191.893205, 'bus': 345.2, 'zdroj': 'MD'}, 2025: {'vlak': 192.308525, 'bus': 352.6, 'zdroj': 'MD'}}
+kontrola 1997 ČSÚ × MD 611: 202.9 202.9 465.0 465.0
+ČSÚ 1995/1996 bus (pravděpodobně vč. městských linek, nepoužito): 644.2 527.364
+vlak_minimum_pred_covidem = [2010, 164.8]  
+vlak_2019 = 194.2  
+bus_2019 = 355.6  
+bus_linkova_vnitrostatni_2025_tis = 316318.5  
+bus_verejny_zajem_2025_tis = 306457.7  
+bus_verejny_zajem_pct = 96.9  podíl cestujících vnitrostátních linek ve veřejném zájmu
+vlak_ids_pct = 69.5  podíl vnitrostátních cestujících vlakem v integrovaných systémech
+bus 2000 pracovní den: obcí 6169, bez spoje 57 (0.9 %), 1–4 spoje 130
+bus 2000 sobota: obcí 6169, bez spoje 2441 (39.6 %), 1–4 spoje 1287
+bus 2000 neděle: obcí 6169, bez spoje 1845 (29.9 %), 1–4 spoje 1475
+vlak 2000 pracovní den: obcí se spojem 1748 (28.3 %)
+bus 2025 pracovní den: obcí 6258, bez spoje 51 (0.8 %), 1–4 spoje 83
+bus 2025 sobota: obcí 6258, bez spoje 1722 (27.5 %), 1–4 spoje 369
+bus 2025 neděle: obcí 6258, bez spoje 1461 (23.3 %), 1–4 spoje 555
+vlak 2025 pracovní den: obcí se spojem 1613 (25.8 %)
+bus_sobota_bez_2025 = 1722.0  
+bus_sobota_bez_2025_pct = 27.5  
+bus_sobota_bez_2000 = 2441.0  
+bus_sobota_bez_2000_pct = 39.6  
+bus_nedele_bez_2025 = 1461.0  
+bus_nedele_bez_2000 = 1845.0  
+bus_prac_bez_2025 = 51.0  
+bus_prac_bez_2000 = 57.0  
+bus_sobota_nejvys4_2000 = 3728.0  obcí bez spoje nebo s 1–4 spoji v sobotu
+bus_sobota_nejvys4_2025 = 2091.0  obcí bez spoje nebo s 1–4 spoji v sobotu
+obci_2000 = 6169.0  
+obci_2025 = 6258.0  
+vlak_obci_2000 = 1748.0  
+vlak_obci_2025 = 1613.0  
+trate_1998_km = 9430.0  Ročenka 1998, tab. 422
+trate_2025_km = 9510.0  Ročenka 2025, tab. 3.1.2
+umrti_1989 = 1078  ČSÚ Tab. 14.03, usmrcení do 30 dnů
+umrti_dnes = [2023, 502]  
+umrti_max = [1994, 1637]  
+
+# grafy.py
+auta na 1000 1990 234 → 2025 621
+palivo Benzin 1997 92.1 → 2025 57.9
+palivo Nafta 1997 7.6 → 2025 38.9
+palivo Plyn, elektřina a ostatní 1997 0.3 → 2025 3.2
+palivo ostatní 1997/2025 0.26 3.2
+cestujici 1997 vlak 202.9 bus 465.0
+cestujici 2010 vlak 164.8 bus 372.5
+cestujici 2019 vlak 194.2 bus 355.6
+cestujici 2025 vlak 192.308525 bus 352.6
+obsluha Obce bez autobusu v sobotu 2000 2441.0 → 2025 1722.0
+obsluha Obce bez autobusu v neděli 2000 1845.0 → 2025 1461.0
+obsluha Obce s nejvýš čtyřmi spoji v sobotu 2000 3728.0 → 2025 2091.0
+obsluha Obce bez autobusu v pracovní den 2000 57.0 → 2025 51.0
+znacky Škoda do 1989 58.3 → 2026 34.2
+znacky Lada (VAZ) do 1989 9.8 → 2026 0.8
+znacky Fiat do 1989 5.5 → 2026 2.0
+znacky Trabant do 1989 4.6 → 2026 0.3
+znacky Volkswagen do 1989 1.2 → 2026 11.0
+znacky Ford do 1989 1.5 → 2026 6.1
+znacky Hyundai do 1989 0.0 → 2026 4.5

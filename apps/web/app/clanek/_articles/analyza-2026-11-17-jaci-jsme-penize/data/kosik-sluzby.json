@@ -1,0 +1,1124 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Služby {zdražily|#de1743} víc než mzdy: za výplatu se ostříháme víc než třikrát méně často",
+  "subtitle": "Kolik služeb zaplatí průměrná čistá měsíční mzda: jedna ikona = desetina toho, co zaplatila v roce 1989. Kadeřník do roku 2010 stříhání na sucho, potom s mytím"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 0,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 1,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 2,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 3,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 4,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 5,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 6,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 7,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 8,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 9,
+    "y": 1.65,
+    "stav": "tehdy",
+    "ikona": "bus",
+    "t_rok": "1989",
+    "t_mnozstvi": "2 504 jízdenek",
+    "t_cena": "1,00 Kčs"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 0,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 1,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 2,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 3,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 4,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 5,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 6,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 7,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Jízdenka MHD",
+    "x": 8,
+    "y": 2.65,
+    "stav": "dnes",
+    "ikona": "bus",
+    "t_rok": "2025",
+    "t_mnozstvi": "2 270 jízdenek",
+    "t_cena": "16,87 Kč"
+   },
+   {
+    "polozka": "Kino",
+    "x": 0,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 1,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 2,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 3,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 4,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 5,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 6,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 7,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 8,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 9,
+    "y": 4.8,
+    "stav": "tehdy",
+    "ikona": "movie",
+    "t_rok": "1989",
+    "t_mnozstvi": "342 vstupenek",
+    "t_cena": "7,33 Kčs"
+   },
+   {
+    "polozka": "Kino",
+    "x": 0,
+    "y": 5.8,
+    "stav": "dnes",
+    "ikona": "movie",
+    "t_rok": "2025",
+    "t_mnozstvi": "217 vstupenek",
+    "t_cena": "176,10 Kč"
+   },
+   {
+    "polozka": "Kino",
+    "x": 1,
+    "y": 5.8,
+    "stav": "dnes",
+    "ikona": "movie",
+    "t_rok": "2025",
+    "t_mnozstvi": "217 vstupenek",
+    "t_cena": "176,10 Kč"
+   },
+   {
+    "polozka": "Kino",
+    "x": 2,
+    "y": 5.8,
+    "stav": "dnes",
+    "ikona": "movie",
+    "t_rok": "2025",
+    "t_mnozstvi": "217 vstupenek",
+    "t_cena": "176,10 Kč"
+   },
+   {
+    "polozka": "Kino",
+    "x": 3,
+    "y": 5.8,
+    "stav": "dnes",
+    "ikona": "movie",
+    "t_rok": "2025",
+    "t_mnozstvi": "217 vstupenek",
+    "t_cena": "176,10 Kč"
+   },
+   {
+    "polozka": "Kino",
+    "x": 4,
+    "y": 5.8,
+    "stav": "dnes",
+    "ikona": "movie",
+    "t_rok": "2025",
+    "t_mnozstvi": "217 vstupenek",
+    "t_cena": "176,10 Kč"
+   },
+   {
+    "polozka": "Kino",
+    "x": 5,
+    "y": 5.8,
+    "stav": "dnes",
+    "ikona": "movie",
+    "t_rok": "2025",
+    "t_mnozstvi": "217 vstupenek",
+    "t_cena": "176,10 Kč"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 0,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 1,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 2,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 3,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 4,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 5,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 6,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 7,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 8,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 9,
+    "y": 7.949999999999999,
+    "stav": "tehdy",
+    "ikona": "shoe",
+    "t_rok": "1989",
+    "t_mnozstvi": "313 oprav",
+    "t_cena": "8,00 Kčs"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 0,
+    "y": 8.95,
+    "stav": "dnes",
+    "ikona": "shoe",
+    "t_rok": "2025",
+    "t_mnozstvi": "170 oprav",
+    "t_cena": "224,81 Kč"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 1,
+    "y": 8.95,
+    "stav": "dnes",
+    "ikona": "shoe",
+    "t_rok": "2025",
+    "t_mnozstvi": "170 oprav",
+    "t_cena": "224,81 Kč"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 2,
+    "y": 8.95,
+    "stav": "dnes",
+    "ikona": "shoe",
+    "t_rok": "2025",
+    "t_mnozstvi": "170 oprav",
+    "t_cena": "224,81 Kč"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 3,
+    "y": 8.95,
+    "stav": "dnes",
+    "ikona": "shoe",
+    "t_rok": "2025",
+    "t_mnozstvi": "170 oprav",
+    "t_cena": "224,81 Kč"
+   },
+   {
+    "polozka": "Nové podpatky (opravna obuvi)",
+    "x": 4,
+    "y": 8.95,
+    "stav": "dnes",
+    "ikona": "shoe",
+    "t_rok": "2025",
+    "t_mnozstvi": "170 oprav",
+    "t_cena": "224,81 Kč"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 0,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 1,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 2,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 3,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 4,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 5,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 6,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 7,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 8,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 9,
+    "y": 11.1,
+    "stav": "tehdy",
+    "ikona": "scissors",
+    "t_rok": "1989",
+    "t_mnozstvi": "358 stříhání",
+    "t_cena": "7,00 Kčs"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 0,
+    "y": 12.1,
+    "stav": "dnes",
+    "ikona": "scissors",
+    "t_rok": "2025",
+    "t_mnozstvi": "101 stříhání",
+    "t_cena": "380,70 Kč"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 1,
+    "y": 12.1,
+    "stav": "dnes",
+    "ikona": "scissors",
+    "t_rok": "2025",
+    "t_mnozstvi": "101 stříhání",
+    "t_cena": "380,70 Kč"
+   },
+   {
+    "polozka": "Pánský kadeřník",
+    "x": 2,
+    "y": 12.1,
+    "stav": "dnes",
+    "ikona": "scissors",
+    "t_rok": "2025",
+    "t_mnozstvi": "101 stříhání",
+    "t_cena": "380,70 Kč"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'bus'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M -0.5 0.4167 m -0.1667 0 a 0.1667 0.1667 0 1 0 0.3333 0 a 0.1667 0.1667 0 1 0 -0.3333 0 M 0.5 0.4167 m -0.1667 0 a 0.1667 0.1667 0 1 0 0.3333 0 a 0.1667 0.1667 0 1 0 -0.3333 0 M -0.6667 0.4167 h -0.1667 v -0.9167 a 0.0833 0.0833 0 0 1 0.0833 -0.0833 h 1.1667 a 0.4167 0.5833 0 0 1 0.4167 0.5833 v 0.4167 h -0.1667 m -0.3333 0 h -0.6667 M 0.3333 -0.5833 l 0.125 0.5833 l 0.375 0 M -0.8333 -0.1667 l 1.25 0 M -0.4167 -0.5833 l 0 0.4167 M 0 -0.5833 l 0 0.4167",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       12.9
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'movie'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M -0.6667 -0.6667 m 0 0.1667 a 0.1667 0.1667 0 0 1 0.1667 -0.1667 h 1 a 0.1667 0.1667 0 0 1 0.1667 0.1667 v 1 a 0.1667 0.1667 0 0 1 -0.1667 0.1667 h -1 a 0.1667 0.1667 0 0 1 -0.1667 -0.1667 z M -0.3333 -0.6667 l 0 1.3333 M 0.3333 -0.6667 l 0 1.3333 M -0.6667 -0.3333 l 0.3333 0 M -0.6667 0.3333 l 0.3333 0 M -0.6667 0 l 1.3333 0 M 0.3333 -0.3333 l 0.3333 0 M 0.3333 0.3333 l 0.3333 0",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       12.9
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'scissors'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M -0.5 -0.4167 m -0.25 0 a 0.25 0.25 0 1 0 0.5 0 a 0.25 0.25 0 1 0 -0.5 0 M -0.5 0.4167 m -0.25 0 a 0.25 0.25 0 1 0 0.5 0 a 0.25 0.25 0 1 0 -0.5 0 M -0.2833 -0.2833 l 0.8667 0.8667 M -0.2833 0.2833 l 0.8667 -0.8667",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       12.9
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.ikona == 'shoe'"
+    }
+   ],
+   "mark": {
+    "type": "point",
+    "shape": "M -0.6667 -0.5 h 0.4522 a 0.0833 0.0833 0 0 1 0.0719 0.0413 l 0.0887 0.1519 a 0.25 0.25 0 0 0 0.158 0.1173 l 0.3897 0.0928 a 0.3333 0.3333 0 0 1 0.2562 0.3242 v 0.1892 a 0.0833 0.0833 0 0 1 -0.0833 0.0833 h -1.3333 a 0.0833 0.0833 0 0 1 -0.0833 -0.0833 v -0.8333 a 0.0833 0.0833 0 0 1 0.0833 -0.0833 z M 0.1667 0.0833 l 0.0833 -0.1667 M -0.3333 0.5 v -0.0833 a 0.3333 0.3333 0 0 0 -0.3333 -0.3333 h -0.0833 M -0.1667 0 l 0.125 -0.25",
+    "filled": false,
+    "strokeWidth": 1.7,
+    "strokeCap": "round",
+    "strokeJoin": "round",
+    "opacity": 1,
+    "size": {
+     "expr": "pow(min(width / 23 * 0.86, 22), 2)"
+    }
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       12.9
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#c9c9bd",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "polozka",
+      "title": "Položka"
+     },
+     {
+      "field": "t_rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t_mnozstvi",
+      "title": "Za průměrnou čistou mzdu"
+     },
+     {
+      "field": "t_cena",
+      "title": "Cena za jednotku"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "y": 0.73,
+      "text": "Jízdenka MHD: 2 504 → 2 270 jízdenek"
+     },
+     {
+      "y": 3.88,
+      "text": "Kino: 342 → 217 vstupenek"
+     },
+     {
+      "y": 7.029999999999999,
+      "text": "Nové podpatky (opravna obuvi): 313 → 170 oprav"
+     },
+     {
+      "y": 10.18,
+      "text": "Pánský kadeřník: 358 → 101 stříhání"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 12.5,
+    "fontWeight": 700,
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "datum": -2.6,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       12.9
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "y": 1.65,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 2.65,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 4.8,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 5.8,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 7.949999999999999,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 8.95,
+      "text": "2025",
+      "stav": "dnes"
+     },
+     {
+      "y": 11.1,
+      "text": "1989",
+      "stav": "tehdy"
+     },
+     {
+      "y": 12.1,
+      "text": "2025",
+      "stav": "dnes"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 11
+   },
+   "encoding": {
+    "x": {
+     "datum": -2.6,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -2.6,
+       19.6
+      ]
+     },
+     "axis": null
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       12.9
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "text": {
+     "field": "text"
+    },
+    "color": {
+     "field": "stav",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "tehdy",
+       "dnes"
+      ],
+      "range": [
+       "#333333",
+       "#de1743"
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 03.04 a 13.07](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes",
+ "height": 310
+}

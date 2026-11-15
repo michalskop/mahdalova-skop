@@ -1,0 +1,904 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "{Minimální mzda|#de1743} klesla na necelou čtvrtinu průměrné, {důchod|#6267a3} drží kolem 40 %",
+  "subtitle": "Průměrný starobní důchod a minimální mzda jako podíl z průměrné hrubé měsíční mzdy, v %; minimální mzda od zavedení v roce 1991, výše platná na konci roku"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "rok": 1989,
+    "rada": "Průměrný starobní důchod",
+    "v": 50.4,
+    "t": "50,4 %"
+   },
+   {
+    "rok": 1990,
+    "rada": "Průměrný starobní důchod",
+    "v": 52.7,
+    "t": "52,7 %"
+   },
+   {
+    "rok": 1991,
+    "rada": "Průměrný starobní důchod",
+    "v": 57.4,
+    "t": "57,4 %"
+   },
+   {
+    "rok": 1991,
+    "rada": "Minimální mzda",
+    "v": 52.7,
+    "t": "52,7 % (2 000 Kč)"
+   },
+   {
+    "rok": 1992,
+    "rada": "Průměrný starobní důchod",
+    "v": 52.0,
+    "t": "52,0 %"
+   },
+   {
+    "rok": 1992,
+    "rada": "Minimální mzda",
+    "v": 47.4,
+    "t": "47,4 % (2 200 Kč)"
+   },
+   {
+    "rok": 1993,
+    "rada": "Průměrný starobní důchod",
+    "v": 47.0,
+    "t": "47,0 %"
+   },
+   {
+    "rok": 1993,
+    "rada": "Minimální mzda",
+    "v": 37.8,
+    "t": "37,8 % (2 200 Kč)"
+   },
+   {
+    "rok": 1994,
+    "rada": "Průměrný starobní důchod",
+    "v": 44.4,
+    "t": "44,4 %"
+   },
+   {
+    "rok": 1994,
+    "rada": "Minimální mzda",
+    "v": 31.9,
+    "t": "31,9 % (2 200 Kč)"
+   },
+   {
+    "rok": 1995,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.8,
+    "t": "43,8 %"
+   },
+   {
+    "rok": 1995,
+    "rada": "Minimální mzda",
+    "v": 26.9,
+    "t": "26,9 % (2 200 Kč)"
+   },
+   {
+    "rok": 1996,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.5,
+    "t": "43,5 %"
+   },
+   {
+    "rok": 1996,
+    "rada": "Minimální mzda",
+    "v": 25.8,
+    "t": "25,8 % (2 500 Kč)"
+   },
+   {
+    "rok": 1997,
+    "rada": "Průměrný starobní důchod",
+    "v": 45.3,
+    "t": "45,3 %"
+   },
+   {
+    "rok": 1997,
+    "rada": "Minimální mzda",
+    "v": 23.4,
+    "t": "23,4 % (2 500 Kč)"
+   },
+   {
+    "rok": 1998,
+    "rada": "Průměrný starobní důchod",
+    "v": 45.9,
+    "t": "45,9 %"
+   },
+   {
+    "rok": 1998,
+    "rada": "Minimální mzda",
+    "v": 22.7,
+    "t": "22,7 % (2 650 Kč)"
+   },
+   {
+    "rok": 1999,
+    "rada": "Průměrný starobní důchod",
+    "v": 45.2,
+    "t": "45,2 %"
+   },
+   {
+    "rok": 1999,
+    "rada": "Minimální mzda",
+    "v": 28.4,
+    "t": "28,4 % (3 600 Kč)"
+   },
+   {
+    "rok": 2000,
+    "rada": "Průměrný starobní důchod",
+    "v": 45.10174748468114,
+    "t": "45,1 %"
+   },
+   {
+    "rok": 2000,
+    "rada": "Minimální mzda",
+    "v": 34.0,
+    "t": "34,0 % (4 500 Kč)"
+   },
+   {
+    "rok": 2001,
+    "rada": "Průměrný starobní důchod",
+    "v": 44.17860620392266,
+    "t": "44,2 %"
+   },
+   {
+    "rok": 2001,
+    "rada": "Minimální mzda",
+    "v": 34.8,
+    "t": "34,8 % (5 000 Kč)"
+   },
+   {
+    "rok": 2002,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.99639268229837,
+    "t": "44,0 %"
+   },
+   {
+    "rok": 2002,
+    "rada": "Minimální mzda",
+    "v": 36.7,
+    "t": "36,7 % (5 700 Kč)"
+   },
+   {
+    "rok": 2003,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.037127206329885,
+    "t": "43,0 %"
+   },
+   {
+    "rok": 2003,
+    "rada": "Minimální mzda",
+    "v": 37.7,
+    "t": "37,7 % (6 200 Kč)"
+   },
+   {
+    "rok": 2004,
+    "rada": "Průměrný starobní důchod",
+    "v": 41.54357036528112,
+    "t": "41,5 %"
+   },
+   {
+    "rok": 2004,
+    "rada": "Minimální mzda",
+    "v": 38.4,
+    "t": "38,4 % (6 700 Kč)"
+   },
+   {
+    "rok": 2005,
+    "rada": "Průměrný starobní důchod",
+    "v": 42.12821631051025,
+    "t": "42,1 %"
+   },
+   {
+    "rok": 2005,
+    "rada": "Minimální mzda",
+    "v": 39.2,
+    "t": "39,2 % (7 185 Kč)"
+   },
+   {
+    "rok": 2006,
+    "rada": "Průměrný starobní důchod",
+    "v": 41.81418192980661,
+    "t": "41,8 %"
+   },
+   {
+    "rok": 2006,
+    "rada": "Minimální mzda",
+    "v": 40.7,
+    "t": "40,7 % (7 955 Kč)"
+   },
+   {
+    "rok": 2007,
+    "rada": "Průměrný starobní důchod",
+    "v": 41.68535572839624,
+    "t": "41,7 %"
+   },
+   {
+    "rok": 2007,
+    "rada": "Minimální mzda",
+    "v": 38.2,
+    "t": "38,2 % (8 000 Kč)"
+   },
+   {
+    "rok": 2008,
+    "rada": "Průměrný starobní důchod",
+    "v": 41.4,
+    "t": "41,4 %"
+   },
+   {
+    "rok": 2008,
+    "rada": "Minimální mzda",
+    "v": 35.4,
+    "t": "35,4 % (8 000 Kč)"
+   },
+   {
+    "rok": 2009,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.0,
+    "t": "43,0 %"
+   },
+   {
+    "rok": 2009,
+    "rada": "Minimální mzda",
+    "v": 34.3,
+    "t": "34,3 % (8 000 Kč)"
+   },
+   {
+    "rok": 2010,
+    "rada": "Průměrný starobní důchod",
+    "v": 42.3,
+    "t": "42,3 %"
+   },
+   {
+    "rok": 2010,
+    "rada": "Minimální mzda",
+    "v": 33.5,
+    "t": "33,5 % (8 000 Kč)"
+   },
+   {
+    "rok": 2011,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.1,
+    "t": "43,1 %"
+   },
+   {
+    "rok": 2011,
+    "rada": "Minimální mzda",
+    "v": 32.7,
+    "t": "32,7 % (8 000 Kč)"
+   },
+   {
+    "rok": 2012,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.0,
+    "t": "43,0 %"
+   },
+   {
+    "rok": 2012,
+    "rada": "Minimální mzda",
+    "v": 31.9,
+    "t": "31,9 % (8 000 Kč)"
+   },
+   {
+    "rok": 2013,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.8,
+    "t": "43,8 %"
+   },
+   {
+    "rok": 2013,
+    "rada": "Minimální mzda",
+    "v": 34.0,
+    "t": "34,0 % (8 500 Kč)"
+   },
+   {
+    "rok": 2014,
+    "rada": "Průměrný starobní důchod",
+    "v": 42.9,
+    "t": "42,9 %"
+   },
+   {
+    "rok": 2014,
+    "rada": "Minimální mzda",
+    "v": 33.0,
+    "t": "33,0 % (8 500 Kč)"
+   },
+   {
+    "rok": 2015,
+    "rada": "Průměrný starobní důchod",
+    "v": 42.6,
+    "t": "42,6 %"
+   },
+   {
+    "rok": 2015,
+    "rada": "Minimální mzda",
+    "v": 34.6,
+    "t": "34,6 % (9 200 Kč)"
+   },
+   {
+    "rok": 2016,
+    "rada": "Průměrný starobní důchod",
+    "v": 41.2,
+    "t": "41,2 %"
+   },
+   {
+    "rok": 2016,
+    "rada": "Minimální mzda",
+    "v": 35.7,
+    "t": "35,7 % (9 900 Kč)"
+   },
+   {
+    "rok": 2017,
+    "rada": "Průměrný starobní důchod",
+    "v": 39.9,
+    "t": "39,9 %"
+   },
+   {
+    "rok": 2017,
+    "rada": "Minimální mzda",
+    "v": 37.1,
+    "t": "37,1 % (11 000 Kč)"
+   },
+   {
+    "rok": 2018,
+    "rada": "Průměrný starobní důchod",
+    "v": 38.7,
+    "t": "38,7 %"
+   },
+   {
+    "rok": 2018,
+    "rada": "Minimální mzda",
+    "v": 38.1,
+    "t": "38,1 % (12 200 Kč)"
+   },
+   {
+    "rok": 2019,
+    "rada": "Průměrný starobní důchod",
+    "v": 38.8,
+    "t": "38,8 %"
+   },
+   {
+    "rok": 2019,
+    "rada": "Minimální mzda",
+    "v": 38.6,
+    "t": "38,6 % (13 350 Kč)"
+   },
+   {
+    "rok": 2020,
+    "rada": "Průměrný starobní důchod",
+    "v": 39.9,
+    "t": "39,9 %"
+   },
+   {
+    "rok": 2020,
+    "rada": "Minimální mzda",
+    "v": 40.4,
+    "t": "40,4 % (14 600 Kč)"
+   },
+   {
+    "rok": 2021,
+    "rada": "Průměrný starobní důchod",
+    "v": 40.3,
+    "t": "40,3 %"
+   },
+   {
+    "rok": 2021,
+    "rada": "Minimální mzda",
+    "v": 39.7,
+    "t": "39,7 % (15 200 Kč)"
+   },
+   {
+    "rok": 2022,
+    "rada": "Průměrný starobní důchod",
+    "v": 42.9,
+    "t": "42,9 %"
+   },
+   {
+    "rok": 2022,
+    "rada": "Minimální mzda",
+    "v": 40.6,
+    "t": "40,6 % (16 200 Kč)"
+   },
+   {
+    "rok": 2023,
+    "rada": "Průměrný starobní důchod",
+    "v": 46.6,
+    "t": "46,6 %"
+   },
+   {
+    "rok": 2023,
+    "rada": "Minimální mzda",
+    "v": 40.4,
+    "t": "40,4 % (17 300 Kč)"
+   },
+   {
+    "rok": 2024,
+    "rada": "Průměrný starobní důchod",
+    "v": 45.1,
+    "t": "45,1 %"
+   },
+   {
+    "rok": 2024,
+    "rada": "Minimální mzda",
+    "v": 41.4,
+    "t": "41,4 % (18 900 Kč)"
+   },
+   {
+    "rok": 2025,
+    "rada": "Průměrný starobní důchod",
+    "v": 43.4,
+    "t": "43,4 %"
+   },
+   {
+    "rok": 2025,
+    "rada": "Minimální mzda",
+    "v": 42.7,
+    "t": "42,7 % (20 800 Kč)"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       65
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "rada",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "Průměrný starobní důchod",
+       "Minimální mzda"
+      ],
+      "range": [
+       "#6267a3",
+       "#de1743"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rada",
+      "title": "Řada"
+     },
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t",
+      "title": "Podíl z průměrné mzdy"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2005,
+      "v": 42.12821631051025,
+      "text": "průměrný důchod"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#6267a3",
+    "dy": -12,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       65
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2009,
+      "v": 34.3,
+      "text": "minimální mzda"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": 18,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       65
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1998,
+      "v": 22.7,
+      "text": "1998: 23 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": 16,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       65
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 43.4,
+      "text": "43 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#6267a3",
+    "dy": -12,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       65
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 42.7,
+      "text": "43 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": 18,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1989,
+       2000,
+       2010,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       65
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 13.07 a 13.11](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes",
+ "height": 260
+}

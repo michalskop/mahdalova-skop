@@ -1,0 +1,25 @@
+== Pew topline: Česko a Slovensko (1991 = česká/slovenská část ČSFR) ==
+Q15b Česko 1991: rozhodně 41 + spíše 39 = 80 % | neschvaluje 9 + 5 = 14 % | neví 6 %
+Q15b Česko 2009: rozhodně 34 + spíše 46 = 80 % | neschvaluje 12 + 4 = 16 % | neví 4 %
+Q15b Česko 2019: rozhodně 45 + spíše 37 = 82 % | neschvaluje 9 + 2 = 11 % | neví 7 %
+Q15b Slovensko 1991: rozhodně 28 + spíše 42 = 70 % | neschvaluje 19 + 4 = 23 % | neví 6 %
+Q15b Slovensko 2009: rozhodně 22 + spíše 49 = 71 % | neschvaluje 18 + 5 = 23 % | neví 6 %
+Q15b Slovensko 2019: rozhodně 34 + spíše 40 = 74 % | neschvaluje 15 + 7 = 22 % | neví 4 %
+Q16b Česko 1991: rozhodně 42 + spíše 45 = 87 % | neschvaluje 4 + 3 = 7 % | neví 6 %
+Q16b Česko 2009: rozhodně 28 + spíše 51 = 79 % | neschvaluje 12 + 3 = 15 % | neví 5 %
+Q16b Česko 2019: rozhodně 37 + spíše 39 = 76 % | neschvaluje 13 + 3 = 16 % | neví 9 %
+Q16b Slovensko 1991: rozhodně 19 + spíše 50 = 69 % | neschvaluje 11 + 3 = 14 % | neví 17 %
+Q16b Slovensko 2009: rozhodně 18 + spíše 48 = 66 % | neschvaluje 20 + 4 = 24 % | neví 10 %
+Q16b Slovensko 2019: rozhodně 33 + spíše 38 = 71 % | neschvaluje 16 + 7 = 23 % | neví 6 %
+Q17 Česko 2009: lepší 45 % | horší 39 % | stejná 12 % | neví 3 %
+Q17 Česko 2019: lepší 61 % | horší 17 % | stejná 16 % | neví 6 %
+Q17 Slovensko 2009: lepší 29 % | horší 48 % | stejná 18 % | neví 5 %
+Q17 Slovensko 2019: lepší 45 % | horší 38 % | stejná 13 % | neví 5 %
+   rozdíl ČR − SK Q15b 1991: 10 p. b.
+   rozdíl ČR − SK Q15b 2009: 9 p. b.
+   rozdíl ČR − SK Q15b 2019: 8 p. b.
+   rozdíl ČR − SK Q16b 1991: 18 p. b.
+   rozdíl ČR − SK Q16b 2009: 13 p. b.
+   rozdíl ČR − SK Q16b 2019: 5 p. b.
+   rozdíl ČR − SK Q17 2009: 16 p. b.
+   rozdíl ČR − SK Q17 2019: 16 p. b.

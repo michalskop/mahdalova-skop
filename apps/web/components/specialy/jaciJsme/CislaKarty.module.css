@@ -1,0 +1,143 @@
+/* „37 let v 37 číslech“ – karty tehdy × dnes. Barvy z palety (packages/ui/DESIGN.md):
+   tehdy #6267a3 (brandNavy.6), dnes #de1743 (brand.6), ink #101432 (brandNavy.9),
+   tlumená #4c4f8e (brandNavy.7), linky #d4d4c8 (background.7), karta bílá na #f8f6f0. */
+
+.filtr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+  font-family: var(--mantine-font-family-headings), Arial, sans-serif;
+}
+.chip {
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 7px 12px;
+  min-height: 36px;
+  border-radius: 999px;
+  border: 1px solid #d4d4c8;
+  background: #ffffff;
+  color: #101432;
+  cursor: pointer;
+}
+.chip:hover { border-color: #101432; }
+.chip[aria-pressed='true'] { background: #101432; border-color: #101432; color: #ffffff; font-weight: 700; }
+.chip:focus-visible, .kopiruj:focus-visible, .poradi:focus-visible { outline: 2px solid #de1743; outline-offset: 2px; }
+
+.mrizka {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 1023px) { .mrizka { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .mrizka { grid-template-columns: minmax(0, 1fr); } }
+
+.karta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 18px 20px 16px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16, 20, 50, 0.08);
+  color: #101432;
+  font-family: var(--mantine-font-family-headings), Arial, sans-serif;
+  scroll-margin-top: 96px;
+  overflow-wrap: anywhere;
+}
+/* karta, na kterou vede sdílený odkaz #cislo-N */
+.karta:target { box-shadow: 0 0 0 3px #de1743, 0 6px 18px rgba(16, 20, 50, 0.12); }
+
+.hlava { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.poradi {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+  color: #101432;
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  border-bottom: 5px solid #de1743;
+  padding-bottom: 2px;
+}
+.stitek {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #4c4f8e;
+  text-decoration: none;
+  text-align: right;
+}
+.stitek:hover { color: #de1743; }
+
+.nadpis {
+  margin: 4px 0 0;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.cisla { margin: 4px 0 0; display: flex; flex-direction: column; gap: 2px; }
+.radek {
+  display: grid;
+  grid-template-columns: 4em minmax(0, 1fr);
+  align-items: baseline;
+  gap: 10px;
+}
+.radek dd { margin: 0; }
+.rokTehdy, .rokDnes { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rokTehdy { color: #6267a3; }
+.rokDnes { color: #de1743; }
+.hodnotaTehdy, .hodnotaDnes {
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(26px, 2.6vw, 34px);
+}
+.hodnotaTehdy { color: #6267a3; }
+.hodnotaDnes { color: #de1743; }
+.popis { margin: 0; font-size: 13.5px; line-height: 1.4; color: #4c4f8e; }
+
+.kontext { margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: #101432; flex: 1 1 auto; }
+
+.pata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  padding-top: 10px;
+  border-top: 1px solid #d4d4c8;
+  font-size: 13px;
+}
+.zdroj { color: #4c4f8e; }
+.odkaz { color: #101432; font-weight: 600; text-decoration: none; }
+.odkaz:hover { color: #de1743; text-decoration: underline; }
+.kopiruj {
+  font: inherit;
+  font-size: 13px;
+  padding: 5px 10px;
+  min-height: 32px;
+  border-radius: 4px;
+  border: 1px solid #101432;
+  background: transparent;
+  color: #101432;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.kopiruj:hover { background: #101432; color: #ffffff; }
+.rucne { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #4c4f8e; }
+.rucnePole {
+  font: inherit;
+  font-size: 13px;
+  width: 100%;
+  min-width: 0;
+  padding: 6px 8px;
+  border: 1px solid #d4d4c8;
+  border-radius: 4px;
+  color: #101432;
+  background: #f8f6f0;
+}

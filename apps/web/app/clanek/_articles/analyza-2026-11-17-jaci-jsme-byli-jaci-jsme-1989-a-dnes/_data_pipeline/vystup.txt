@@ -1,0 +1,67 @@
+roky Naděje dožití žen 1989 75.5 → 2025 83.2
+roky Naděje dožití mužů 1989 68.1 → 2025 77.5
+roky Průměrný věk obyvatel 1989 36.1 → 2025 43.3
+roky Věk ženicha při první svatbě 1989 24.6 → 2025 32.8
+roky Věk nevěsty při první svatbě 1989 21.8 → 2025 30.9
+roky Věk matky při prvním dítěti 1989 22.5 → 2025 29.2
+podily Volební účast ve sněmovních volbách 1990 96.8 → 2025 68.9
+podily Domácnosti s počítačem 1989 1.8 → 2025 83.5
+podily Děti narozené mimo manželství 1989 7.9 → 2025 46.8
+podily Manželství, která skončí rozvodem 1989 37.1 → 2025 41.0
+podily Lidé, kteří se hlásí k víře 1991 43.9 → 2021 22.2
+podily Lidé starší 65 let 1989 12.5 → 2025 20.8
+kupni sila Automatická pračka 1989 → 2025 pomer 9.9
+kupni sila Lednička s mrazákem 1989 → 2025 pomer 7.745
+kupni sila Vejce 1989 → 2025 pomer 3.752
+kupni sila Benzin 1989 → 2025 pomer 3.611
+kupni sila Máslo 1989 → 2025 pomer 3.286
+kupni sila Pivo (lahvové výčepní) 1989 → 2025 pomer 3.015
+kupni sila Auto Škoda 1989 → 2023 pomer 2.771
+kupni sila Jízdní kolo 1989 → 2025 pomer 1.444
+kupni sila Mléko 1989 → 2025 pomer 1.243
+kupni sila Chléb 1989 → 2025 pomer 0.948
+kupni sila Jízdenka MHD 1989 → 2025 pomer 0.906
+kupni sila Lístek do kina 1989 → 2025 pomer 0.636
+kupni sila Pánský kadeřník 1989 → 2025 pomer 0.281
+SO2 {'rok': 1990, 'emise': 1753.815, 't': '1\xa0754 tis. t'} {'rok': 2024, 'emise': 46.9, 't': '47 tis. t'} pokles % 97.3
+CVVM Studium, práce a cesty do zahraničí lepší 77 horší 17
+CVVM Přístup ke vzdělání lepší 65 horší 14
+CVVM Svobodný přístup k informacím lepší 64 horší 21
+CVVM Životní úroveň lepší 57 horší 20
+CVVM Možnost vyjádřit názor lepší 57 horší 21
+CVVM Zdravotní péče lepší 55 horší 20
+CVVM Pracovní příležitosti lepší 55 horší 25
+CVVM Sociální jistoty lepší 38 horší 40
+CVVM Bezpečnost a kriminalita lepší 32 horší 42
+TEXT Reálná mzda (kupní síla), 1989 = 100 1989 100.0 → 2025 189.0 index
+TEXT Průměrná hrubá mzda 1989 3170.0 → 2025 48670.0 Kčs/Kč měsíčně
+TEXT Průměrná čistá mzda 1989 2504.0 → 2025 38288.0 Kčs/Kč měsíčně
+TEXT Kojenecká úmrtnost 1989 10.0 → 2025 2.5 ‰ (na 1 000 živě narozených)
+TEXT Umělá přerušení těhotenství 1989 111683.0 → 2023 15088.0 počet
+TEXT Matky do 19 let 1989 17467.0 → 2025 1592.0 porodů
+TEXT Sňatky 1989 81262.0 → 2025 42548.0 počet
+TEXT Živě narozené děti 1989 128356.0 → 2025 77636.0 počet
+TEXT Úhrnná plodnost 1989 1.87 → 2025 1.28 dětí na ženu
+TEXT Cizinci trvale a dlouhodobě žijící v ČR 1989 35561.0 → 2025 1131197.0 osob
+TEXT Studenti vysokých škol 1989 112980.0 → 2025 330547.0 osob
+TEXT Usmrcení na silnicích 1989 1078.0 → 2023 502.0 osob
+TEXT Národní parky 1989 1.0 → 2025 4.0 počet
+TEXT Dokončené byty za rok 1989 55073.0 → 2025 33430.0 počet
+TEXT Hovězí maso na obyvatele 1989 30.0 → 2024 9.1 kg/rok
+TEXT Drůbež na obyvatele 1989 13.0 → 2024 30.9 kg/rok
+TEXT Pivo na obyvatele 1989 151.0 → 2024 130.5 l/rok
+TEXT Návštěvy kin 1989 51453.0 → 2024 13041.0 tis. za rok
+TEXT Hosté v ubytovacích zařízeních 1989 9108.0 → 2025 23540.0 tis.
+TEXT Vraždy (registrované) 1989 126.0 → 2025 156.0 počet
+TEXT Registrované trestné činy 1991 282996.0 → 2025 170051.0 počet
+TEXT Emise prachu (TZL), všechny zdroje 1990 674.2 → 2024 56.8 tis. t
+TEXT Věřící (všichni, kdo víru uvedli) 1991 43.9 → 2021 22.2 % obyvatel
+TEXT Římskokatolická církev 1991 39.0 → 2021 7.0 % obyvatel
+TEXT Bez víry / bez vyznání 1991 39.9 → 2021 47.8 % obyvatel
+TEXT Účast ve sněmovních volbách 1990 96.8 → 2025 68.9 %
+TEXT Dny pracovního klidu (svátky) za rok 1989 7 → 2026 13 dní
+TEXT Registrované trestné činy 1989 120768 → 2025 170051 počet
+TEXT Osobní auta na 1 000 obyvatel 1990 234 → 2025 621 aut
+TEXT Postavit rodinný dům (náklady výstavby) 1989 101.0 → 2024 117.0 hrubých měsíčních mezd
+TEXT 1 m² nového rodinného domu (náklady výstavby) 1989 0.82 → 2024 0.84 hrubých měsíčních mezd
+TEXT Byt 60 m² za průměrnou cenu 1989 None → 2025 89.0 hrubých měsíčních mezd

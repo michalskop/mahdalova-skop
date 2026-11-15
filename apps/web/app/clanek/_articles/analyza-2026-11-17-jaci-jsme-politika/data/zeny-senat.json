@@ -1,0 +1,283 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Letos se do Senátu dostala {jedna žena|#de1743} z 27 zvolených",
+    "subtitle": "Podíl žen mezi nově zvolenými senátory v %, nad sloupcem počet žen; 1996 se volilo všech 81 senátorů, od 1998 vždy třetina (27)"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": "1996",
+        "pct": 11.1,
+        "n": 9,
+        "z": 81,
+        "barva": "tehdy",
+        "t": "9 z 81 (11,1 %)"
+      },
+      {
+        "rok": "1998",
+        "pct": 11.1,
+        "n": 3,
+        "z": 27,
+        "barva": "mezi",
+        "t": "3 z 27 (11,1 %)"
+      },
+      {
+        "rok": "2000",
+        "pct": 14.8,
+        "n": 4,
+        "z": 27,
+        "barva": "mezi",
+        "t": "4 z 27 (14,8 %)"
+      },
+      {
+        "rok": "2002",
+        "pct": 11.1,
+        "n": 3,
+        "z": 27,
+        "barva": "mezi",
+        "t": "3 z 27 (11,1 %)"
+      },
+      {
+        "rok": "2004",
+        "pct": 11.1,
+        "n": 3,
+        "z": 27,
+        "barva": "mezi",
+        "t": "3 z 27 (11,1 %)"
+      },
+      {
+        "rok": "2006",
+        "pct": 22.2,
+        "n": 6,
+        "z": 27,
+        "barva": "mezi",
+        "t": "6 z 27 (22,2 %)"
+      },
+      {
+        "rok": "2008",
+        "pct": 18.5,
+        "n": 5,
+        "z": 27,
+        "barva": "mezi",
+        "t": "5 z 27 (18,5 %)"
+      },
+      {
+        "rok": "2010",
+        "pct": 14.8,
+        "n": 4,
+        "z": 27,
+        "barva": "mezi",
+        "t": "4 z 27 (14,8 %)"
+      },
+      {
+        "rok": "2012",
+        "pct": 18.5,
+        "n": 5,
+        "z": 27,
+        "barva": "mezi",
+        "t": "5 z 27 (18,5 %)"
+      },
+      {
+        "rok": "2014",
+        "pct": 18.5,
+        "n": 5,
+        "z": 27,
+        "barva": "mezi",
+        "t": "5 z 27 (18,5 %)"
+      },
+      {
+        "rok": "2016",
+        "pct": 22.2,
+        "n": 6,
+        "z": 27,
+        "barva": "mezi",
+        "t": "6 z 27 (22,2 %)"
+      },
+      {
+        "rok": "2018",
+        "pct": 7.4,
+        "n": 2,
+        "z": 27,
+        "barva": "mezi",
+        "t": "2 z 27 (7,4 %)"
+      },
+      {
+        "rok": "2020",
+        "pct": 14.8,
+        "n": 4,
+        "z": 27,
+        "barva": "mezi",
+        "t": "4 z 27 (14,8 %)"
+      },
+      {
+        "rok": "2022",
+        "pct": 33.3,
+        "n": 9,
+        "z": 27,
+        "barva": "mezi",
+        "t": "9 z 27 (33,3 %)"
+      },
+      {
+        "rok": "2024",
+        "pct": 14.8,
+        "n": 4,
+        "z": 27,
+        "barva": "mezi",
+        "t": "4 z 27 (14,8 %)"
+      },
+      {
+        "rok": "2026",
+        "pct": 3.7,
+        "n": 1,
+        "z": 27,
+        "barva": "dnes",
+        "t": "1 z 27 (3,7 %)"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "width": {
+          "band": 0.75
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "sort": null,
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelExpr": "'’' + substring(datum.value, 2, 4)"
+          }
+        },
+        "y": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Volby do Senátu"
+          },
+          {
+            "field": "t",
+            "title": "Zvolené ženy"
+          }
+        ],
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "tehdy",
+              "mezi",
+              "dnes"
+            ],
+            "range": [
+              "#6267a3",
+              "#d4d4c8",
+              "#de1743"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -7,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "sort": null,
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelExpr": "'’' + substring(datum.value, 2, 4)"
+          }
+        },
+        "y": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "text": {
+          "field": "n"
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Volby do Senátu"
+          },
+          {
+            "field": "t",
+            "title": "Zvolené ženy"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[ČSÚ](https://csu.gov.cz/produkty/volby-do-senatu-pcr), [senat.cz](https://www.senat.cz/senatori/)",
+  "height": 220
+}

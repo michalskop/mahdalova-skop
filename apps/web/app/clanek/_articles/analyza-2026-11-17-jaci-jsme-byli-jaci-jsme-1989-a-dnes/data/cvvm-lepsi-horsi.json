@@ -1,0 +1,378 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Lidé hodnotí dnešek jako {lepší|#de1743} skoro ve všem. Horší je podle nich {bezpečnost|#6267a3}",
+    "subtitle": "Je dnes situace lidí jako vy lepší, nebo horší než před rokem 1989? Podíl odpovědí „mnohem či trochu lepší“ a „trochu či mnohem horší“ v %"
+  },
+  "width": "container",
+  "height": {
+    "step": 46
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "oblast": "Studium, práce a cesty do zahraničí",
+        "hodnoceni": "lepší",
+        "v": 77,
+        "x0": 0,
+        "x1": 77,
+        "t": "77 %"
+      },
+      {
+        "oblast": "Studium, práce a cesty do zahraničí",
+        "hodnoceni": "horší",
+        "v": 17,
+        "x0": -17,
+        "x1": 0,
+        "t": "17 %"
+      },
+      {
+        "oblast": "Přístup ke vzdělání",
+        "hodnoceni": "lepší",
+        "v": 65,
+        "x0": 0,
+        "x1": 65,
+        "t": "65 %"
+      },
+      {
+        "oblast": "Přístup ke vzdělání",
+        "hodnoceni": "horší",
+        "v": 14,
+        "x0": -14,
+        "x1": 0,
+        "t": "14 %"
+      },
+      {
+        "oblast": "Svobodný přístup k informacím",
+        "hodnoceni": "lepší",
+        "v": 64,
+        "x0": 0,
+        "x1": 64,
+        "t": "64 %"
+      },
+      {
+        "oblast": "Svobodný přístup k informacím",
+        "hodnoceni": "horší",
+        "v": 21,
+        "x0": -21,
+        "x1": 0,
+        "t": "21 %"
+      },
+      {
+        "oblast": "Životní úroveň",
+        "hodnoceni": "lepší",
+        "v": 57,
+        "x0": 0,
+        "x1": 57,
+        "t": "57 %"
+      },
+      {
+        "oblast": "Životní úroveň",
+        "hodnoceni": "horší",
+        "v": 20,
+        "x0": -20,
+        "x1": 0,
+        "t": "20 %"
+      },
+      {
+        "oblast": "Možnost vyjádřit názor",
+        "hodnoceni": "lepší",
+        "v": 57,
+        "x0": 0,
+        "x1": 57,
+        "t": "57 %"
+      },
+      {
+        "oblast": "Možnost vyjádřit názor",
+        "hodnoceni": "horší",
+        "v": 21,
+        "x0": -21,
+        "x1": 0,
+        "t": "21 %"
+      },
+      {
+        "oblast": "Zdravotní péče",
+        "hodnoceni": "lepší",
+        "v": 55,
+        "x0": 0,
+        "x1": 55,
+        "t": "55 %"
+      },
+      {
+        "oblast": "Zdravotní péče",
+        "hodnoceni": "horší",
+        "v": 20,
+        "x0": -20,
+        "x1": 0,
+        "t": "20 %"
+      },
+      {
+        "oblast": "Pracovní příležitosti",
+        "hodnoceni": "lepší",
+        "v": 55,
+        "x0": 0,
+        "x1": 55,
+        "t": "55 %"
+      },
+      {
+        "oblast": "Pracovní příležitosti",
+        "hodnoceni": "horší",
+        "v": 25,
+        "x0": -25,
+        "x1": 0,
+        "t": "25 %"
+      },
+      {
+        "oblast": "Sociální jistoty",
+        "hodnoceni": "lepší",
+        "v": 38,
+        "x0": 0,
+        "x1": 38,
+        "t": "38 %"
+      },
+      {
+        "oblast": "Sociální jistoty",
+        "hodnoceni": "horší",
+        "v": 40,
+        "x0": -40,
+        "x1": 0,
+        "t": "40 %"
+      },
+      {
+        "oblast": "Bezpečnost a kriminalita",
+        "hodnoceni": "lepší",
+        "v": 32,
+        "x0": 0,
+        "x1": 32,
+        "t": "32 %"
+      },
+      {
+        "oblast": "Bezpečnost a kriminalita",
+        "hodnoceni": "horší",
+        "v": 42,
+        "x0": -42,
+        "x1": 0,
+        "t": "42 %"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": [
+            "Studium, práce a cesty do zahraničí",
+            "Přístup ke vzdělání",
+            "Svobodný přístup k informacím",
+            "Životní úroveň",
+            "Možnost vyjádřit názor",
+            "Zdravotní péče",
+            "Pracovní příležitosti",
+            "Sociální jistoty",
+            "Bezpečnost a kriminalita"
+          ],
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "field": "x0",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -60,
+              90
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "labels": false
+          }
+        },
+        "x2": {
+          "field": "x1"
+        },
+        "color": {
+          "field": "hodnoceni",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "lepší",
+              "horší"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "oblast",
+            "title": "Oblast"
+          },
+          {
+            "field": "hodnoceni",
+            "title": "Dnes"
+          },
+          {
+            "field": "t",
+            "title": "Podíl"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.hodnoceni == 'lepší'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": [
+            "Studium, práce a cesty do zahraničí",
+            "Přístup ke vzdělání",
+            "Svobodný přístup k informacím",
+            "Životní úroveň",
+            "Možnost vyjádřit názor",
+            "Zdravotní péče",
+            "Pracovní příležitosti",
+            "Sociální jistoty",
+            "Bezpečnost a kriminalita"
+          ],
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "field": "x1",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.hodnoceni == 'horší'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -5,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": [
+            "Studium, práce a cesty do zahraničí",
+            "Přístup ke vzdělání",
+            "Svobodný přístup k informacím",
+            "Životní úroveň",
+            "Možnost vyjádřit názor",
+            "Zdravotní péče",
+            "Pracovní příležitosti",
+            "Sociální jistoty",
+            "Bezpečnost a kriminalita"
+          ],
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "field": "x0",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.hodnoceni == 'lepší'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -9,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "oblast",
+          "type": "nominal",
+          "sort": [
+            "Studium, práce a cesty do zahraničí",
+            "Přístup ke vzdělání",
+            "Svobodný přístup k informacím",
+            "Životní úroveň",
+            "Možnost vyjádřit názor",
+            "Zdravotní péče",
+            "Pracovní příležitosti",
+            "Sociální jistoty",
+            "Bezpečnost a kriminalita"
+          ],
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "datum": -60,
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "oblast"
+        }
+      }
+    }
+  ],
+  "_source": "CVVM SOÚ AV ČR, [Třicet pět let od sametové revoluce z pohledu české veřejnosti](https://cvvm.soc.cas.cz/images/articles/files/5889/pd241111.pdf), šetření 10. 6. – 27. 8. 2024, 922 respondentů starších 15 let; zbytek do 100 % tvoří „stejná“ a „neví“"
+}

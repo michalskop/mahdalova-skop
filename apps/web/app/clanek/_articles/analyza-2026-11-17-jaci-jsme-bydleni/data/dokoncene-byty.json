@@ -1,0 +1,439 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "V {roce 2024|#de1743} se dokončilo o 45 % méně bytů než v {roce 1989|#6267a3}",
+    "subtitle": "Počet dokončených bytů za rok, 1989–2025; 2025 předběžně (nově z registru RÚIAN)"
+  },
+  "width": "container",
+  "height": 240,
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1989,
+        "v": 55073,
+        "barva": "#6267a3",
+        "popisek": "55 073",
+        "t": "55 073 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1990,
+        "v": 44594,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "44 594 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1991,
+        "v": 41719,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "41 719 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1992,
+        "v": 36397,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "36 397 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1993,
+        "v": 31509,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "31 509 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1994,
+        "v": 18162,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "18 162 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1995,
+        "v": 12998,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "12 998 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1996,
+        "v": 14482,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "14 482 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1997,
+        "v": 16757,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "16 757 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1998,
+        "v": 22183,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "22 183 bytů",
+        "op": 1
+      },
+      {
+        "rok": 1999,
+        "v": 23734,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "23 734 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2000,
+        "v": 25207,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "25 207 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2001,
+        "v": 24758,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "24 758 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2002,
+        "v": 27291,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "27 291 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2003,
+        "v": 27127,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "27 127 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2004,
+        "v": 32268,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "32 268 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2005,
+        "v": 32863,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "32 863 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2006,
+        "v": 30190,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "30 190 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2007,
+        "v": 41649,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "41 649 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2008,
+        "v": 38380,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "38 380 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2009,
+        "v": 38473,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "38 473 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2010,
+        "v": 36442,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "36 442 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2011,
+        "v": 28630,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "28 630 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2012,
+        "v": 29467,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "29 467 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2013,
+        "v": 25238,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "25 238 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2014,
+        "v": 23954,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "23 954 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2015,
+        "v": 25095,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "25 095 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2016,
+        "v": 27322,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "27 322 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2017,
+        "v": 28569,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "28 569 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2018,
+        "v": 33850,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "33 850 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2019,
+        "v": 36406,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "36 406 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2020,
+        "v": 34412,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "34 412 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2021,
+        "v": 34581,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "34 581 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2022,
+        "v": 39398,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "39 398 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2023,
+        "v": 38067,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "38 067 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2024,
+        "v": 30274,
+        "barva": "#de1743",
+        "popisek": "30 274",
+        "t": "30 274 bytů",
+        "op": 1
+      },
+      {
+        "rok": 2025,
+        "v": 33430,
+        "barva": "#c9c9bd",
+        "popisek": "",
+        "t": "33 430 bytů (předběžně)",
+        "op": 0.55
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.8
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "values": [
+              1989,
+              2024
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              62000
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20000,
+              40000,
+              60000
+            ],
+            "format": ",d"
+          }
+        },
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        },
+        "opacity": {
+          "field": "op",
+          "type": "quantitative",
+          "scale": null
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Dokončené byty"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "values": [
+              1989,
+              2024
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              62000
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20000,
+              40000,
+              60000
+            ],
+            "format": ",d"
+          }
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 11.01](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026)"
+}

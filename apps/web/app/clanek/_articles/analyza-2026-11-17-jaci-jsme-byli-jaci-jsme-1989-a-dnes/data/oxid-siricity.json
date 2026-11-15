@@ -1,0 +1,247 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Česko vypouští o {97 %|#de1743} méně oxidu siřičitého než v roce 1990",
+    "subtitle": "Emise oxidu siřičitého ze všech zdrojů v tisících tun; 2024 předběžně"
+  },
+  "width": "container",
+  "height": 260,
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1990,
+        "emise": 1753.815,
+        "t": "1 754 tis. t"
+      },
+      {
+        "rok": 1991,
+        "emise": 1649.744,
+        "t": "1 650 tis. t"
+      },
+      {
+        "rok": 1992,
+        "emise": 1381.957,
+        "t": "1 382 tis. t"
+      },
+      {
+        "rok": 1993,
+        "emise": 1302.416,
+        "t": "1 302 tis. t"
+      },
+      {
+        "rok": 1994,
+        "emise": 1158.968,
+        "t": "1 159 tis. t"
+      },
+      {
+        "rok": 1995,
+        "emise": 1058.823,
+        "t": "1 059 tis. t"
+      },
+      {
+        "rok": 1996,
+        "emise": 914.323,
+        "t": "914 tis. t"
+      },
+      {
+        "rok": 1997,
+        "emise": 694.356,
+        "t": "694 tis. t"
+      },
+      {
+        "rok": 1998,
+        "emise": 425.314,
+        "t": "425 tis. t"
+      },
+      {
+        "rok": 1999,
+        "emise": 231.883,
+        "t": "232 tis. t"
+      },
+      {
+        "rok": 2000,
+        "emise": 233.706,
+        "t": "234 tis. t"
+      },
+      {
+        "rok": 2001,
+        "emise": 228.679,
+        "t": "229 tis. t"
+      },
+      {
+        "rok": 2002,
+        "emise": 223.374,
+        "t": "223 tis. t"
+      },
+      {
+        "rok": 2003,
+        "emise": 218.365,
+        "t": "218 tis. t"
+      },
+      {
+        "rok": 2004,
+        "emise": 215.08,
+        "t": "215 tis. t"
+      },
+      {
+        "rok": 2005,
+        "emise": 208.468,
+        "t": "208 tis. t"
+      },
+      {
+        "rok": 2006,
+        "emise": 206.761,
+        "t": "207 tis. t"
+      },
+      {
+        "rok": 2007,
+        "emise": 212.068,
+        "t": "212 tis. t"
+      },
+      {
+        "rok": 2008,
+        "emise": 170.103,
+        "t": "170 tis. t"
+      },
+      {
+        "rok": 2009,
+        "emise": 168.772,
+        "t": "169 tis. t"
+      },
+      {
+        "rok": 2010,
+        "emise": 163.881,
+        "t": "164 tis. t"
+      },
+      {
+        "rok": 2011,
+        "emise": 167.508,
+        "t": "168 tis. t"
+      },
+      {
+        "rok": 2012,
+        "emise": 160.202,
+        "t": "160 tis. t"
+      },
+      {
+        "rok": 2013,
+        "emise": 145.253,
+        "t": "145 tis. t"
+      },
+      {
+        "rok": 2014,
+        "emise": 134.491,
+        "t": "134 tis. t"
+      },
+      {
+        "rok": 2015,
+        "emise": 129.864,
+        "t": "130 tis. t"
+      },
+      {
+        "rok": 2016,
+        "emise": 115.631,
+        "t": "116 tis. t"
+      },
+      {
+        "rok": 2017,
+        "emise": 109.732,
+        "t": "110 tis. t"
+      },
+      {
+        "rok": 2018,
+        "emise": 96.579,
+        "t": "97 tis. t"
+      },
+      {
+        "rok": 2019,
+        "emise": 79.092,
+        "t": "79 tis. t"
+      },
+      {
+        "rok": 2020,
+        "emise": 67.146,
+        "t": "67 tis. t"
+      },
+      {
+        "rok": 2021,
+        "emise": 61.446,
+        "t": "61 tis. t"
+      },
+      {
+        "rok": 2022,
+        "emise": 64.644,
+        "t": "65 tis. t"
+      },
+      {
+        "rok": 2023,
+        "emise": 48.457,
+        "t": "48 tis. t"
+      },
+      {
+        "rok": 2024,
+        "emise": 46.9,
+        "t": "47 tis. t"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "color": "#de1743",
+        "opacity": 0.15,
+        "line": {
+          "color": "#de1743",
+          "strokeWidth": 2.5
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2020,
+              2024
+            ]
+          }
+        },
+        "y": {
+          "field": "emise",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "domain": false,
+            "ticks": false,
+            "tickCount": 4
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Emise SO₂"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "ČHMÚ podle ČSÚ, [Česko od roku 1989 v číslech, Tab. 02.04](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026) (REZZO 1–4)"
+}

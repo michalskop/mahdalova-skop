@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/images/cover-homepage.png",
+      "otisk": "cd98b26765bb891c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/cover.config.cjs": "cc558fc51485c470",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/motiv-homepage.svg": "c0e586e43f22edaa"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/images/cover-og.jpg",
+      "otisk": "5d2a770de0d9998e",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/cover.config.cjs": "cc558fc51485c470",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/motiv-og.svg": "7c634371ec5608b7"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/images/cover-square.png",
+      "otisk": "705abcfa49152414",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/cover.config.cjs": "cc558fc51485c470",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/motiv-square.svg": "3979a7f57ad3cb79"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/images/cover-instagram.png",
+      "otisk": "a792539791188b3f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/cover.config.cjs": "cc558fc51485c470",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/motiv-instagram.svg": "d61cf694f92f977f"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/images/cover-story.png",
+      "otisk": "93d138fc12a16dc3",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/cover.config.cjs": "cc558fc51485c470",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/motiv-story.svg": "a41868701576e921"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:31:57.695Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/index.md",
+  "titulekClanku": "Kriminalita klesla od vrcholu v roce 1999 o 60 %, na úroveň roku 1989 se ale nevrátila",
+  "texty": {
+    "stitek": "1989 × 2026 • Kriminalita a bezpečnost",
+    "nadtitulek": "",
+    "titulek": "Kriminalita klesla od vrcholu o 60 %",
+    "podtitulek": "Je ale pořád vyšší než v roce 1989, kdy policie objasnila tři čtvrtiny činů a dnes necelou polovinu"
+  }
+}

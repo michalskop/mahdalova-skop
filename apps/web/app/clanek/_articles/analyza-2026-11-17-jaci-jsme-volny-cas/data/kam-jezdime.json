@@ -1,0 +1,549 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Nejvíc delších cest vedlo {v roce 2025|#de1743} do Itálie, {v roce 2011|#6267a3} do Chorvatska",
+  "subtitle": "Podíl země na delších cestách do zahraničí (4 a více nocí, lidé od 15 let) v letech 2011 a 2025, v %"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "zeme": "Itálie",
+    "tehdy": 13.2,
+    "dnes": 14.1,
+    "l_t": "13",
+    "l_d": "14",
+    "t_t": "562 627 cest (13,2 %)",
+    "t_d": "905 037 cest (14,1 %)",
+    "vlevo": false,
+    "blizko": false
+   },
+   {
+    "zeme": "Chorvatsko",
+    "tehdy": 18.6,
+    "dnes": 11.1,
+    "l_t": "19",
+    "l_d": "11",
+    "t_t": "792 956 cest (18,6 %)",
+    "t_d": "711 658 cest (11,1 %)",
+    "vlevo": true,
+    "blizko": false
+   },
+   {
+    "zeme": "Egypt",
+    "tehdy": 4.9,
+    "dnes": 8.9,
+    "l_t": "5",
+    "l_d": "9",
+    "t_t": "208 068 cest (4,9 %)",
+    "t_d": "570 262 cest (8,9 %)",
+    "vlevo": false,
+    "blizko": false
+   },
+   {
+    "zeme": "Rakousko",
+    "tehdy": 6.1,
+    "dnes": 8.0,
+    "l_t": "6",
+    "l_d": "8",
+    "t_t": "260 590 cest (6,1 %)",
+    "t_d": "512 243 cest (8,0 %)",
+    "vlevo": false,
+    "blizko": false
+   },
+   {
+    "zeme": "Řecko",
+    "tehdy": 7.5,
+    "dnes": 7.4,
+    "l_t": "7",
+    "l_d": "7",
+    "t_t": "318 354 cest (7,5 %)",
+    "t_d": "472 959 cest (7,4 %)",
+    "vlevo": true,
+    "blizko": true
+   },
+   {
+    "zeme": "Slovensko",
+    "tehdy": 12.6,
+    "dnes": 7.0,
+    "l_t": "13",
+    "l_d": "7",
+    "t_t": "535 039 cest (12,6 %)",
+    "t_d": "448 438 cest (7,0 %)",
+    "vlevo": true,
+    "blizko": false
+   },
+   {
+    "zeme": "Turecko",
+    "tehdy": 4.0,
+    "dnes": 5.7,
+    "l_t": "4",
+    "l_d": "6",
+    "t_t": "171 425 cest (4,0 %)",
+    "t_d": "368 224 cest (5,7 %)",
+    "vlevo": false,
+    "blizko": false
+   },
+   {
+    "zeme": "Španělsko",
+    "tehdy": 5.4,
+    "dnes": 5.4,
+    "l_t": "5",
+    "l_d": "5",
+    "t_t": "231 176 cest (5,4 %)",
+    "t_d": "343 669 cest (5,4 %)",
+    "vlevo": true,
+    "blizko": true
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -9,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "datum": 0,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     }
+    },
+    "text": {
+     "field": "zeme"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 3,
+    "color": "#bcbcb0"
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     },
+     "field": "tehdy"
+    },
+    "x2": {
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "t_t",
+      "title": "2011"
+     },
+     {
+      "field": "t_d",
+      "title": "2025"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 140,
+    "opacity": 1,
+    "color": "#6267a3",
+    "yOffset": {
+     "expr": "datum.blizko ? -5 : 0"
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     },
+     "field": "tehdy"
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "t_t",
+      "title": "2011"
+     },
+     {
+      "field": "t_d",
+      "title": "2025"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 140,
+    "opacity": 1,
+    "color": "#de1743",
+    "yOffset": {
+     "expr": "datum.blizko ? 5 : 0"
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     },
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "t_t",
+      "title": "2011"
+     },
+     {
+      "field": "t_d",
+      "title": "2025"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -9,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_t"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 9,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_d"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 9,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_t"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -9,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "zeme",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.5,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": null,
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_d"
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ, [Cestovní ruch – časové řady, tab. 4.2.2](https://csu.gov.cz/produkty/cru_cr); výpočet DataTimes",
+ "height": {
+  "step": 46
+ }
+}

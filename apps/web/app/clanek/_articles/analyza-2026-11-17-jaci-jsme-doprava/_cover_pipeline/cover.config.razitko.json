@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/images/cover-homepage.png",
+      "otisk": "de8aef906774200f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/cover.config.cjs": "990a226ce0d6bafd",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/motiv-homepage.svg": "a5e9301b79cc1c59"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/images/cover-og.jpg",
+      "otisk": "3ab349654b163a64",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/cover.config.cjs": "990a226ce0d6bafd",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/motiv-og.svg": "4a3e3fbae186788e"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/images/cover-square.png",
+      "otisk": "0fa20de1d8a3a02b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/cover.config.cjs": "990a226ce0d6bafd",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/motiv-square.svg": "8ec7c595d0e61470"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/images/cover-instagram.png",
+      "otisk": "d239c49e12539a78",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/cover.config.cjs": "990a226ce0d6bafd",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/motiv-instagram.svg": "5db5d29f663121e7"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/images/cover-story.png",
+      "otisk": "8c79414e3fe325e9",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/cover.config.cjs": "990a226ce0d6bafd",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/motiv-story.svg": "4ea45a8a65f2e4d0"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T21:07:37.835Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/index.md",
+  "titulekClanku": "Aut na obyvatele je 2,7krát víc než po revoluci",
+  "texty": {
+    "stitek": "1989 × 2026 • Doprava",
+    "nadtitulek": "",
+    "titulek": "Aut na obyvatele je 2,7krát víc než po revoluci",
+    "podtitulek": "Na tisíc obyvatel připadalo v roce 1990 234 aut, dnes 621"
+  }
+}

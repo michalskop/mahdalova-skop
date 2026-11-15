@@ -1,0 +1,1700 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Piva vypijeme o sedminu méně, vína skoro o polovinu víc než v {roce 1989|#6267a3}",
+    "subtitle": "Spotřeba za rok na obyvatele včetně dětí; alkohol 2024, cigarety 2020 (novější údaj ČSÚ nevydal); šedá = rozdíl"
+  },
+  "width": "container",
+  "height": 390,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "scale": {
+      "zero": false
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "x": 2.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 8.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 9.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 10.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 11.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 12.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 13.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 14.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 15.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 16.5,
+            "y": 1.0,
+            "ikona": "beer",
+            "stav": "1989",
+            "popis": "Pivo",
+            "rok": "1989",
+            "hodnota": "151 l na obyvatele"
+          },
+          {
+            "x": 2.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 8.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 9.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 10.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 11.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 12.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 13.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 14.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "dnes",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 15.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "chybí",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          },
+          {
+            "x": 16.5,
+            "y": 2.0,
+            "ikona": "beer",
+            "stav": "chybí",
+            "popis": "Pivo",
+            "rok": "2024",
+            "hodnota": "130,5 l na obyvatele"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "shape": "M -0.25 0.75 h 0.5 a 0.0833 0.0833 0 0 0 0.0833 -0.0833 v -0.3021 c 0 -0.1164 0.0242 -0.2312 0.0704 -0.3354 l 0.0258 -0.0583 c 0.0463 -0.1042 0.0704 -0.1878 0.0704 -0.3042 v -0.3333 a 0.0833 0.0833 0 0 0 -0.0833 -0.0833 h -0.8333 a 0.0833 0.0833 0 0 0 -0.0833 0.0833 v 0.3333 c 0 0.1164 0.0242 0.2 0.0704 0.3042 l 0.0258 0.0583 a 0.8276 0.8276 0 0 1 0.0704 0.3354 v 0.3021 a 0.0833 0.0833 0 0 0 0.0833 0.0833 z M -0.5 -0.3333 h 1",
+        "filled": false,
+        "strokeWidth": 1.7,
+        "opacity": 1,
+        "size": {
+          "expr": "pow(min(width / 25.5 * 0.92, 24), 2)"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "stav",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1989",
+              "dnes",
+              "chybí"
+            ],
+            "range": [
+              "#6267a3",
+              "#de1743",
+              "#d4d4c8"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "popis",
+            "title": "Položka"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "hodnota",
+            "title": "Spotřeba"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 2.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 8.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 9.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 10.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 11.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 12.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 13.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 14.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 15.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "1989",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 16.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "chybí",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 17.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "chybí",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 18.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "chybí",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 19.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "chybí",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 20.5,
+            "y": 4.75,
+            "ikona": "glass-full",
+            "stav": "chybí",
+            "popis": "Víno",
+            "rok": "1989",
+            "hodnota": "13,5 l na obyvatele"
+          },
+          {
+            "x": 2.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 8.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 9.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 10.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 11.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 12.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 13.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 14.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 15.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 16.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 17.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 18.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 19.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          },
+          {
+            "x": 20.5,
+            "y": 5.75,
+            "ikona": "glass-full",
+            "stav": "dnes",
+            "popis": "Víno",
+            "rok": "2024",
+            "hodnota": "19,5 l na obyvatele"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "shape": "M -0.3333 0.75 l 0.6667 0 M 0 0.25 l 0 0.5 M 0.4167 -0.75 l 0.0833 0.5833 c 0 0.251 -0.2238 0.4167 -0.5 0.4167 s -0.5 -0.1657 -0.5 -0.4167 l 0.0833 -0.5833 h 0.8333 z M -0.5 -0.1667 a 0.4167 0.4167 0 0 1 0.5 0 a 0.4167 0.4167 0 0 0 0.5 0",
+        "filled": false,
+        "strokeWidth": 1.7,
+        "opacity": 1,
+        "size": {
+          "expr": "pow(min(width / 25.5 * 0.92, 24), 2)"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "stav",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1989",
+              "dnes",
+              "chybí"
+            ],
+            "range": [
+              "#6267a3",
+              "#de1743",
+              "#d4d4c8"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "popis",
+            "title": "Položka"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "hodnota",
+            "title": "Spotřeba"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 2.5,
+            "y": 8.5,
+            "ikona": "bottle",
+            "stav": "1989",
+            "popis": "Lihoviny (40 %)",
+            "rok": "1989",
+            "hodnota": "6,3 l na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 8.5,
+            "ikona": "bottle",
+            "stav": "1989",
+            "popis": "Lihoviny (40 %)",
+            "rok": "1989",
+            "hodnota": "6,3 l na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 8.5,
+            "ikona": "bottle",
+            "stav": "1989",
+            "popis": "Lihoviny (40 %)",
+            "rok": "1989",
+            "hodnota": "6,3 l na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 8.5,
+            "ikona": "bottle",
+            "stav": "1989",
+            "popis": "Lihoviny (40 %)",
+            "rok": "1989",
+            "hodnota": "6,3 l na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 8.5,
+            "ikona": "bottle",
+            "stav": "1989",
+            "popis": "Lihoviny (40 %)",
+            "rok": "1989",
+            "hodnota": "6,3 l na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 8.5,
+            "ikona": "bottle",
+            "stav": "1989",
+            "popis": "Lihoviny (40 %)",
+            "rok": "1989",
+            "hodnota": "6,3 l na obyvatele"
+          },
+          {
+            "x": 2.5,
+            "y": 9.5,
+            "ikona": "bottle",
+            "stav": "dnes",
+            "popis": "Lihoviny (40 %)",
+            "rok": "2024",
+            "hodnota": "6,1 l na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 9.5,
+            "ikona": "bottle",
+            "stav": "dnes",
+            "popis": "Lihoviny (40 %)",
+            "rok": "2024",
+            "hodnota": "6,1 l na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 9.5,
+            "ikona": "bottle",
+            "stav": "dnes",
+            "popis": "Lihoviny (40 %)",
+            "rok": "2024",
+            "hodnota": "6,1 l na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 9.5,
+            "ikona": "bottle",
+            "stav": "dnes",
+            "popis": "Lihoviny (40 %)",
+            "rok": "2024",
+            "hodnota": "6,1 l na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 9.5,
+            "ikona": "bottle",
+            "stav": "dnes",
+            "popis": "Lihoviny (40 %)",
+            "rok": "2024",
+            "hodnota": "6,1 l na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 9.5,
+            "ikona": "bottle",
+            "stav": "dnes",
+            "popis": "Lihoviny (40 %)",
+            "rok": "2024",
+            "hodnota": "6,1 l na obyvatele"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "shape": "M -0.1667 -0.5833 h 0.3333 v -0.1667 a 0.0833 0.0833 0 0 0 -0.0833 -0.0833 h -0.1667 a 0.0833 0.0833 0 0 0 -0.0833 0.0833 v 0.1667 z M 0.1667 -0.7083 c 0 0.1355 0.0422 0.2677 0.1208 0.3781 l 0.0042 0.0058 a 0.6744 0.6744 0 0 1 0.125 0.3912 v 0.5166 a 0.1667 0.1667 0 0 1 -0.1667 0.1667 h -0.5 a 0.1667 0.1667 0 0 1 -0.1667 -0.1667 v -0.5167 c 0 -0.1402 0.0437 -0.2768 0.125 -0.3911 l 0.0042 -0.0058 a 0.6519 0.6519 0 0 0 0.1208 -0.3781 M -0.4167 0.2336 a 0.2 0.2 0 0 0 0.0833 -0.0669 a 0.2 0.2 0 0 1 0.1667 -0.0833 a 0.2 0.2 0 0 1 0.1667 0.0833 a 0.2 0.2 0 0 0 0.1667 0.0833 a 0.2 0.2 0 0 0 0.1667 -0.0833 a 0.2 0.2 0 0 1 0.0833 -0.0671",
+        "filled": false,
+        "strokeWidth": 1.7,
+        "opacity": 1,
+        "size": {
+          "expr": "pow(min(width / 25.5 * 0.92, 24), 2)"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "stav",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1989",
+              "dnes",
+              "chybí"
+            ],
+            "range": [
+              "#6267a3",
+              "#de1743",
+              "#d4d4c8"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "popis",
+            "title": "Položka"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "hodnota",
+            "title": "Spotřeba"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 2.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 8.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 9.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 10.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 11.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 12.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 13.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 14.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 15.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 16.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 17.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 18.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 19.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "1989",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 20.5,
+            "y": 12.25,
+            "ikona": "smoking",
+            "stav": "chybí",
+            "popis": "Cigarety",
+            "rok": "1989",
+            "hodnota": "1 776 ks na obyvatele"
+          },
+          {
+            "x": 2.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 3.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 4.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 5.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 6.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 7.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 8.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 9.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 10.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 11.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 12.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 13.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 14.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 15.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 16.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 17.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 18.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 19.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          },
+          {
+            "x": 20.5,
+            "y": 13.25,
+            "ikona": "smoking",
+            "stav": "dnes",
+            "popis": "Cigarety",
+            "rok": "2020",
+            "hodnota": "1 894 ks na obyvatele"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "shape": "M -0.75 0.0833 m 0 0.0833 a 0.0833 0.0833 0 0 1 0.0833 -0.0833 h 1.3333 a 0.0833 0.0833 0 0 1 0.0833 0.0833 v 0.1667 a 0.0833 0.0833 0 0 1 -0.0833 0.0833 h -1.3333 a 0.0833 0.0833 0 0 1 -0.0833 -0.0833 z M -0.3333 0.0833 l 0 0.3333 M 0.3333 -0.5833 v 0.0417 a 0.1667 0.1667 0 0 0 0.1667 0.1667 a 0.1667 0.1667 0 0 1 0.1667 0.1667 v 0.0417",
+        "filled": false,
+        "strokeWidth": 1.7,
+        "opacity": 1,
+        "size": {
+          "expr": "pow(min(width / 25.5 * 0.92, 24), 2)"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "stav",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1989",
+              "dnes",
+              "chybí"
+            ],
+            "range": [
+              "#6267a3",
+              "#de1743",
+              "#d4d4c8"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "popis",
+            "title": "Položka"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "hodnota",
+            "title": "Spotřeba"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0,
+            "y": 0.0,
+            "t": "Pivo, 1 ikona = 10 litrů",
+            "druh": "nadpis"
+          },
+          {
+            "x": 0,
+            "y": 3.75,
+            "t": "Víno, 1 ikona = 1 litr",
+            "druh": "nadpis"
+          },
+          {
+            "x": 0,
+            "y": 7.5,
+            "t": "Lihoviny (40 %), 1 ikona = 1 litr",
+            "druh": "nadpis"
+          },
+          {
+            "x": 0,
+            "y": 11.25,
+            "t": "Cigarety, 1 ikona = 100 kusů",
+            "druh": "nadpis"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 12.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0,
+            "y": 1.0,
+            "t": "1989",
+            "druh": "rok_1989"
+          },
+          {
+            "x": 0,
+            "y": 4.75,
+            "t": "1989",
+            "druh": "rok_1989"
+          },
+          {
+            "x": 0,
+            "y": 8.5,
+            "t": "1989",
+            "druh": "rok_1989"
+          },
+          {
+            "x": 0,
+            "y": 12.25,
+            "t": "1989",
+            "druh": "rok_1989"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "color": "#6267a3",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0,
+            "y": 2.0,
+            "t": "2024",
+            "druh": "rok_dnes"
+          },
+          {
+            "x": 0,
+            "y": 5.75,
+            "t": "2024",
+            "druh": "rok_dnes"
+          },
+          {
+            "x": 0,
+            "y": 9.5,
+            "t": "2024",
+            "druh": "rok_dnes"
+          },
+          {
+            "x": 0,
+            "y": 13.25,
+            "t": "2020",
+            "druh": "rok_dnes"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "color": "#de1743",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 17.2,
+            "y": 1.0,
+            "t": "151 l",
+            "druh": "hodnota_1989"
+          },
+          {
+            "x": 21.2,
+            "y": 4.75,
+            "t": "13,5 l",
+            "druh": "hodnota_1989"
+          },
+          {
+            "x": 8.2,
+            "y": 8.5,
+            "t": "6,3 l",
+            "druh": "hodnota_1989"
+          },
+          {
+            "x": 21.2,
+            "y": 12.25,
+            "t": "1 776 ks",
+            "druh": "hodnota_1989"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11.5,
+        "color": "#6267a3",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 17.2,
+            "y": 2.0,
+            "t": "130,5 l",
+            "druh": "hodnota_dnes"
+          },
+          {
+            "x": 21.2,
+            "y": 5.75,
+            "t": "19,5 l",
+            "druh": "hodnota_dnes"
+          },
+          {
+            "x": 8.2,
+            "y": 9.5,
+            "t": "6,1 l",
+            "druh": "hodnota_dnes"
+          },
+          {
+            "x": 21.2,
+            "y": 13.25,
+            "t": "1 894 ks",
+            "druh": "hodnota_dnes"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11.5,
+        "color": "#de1743",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              25.5
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.6,
+              14.25
+            ],
+            "reverse": true
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); ikony Tabler"
+}

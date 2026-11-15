@@ -1,0 +1,41 @@
+KONTROLA IKSP × ČSÚ 14.01 (roky, kde se řady liší): {1991: (282998, 282996), 1992: (345140, 345008), 1994: (372427, 365265), 1995: (375630, 368624), 1996: (394267, 387374), 1997: (403654, 397845), 2000: (391469, 391310), 2001: (358577, 358362), 2017: (202303, 203303)}
+TC 1989 120768 vrchol 1999 426626 posl 2025 170051
+TC 1990 216852 1991 282998 1993 398505
+TC pokles od vrcholu % 60.1
+TC narust proti 1989 % 40.8
+TC nasobek 1989→vrchol 3.53
+TC na 1000 obyv 1989 11.7
+TC na 1000 obyv 1999 41.5
+TC na 1000 obyv 2025 15.6
+TC 2021 (covid) 153233
+OBJASNENOST 1989 77.45 1990 38.38 min 1992 31.4 2023 45.74
+OBJASNENOST 1973–1988 rozpeti 81.1 87.94
+OBJASNENO pocty 1989 93542 2023 82992
+TC 1973–1989 rozpeti 98091 122122
+OBJASNENOST 1994–2023 rozpeti 36.76 48.2
+TC 2014 288660 → 2024 173322 -40.0 % → 2025 170051 -41.1 %
+TC 2022–2025 [181991, 181417, 173322, 170051]
+DRUH Prosté krádeže 2000 178964 obj 38806 21.7 % 1743.2/100k | 2025 30840 obj 16471 53.4 % 282.5/100k | zmena na 100k % -83.8 | zmena pocet % -82.8
+DRUH Krádeže vloupáním 2000 74231 obj 17918 24.1 % 723.0/100k | 2025 26657 obj 6616 24.8 % 244.2/100k | zmena na 100k % -66.2 | zmena pocet % -64.1
+DRUH Hospodářská kriminalita 2000 37632 obj 35894 95.4 % 366.5/100k | 2025 12302 obj 5375 43.7 % 112.7/100k | zmena na 100k % -69.3 | zmena pocet % -67.3
+DRUH Vraždy 2000 279 obj 228 81.7 % 2.7/100k | 2025 156 obj 133 85.3 % 1.4/100k | zmena na 100k % -47.4 | zmena pocet % -44.1
+DRUH Násilná kriminalita 2000 21996 obj 17595 80.0 % 214.2/100k | 2025 13752 obj 8281 60.2 % 126.0/100k | zmena na 100k % -41.2 | zmena pocet % -37.5
+DRUH Zbývající (např. nedbalostní dopravní nehody) 2000 23031 obj 21626 93.9 % 224.3/100k | 2025 19804 obj 14700 74.2 % 181.4/100k | zmena na 100k % -19.1 | zmena pocet % -14.0
+DRUH Ostatní (např. drogy, výtržnictví) 2000 19842 obj 18712 94.3 % 193.3/100k | 2025 26671 obj 18548 69.5 % 244.3/100k | zmena na 100k % 26.4 | zmena pocet % 34.4
+DRUH Mravnostní kriminalita 2000 1856 obj 1678 90.4 % 18.1/100k | 2025 3695 obj 2105 57.0 % 33.8/100k | zmena na 100k % 87.2 | zmena pocet % 99.1
+DRUH Celkem 2000 391469 obj 172245 44.0 % 3813.1/100k | 2025 170051 obj 76827 45.2 % 1557.8/100k | zmena na 100k % -59.1 | zmena pocet % -56.6
+PODIL majetkove 2000 % 72.6
+VRAZDY 1989 126 1.22 | vrchol 1998 313 3.04 | 2025 156 1.43 | min 2021 105
+VRAZDY objasnenost 1989 119 94.4 % | 2025 (156, 133) 85.3 %
+VRAZDY DOKONANE (Eurostat přes ČSÚ tab. 8.1) 2024: Česko 69 0.63 na 100k | Německo 0.83 Polsko 0.69 Slovensko 1.09
+SILNICE usmrceni do 30 dnu 1989 1078 10.4/100k | vrchol 1994 1637 | 2023 502 4.6/100k | pokles % 53.4
+SILNICE zemreli do 24 h 1989 914 | 2025 421
+VEZNI k 31.12. 1989 22365 215.8 | 1990 8231 79.4 | pokles 1989→1990 % 63.2 | vrchol po 1989 1999 23060 224.4 | 2025 19359 177.3
+VEZNI 1999 vs 1989 23060 > 22365 True
+VEZNI 2025/1989 na 100k 0.822
+AMNESTIE 1.1.1990: propusteno do 21.1.1990 15 392 | stav pred 22 278 | po 6 362
+VEZNI na 100k 2024 (ČSÚ tab. 9.3) {'Švédsko': 106.48, 'Belgie': 106.46, 'Bulharsko': 84.4, 'Česko': 178.25, 'Dánsko': 69.9, 'Estonsko': 119.08, 'Finsko': 56.87, 'Francie': 117.47, 'Chorvatsko': 128.56, 'Irsko': 95.69, 'Itálie': 107.72, 'Kypr': 99.86, 'Litva': 155.24, 'Lotyšsko': 186.58, 'Lucembursko': 93.45, 'Maďarsko': 192.64, 'Malta': 123.7, 'Německo': 70.45, 'Nizozemsko': 66.59, 'Polsko': 190.74, 'Portugalsko': 117.55, 'Rakousko': 105.44, 'Rumunsko': 129.05, 'Řecko': 110.68, 'Slovensko': 150.59, 'Slovinsko': 85.03, 'Španělsko': 121.81}
+VEZNI 2024 poradi Ceska mezi 27 zememi EU v tab. 9.3: 4 | pred Ceskem: ['Maďarsko', 'Polsko', 'Lotyšsko']
+CVVM 2025 pocit bezpeci v CR 88 (rozhodně 21 spíše 67 ) | v miste bydliste 93 (rozhodně 38 spíše 55 )
+CVVM tab4 bezpecnost lepsi/horsi {2014: (16, 60), 2015: (21, 53), 2016: (17, 58), 2019: (27, 47), 2024: (32, 42)}
+CVVM tab4 2024 horsi > lepsi jen u ['Sociální jistoty', 'Bezpečnost občanů, kriminalita']

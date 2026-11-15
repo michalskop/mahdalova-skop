@@ -1,0 +1,527 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Skoro polovina dětí se {dnes|#de1743} rodí mimo manželství, v {roce 1989|#6267a3} to bylo 8 %",
+    "subtitle": "Podíl v %; víra podle sčítání 1991 a 2021, volební účast 1990 (Česká národní rada) a 2025"
+  },
+  "width": "container",
+  "height": {
+    "step": 52
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "ukazatel": "Volební účast ve sněmovních volbách",
+        "tehdy": 96.8,
+        "dnes": 68.9,
+        "rok_t": "1990",
+        "rok_d": "2025",
+        "t_tehdy": "96,8 % (1990)",
+        "t_dnes": "68,9 % (2025)",
+        "l_tehdy": "96,8",
+        "l_dnes": "68,9",
+        "vlevo_dnes": true
+      },
+      {
+        "ukazatel": "Domácnosti s počítačem",
+        "tehdy": 1.8,
+        "dnes": 83.5,
+        "rok_t": "1989",
+        "rok_d": "2025",
+        "t_tehdy": "1,8 % (1989)",
+        "t_dnes": "83,5 % (2025)",
+        "l_tehdy": "1,8",
+        "l_dnes": "83,5",
+        "vlevo_dnes": false
+      },
+      {
+        "ukazatel": "Děti narozené mimo manželství",
+        "tehdy": 7.9,
+        "dnes": 46.8,
+        "rok_t": "1989",
+        "rok_d": "2025",
+        "t_tehdy": "7,9 % (1989)",
+        "t_dnes": "46,8 % (2025)",
+        "l_tehdy": "7,9",
+        "l_dnes": "46,8",
+        "vlevo_dnes": false
+      },
+      {
+        "ukazatel": "Manželství, která skončí rozvodem",
+        "tehdy": 37.1,
+        "dnes": 41.0,
+        "rok_t": "1989",
+        "rok_d": "2025",
+        "t_tehdy": "37,1 % (1989)",
+        "t_dnes": "41,0 % (2025)",
+        "l_tehdy": "37,1",
+        "l_dnes": "41,0",
+        "vlevo_dnes": false
+      },
+      {
+        "ukazatel": "Lidé, kteří se hlásí k víře",
+        "tehdy": 43.9,
+        "dnes": 22.2,
+        "rok_t": "1991",
+        "rok_d": "2021",
+        "t_tehdy": "43,9 % (1991)",
+        "t_dnes": "22,2 % (2021)",
+        "l_tehdy": "43,9",
+        "l_dnes": "22,2",
+        "vlevo_dnes": true
+      },
+      {
+        "ukazatel": "Lidé starší 65 let",
+        "tehdy": 12.5,
+        "dnes": 20.8,
+        "rok_t": "1989",
+        "rok_d": "2025",
+        "t_tehdy": "12,5 % (1989)",
+        "t_dnes": "20,8 % (2025)",
+        "l_tehdy": "12,5",
+        "l_dnes": "20,8",
+        "vlevo_dnes": false
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -11,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "datum": 0,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          }
+        },
+        "text": {
+          "field": "ukazatel"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#bcbcb0"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ]
+          },
+          "field": "tehdy"
+        },
+        "x2": {
+          "field": "dnes"
+        },
+        "tooltip": [
+          {
+            "field": "ukazatel",
+            "title": "Ukazatel"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "Tehdy"
+          },
+          {
+            "field": "t_dnes",
+            "title": "Dnes"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150,
+        "opacity": 1,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ]
+          },
+          "field": "tehdy"
+        },
+        "tooltip": [
+          {
+            "field": "ukazatel",
+            "title": "Ukazatel"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "Tehdy"
+          },
+          {
+            "field": "t_dnes",
+            "title": "Dnes"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150,
+        "opacity": 1,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ]
+          },
+          "field": "dnes"
+        },
+        "tooltip": [
+          {
+            "field": "ukazatel",
+            "title": "Ukazatel"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "Tehdy"
+          },
+          {
+            "field": "t_dnes",
+            "title": "Dnes"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 11,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ]
+          },
+          "field": "tehdy"
+        },
+        "text": {
+          "field": "l_tehdy"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ]
+          },
+          "field": "dnes"
+        },
+        "text": {
+          "field": "l_dnes"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ]
+          },
+          "field": "tehdy"
+        },
+        "text": {
+          "field": "l_tehdy"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -12,
+              104
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80,
+              100
+            ]
+          },
+          "field": "dnes"
+        },
+        "text": {
+          "field": "l_dnes"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026), [sčítání 2021](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data), [sčítání 1991](https://csu.gov.cz/nabozenske_vyznani_obyvatelstva_ceske_republiky_23_12_04), [volební účast od roku 1990](https://csu.gov.cz/produkty/volici-ucast-hlasy); výpočet DataTimes"
+}

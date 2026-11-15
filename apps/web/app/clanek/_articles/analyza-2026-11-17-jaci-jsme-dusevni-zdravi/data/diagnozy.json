@@ -1,0 +1,361 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Pacientů s {autismem|#de1743} je u psychiatrů pětkrát víc než v roce 2010, se {schizofrenií|#6267a3} stejně",
+    "subtitle": "Kolikrát víc pacientů na 100 000 obyvatel léčily psychiatrické ambulance v roce 2025 než v roce 2010 (1× = stejně); kódy diagnóz podle MKN-10"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "kat": "Poruchy autistického spektra",
+        "pomer": 5.28,
+        "skup": "roste",
+        "popisek": "Poruchy autistického spektra (F84)",
+        "hodnota": "5,3×",
+        "t0": "1 818 pacientů (17 na 100 000)",
+        "t1": "9 946 pacientů (91 na 100 000)"
+      },
+      {
+        "kat": "ADHD (hyperkinetické poruchy)",
+        "pomer": 2.3,
+        "skup": "roste",
+        "popisek": "ADHD (hyperkinetické poruchy) (F90)",
+        "hodnota": "2,3×",
+        "t0": "11 149 pacientů (106 na 100 000)",
+        "t1": "26 565 pacientů (243 na 100 000)"
+      },
+      {
+        "kat": "Obsedantně-kompulzivní porucha",
+        "pomer": 1.98,
+        "skup": "roste",
+        "popisek": "Obsedantně-kompulzivní porucha (F42)",
+        "hodnota": "2,0×",
+        "t0": "4 631 pacientů (44 na 100 000)",
+        "t1": "9 487 pacientů (87 na 100 000)"
+      },
+      {
+        "kat": "Demence a organické poruchy",
+        "pomer": 1.5,
+        "skup": "roste",
+        "popisek": "Demence a organické poruchy (F00, G30)",
+        "hodnota": "1,5×",
+        "t0": "62 793 pacientů (596 na 100 000)",
+        "t1": "97 933 pacientů (897 na 100 000)"
+      },
+      {
+        "kat": "Poruchy příjmu potravy, spánku aj.",
+        "pomer": 1.45,
+        "skup": "roste",
+        "popisek": "Poruchy příjmu potravy, spánku aj. (F50–F59)",
+        "hodnota": "1,4×",
+        "t0": "16 135 pacientů (153 na 100 000)",
+        "t1": "24 278 pacientů (222 na 100 000)"
+      },
+      {
+        "kat": "Drogy a jiné látky kromě alkoholu",
+        "pomer": 1.45,
+        "skup": "roste",
+        "popisek": "Drogy a jiné látky kromě alkoholu (F11–F19)",
+        "hodnota": "1,4×",
+        "t0": "8 289 pacientů (79 na 100 000)",
+        "t1": "12 446 pacientů (114 na 100 000)"
+      },
+      {
+        "kat": "Úzkostné a stresové poruchy",
+        "pomer": 1.43,
+        "skup": "roste",
+        "popisek": "Úzkostné a stresové poruchy (F40–F49 bez F42)",
+        "hodnota": "1,4×",
+        "t0": "176 559 pacientů (1 676 na 100 000)",
+        "t1": "262 178 pacientů (2 402 na 100 000)"
+      },
+      {
+        "kat": "Deprese",
+        "pomer": 1.12,
+        "skup": "roste",
+        "popisek": "Deprese (F32–F33)",
+        "hodnota": "1,1×",
+        "t0": "78 453 pacientů (745 na 100 000)",
+        "t1": "91 354 pacientů (837 na 100 000)"
+      },
+      {
+        "kat": "Schizofrenie a psychózy",
+        "pomer": 1.02,
+        "skup": "stejně nebo méně",
+        "popisek": "Schizofrenie a psychózy (F20–F29)",
+        "hodnota": "1,0×",
+        "t0": "41 964 pacientů (398 na 100 000)",
+        "t1": "44 263 pacientů (406 na 100 000)"
+      },
+      {
+        "kat": "Alkohol",
+        "pomer": 0.85,
+        "skup": "stejně nebo méně",
+        "popisek": "Alkohol (F10)",
+        "hodnota": "0,8×",
+        "t0": "20 653 pacientů (196 na 100 000)",
+        "t1": "18 151 pacientů (166 na 100 000)"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "opacity": 0.5
+      },
+      "data": {
+        "values": [
+          {
+            "x": 1
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.55
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "field": "pomer",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6.6
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "labelExpr": "datum.value + '×'",
+            "labelFontSize": 10.5
+          }
+        },
+        "x2": {
+          "datum": 0
+        },
+        "color": {
+          "field": "skup",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "roste",
+              "stejně nebo méně"
+            ],
+            "range": [
+              "#de1743",
+              "#bcbcb0"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Diagnóza"
+          },
+          {
+            "field": "t0",
+            "title": "2010"
+          },
+          {
+            "field": "t1",
+            "title": "2025"
+          },
+          {
+            "field": "hodnota",
+            "title": "Na 100 000 obyvatel"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.pomer >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "field": "pomer",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "hodnota"
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Diagnóza"
+          },
+          {
+            "field": "t0",
+            "title": "2010"
+          },
+          {
+            "field": "t1",
+            "title": "2025"
+          },
+          {
+            "field": "hodnota",
+            "title": "Na 100 000 obyvatel"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.pomer < 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -5,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "field": "pomer",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "hodnota"
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Diagnóza"
+          },
+          {
+            "field": "t0",
+            "title": "2010"
+          },
+          {
+            "field": "t1",
+            "title": "2025"
+          },
+          {
+            "field": "hodnota",
+            "title": "Na 100 000 obyvatel"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -9,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "datum": 0,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6.6
+            ]
+          }
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "_source": "ÚZIS, [NRHZS, ambulantní psychiatrie](https://www.nzip.cz/data/2058-ambulantni-pece-psychiatrie-otevrena-data)",
+  "height": {
+    "step": 50
+  }
+}

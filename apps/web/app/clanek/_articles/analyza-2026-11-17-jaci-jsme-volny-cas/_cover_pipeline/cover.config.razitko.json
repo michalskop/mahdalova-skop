@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/images/cover-homepage.png",
+      "otisk": "3f1696b992e1fcb7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/cover.config.cjs": "befbcdc7165652a1",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/motiv-homepage.svg": "8c7154190d232411"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/images/cover-og.jpg",
+      "otisk": "a4a509736c01ec14",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/cover.config.cjs": "befbcdc7165652a1",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/motiv-og.svg": "3b493798bdc08137"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/images/cover-square.png",
+      "otisk": "51665e7b74c4a881",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/cover.config.cjs": "befbcdc7165652a1",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/motiv-square.svg": "8740fb26b2226d42"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/images/cover-instagram.png",
+      "otisk": "6ec5e841d73177e4",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/cover.config.cjs": "befbcdc7165652a1",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/motiv-instagram.svg": "7c9eeecf3fb2a5e3"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/images/cover-story.png",
+      "otisk": "e7f42b663a399836",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/cover.config.cjs": "befbcdc7165652a1",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/motiv-story.svg": "2522f52cd986b936"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T15:06:34.762Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/index.md",
+  "titulekClanku": "Do ciziny jezdíme častěji, do kina méně a knihy čte méně lidí",
+  "texty": {
+    "stitek": "1989 × 2026 • Volný čas a spotřeba",
+    "nadtitulek": "",
+    "titulek": "Kina ztratila tři čtvrtiny diváků",
+    "podtitulek": "V roce 1989 šel průměrný člověk do kina pětkrát za rok. Dnes jednou"
+  }
+}

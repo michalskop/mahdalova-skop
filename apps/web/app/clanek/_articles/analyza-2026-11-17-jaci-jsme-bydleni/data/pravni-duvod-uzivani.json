@@ -1,0 +1,502 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Byty v osobním vlastnictví tvořily v {roce 1991|#6267a3} necelé procento, v {roce 2021|#de1743} čtvrtinu",
+    "subtitle": "Obydlené byty podle právního důvodu užívání v % všech obydlených bytů, sčítání lidu; v roce 2021 u 7,5 % bytů důvod nezjištěn"
+  },
+  "width": "container",
+  "height": {
+    "step": 52
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "ukazatel": "Byt ve vlastním domě",
+        "tehdy": 36.9,
+        "dnes": 35.6,
+        "l_tehdy": "36,9",
+        "l_dnes": "35,6",
+        "t_tehdy": "36,9 % (1 367 027 bytů, 1991)",
+        "t_dnes": "35,6 % (1 595 698 bytů, 2021)",
+        "vlevo_dnes": true
+      },
+      {
+        "ukazatel": "Byt v osobním vlastnictví",
+        "tehdy": 0.8,
+        "dnes": 25.0,
+        "l_tehdy": "0,8",
+        "l_dnes": "25,0",
+        "t_tehdy": "0,8 % (31 164 bytů, 1991)",
+        "t_dnes": "25,0 % (1 121 375 bytů, 2021)",
+        "vlevo_dnes": false
+      },
+      {
+        "ukazatel": "Nájemní byt",
+        "tehdy": 39.5,
+        "dnes": 19.9,
+        "l_tehdy": "39,5",
+        "l_dnes": "19,9",
+        "t_tehdy": "39,5 % (1 465 231 bytů, 1991)",
+        "t_dnes": "19,9 % (890 802 bytů, 2021)",
+        "vlevo_dnes": true
+      },
+      {
+        "ukazatel": "Družstevní byt",
+        "tehdy": 18.8,
+        "dnes": 3.1,
+        "l_tehdy": "18,8",
+        "l_dnes": "3,1",
+        "t_tehdy": "18,8 % (697 829 bytů, 1991)",
+        "t_dnes": "3,1 % (140 821 bytů, 2021)",
+        "vlevo_dnes": true
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -11,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "datum": 0,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          }
+        },
+        "text": {
+          "field": "ukazatel"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#bcbcb0"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "tehdy"
+        },
+        "x2": {
+          "field": "dnes"
+        },
+        "tooltip": [
+          {
+            "field": "ukazatel",
+            "title": "Právní důvod"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "1991"
+          },
+          {
+            "field": "t_dnes",
+            "title": "2021"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150,
+        "opacity": 1,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "tehdy"
+        },
+        "tooltip": [
+          {
+            "field": "ukazatel",
+            "title": "Právní důvod"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "1991"
+          },
+          {
+            "field": "t_dnes",
+            "title": "2021"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150,
+        "opacity": 1,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "dnes"
+        },
+        "tooltip": [
+          {
+            "field": "ukazatel",
+            "title": "Právní důvod"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "1991"
+          },
+          {
+            "field": "t_dnes",
+            "title": "2021"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 11,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "tehdy"
+        },
+        "text": {
+          "field": "l_tehdy"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11,
+        "color": "#de1743",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "dnes"
+        },
+        "text": {
+          "field": "l_dnes"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "tehdy"
+        },
+        "text": {
+          "field": "l_tehdy"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.vlevo_dnes"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 11,
+        "color": "#de1743",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "dnes"
+        },
+        "text": {
+          "field": "l_dnes"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [sčítání 1991, Tab. 3.2.1](https://csu.gov.cz/docs/107508/b6572b80-7764-9edc-4de2-fb29747532a8/4131_3_2_1.pdf) a [sčítání 2021, otevřená data](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data); výpočet DataTimes"
+}

@@ -1,0 +1,203 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Za Petra Pavla dostávají ženy {dvakrát větší podíl|#de1743} vyznamenání než za {jeho předchůdců|#6267a3}",
+    "subtitle": "Podíl vyznamenání udělených ženám v %, ze vyznamenání se známým pohlavím; počítáme vyznamenání, ne osoby. Pavel včetně 28. 10. 2026"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "prezident": "Václav Havel (1995–2003)",
+        "pct": 13.0,
+        "barva": "tehdy",
+        "t": "13 % (71 z 546)",
+        "r": "16 z 180 (9 %)"
+      },
+      {
+        "prezident": "Václav Klaus (2003–2012)",
+        "pct": 16.2,
+        "barva": "tehdy",
+        "t": "16 % (37 z 228)",
+        "r": "11 z 72 (15 %)"
+      },
+      {
+        "prezident": "Miloš Zeman (2013–2023)",
+        "pct": 15.2,
+        "barva": "tehdy",
+        "t": "15 % (64 z 420)",
+        "r": "8 z 86 (9 %)"
+      },
+      {
+        "prezident": "Petr Pavel (2023–2026)",
+        "pct": 28.5,
+        "barva": "dnes",
+        "t": "29 % (65 z 228)",
+        "r": "17 z 54 (32 %)"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -12,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "prezident",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "datum": 0,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              52
+            ]
+          }
+        },
+        "text": {
+          "field": "prezident"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 1
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "prezident",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              52
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "prezident",
+            "title": "Prezident"
+          },
+          {
+            "field": "t",
+            "title": "Vyznamenání pro ženy"
+          },
+          {
+            "field": "r",
+            "title": "Z toho řády"
+          }
+        ],
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "tehdy",
+              "dnes"
+            ],
+            "range": [
+              "#6267a3",
+              "#de1743"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "prezident",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.5
+          }
+        },
+        "x": {
+          "field": "pct",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        },
+        "tooltip": [
+          {
+            "field": "prezident",
+            "title": "Prezident"
+          },
+          {
+            "field": "t",
+            "title": "Vyznamenání pro ženy"
+          },
+          {
+            "field": "r",
+            "title": "Z toho řády"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "Hrad, [výpočet DataTimes](/clanek/analyza-2026-10-28-statni-vyznamenani)",
+  "height": {
+    "step": 52
+  }
+}

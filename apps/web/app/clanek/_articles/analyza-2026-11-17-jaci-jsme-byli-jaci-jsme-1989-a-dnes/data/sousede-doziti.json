@@ -1,0 +1,410 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Česko|#de1743} přidalo od roku 1990 skoro devět let života, Rakousko a Německo míň",
+    "subtitle": "Naděje dožití při narození v letech, obě pohlaví; šedá tečka = 1990, barevná = 2024. Německo 1990 včetně bývalé NDR"
+  },
+  "width": "container",
+  "height": {
+    "step": 50
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "zeme": "Rakousko",
+        "tehdy": 75.8,
+        "dnes": 82.1,
+        "cesko": false,
+        "l_tehdy": "75,8",
+        "l_dnes": "82,1",
+        "t_tehdy": "75,8 roku (1990)",
+        "t_dnes": "82,1 roku (2024)"
+      },
+      {
+        "zeme": "Německo",
+        "tehdy": 75.4,
+        "dnes": 81.2,
+        "cesko": false,
+        "l_tehdy": "75,4",
+        "l_dnes": "81,2",
+        "t_tehdy": "75,4 roku (1990)",
+        "t_dnes": "81,2 roku (2024)"
+      },
+      {
+        "zeme": "Česko",
+        "tehdy": 71.5,
+        "dnes": 80.1,
+        "cesko": true,
+        "l_tehdy": "71,5",
+        "l_dnes": "80,1",
+        "t_tehdy": "71,5 roku (1990)",
+        "t_dnes": "80,1 roku (2024)"
+      },
+      {
+        "zeme": "Polsko",
+        "tehdy": 70.7,
+        "dnes": 78.5,
+        "cesko": false,
+        "l_tehdy": "70,7",
+        "l_dnes": "78,5",
+        "t_tehdy": "70,7 roku (1990)",
+        "t_dnes": "78,5 roku (2024)"
+      },
+      {
+        "zeme": "Slovensko",
+        "tehdy": 71.1,
+        "dnes": 78.4,
+        "cesko": false,
+        "l_tehdy": "71,1",
+        "l_dnes": "78,4",
+        "t_tehdy": "71,1 roku (1990)",
+        "t_dnes": "78,4 roku (2024)"
+      },
+      {
+        "zeme": "Maďarsko",
+        "tehdy": 69.4,
+        "dnes": 76.8,
+        "cesko": false,
+        "l_tehdy": "69,4",
+        "l_dnes": "76,8",
+        "t_tehdy": "69,4 roku (1990)",
+        "t_dnes": "76,8 roku (2024)"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -11,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "datum": 66,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              66,
+              86
+            ]
+          }
+        },
+        "text": {
+          "field": "zeme"
+        },
+        "fontWeight": {
+          "condition": {
+            "test": "datum.cesko",
+            "value": 700
+          },
+          "value": 400
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#d4d4c8"
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              66,
+              86
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              66,
+              70,
+              74,
+              78,
+              82
+            ]
+          },
+          "field": "tehdy"
+        },
+        "x2": {
+          "field": "dnes"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "1990"
+          },
+          {
+            "field": "t_dnes",
+            "title": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 140,
+        "opacity": 1,
+        "color": "#bcbcb0"
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              66,
+              86
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              66,
+              70,
+              74,
+              78,
+              82
+            ]
+          },
+          "field": "tehdy"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "1990"
+          },
+          {
+            "field": "t_dnes",
+            "title": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150,
+        "opacity": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              66,
+              86
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              66,
+              70,
+              74,
+              78,
+              82
+            ]
+          },
+          "field": "dnes"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.cesko",
+            "value": "#de1743"
+          },
+          "value": "#6267a3"
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t_tehdy",
+            "title": "1990"
+          },
+          {
+            "field": "t_dnes",
+            "title": "2024"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 11,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              66,
+              86
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              66,
+              70,
+              74,
+              78,
+              82
+            ]
+          },
+          "field": "tehdy"
+        },
+        "text": {
+          "field": "l_tehdy"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "y": {
+          "field": "zeme",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              66,
+              86
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              66,
+              70,
+              74,
+              78,
+              82
+            ]
+          },
+          "field": "dnes"
+        },
+        "text": {
+          "field": "l_dnes"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.cesko",
+            "value": "#de1743"
+          },
+          "value": "#6267a3"
+        }
+      }
+    }
+  ],
+  "_source": "Eurostat, [demo_mlexpec](https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table); výpočet DataTimes"
+}

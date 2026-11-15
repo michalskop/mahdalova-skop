@@ -1,0 +1,122 @@
+sc_vs_celkem_1991 = 7.2   # podíl VŠ vzdělaných 15+, sčítání 1991, celkem, %
+sc_vs_celkem_1991_abs = 582849   # počet VŠ vzdělaných 15+, sčítání 1991, celkem
+sc_vs_muži_1991 = 9.5   # podíl VŠ vzdělaných 15+, sčítání 1991, muži, %
+sc_vs_muži_1991_abs = 365162   # počet VŠ vzdělaných 15+, sčítání 1991, muži
+sc_vs_ženy_1991 = 5.2   # podíl VŠ vzdělaných 15+, sčítání 1991, ženy, %
+sc_vs_ženy_1991_abs = 217687   # počet VŠ vzdělaných 15+, sčítání 1991, ženy
+sc_zakladni_1991 = 33.5   # základní vč. neukončeného, sčítání 1991, %
+sc_vyuceni_1991 = 35.7   # střední odborné bez maturity (vyučení), 1991, %
+sc_maturita_1991 = 23.1   # úplné střední (s maturitou), 1991, %
+sc_vyssi_1991 = 0.1   # vyšší (od 2001 vč. nástavbového a pomaturitního), 1991, %
+sc_nezjisteno_1991 = 1.1   # nezjištěné vzdělání, 1991, % obyvatel 15+
+sc_nezjisteno_1991_abs = 85459   # nezjištěné vzdělání, 1991, počet
+sc_vs_celkem_2021 = 18.7   # podíl VŠ vzdělaných 15+, sčítání 2021, celkem, %
+sc_vs_celkem_2021_abs = 1552407   # počet VŠ vzdělaných 15+, sčítání 2021, celkem
+sc_vs_muži_2021 = 18.1   # podíl VŠ vzdělaných 15+, sčítání 2021, muži, %
+sc_vs_muži_2021_abs = 729211   # počet VŠ vzdělaných 15+, sčítání 2021, muži
+sc_vs_ženy_2021 = 19.1   # podíl VŠ vzdělaných 15+, sčítání 2021, ženy, %
+sc_vs_ženy_2021_abs = 823196   # počet VŠ vzdělaných 15+, sčítání 2021, ženy
+sc_zakladni_2021 = 13.3   # základní vč. neukončeného, sčítání 2021, %
+sc_vyuceni_2021 = 32.9   # střední odborné bez maturity (vyučení), 2021, %
+sc_maturita_2021 = 30.0   # úplné střední (s maturitou), 2021, %
+sc_vyssi_2021 = 4.5   # vyšší (od 2001 vč. nástavbového a pomaturitního), 2021, %
+sc_nezjisteno_2021 = 5.8   # nezjištěné vzdělání, 2021, % obyvatel 15+
+sc_nezjisteno_2021_abs = 511378   # nezjištěné vzdělání, 2021, počet
+sc_vs_pomer_2021_1991 = 2.66   # kolikrát víc VŠ vzdělaných (abs.) 2021 proti 1991
+sc_vs_zeny_pomer = 3.78   # kolikrát víc VŠ žen 2021 proti 1991
+sc_vs_muzi_pomer = 2.0   # kolikrát víc VŠ mužů 2021 proti 1991
+vsps_rok_od = 1993   # první rok VŠPS
+vsps_rok_do = 2025   # poslední rok VŠPS
+vsps_vs_celkem_1993 = 7.8   # VŠPS podíl VŠ vzdělaných 15+, celkem, 1993, %
+vsps_vs_celkem_2025 = 22.1   # VŠPS podíl VŠ vzdělaných 15+, celkem, 2025, %
+vsps_vs_muzi_1993 = 10.1   # VŠPS podíl VŠ vzdělaných 15+, muzi, 1993, %
+vsps_vs_muzi_2025 = 20.6   # VŠPS podíl VŠ vzdělaných 15+, muzi, 2025, %
+vsps_vs_zeny_1993 = 5.7   # VŠPS podíl VŠ vzdělaných 15+, zeny, 1993, %
+vsps_vs_zeny_2025 = 23.5   # VŠPS podíl VŠ vzdělaných 15+, zeny, 2025, %
+vsps_vs_zeny_abs_tis_2025 = 1078   # VŠ vzdělané ženy 15+ v tis., 2025
+vsps_vs_muzi_abs_tis_2025 = 881   # VŠ vzdělaní muži 15+ v tis., 2025
+vsps_zeny_predstihly_podil = 2017   # první rok, od kdy mají ženy trvale vyšší podíl VŠ vzdělaných než muži
+vsps_zeny_predstihly_pocet = 2014   # první rok, od kdy je VŠ vzdělaných žen trvale víc než mužů (počet)
+vsps_rozdil_pb_2025 = 2.9   # o kolik p. b. vyšší podíl u žen, 2025
+vs_rok_dnes = 2025   # poslední rok Tab. 12.06
+vs_studenti_1989 = 112980   # studenti VŠ 1989 (k 31. 12.)
+vs_studenti_dnes = 330547   # studenti VŠ 2025
+vs_studenti_pomer = 2.93   # kolikrát víc studentů
+vs_studenti_vrchol_rok = 2010   # rok s nejvíc studenty
+vs_studenti_vrchol = 395986   # nejvíc studentů
+vs_studenti_dno_rok = 2019   # rok s nejméně studenty po vrcholu
+vs_studenti_dno = 288587   # nejméně studentů po vrcholu
+vs_cizinci_1989 = 2959   # zahraniční studenti 1989
+vs_cizinci_dnes = 58962   # zahraniční studenti 2025
+vs_cizinci_podil_1989 = 2.6   # podíl cizinců mezi studenty 1989, %
+vs_cizinci_podil_dnes = 17.8   # podíl cizinců 2025, %
+vs_cesi_1989 = 110021   # studenti s občanstvím ČR 1989
+vs_cesi_dnes = 271597   # studenti s občanstvím ČR 2025
+vs_cizinci_pomer = 19.9   # kolikrát víc zahraničních studentů
+vs_cesi_pomer = 2.47   # kolikrát víc studentů s občanstvím ČR
+vs_verejne_1989 = 23   # veřejné VŠ 1989
+vs_verejne_dnes = 26   # veřejné VŠ 2025
+vs_soukrome_prvni_rok = 1999   # první rok se soukromými VŠ v tabulce
+vs_soukrome_prvni = 3   # soukromé VŠ v prvním roce
+vs_soukrome_vrchol_rok = 2008   # rok s nejvíc soukromými VŠ
+vs_soukrome_vrchol = 45   # nejvíc soukromých VŠ
+vs_soukrome_dnes = 24   # soukromé VŠ 2025
+vs_soukr_stud_vrchol_rok = 2010   # rok s nejvíc studenty soukromých VŠ
+vs_soukr_stud_vrchol = 57323   # nejvíc studentů soukromých VŠ
+vs_soukr_stud_vrchol_podil = 14.5   # podíl studentů soukromých VŠ ve vrcholu, %
+vs_soukr_stud_dnes = 33243   # studenti soukromých VŠ 2025
+vs_soukr_stud_podil_dnes = 10.1   # podíl studentů soukromých VŠ 2025, %
+vs_fakulty_1989 = 73   # fakulty veřejných a státních VŠ 1989
+vs_fakulty_dnes = 149   # fakulty 2025
+vs_absolventi_prvni_rok = 2001   # první rok s absolventy v tabulce
+vs_absolventi_prvni = 30106   # absolventi v prvním roce
+vs_absolventi_vrchol_rok = 2012   # rok s nejvíc absolventy
+vs_absolventi_vrchol = 94090   # nejvíc absolventů
+vs_absolventi_dnes = 69076   # absolventi 2025
+vs_dalkove_1989 = 20836   # distanční a kombinované studium 1989
+vs_dalkove_vrchol_rok = 2010   # rok s nejvíc distančními/kombinovanými
+vs_dalkove_vrchol = 116741   # nejvíc distančních/kombinovaných
+vs_dalkove_dnes = 59048   # distanční a kombinované 2025
+ms_rok_dnes = 2025/26   # poslední školní rok
+ms_deti_1989 = 400647   # děti v MŠ 1989/90
+ms_deti_dnes = 347798   # děti v MŠ dnes
+ms_deti_zmena_pct = -13.2   # změna počtu dětí v MŠ, %
+ms_deti_dno_rok = 2005/06   # školní rok s nejméně dětmi v MŠ
+ms_deti_dno = 282183   # nejméně dětí v MŠ
+ms_deti_vrchol_rok = 2022/23   # školní rok s nejvíc dětmi po dnu
+ms_deti_vrchol = 369205   # nejvíc dětí v MŠ po dnu
+ms_skoly_1989 = 7328   # mateřské školy 1989/90
+ms_skoly_dnes = 5409   # mateřské školy dnes (od 2004/05 bez ohledu na počet pracovišť)
+ms_na_tridu_1989 = 24.3   # dětí na třídu MŠ 1989/90
+ms_na_tridu_dnes = 19.9   # dětí na třídu MŠ dnes
+zs_zaci_1989 = 1290518   # žáci ZŠ 1989/90
+zs_zaci_dnes = 1002916   # žáci ZŠ dnes
+zs_zaci_dno_rok = 2010/11   # školní rok s nejméně žáky ZŠ
+zs_zaci_dno = 789486   # nejméně žáků ZŠ
+zs_na_tridu_1989 = 25.5   # žáků na třídu ZŠ 1989/90
+zs_na_tridu_dnes = 19.1   # žáků na třídu ZŠ dnes
+narozeni_1989 = 128356   # živě narození 1989
+narozeni_min_rok = 1999   # rok s nejméně narozenými v letech 1989–2005
+narozeni_min = 89471   # nejméně narozených 1989–2005
+narozeni_min_vs_1989_pct = -30.3   # změna narozených 1999 proti 1989, %
+zs_na_tridu_rozdil = 6.4   # o kolik žáků na třídu méně
+narozeni_dnes = 77636   # živě narození 2025
+vos_rok_od = 1996/97   # první školní rok VOŠ v tabulce
+vos_studenti_od = 14931   # studenti VOŠ v prvním roce
+vos_vrchol_rok = 1999/00   # školní rok s nejvíc studenty VOŠ
+vos_vrchol = 31376   # nejvíc studentů VOŠ
+vos_dno_rok = 2019/20   # školní rok s nejméně studenty VOŠ po vrcholu
+vos_dno = 17954   # nejméně studentů VOŠ po vrcholu
+vos_studenti_dnes = 22900   # studenti VOŠ dnes
+vos_skoly_dnes = 153   # VOŠ dnes
+GRAF vs-zeny-muzi: muži 1993 10.1
+GRAF vs-zeny-muzi: muži 2025 20.6
+GRAF vs-zeny-muzi: ženy 1993 5.7
+GRAF vs-zeny-muzi: ženy 2025 23.5
+GRAF struktura-vzdelani: Základní vzdělání 1991 33.5 → 2021 13.3
+GRAF struktura-vzdelani: Vyučení bez maturity 1991 35.7 → 2021 32.9
+GRAF struktura-vzdelani: Střední s maturitou 1991 23.1 → 2021 30.0
+GRAF struktura-vzdelani: Vysokoškolské 1991 7.2 → 2021 18.7
+GRAF studenti: 1989 celkem 112980.0, Češi 110021.0, cizinci 2959.0
+GRAF studenti: 2010 celkem 395986.0, Češi 358489.0, cizinci 37497.0
+GRAF studenti: 2025 celkem 330547.0, Češi 271585.0, cizinci 58962.0

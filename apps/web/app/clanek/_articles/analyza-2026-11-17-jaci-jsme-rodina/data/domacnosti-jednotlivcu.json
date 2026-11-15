@@ -1,0 +1,163 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Skoro {dvě z pěti|#de1743} domácností tvoří jeden člověk, v {roce 1991|#6267a3} to byla čtvrtina",
+    "subtitle": "Podíl domácností jednotlivců mezi hospodařícími domácnostmi v %, sčítání lidu 1961–2021"
+  },
+  "width": "container",
+  "height": 210,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "scale": {
+      "zero": false
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "width": {
+          "band": 0.62
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              48
+            ]
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "skup",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1991",
+              "2021",
+              "jiný"
+            ],
+            "range": [
+              "#6267a3",
+              "#de1743",
+              "#d4d4c8"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Sčítání"
+          },
+          {
+            "field": "l",
+            "title": "Domácnosti jednotlivců"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              48
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "l"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, sčítání lidu ([Tab. 11.03](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026))",
+  "data": {
+    "values": [
+      {
+        "rok": "1961",
+        "v": 16.96869851729819,
+        "l": "17,0 %",
+        "skup": "jiný"
+      },
+      {
+        "rok": "1970",
+        "v": 19.866512430740173,
+        "l": "19,9 %",
+        "skup": "jiný"
+      },
+      {
+        "rok": "1980",
+        "v": 23.67323779595603,
+        "l": "23,7 %",
+        "skup": "jiný"
+      },
+      {
+        "rok": "1991",
+        "v": 26.286604592834383,
+        "l": "26,3 %",
+        "skup": "1991"
+      },
+      {
+        "rok": "2001",
+        "v": 30.269218955500186,
+        "l": "30,3 %",
+        "skup": "jiný"
+      },
+      {
+        "rok": "2011",
+        "v": 32.50531070904994,
+        "l": "32,5 %",
+        "skup": "jiný"
+      },
+      {
+        "rok": "2021",
+        "v": 39.067021836017226,
+        "l": "39,1 %",
+        "skup": "2021"
+      }
+    ]
+  }
+}

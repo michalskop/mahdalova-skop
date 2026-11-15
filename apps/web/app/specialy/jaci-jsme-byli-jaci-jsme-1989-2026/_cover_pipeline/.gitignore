@@ -1,0 +1,4 @@
+# Vykreslené motivy a náhledy coverů speciálu (covery jsou na CDN media.datatimes.org)
+*.svg
+*.png
+nahled/

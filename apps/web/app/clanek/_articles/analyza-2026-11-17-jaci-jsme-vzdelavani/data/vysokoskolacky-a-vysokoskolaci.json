@@ -1,0 +1,729 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Od roku 2017 mají vysokou školu častěji {ženy|#f76800} než {muži|#06677d}",
+    "subtitle": "Podíl lidí s vysokoškolským vzděláním mezi obyvateli staršími 15 let v %, 1993–2025"
+  },
+  "width": "container",
+  "height": 260,
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1993,
+        "pohlavi": "muži",
+        "podil": 10.1,
+        "t": "10,1 %"
+      },
+      {
+        "rok": 1994,
+        "pohlavi": "muži",
+        "podil": 9.8,
+        "t": "9,8 %"
+      },
+      {
+        "rok": 1995,
+        "pohlavi": "muži",
+        "podil": 10.1,
+        "t": "10,1 %"
+      },
+      {
+        "rok": 1996,
+        "pohlavi": "muži",
+        "podil": 10.0,
+        "t": "10,0 %"
+      },
+      {
+        "rok": 1997,
+        "pohlavi": "muži",
+        "podil": 10.1,
+        "t": "10,1 %"
+      },
+      {
+        "rok": 1998,
+        "pohlavi": "muži",
+        "podil": 10.2,
+        "t": "10,2 %"
+      },
+      {
+        "rok": 1999,
+        "pohlavi": "muži",
+        "podil": 10.7,
+        "t": "10,7 %"
+      },
+      {
+        "rok": 2000,
+        "pohlavi": "muži",
+        "podil": 11.1,
+        "t": "11,1 %"
+      },
+      {
+        "rok": 2001,
+        "pohlavi": "muži",
+        "podil": 11.2,
+        "t": "11,2 %"
+      },
+      {
+        "rok": 2002,
+        "pohlavi": "muži",
+        "podil": 11.5,
+        "t": "11,5 %"
+      },
+      {
+        "rok": 2003,
+        "pohlavi": "muži",
+        "podil": 11.5,
+        "t": "11,5 %"
+      },
+      {
+        "rok": 2004,
+        "pohlavi": "muži",
+        "podil": 11.8,
+        "t": "11,8 %"
+      },
+      {
+        "rok": 2005,
+        "pohlavi": "muži",
+        "podil": 12.1,
+        "t": "12,1 %"
+      },
+      {
+        "rok": 2006,
+        "pohlavi": "muži",
+        "podil": 12.5,
+        "t": "12,5 %"
+      },
+      {
+        "rok": 2007,
+        "pohlavi": "muži",
+        "podil": 12.6,
+        "t": "12,6 %"
+      },
+      {
+        "rok": 2008,
+        "pohlavi": "muži",
+        "podil": 13.0,
+        "t": "13,0 %"
+      },
+      {
+        "rok": 2009,
+        "pohlavi": "muži",
+        "podil": 13.9,
+        "t": "13,9 %"
+      },
+      {
+        "rok": 2010,
+        "pohlavi": "muži",
+        "podil": 14.8,
+        "t": "14,8 %"
+      },
+      {
+        "rok": 2011,
+        "pohlavi": "muži",
+        "podil": 15.7,
+        "t": "15,7 %"
+      },
+      {
+        "rok": 2012,
+        "pohlavi": "muži",
+        "podil": 16.3,
+        "t": "16,3 %"
+      },
+      {
+        "rok": 2013,
+        "pohlavi": "muži",
+        "podil": 17.2,
+        "t": "17,2 %"
+      },
+      {
+        "rok": 2014,
+        "pohlavi": "muži",
+        "podil": 17.6,
+        "t": "17,6 %"
+      },
+      {
+        "rok": 2015,
+        "pohlavi": "muži",
+        "podil": 17.8,
+        "t": "17,8 %"
+      },
+      {
+        "rok": 2016,
+        "pohlavi": "muži",
+        "podil": 18.7,
+        "t": "18,7 %"
+      },
+      {
+        "rok": 2017,
+        "pohlavi": "muži",
+        "podil": 19.1,
+        "t": "19,1 %"
+      },
+      {
+        "rok": 2018,
+        "pohlavi": "muži",
+        "podil": 19.1,
+        "t": "19,1 %"
+      },
+      {
+        "rok": 2019,
+        "pohlavi": "muži",
+        "podil": 19.0,
+        "t": "19,0 %"
+      },
+      {
+        "rok": 2020,
+        "pohlavi": "muži",
+        "podil": 19.0,
+        "t": "19,0 %"
+      },
+      {
+        "rok": 2021,
+        "pohlavi": "muži",
+        "podil": 20.1,
+        "t": "20,1 %"
+      },
+      {
+        "rok": 2022,
+        "pohlavi": "muži",
+        "podil": 20.0,
+        "t": "20,0 %"
+      },
+      {
+        "rok": 2023,
+        "pohlavi": "muži",
+        "podil": 19.8,
+        "t": "19,8 %"
+      },
+      {
+        "rok": 2024,
+        "pohlavi": "muži",
+        "podil": 20.1,
+        "t": "20,1 %"
+      },
+      {
+        "rok": 2025,
+        "pohlavi": "muži",
+        "podil": 20.6,
+        "t": "20,6 %"
+      },
+      {
+        "rok": 1993,
+        "pohlavi": "ženy",
+        "podil": 5.7,
+        "t": "5,7 %"
+      },
+      {
+        "rok": 1994,
+        "pohlavi": "ženy",
+        "podil": 5.4,
+        "t": "5,4 %"
+      },
+      {
+        "rok": 1995,
+        "pohlavi": "ženy",
+        "podil": 5.8,
+        "t": "5,8 %"
+      },
+      {
+        "rok": 1996,
+        "pohlavi": "ženy",
+        "podil": 5.7,
+        "t": "5,7 %"
+      },
+      {
+        "rok": 1997,
+        "pohlavi": "ženy",
+        "podil": 5.8,
+        "t": "5,8 %"
+      },
+      {
+        "rok": 1998,
+        "pohlavi": "ženy",
+        "podil": 6.4,
+        "t": "6,4 %"
+      },
+      {
+        "rok": 1999,
+        "pohlavi": "ženy",
+        "podil": 7.0,
+        "t": "7,0 %"
+      },
+      {
+        "rok": 2000,
+        "pohlavi": "ženy",
+        "podil": 7.3,
+        "t": "7,3 %"
+      },
+      {
+        "rok": 2001,
+        "pohlavi": "ženy",
+        "podil": 7.4,
+        "t": "7,4 %"
+      },
+      {
+        "rok": 2002,
+        "pohlavi": "ženy",
+        "podil": 7.6,
+        "t": "7,6 %"
+      },
+      {
+        "rok": 2003,
+        "pohlavi": "ženy",
+        "podil": 7.9,
+        "t": "7,9 %"
+      },
+      {
+        "rok": 2004,
+        "pohlavi": "ženy",
+        "podil": 8.2,
+        "t": "8,2 %"
+      },
+      {
+        "rok": 2005,
+        "pohlavi": "ženy",
+        "podil": 8.8,
+        "t": "8,8 %"
+      },
+      {
+        "rok": 2006,
+        "pohlavi": "ženy",
+        "podil": 9.3,
+        "t": "9,3 %"
+      },
+      {
+        "rok": 2007,
+        "pohlavi": "ženy",
+        "podil": 9.6,
+        "t": "9,6 %"
+      },
+      {
+        "rok": 2008,
+        "pohlavi": "ženy",
+        "podil": 10.6,
+        "t": "10,6 %"
+      },
+      {
+        "rok": 2009,
+        "pohlavi": "ženy",
+        "podil": 11.6,
+        "t": "11,6 %"
+      },
+      {
+        "rok": 2010,
+        "pohlavi": "ženy",
+        "podil": 12.7,
+        "t": "12,7 %"
+      },
+      {
+        "rok": 2011,
+        "pohlavi": "ženy",
+        "podil": 13.9,
+        "t": "13,9 %"
+      },
+      {
+        "rok": 2012,
+        "pohlavi": "ženy",
+        "podil": 15.2,
+        "t": "15,2 %"
+      },
+      {
+        "rok": 2013,
+        "pohlavi": "ženy",
+        "podil": 16.2,
+        "t": "16,2 %"
+      },
+      {
+        "rok": 2014,
+        "pohlavi": "ženy",
+        "podil": 16.9,
+        "t": "16,9 %"
+      },
+      {
+        "rok": 2015,
+        "pohlavi": "ženy",
+        "podil": 17.8,
+        "t": "17,8 %"
+      },
+      {
+        "rok": 2016,
+        "pohlavi": "ženy",
+        "podil": 18.4,
+        "t": "18,4 %"
+      },
+      {
+        "rok": 2017,
+        "pohlavi": "ženy",
+        "podil": 19.1,
+        "t": "19,1 %"
+      },
+      {
+        "rok": 2018,
+        "pohlavi": "ženy",
+        "podil": 19.6,
+        "t": "19,6 %"
+      },
+      {
+        "rok": 2019,
+        "pohlavi": "ženy",
+        "podil": 19.5,
+        "t": "19,5 %"
+      },
+      {
+        "rok": 2020,
+        "pohlavi": "ženy",
+        "podil": 20.2,
+        "t": "20,2 %"
+      },
+      {
+        "rok": 2021,
+        "pohlavi": "ženy",
+        "podil": 21.7,
+        "t": "21,7 %"
+      },
+      {
+        "rok": 2022,
+        "pohlavi": "ženy",
+        "podil": 21.5,
+        "t": "21,5 %"
+      },
+      {
+        "rok": 2023,
+        "pohlavi": "ženy",
+        "podil": 21.8,
+        "t": "21,8 %"
+      },
+      {
+        "rok": 2024,
+        "pohlavi": "ženy",
+        "podil": 22.4,
+        "t": "22,4 %"
+      },
+      {
+        "rok": 2025,
+        "pohlavi": "ženy",
+        "podil": 23.5,
+        "t": "23,5 %"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "opacity": 0.5
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 2017
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1993,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1993,
+              2000,
+              2010,
+              2017,
+              2025
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1993,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1993,
+              2000,
+              2010,
+              2017,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "podil",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              27
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "pohlavi",
+            "title": "Pohlaví"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Podíl"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 1993"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 2,
+        "dy": -10,
+        "fontSize": 11,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1993,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1993,
+              2000,
+              2010,
+              2017,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "podil",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              27
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 2025"
+        },
+        {
+          "calculate": "datum.pohlavi + '  ' + datum.t",
+          "as": "l"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -2,
+        "fontSize": 12,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1993,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1993,
+              2000,
+              2010,
+              2017,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "podil",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              27
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          }
+        },
+        "text": {
+          "field": "l"
+        },
+        "yOffset": {
+          "condition": {
+            "test": "datum.pohlavi == 'ženy'",
+            "value": -18
+          },
+          "value": 30
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 01.04](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026) (Výběrové šetření pracovních sil)"
+}

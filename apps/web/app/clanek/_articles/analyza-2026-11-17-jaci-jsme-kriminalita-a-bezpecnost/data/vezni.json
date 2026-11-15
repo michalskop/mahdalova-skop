@@ -1,0 +1,476 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Po amnestii v roce 1990 vězňů ubylo skoro o dvě třetiny, za devět let jich bylo víc než {v roce 1989|#6267a3}",
+    "subtitle": "Vězni (obvinění ve vazbě a odsouzení) na 100 000 obyvatel k 31. prosinci, 1989–2025; od roku 2010 včetně chovanců v zabezpečovací detenci"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1989,
+        "n": 215.8,
+        "t": "22 365 vězňů",
+        "t2": "216 na 100 000 obyv."
+      },
+      {
+        "rok": 1990,
+        "n": 79.4,
+        "t": "8 231 vězňů",
+        "t2": "79 na 100 000 obyv."
+      },
+      {
+        "rok": 1991,
+        "n": 123.4,
+        "t": "12 730 vězňů",
+        "t2": "123 na 100 000 obyv."
+      },
+      {
+        "rok": 1992,
+        "n": 135.3,
+        "t": "13 967 vězňů",
+        "t2": "135 na 100 000 obyv."
+      },
+      {
+        "rok": 1993,
+        "n": 160.3,
+        "t": "16 567 vězňů",
+        "t2": "160 na 100 000 obyv."
+      },
+      {
+        "rok": 1994,
+        "n": 181.5,
+        "t": "18 753 vězňů",
+        "t2": "181 na 100 000 obyv."
+      },
+      {
+        "rok": 1995,
+        "n": 189.0,
+        "t": "19 508 vězňů",
+        "t2": "189 na 100 000 obyv."
+      },
+      {
+        "rok": 1996,
+        "n": 202.3,
+        "t": "20 860 vězňů",
+        "t2": "202 na 100 000 obyv."
+      },
+      {
+        "rok": 1997,
+        "n": 209.3,
+        "t": "21 560 vězňů",
+        "t2": "209 na 100 000 obyv."
+      },
+      {
+        "rok": 1998,
+        "n": 214.5,
+        "t": "22 067 vězňů",
+        "t2": "214 na 100 000 obyv."
+      },
+      {
+        "rok": 1999,
+        "n": 224.4,
+        "t": "23 060 vězňů",
+        "t2": "224 na 100 000 obyv."
+      },
+      {
+        "rok": 2000,
+        "n": 209.8,
+        "t": "21 538 vězňů",
+        "t2": "210 na 100 000 obyv."
+      },
+      {
+        "rok": 2001,
+        "n": 189.3,
+        "t": "19 320 vězňů",
+        "t2": "189 na 100 000 obyv."
+      },
+      {
+        "rok": 2002,
+        "n": 158.9,
+        "t": "16 213 vězňů",
+        "t2": "159 na 100 000 obyv."
+      },
+      {
+        "rok": 2003,
+        "n": 169.2,
+        "t": "17 277 vězňů",
+        "t2": "169 na 100 000 obyv."
+      },
+      {
+        "rok": 2004,
+        "n": 179.5,
+        "t": "18 343 vězňů",
+        "t2": "179 na 100 000 obyv."
+      },
+      {
+        "rok": 2005,
+        "n": 184.7,
+        "t": "18 937 vězňů",
+        "t2": "185 na 100 000 obyv."
+      },
+      {
+        "rok": 2006,
+        "n": 180.6,
+        "t": "18 578 vězňů",
+        "t2": "181 na 100 000 obyv."
+      },
+      {
+        "rok": 2007,
+        "n": 182.1,
+        "t": "18 901 vězňů",
+        "t2": "182 na 100 000 obyv."
+      },
+      {
+        "rok": 2008,
+        "n": 195.9,
+        "t": "20 502 vězňů",
+        "t2": "196 na 100 000 obyv."
+      },
+      {
+        "rok": 2009,
+        "n": 206.9,
+        "t": "21 734 vězňů",
+        "t2": "207 na 100 000 obyv."
+      },
+      {
+        "rok": 2010,
+        "n": 207.9,
+        "t": "21 900 vězňů",
+        "t2": "208 na 100 000 obyv."
+      },
+      {
+        "rok": 2011,
+        "n": 220.6,
+        "t": "23 170 vězňů",
+        "t2": "221 na 100 000 obyv."
+      },
+      {
+        "rok": 2012,
+        "n": 215.3,
+        "t": "22 644 vězňů",
+        "t2": "215 na 100 000 obyv."
+      },
+      {
+        "rok": 2013,
+        "n": 158.3,
+        "t": "16 645 vězňů",
+        "t2": "158 na 100 000 obyv."
+      },
+      {
+        "rok": 2014,
+        "n": 177.0,
+        "t": "18 658 vězňů",
+        "t2": "177 na 100 000 obyv."
+      },
+      {
+        "rok": 2015,
+        "n": 197.7,
+        "t": "20 866 vězňů",
+        "t2": "198 na 100 000 obyv."
+      },
+      {
+        "rok": 2016,
+        "n": 212.5,
+        "t": "22 481 vězňů",
+        "t2": "213 na 100 000 obyv."
+      },
+      {
+        "rok": 2017,
+        "n": 208.8,
+        "t": "22 159 vězňů",
+        "t2": "209 na 100 000 obyv."
+      },
+      {
+        "rok": 2018,
+        "n": 202.6,
+        "t": "21 577 vězňů",
+        "t2": "203 na 100 000 obyv."
+      },
+      {
+        "rok": 2019,
+        "n": 196.8,
+        "t": "21 048 vězňů",
+        "t2": "197 na 100 000 obyv."
+      },
+      {
+        "rok": 2020,
+        "n": 180.2,
+        "t": "19 286 vězňů",
+        "t2": "180 na 100 000 obyv."
+      },
+      {
+        "rok": 2021,
+        "n": 178.3,
+        "t": "18 748 vězňů",
+        "t2": "178 na 100 000 obyv."
+      },
+      {
+        "rok": 2022,
+        "n": 176.0,
+        "t": "19 052 vězňů",
+        "t2": "176 na 100 000 obyv."
+      },
+      {
+        "rok": 2023,
+        "n": 179.5,
+        "t": "19 569 vězňů",
+        "t2": "180 na 100 000 obyv."
+      },
+      {
+        "rok": 2024,
+        "n": 178.1,
+        "t": "19 430 vězňů",
+        "t2": "178 na 100 000 obyv."
+      },
+      {
+        "rok": 2025,
+        "n": 177.3,
+        "t": "19 359 vězňů",
+        "t2": "177 na 100 000 obyv."
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#101432",
+        "strokeWidth": 2.2,
+        "point": false
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "format": "d",
+            "grid": false,
+            "values": [
+              1989,
+              1999,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              270
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "values": [
+              0,
+              50,
+              100,
+              150,
+              200,
+              250
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Vězni"
+          },
+          {
+            "field": "t2",
+            "title": "Na počet obyvatel"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 70,
+        "opacity": 1
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "n": 215.8,
+            "l": "1989: 216",
+            "c": "t",
+            "al": "left",
+            "dx": -6,
+            "dy": -12
+          },
+          {
+            "rok": 1990,
+            "n": 79.4,
+            "l": "1990: 79",
+            "c": "v",
+            "al": "left",
+            "dx": 8,
+            "dy": 10
+          },
+          {
+            "rok": 1999,
+            "n": 224.4,
+            "l": "1999: 224",
+            "c": "v",
+            "al": "center",
+            "dx": 0,
+            "dy": -12
+          },
+          {
+            "rok": 2025,
+            "n": 177.3,
+            "l": "2025: 177",
+            "c": "d",
+            "al": "right",
+            "dx": 4,
+            "dy": -12
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "c",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "t",
+              "v",
+              "d"
+            ],
+            "range": [
+              "#6267a3",
+              "#101432",
+              "#de1743"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "align": {
+          "expr": "datum.al"
+        },
+        "dx": {
+          "expr": "datum.dx"
+        },
+        "dy": {
+          "expr": "datum.dy"
+        }
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "n": 215.8,
+            "l": "1989: 216",
+            "c": "t",
+            "al": "left",
+            "dx": -6,
+            "dy": -12
+          },
+          {
+            "rok": 1990,
+            "n": 79.4,
+            "l": "1990: 79",
+            "c": "v",
+            "al": "left",
+            "dx": 8,
+            "dy": 10
+          },
+          {
+            "rok": 1999,
+            "n": 224.4,
+            "l": "1999: 224",
+            "c": "v",
+            "al": "center",
+            "dx": 0,
+            "dy": -12
+          },
+          {
+            "rok": 2025,
+            "n": 177.3,
+            "l": "2025: 177",
+            "c": "d",
+            "al": "right",
+            "dx": 4,
+            "dy": -12
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "l"
+        },
+        "color": {
+          "field": "c",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "t",
+              "v",
+              "d"
+            ],
+            "range": [
+              "#6267a3",
+              "#101432",
+              "#de1743"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "_source": "Vězeňská služba ČR podle ČSÚ, [Česko od roku 1989 v číslech, Tab. 14.02](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026)",
+  "height": 240
+}

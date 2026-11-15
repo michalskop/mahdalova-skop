@@ -1,0 +1,331 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Rozdíl mezi mzdami {žen|#f76800} a {mužů|#06677d} se od roku 1988 zmenšil o víc než třetinu",
+  "subtitle": "Průměrná hrubá měsíční mzda a průměrný starobní důchod žen a mužů; délka pruhu: muži = 100 %. Důchody bez souběhu s vdovským, řada začíná rokem 1996. Šetření mezd 1988 a 2025 mají jinou metodiku"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "ukazatel": "Průměrná hrubá mzda 1988",
+    "pohlavi": "muži",
+    "y": 0.6000000000000001,
+    "y2": 1.5,
+    "yc": 1.05,
+    "x": 100.0,
+    "uvnitr": "muži 3 968 Kčs",
+    "ven": "",
+    "t_castka": "3 968 Kčs",
+    "t_pomer": "100 %"
+   },
+   {
+    "ukazatel": "Průměrná hrubá mzda 1988",
+    "pohlavi": "ženy",
+    "y": 1.6500000000000001,
+    "y2": 2.5500000000000003,
+    "yc": 2.1,
+    "x": 70.6,
+    "uvnitr": "ženy 2 801 Kčs",
+    "ven": "70,6 %",
+    "t_castka": "2 801 Kčs",
+    "t_pomer": "70,6 % mužů"
+   },
+   {
+    "ukazatel": "Průměrná hrubá mzda 2025",
+    "pohlavi": "muži",
+    "y": 3.8999999999999995,
+    "y2": 4.8,
+    "yc": 4.35,
+    "x": 100.0,
+    "uvnitr": "muži 57 142 Kč",
+    "ven": "",
+    "t_castka": "57 142 Kč",
+    "t_pomer": "100 %"
+   },
+   {
+    "ukazatel": "Průměrná hrubá mzda 2025",
+    "pohlavi": "ženy",
+    "y": 4.95,
+    "y2": 5.8500000000000005,
+    "yc": 5.4,
+    "x": 81.5,
+    "uvnitr": "ženy 46 545 Kč",
+    "ven": "81,5 %",
+    "t_castka": "46 545 Kč",
+    "t_pomer": "81,5 % mužů"
+   },
+   {
+    "ukazatel": "Průměrný starobní důchod 1996",
+    "pohlavi": "muži",
+    "y": 7.199999999999999,
+    "y2": 8.1,
+    "yc": 7.6499999999999995,
+    "x": 100.0,
+    "uvnitr": "muži 5 099 Kč",
+    "ven": "",
+    "t_castka": "5 099 Kč",
+    "t_pomer": "100 %"
+   },
+   {
+    "ukazatel": "Průměrný starobní důchod 1996",
+    "pohlavi": "ženy",
+    "y": 8.25,
+    "y2": 9.149999999999999,
+    "yc": 8.7,
+    "x": 81.9,
+    "uvnitr": "ženy 4 178 Kč",
+    "ven": "81,9 %",
+    "t_castka": "4 178 Kč",
+    "t_pomer": "81,9 % mužů"
+   },
+   {
+    "ukazatel": "Průměrný starobní důchod 2025",
+    "pohlavi": "muži",
+    "y": 10.5,
+    "y2": 11.399999999999999,
+    "yc": 10.95,
+    "x": 100.0,
+    "uvnitr": "muži 22 459 Kč",
+    "ven": "",
+    "t_castka": "22 459 Kč",
+    "t_pomer": "100 %"
+   },
+   {
+    "ukazatel": "Průměrný starobní důchod 2025",
+    "pohlavi": "ženy",
+    "y": 11.549999999999999,
+    "y2": 12.449999999999998,
+    "yc": 11.999999999999998,
+    "x": 88.9,
+    "uvnitr": "ženy 19 968 Kč",
+    "ven": "88,9 %",
+    "t_castka": "19 968 Kč",
+    "t_pomer": "88,9 % mužů"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "rect",
+    "cornerRadiusEnd": 2
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       118
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "x2": {
+     "datum": 0
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.4,
+       12.799999999999999
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "y2": {
+     "field": "y2"
+    },
+    "color": {
+     "field": "pohlavi",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "muži",
+       "ženy"
+      ],
+      "range": [
+       "#06677d",
+       "#f76800"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "pohlavi",
+      "title": "Pohlaví"
+     },
+     {
+      "field": "t_castka",
+      "title": "Částka"
+     },
+     {
+      "field": "t_pomer",
+      "title": "Poměr"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 7,
+    "fontSize": 12,
+    "fontWeight": 700,
+    "color": "#ffffff"
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       118
+      ]
+     },
+     "axis": null,
+     "datum": 0
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.4,
+       12.799999999999999
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "yc"
+    },
+    "text": {
+     "field": "uvnitr"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "dx": 6,
+    "fontSize": 12,
+    "fontWeight": 700,
+    "color": "#f76800"
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       118
+      ]
+     },
+     "axis": null,
+     "field": "x"
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.4,
+       12.799999999999999
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "yc"
+    },
+    "text": {
+     "field": "ven"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "y": 0.2,
+      "text": "Průměrná hrubá mzda 1988"
+     },
+     {
+      "y": 3.5,
+      "text": "Průměrná hrubá mzda 2025"
+     },
+     {
+      "y": 6.8,
+      "text": "Průměrný starobní důchod 1996"
+     },
+     {
+      "y": 10.099999999999998,
+      "text": "Průměrný starobní důchod 2025"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 12.5,
+    "fontWeight": 700,
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       118
+      ]
+     },
+     "axis": null,
+     "datum": 0
+    },
+    "y": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.4,
+       12.799999999999999
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null,
+     "field": "y"
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ: [mzdy 1988](https://csu.gov.cz/docs/107508/4cbf5cdd-7e7d-bfa3-75e5-5afb33b76161/3111rr01t.pdf?version=1.0), [mzdy 2025](https://csu.gov.cz/aktualni-produkt/41267), [důchody](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026)",
+ "height": 290
+}

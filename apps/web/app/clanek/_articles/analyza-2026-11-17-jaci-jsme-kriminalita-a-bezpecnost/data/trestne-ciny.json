@@ -1,0 +1,601 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Policie {dnes|#de1743} registruje o 60 % méně trestných činů než v roce 1999, ale víc než v {roce 1989|#6267a3}",
+    "subtitle": "Trestné činy zjištěné policií v Česku za rok, 1973–2025; do roku 1989 je registrovala Veřejná bezpečnost podle tehdejšího trestního zákona"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1973,
+        "tc": 109355,
+        "t": "109 355 trestných činů",
+        "ob": "85,0 %"
+      },
+      {
+        "rok": 1974,
+        "tc": 109573,
+        "t": "109 573 trestných činů",
+        "ob": "84,5 %"
+      },
+      {
+        "rok": 1975,
+        "tc": 110957,
+        "t": "110 957 trestných činů",
+        "ob": "87,2 %"
+      },
+      {
+        "rok": 1976,
+        "tc": 106602,
+        "t": "106 602 trestných činů",
+        "ob": "87,9 %"
+      },
+      {
+        "rok": 1977,
+        "tc": 103083,
+        "t": "103 083 trestných činů",
+        "ob": "87,3 %"
+      },
+      {
+        "rok": 1978,
+        "tc": 103251,
+        "t": "103 251 trestných činů",
+        "ob": "87,0 %"
+      },
+      {
+        "rok": 1979,
+        "tc": 98091,
+        "t": "98 091 trestných činů",
+        "ob": "85,5 %"
+      },
+      {
+        "rok": 1980,
+        "tc": 103219,
+        "t": "103 219 trestných činů",
+        "ob": "84,0 %"
+      },
+      {
+        "rok": 1981,
+        "tc": 110312,
+        "t": "110 312 trestných činů",
+        "ob": "82,4 %"
+      },
+      {
+        "rok": 1982,
+        "tc": 120444,
+        "t": "120 444 trestných činů",
+        "ob": "81,2 %"
+      },
+      {
+        "rok": 1983,
+        "tc": 117001,
+        "t": "117 001 trestných činů",
+        "ob": "82,8 %"
+      },
+      {
+        "rok": 1984,
+        "tc": 120918,
+        "t": "120 918 trestných činů",
+        "ob": "83,2 %"
+      },
+      {
+        "rok": 1985,
+        "tc": 121272,
+        "t": "121 272 trestných činů",
+        "ob": "83,0 %"
+      },
+      {
+        "rok": 1986,
+        "tc": 122122,
+        "t": "122 122 trestných činů",
+        "ob": "82,7 %"
+      },
+      {
+        "rok": 1987,
+        "tc": 120260,
+        "t": "120 260 trestných činů",
+        "ob": "82,3 %"
+      },
+      {
+        "rok": 1988,
+        "tc": 119675,
+        "t": "119 675 trestných činů",
+        "ob": "81,1 %"
+      },
+      {
+        "rok": 1989,
+        "tc": 120768,
+        "t": "120 768 trestných činů",
+        "ob": "77,5 %"
+      },
+      {
+        "rok": 1990,
+        "tc": 216852,
+        "t": "216 852 trestných činů",
+        "ob": "38,4 %"
+      },
+      {
+        "rok": 1991,
+        "tc": 282998,
+        "t": "282 998 trestných činů",
+        "ob": "33,2 %"
+      },
+      {
+        "rok": 1992,
+        "tc": 345140,
+        "t": "345 140 trestných činů",
+        "ob": "31,4 %"
+      },
+      {
+        "rok": 1993,
+        "tc": 398505,
+        "t": "398 505 trestných činů",
+        "ob": "31,7 %"
+      },
+      {
+        "rok": 1994,
+        "tc": 372427,
+        "t": "372 427 trestných činů",
+        "ob": "36,8 %"
+      },
+      {
+        "rok": 1995,
+        "tc": 375630,
+        "t": "375 630 trestných činů",
+        "ob": "40,4 %"
+      },
+      {
+        "rok": 1996,
+        "tc": 394267,
+        "t": "394 267 trestných činů",
+        "ob": "41,3 %"
+      },
+      {
+        "rok": 1997,
+        "tc": 403654,
+        "t": "403 654 trestných činů",
+        "ob": "41,9 %"
+      },
+      {
+        "rok": 1998,
+        "tc": 425930,
+        "t": "425 930 trestných činů",
+        "ob": "43,5 %"
+      },
+      {
+        "rok": 1999,
+        "tc": 426626,
+        "t": "426 626 trestných činů",
+        "ob": "45,3 %"
+      },
+      {
+        "rok": 2000,
+        "tc": 391469,
+        "t": "391 469 trestných činů",
+        "ob": "44,0 %"
+      },
+      {
+        "rok": 2001,
+        "tc": 358577,
+        "t": "358 577 trestných činů",
+        "ob": "46,5 %"
+      },
+      {
+        "rok": 2002,
+        "tc": 372341,
+        "t": "372 341 trestných činů",
+        "ob": "40,7 %"
+      },
+      {
+        "rok": 2003,
+        "tc": 357740,
+        "t": "357 740 trestných činů",
+        "ob": "37,9 %"
+      },
+      {
+        "rok": 2004,
+        "tc": 351629,
+        "t": "351 629 trestných činů",
+        "ob": "38,2 %"
+      },
+      {
+        "rok": 2005,
+        "tc": 344060,
+        "t": "344 060 trestných činů",
+        "ob": "39,3 %"
+      },
+      {
+        "rok": 2006,
+        "tc": 336446,
+        "t": "336 446 trestných činů",
+        "ob": "39,7 %"
+      },
+      {
+        "rok": 2007,
+        "tc": 357391,
+        "t": "357 391 trestných činů",
+        "ob": "38,9 %"
+      },
+      {
+        "rok": 2008,
+        "tc": 343799,
+        "t": "343 799 trestných činů",
+        "ob": "37,2 %"
+      },
+      {
+        "rok": 2009,
+        "tc": 332829,
+        "t": "332 829 trestných činů",
+        "ob": "38,3 %"
+      },
+      {
+        "rok": 2010,
+        "tc": 313387,
+        "t": "313 387 trestných činů",
+        "ob": "37,5 %"
+      },
+      {
+        "rok": 2011,
+        "tc": 317177,
+        "t": "317 177 trestných činů",
+        "ob": "38,5 %"
+      },
+      {
+        "rok": 2012,
+        "tc": 304528,
+        "t": "304 528 trestných činů",
+        "ob": "39,5 %"
+      },
+      {
+        "rok": 2013,
+        "tc": 325366,
+        "t": "325 366 trestných činů",
+        "ob": "39,7 %"
+      },
+      {
+        "rok": 2014,
+        "tc": 288660,
+        "t": "288 660 trestných činů",
+        "ob": "43,7 %"
+      },
+      {
+        "rok": 2015,
+        "tc": 247628,
+        "t": "247 628 trestných činů",
+        "ob": "45,3 %"
+      },
+      {
+        "rok": 2016,
+        "tc": 218162,
+        "t": "218 162 trestných činů",
+        "ob": "46,6 %"
+      },
+      {
+        "rok": 2017,
+        "tc": 202303,
+        "t": "202 303 trestných činů",
+        "ob": "46,9 %"
+      },
+      {
+        "rok": 2018,
+        "tc": 192405,
+        "t": "192 405 trestných činů",
+        "ob": "48,2 %"
+      },
+      {
+        "rok": 2019,
+        "tc": 199221,
+        "t": "199 221 trestných činů",
+        "ob": "46,8 %"
+      },
+      {
+        "rok": 2020,
+        "tc": 165525,
+        "t": "165 525 trestných činů",
+        "ob": "47,0 %"
+      },
+      {
+        "rok": 2021,
+        "tc": 153233,
+        "t": "153 233 trestných činů",
+        "ob": "47,3 %"
+      },
+      {
+        "rok": 2022,
+        "tc": 181991,
+        "t": "181 991 trestných činů",
+        "ob": "44,8 %"
+      },
+      {
+        "rok": 2023,
+        "tc": 181417,
+        "t": "181 417 trestných činů",
+        "ob": "45,7 %"
+      },
+      {
+        "rok": 2024,
+        "tc": 173322,
+        "t": "173 322 trestných činů",
+        "ob": "–"
+      },
+      {
+        "rok": 2025,
+        "tc": 170051,
+        "t": "170 051 trestných činů",
+        "ob": "–"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "color": "#101432",
+        "opacity": 0.08,
+        "line": {
+          "color": "#101432",
+          "strokeWidth": 2.2
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1973,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "format": "d",
+            "grid": false,
+            "values": [
+              1973,
+              1989,
+              1999,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "tc",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              480000
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "values": [
+              0,
+              100000,
+              200000,
+              300000,
+              400000
+            ],
+            "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1000, 'd') + ' tis.'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Zjištěno"
+          },
+          {
+            "field": "ob",
+            "title": "Objasněnost"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "color": "#bcbcb0"
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 1989.9
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "dy": 0,
+        "fontSize": 10,
+        "color": "#333333"
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 1989.9,
+            "tc": 30000,
+            "l": "listopad 1989"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "tc",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "l"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 70,
+        "opacity": 1
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "tc": 120768,
+            "l": "1989: 120 768",
+            "c": "t"
+          },
+          {
+            "rok": 1999,
+            "tc": 426626,
+            "l": "1999: 426 626",
+            "c": "v"
+          },
+          {
+            "rok": 2025,
+            "tc": 170051,
+            "l": "2025: 170 051",
+            "c": "d"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "tc",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "c",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "t",
+              "v",
+              "d"
+            ],
+            "range": [
+              "#6267a3",
+              "#101432",
+              "#de1743"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "dy": {
+          "expr": "datum.c == 'v' ? -12 : 18"
+        },
+        "align": {
+          "expr": "datum.al"
+        },
+        "dx": {
+          "expr": "datum.c == 'd' ? 4 : 0"
+        }
+      },
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "tc": 120768,
+            "l": "1989: 120 768",
+            "c": "t"
+          },
+          {
+            "rok": 1999,
+            "tc": 426626,
+            "l": "1999: 426 626",
+            "c": "v"
+          },
+          {
+            "rok": 2025,
+            "tc": 170051,
+            "l": "2025: 170 051",
+            "c": "d"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "tc",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "l"
+        },
+        "color": {
+          "field": "c",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "t",
+              "v",
+              "d"
+            ],
+            "range": [
+              "#6267a3",
+              "#101432",
+              "#de1743"
+            ]
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.c == 'v' ? 'center' : (datum.c == 'd' ? 'right' : 'center')",
+          "as": "al"
+        }
+      ]
+    }
+  ],
+  "_source": "IKSP, [Trendy kriminality 2023, příloha 1](https://iksp.gov.cz/storage/169/Trendy-kriminality-v-Ceske-republice-v-roce-2023-z-pohledu-statistiky-Policie-CR_Diblikova.pdf); ČSÚ Tab. 14.01",
+  "height": 260
+}

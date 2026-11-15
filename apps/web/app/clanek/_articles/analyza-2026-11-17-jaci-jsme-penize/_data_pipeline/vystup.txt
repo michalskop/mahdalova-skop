@@ -1,0 +1,106 @@
+== MZDY A DŮCHODY (Tab. 13.07) ==
+Hrubá mzda 1989 3170.0 → 2025 48670.0 nominálně × 15.35
+Čistá mzda 1989 2504.0 → 2025 38288.0 nominálně × 15.29
+Průměrný starobní důchod 1989 1598.0 → 2025 21134.0 nominálně × 13.23
+Důchod / hrubá mzda % 1989 50.4 → 2025 43.4 | minimum 2018 38.7 | maximum 1991 57.4
+Důchod / čistá mzda % 1989 63.8 → 2025 55.2 | minimum 2021 50.3
+Důchod / hrubá mzda %, roky 2021–2025: {2021: 40.3, 2022: 42.9, 2023: 46.6, 2024: 45.1, 2025: 43.4}
+== REÁLNÁ MZDA (Tab. 13.08, 1989 = 100) ==
+   1990 mzda 94.5 | důchod 98.5 | meziročně mzda 94.5 důchod 98.5
+   1991 mzda 69.6 | důchod 75.5 | meziročně mzda 73.7 důchod 76.7
+   1992 mzda 76.8 | důchod 74.3 | meziročně mzda 110.3 důchod 98.4
+   1993 mzda 79.7 | důchod 70.5 | meziročně mzda 103.7 důchod 94.8
+   2000 mzda 110.0 | důchod 85.9 | meziročně mzda 102.2 důchod 99.5
+   2008 mzda 150.1 | důchod 100.4 | meziročně mzda 101.4 důchod 98.9
+   2019 mzda 192.7 | důchod 117.7 | meziročně mzda 105.0 důchod 105.4
+   2021 mzda 199.1 | důchod 126.8 | meziročně mzda 101.9 důchod 103.6
+   2022 mzda 180.4 | důchod 122.1 | meziročně mzda 90.6 důchod 96.3
+   2023 mzda 174.6 | důchod 125.2 | meziročně mzda 96.8 důchod 102.5
+   2024 mzda 181.8 | důchod 126.7 | meziročně mzda 104.1 důchod 101.2
+   2025 mzda 189.0 | důchod 126.1 | meziročně mzda 104.0 důchod 99.51134508198753
+Reálná mzda se poprvé vrátila na úroveň 1989 v roce 1996 101.5
+Pokles reálné mzdy 1991:  -26.3 %; 1990–1991 celkem -30.4 % proti 1989
+Pokles reálné mzdy 2022–2023 proti 2021: -12.3 %
+Reálná mzda 2025 vs. 2021: 0.949 | návrat na úroveň 2021: None
+Reálný důchod: minimum 1993 70.5 | poprvé zpět na úrovni 1989 v roce 2007 101.5
+Reálná mzda 2025 = násobek 1989: 1.89 | reálný důchod: 1.26
+== INFLACE (Tab. 03.04) ==
+Inflace 1991: 56.6 | 2022: 15.1 | 2023: 10.7 | 2024: 2.4 | 2025: 2.5
+Ceny 1989→2025 (součin ročních měr inflace 1990–2025): × 8.21
+Nejvyšší roční inflace: [(1991, 56.6), (1993, 20.8), (2022, 15.1), (1992, 11.1)]
+== MINIMÁLNÍ MZDA (Tab. 13.11) ==
+Zavedena 1991 (únor): 2000.0 Kč | 1991 vůči průměrné hrubé mzdě 52.7 %
+Nejnižší poměr k průměrné mzdě: 1998 22.7 % ( 2650.0 Kč vs. 11693.0 )
+Minimální mzda beze změny 2007–2013 (srpen): 8000.0 8000.0
+2025 : 20800.0 Kč = 42.7 % průměrné hrubé mzdy | 2026: 22400.0 Kč
+== ROZDĚLENÍ MEZD (Tab. 05.04) ==
+Decily a medián (interpolace v pásmech ISPV, metodika od 2010):
+  2010: součet 100.0 % | D1 11288 | medián 21474 | D9 39638 | D9/D1 3.51 | průměr 13.07 23864 | medián/průměr 0.900
+  2015: součet 100.0 % | D1 12155 | medián 23736 | D9 44971 | D9/D1 3.70 | průměr 13.07 26591 | medián/průměr 0.893
+  2020: součet 100.0 % | D1 18750 | medián 33295 | D9 60259 | D9/D1 3.21 | průměr 13.07 36176 | medián/průměr 0.920
+  2025: součet 100.0 % | D1 25834 | medián 44683 | D9 82932 | D9/D1 3.21 | průměr 13.07 48670 | medián/průměr 0.918
+2025 součet pásem 100.0 %
+2025 medián hrubé mzdy (interpolace v pásmu) 44683 Kč | průměr (Tab. 13.07) 48670.0
+2025 podíl zaměstnanců pod průměrnou mzdou (interpolace) 58.8 %
+2025 přesný součet pásem do 30000 Kč: 17.3 %
+2025 přesný součet pásem do 40000 Kč: 39.7 %
+2025 přesný součet pásem do 50000 Kč: 61.7 %
+2025 podíl nad 100 000 Kč 5.9 % | 2020: 2.3 %
+1996: do 10 000 Kč bralo 52.5 % zaměstnanců; průměrná hrubá mzda 1996 9676.0 (pozn.: od 2010 změna metodiky, roky před 2010 nejsou srovnatelné)
+== STRUKTURA VÝDAJŮ DOMÁCNOSTÍ (Tab. 03.01) ==
+Stará řada (čistá peněžní vydání, %) 1989 → 2015
+  potraviny, nápoje a veřejné stravování 33.9 → 23.5814416744712
+  průmyslové zboží 39.7 → 27.9935780225661
+  služby 17.8 → 33.6522023517519
+  platby a jiné výdaje 8.6 → 14.7727779512108
+Nová řada COICOP (spotřební výdaje, %) 2017 → 2025 : potraviny a nealko 19.6 → 18.5 | bydlení, energie 23.1 → 25.0 | rekreace a kultura 10.5 → 9.0 | stravování a ubytování 6.8 → 7.2
+== KOŠÍK Z JEDNÉ VÝPLATY (Tab. 03.04 × 13.07) ==
+  Kuře: cena 30,00 Kčs → 71,29 Kč | čistá mzda koupí 83 → 537 kg | poměr 6.435 | ikon 64
+  Vejce: cena 13,00 Kčs → 52,98 Kč | čistá mzda koupí 1 926 → 7 227 ks | poměr 3.752 | ikon 38
+  Máslo: cena 40,00 Kčs → 186,13 Kč | čistá mzda koupí 63 → 206 kg | poměr 3.286 | ikon 33
+  Pivo lahvové: cena 2,50 Kčs → 12,68 Kč | čistá mzda koupí 1 002 → 3 020 lahví | poměr 3.015 | ikon 30
+  Brambory: cena 1,60 Kčs → 13,49 Kč | čistá mzda koupí 1 565 → 2 838 kg | poměr 1.814 | ikon 18
+  Mléko: cena 2,00 Kčs → 24,60 Kč | čistá mzda koupí 1 252 → 1 556 l | poměr 1.243 | ikon 12
+  Chléb: cena 2,80 Kčs → 45,14 Kč | čistá mzda koupí 894 → 848 kg | poměr 0.948 | ikon 9
+  Jízdenka MHD: cena 1,00 Kčs → 16,87 Kč | čistá mzda koupí 2 504 → 2 270 jízdenek | poměr 0.906 | ikon 9
+  Kino: cena 7,33 Kčs → 176,10 Kč | čistá mzda koupí 342 → 217 vstupenek | poměr 0.636 | ikon 6
+  Nové podpatky (opravna obuvi): cena 8,00 Kčs → 224,81 Kč | čistá mzda koupí 313 → 170 oprav | poměr 0.544 | ikon 5
+  Pánský kadeřník: cena 7,00 Kčs → 380,70 Kč | čistá mzda koupí 358 → 101 stříhání | poměr 0.281 | ikon 3
+== GRAF reálná mzda: popisky ==
+   {'rok': 1991, 'v': 69.6, 'text': '1991: 70'}
+   {'rok': 2023, 'v': 174.6, 'text': '2023: 175'}
+   {'rok': 2025, 'v': 189.0, 'text': '189'}
+   {'rok': 2005, 'v': 136.5, 'text': 'mzda'}
+   {'rok': 2005, 'v': 96.5, 'text': 'starobní důchod'}
+   {'rok': 2025, 'v': 126.1, 'text': '126'}
+== GRAF důchod a minimální mzda / průměrná mzda ==
+   {'rok': 2005, 'v': 42.12821631051025, 'text': 'průměrný důchod'}
+   {'rok': 2009, 'v': 34.3, 'text': 'minimální mzda'}
+   {'rok': 1998, 'v': 22.7, 'text': '1998: 23 %'}
+   {'rok': 2025, 'v': 43.4, 'text': '43 %'}
+   {'rok': 2025, 'v': 42.7, 'text': '43 %'}
+== MZDY A DŮCHODY ŽEN A MUŽŮ ==
+Průměrná hrubá mzda 1988 (strukturální šetření, Tab. č. 5): muži 3968 Kčs | ženy 2801 Kčs | ženy/muži 70.6 % | rozdíl 29.4 %
+  1996: průměr ženy/muži 77.2 % | medián ženy/muži 78.9 %
+  1997: průměr ženy/muži 75.7 % | medián ženy/muži 78.7 %
+  1998: průměr ženy/muži 72.0 % | medián ženy/muži 74.9 %
+  1999: průměr ženy/muži 73.2 % | medián ženy/muži 78.2 %
+  2000: průměr ženy/muži 73.3 % | medián ženy/muži 78.2 %
+  2001: průměr ženy/muži 74.4 % | medián ženy/muži 80.2 %
+  2002: průměr ženy/muži 74.6 % | medián ženy/muži 81.1 %
+  2003: průměr ženy/muži 74.6 % | medián ženy/muži 81.4 %
+ISPV 2025 (tab. A1): {'pr_c': 52202, 'pr_m': 57142, 'pr_z': 46545, 'med_c': 44337, 'med_m': 47648, 'med_z': 41068}
+  2025 průměr ženy/muži 81.5 % | rozdíl 18.5 % | medián ženy/muži 86.2 %
+  rozdíl průměrů 1988 → 2025 se zmenšil o 36.9 % (z 29.4 na 18.5 p. b.)
+  specialisté 2025: medián muži 72950 ženy 55051 → 75.5 %
+  řídící pracovníci 2025: podíl žen 34.8 % | medián ženy/muži 79.0 %
+  placený čas 2025 h/měs.: muži 174.1 ženy 173.0
+Starobní důchod sólo (Tab. 13.05): 1996 muži 5099 ženy 4178 → 81.9 % | 2025 muži 22459 ženy 19968 → 88.9 %
+  poměr ženy/muži po letech 2019–2025: {2019: 83.0, 2020: 83.2, 2021: 83.1, 2022: 83.3, 2023: 88.4, 2024: 88.7, 2025: 88.9}
+  největší meziroční nárůst poměru: 2023 83.3 → 88.4 %
+Eurostat GPG CZ: první rok sdg_05_20 2002 22.1 % | první rok earn_gr_gpgr2 2007 23.6 % | 2024 18.5 % | EU27 11.1 %
+  pořadí EU 2024 : [('EE', 18.8), ('CZ', 18.5), ('AT', 17.6), ('HU', 16.9)] | Česko 2 z 27
+  graf: Průměrná hrubá mzda 1988 muži 3968 ženy 2801 → 70.6 %
+  graf: Průměrná hrubá mzda 2025 muži 57142 ženy 46545 → 81.5 %
+  graf: Průměrný starobní důchod 1996 muži 5099 ženy 4178 → 81.9 %
+  graf: Průměrný starobní důchod 2025 muži 22459 ženy 19968 → 88.9 %

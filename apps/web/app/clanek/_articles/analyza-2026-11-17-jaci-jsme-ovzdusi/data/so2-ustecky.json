@@ -1,0 +1,522 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "V Ústeckém kraji je ve vzduchu {skoro osmnáctkrát|#de1743} méně oxidu siřičitého než v roce 1989",
+  "subtitle": "Roční průměrná koncentrace oxidu siřičitého v µg/m³, průměr měřicích stanic v kraji; 1985–2025. Počet a umístění stanic se mění (1989: 35, 2025: 11)"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "rok": 1985,
+    "v": 86.3,
+    "t": "86,3 µg/m³ (průměr 26 stanic)"
+   },
+   {
+    "rok": 1986,
+    "v": 82.8,
+    "t": "82,8 µg/m³ (průměr 31 stanic)"
+   },
+   {
+    "rok": 1987,
+    "v": 91.3,
+    "t": "91,3 µg/m³ (průměr 27 stanic)"
+   },
+   {
+    "rok": 1988,
+    "v": 60.7,
+    "t": "60,7 µg/m³ (průměr 34 stanic)"
+   },
+   {
+    "rok": 1989,
+    "v": 69.5,
+    "t": "69,5 µg/m³ (průměr 35 stanic)"
+   },
+   {
+    "rok": 1990,
+    "v": 55.8,
+    "t": "55,8 µg/m³ (průměr 26 stanic)"
+   },
+   {
+    "rok": 1991,
+    "v": 70.1,
+    "t": "70,1 µg/m³ (průměr 35 stanic)"
+   },
+   {
+    "rok": 1992,
+    "v": 45.2,
+    "t": "45,2 µg/m³ (průměr 26 stanic)"
+   },
+   {
+    "rok": 1993,
+    "v": 47.4,
+    "t": "47,4 µg/m³ (průměr 21 stanic)"
+   },
+   {
+    "rok": 1994,
+    "v": 39.3,
+    "t": "39,3 µg/m³ (průměr 36 stanic)"
+   },
+   {
+    "rok": 1995,
+    "v": 36.8,
+    "t": "36,8 µg/m³ (průměr 34 stanic)"
+   },
+   {
+    "rok": 1996,
+    "v": 36.3,
+    "t": "36,3 µg/m³ (průměr 32 stanic)"
+   },
+   {
+    "rok": 1997,
+    "v": 28.3,
+    "t": "28,3 µg/m³ (průměr 37 stanic)"
+   },
+   {
+    "rok": 1998,
+    "v": 17.9,
+    "t": "17,9 µg/m³ (průměr 34 stanic)"
+   },
+   {
+    "rok": 1999,
+    "v": 10.8,
+    "t": "10,8 µg/m³ (průměr 36 stanic)"
+   },
+   {
+    "rok": 2000,
+    "v": 9.5,
+    "t": "9,5 µg/m³ (průměr 33 stanic)"
+   },
+   {
+    "rok": 2001,
+    "v": 8.4,
+    "t": "8,4 µg/m³ (průměr 34 stanic)"
+   },
+   {
+    "rok": 2002,
+    "v": 9.2,
+    "t": "9,2 µg/m³ (průměr 35 stanic)"
+   },
+   {
+    "rok": 2003,
+    "v": 10.7,
+    "t": "10,7 µg/m³ (průměr 18 stanic)"
+   },
+   {
+    "rok": 2004,
+    "v": 8.6,
+    "t": "8,6 µg/m³ (průměr 17 stanic)"
+   },
+   {
+    "rok": 2005,
+    "v": 10.1,
+    "t": "10,1 µg/m³ (průměr 14 stanic)"
+   },
+   {
+    "rok": 2006,
+    "v": 10.0,
+    "t": "10,0 µg/m³ (průměr 19 stanic)"
+   },
+   {
+    "rok": 2007,
+    "v": 8.2,
+    "t": "8,2 µg/m³ (průměr 18 stanic)"
+   },
+   {
+    "rok": 2008,
+    "v": 6.5,
+    "t": "6,5 µg/m³ (průměr 15 stanic)"
+   },
+   {
+    "rok": 2009,
+    "v": 7.1,
+    "t": "7,1 µg/m³ (průměr 16 stanic)"
+   },
+   {
+    "rok": 2010,
+    "v": 7.7,
+    "t": "7,7 µg/m³ (průměr 16 stanic)"
+   },
+   {
+    "rok": 2011,
+    "v": 8.8,
+    "t": "8,8 µg/m³ (průměr 14 stanic)"
+   },
+   {
+    "rok": 2012,
+    "v": 7.6,
+    "t": "7,6 µg/m³ (průměr 15 stanic)"
+   },
+   {
+    "rok": 2013,
+    "v": 7.8,
+    "t": "7,8 µg/m³ (průměr 11 stanic)"
+   },
+   {
+    "rok": 2014,
+    "v": 7.7,
+    "t": "7,7 µg/m³ (průměr 11 stanic)"
+   },
+   {
+    "rok": 2015,
+    "v": 7.1,
+    "t": "7,1 µg/m³ (průměr 9 stanic)"
+   },
+   {
+    "rok": 2016,
+    "v": 6.5,
+    "t": "6,5 µg/m³ (průměr 10 stanic)"
+   },
+   {
+    "rok": 2017,
+    "v": 6.7,
+    "t": "6,7 µg/m³ (průměr 10 stanic)"
+   },
+   {
+    "rok": 2018,
+    "v": 5.5,
+    "t": "5,5 µg/m³ (průměr 11 stanic)"
+   },
+   {
+    "rok": 2019,
+    "v": 5.8,
+    "t": "5,8 µg/m³ (průměr 11 stanic)"
+   },
+   {
+    "rok": 2020,
+    "v": 5.2,
+    "t": "5,2 µg/m³ (průměr 10 stanic)"
+   },
+   {
+    "rok": 2021,
+    "v": 4.7,
+    "t": "4,7 µg/m³ (průměr 10 stanic)"
+   },
+   {
+    "rok": 2022,
+    "v": 4.2,
+    "t": "4,2 µg/m³ (průměr 11 stanic)"
+   },
+   {
+    "rok": 2023,
+    "v": 3.9,
+    "t": "3,9 µg/m³ (průměr 11 stanic)"
+   },
+   {
+    "rok": 2024,
+    "v": 5.1,
+    "t": "5,1 µg/m³ (průměr 11 stanic)"
+   },
+   {
+    "rok": 2025,
+    "v": 3.9,
+    "t": "3,9 µg/m³ (průměr 11 stanic)"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "area",
+    "color": "#de1743",
+    "opacity": 0.12,
+    "line": {
+     "color": "#de1743",
+     "strokeWidth": 2.5
+    }
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1985,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1985,
+       1989,
+       2000,
+       2010,
+       2025
+      ]
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       25,
+       50,
+       75
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t",
+      "title": "Oxid siřičitý"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1989,
+      "v": 69.5,
+      "p": "1989: 69,5",
+      "barva": "#6267a3",
+      "al": "left"
+     },
+     {
+      "rok": 2025,
+      "v": 3.9,
+      "p": "2025: 3,9",
+      "barva": "#de1743",
+      "al": "right"
+     }
+    ]
+   },
+   "mark": {
+    "type": "circle",
+    "size": 70,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1985,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1985,
+       1989,
+       2000,
+       2010,
+       2025
+      ]
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       25,
+       50,
+       75
+      ]
+     }
+    },
+    "color": {
+     "field": "barva",
+     "type": "nominal",
+     "scale": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 1989,
+      "v": 69.5,
+      "p": "1989: 69,5",
+      "barva": "#6267a3",
+      "al": "left"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 8,
+    "dy": -10,
+    "fontSize": 12,
+    "fontWeight": 700,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1985,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1985,
+       1989,
+       2000,
+       2010,
+       2025
+      ]
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       25,
+       50,
+       75
+      ]
+     }
+    },
+    "text": {
+     "field": "p"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 3.9,
+      "p": "2025: 3,9",
+      "barva": "#de1743",
+      "al": "right"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dy": -14,
+    "fontSize": 12,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1985,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1985,
+       1989,
+       2000,
+       2010,
+       2025
+      ]
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       25,
+       50,
+       75
+      ]
+     }
+    },
+    "text": {
+     "field": "p"
+    }
+   }
+  }
+ ],
+ "_source": "ČHMÚ, [OpenISKO](https://opendata.chmi.cz/air_quality/historical/); výpočet DataTimes",
+ "height": 250
+}

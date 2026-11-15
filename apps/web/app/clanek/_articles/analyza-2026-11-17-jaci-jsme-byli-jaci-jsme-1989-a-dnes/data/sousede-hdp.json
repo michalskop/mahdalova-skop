@@ -1,0 +1,1871 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Česko|#de1743} dohání Rakousko, nejrychleji se ale blíží {Polsko|#6267a3}",
+    "subtitle": "HDP na obyvatele v paritě kupní síly v % Rakouska (Rakousko = 100 %), 1990–2025"
+  },
+  "width": "container",
+  "height": 300,
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "zeme": "Česko",
+        "rok": 1990,
+        "v": 66.2,
+        "t": "66 % Rakouska (1990)",
+        "hdp": "12 848 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1991,
+        "v": 57.3,
+        "t": "57 % Rakouska (1991)",
+        "hdp": "11 768 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1992,
+        "v": 56.4,
+        "t": "56 % Rakouska (1992)",
+        "hdp": "11 963 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1993,
+        "v": 56.6,
+        "t": "57 % Rakouska (1993)",
+        "hdp": "12 242 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1994,
+        "v": 57.0,
+        "t": "57 % Rakouska (1994)",
+        "hdp": "12 862 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1995,
+        "v": 59.1,
+        "t": "59 % Rakouska (1995)",
+        "hdp": "13 957 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1996,
+        "v": 60.5,
+        "t": "61 % Rakouska (1996)",
+        "hdp": "14 781 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1997,
+        "v": 58.9,
+        "t": "59 % Rakouska (1997)",
+        "hdp": "14 911 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1998,
+        "v": 56.8,
+        "t": "57 % Rakouska (1998)",
+        "hdp": "15 064 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 1999,
+        "v": 56.3,
+        "t": "56 % Rakouska (1999)",
+        "hdp": "15 494 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2000,
+        "v": 55.9,
+        "t": "56 % Rakouska (2000)",
+        "hdp": "16 332 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2001,
+        "v": 59.9,
+        "t": "60 % Rakouska (2001)",
+        "hdp": "17 709 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2002,
+        "v": 59.3,
+        "t": "59 % Rakouska (2002)",
+        "hdp": "18 344 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2003,
+        "v": 61.3,
+        "t": "61 % Rakouska (2003)",
+        "hdp": "19 604 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2004,
+        "v": 62.6,
+        "t": "63 % Rakouska (2004)",
+        "hdp": "20 988 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2005,
+        "v": 63.6,
+        "t": "64 % Rakouska (2005)",
+        "hdp": "22 115 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2006,
+        "v": 64.0,
+        "t": "64 % Rakouska (2006)",
+        "hdp": "23 914 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2007,
+        "v": 67.0,
+        "t": "67 % Rakouska (2007)",
+        "hdp": "26 268 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2008,
+        "v": 68.1,
+        "t": "68 % Rakouska (2008)",
+        "hdp": "27 938 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2009,
+        "v": 68.1,
+        "t": "68 % Rakouska (2009)",
+        "hdp": "27 713 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2010,
+        "v": 67.5,
+        "t": "67 % Rakouska (2010)",
+        "hdp": "28 154 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2011,
+        "v": 66.2,
+        "t": "66 % Rakouska (2011)",
+        "hdp": "29 237 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2012,
+        "v": 63.8,
+        "t": "64 % Rakouska (2012)",
+        "hdp": "29 466 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2013,
+        "v": 65.3,
+        "t": "65 % Rakouska (2013)",
+        "hdp": "31 013 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2014,
+        "v": 67.7,
+        "t": "68 % Rakouska (2014)",
+        "hdp": "32 743 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2015,
+        "v": 68.8,
+        "t": "69 % Rakouska (2015)",
+        "hdp": "34 093 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2016,
+        "v": 69.6,
+        "t": "70 % Rakouska (2016)",
+        "hdp": "36 445 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2017,
+        "v": 73.0,
+        "t": "73 % Rakouska (2017)",
+        "hdp": "39 346 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2018,
+        "v": 73.5,
+        "t": "74 % Rakouska (2018)",
+        "hdp": "41 638 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2019,
+        "v": 75.6,
+        "t": "76 % Rakouska (2019)",
+        "hdp": "45 614 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2020,
+        "v": 76.6,
+        "t": "77 % Rakouska (2020)",
+        "hdp": "44 839 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2021,
+        "v": 75.9,
+        "t": "76 % Rakouska (2021)",
+        "hdp": "47 796 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2022,
+        "v": 73.2,
+        "t": "73 % Rakouska (2022)",
+        "hdp": "52 947 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2023,
+        "v": 75.5,
+        "t": "75 % Rakouska (2023)",
+        "hdp": "56 062 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2024,
+        "v": 76.0,
+        "t": "76 % Rakouska (2024)",
+        "hdp": "57 625 $"
+      },
+      {
+        "zeme": "Česko",
+        "rok": 2025,
+        "v": 78.8,
+        "t": "79 % Rakouska (2025)",
+        "hdp": "60 487 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1990,
+        "v": 31.9,
+        "t": "32 % Rakouska (1990)",
+        "hdp": "6 185 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1991,
+        "v": 28.9,
+        "t": "29 % Rakouska (1991)",
+        "hdp": "5 925 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1992,
+        "v": 29.2,
+        "t": "29 % Rakouska (1992)",
+        "hdp": "6 193 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1993,
+        "v": 30.3,
+        "t": "30 % Rakouska (1993)",
+        "hdp": "6 560 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1994,
+        "v": 31.2,
+        "t": "31 % Rakouska (1994)",
+        "hdp": "7 040 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1995,
+        "v": 32.7,
+        "t": "33 % Rakouska (1995)",
+        "hdp": "7 715 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1996,
+        "v": 34.0,
+        "t": "34 % Rakouska (1996)",
+        "hdp": "8 310 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1997,
+        "v": 35.4,
+        "t": "35 % Rakouska (1997)",
+        "hdp": "8 967 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1998,
+        "v": 35.9,
+        "t": "36 % Rakouska (1998)",
+        "hdp": "9 521 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 1999,
+        "v": 36.7,
+        "t": "37 % Rakouska (1999)",
+        "hdp": "10 081 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2000,
+        "v": 36.7,
+        "t": "37 % Rakouska (2000)",
+        "hdp": "10 721 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2001,
+        "v": 37.8,
+        "t": "38 % Rakouska (2001)",
+        "hdp": "11 175 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2002,
+        "v": 38.3,
+        "t": "38 % Rakouska (2002)",
+        "hdp": "11 841 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2003,
+        "v": 38.6,
+        "t": "39 % Rakouska (2003)",
+        "hdp": "12 329 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2004,
+        "v": 40.0,
+        "t": "40 % Rakouska (2004)",
+        "hdp": "13 413 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2005,
+        "v": 40.1,
+        "t": "40 % Rakouska (2005)",
+        "hdp": "13 936 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2006,
+        "v": 40.7,
+        "t": "41 % Rakouska (2006)",
+        "hdp": "15 205 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2007,
+        "v": 43.0,
+        "t": "43 % Rakouska (2007)",
+        "hdp": "16 833 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2008,
+        "v": 44.8,
+        "t": "45 % Rakouska (2008)",
+        "hdp": "18 372 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2009,
+        "v": 47.4,
+        "t": "47 % Rakouska (2009)",
+        "hdp": "19 300 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2010,
+        "v": 50.3,
+        "t": "50 % Rakouska (2010)",
+        "hdp": "20 991 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2011,
+        "v": 51.6,
+        "t": "52 % Rakouska (2011)",
+        "hdp": "22 809 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2012,
+        "v": 51.4,
+        "t": "51 % Rakouska (2012)",
+        "hdp": "23 728 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2013,
+        "v": 51.4,
+        "t": "51 % Rakouska (2013)",
+        "hdp": "24 434 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2014,
+        "v": 52.7,
+        "t": "53 % Rakouska (2014)",
+        "hdp": "25 460 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2015,
+        "v": 54.5,
+        "t": "54 % Rakouska (2015)",
+        "hdp": "26 988 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2016,
+        "v": 54.1,
+        "t": "54 % Rakouska (2016)",
+        "hdp": "28 360 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2017,
+        "v": 56.0,
+        "t": "56 % Rakouska (2017)",
+        "hdp": "30 170 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2018,
+        "v": 57.1,
+        "t": "57 % Rakouska (2018)",
+        "hdp": "32 345 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2019,
+        "v": 59.5,
+        "t": "59 % Rakouska (2019)",
+        "hdp": "35 882 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2020,
+        "v": 63.4,
+        "t": "63 % Rakouska (2020)",
+        "hdp": "37 089 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2021,
+        "v": 65.2,
+        "t": "65 % Rakouska (2021)",
+        "hdp": "41 060 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2022,
+        "v": 64.7,
+        "t": "65 % Rakouska (2022)",
+        "hdp": "46 778 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2023,
+        "v": 65.3,
+        "t": "65 % Rakouska (2023)",
+        "hdp": "48 473 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2024,
+        "v": 67.7,
+        "t": "68 % Rakouska (2024)",
+        "hdp": "51 263 $"
+      },
+      {
+        "zeme": "Polsko",
+        "rok": 2025,
+        "v": 70.7,
+        "t": "71 % Rakouska (2025)",
+        "hdp": "54 262 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1990,
+        "v": 47.3,
+        "t": "47 % Rakouska (1990)",
+        "hdp": "9 169 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1991,
+        "v": 40.7,
+        "t": "41 % Rakouska (1991)",
+        "hdp": "8 352 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1992,
+        "v": 39.1,
+        "t": "39 % Rakouska (1992)",
+        "hdp": "8 284 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1993,
+        "v": 39.0,
+        "t": "39 % Rakouska (1993)",
+        "hdp": "8 441 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1994,
+        "v": 39.4,
+        "t": "39 % Rakouska (1994)",
+        "hdp": "8 888 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1995,
+        "v": 39.1,
+        "t": "39 % Rakouska (1995)",
+        "hdp": "9 222 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1996,
+        "v": 38.4,
+        "t": "38 % Rakouska (1996)",
+        "hdp": "9 388 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1997,
+        "v": 38.9,
+        "t": "39 % Rakouska (1997)",
+        "hdp": "9 846 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1998,
+        "v": 39.3,
+        "t": "39 % Rakouska (1998)",
+        "hdp": "10 415 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 1999,
+        "v": 39.6,
+        "t": "40 % Rakouska (1999)",
+        "hdp": "10 892 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2000,
+        "v": 40.6,
+        "t": "41 % Rakouska (2000)",
+        "hdp": "11 872 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2001,
+        "v": 44.7,
+        "t": "45 % Rakouska (2001)",
+        "hdp": "13 223 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2002,
+        "v": 47.0,
+        "t": "47 % Rakouska (2002)",
+        "hdp": "14 532 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2003,
+        "v": 48.4,
+        "t": "48 % Rakouska (2003)",
+        "hdp": "15 460 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2004,
+        "v": 48.5,
+        "t": "48 % Rakouska (2004)",
+        "hdp": "16 251 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2005,
+        "v": 49.1,
+        "t": "49 % Rakouska (2005)",
+        "hdp": "17 091 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2006,
+        "v": 49.1,
+        "t": "49 % Rakouska (2006)",
+        "hdp": "18 362 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2007,
+        "v": 48.7,
+        "t": "49 % Rakouska (2007)",
+        "hdp": "19 089 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2008,
+        "v": 50.5,
+        "t": "50 % Rakouska (2008)",
+        "hdp": "20 709 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2009,
+        "v": 50.9,
+        "t": "51 % Rakouska (2009)",
+        "hdp": "20 691 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2010,
+        "v": 52.0,
+        "t": "52 % Rakouska (2010)",
+        "hdp": "21 691 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2011,
+        "v": 52.1,
+        "t": "52 % Rakouska (2011)",
+        "hdp": "22 992 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2012,
+        "v": 50.3,
+        "t": "50 % Rakouska (2012)",
+        "hdp": "23 205 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2013,
+        "v": 51.8,
+        "t": "52 % Rakouska (2013)",
+        "hdp": "24 592 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2014,
+        "v": 53.3,
+        "t": "53 % Rakouska (2014)",
+        "hdp": "25 796 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2015,
+        "v": 54.4,
+        "t": "54 % Rakouska (2015)",
+        "hdp": "26 938 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2016,
+        "v": 53.8,
+        "t": "54 % Rakouska (2016)",
+        "hdp": "28 179 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2017,
+        "v": 55.2,
+        "t": "55 % Rakouska (2017)",
+        "hdp": "29 728 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2018,
+        "v": 57.0,
+        "t": "57 % Rakouska (2018)",
+        "hdp": "32 258 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2019,
+        "v": 59.0,
+        "t": "59 % Rakouska (2019)",
+        "hdp": "35 627 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2020,
+        "v": 60.8,
+        "t": "61 % Rakouska (2020)",
+        "hdp": "35 584 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2021,
+        "v": 61.8,
+        "t": "62 % Rakouska (2021)",
+        "hdp": "38 887 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2022,
+        "v": 61.2,
+        "t": "61 % Rakouska (2022)",
+        "hdp": "44 232 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2023,
+        "v": 62.5,
+        "t": "62 % Rakouska (2023)",
+        "hdp": "46 376 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2024,
+        "v": 64.1,
+        "t": "64 % Rakouska (2024)",
+        "hdp": "48 540 $"
+      },
+      {
+        "zeme": "Maďarsko",
+        "rok": 2025,
+        "v": 64.9,
+        "t": "65 % Rakouska (2025)",
+        "hdp": "49 838 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1990,
+        "v": 44.5,
+        "t": "45 % Rakouska (1990)",
+        "hdp": "8 638 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1991,
+        "v": 37.1,
+        "t": "37 % Rakouska (1991)",
+        "hdp": "7 623 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1992,
+        "v": 34.3,
+        "t": "34 % Rakouska (1992)",
+        "hdp": "7 270 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1993,
+        "v": 35.0,
+        "t": "35 % Rakouska (1993)",
+        "hdp": "7 569 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1994,
+        "v": 36.3,
+        "t": "36 % Rakouska (1994)",
+        "hdp": "8 178 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1995,
+        "v": 37.3,
+        "t": "37 % Rakouska (1995)",
+        "hdp": "8 812 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1996,
+        "v": 38.9,
+        "t": "39 % Rakouska (1996)",
+        "hdp": "9 500 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1997,
+        "v": 40.1,
+        "t": "40 % Rakouska (1997)",
+        "hdp": "10 137 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1998,
+        "v": 40.2,
+        "t": "40 % Rakouska (1998)",
+        "hdp": "10 666 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 1999,
+        "v": 39.0,
+        "t": "39 % Rakouska (1999)",
+        "hdp": "10 726 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2000,
+        "v": 38.9,
+        "t": "39 % Rakouska (2000)",
+        "hdp": "11 370 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2001,
+        "v": 41.8,
+        "t": "42 % Rakouska (2001)",
+        "hdp": "12 367 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2002,
+        "v": 42.9,
+        "t": "43 % Rakouska (2002)",
+        "hdp": "13 292 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2003,
+        "v": 44.1,
+        "t": "44 % Rakouska (2003)",
+        "hdp": "14 088 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2004,
+        "v": 45.2,
+        "t": "45 % Rakouska (2004)",
+        "hdp": "15 166 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2005,
+        "v": 47.6,
+        "t": "48 % Rakouska (2005)",
+        "hdp": "16 570 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2006,
+        "v": 50.6,
+        "t": "51 % Rakouska (2006)",
+        "hdp": "18 906 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2007,
+        "v": 54.2,
+        "t": "54 % Rakouska (2007)",
+        "hdp": "21 232 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2008,
+        "v": 57.8,
+        "t": "58 % Rakouska (2008)",
+        "hdp": "23 714 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2009,
+        "v": 56.7,
+        "t": "57 % Rakouska (2009)",
+        "hdp": "23 077 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2010,
+        "v": 60.8,
+        "t": "61 % Rakouska (2010)",
+        "hdp": "25 382 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2011,
+        "v": 59.3,
+        "t": "59 % Rakouska (2011)",
+        "hdp": "26 202 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2012,
+        "v": 58.5,
+        "t": "59 % Rakouska (2012)",
+        "hdp": "27 023 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2013,
+        "v": 59.1,
+        "t": "59 % Rakouska (2013)",
+        "hdp": "28 075 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2014,
+        "v": 60.2,
+        "t": "60 % Rakouska (2014)",
+        "hdp": "29 108 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2015,
+        "v": 60.8,
+        "t": "61 % Rakouska (2015)",
+        "hdp": "30 148 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2016,
+        "v": 57.0,
+        "t": "57 % Rakouska (2016)",
+        "hdp": "29 868 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2017,
+        "v": 56.1,
+        "t": "56 % Rakouska (2017)",
+        "hdp": "30 246 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2018,
+        "v": 55.6,
+        "t": "56 % Rakouska (2018)",
+        "hdp": "31 510 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2019,
+        "v": 56.3,
+        "t": "56 % Rakouska (2019)",
+        "hdp": "33 986 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2020,
+        "v": 60.4,
+        "t": "60 % Rakouska (2020)",
+        "hdp": "35 328 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2021,
+        "v": 60.9,
+        "t": "61 % Rakouska (2021)",
+        "hdp": "38 330 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2022,
+        "v": 57.5,
+        "t": "57 % Rakouska (2022)",
+        "hdp": "41 529 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2023,
+        "v": 61.8,
+        "t": "62 % Rakouska (2023)",
+        "hdp": "45 865 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2024,
+        "v": 63.1,
+        "t": "63 % Rakouska (2024)",
+        "hdp": "47 847 $"
+      },
+      {
+        "zeme": "Slovensko",
+        "rok": 2025,
+        "v": 64.2,
+        "t": "64 % Rakouska (2025)",
+        "hdp": "49 309 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1990,
+        "v": 100.4,
+        "t": "100 % Rakouska (1990)",
+        "hdp": "19 468 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1991,
+        "v": 102.3,
+        "t": "102 % Rakouska (1991)",
+        "hdp": "21 001 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1992,
+        "v": 102.5,
+        "t": "103 % Rakouska (1992)",
+        "hdp": "21 746 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1993,
+        "v": 101.2,
+        "t": "101 % Rakouska (1993)",
+        "hdp": "21 900 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1994,
+        "v": 101.4,
+        "t": "101 % Rakouska (1994)",
+        "hdp": "22 869 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1995,
+        "v": 100.1,
+        "t": "100 % Rakouska (1995)",
+        "hdp": "23 631 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1996,
+        "v": 98.9,
+        "t": "99 % Rakouska (1996)",
+        "hdp": "24 169 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1997,
+        "v": 97.4,
+        "t": "97 % Rakouska (1997)",
+        "hdp": "24 649 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1998,
+        "v": 95.9,
+        "t": "96 % Rakouska (1998)",
+        "hdp": "25 446 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 1999,
+        "v": 96.4,
+        "t": "96 % Rakouska (1999)",
+        "hdp": "26 518 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2000,
+        "v": 94.0,
+        "t": "94 % Rakouska (2000)",
+        "hdp": "27 474 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2001,
+        "v": 97.0,
+        "t": "97 % Rakouska (2001)",
+        "hdp": "28 674 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2002,
+        "v": 95.4,
+        "t": "95 % Rakouska (2002)",
+        "hdp": "29 514 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2003,
+        "v": 94.8,
+        "t": "95 % Rakouska (2003)",
+        "hdp": "30 301 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2004,
+        "v": 94.7,
+        "t": "95 % Rakouska (2004)",
+        "hdp": "31 753 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2005,
+        "v": 92.9,
+        "t": "93 % Rakouska (2005)",
+        "hdp": "32 314 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2006,
+        "v": 92.9,
+        "t": "93 % Rakouska (2006)",
+        "hdp": "34 741 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2007,
+        "v": 94.2,
+        "t": "94 % Rakouska (2007)",
+        "hdp": "36 914 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2008,
+        "v": 93.6,
+        "t": "94 % Rakouska (2008)",
+        "hdp": "38 438 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2009,
+        "v": 92.3,
+        "t": "92 % Rakouska (2009)",
+        "hdp": "37 560 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2010,
+        "v": 95.2,
+        "t": "95 % Rakouska (2010)",
+        "hdp": "39 714 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2011,
+        "v": 98.2,
+        "t": "98 % Rakouska (2011)",
+        "hdp": "43 384 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2012,
+        "v": 95.8,
+        "t": "96 % Rakouska (2012)",
+        "hdp": "44 212 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2013,
+        "v": 96.5,
+        "t": "97 % Rakouska (2013)",
+        "hdp": "45 876 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2014,
+        "v": 99.1,
+        "t": "99 % Rakouska (2014)",
+        "hdp": "47 928 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2015,
+        "v": 98.0,
+        "t": "98 % Rakouska (2015)",
+        "hdp": "48 567 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2016,
+        "v": 98.4,
+        "t": "98 % Rakouska (2016)",
+        "hdp": "51 555 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2017,
+        "v": 100.5,
+        "t": "101 % Rakouska (2017)",
+        "hdp": "54 143 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2018,
+        "v": 99.4,
+        "t": "99 % Rakouska (2018)",
+        "hdp": "56 321 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2019,
+        "v": 98.3,
+        "t": "98 % Rakouska (2019)",
+        "hdp": "59 311 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2020,
+        "v": 100.3,
+        "t": "100 % Rakouska (2020)",
+        "hdp": "58 705 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2021,
+        "v": 99.5,
+        "t": "99 % Rakouska (2021)",
+        "hdp": "62 631 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2022,
+        "v": 96.4,
+        "t": "96 % Rakouska (2022)",
+        "hdp": "69 670 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2023,
+        "v": 97.3,
+        "t": "97 % Rakouska (2023)",
+        "hdp": "72 262 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2024,
+        "v": 97.6,
+        "t": "98 % Rakouska (2024)",
+        "hdp": "73 957 $"
+      },
+      {
+        "zeme": "Německo",
+        "rok": 2025,
+        "v": 98.2,
+        "t": "98 % Rakouska (2025)",
+        "hdp": "75 407 $"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "strokeWidth": 1
+      },
+      "data": {
+        "values": [
+          {
+            "v": 100
+          }
+        ]
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              20,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -3,
+        "fontSize": 11,
+        "color": "#101432"
+      },
+      "data": {
+        "values": [
+          {
+            "v": 100,
+            "rok": 1990,
+            "t": "Rakousko = 100 %"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1990,
+              2039
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              20,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zeme != 'Česko'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1.8,
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1990,
+              2039
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              20,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Česko",
+              "Polsko",
+              "Maďarsko",
+              "Slovensko",
+              "Německo"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3",
+              "#6267a3",
+              "#6267a3",
+              "#bcbcb0"
+            ]
+          }
+        },
+        "detail": {
+          "field": "zeme"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zeme == 'Česko'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3.5,
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1990,
+              2039
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              20,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Česko",
+              "Polsko",
+              "Maďarsko",
+              "Slovensko",
+              "Německo"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3",
+              "#6267a3",
+              "#6267a3",
+              "#bcbcb0"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 60,
+        "opacity": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1990,
+              2039
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              20,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Česko",
+              "Polsko",
+              "Maďarsko",
+              "Slovensko",
+              "Německo"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3",
+              "#6267a3",
+              "#6267a3",
+              "#bcbcb0"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "zeme",
+            "title": "Země"
+          },
+          {
+            "field": "t",
+            "title": "HDP na obyvatele v PPP"
+          },
+          {
+            "field": "hdp",
+            "title": "Na obyvatele"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Česko",
+            "rok": 2025,
+            "v": 78.7825268336953,
+            "text": "Česko 79 %"
+          },
+          {
+            "zeme": "Polsko",
+            "rok": 2025,
+            "v": 70.67483865510138,
+            "text": "Polsko 71 %"
+          },
+          {
+            "zeme": "Maďarsko",
+            "rok": 2025,
+            "v": 67.41169089692572,
+            "text": "Maďarsko 65 %"
+          },
+          {
+            "zeme": "Slovensko",
+            "rok": 2025,
+            "v": 61.72282279939964,
+            "text": "Slovensko 64 %"
+          },
+          {
+            "zeme": "Německo",
+            "rok": 2025,
+            "v": 98.21451259815717,
+            "text": "Německo 98 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 11.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1990,
+              2039
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              20,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "text": {
+          "field": "text"
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Česko",
+              "Polsko",
+              "Maďarsko",
+              "Slovensko",
+              "Německo"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3",
+              "#6267a3",
+              "#6267a3",
+              "#bcbcb0"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "zeme": "Česko",
+            "rok": 1990,
+            "v": 66.24222117282926,
+            "text": "66 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontSize": 11.5,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1990,
+              2039
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1990,
+              2000,
+              2010,
+              2025
+            ]
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              20,
+              110
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              20,
+              40,
+              60,
+              80,
+              100
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "text": {
+          "field": "text"
+        },
+        "color": {
+          "field": "zeme",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Česko",
+              "Polsko",
+              "Maďarsko",
+              "Slovensko",
+              "Německo"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3",
+              "#6267a3",
+              "#6267a3",
+              "#bcbcb0"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "_source": "Světová banka, [World Development Indicators, NY.GDP.PCAP.PP.CD](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD); výpočet DataTimes"
+}

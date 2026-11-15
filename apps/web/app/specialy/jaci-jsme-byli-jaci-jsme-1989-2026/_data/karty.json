@@ -1,0 +1,977 @@
+{
+ "_popis": "Generuje karty.py z výstupů skriptů kapitol. Ručně neupravovat.",
+ "karty": [
+  {
+   "cislo": 1,
+   "kapitola": "prehled",
+   "kapitola_nazev": "Přehled",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/prehled/",
+   "nadpis": "Cizinců v Česku žije přes milion",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 35561.0,
+    "text": "35 561"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 1131197.0,
+    "text": "1 131 197"
+   },
+   "jednotka": "cizinců s trvalým nebo dlouhodobým pobytem",
+   "znak": "",
+   "popis": "cizinců s trvalým nebo dlouhodobým pobytem",
+   "kontext": "Skok v roce 2022 způsobili uprchlíci z Ukrajiny s dočasnou ochranou, ČSÚ je počítá mezi cizince s dlouhodobým pobytem.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/dvojice.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 2,
+   "kapitola": "prehled",
+   "kapitola_nazev": "Přehled",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/prehled/",
+   "nadpis": "Pračka stojí čtvrtinu výplaty místo dvou a půl",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 2.38,
+    "text": "2,38"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 0.24,
+    "text": "0,24"
+   },
+   "jednotka": "čisté měsíční mzdy za automatickou pračku",
+   "znak": "",
+   "popis": "čisté měsíční mzdy za automatickou pračku",
+   "kontext": "Počítáme z průměrných cen, které ČSÚ sleduje od roku 1989. Dnešní pračka je ale jiný výrobek než tehdejší.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/dvojice.json"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 3,
+   "kapitola": "prehled",
+   "kapitola_nazev": "Přehled",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/prehled/",
+   "nadpis": "Škodovka stojí třetinu výplat co v roce 1989",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 33.79,
+    "text": "34"
+   },
+   "dnes": {
+    "rok": 2023,
+    "hodnota": 12.19,
+    "text": "12"
+   },
+   "jednotka": "čistých měsíčních mezd za nové auto Škoda",
+   "znak": "",
+   "popis": "čistých měsíčních mezd za nové auto Škoda",
+   "kontext": "Dnešní škodovka je jiné auto než tehdejší a v roce 1989 nebylo všechno zboží k dostání hned.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/dvojice.json"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 4,
+   "kapitola": "rodina",
+   "kapitola_nazev": "Rodina",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/rodina/",
+   "nadpis": "Skoro polovina dětí se rodí mimo manželství",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 7.90068247686123,
+    "text": "7,9"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 46.827502705,
+    "text": "46,8"
+   },
+   "jednotka": "% živě narozených dětí",
+   "znak": "%",
+   "popis": "živě narozených dětí",
+   "kontext": "Hranici 40 % podíl překročil v roce 2010, od roku 2015 se drží mezi 46,8 a 49,0 %.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_data_pipeline/cisla.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 5,
+   "kapitola": "rodina",
+   "kapitola_nazev": "Rodina",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/rodina/",
+   "nadpis": "Nevěsty se vdávají o devět let později",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 21.83,
+    "text": "21,8"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 30.9180475,
+    "text": "30,9"
+   },
+   "jednotka": "let – průměrný věk svobodné nevěsty",
+   "znak": "",
+   "popis": "průměrný věk svobodné nevěsty v letech",
+   "kontext": "Ženichové stárli pomaleji, z 24,6 na 32,8 roku.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 6,
+   "kapitola": "rodina",
+   "kapitola_nazev": "Rodina",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/rodina/",
+   "nadpis": "Matku mladší dvaceti let má jen jedno dítě z padesáti",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 13.6,
+    "text": "13,6"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 2.1,
+    "text": "2,1"
+   },
+   "jednotka": "% narozených dětí matek do 19 let",
+   "znak": "%",
+   "popis": "narozených dětí matek do 19 let",
+   "kontext": "Ženám nad čtyřicet se od roku 2014 rodí víc dětí než dívkám do 19 let.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 7,
+   "kapitola": "zdravi",
+   "kapitola_nazev": "Zdraví a délka života",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/zdravi/",
+   "nadpis": "Muži se dožívají o devět let víc",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 68.1393371006,
+    "text": "68,1"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 77.492443162,
+    "text": "77,5"
+   },
+   "jednotka": "let – naděje dožití mužů při narození",
+   "znak": "",
+   "popis": "naděje dožití mužů při narození v letech",
+   "kontext": "Ženy si polepšily z 75,5 na 83,2 roku, rozdíl mezi pohlavími se zmenšil.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 8,
+   "kapitola": "zdravi",
+   "kapitola_nazev": "Zdraví a délka života",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/zdravi/",
+   "nadpis": "Kojenců umírá čtvrtina co v roce 1989",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 9.972264638972858,
+    "text": "10,0"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 2.511721366,
+    "text": "2,5"
+   },
+   "jednotka": "‰ – zemřelí kojenci na 1 000 živě narozených",
+   "znak": "‰",
+   "popis": "zemřelí kojenci na 1 000 živě narozených",
+   "kontext": "Pod pět promile klesla kojenecká úmrtnost už v roce 1999.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_data_pipeline/cisla.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 9,
+   "kapitola": "zdravi",
+   "kapitola_nazev": "Zdraví a délka života",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/zdravi/",
+   "nadpis": "Na nemoci srdce a cév umírá o 29 tisíc lidí méně",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 71842.0,
+    "text": "71 842"
+   },
+   "dnes": {
+    "rok": 2024,
+    "hodnota": 42611.0,
+    "text": "42 611"
+   },
+   "jednotka": "zemřelých na nemoci oběhové soustavy",
+   "znak": "",
+   "popis": "zemřelých na nemoci oběhové soustavy",
+   "kontext": "Do roku 1993 ČSÚ třídil příčiny smrti podle starší klasifikace nemocí, u nemocí srdce a cév se ale řada na švu skoro nezměnila.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_data_pipeline/cisla.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 10,
+   "kapitola": "dusevni-zdravi",
+   "kapitola_nazev": "Duševní zdraví",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/dusevni-zdravi/",
+   "nadpis": "Antidepresiv se spotřebuje 25krát víc",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 3.1,
+    "text": "3,1"
+   },
+   "dnes": {
+    "rok": 2024,
+    "hodnota": 78.8,
+    "text": "78,8"
+   },
+   "jednotka": "denních dávek na 1 000 obyvatel a den",
+   "znak": "",
+   "popis": "denních dávek na 1 000 obyvatel a den",
+   "kontext": "Kdyby se spotřeba rozdělila rovným dílem, bralo by denní dávku každý den 7,9 % obyvatel.",
+   "zdroj": "OECD",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_data_pipeline/cisla.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 11,
+   "kapitola": "dusevni-zdravi",
+   "kapitola_nazev": "Duševní zdraví",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/dusevni-zdravi/",
+   "nadpis": "Sebevražd je o třetinu méně",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 18.27,
+    "text": "18,3"
+   },
+   "dnes": {
+    "rok": 2024,
+    "hodnota": 12.53,
+    "text": "12,5"
+   },
+   "jednotka": "sebevražd na 100 000 obyvatel (standardizováno podle věku)",
+   "znak": "",
+   "popis": "sebevražd na 100 000 obyvatel (standardizováno podle věku)",
+   "kontext": "Nejméně sebevražd bylo v roce 2019. Mezi lety 2023 a 2024 jejich počet stoupl o čtvrtinu.",
+   "zdroj": "WHO",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_data_pipeline/cisla.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 12,
+   "kapitola": "vzdelavani",
+   "kapitola_nazev": "Vzdělávání",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/vzdelavani/",
+   "nadpis": "Vysokoškoláků je skoro třikrát víc",
+   "tehdy": {
+    "rok": 1991,
+    "hodnota": 582849,
+    "text": "582 849"
+   },
+   "dnes": {
+    "rok": 2021,
+    "hodnota": 1552407,
+    "text": "1 552 407"
+   },
+   "jednotka": "lidí starších 15 let s vysokou školou",
+   "znak": "",
+   "popis": "lidí starších 15 let s vysokou školou",
+   "kontext": "Srovnání podle sčítání lidu 1991 a 2021. V roce 2021 vzdělání nevyplnilo 5,8 % lidí, v roce 1991 jen 1,1 %.",
+   "zdroj": "ČSÚ, SLDB",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 13,
+   "kapitola": "vzdelavani",
+   "kapitola_nazev": "Vzdělávání",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/vzdelavani/",
+   "nadpis": "Ženy mají vysokou školu častěji než muži",
+   "tehdy": {
+    "rok": 1993,
+    "hodnota": 5.7,
+    "text": "5,7"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 23.5,
+    "text": "23,5"
+   },
+   "jednotka": "% žen starších 15 let s VŠ",
+   "znak": "%",
+   "popis": "žen starších 15 let s VŠ",
+   "kontext": "U mužů podíl vzrostl z 10,1 na 20,6 %, ženy je předstihly v roce 2017.",
+   "zdroj": "ČSÚ, VŠPS",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 14,
+   "kapitola": "vzdelavani",
+   "kapitola_nazev": "Vzdělávání",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/vzdelavani/",
+   "nadpis": "Ve třídě sedí o šest dětí méně",
+   "tehdy": {
+    "rok": "1989/90",
+    "hodnota": 25.5,
+    "text": "25,5"
+   },
+   "dnes": {
+    "rok": "2025/26",
+    "hodnota": 19.1,
+    "text": "19,1"
+   },
+   "jednotka": "žáků na jednu třídu základní školy",
+   "znak": "",
+   "popis": "žáků na jednu třídu základní školy",
+   "kontext": "Základní škola tehdy měla osm ročníků, devátý vrátil až zákon z roku 1990.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-vzdelavani/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 15,
+   "kapitola": "penize",
+   "kapitola_nazev": "Peníze",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/penize/",
+   "nadpis": "Výplata koupí skoro dvakrát víc",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 100.0,
+    "text": "100"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 189.0,
+    "text": "189"
+   },
+   "jednotka": "index reálné mzdy (1989 = 100)",
+   "znak": "",
+   "popis": "index reálné mzdy (1989 = 100)",
+   "kontext": "V roce 1991 reálné mzdy klesly o čtvrtinu, na úroveň roku 1989 se vrátily až v roce 1996.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/dvojice.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 16,
+   "kapitola": "penize",
+   "kapitola_nazev": "Peníze",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/penize/",
+   "nadpis": "Za výplatu koupíme třikrát víc piva",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 1002.0,
+    "text": "1 002"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 3020.0,
+    "text": "3 020"
+   },
+   "jednotka": "lahví výčepního piva za průměrnou čistou mzdu",
+   "znak": "",
+   "popis": "lahví výčepního piva za průměrnou čistou mzdu",
+   "kontext": "Zhruba trojnásobek koupí výplata i u másla.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_data_pipeline/vystup.txt"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 17,
+   "kapitola": "penize",
+   "kapitola_nazev": "Peníze",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/penize/",
+   "nadpis": "U kadeřníka se za výplatu ostříháme třikrát méně",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 358.0,
+    "text": "358"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 101.0,
+    "text": "101"
+   },
+   "jednotka": "pánských stříhání za průměrnou čistou mzdu",
+   "znak": "",
+   "popis": "pánských stříhání za průměrnou čistou mzdu",
+   "kontext": "Část rozdílu dělá změna služby: do roku 2010 ČSÚ sledoval stříhání na sucho, od roku 2011 i s mytím.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-penize/_data_pipeline/vystup.txt"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 18,
+   "kapitola": "bydleni",
+   "kapitola_nazev": "Bydlení",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/bydleni/",
+   "nadpis": "Čtvrtina bytů je v osobním vlastnictví",
+   "tehdy": {
+    "rok": 1991,
+    "hodnota": 0.8,
+    "text": "0,8"
+   },
+   "dnes": {
+    "rok": 2021,
+    "hodnota": 25.0,
+    "text": "25,0"
+   },
+   "jednotka": "% obydlených bytů",
+   "znak": "%",
+   "popis": "obydlených bytů",
+   "kontext": "Družstva převáděla byty do vlastnictví členů, obce a lidová družstva převáděla nebo prodávala nájemní byty.",
+   "zdroj": "ČSÚ, SLDB",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 19,
+   "kapitola": "bydleni",
+   "kapitola_nazev": "Bydlení",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/bydleni/",
+   "nadpis": "Na každého připadá o deset metrů bytu víc",
+   "tehdy": {
+    "rok": 1991,
+    "hodnota": 25.5,
+    "text": "25,5"
+   },
+   "dnes": {
+    "rok": 2021,
+    "hodnota": 35.49,
+    "text": "35,5"
+   },
+   "jednotka": "m² celkové plochy bytu na osobu",
+   "znak": "",
+   "popis": "m² celkové plochy bytu na osobu",
+   "kontext": "Domácnosti se zmenšily: v obydleném bytě žilo v roce 1991 v průměru 2,76 osoby, v roce 2021 2,26.",
+   "zdroj": "ČSÚ, SLDB",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 20,
+   "kapitola": "bydleni",
+   "kapitola_nazev": "Bydlení",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/bydleni/",
+   "nadpis": "Postavit dům stojí víc výplat než v roce 1989",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 100.6,
+    "text": "101"
+   },
+   "dnes": {
+    "rok": 2024,
+    "hodnota": 116.9,
+    "text": "117"
+   },
+   "jednotka": "hrubých měsíčních mezd za stavbu rodinného domu",
+   "znak": "",
+   "popis": "hrubých měsíčních mezd za stavbu rodinného domu",
+   "kontext": "Jen náklady stavby bez pozemku. Metr čtvereční stojí vůči mzdě skoro stejně, domy jsou ale větší.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-bydleni/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 21,
+   "kapitola": "doprava",
+   "kapitola_nazev": "Doprava",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/doprava/",
+   "nadpis": "Aut na obyvatele je 2,7krát víc",
+   "tehdy": {
+    "rok": 1990,
+    "hodnota": 234,
+    "text": "234"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 621,
+    "text": "621"
+   },
+   "jednotka": "osobních aut na 1 000 obyvatel",
+   "znak": "",
+   "popis": "osobních aut na 1 000 obyvatel",
+   "kontext": "V registru zůstávají i auta, která majitelé neodhlásili. Skutečný vozový park je proto menší.",
+   "zdroj": "Eurostat",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_data_pipeline/cisla.json"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 22,
+   "kapitola": "doprava",
+   "kapitola_nazev": "Doprava",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/doprava/",
+   "nadpis": "Na silnicích umírá o polovinu méně lidí",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 1078,
+    "text": "1 078"
+   },
+   "dnes": {
+    "rok": 2023,
+    "hodnota": 502,
+    "text": "502"
+   },
+   "jednotka": "usmrcených do 30 dnů po nehodě",
+   "znak": "",
+   "popis": "usmrcených do 30 dnů po nehodě",
+   "kontext": "Nejvíc mrtvých bylo v roce 1994, 1 637.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_data_pipeline/cisla.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 23,
+   "kapitola": "doprava",
+   "kapitola_nazev": "Doprava",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/doprava/",
+   "nadpis": "Skoro čtyři auta z deseti jezdí na naftu",
+   "tehdy": {
+    "rok": 1997,
+    "hodnota": 7.64,
+    "text": "7,6"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 38.94,
+    "text": "38,9"
+   },
+   "jednotka": "% registrovaných osobních aut na naftu",
+   "znak": "%",
+   "popis": "registrovaných osobních aut na naftu",
+   "kontext": "Ministerstvo rozlišuje paliva od roku 1997. Elektromobily dnes tvoří 0,85 % osobních aut.",
+   "zdroj": "MD ČR",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-doprava/_data_pipeline/cisla.json"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 24,
+   "kapitola": "ovzdusi",
+   "kapitola_nazev": "Ovzduší",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/ovzdusi/",
+   "nadpis": "Emise síry klesly o 97 %",
+   "tehdy": {
+    "rok": 1990,
+    "hodnota": 1753.8,
+    "text": "1 754"
+   },
+   "dnes": {
+    "rok": 2024,
+    "hodnota": 46.9,
+    "text": "46,9"
+   },
+   "jednotka": "tisíc tun oxidu siřičitého za rok",
+   "znak": "",
+   "popis": "tisíc tun oxidu siřičitého za rok",
+   "kontext": "Řada začíná rokem 1990. Většina poklesu proběhla do roku 2000.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_data_pipeline/cisla.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 25,
+   "kapitola": "ovzdusi",
+   "kapitola_nazev": "Ovzduší",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/ovzdusi/",
+   "nadpis": "Na Ústecku je ve vzduchu skoro osmnáctkrát méně síry",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 69.5,
+    "text": "69,5"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 3.9,
+    "text": "3,9"
+   },
+   "jednotka": "µg/m³ oxidu siřičitého, průměr měřicích stanic Ústeckého kraje",
+   "znak": "",
+   "popis": "µg/m³ oxidu siřičitého, průměr měřicích stanic Ústeckého kraje",
+   "kontext": "Stanic bylo v roce 1989 v kraji 35, loni 11 a stály jinde. Průměr je proto orientační.",
+   "zdroj": "ČHMÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_data_pipeline/cisla.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 26,
+   "kapitola": "ovzdusi",
+   "kapitola_nazev": "Ovzduší",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/ovzdusi/",
+   "nadpis": "Rakovinotvorný kouř dnes jde skoro jen z domácích komínů",
+   "tehdy": {
+    "rok": 1990,
+    "hodnota": 36.0,
+    "text": "36"
+   },
+   "dnes": {
+    "rok": 2023,
+    "hodnota": 97.0,
+    "text": "97"
+   },
+   "jednotka": "% emisí benzo[a]pyrenu z vytápění domácností",
+   "znak": "%",
+   "popis": "emisí benzo[a]pyrenu z vytápění domácností",
+   "kontext": "Domácí topení vypouští polovinu toho co v roce 1990, ostatní zdroje skoro nic.",
+   "zdroj": "ČHMÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-ovzdusi/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 27,
+   "kapitola": "kriminalita-a-bezpecnost",
+   "kapitola_nazev": "Kriminalita a bezpečnost",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/kriminalita-a-bezpecnost/",
+   "nadpis": "Trestných činů je víc než v roce 1989",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 120768.0,
+    "text": "120 768"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 170051.0,
+    "text": "170 051"
+   },
+   "jednotka": "registrovaných trestných činů za rok",
+   "znak": "",
+   "popis": "registrovaných trestných činů za rok",
+   "kontext": "Vrchol přišel v roce 1999 s 426 626 činy, od té doby kriminalita klesla o 60 %.",
+   "zdroj": "Policie ČR, IKSP",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 28,
+   "kapitola": "kriminalita-a-bezpecnost",
+   "kapitola_nazev": "Kriminalita a bezpečnost",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/kriminalita-a-bezpecnost/",
+   "nadpis": "Policie objasní méně než polovinu činů",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 77.45,
+    "text": "77,5"
+   },
+   "dnes": {
+    "rok": 2023,
+    "hodnota": 45.74,
+    "text": "45,7"
+   },
+   "jednotka": "% objasněných trestných činů",
+   "znak": "%",
+   "popis": "objasněných trestných činů",
+   "kontext": "Do roku 1988 policie objasnila 81 až 88 % zjištěných činů. Nejméně to bylo v roce 1992.",
+   "zdroj": "Policie ČR, IKSP",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 29,
+   "kapitola": "kriminalita-a-bezpecnost",
+   "kapitola_nazev": "Kriminalita a bezpečnost",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/kriminalita-a-bezpecnost/",
+   "nadpis": "Vězňů je jen o necelou pětinu méně než před revolucí",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 22365.0,
+    "text": "22 365"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 19359.0,
+    "text": "19 359"
+   },
+   "jednotka": "vězňů k 31. prosinci",
+   "znak": "",
+   "popis": "vězňů k 31. prosinci",
+   "kontext": "Po amnestii z ledna 1990 bylo na konci roku ve vězení 8 231 lidí. V EU má dnes Česko čtvrtý nejvyšší počet vězňů na obyvatele.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 30,
+   "kapitola": "politika",
+   "kapitola_nazev": "Politika",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/politika/",
+   "nadpis": "Žen ve Sněmovně je třetina",
+   "tehdy": {
+    "rok": 1990,
+    "hodnota": 13.0,
+    "text": "13"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 33.5,
+    "text": "33,5"
+   },
+   "jednotka": "% zvolených poslankyň",
+   "znak": "%",
+   "popis": "zvolených poslankyň",
+   "kontext": "Nesvobodná ČNR měla v den revoluce 27,8 % žen, kandidáty ale předem vybrala Národní fronta.",
+   "zdroj": "ČSÚ, PSP",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_data_pipeline/vysledky.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 31,
+   "kapitola": "politika",
+   "kapitola_nazev": "Politika",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/politika/",
+   "nadpis": "Do Sněmovny se dostane dvakrát víc stran",
+   "tehdy": {
+    "rok": 1990,
+    "hodnota": 4,
+    "text": "4"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 8,
+    "text": "8"
+   },
+   "jednotka": "stran s mandátem",
+   "znak": "",
+   "popis": "stran s mandátem",
+   "kontext": "Počítáme strany, které kandidáty navrhly, koalice SPOLU se tak dělí na tři. V roce 1990 kandidovalo 13 stran, loni 26.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_data_pipeline/vysledky.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 32,
+   "kapitola": "politika",
+   "kapitola_nazev": "Politika",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/politika/",
+   "nadpis": "Poslanci jsou skoro o pět let starší",
+   "tehdy": {
+    "rok": 1990,
+    "hodnota": 44.1,
+    "text": "44,1"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 48.8,
+    "text": "48,8"
+   },
+   "jednotka": "let – průměrný věk zvolených poslanců",
+   "znak": "",
+   "popis": "průměrný věk zvolených poslanců v letech",
+   "kontext": "Mladších 40 let bylo v ČNR roku 1990 71 poslanců, v dnešní Sněmovně 39.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_data_pipeline/vysledky.json"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 33,
+   "kapitola": "svoboda",
+   "kapitola_nazev": "Svoboda",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/svoboda/",
+   "nadpis": "K volbám chodí dva ze tří voličů",
+   "tehdy": {
+    "rok": 1990,
+    "hodnota": 96.8,
+    "text": "96,8"
+   },
+   "dnes": {
+    "rok": 2025,
+    "hodnota": 68.9,
+    "text": "68,9"
+   },
+   "jednotka": "% účast ve volbách do ČNR / Sněmovny",
+   "znak": "%",
+   "popis": "účast ve volbách do ČNR / Sněmovny",
+   "kontext": "Nejméně lidí přišlo v roce 2002. Loňská účast byla nejvyšší od roku 1998.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 34,
+   "kapitola": "svoboda",
+   "kapitola_nazev": "Svoboda",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/svoboda/",
+   "nadpis": "Volných dnů je skoro dvakrát víc",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 7.0,
+    "text": "7"
+   },
+   "dnes": {
+    "rok": 2026,
+    "hodnota": 13.0,
+    "text": "13"
+   },
+   "jednotka": "dní pracovního klidu (svátků) za rok",
+   "znak": "",
+   "popis": "dní pracovního klidu (svátků) za rok",
+   "kontext": "Volno přibylo na Cyrila a Metoděje, Jana Husa, Den české státnosti, 17. listopad, Velký pátek a Štědrý den.",
+   "zdroj": "Sbírka zákonů",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_data_pipeline/vystup.txt",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/doplnky.json"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 35,
+   "kapitola": "svoboda",
+   "kapitola_nazev": "Svoboda",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/svoboda/",
+   "nadpis": "K víře se hlásí polovina lidí co po revoluci",
+   "tehdy": {
+    "rok": 1991,
+    "hodnota": 43.9,
+    "text": "43,9"
+   },
+   "dnes": {
+    "rok": 2021,
+    "hodnota": 22.2,
+    "text": "22,2"
+   },
+   "jednotka": "% obyvatel, kteří při sčítání uvedli víru",
+   "znak": "%",
+   "popis": "obyvatel, kteří při sčítání uvedli víru",
+   "kontext": "Otázka byla v roce 2021 dobrovolná a 30,1 % lidí ji nevyplnilo.",
+   "zdroj": "ČSÚ, SLDB",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/doplnky.json",
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-svoboda/_data_pipeline/vystup.txt"
+   ],
+   "hrava": false
+  },
+  {
+   "cislo": 36,
+   "kapitola": "volny-cas",
+   "kapitola_nazev": "Volný čas a spotřeba",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/volny-cas/",
+   "nadpis": "Banánů sníme čtyřikrát víc",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 3.3,
+    "text": "3,3"
+   },
+   "dnes": {
+    "rok": 2024,
+    "hodnota": 12.7,
+    "text": "12,7"
+   },
+   "jednotka": "kg banánů na obyvatele za rok",
+   "znak": "",
+   "popis": "kg banánů na obyvatele za rok",
+   "kontext": "Jižního ovoce celkem sní průměrný obyvatel 38,1 kilogramu místo 16,9.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_data_pipeline/vystup.txt"
+   ],
+   "hrava": true
+  },
+  {
+   "cislo": 37,
+   "kapitola": "volny-cas",
+   "kapitola_nazev": "Volný čas a spotřeba",
+   "href": "/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/volny-cas/",
+   "nadpis": "Do kina chodíme čtyřikrát méně",
+   "tehdy": {
+    "rok": 1989,
+    "hodnota": 4.97,
+    "text": "5,0"
+   },
+   "dnes": {
+    "rok": 2024,
+    "hodnota": 1.2,
+    "text": "1,2"
+   },
+   "jednotka": "návštěv kina na obyvatele za rok",
+   "znak": "",
+   "popis": "návštěv kina na obyvatele za rok",
+   "kontext": "Kin ubylo z 2 025 na 1 251. Mimo covidové roky měla kina nejméně návštěv v roce 1999.",
+   "zdroj": "ČSÚ",
+   "zdroj_soubor": [
+    "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-volny-cas/_data_pipeline/vystup.txt"
+   ],
+   "hrava": true
+  }
+ ]
+}

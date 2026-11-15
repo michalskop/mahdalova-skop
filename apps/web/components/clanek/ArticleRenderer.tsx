@@ -39,6 +39,12 @@ import { SerbiaNightTimeline, SerbiaVotesChart } from '@/components/charts/Serbi
 import ObceKandidatkyMap from '@/components/charts/ObceKandidatkyMap'; // mapa obcí s jedinou kandidátkou (KV 1994–2026)
 import ObceStranyMap from '@/components/charts/ObceStranyMap'; // mapa obcí: zastupitelé SPD, ANO, Motoristů 2022 → 2026
 import ObceVoliciMap from '@/components/charts/ObceVoliciMap'; // mapa obcí: kolik voličů zastupují zastupitelé strany (KV 2026)
+import ObceHodnotaMap from '@/components/charts/ObceHodnotaMap'; // kartogram obcí podle hodnoty (např. znečištění ovzduší)
+import Tipovacka from '@/components/specialy/jaciJsme/Tipovacka'; // speciál 1989 × 2026: tipněte si, než to ukážeme
+import PosuvnikTehdyDnes from '@/components/specialy/jaciJsme/PosuvnikTehdyDnes'; // speciál 1989 × 2026: pruhy přelité posuvníkem
+import OdNarozeni from '@/components/specialy/jaciJsme/OdNarozeni'; // speciál 1989 × 2026: Česko od vašeho narození
+import OkresyMalemapy from '@/components/specialy/jaciJsme/OkresyMalemapy'; // speciál 1989 × 2026: malé mapy okresů 1991 × 2021
+import Demonstrace1989Map from '@/components/specialy/jaciJsme/Demonstrace1989Map'; // speciál 1989 × 2026: animovaná mapa demonstrací 11–12/1989
 import ObceKvPredikceMapa from '@/components/charts/ObceKvPredikceMapa'; // komunální volby 2026 – odhad pro 184 zastupitelstev
 import ObceKvVysledkyMapa from '@/components/charts/ObceKvVysledkyMapa'; // komunální volby 2026 – výsledky a průběh predikce
 import OkrskyKvMapa from '@/components/charts/OkrskyKvMapa'; // komunální volby 2026 – kdo vyhrál v okrscích (jak volili vaši sousedé)
@@ -492,6 +498,14 @@ export function ArticleRenderer({
     ObceKandidatkyMap,
     ObceStranyMap,
     ObceVoliciMap,
+    ObceHodnotaMap: (props: any) => (
+      <ObceHodnotaMap {...props} data={((mdxSource.scope as any)?.obceHodnotaData as Record<string, any> | undefined)?.[props.dataFile]} />
+    ),
+    Tipovacka: (props: any) => <Tipovacka {...props} data={((mdxSource.scope as any)?.jaciJsmeData as Record<string, any> | undefined)?.[props.dataFile]} />,
+    PosuvnikTehdyDnes: (props: any) => <PosuvnikTehdyDnes {...props} data={((mdxSource.scope as any)?.jaciJsmeData as Record<string, any> | undefined)?.[props.dataFile]} />,
+    OdNarozeni: (props: any) => <OdNarozeni {...props} data={((mdxSource.scope as any)?.jaciJsmeData as Record<string, any> | undefined)?.[props.dataFile]} />,
+    OkresyMalemapy: (props: any) => <OkresyMalemapy {...props} data={((mdxSource.scope as any)?.jaciJsmeData as Record<string, any> | undefined)?.[props.dataFile]} />,
+    Demonstrace1989Map: (props: any) => <Demonstrace1989Map {...props} data={((mdxSource.scope as any)?.jaciJsmeData as Record<string, any> | undefined)?.[props.dataFile]} />,
     KalkulackaMapa,
     SenatPredikceMapa,
     SenatDruheKolo,

@@ -1,0 +1,224 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Čtyři z pěti lidí, kteří dýchají nadlimitní benzo[a]pyren, žijí v {Moravskoslezském kraji|#de1743}",
+  "subtitle": "Obyvatelé v místech, kde pětiletý průměr 2021–2025 překračuje limit 1 ng/m³; v závorce podíl obyvatel kraje. Praha, Vysočina, Karlovarský, Jihočeský a Liberecký kraj: nikdo"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "kraj": "Moravskoslezský",
+    "nad": 851183,
+    "popisek": "851 183 (73,3 %)",
+    "t": "851 183 z 1 161 669 obyvatel (73,3 %)",
+    "msk": true
+   },
+   {
+    "kraj": "Olomoucký",
+    "nad": 96388,
+    "popisek": "96 388 (15,5 %)",
+    "t": "96 388 z 620 066 obyvatel (15,5 %)",
+    "msk": false
+   },
+   {
+    "kraj": "Zlínský",
+    "nad": 45621,
+    "popisek": "45 621 (8,1 %)",
+    "t": "45 621 z 563 888 obyvatel (8,1 %)",
+    "msk": false
+   },
+   {
+    "kraj": "Ústecký",
+    "nad": 17708,
+    "popisek": "17 708 (2,2 %)",
+    "t": "17 708 z 790 237 obyvatel (2,2 %)",
+    "msk": false
+   },
+   {
+    "kraj": "Jihomoravský",
+    "nad": 6033,
+    "popisek": "6 033 (0,5 %)",
+    "t": "6 033 z 1 197 894 obyvatel (0,5 %)",
+    "msk": false
+   },
+   {
+    "kraj": "Pardubický",
+    "nad": 5027,
+    "popisek": "5 027 (1,0 %)",
+    "t": "5 027 z 510 645 obyvatel (1,0 %)",
+    "msk": false
+   },
+   {
+    "kraj": "Středočeský",
+    "nad": 4683,
+    "popisek": "4 683 (0,3 %)",
+    "t": "4 683 z 1 416 028 obyvatel (0,3 %)",
+    "msk": false
+   },
+   {
+    "kraj": "Královéhradecký",
+    "nad": 3870,
+    "popisek": "3 870 (0,7 %)",
+    "t": "3 870 z 538 340 obyvatel (0,7 %)",
+    "msk": false
+   },
+   {
+    "kraj": "Plzeňský",
+    "nad": 772,
+    "popisek": "772 (0,1 %)",
+    "t": "772 z 581 959 obyvatel (0,1 %)",
+    "msk": false
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "height": {
+     "band": 1
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "kraj",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.45,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "field": "nad",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1234215.3499999999
+      ]
+     },
+     "axis": null
+    },
+    "color": {
+     "field": "msk",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       true,
+       false
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "kraj",
+      "title": "Kraj"
+     },
+     {
+      "field": "t",
+      "title": "Nad limitem"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 5,
+    "fontSize": 12,
+    "fontWeight": 700,
+    "color": "#101432"
+   },
+   "encoding": {
+    "y": {
+     "field": "kraj",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.45,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "field": "nad",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1234215.3499999999
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "popisek"
+    },
+    "tooltip": [
+     {
+      "field": "kraj",
+      "title": "Kraj"
+     },
+     {
+      "field": "t",
+      "title": "Nad limitem"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -10,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "y": {
+     "field": "kraj",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.45,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "datum": 0,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1234215.3499999999
+      ]
+     }
+    },
+    "text": {
+     "field": "kraj"
+    }
+   }
+  }
+ ],
+ "_source": "ČHMÚ, [model 2021–2025](https://opendata.chmi.cz/air_quality/products/5year_avg/), Eurostat; výpočet DataTimes",
+ "height": {
+  "step": 40
+ }
+}

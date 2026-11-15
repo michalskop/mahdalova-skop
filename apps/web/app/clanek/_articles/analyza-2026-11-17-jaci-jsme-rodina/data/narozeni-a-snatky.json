@@ -1,0 +1,916 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Dětí ubylo ve dvou vlnách: {v 90. letech|#6267a3} a {po roce 2021|#de1743}",
+    "subtitle": "Živě narozené děti a sňatky za rok v tisících, 1989–2025"
+  },
+  "width": "container",
+  "height": 260,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "scale": {
+      "zero": false
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "od": 1990,
+            "do": 1999
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "color": "#6267a3",
+        "opacity": 0.1
+      },
+      "encoding": {
+        "x": {
+          "field": "od",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "do"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1994.5,
+            "v": 148,
+            "text": "1990–1999"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "od": 2021,
+            "do": 2025
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "color": "#de1743",
+        "opacity": 0.1
+      },
+      "encoding": {
+        "x": {
+          "field": "od",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "do"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2023.0,
+            "v": 148,
+            "text": "2021–25"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'Živě narozené děti'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#101432",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#101432"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              150
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              40,
+              80,
+              120
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'Sňatky'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#101432",
+        "strokeWidth": 2,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#101432"
+        },
+        "strokeDash": [
+          5,
+          3
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              150
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              40,
+              80,
+              120
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2008,
+            "v": 119.57,
+            "text": "narozené děti"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dx": 0,
+        "dy": -8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2004,
+            "v": 51.447,
+            "text": "sňatky"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 400,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1999,
+            "v": 89.471,
+            "text": "89,5 tis."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 77.636,
+            "text": "77,6 tis."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 42.548,
+            "text": "42,5 tis."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 400,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026)",
+  "data": {
+    "values": [
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1989,
+        "v": 128.356,
+        "t": "128,4 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1990,
+        "v": 130.564,
+        "t": "130,6 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1991,
+        "v": 129.354,
+        "t": "129,4 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1992,
+        "v": 121.705,
+        "t": "121,7 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1993,
+        "v": 121.025,
+        "t": "121,0 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1994,
+        "v": 106.579,
+        "t": "106,6 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1995,
+        "v": 96.097,
+        "t": "96,1 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1996,
+        "v": 90.446,
+        "t": "90,4 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1997,
+        "v": 90.657,
+        "t": "90,7 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1998,
+        "v": 90.535,
+        "t": "90,5 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 1999,
+        "v": 89.471,
+        "t": "89,5 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2000,
+        "v": 90.91,
+        "t": "90,9 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2001,
+        "v": 90.715,
+        "t": "90,7 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2002,
+        "v": 92.786,
+        "t": "92,8 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2003,
+        "v": 93.685,
+        "t": "93,7 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2004,
+        "v": 97.664,
+        "t": "97,7 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2005,
+        "v": 102.211,
+        "t": "102,2 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2006,
+        "v": 105.831,
+        "t": "105,8 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2007,
+        "v": 114.632,
+        "t": "114,6 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2008,
+        "v": 119.57,
+        "t": "119,6 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2009,
+        "v": 118.348,
+        "t": "118,3 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2010,
+        "v": 117.153,
+        "t": "117,2 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2011,
+        "v": 108.673,
+        "t": "108,7 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2012,
+        "v": 108.576,
+        "t": "108,6 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2013,
+        "v": 106.751,
+        "t": "106,8 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2014,
+        "v": 109.86,
+        "t": "109,9 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2015,
+        "v": 110.764,
+        "t": "110,8 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2016,
+        "v": 112.663,
+        "t": "112,7 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2017,
+        "v": 114.405,
+        "t": "114,4 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2018,
+        "v": 114.036,
+        "t": "114,0 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2019,
+        "v": 112.231,
+        "t": "112,2 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2020,
+        "v": 110.2,
+        "t": "110,2 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2021,
+        "v": 111.793,
+        "t": "111,8 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2022,
+        "v": 101.299,
+        "t": "101,3 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2023,
+        "v": 91.149,
+        "t": "91,1 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2024,
+        "v": 84.311,
+        "t": "84,3 tis."
+      },
+      {
+        "rada": "Živě narozené děti",
+        "rok": 2025,
+        "v": 77.636,
+        "t": "77,6 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1989,
+        "v": 81.262,
+        "t": "81,3 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1990,
+        "v": 90.953,
+        "t": "91,0 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1991,
+        "v": 71.973,
+        "t": "72,0 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1992,
+        "v": 74.06,
+        "t": "74,1 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1993,
+        "v": 66.033,
+        "t": "66,0 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1994,
+        "v": 58.44,
+        "t": "58,4 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1995,
+        "v": 54.956,
+        "t": "55,0 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1996,
+        "v": 53.896,
+        "t": "53,9 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1997,
+        "v": 57.804,
+        "t": "57,8 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1998,
+        "v": 55.027,
+        "t": "55,0 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 1999,
+        "v": 53.523,
+        "t": "53,5 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2000,
+        "v": 55.321,
+        "t": "55,3 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2001,
+        "v": 52.374,
+        "t": "52,4 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2002,
+        "v": 52.732,
+        "t": "52,7 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2003,
+        "v": 48.943,
+        "t": "48,9 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2004,
+        "v": 51.447,
+        "t": "51,4 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2005,
+        "v": 51.829,
+        "t": "51,8 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2006,
+        "v": 52.86,
+        "t": "52,9 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2007,
+        "v": 57.157,
+        "t": "57,2 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2008,
+        "v": 52.457,
+        "t": "52,5 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2009,
+        "v": 47.862,
+        "t": "47,9 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2010,
+        "v": 46.746,
+        "t": "46,7 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2011,
+        "v": 45.137,
+        "t": "45,1 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2012,
+        "v": 45.206,
+        "t": "45,2 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2013,
+        "v": 43.499,
+        "t": "43,5 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2014,
+        "v": 45.575,
+        "t": "45,6 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2015,
+        "v": 48.191,
+        "t": "48,2 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2016,
+        "v": 50.768,
+        "t": "50,8 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2017,
+        "v": 52.567,
+        "t": "52,6 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2018,
+        "v": 54.47,
+        "t": "54,5 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2019,
+        "v": 54.87,
+        "t": "54,9 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2020,
+        "v": 45.415,
+        "t": "45,4 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2021,
+        "v": 46.778,
+        "t": "46,8 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2022,
+        "v": 54.82,
+        "t": "54,8 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2023,
+        "v": 48.268,
+        "t": "48,3 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2024,
+        "v": 44.486,
+        "t": "44,5 tis."
+      },
+      {
+        "rada": "Sňatky",
+        "rok": 2025,
+        "v": 42.548,
+        "t": "42,5 tis."
+      }
+    ]
+  }
+}

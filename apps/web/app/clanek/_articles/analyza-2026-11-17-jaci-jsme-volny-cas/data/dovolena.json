@@ -1,0 +1,552 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Týden dovolené si {dnes|#de1743} nemůže dovolit každý pátý, v roce 2012 skoro každý druhý",
+  "subtitle": "Podíl lidí, kteří si nemohou dovolit týden dovolené mimo domov, v %; Česko 2005–2025, průměr EU od 2010"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "rok": 2005,
+    "v": 40.6,
+    "rada": "Česko",
+    "t": "40,6 %"
+   },
+   {
+    "rok": 2006,
+    "v": 36.3,
+    "rada": "Česko",
+    "t": "36,3 %"
+   },
+   {
+    "rok": 2007,
+    "v": 33.6,
+    "rada": "Česko",
+    "t": "33,6 %"
+   },
+   {
+    "rok": 2008,
+    "v": 39.0,
+    "rada": "Česko",
+    "t": "39,0 %"
+   },
+   {
+    "rok": 2009,
+    "v": 39.6,
+    "rada": "Česko",
+    "t": "39,6 %"
+   },
+   {
+    "rok": 2010,
+    "v": 39.5,
+    "rada": "Česko",
+    "t": "39,5 %"
+   },
+   {
+    "rok": 2011,
+    "v": 41.8,
+    "rada": "Česko",
+    "t": "41,8 %"
+   },
+   {
+    "rok": 2012,
+    "v": 43.5,
+    "rada": "Česko",
+    "t": "43,5 %"
+   },
+   {
+    "rok": 2013,
+    "v": 39.5,
+    "rada": "Česko",
+    "t": "39,5 %"
+   },
+   {
+    "rok": 2014,
+    "v": 37.3,
+    "rada": "Česko",
+    "t": "37,3 %"
+   },
+   {
+    "rok": 2015,
+    "v": 32.4,
+    "rada": "Česko",
+    "t": "32,4 %"
+   },
+   {
+    "rok": 2016,
+    "v": 28.9,
+    "rada": "Česko",
+    "t": "28,9 %"
+   },
+   {
+    "rok": 2017,
+    "v": 25.0,
+    "rada": "Česko",
+    "t": "25,0 %"
+   },
+   {
+    "rok": 2018,
+    "v": 20.7,
+    "rada": "Česko",
+    "t": "20,7 %"
+   },
+   {
+    "rok": 2019,
+    "v": 19.7,
+    "rada": "Česko",
+    "t": "19,7 %"
+   },
+   {
+    "rok": 2020,
+    "v": 18.7,
+    "rada": "Česko",
+    "t": "18,7 %"
+   },
+   {
+    "rok": 2021,
+    "v": 18.3,
+    "rada": "Česko",
+    "t": "18,3 %"
+   },
+   {
+    "rok": 2022,
+    "v": 18.0,
+    "rada": "Česko",
+    "t": "18,0 %"
+   },
+   {
+    "rok": 2023,
+    "v": 20.3,
+    "rada": "Česko",
+    "t": "20,3 %"
+   },
+   {
+    "rok": 2024,
+    "v": 18.5,
+    "rada": "Česko",
+    "t": "18,5 %"
+   },
+   {
+    "rok": 2025,
+    "v": 19.0,
+    "rada": "Česko",
+    "t": "19,0 %"
+   },
+   {
+    "rok": 2010,
+    "v": 38.8,
+    "rada": "Průměr EU",
+    "t": "38,8 %"
+   },
+   {
+    "rok": 2011,
+    "v": 39.3,
+    "rada": "Průměr EU",
+    "t": "39,3 %"
+   },
+   {
+    "rok": 2012,
+    "v": 40.5,
+    "rada": "Průměr EU",
+    "t": "40,5 %"
+   },
+   {
+    "rok": 2013,
+    "v": 40.3,
+    "rada": "Průměr EU",
+    "t": "40,3 %"
+   },
+   {
+    "rok": 2014,
+    "v": 37.6,
+    "rada": "Průměr EU",
+    "t": "37,6 %"
+   },
+   {
+    "rok": 2015,
+    "v": 35.2,
+    "rada": "Průměr EU",
+    "t": "35,2 %"
+   },
+   {
+    "rok": 2016,
+    "v": 33.5,
+    "rada": "Průměr EU",
+    "t": "33,5 %"
+   },
+   {
+    "rok": 2017,
+    "v": 31.0,
+    "rada": "Průměr EU",
+    "t": "31,0 %"
+   },
+   {
+    "rok": 2018,
+    "v": 29.2,
+    "rada": "Průměr EU",
+    "t": "29,2 %"
+   },
+   {
+    "rok": 2019,
+    "v": 28.0,
+    "rada": "Průměr EU",
+    "t": "28,0 %"
+   },
+   {
+    "rok": 2020,
+    "v": 28.7,
+    "rada": "Průměr EU",
+    "t": "28,7 %"
+   },
+   {
+    "rok": 2021,
+    "v": 27.7,
+    "rada": "Průměr EU",
+    "t": "27,7 %"
+   },
+   {
+    "rok": 2022,
+    "v": 28.6,
+    "rada": "Průměr EU",
+    "t": "28,6 %"
+   },
+   {
+    "rok": 2023,
+    "v": 28.5,
+    "rada": "Průměr EU",
+    "t": "28,5 %"
+   },
+   {
+    "rok": 2024,
+    "v": 27.0,
+    "rada": "Průměr EU",
+    "t": "27,0 %"
+   },
+   {
+    "rok": 2025,
+    "v": 27.5,
+    "rada": "Průměr EU",
+    "t": "27,5 %"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2012,
+       2019,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       10,
+       20,
+       30,
+       40,
+       50
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "rada",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "Česko",
+       "Průměr EU"
+      ],
+      "range": [
+       "#de1743",
+       "#a8a89c"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rada",
+      "title": "Území"
+     },
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t",
+      "title": "Nemůže si dovolit"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2012,
+      "v": 43.5,
+      "text": "43,5 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": -10,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2012,
+       2019,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       10,
+       20,
+       30,
+       40,
+       50
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 19.0,
+      "text": "Česko 19 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": 16,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2012,
+       2019,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       10,
+       20,
+       30,
+       40,
+       50
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 27.5,
+      "text": "EU 27,5 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#7a7a70",
+    "dy": -10,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2012,
+       2019,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       10,
+       20,
+       30,
+       40,
+       50
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  }
+ ],
+ "_source": "Eurostat, [EU-SILC, ukazatel ilc_mdes02](https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes02/default/table?lang=en)",
+ "height": 240
+}

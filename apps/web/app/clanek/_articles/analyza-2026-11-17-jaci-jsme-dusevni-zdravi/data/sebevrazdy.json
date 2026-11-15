@@ -1,0 +1,557 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Sebevražd je o {třetinu méně|#de1743} než v roce {1989|#6267a3}, v roce 2024 ale přibyly",
+    "subtitle": "Sebevraždy na 100 000 obyvatel, věkově standardizováno (evropský standard WHO), 1989–2024"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1989,
+        "v": 18.27,
+        "t": "18,3 na 100 000"
+      },
+      {
+        "rok": 1990,
+        "v": 19.07,
+        "t": "19,1 na 100 000"
+      },
+      {
+        "rok": 1991,
+        "v": 18.23,
+        "t": "18,2 na 100 000"
+      },
+      {
+        "rok": 1992,
+        "v": 18.79,
+        "t": "18,8 na 100 000"
+      },
+      {
+        "rok": 1993,
+        "v": 18.09,
+        "t": "18,1 na 100 000"
+      },
+      {
+        "rok": 1994,
+        "v": 17.28,
+        "t": "17,3 na 100 000"
+      },
+      {
+        "rok": 1995,
+        "v": 16.06,
+        "t": "16,1 na 100 000"
+      },
+      {
+        "rok": 1996,
+        "v": 14.33,
+        "t": "14,3 na 100 000"
+      },
+      {
+        "rok": 1997,
+        "v": 15.24,
+        "t": "15,2 na 100 000"
+      },
+      {
+        "rok": 1998,
+        "v": 14.63,
+        "t": "14,6 na 100 000"
+      },
+      {
+        "rok": 1999,
+        "v": 14.45,
+        "t": "14,4 na 100 000"
+      },
+      {
+        "rok": 2000,
+        "v": 14.76,
+        "t": "14,8 na 100 000"
+      },
+      {
+        "rok": 2001,
+        "v": 14.44,
+        "t": "14,4 na 100 000"
+      },
+      {
+        "rok": 2002,
+        "v": 13.71,
+        "t": "13,7 na 100 000"
+      },
+      {
+        "rok": 2003,
+        "v": 15.29,
+        "t": "15,3 na 100 000"
+      },
+      {
+        "rok": 2004,
+        "v": 14.02,
+        "t": "14,0 na 100 000"
+      },
+      {
+        "rok": 2005,
+        "v": 13.81,
+        "t": "13,8 na 100 000"
+      },
+      {
+        "rok": 2006,
+        "v": 12.22,
+        "t": "12,2 na 100 000"
+      },
+      {
+        "rok": 2007,
+        "v": 11.9,
+        "t": "11,9 na 100 000"
+      },
+      {
+        "rok": 2008,
+        "v": 11.79,
+        "t": "11,8 na 100 000"
+      },
+      {
+        "rok": 2009,
+        "v": 12.4,
+        "t": "12,4 na 100 000"
+      },
+      {
+        "rok": 2010,
+        "v": 12.77,
+        "t": "12,8 na 100 000"
+      },
+      {
+        "rok": 2011,
+        "v": 13.57,
+        "t": "13,6 na 100 000"
+      },
+      {
+        "rok": 2012,
+        "v": 13.79,
+        "t": "13,8 na 100 000"
+      },
+      {
+        "rok": 2013,
+        "v": 13.42,
+        "t": "13,4 na 100 000"
+      },
+      {
+        "rok": 2014,
+        "v": 12.49,
+        "t": "12,5 na 100 000"
+      },
+      {
+        "rok": 2015,
+        "v": 11.39,
+        "t": "11,4 na 100 000"
+      },
+      {
+        "rok": 2016,
+        "v": 11.01,
+        "t": "11,0 na 100 000"
+      },
+      {
+        "rok": 2017,
+        "v": 11.68,
+        "t": "11,7 na 100 000"
+      },
+      {
+        "rok": 2018,
+        "v": 11.22,
+        "t": "11,2 na 100 000"
+      },
+      {
+        "rok": 2019,
+        "v": 9.68,
+        "t": "9,7 na 100 000"
+      },
+      {
+        "rok": 2020,
+        "v": 9.82,
+        "t": "9,8 na 100 000"
+      },
+      {
+        "rok": 2021,
+        "v": 10.01,
+        "t": "10,0 na 100 000"
+      },
+      {
+        "rok": 2022,
+        "v": 10.56,
+        "t": "10,6 na 100 000"
+      },
+      {
+        "rok": 2023,
+        "v": 10.11,
+        "t": "10,1 na 100 000"
+      },
+      {
+        "rok": 2024,
+        "v": 12.53,
+        "t": "12,5 na 100 000"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#de1743",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              22
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Sebevraždy"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "rok",
+            "oneOf": [
+              1989,
+              2019,
+              2024
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 70,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              22
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20
+            ]
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.rok == 1989",
+            "value": "#6267a3"
+          },
+          "value": "#de1743"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 1989"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 4,
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              22
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20
+            ]
+          }
+        },
+        "text": {
+          "field": "v",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 2019"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dy": 9,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              22
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20
+            ]
+          }
+        },
+        "text": {
+          "field": "v",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 2024"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -2,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              22
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20
+            ]
+          }
+        },
+        "text": {
+          "field": "v",
+          "format": ".1f"
+        }
+      }
+    }
+  ],
+  "_source": "WHO Europe, [Health for All, HFA_176](https://dw.euro.who.int/api/v5/export/HFA_176?lang=EN&format=csv)",
+  "height": 240
+}

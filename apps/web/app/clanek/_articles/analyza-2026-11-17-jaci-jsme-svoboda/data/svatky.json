@@ -1,0 +1,467 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Volných dnů je {dnes|#de1743} třináct, v {roce 1989|#6267a3} jich bylo sedm",
+    "subtitle": "Plné kolečko = den pracovního klidu (státní nebo jiný svátek), prázdné = den, který stát připomínal, ale pracovalo se"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "radek": "1. 1. Nový rok",
+        "x0": 0,
+        "popis": "1. 1.  Nový rok",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "den volna",
+        "typ": "1989-volno"
+      },
+      {
+        "radek": "1. 1. Nový rok",
+        "x0": 0,
+        "popis": "1. 1.  Nový rok",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "25. 2. Vítězný únor",
+        "x0": 0,
+        "popis": "25. 2.  Vítězný únor",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "připomínaný pracovní den",
+        "typ": "1989-pracovni"
+      },
+      {
+        "radek": "25. 2. Vítězný únor",
+        "x0": 0,
+        "popis": "25. 2.  Vítězný únor",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "–",
+        "typ": "nic"
+      },
+      {
+        "radek": " Velký pátek",
+        "x0": 0,
+        "popis": "Velký pátek",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "–",
+        "typ": "nic"
+      },
+      {
+        "radek": " Velký pátek",
+        "x0": 0,
+        "popis": "Velký pátek",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": " Velikonoční pondělí",
+        "x0": 0,
+        "popis": "Velikonoční pondělí",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "den volna",
+        "typ": "1989-volno"
+      },
+      {
+        "radek": " Velikonoční pondělí",
+        "x0": 0,
+        "popis": "Velikonoční pondělí",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "1. 5. Svátek práce",
+        "x0": 0,
+        "popis": "1. 5.  Svátek práce",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "den volna",
+        "typ": "1989-volno"
+      },
+      {
+        "radek": "1. 5. Svátek práce",
+        "x0": 0,
+        "popis": "1. 5.  Svátek práce",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "9. 5. / 8. 5. Den osvobození / vítězství",
+        "x0": 0,
+        "popis": "9. 5. / 8. 5.  Den osvobození / vítězství",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "den volna",
+        "typ": "1989-volno"
+      },
+      {
+        "radek": "9. 5. / 8. 5. Den osvobození / vítězství",
+        "x0": 0,
+        "popis": "9. 5. / 8. 5.  Den osvobození / vítězství",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "5. 7. Cyril a Metoděj",
+        "x0": 0,
+        "popis": "5. 7.  Cyril a Metoděj",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "připomínaný pracovní den",
+        "typ": "1989-pracovni"
+      },
+      {
+        "radek": "5. 7. Cyril a Metoděj",
+        "x0": 0,
+        "popis": "5. 7.  Cyril a Metoděj",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "6. 7. Mistr Jan Hus",
+        "x0": 0,
+        "popis": "6. 7.  Mistr Jan Hus",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "připomínaný pracovní den",
+        "typ": "1989-pracovni"
+      },
+      {
+        "radek": "6. 7. Mistr Jan Hus",
+        "x0": 0,
+        "popis": "6. 7.  Mistr Jan Hus",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "29. 8. Výročí SNP",
+        "x0": 0,
+        "popis": "29. 8.  Výročí SNP",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "připomínaný pracovní den",
+        "typ": "1989-pracovni"
+      },
+      {
+        "radek": "29. 8. Výročí SNP",
+        "x0": 0,
+        "popis": "29. 8.  Výročí SNP",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "–",
+        "typ": "nic"
+      },
+      {
+        "radek": "28. 9. Den české státnosti",
+        "x0": 0,
+        "popis": "28. 9.  Den české státnosti",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "–",
+        "typ": "nic"
+      },
+      {
+        "radek": "28. 9. Den české státnosti",
+        "x0": 0,
+        "popis": "28. 9.  Den české státnosti",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "28. 10. Vznik Československa",
+        "x0": 0,
+        "popis": "28. 10.  Vznik Československa",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "den volna",
+        "typ": "1989-volno"
+      },
+      {
+        "radek": "28. 10. Vznik Československa",
+        "x0": 0,
+        "popis": "28. 10.  Vznik Československa",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "7. 11. Říjnová revoluce",
+        "x0": 0,
+        "popis": "7. 11.  Říjnová revoluce",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "připomínaný pracovní den",
+        "typ": "1989-pracovni"
+      },
+      {
+        "radek": "7. 11. Říjnová revoluce",
+        "x0": 0,
+        "popis": "7. 11.  Říjnová revoluce",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "–",
+        "typ": "nic"
+      },
+      {
+        "radek": "17. 11. Den boje za svobodu",
+        "x0": 0,
+        "popis": "17. 11.  Den boje za svobodu",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "–",
+        "typ": "nic"
+      },
+      {
+        "radek": "17. 11. Den boje za svobodu",
+        "x0": 0,
+        "popis": "17. 11.  Den boje za svobodu",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "24. 12. Štědrý den",
+        "x0": 0,
+        "popis": "24. 12.  Štědrý den",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "–",
+        "typ": "nic"
+      },
+      {
+        "radek": "24. 12. Štědrý den",
+        "x0": 0,
+        "popis": "24. 12.  Štědrý den",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "25. 12. 1. svátek vánoční",
+        "x0": 0,
+        "popis": "25. 12.  1. svátek vánoční",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "den volna",
+        "typ": "1989-volno"
+      },
+      {
+        "radek": "25. 12. 1. svátek vánoční",
+        "x0": 0,
+        "popis": "25. 12.  1. svátek vánoční",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      },
+      {
+        "radek": "26. 12. 2. svátek vánoční",
+        "x0": 0,
+        "popis": "26. 12.  2. svátek vánoční",
+        "sloupec": "1989",
+        "x": 0.8,
+        "stav": "den volna",
+        "typ": "1989-volno"
+      },
+      {
+        "radek": "26. 12. 2. svátek vánoční",
+        "x0": 0,
+        "popis": "26. 12.  2. svátek vánoční",
+        "sloupec": "dnes",
+        "x": 0.94,
+        "stav": "den volna",
+        "typ": "dnes-volno"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.sloupec == '1989' && datum.typ != 'hlavicka'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 12,
+        "color": "#333333",
+        "limit": {
+          "expr": "width * 0.72"
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "radek",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "type": "band",
+            "paddingInner": 0.25,
+            "paddingOuter": 0.2
+          }
+        },
+        "x": {
+          "field": "x0",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "orient": "top",
+            "grid": false,
+            "values": [
+              0.8,
+              0.94
+            ],
+            "labelFontSize": 13,
+            "labelFontWeight": 700,
+            "labelColor": "#101432",
+            "labelExpr": "datum.value < 0.9 ? '1989' : 'dnes'"
+          }
+        },
+        "text": {
+          "field": "popis"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.typ != 'nic' && datum.typ != 'hlavicka'"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "circle",
+        "size": 150,
+        "strokeWidth": 2,
+        "opacity": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "radek",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "type": "band",
+            "paddingInner": 0.25,
+            "paddingOuter": 0.2
+          }
+        },
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "orient": "top",
+            "grid": false,
+            "values": [
+              0.8,
+              0.94
+            ],
+            "labelFontSize": 13,
+            "labelFontWeight": 700,
+            "labelColor": "#101432",
+            "labelExpr": "datum.value < 0.9 ? '1989' : 'dnes'"
+          }
+        },
+        "stroke": {
+          "field": "sloupec",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1989",
+              "dnes"
+            ],
+            "range": [
+              "#6267a3",
+              "#de1743"
+            ]
+          }
+        },
+        "fill": {
+          "field": "typ",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1989-volno",
+              "1989-pracovni",
+              "dnes-volno"
+            ],
+            "range": [
+              "#6267a3",
+              "#f8f6f0",
+              "#de1743"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "popis",
+            "title": "Den"
+          },
+          {
+            "field": "sloupec",
+            "title": "Období"
+          },
+          {
+            "field": "stav",
+            "title": "Stav"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "zákon [93/1951 Sb.](https://static.slov-lex.sk/static/SK/ZZ/1951/93/19880921.html) ve znění z let 1988–1990, zákon [245/2000 Sb.](https://www.e-sbirka.cz/sb/2000/245)",
+  "height": {
+    "step": 22
+  }
+}

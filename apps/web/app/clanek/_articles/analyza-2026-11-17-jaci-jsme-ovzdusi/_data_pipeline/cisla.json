@@ -1,0 +1,958 @@
+{
+ "so2_emise": {
+  "1990": 1753.8,
+  "1991": 1649.7,
+  "1992": 1382.0,
+  "1993": 1302.4,
+  "1994": 1159.0,
+  "1995": 1058.8,
+  "1996": 914.3,
+  "1997": 694.4,
+  "1998": 425.3,
+  "1999": 231.9,
+  "2000": 233.7,
+  "2001": 228.7,
+  "2002": 223.4,
+  "2003": 218.4,
+  "2004": 215.1,
+  "2005": 208.5,
+  "2006": 206.8,
+  "2007": 212.1,
+  "2008": 170.1,
+  "2009": 168.8,
+  "2010": 163.9,
+  "2011": 167.5,
+  "2012": 160.2,
+  "2013": 145.3,
+  "2014": 134.5,
+  "2015": 129.9,
+  "2016": 115.6,
+  "2017": 109.7,
+  "2018": 96.6,
+  "2019": 79.1,
+  "2020": 67.1,
+  "2021": 61.4,
+  "2022": 64.6,
+  "2023": 48.5,
+  "2024": 46.9
+ },
+ "emise": [
+  {
+   "rok": 1990,
+   "SO2_kt": 1753.815,
+   "SO2_domacnosti_kt": 91.108,
+   "PM25_kt": 371.356,
+   "PM25_domacnosti_kt": 152.939,
+   "PM10_kt": 506.56,
+   "PM10_domacnosti_kt": 155.527,
+   "BaP_t": 79.729,
+   "BaP_domacnosti_t": 29.073
+  },
+  {
+   "rok": 1991,
+   "SO2_kt": 1649.744,
+   "SO2_domacnosti_kt": 87.761,
+   "PM25_kt": 299.779,
+   "PM25_domacnosti_kt": 138.207,
+   "PM10_kt": 414.255,
+   "PM10_domacnosti_kt": 140.567,
+   "BaP_t": 70.913,
+   "BaP_domacnosti_t": 25.873
+  },
+  {
+   "rok": 1992,
+   "SO2_kt": 1381.957,
+   "SO2_domacnosti_kt": 78.959,
+   "PM25_kt": 259.313,
+   "PM25_domacnosti_kt": 130.896,
+   "PM10_kt": 352.157,
+   "PM10_domacnosti_kt": 133.14,
+   "BaP_t": 64.211,
+   "BaP_domacnosti_t": 24.452
+  },
+  {
+   "rok": 1993,
+   "SO2_kt": 1302.416,
+   "SO2_domacnosti_kt": 74.905,
+   "PM25_kt": 240.64,
+   "PM25_domacnosti_kt": 124.459,
+   "PM10_kt": 324.333,
+   "PM10_domacnosti_kt": 126.587,
+   "BaP_t": 58.119,
+   "BaP_domacnosti_t": 23.167
+  },
+  {
+   "rok": 1994,
+   "SO2_kt": 1158.968,
+   "SO2_domacnosti_kt": 60.522,
+   "PM25_kt": 199.22,
+   "PM25_domacnosti_kt": 117.267,
+   "PM10_kt": 263.166,
+   "PM10_domacnosti_kt": 119.263,
+   "BaP_t": 55.722,
+   "BaP_domacnosti_t": 21.605
+  },
+  {
+   "rok": 1995,
+   "SO2_kt": 1058.823,
+   "SO2_domacnosti_kt": 52.321,
+   "PM25_kt": 177.188,
+   "PM25_domacnosti_kt": 106.372,
+   "PM10_kt": 225.544,
+   "PM10_domacnosti_kt": 108.189,
+   "BaP_t": 52.689,
+   "BaP_domacnosti_t": 19.884
+  },
+  {
+   "rok": 1996,
+   "SO2_kt": 914.323,
+   "SO2_domacnosti_kt": 55.357,
+   "PM25_kt": 183.403,
+   "PM25_domacnosti_kt": 115.249,
+   "PM10_kt": 230.841,
+   "PM10_domacnosti_kt": 117.206,
+   "BaP_t": 48.718,
+   "BaP_domacnosti_t": 21.225
+  },
+  {
+   "rok": 1997,
+   "SO2_kt": 694.356,
+   "SO2_domacnosti_kt": 53.854,
+   "PM25_kt": 152.225,
+   "PM25_domacnosti_kt": 104.569,
+   "PM10_kt": 189.015,
+   "PM10_domacnosti_kt": 106.367,
+   "BaP_t": 42.593,
+   "BaP_domacnosti_t": 19.713
+  },
+  {
+   "rok": 1998,
+   "SO2_kt": 425.314,
+   "SO2_domacnosti_kt": 35.975,
+   "PM25_kt": 110.779,
+   "PM25_domacnosti_kt": 77.026,
+   "PM10_kt": 139.173,
+   "PM10_domacnosti_kt": 78.4,
+   "BaP_t": 36.798,
+   "BaP_domacnosti_t": 15.739
+  },
+  {
+   "rok": 1999,
+   "SO2_kt": 231.883,
+   "SO2_domacnosti_kt": 25.317,
+   "PM25_kt": 84.7,
+   "PM25_domacnosti_kt": 62.713,
+   "PM10_kt": 106.263,
+   "PM10_domacnosti_kt": 63.875,
+   "BaP_t": 14.342,
+   "BaP_domacnosti_t": 13.77
+  },
+  {
+   "rok": 2000,
+   "SO2_kt": 233.706,
+   "SO2_domacnosti_kt": 24.345,
+   "PM25_kt": 84.15,
+   "PM25_domacnosti_kt": 64.774,
+   "PM10_kt": 105.109,
+   "PM10_domacnosti_kt": 65.978,
+   "BaP_t": 14.98,
+   "BaP_domacnosti_t": 14.407
+  },
+  {
+   "rok": 2001,
+   "SO2_kt": 228.679,
+   "SO2_domacnosti_kt": 26.494,
+   "PM25_kt": 86.573,
+   "PM25_domacnosti_kt": 67.545,
+   "PM10_kt": 105.963,
+   "PM10_domacnosti_kt": 68.803,
+   "BaP_t": 15.776,
+   "BaP_domacnosti_t": 15.188
+  },
+  {
+   "rok": 2002,
+   "SO2_kt": 223.374,
+   "SO2_domacnosti_kt": 23.867,
+   "PM25_kt": 81.501,
+   "PM25_domacnosti_kt": 63.861,
+   "PM10_kt": 99.614,
+   "PM10_domacnosti_kt": 65.067,
+   "BaP_t": 15.396,
+   "BaP_domacnosti_t": 14.798
+  },
+  {
+   "rok": 2003,
+   "SO2_kt": 218.365,
+   "SO2_domacnosti_kt": 24.576,
+   "PM25_kt": 82.457,
+   "PM25_domacnosti_kt": 64.306,
+   "PM10_kt": 101.024,
+   "PM10_domacnosti_kt": 65.525,
+   "BaP_t": 15.735,
+   "BaP_domacnosti_t": 15.124
+  },
+  {
+   "rok": 2004,
+   "SO2_kt": 215.08,
+   "SO2_domacnosti_kt": 23.465,
+   "PM25_kt": 82.246,
+   "PM25_domacnosti_kt": 64.161,
+   "PM10_kt": 100.662,
+   "PM10_domacnosti_kt": 65.383,
+   "BaP_t": 15.991,
+   "BaP_domacnosti_t": 15.439
+  },
+  {
+   "rok": 2005,
+   "SO2_kt": 208.468,
+   "SO2_domacnosti_kt": 19.215,
+   "PM25_kt": 73.581,
+   "PM25_domacnosti_kt": 55.841,
+   "PM10_kt": 92.852,
+   "PM10_domacnosti_kt": 56.94,
+   "BaP_t": 14.885,
+   "BaP_domacnosti_t": 14.323
+  },
+  {
+   "rok": 2006,
+   "SO2_kt": 206.761,
+   "SO2_domacnosti_kt": 20.283,
+   "PM25_kt": 75.347,
+   "PM25_domacnosti_kt": 58.286,
+   "PM10_kt": 93.731,
+   "PM10_domacnosti_kt": 59.432,
+   "BaP_t": 15.56,
+   "BaP_domacnosti_t": 14.999
+  },
+  {
+   "rok": 2007,
+   "SO2_kt": 212.068,
+   "SO2_domacnosti_kt": 18.019,
+   "PM25_kt": 72.131,
+   "PM25_domacnosti_kt": 55.434,
+   "PM10_kt": 91.407,
+   "PM10_domacnosti_kt": 56.545,
+   "BaP_t": 15.39,
+   "BaP_domacnosti_t": 14.808
+  },
+  {
+   "rok": 2008,
+   "SO2_kt": 170.103,
+   "SO2_domacnosti_kt": 16.883,
+   "PM25_kt": 70.166,
+   "PM25_domacnosti_kt": 54.739,
+   "PM10_kt": 88.869,
+   "PM10_domacnosti_kt": 55.852,
+   "BaP_t": 15.677,
+   "BaP_domacnosti_t": 15.118
+  },
+  {
+   "rok": 2009,
+   "SO2_kt": 168.772,
+   "SO2_domacnosti_kt": 18.997,
+   "PM25_kt": 73.28,
+   "PM25_domacnosti_kt": 58.949,
+   "PM10_kt": 89.586,
+   "PM10_domacnosti_kt": 60.144,
+   "BaP_t": 16.87,
+   "BaP_domacnosti_t": 16.34
+  },
+  {
+   "rok": 2010,
+   "SO2_kt": 163.881,
+   "SO2_domacnosti_kt": 22.354,
+   "PM25_kt": 81.372,
+   "PM25_domacnosti_kt": 67.092,
+   "PM10_kt": 97.118,
+   "PM10_domacnosti_kt": 68.423,
+   "BaP_t": 18.74,
+   "BaP_domacnosti_t": 18.213
+  },
+  {
+   "rok": 2011,
+   "SO2_kt": 167.508,
+   "SO2_domacnosti_kt": 23.562,
+   "PM25_kt": 80.566,
+   "PM25_domacnosti_kt": 67.215,
+   "PM10_kt": 96.356,
+   "PM10_domacnosti_kt": 68.555,
+   "BaP_t": 18.888,
+   "BaP_domacnosti_t": 18.364
+  },
+  {
+   "rok": 2012,
+   "SO2_kt": 160.202,
+   "SO2_domacnosti_kt": 23.338,
+   "PM25_kt": 82.416,
+   "PM25_domacnosti_kt": 69.803,
+   "PM10_kt": 98.396,
+   "PM10_domacnosti_kt": 71.195,
+   "BaP_t": 19.956,
+   "BaP_domacnosti_t": 19.438
+  },
+  {
+   "rok": 2013,
+   "SO2_kt": 145.253,
+   "SO2_domacnosti_kt": 24.888,
+   "PM25_kt": 84.078,
+   "PM25_domacnosti_kt": 71.944,
+   "PM10_kt": 99.057,
+   "PM10_domacnosti_kt": 73.382,
+   "BaP_t": 20.612,
+   "BaP_domacnosti_t": 20.094
+  },
+  {
+   "rok": 2014,
+   "SO2_kt": 134.491,
+   "SO2_domacnosti_kt": 19.312,
+   "PM25_kt": 78.532,
+   "PM25_domacnosti_kt": 66.723,
+   "PM10_kt": 93.557,
+   "PM10_domacnosti_kt": 68.086,
+   "BaP_t": 20.131,
+   "BaP_domacnosti_t": 19.611
+  },
+  {
+   "rok": 2015,
+   "SO2_kt": 129.864,
+   "SO2_domacnosti_kt": 22.111,
+   "PM25_kt": 80.898,
+   "PM25_domacnosti_kt": 69.673,
+   "PM10_kt": 96.02,
+   "PM10_domacnosti_kt": 71.088,
+   "BaP_t": 20.971,
+   "BaP_domacnosti_t": 20.457
+  },
+  {
+   "rok": 2016,
+   "SO2_kt": 115.631,
+   "SO2_domacnosti_kt": 21.508,
+   "PM25_kt": 77.659,
+   "PM25_domacnosti_kt": 66.989,
+   "PM10_kt": 92.385,
+   "PM10_domacnosti_kt": 68.361,
+   "BaP_t": 20.509,
+   "BaP_domacnosti_t": 19.992
+  },
+  {
+   "rok": 2017,
+   "SO2_kt": 109.732,
+   "SO2_domacnosti_kt": 22.438,
+   "PM25_kt": 75.579,
+   "PM25_domacnosti_kt": 64.998,
+   "PM10_kt": 90.383,
+   "PM10_domacnosti_kt": 66.335,
+   "BaP_t": 20.213,
+   "BaP_domacnosti_t": 19.689
+  },
+  {
+   "rok": 2018,
+   "SO2_kt": 96.579,
+   "SO2_domacnosti_kt": 19.55,
+   "PM25_kt": 70.293,
+   "PM25_domacnosti_kt": 60.083,
+   "PM10_kt": 84.776,
+   "PM10_domacnosti_kt": 61.346,
+   "BaP_t": 19.721,
+   "BaP_domacnosti_t": 19.197
+  },
+  {
+   "rok": 2019,
+   "SO2_kt": 79.092,
+   "SO2_domacnosti_kt": 16.528,
+   "PM25_kt": 63.008,
+   "PM25_domacnosti_kt": 53.222,
+   "PM10_kt": 78.022,
+   "PM10_domacnosti_kt": 54.389,
+   "BaP_t": 19.062,
+   "BaP_domacnosti_t": 18.543
+  },
+  {
+   "rok": 2020,
+   "SO2_kt": 67.146,
+   "SO2_domacnosti_kt": 16.239,
+   "PM25_kt": 59.231,
+   "PM25_domacnosti_kt": 50.308,
+   "PM10_kt": 73.076,
+   "PM10_domacnosti_kt": 51.425,
+   "BaP_t": 18.679,
+   "BaP_domacnosti_t": 18.167
+  },
+  {
+   "rok": 2021,
+   "SO2_kt": 60.233,
+   "SO2_domacnosti_kt": 14.836,
+   "PM25_kt": 58.73,
+   "PM25_domacnosti_kt": 49.755,
+   "PM10_kt": 73.156,
+   "PM10_domacnosti_kt": 50.885,
+   "BaP_t": 19.455,
+   "BaP_domacnosti_t": 18.928
+  },
+  {
+   "rok": 2022,
+   "SO2_kt": 64.178,
+   "SO2_domacnosti_kt": 16.958,
+   "PM25_kt": 54.8,
+   "PM25_domacnosti_kt": 45.836,
+   "PM10_kt": 69.036,
+   "PM10_domacnosti_kt": 46.869,
+   "BaP_t": 17.901,
+   "BaP_domacnosti_t": 17.384
+  },
+  {
+   "rok": 2023,
+   "SO2_kt": 48.457,
+   "SO2_domacnosti_kt": 11.284,
+   "PM25_kt": 42.642,
+   "PM25_domacnosti_kt": 34.677,
+   "PM10_kt": 55.696,
+   "PM10_domacnosti_kt": 35.492,
+   "BaP_t": 14.814,
+   "BaP_domacnosti_t": 14.309
+  }
+ ],
+ "so2_ustecky": [
+  {
+   "rok": 1980,
+   "v": 73.5,
+   "n": 28
+  },
+  {
+   "rok": 1981,
+   "v": 71.9,
+   "n": 28
+  },
+  {
+   "rok": 1982,
+   "v": 102.0,
+   "n": 25
+  },
+  {
+   "rok": 1983,
+   "v": 70.1,
+   "n": 17
+  },
+  {
+   "rok": 1984,
+   "v": 81.0,
+   "n": 32
+  },
+  {
+   "rok": 1985,
+   "v": 86.3,
+   "n": 26
+  },
+  {
+   "rok": 1986,
+   "v": 82.8,
+   "n": 31
+  },
+  {
+   "rok": 1987,
+   "v": 91.3,
+   "n": 27
+  },
+  {
+   "rok": 1988,
+   "v": 60.7,
+   "n": 34
+  },
+  {
+   "rok": 1989,
+   "v": 69.5,
+   "n": 35
+  },
+  {
+   "rok": 1990,
+   "v": 55.8,
+   "n": 26
+  },
+  {
+   "rok": 1991,
+   "v": 70.1,
+   "n": 35
+  },
+  {
+   "rok": 1992,
+   "v": 45.2,
+   "n": 26
+  },
+  {
+   "rok": 1993,
+   "v": 47.4,
+   "n": 21
+  },
+  {
+   "rok": 1994,
+   "v": 39.3,
+   "n": 36
+  },
+  {
+   "rok": 1995,
+   "v": 36.8,
+   "n": 34
+  },
+  {
+   "rok": 1996,
+   "v": 36.3,
+   "n": 32
+  },
+  {
+   "rok": 1997,
+   "v": 28.3,
+   "n": 37
+  },
+  {
+   "rok": 1998,
+   "v": 17.9,
+   "n": 34
+  },
+  {
+   "rok": 1999,
+   "v": 10.8,
+   "n": 36
+  },
+  {
+   "rok": 2000,
+   "v": 9.5,
+   "n": 33
+  },
+  {
+   "rok": 2001,
+   "v": 8.4,
+   "n": 34
+  },
+  {
+   "rok": 2002,
+   "v": 9.2,
+   "n": 35
+  },
+  {
+   "rok": 2003,
+   "v": 10.7,
+   "n": 18
+  },
+  {
+   "rok": 2004,
+   "v": 8.6,
+   "n": 17
+  },
+  {
+   "rok": 2005,
+   "v": 10.1,
+   "n": 14
+  },
+  {
+   "rok": 2006,
+   "v": 10.0,
+   "n": 19
+  },
+  {
+   "rok": 2007,
+   "v": 8.2,
+   "n": 18
+  },
+  {
+   "rok": 2008,
+   "v": 6.5,
+   "n": 15
+  },
+  {
+   "rok": 2009,
+   "v": 7.1,
+   "n": 16
+  },
+  {
+   "rok": 2010,
+   "v": 7.7,
+   "n": 16
+  },
+  {
+   "rok": 2011,
+   "v": 8.8,
+   "n": 14
+  },
+  {
+   "rok": 2012,
+   "v": 7.6,
+   "n": 15
+  },
+  {
+   "rok": 2013,
+   "v": 7.8,
+   "n": 11
+  },
+  {
+   "rok": 2014,
+   "v": 7.7,
+   "n": 11
+  },
+  {
+   "rok": 2015,
+   "v": 7.1,
+   "n": 9
+  },
+  {
+   "rok": 2016,
+   "v": 6.5,
+   "n": 10
+  },
+  {
+   "rok": 2017,
+   "v": 6.7,
+   "n": 10
+  },
+  {
+   "rok": 2018,
+   "v": 5.5,
+   "n": 11
+  },
+  {
+   "rok": 2019,
+   "v": 5.8,
+   "n": 11
+  },
+  {
+   "rok": 2020,
+   "v": 5.2,
+   "n": 10
+  },
+  {
+   "rok": 2021,
+   "v": 4.7,
+   "n": 10
+  },
+  {
+   "rok": 2022,
+   "v": 4.2,
+   "n": 11
+  },
+  {
+   "rok": 2023,
+   "v": 3.9,
+   "n": 11
+  },
+  {
+   "rok": 2024,
+   "v": 5.1,
+   "n": 11
+  },
+  {
+   "rok": 2025,
+   "v": 3.9,
+   "n": 11
+  }
+ ],
+ "obyv_bap_nad_1": 1031284,
+ "obyv_pm25_nad_20": 1683,
+ "obyv_pm25_nad_10": 9128479,
+ "obyv_pm25_nad_5": 10524421,
+ "kraje": [
+  {
+   "kraj": "Moravskoslezský kraj",
+   "nad": 851183,
+   "obyv": 1161669,
+   "podil": 73.3
+  },
+  {
+   "kraj": "Olomoucký kraj",
+   "nad": 96388,
+   "obyv": 620066,
+   "podil": 15.5
+  },
+  {
+   "kraj": "Zlínský kraj",
+   "nad": 45621,
+   "obyv": 563888,
+   "podil": 8.1
+  },
+  {
+   "kraj": "Ústecký kraj",
+   "nad": 17708,
+   "obyv": 790237,
+   "podil": 2.2
+  },
+  {
+   "kraj": "Jihomoravský kraj",
+   "nad": 6033,
+   "obyv": 1197894,
+   "podil": 0.5
+  },
+  {
+   "kraj": "Pardubický kraj",
+   "nad": 5027,
+   "obyv": 510645,
+   "podil": 1.0
+  },
+  {
+   "kraj": "Středočeský kraj",
+   "nad": 4683,
+   "obyv": 1416028,
+   "podil": 0.3
+  },
+  {
+   "kraj": "Královéhradecký kraj",
+   "nad": 3870,
+   "obyv": 538340,
+   "podil": 0.7
+  },
+  {
+   "kraj": "Plzeňský kraj",
+   "nad": 772,
+   "obyv": 581959,
+   "podil": 0.1
+  },
+  {
+   "kraj": "Hlavní město Praha",
+   "nad": 0,
+   "obyv": 1300143,
+   "podil": 0.0
+  },
+  {
+   "kraj": "Kraj Vysočina",
+   "nad": 0,
+   "obyv": 497232,
+   "podil": 0.0
+  },
+  {
+   "kraj": "Karlovarský kraj",
+   "nad": 0,
+   "obyv": 279870,
+   "podil": 0.0
+  },
+  {
+   "kraj": "Jihočeský kraj",
+   "nad": 0,
+   "obyv": 632103,
+   "podil": 0.0
+  },
+  {
+   "kraj": "Liberecký kraj",
+   "nad": 0,
+   "obyv": 435724,
+   "podil": 0.0
+  }
+ ],
+ "kvintily": [
+  {
+   "kvintil": 1,
+   "od": 0,
+   "do": 22,
+   "median_bap": 0.56,
+   "podil_nad": 4.0
+  },
+  {
+   "kvintil": 2,
+   "od": 22,
+   "do": 40,
+   "median_bap": 0.52,
+   "podil_nad": 4.2
+  },
+  {
+   "kvintil": 3,
+   "od": 40,
+   "do": 57,
+   "median_bap": 0.44,
+   "podil_nad": 0.5
+  },
+  {
+   "kvintil": 4,
+   "od": 57,
+   "do": 73,
+   "median_bap": 0.39,
+   "podil_nad": 0.2
+  },
+  {
+   "kvintil": 5,
+   "od": 73,
+   "do": 100,
+   "median_bap": 0.34,
+   "podil_nad": 0.1
+  }
+ ],
+ "velikost": [
+  {
+   "skupina": "do 2 000 obyvatel",
+   "obci": 5558,
+   "nad": 53187,
+   "obyv": 2929963,
+   "podil": 1.8,
+   "pevna": 52.4
+  },
+  {
+   "skupina": "2 000–9 999",
+   "obci": 566,
+   "nad": 211118,
+   "obyv": 2223828,
+   "podil": 9.5,
+   "pevna": 16.5
+  },
+  {
+   "skupina": "10 000 a víc",
+   "obci": 130,
+   "nad": 766980,
+   "obyv": 5370370,
+   "podil": 14.3,
+   "pevna": 4.2
+  }
+ ],
+ "piskoty": [
+  {
+   "oblast": "east",
+   "n": 170,
+   "pct": 37.1
+  },
+  {
+   "oblast": "south",
+   "n": 677,
+   "pct": 10.0
+  },
+  {
+   "oblast": "center",
+   "n": 289,
+   "pct": 10.7
+  },
+  {
+   "oblast": "west",
+   "n": 268,
+   "pct": 13.1
+  }
+ ],
+ "stehovani_msk": [
+  {
+   "rok": 2000,
+   "deti": -402,
+   "celkem": -2286
+  },
+  {
+   "rok": 2001,
+   "deti": -394,
+   "celkem": -2372
+  },
+  {
+   "rok": 2002,
+   "deti": -345,
+   "celkem": -2315
+  },
+  {
+   "rok": 2003,
+   "deti": -327,
+   "celkem": -2182
+  },
+  {
+   "rok": 2004,
+   "deti": -350,
+   "celkem": -2384
+  },
+  {
+   "rok": 2005,
+   "deti": -398,
+   "celkem": -2763
+  },
+  {
+   "rok": 2006,
+   "deti": -420,
+   "celkem": -2897
+  },
+  {
+   "rok": 2007,
+   "deti": -359,
+   "celkem": -3098
+  },
+  {
+   "rok": 2008,
+   "deti": -322,
+   "celkem": -2811
+  },
+  {
+   "rok": 2009,
+   "deti": -389,
+   "celkem": -2754
+  },
+  {
+   "rok": 2010,
+   "deti": -328,
+   "celkem": -2950
+  },
+  {
+   "rok": 2011,
+   "deti": -568,
+   "celkem": -2991
+  },
+  {
+   "rok": 2012,
+   "deti": -465,
+   "celkem": -2879
+  },
+  {
+   "rok": 2013,
+   "deti": -516,
+   "celkem": -3063
+  },
+  {
+   "rok": 2014,
+   "deti": -459,
+   "celkem": -3449
+  },
+  {
+   "rok": 2015,
+   "deti": -483,
+   "celkem": -3203
+  },
+  {
+   "rok": 2016,
+   "deti": -296,
+   "celkem": -3012
+  },
+  {
+   "rok": 2017,
+   "deti": -356,
+   "celkem": -3220
+  },
+  {
+   "rok": 2018,
+   "deti": -243,
+   "celkem": -2653
+  },
+  {
+   "rok": 2019,
+   "deti": -257,
+   "celkem": -2335
+  },
+  {
+   "rok": 2020,
+   "deti": -183,
+   "celkem": -2233
+  },
+  {
+   "rok": 2021,
+   "deti": -323,
+   "celkem": -2454
+  },
+  {
+   "rok": 2022,
+   "deti": -320,
+   "celkem": -2352
+  },
+  {
+   "rok": 2023,
+   "deti": -250,
+   "celkem": -1866
+  },
+  {
+   "rok": 2024,
+   "deti": -197,
+   "celkem": -2299
+  },
+  {
+   "rok": 2025,
+   "deti": -176,
+   "celkem": -2511
+  }
+ ],
+ "astma_ostrava_2010": 71.0,
+ "astma_cr_2010": 57.4,
+ "astma_ostrava_2025": 67.7,
+ "astma_cr_2025": 48.2
+}

@@ -1,0 +1,1502 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Svobodných je od roku {2014|#de1743} víc než ženatých a vdaných",
+    "subtitle": "Podíl obyvatel podle rodinného stavu v % (všichni obyvatelé včetně dětí), 1989–2025"
+  },
+  "width": "container",
+  "height": 260,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "scale": {
+      "zero": false
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2014
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#101432",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "opacity": 0.6
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2014,
+            "v": 58,
+            "text": "2014"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dx": 0,
+        "dy": 0,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'svobodní'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#de1743",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#de1743"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              60
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'ženatí a vdané'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#101432",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#101432"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              60
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'rozvedení'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#6267a3",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#6267a3"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              60
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'ovdovělí'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#bcbcb0",
+        "strokeWidth": 2,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#bcbcb0"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              60
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "v": 49.73012232460171,
+            "text": "ženatí a vdané 49,7 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 0,
+        "dy": -8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "v": 37.24700837725782,
+            "text": "svobodní 37,2 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 44.50021661184266,
+            "text": "44,5 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": 0,
+        "dy": -8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 37.307860623448185,
+            "text": "37,3 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 11.567090720191091,
+            "text": "rozvedení 11,6 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": 0,
+        "dy": -8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 6.624832044518063,
+            "text": "ovdovělí 6,6 %"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 400,
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026)",
+  "data": {
+    "values": [
+      {
+        "rada": "svobodní",
+        "rok": 1989,
+        "v": 37.24700837725782,
+        "t": "37,2 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1990,
+        "v": 37.00243262238082,
+        "t": "37,0 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1991,
+        "v": 36.90860881326322,
+        "t": "36,9 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1992,
+        "v": 36.8427235468947,
+        "t": "36,8 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1993,
+        "v": 36.89103158666435,
+        "t": "36,9 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1994,
+        "v": 36.99368470112873,
+        "t": "37,0 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1995,
+        "v": 37.09108038643029,
+        "t": "37,1 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1996,
+        "v": 37.16469186509016,
+        "t": "37,2 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1997,
+        "v": 37.203811003361935,
+        "t": "37,2 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1998,
+        "v": 37.26428796551399,
+        "t": "37,3 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 1999,
+        "v": 37.33885393970752,
+        "t": "37,3 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2000,
+        "v": 37.388007612297265,
+        "t": "37,4 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2001,
+        "v": 37.59436692690769,
+        "t": "37,6 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2002,
+        "v": 37.72868283684376,
+        "t": "37,7 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2003,
+        "v": 37.94671768127069,
+        "t": "37,9 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2004,
+        "v": 38.11723154182,
+        "t": "38,1 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2005,
+        "v": 38.34117364620837,
+        "t": "38,3 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2006,
+        "v": 38.55500273203885,
+        "t": "38,6 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2007,
+        "v": 38.82378893241872,
+        "t": "38,8 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2008,
+        "v": 39.22495844774255,
+        "t": "39,2 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2009,
+        "v": 39.63076148780796,
+        "t": "39,6 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2010,
+        "v": 40.01368111142653,
+        "t": "40,0 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2011,
+        "v": 40.229480997711185,
+        "t": "40,2 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2012,
+        "v": 40.573614330373594,
+        "t": "40,6 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2013,
+        "v": 40.93061739643368,
+        "t": "40,9 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2014,
+        "v": 41.27365247158572,
+        "t": "41,3 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2015,
+        "v": 41.59291549059428,
+        "t": "41,6 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2016,
+        "v": 41.872307119319544,
+        "t": "41,9 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2017,
+        "v": 42.148009600327235,
+        "t": "42,1 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2018,
+        "v": 42.400542733196865,
+        "t": "42,4 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2019,
+        "v": 42.633832117426515,
+        "t": "42,6 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2020,
+        "v": 43.0503457509907,
+        "t": "43,1 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2021,
+        "v": 43.22386275475774,
+        "t": "43,2 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2022,
+        "v": 43.69757864421328,
+        "t": "43,7 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2023,
+        "v": 43.923102997966616,
+        "t": "43,9 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2024,
+        "v": 44.165635455337096,
+        "t": "44,2 %"
+      },
+      {
+        "rada": "svobodní",
+        "rok": 2025,
+        "v": 44.50021661184266,
+        "t": "44,5 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1989,
+        "v": 49.73012232460171,
+        "t": "49,7 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1990,
+        "v": 49.8381049860075,
+        "t": "49,8 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1991,
+        "v": 49.45635162134518,
+        "t": "49,5 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1992,
+        "v": 49.40181762064101,
+        "t": "49,4 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1993,
+        "v": 49.185722913257415,
+        "t": "49,2 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1994,
+        "v": 48.89078956574856,
+        "t": "48,9 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1995,
+        "v": 48.58184166713172,
+        "t": "48,6 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1996,
+        "v": 48.25413611246024,
+        "t": "48,3 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1997,
+        "v": 48.01995315135994,
+        "t": "48,0 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1998,
+        "v": 47.73749198342679,
+        "t": "47,7 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 1999,
+        "v": 47.595878147883006,
+        "t": "47,6 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2000,
+        "v": 47.3565890612091,
+        "t": "47,4 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2001,
+        "v": 46.573661952125114,
+        "t": "46,6 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2002,
+        "v": 46.2306149137105,
+        "t": "46,2 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2003,
+        "v": 45.78094894410248,
+        "t": "45,8 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2004,
+        "v": 45.37879808547012,
+        "t": "45,4 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2005,
+        "v": 44.98781055145512,
+        "t": "45,0 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2006,
+        "v": 44.5901693844645,
+        "t": "44,6 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2007,
+        "v": 44.240915969648775,
+        "t": "44,2 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2008,
+        "v": 43.78605789210113,
+        "t": "43,8 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2009,
+        "v": 43.287645835135734,
+        "t": "43,3 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2010,
+        "v": 42.74186182742052,
+        "t": "42,7 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2011,
+        "v": 41.97845022271784,
+        "t": "42,0 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2012,
+        "v": 41.519067146881575,
+        "t": "41,5 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2013,
+        "v": 40.99063212758167,
+        "t": "41,0 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2014,
+        "v": 40.535685394431255,
+        "t": "40,5 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2015,
+        "v": 40.13760674666091,
+        "t": "40,1 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2016,
+        "v": 39.813674871110386,
+        "t": "39,8 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2017,
+        "v": 39.5073352588653,
+        "t": "39,5 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2018,
+        "v": 39.26709421773179,
+        "t": "39,3 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2019,
+        "v": 39.05188724192274,
+        "t": "39,1 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2020,
+        "v": 38.65073062165283,
+        "t": "38,7 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2021,
+        "v": 38.16488374165031,
+        "t": "38,2 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2022,
+        "v": 37.97289298417026,
+        "t": "38,0 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2023,
+        "v": 37.83740369183037,
+        "t": "37,8 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2024,
+        "v": 37.62429992208626,
+        "t": "37,6 %"
+      },
+      {
+        "rada": "ženatí a vdané",
+        "rok": 2025,
+        "v": 37.307860623448185,
+        "t": "37,3 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1989,
+        "v": 5.439185987553491,
+        "t": "5,4 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1990,
+        "v": 5.62340821086278,
+        "t": "5,6 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1991,
+        "v": 5.683144456636711,
+        "t": "5,7 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1992,
+        "v": 5.852205424970344,
+        "t": "5,9 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1993,
+        "v": 6.085157818168025,
+        "t": "6,1 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1994,
+        "v": 6.350951078764765,
+        "t": "6,4 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1995,
+        "v": 6.626811392004763,
+        "t": "6,6 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1996,
+        "v": 6.940687663768558,
+        "t": "6,9 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1997,
+        "v": 7.201407886592308,
+        "t": "7,2 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1998,
+        "v": 7.483861650492278,
+        "t": "7,5 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 1999,
+        "v": 7.607895935609877,
+        "t": "7,6 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2000,
+        "v": 7.839394086385042,
+        "t": "7,8 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2001,
+        "v": 8.184169282989675,
+        "t": "8,2 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2002,
+        "v": 8.446508663056909,
+        "t": "8,4 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2003,
+        "v": 8.7389211429713,
+        "t": "8,7 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2004,
+        "v": 9.02309135775798,
+        "t": "9,0 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2005,
+        "v": 9.262078655329843,
+        "t": "9,3 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2006,
+        "v": 9.498056271737596,
+        "t": "9,5 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2007,
+        "v": 9.664053913205981,
+        "t": "9,7 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2008,
+        "v": 9.801097526047663,
+        "t": "9,8 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2009,
+        "v": 9.955207159392671,
+        "t": "10,0 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2010,
+        "v": 10.16059403176942,
+        "t": "10,2 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2011,
+        "v": 10.533366268634978,
+        "t": "10,5 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2012,
+        "v": 10.686674036301394,
+        "t": "10,7 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2013,
+        "v": 10.88991981769372,
+        "t": "10,9 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2014,
+        "v": 11.051543065634556,
+        "t": "11,1 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2015,
+        "v": 11.186816025214702,
+        "t": "11,2 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2016,
+        "v": 11.281192042212647,
+        "t": "11,3 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2017,
+        "v": 11.372278466039996,
+        "t": "11,4 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2018,
+        "v": 11.419660463107288,
+        "t": "11,4 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2019,
+        "v": 11.459304190906645,
+        "t": "11,5 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2020,
+        "v": 11.487026874135015,
+        "t": "11,5 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2021,
+        "v": 11.73358732918964,
+        "t": "11,7 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2022,
+        "v": 11.586290833300932,
+        "t": "11,6 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2023,
+        "v": 11.540128002656745,
+        "t": "11,5 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2024,
+        "v": 11.543892937348183,
+        "t": "11,5 %"
+      },
+      {
+        "rada": "rozvedení",
+        "rok": 2025,
+        "v": 11.567090720191091,
+        "t": "11,6 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1989,
+        "v": 7.583683310586983,
+        "t": "7,6 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1990,
+        "v": 7.5360541807488985,
+        "t": "7,5 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1991,
+        "v": 7.951895108754887,
+        "t": "8,0 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1992,
+        "v": 7.903253407493945,
+        "t": "7,9 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1993,
+        "v": 7.8380876819102125,
+        "t": "7,8 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1994,
+        "v": 7.764574654357944,
+        "t": "7,8 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1995,
+        "v": 7.700266554433222,
+        "t": "7,7 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1996,
+        "v": 7.640484358681042,
+        "t": "7,6 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1997,
+        "v": 7.574827958685811,
+        "t": "7,6 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1998,
+        "v": 7.514358400566941,
+        "t": "7,5 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 1999,
+        "v": 7.457371976799598,
+        "t": "7,5 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2000,
+        "v": 7.4160092401086,
+        "t": "7,4 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2001,
+        "v": 7.647801837977528,
+        "t": "7,6 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2002,
+        "v": 7.594193586388832,
+        "t": "7,6 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2003,
+        "v": 7.533412231655529,
+        "t": "7,5 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2004,
+        "v": 7.4808790149518956,
+        "t": "7,5 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2005,
+        "v": 7.408937147006671,
+        "t": "7,4 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2006,
+        "v": 7.3567716117590525,
+        "t": "7,4 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2007,
+        "v": 7.271241184726518,
+        "t": "7,3 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2008,
+        "v": 7.187886134108656,
+        "t": "7,2 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2009,
+        "v": 7.126385517663635,
+        "t": "7,1 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2010,
+        "v": 7.083863029383533,
+        "t": "7,1 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2011,
+        "v": 7.258702510935995,
+        "t": "7,3 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2012,
+        "v": 7.220644486443438,
+        "t": "7,2 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2013,
+        "v": 7.188830658290922,
+        "t": "7,2 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2014,
+        "v": 7.139119068348472,
+        "t": "7,1 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2015,
+        "v": 7.082661737530111,
+        "t": "7,1 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2016,
+        "v": 7.032825967357417,
+        "t": "7,0 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2017,
+        "v": 6.972376674767474,
+        "t": "7,0 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2018,
+        "v": 6.912702585964056,
+        "t": "6,9 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2019,
+        "v": 6.854976449744103,
+        "t": "6,9 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2020,
+        "v": 6.811896753221451,
+        "t": "6,8 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2021,
+        "v": 6.877666174402311,
+        "t": "6,9 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2022,
+        "v": 6.743237538315529,
+        "t": "6,7 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2023,
+        "v": 6.699365307546268,
+        "t": "6,7 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2024,
+        "v": 6.666171685228471,
+        "t": "6,7 %"
+      },
+      {
+        "rada": "ovdovělí",
+        "rok": 2025,
+        "v": 6.624832044518063,
+        "t": "6,6 %"
+      }
+    ]
+  }
+}

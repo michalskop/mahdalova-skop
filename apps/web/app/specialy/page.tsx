@@ -21,6 +21,15 @@ const WHITE = '#ffffff';
 
 const TILES = [
   {
+    href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026',
+    title: 'Jací jsme byli, jací jsme',
+    description: 'Česko 1989 × 2026 ve 13 kapitolách: od rodiny a zdraví po svobodu',
+    bg: '#101432',
+    external: false,
+    logo: 'flag',
+    coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v2.png',
+  },
+  {
     href: '/specialy/komunalni-a-senatni-volby-2026',
     title: 'Komunální a senátní volby 2026',
     // description: popis pro OG / meta (stránka speciálu) – na kartě se nezobrazuje.

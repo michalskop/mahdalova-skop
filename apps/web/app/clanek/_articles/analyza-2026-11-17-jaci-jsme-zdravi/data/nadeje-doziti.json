@@ -1,0 +1,826 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Muži se dnes dožívají déle, než se v roce 1989 dožívaly {ženy|#f76800}",
+    "subtitle": "Naděje dožití při narození v letech, 1989–2025"
+  },
+  "width": "container",
+  "height": 270,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "scale": {
+      "zero": false
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "v": 75.4629650588
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#f76800",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "opacity": 0.8
+      },
+      "encoding": {
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'ženy'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#f76800",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#f76800"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              64,
+              86
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              65,
+              70,
+              75,
+              80,
+              85
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rada == 'muži'"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#06677d",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {
+          "filled": true,
+          "size": 16,
+          "color": "#06677d"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2025
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2025
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              64,
+              86
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              65,
+              70,
+              75,
+              80,
+              85
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rada",
+            "title": "Řada"
+          },
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Hodnota"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "v": 75.4629650588,
+            "text": "ženy v roce 1989: 75,5"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 6,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 1989,
+            "v": 68.1393371006,
+            "text": "muži 68,1"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 83.1945822813,
+            "text": "83,2"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": 0,
+        "dy": -8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#f76800"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2025,
+            "v": 77.492443162,
+            "text": "77,5"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "color": "#06677d"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": 2021,
+            "v": 74.0931411952,
+            "text": "covid"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "dx": 0,
+        "dy": 8,
+        "fontSize": 10.5,
+        "fontWeight": 400,
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026)",
+  "data": {
+    "values": [
+      {
+        "rada": "muži",
+        "rok": 1989,
+        "v": 68.1393371006,
+        "t": "68,1 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1990,
+        "v": 67.5700799894,
+        "t": "67,6 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1991,
+        "v": 68.2333679175,
+        "t": "68,2 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1992,
+        "v": 68.5439215368,
+        "t": "68,5 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1993,
+        "v": 69.2776824308,
+        "t": "69,3 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1994,
+        "v": 69.5226380962,
+        "t": "69,5 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1995,
+        "v": 69.7074367658,
+        "t": "69,7 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1996,
+        "v": 70.351494331,
+        "t": "70,4 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1997,
+        "v": 70.4873288516,
+        "t": "70,5 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1998,
+        "v": 71.1143054026,
+        "t": "71,1 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 1999,
+        "v": 71.4022227178,
+        "t": "71,4 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2000,
+        "v": 71.6265464972,
+        "t": "71,6 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2001,
+        "v": 72.0261848818,
+        "t": "72,0 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2002,
+        "v": 72.0772014499,
+        "t": "72,1 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2003,
+        "v": 72.062250972,
+        "t": "72,1 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2004,
+        "v": 72.5638938613,
+        "t": "72,6 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2005,
+        "v": 72.9100238422,
+        "t": "72,9 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2006,
+        "v": 73.4414269844,
+        "t": "73,4 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2007,
+        "v": 73.6689831281,
+        "t": "73,7 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2008,
+        "v": 74.0211756026,
+        "t": "74,0 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2009,
+        "v": 74.1738106018,
+        "t": "74,2 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2010,
+        "v": 74.3985739607,
+        "t": "74,4 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2011,
+        "v": 74.7098524846,
+        "t": "74,7 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2012,
+        "v": 74.9582726458,
+        "t": "75,0 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2013,
+        "v": 75.1531452448,
+        "t": "75,2 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2014,
+        "v": 75.7075451827,
+        "t": "75,7 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2015,
+        "v": 75.6148426981,
+        "t": "75,6 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2016,
+        "v": 76.044936268,
+        "t": "76,0 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2017,
+        "v": 76.0048893891,
+        "t": "76,0 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2018,
+        "v": 76.0839391341,
+        "t": "76,1 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2019,
+        "v": 76.3289995826,
+        "t": "76,3 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2020,
+        "v": 75.3035998674,
+        "t": "75,3 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2021,
+        "v": 74.0931411952,
+        "t": "74,1 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2022,
+        "v": 76.1483805299,
+        "t": "76,1 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2023,
+        "v": 76.8940928261,
+        "t": "76,9 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2024,
+        "v": 77.1537508479,
+        "t": "77,2 let"
+      },
+      {
+        "rada": "muži",
+        "rok": 2025,
+        "v": 77.492443162,
+        "t": "77,5 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1989,
+        "v": 75.4629650588,
+        "t": "75,5 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1990,
+        "v": 75.4286970604,
+        "t": "75,4 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1991,
+        "v": 75.75431687,
+        "t": "75,8 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1992,
+        "v": 76.2163906874,
+        "t": "76,2 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1993,
+        "v": 76.4591109565,
+        "t": "76,5 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1994,
+        "v": 76.6704794245,
+        "t": "76,7 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1995,
+        "v": 76.6874955815,
+        "t": "76,7 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1996,
+        "v": 77.3641868025,
+        "t": "77,4 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1997,
+        "v": 77.4760124689,
+        "t": "77,5 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1998,
+        "v": 78.0252254942,
+        "t": "78,0 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 1999,
+        "v": 78.1370972527,
+        "t": "78,1 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2000,
+        "v": 78.3898206659,
+        "t": "78,4 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2001,
+        "v": 78.5149246523,
+        "t": "78,5 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2002,
+        "v": 78.6968520681,
+        "t": "78,7 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2003,
+        "v": 78.6429714726,
+        "t": "78,6 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2004,
+        "v": 79.2042151889,
+        "t": "79,2 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2005,
+        "v": 79.3439895802,
+        "t": "79,3 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2006,
+        "v": 79.8501110076,
+        "t": "79,9 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2007,
+        "v": 80.0554464978,
+        "t": "80,1 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2008,
+        "v": 80.2943482573,
+        "t": "80,3 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2009,
+        "v": 80.3025748223,
+        "t": "80,3 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2010,
+        "v": 80.631133236,
+        "t": "80,6 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2011,
+        "v": 80.8332229218,
+        "t": "80,8 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2012,
+        "v": 80.9939649002,
+        "t": "81,0 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2013,
+        "v": 81.1573956667,
+        "t": "81,2 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2014,
+        "v": 81.7288420906,
+        "t": "81,7 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2015,
+        "v": 81.4535557999,
+        "t": "81,5 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2016,
+        "v": 81.8260870838,
+        "t": "81,8 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2017,
+        "v": 81.8451273946,
+        "t": "81,8 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2018,
+        "v": 81.891750582,
+        "t": "81,9 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2019,
+        "v": 82.1014818384,
+        "t": "82,1 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2020,
+        "v": 81.3768895567,
+        "t": "81,4 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2021,
+        "v": 80.5085140627,
+        "t": "80,5 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2022,
+        "v": 82.0142787872,
+        "t": "82,0 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2023,
+        "v": 82.7805492242,
+        "t": "82,8 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2024,
+        "v": 83.1368450937,
+        "t": "83,1 let"
+      },
+      {
+        "rada": "ženy",
+        "rok": 2025,
+        "v": 83.1945822813,
+        "t": "83,2 let"
+      }
+    ]
+  }
+}

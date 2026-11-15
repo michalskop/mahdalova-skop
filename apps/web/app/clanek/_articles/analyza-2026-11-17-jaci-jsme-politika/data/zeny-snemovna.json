@@ -1,0 +1,254 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Ve Sněmovně je {třetina žen|#de1743}, nejvíc od {roku 1989|#6267a3}",
+    "subtitle": "Podíl žen mezi zvolenými poslanci v %; ČNR = Česká národní rada, PS = Poslanecká sněmovna. *Nesvobodná ČNR zvolená v roce 1986 na jednotné kandidátce Národní fronty, stav k 17. 11. 1989"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "volby": "ČNR 1989*",
+        "pct": 27.8,
+        "n": 55,
+        "z": 198,
+        "barva": "1989",
+        "t": "27,8 % (55 z 198)",
+        "pozn": "nesvobodná ČNR k 17. 11. 1989"
+      },
+      {
+        "volby": "ČNR 1990",
+        "pct": 13.0,
+        "n": 26,
+        "z": 200,
+        "barva": "mezi",
+        "t": "13 % (26 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "ČNR 1992",
+        "pct": 10.5,
+        "n": 21,
+        "z": 200,
+        "barva": "mezi",
+        "t": "10,5 % (21 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 1996",
+        "pct": 15.0,
+        "n": 30,
+        "z": 200,
+        "barva": "mezi",
+        "t": "15 % (30 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 1998",
+        "pct": 15.0,
+        "n": 30,
+        "z": 200,
+        "barva": "mezi",
+        "t": "15 % (30 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 2002",
+        "pct": 17.0,
+        "n": 34,
+        "z": 200,
+        "barva": "mezi",
+        "t": "17 % (34 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 2006",
+        "pct": 15.5,
+        "n": 31,
+        "z": 200,
+        "barva": "mezi",
+        "t": "15,5 % (31 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 2010",
+        "pct": 22.0,
+        "n": 44,
+        "z": 200,
+        "barva": "mezi",
+        "t": "22 % (44 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 2013",
+        "pct": 19.5,
+        "n": 39,
+        "z": 200,
+        "barva": "mezi",
+        "t": "19,5 % (39 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 2017",
+        "pct": 22.0,
+        "n": 44,
+        "z": 200,
+        "barva": "mezi",
+        "t": "22 % (44 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 2021",
+        "pct": 25.0,
+        "n": 50,
+        "z": 200,
+        "barva": "mezi",
+        "t": "25 % (50 z 200)",
+        "pozn": "zvolení poslanci"
+      },
+      {
+        "volby": "PS 2025",
+        "pct": 33.5,
+        "n": 67,
+        "z": 200,
+        "barva": "dnes",
+        "t": "33,5 % (67 z 200)",
+        "pozn": "zvolení poslanci"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "volby",
+          "type": "nominal",
+          "sort": null,
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelPadding": 6
+          }
+        },
+        "x": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              62
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30
+            ],
+            "labelExpr": "datum.value + ' %'"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "volby",
+            "title": "Volby"
+          },
+          {
+            "field": "t",
+            "title": "Ženy"
+          },
+          {
+            "field": "pozn",
+            "title": "Kdo"
+          }
+        ],
+        "color": {
+          "field": "barva",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "1989",
+              "mezi",
+              "dnes"
+            ],
+            "range": [
+              "#6267a3",
+              "#d4d4c8",
+              "#de1743"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "volby",
+          "type": "nominal",
+          "sort": null,
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelFontSize": 12,
+            "labelPadding": 6
+          }
+        },
+        "x": {
+          "field": "pct",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t"
+        },
+        "tooltip": [
+          {
+            "field": "volby",
+            "title": "Volby"
+          },
+          {
+            "field": "t",
+            "title": "Ženy"
+          },
+          {
+            "field": "pozn",
+            "title": "Kdo"
+          }
+        ]
+      }
+    }
+  ],
+  "_source": "[ČSÚ](https://csu.gov.cz/produkty/volby-do-cnr-a-ps-pcr), [psp.cz](https://www.psp.cz/sqw/hp.sqw?k=1300)",
+  "height": {
+    "step": 26
+  }
+}

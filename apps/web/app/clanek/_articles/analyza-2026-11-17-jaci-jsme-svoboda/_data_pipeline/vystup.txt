@@ -1,0 +1,34 @@
+UCAST snemovni volby {1990: 96.8, 1992: 85.1, 1996: 76.4, 1998: 74, 2002: 58, 2006: 64.5, 2010: 62.6, 2013: 59.5, 2017: 60.8, 2021: 65.4, 2025: 68.9}
+UCAST 1990 96.8 | posledni 2025 68.9 | min 2002 58 | pokles 1990→posl. p. b. 27.9
+UCAST senat 2. kolo min SE-2 2016 15.4 | SE-2 2024 17.5
+UCAST snemovni 2006–2025 rozpeti 59.5 68.9
+UCAST jine volby 1990: ZO 1990 73.5 | ZO 2022 46.1 | PE-2 2023 70.2 | EP 2024 36.4
+SVATKY dny pracovniho klidu 1989 7 | dnes 13 | pracovni pripominane dny 1989 5
+VIRA 1991: veriici 43.9 rkc 39.0 bez vyznani 39.9 nezjisteno 16.2
+VIRA 2021: veriici 22.2 z toho bez cirkve 9.1 rkc 7.0 bez viry 47.8 neuvedeno 30.1
+VIRA 2021 veriici + neuvedeno 52.2 | podil veriicich mezi odpovedi 31.7
+CVVM tab4 roky [2014, 2015, 2016, 2019, 2024] | oblasti 14
+CVVM tab4 Možnost studovat, pracovat nebo cestovat do zahraničí {2014: (80, 8), 2015: (81, 6), 2016: (84, 5), 2019: (82, 8), 2024: (77, 17)}
+CVVM tab4 Přístup ke vzdělání {2014: (67, 6), 2015: (71, 6), 2016: (69, 7), 2019: (70, 6), 2024: (65, 14)}
+CVVM tab4 Svobodný přístup k informacím {2014: (79, 5), 2015: (75, 6), 2016: (76, 6), 2019: (73, 10), 2024: (64, 21)}
+CVVM tab4 Možnost svobodně se účastnit na veřejném životě {2014: (68, 6), 2015: (66, 6), 2016: (67, 5), 2019: (67, 8), 2024: (61, 14)}
+CVVM tab4 Životní úroveň {2014: (55, 24), 2015: (60, 19), 2016: (62, 16), 2019: (72, 12), 2024: (57, 20)}
+CVVM tab4 Možnost vyjádřit svůj názor {2014: (74, 8), 2015: (71, 6), 2016: (71, 7), 2019: (74, 10), 2024: (57, 21)}
+CVVM tab4 Zdravotní péče {2014: (53, 15), 2015: (53, 16), 2016: (52, 15), 2019: (55, 18), 2024: (55, 20)}
+CVVM tab4 Pracovní příležitosti {2014: (27, 61), 2015: (34, 49), 2016: (41, 42), 2019: (51, 27), 2024: (55, 25)}
+CVVM tab4 Šance získat slušné společenské postavení na základě poctivé práce {2014: (36, 32), 2015: (40, 28), 2016: (38, 28), 2019: (48, 22), 2024: (45, 28)}
+CVVM tab4 Možnost ovlivňovat politická rozhodnutí {2014: (46, 12), 2015: (43, 12), 2016: (45, 12), 2019: (45, 16), 2024: (42, 27)}
+CVVM tab4 Rovnost před zákonem {2014: (37, 21), 2015: (38, 18), 2016: (37, 19), 2019: (44, 18), 2024: (41, 22)}
+CVVM tab4 Sociální jistoty {2014: (17, 66), 2015: (19, 61), 2016: (23, 57), 2019: (31, 43), 2024: (38, 40)}
+CVVM tab4 Bezpečnost občanů, kriminalita {2014: (16, 60), 2015: (21, 53), 2016: (17, 58), 2019: (27, 47), 2024: (32, 42)}
+CVVM tab4 +/- 55/32 60/25 65/21 63/22 69/23 63/25 {2014: (66, 21), 2015: (64, 25), 2016: (66, 22), 2019: (73, 20), 2024: (75, 18)}
+CVVM 2024 pomery lepsi dnes / pred 1989 / napul ('43', '16', '37')
+CVVM spokojenost s demokracii (rozhodne+spise) {'12/2004': 40, '02/2007': 50, '02/2008': 48, '02/2009': 48, '02/2010': 42, '02/2011': 51, '02/2012': 44, '02/2013': 33, '02/2014': 48, '02/2015': 54, '02/2016': 56, '02/2017': 60, '02/2018': 60, '02/2019': 67, '09/2019': 55, '02/2020': 62, '08/2021': 48, '04/2024': 55}
+PEW Q15b vicestranicky system: silne souhlasi, souhlasi {2019: ('45', '37', 82), 2009: ('34', '46', 80), 1991: ('41', '39', 80)}
+PEW Q16b trzni ekonomika {2019: ('37', '39', 76), 2009: ('28', '51', 79), 1991: ('42', '45', 87)}
+PEW Q17 ekonomicka situace lepsi/horsi/stejna nez za komunismu {2019: ['61', '17', '16'], 2009: ['45', '39', '12']}
+GRAF CVVM svobody Studovat, pracovat a cestovat do zahraničí 2019 (82, 8) 2024 (77, 17)
+GRAF CVVM svobody Svobodný přístup k informacím 2019 (73, 10) 2024 (64, 21)
+GRAF CVVM svobody Svobodně se účastnit veřejného života 2019 (67, 8) 2024 (61, 14)
+GRAF CVVM svobody Vyjádřit svůj názor 2019 (74, 10) 2024 (57, 21)
+GRAF CVVM svobody Ovlivňovat politická rozhodnutí 2019 (45, 16) 2024 (42, 27)

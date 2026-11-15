@@ -1,0 +1,50 @@
+Stejně staří lidé, sčítání 1991 × 2021 (podíly v %, nezjištěné mimo jmenovatel)
+Archiv: scitani/sldb1991-vek/20261114 | scitani/sldb2021-vek/20261114 (v csu-data)
+
+Dvacátníci (20–29 let)
+  S vysokou školou   1991   7,9 %   2021  22,1 %   změna +14,2 p. b.   [VŠ 106850/1360984 × 223032/1010061]
+  Ženatí a vdané     1991  60,6 %   2021  12,0 %   změna -48,6 p. b.   [ženatí 831406/1371741 × 127829/1065574]
+  Svobodní           1991  35,3 %   2021  87,2 %   změna +51,9 p. b.   [svobodní 484069/1371741 × 928673/1065574]
+  Rozvedení          1991   3,9 %   2021   0,8 %   změna -3,2 p. b.   [rozvedení 54096/1371741 × 8068/1065574]
+  Ženy bez dítěte    1991  30,9 %   2021  73,6 %   změna +42,6 p. b.   [bezdětné 204753/661679 × 379605/515824]
+  Pracují            1991  72,1 %   2021  73,1 %   změna +1,0 p. b.   [pracující 990323/1373580 × 768265/1050945]
+
+Třicátníci (30–39 let)
+  S vysokou školou   1991  11,7 %   2021  32,9 %   změna +21,1 p. b.   [VŠ 172674/1471084 × 431314/1312077]
+  Ženatí a vdané     1991  80,8 %   2021  42,2 %   změna -38,6 p. b.   [ženatí 1198913/1483274 × 590559/1399372]
+  Svobodní           1991   8,8 %   2021  51,4 %   změna +42,6 p. b.   [svobodní 131251/1483274 × 719569/1399372]
+  Rozvedení          1991   9,6 %   2021   6,1 %   změna -3,5 p. b.   [rozvedení 141910/1483274 × 84984/1399372]
+  Ženy bez dítěte    1991   6,6 %   2021  26,3 %   změna +19,7 p. b.   [bezdětné 48217/730298 × 176389/671291]
+  Pracují            1991  90,4 %   2021  81,1 %   změna -9,4 p. b.   [pracující 1343170/1485102 × 1112295/1371642]
+
+Čtyřicátníci (40–49 let)
+  S vysokou školou   1991   9,5 %   2021  21,0 %   změna +11,4 p. b.   [VŠ 143920/1513852 × 340145/1623569]
+  Ženatí a vdané     1991  80,7 %   2021  54,9 %   změna -25,8 p. b.   [ženatí 1231174/1525833 × 949166/1729387]
+  Svobodní           1991   5,3 %   2021  25,3 %   změna +20,0 p. b.   [svobodní 80323/1525833 × 436884/1729387]
+  Rozvedení          1991  11,6 %   2021  18,9 %   změna +7,3 p. b.   [rozvedení 177209/1525833 × 327259/1729387]
+  Ženy bez dítěte    1991   5,8 %   2021  10,4 %   změna +4,6 p. b.   [bezdětné 44354/760167 × 86688/832933]
+  Pracují            1991  93,6 %   2021  90,6 %   změna -2,9 p. b.   [pracující 1429123/1527635 × 1544239/1704384]
+
+Padesátníci (50–59 let)
+  S vysokou školou   1991   7,5 %   2021  17,7 %   změna +10,2 p. b.   [VŠ 77221/1032021 × 223830/1267939]
+  Ženatí a vdané     1991  78,8 %   2021  59,6 %   změna -19,1 p. b.   [ženatí 820880/1042293 × 805387/1350311]
+  Svobodní           1991   3,8 %   2021  10,0 %   změna +6,2 p. b.   [svobodní 39967/1042293 × 135225/1350311]
+  Rozvedení          1991   9,0 %   2021  27,3 %   změna +18,3 p. b.   [rozvedení 93792/1042293 × 368143/1350311]
+  Ženy bez dítěte    1991   7,3 %   2021   6,5 %   změna -0,9 p. b.   [bezdětné 39266/536659 × 42855/663114]
+  Pracují            1991  70,8 %   2021  87,4 %   změna +16,5 p. b.   [pracující 738867/1043208 × 1165681/1334198]
+
+Šedesátníci (60–69 let)
+  Ženatí a vdané     1991  66,0 %   2021  63,3 %   změna -2,7 p. b.   [ženatí 685981/1039210 × 810478/1280866]
+  Svobodní           1991   3,8 %   2021   5,4 %   změna +1,6 p. b.   [svobodní 39037/1039210 × 68709/1280866]
+  Rozvedení          1991   6,8 %   2021  20,9 %   změna +14,1 p. b.   [rozvedení 71092/1039210 × 268041/1280866]
+  Ženy bez dítěte    1991  10,4 %   2021   5,0 %   změna -5,4 p. b.   [bezdětné 60170/578751 × 32532/646136]
+  Pracují            1991  17,7 %   2021  37,9 %   změna +20,3 p. b.   [pracující 183881/1040131 × 484733/1277590]
+
+Ženy 30–34 let bez živě narozeného dítěte: 1991 7,6 %, 2021 34,2 %  [25275/332686 × 112638/328890]
+  → s dítětem: 1991 92,4 %, 2021 65,8 %
+
+Nezjištěno: kohortní řada „podíl žen s dítětem do 30 let podle ročníku narození“ (ČSÚ pohyb obyvatelstva)
+  v otevřených tabulkách ČSÚ nenalezena; místo ní sčítání: ženy 30–34 let (ročníky ~1957–61 × ~1987–91).
+Nezjištěno: domácnosti podle věku osoby (žije sám / s partnerem / s rodiči) – otevřená data SLDB 2021 je podle věku nemají.
+zapsáno data\stejne-stari.json
+doplněno data\od-narozeni.json (podle_veku: 5 skupin)

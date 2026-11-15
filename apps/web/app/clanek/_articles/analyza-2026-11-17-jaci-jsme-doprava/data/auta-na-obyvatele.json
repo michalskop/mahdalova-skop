@@ -1,0 +1,398 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Na tisíc obyvatel připadá {621 aut|#de1743}, v roce 1990 jich bylo {234|#6267a3}",
+  "subtitle": "Registrovaná osobní auta na 1 000 obyvatel, 1990–2025; roky 1991 a 1992 chybějí. Registr obsahuje i auta, která už nejezdí"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "rok": 1990,
+    "auta": 234,
+    "t": "234 aut"
+   },
+   {
+    "rok": 1993,
+    "auta": 274,
+    "t": "274 aut"
+   },
+   {
+    "rok": 1994,
+    "auta": 283,
+    "t": "283 aut"
+   },
+   {
+    "rok": 1995,
+    "auta": 295,
+    "t": "295 aut"
+   },
+   {
+    "rok": 1996,
+    "auta": 310,
+    "t": "310 aut"
+   },
+   {
+    "rok": 1997,
+    "auta": 329,
+    "t": "329 aut"
+   },
+   {
+    "rok": 1998,
+    "auta": 339,
+    "t": "339 aut"
+   },
+   {
+    "rok": 1999,
+    "auta": 335,
+    "t": "335 aut"
+   },
+   {
+    "rok": 2000,
+    "auta": 336,
+    "t": "336 aut"
+   },
+   {
+    "rok": 2001,
+    "auta": 346,
+    "t": "346 aut"
+   },
+   {
+    "rok": 2002,
+    "auta": 358,
+    "t": "358 aut"
+   },
+   {
+    "rok": 2003,
+    "auta": 364,
+    "t": "364 aut"
+   },
+   {
+    "rok": 2004,
+    "auta": 374,
+    "t": "374 aut"
+   },
+   {
+    "rok": 2005,
+    "auta": 387,
+    "t": "387 aut"
+   },
+   {
+    "rok": 2006,
+    "auta": 401,
+    "t": "401 aut"
+   },
+   {
+    "rok": 2007,
+    "auta": 414,
+    "t": "414 aut"
+   },
+   {
+    "rok": 2008,
+    "auta": 424,
+    "t": "424 aut"
+   },
+   {
+    "rok": 2009,
+    "auta": 424,
+    "t": "424 aut"
+   },
+   {
+    "rok": 2010,
+    "auta": 429,
+    "t": "429 aut"
+   },
+   {
+    "rok": 2011,
+    "auta": 436,
+    "t": "436 aut"
+   },
+   {
+    "rok": 2012,
+    "auta": 448,
+    "t": "448 aut"
+   },
+   {
+    "rok": 2013,
+    "auta": 450,
+    "t": "450 aut"
+   },
+   {
+    "rok": 2014,
+    "auta": 459,
+    "t": "459 aut"
+   },
+   {
+    "rok": 2015,
+    "auta": 485,
+    "t": "485 aut"
+   },
+   {
+    "rok": 2016,
+    "auta": 502,
+    "t": "502 aut"
+   },
+   {
+    "rok": 2017,
+    "auta": 522,
+    "t": "522 aut"
+   },
+   {
+    "rok": 2018,
+    "auta": 540,
+    "t": "540 aut"
+   },
+   {
+    "rok": 2019,
+    "auta": 554,
+    "t": "554 aut"
+   },
+   {
+    "rok": 2020,
+    "auta": 576,
+    "t": "576 aut"
+   },
+   {
+    "rok": 2021,
+    "auta": 579,
+    "t": "579 aut"
+   },
+   {
+    "rok": 2022,
+    "auta": 582,
+    "t": "582 aut"
+   },
+   {
+    "rok": 2023,
+    "auta": 597,
+    "t": "597 aut"
+   },
+   {
+    "rok": 2024,
+    "auta": 608,
+    "t": "608 aut"
+   },
+   {
+    "rok": 2025,
+    "auta": 621,
+    "t": "621 aut"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "color": "#de1743",
+    "strokeWidth": 2.5,
+    "point": false
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2027
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1990,
+       2000,
+       2010,
+       2020,
+       2025
+      ]
+     }
+    },
+    "y": {
+     "field": "auta",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       720
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       200,
+       400,
+       600
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t",
+      "title": "Na 1 000 obyvatel"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 70,
+    "opacity": 1
+   },
+   "transform": [
+    {
+     "filter": "datum.rok == 1990 || datum.rok == 2025"
+    }
+   ],
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2027
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1990,
+       2000,
+       2010,
+       2020,
+       2025
+      ]
+     }
+    },
+    "y": {
+     "field": "auta",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       720
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       200,
+       400,
+       600
+      ]
+     }
+    },
+    "color": {
+     "condition": {
+      "test": "datum.rok == 1990",
+      "value": "#6267a3"
+     },
+     "value": "#de1743"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "dy": -14,
+    "fontSize": 12,
+    "fontWeight": 700
+   },
+   "transform": [
+    {
+     "filter": "datum.rok == 1990 || datum.rok == 2025"
+    }
+   ],
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1989,
+       2027
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       1990,
+       2000,
+       2010,
+       2020,
+       2025
+      ]
+     }
+    },
+    "y": {
+     "field": "auta",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       720
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       200,
+       400,
+       600
+      ]
+     }
+    },
+    "text": {
+     "field": "auta"
+    },
+    "color": {
+     "condition": {
+      "test": "datum.rok == 1990",
+      "value": "#6267a3"
+     },
+     "value": "#de1743"
+    }
+   }
+  }
+ ],
+ "_source": "[Eurostat road_eqs_carhab](https://ec.europa.eu/eurostat/databrowser/view/road_eqs_carhab/default/table)",
+ "height": 240
+}

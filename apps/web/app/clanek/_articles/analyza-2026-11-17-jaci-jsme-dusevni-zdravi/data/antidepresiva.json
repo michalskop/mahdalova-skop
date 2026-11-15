@@ -1,0 +1,482 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Česko spotřebuje {25krát víc|#de1743} antidepresiv než v roce {1989|#6267a3}",
+    "subtitle": "Spotřeba antidepresiv v definovaných denních dávkách (DDD) na 1 000 obyvatel a den, 1989–2024"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": 1989,
+        "v": 3.1,
+        "t": "3,1 DDD"
+      },
+      {
+        "rok": 1990,
+        "v": 3.1,
+        "t": "3,1 DDD"
+      },
+      {
+        "rok": 1991,
+        "v": 2.8,
+        "t": "2,8 DDD"
+      },
+      {
+        "rok": 1992,
+        "v": 3.1,
+        "t": "3,1 DDD"
+      },
+      {
+        "rok": 1993,
+        "v": 3.2,
+        "t": "3,2 DDD"
+      },
+      {
+        "rok": 1994,
+        "v": 5.0,
+        "t": "5,0 DDD"
+      },
+      {
+        "rok": 1995,
+        "v": 5.4,
+        "t": "5,4 DDD"
+      },
+      {
+        "rok": 1996,
+        "v": 5.6,
+        "t": "5,6 DDD"
+      },
+      {
+        "rok": 1997,
+        "v": 5.8,
+        "t": "5,8 DDD"
+      },
+      {
+        "rok": 1998,
+        "v": 7.1,
+        "t": "7,1 DDD"
+      },
+      {
+        "rok": 1999,
+        "v": 8.4,
+        "t": "8,4 DDD"
+      },
+      {
+        "rok": 2000,
+        "v": 9.7,
+        "t": "9,7 DDD"
+      },
+      {
+        "rok": 2001,
+        "v": 12.0,
+        "t": "12,0 DDD"
+      },
+      {
+        "rok": 2002,
+        "v": 14.1,
+        "t": "14,1 DDD"
+      },
+      {
+        "rok": 2003,
+        "v": 16.9,
+        "t": "16,9 DDD"
+      },
+      {
+        "rok": 2004,
+        "v": 20.2,
+        "t": "20,2 DDD"
+      },
+      {
+        "rok": 2005,
+        "v": 26.7,
+        "t": "26,7 DDD"
+      },
+      {
+        "rok": 2006,
+        "v": 29.0,
+        "t": "29,0 DDD"
+      },
+      {
+        "rok": 2007,
+        "v": 35.0,
+        "t": "35,0 DDD"
+      },
+      {
+        "rok": 2008,
+        "v": 35.9,
+        "t": "35,9 DDD"
+      },
+      {
+        "rok": 2009,
+        "v": 38.3,
+        "t": "38,3 DDD"
+      },
+      {
+        "rok": 2010,
+        "v": 41.6,
+        "t": "41,6 DDD"
+      },
+      {
+        "rok": 2011,
+        "v": 44.1,
+        "t": "44,1 DDD"
+      },
+      {
+        "rok": 2012,
+        "v": 46.2,
+        "t": "46,2 DDD"
+      },
+      {
+        "rok": 2013,
+        "v": 49.0,
+        "t": "49,0 DDD"
+      },
+      {
+        "rok": 2014,
+        "v": 52.7,
+        "t": "52,7 DDD"
+      },
+      {
+        "rok": 2015,
+        "v": 55.0,
+        "t": "55,0 DDD"
+      },
+      {
+        "rok": 2016,
+        "v": 57.1,
+        "t": "57,1 DDD"
+      },
+      {
+        "rok": 2017,
+        "v": 59.9,
+        "t": "59,9 DDD"
+      },
+      {
+        "rok": 2018,
+        "v": 61.4,
+        "t": "61,4 DDD"
+      },
+      {
+        "rok": 2019,
+        "v": 64.4,
+        "t": "64,4 DDD"
+      },
+      {
+        "rok": 2020,
+        "v": 65.7,
+        "t": "65,7 DDD"
+      },
+      {
+        "rok": 2021,
+        "v": 69.4,
+        "t": "69,4 DDD"
+      },
+      {
+        "rok": 2022,
+        "v": 73.3,
+        "t": "73,3 DDD"
+      },
+      {
+        "rok": 2023,
+        "v": 75.3,
+        "t": "75,3 DDD"
+      },
+      {
+        "rok": 2024,
+        "v": 78.8,
+        "t": "78,8 DDD"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "color": "#de1743",
+        "opacity": 0.13,
+        "line": {
+          "color": "#de1743",
+          "strokeWidth": 2.5
+        },
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              95
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "rok",
+            "title": "Rok"
+          },
+          {
+            "field": "t",
+            "title": "Na 1 000 obyvatel a den"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 1989 || datum.rok == 2024"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 70,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              95
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80
+            ]
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.rok == 1989",
+            "value": "#6267a3"
+          },
+          "value": "#de1743"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 1989"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 4,
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#6267a3"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              95
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80
+            ]
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.rok == 2024"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -2,
+        "dy": -10,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#de1743"
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1989,
+              2024
+            ]
+          },
+          "axis": {
+            "title": null,
+            "format": "d",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "values": [
+              1989,
+              2000,
+              2010,
+              2024
+            ],
+            "labelFontSize": 11
+          }
+        },
+        "y": {
+          "field": "v",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              95
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              20,
+              40,
+              60,
+              80
+            ]
+          }
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    }
+  ],
+  "_source": "OECD, [Health Statistics, ATC N06A](https://sdmx.oecd.org/public/rest/data/OECD.ELS.HD,HEALTH_PHMC@DF_PHMC_CONSUM,/CZE....)",
+  "height": 260
+}

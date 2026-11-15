@@ -1,0 +1,189 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Děti z {nejznečištěnější části Ostravy|#de1743} měly opakované pískoty skoro třikrát častěji",
+  "subtitle": "Podíl dětí s opakovanými pískoty (wheezing) do 5 let podle části Ostravy, kde žily od narození; děti narozené 2001–2004"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "oblast": "Východ (Radvanice a Bartovice)",
+    "pct": 37.1,
+    "popisek": "37,1 %",
+    "t": "37,1 % z 170 dětí",
+    "vychod": true
+   },
+   {
+    "oblast": "Jih",
+    "pct": 10.0,
+    "popisek": "10,0 %",
+    "t": "10,0 % z 677 dětí",
+    "vychod": false
+   },
+   {
+    "oblast": "Střed",
+    "pct": 10.7,
+    "popisek": "10,7 %",
+    "t": "10,7 % z 289 dětí",
+    "vychod": false
+   },
+   {
+    "oblast": "Západ",
+    "pct": 13.1,
+    "popisek": "13,1 %",
+    "t": "13,1 % z 268 dětí",
+    "vychod": false
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "height": {
+     "band": 1
+    }
+   },
+   "encoding": {
+    "y": {
+     "field": "oblast",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.45,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     },
+     "axis": null
+    },
+    "color": {
+     "field": "vychod",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       true,
+       false
+      ],
+      "range": [
+       "#de1743",
+       "#6267a3"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "oblast",
+      "title": "Část Ostravy"
+     },
+     {
+      "field": "t",
+      "title": "Opakované pískoty"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 5,
+    "fontSize": 12,
+    "fontWeight": 700,
+    "color": "#101432"
+   },
+   "encoding": {
+    "y": {
+     "field": "oblast",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.45,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "popisek"
+    },
+    "tooltip": [
+     {
+      "field": "oblast",
+      "title": "Část Ostravy"
+     },
+     {
+      "field": "t",
+      "title": "Opakované pískoty"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -10,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "y": {
+     "field": "oblast",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.45,
+      "paddingOuter": 0.5
+     }
+    },
+    "x": {
+     "datum": 0,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       50
+      ]
+     }
+    },
+    "text": {
+     "field": "oblast"
+    }
+   }
+  }
+ ],
+ "_source": "Dostál a kol., [Environmental Health 2013](https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-12-74)",
+ "height": {
+  "step": 40
+ }
+}

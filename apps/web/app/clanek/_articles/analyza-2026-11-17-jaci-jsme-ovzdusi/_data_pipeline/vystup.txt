@@ -1,0 +1,106 @@
+EMISE SO2 (ČSÚ Tab. 02.04, REZZO 1–4, tis. t): 1990 1 754 → 2024 46,9 pokles 97,3 % | 2000: 233,7 | 2023: 48,5
+EMISE BaP (inventura, t): 1990 79,7 → 2000 15,0 → 2023 14,8 | pokles 1990–2023 81 %, 2000–2023 1,1 %
+EMISE BaP 2000–2023 rozpětí (t): 14,8 – 21,0 | roky 2023 2015
+EMISE BaP domácnosti (t): 1990 29,1 (36 % celku) → 2023 14,3 (97 % celku) | ostatní zdroje 1990 50,7 → 2023 0,5 t
+EMISE PM2,5 (kt): 2000 84,2 → 2023 42,6 | pokles 49 % | domácnosti 2023 81 %
+EMISE SO2 domácnosti 2023 (inventura): 23 % | SO2 mimo domácnosti 1990 1 662,7 → 2023 37,2 kt
+SO2 Ústecký kraj 1985: průměr stanic 86,3 µg/m³ (stanic 26); medián stanic ČR 57,1 (N 66)
+SO2 Ústecký kraj 1989: průměr stanic 69,5 µg/m³ (stanic 35); medián stanic ČR 45,0 (N 78)
+SO2 Ústecký kraj 1990: průměr stanic 55,8 µg/m³ (stanic 26); medián stanic ČR 32,4 (N 71)
+SO2 Ústecký kraj 2000: průměr stanic 9,5 µg/m³ (stanic 33); medián stanic ČR 7,3 (N 158)
+SO2 Ústecký kraj 2025: průměr stanic 3,9 µg/m³ (stanic 11); medián stanic ČR 3,2 (N 44)
+SO2 1989 nejvyšší stanice Ústeckého kraje: Nová Ves v Horách 110,5; Jirkov 109,1; Osek 106,5
+EXPOZICE BaP > 1 ng/m³: 1 031 284 obyvatel = 9,8 % (z 10 525 799)
+EXPOZICE PM2,5 > 20 µg/m³: 1 683 obyvatel = 0,0 % (z 10 525 799)
+EXPOZICE PM2,5 > 10 µg/m³ (EU 2030): 9 128 479 obyvatel = 86,7 % (z 10 525 799)
+EXPOZICE PM2,5 > 5 µg/m³ (WHO): 10 524 421 obyvatel = 100,0 % (z 10 525 799)
+KRAJ MSK: nad limitem BaP 851 183 = 73,3 % obyvatel kraje, 82,5 % všech nad limitem v ČR
+  kraj Moravskoslezský kraj: 851 183 (73,3 %)
+  kraj Olomoucký kraj: 96 388 (15,5 %)
+  kraj Zlínský kraj: 45 621 (8,1 %)
+  kraj Ústecký kraj: 17 708 (2,2 %)
+  kraj Jihomoravský kraj: 6 033 (0,5 %)
+  kraj Pardubický kraj: 5 027 (1,0 %)
+  kraj Středočeský kraj: 4 683 (0,3 %)
+  kraj Královéhradecký kraj: 3 870 (0,7 %)
+  kraj Plzeňský kraj: 772 (0,1 %)
+  kraj Hlavní město Praha: 0 (0,0 %)
+  kraj Kraj Vysočina: 0 (0,0 %)
+  kraj Karlovarský kraj: 0 (0,0 %)
+  kraj Jihočeský kraj: 0 (0,0 %)
+  kraj Liberecký kraj: 0 (0,0 %)
+KRAJE bez obyvatel nad limitem: Hlavní město Praha, Kraj Vysočina, Karlovarský kraj, Jihočeský kraj, Liberecký kraj
+TOP20 obcí podle BaP – všechny z MSK: True
+  Bohumín: BaP 3,24 ng/m³, obyv. 20 038, pevná paliva 5 %, plyn z vytápění 30 %
+  Dolní Lutyně: BaP 3,20 ng/m³, obyv. 5 050, pevná paliva 18 %, plyn z vytápění 64 %
+  Rychvald: BaP 2,78 ng/m³, obyv. 7 456, pevná paliva 23 %, plyn z vytápění 49 %
+  Orlová: BaP 2,67 ng/m³, obyv. 27 581, pevná paliva 8 %, plyn z vytápění 12 %
+  Dětmarovice: BaP 2,62 ng/m³, obyv. 4 115, pevná paliva 24 %, plyn z vytápění 60 %
+  Petřvald: BaP 2,35 ng/m³, obyv. 7 460, pevná paliva 32 %, plyn z vytápění 33 %
+Ostrava: BaP 1,63, nad limitem 280 946 obyv.
+OBCE s populačně váženým BaP > 1: 111, žije v nich 1 093 058 (SLDB 2021); obcí s aspoň částí obyvatel nad limitem: 183; obcí celkem 6258
+KORELACE pevná paliva × BaP (Spearman, 6254 obcí): -0,53
+  kvintil 1 (0–22 % bytů na pevná paliva): medián BaP 0,56, obcí nad limitem 4,0 %
+  kvintil 2 (22–40 % bytů na pevná paliva): medián BaP 0,52, obcí nad limitem 4,2 %
+  kvintil 3 (40–57 % bytů na pevná paliva): medián BaP 0,44, obcí nad limitem 0,5 %
+  kvintil 4 (57–73 % bytů na pevná paliva): medián BaP 0,39, obcí nad limitem 0,2 %
+  kvintil 5 (73–100 % bytů na pevná paliva): medián BaP 0,34, obcí nad limitem 0,1 %
+VELIKOST obce do 2 000 obyvatel: 5558 obcí, nad limitem 53 187 z 2 929 963 = 1,8 %, medián bytů na pevná paliva 52,4 %
+VELIKOST obce 2 000–9 999: 566 obcí, nad limitem 211 118 z 2 223 828 = 9,5 %, medián bytů na pevná paliva 16,5 %
+VELIKOST obce 10 000 a víc: 130 obcí, nad limitem 766 980 z 5 370 370 = 14,3 %, medián bytů na pevná paliva 4,2 %
+STANICE BaP 2025: měřilo 41 stanic, nad 1 ng/m³ 19: Věřňovice-Dolní Lutyně (Moravskoslezský) 3,56; Bohumín-Starý Bohumín (Moravskoslezský) 2,13; Brumov-Bylnice (Zlínský) 1,97; Český Těšín (Moravskoslezský) 1,81; Ostrava-Přívoz (Moravskoslezský) 1,80; Kladno-Švermov (Středočeský) 1,76; Jilemnice (Liberecký) 1,66; Bludov-hřiště (Olomoucký) 1,60; Staňkov (Plzeňský) 1,50; Třešť (Vysočina) 1,49; Broumov (Královéhradecký) 1,34; Studénka (Moravskoslezský) 1,25; Petřvald-Školní (Moravskoslezský) 1,23; Opava-Kateřinky (Moravskoslezský) 1,18; Kamenický Šenov (Liberecký) 1,08; Horní Benešov-škola (Moravskoslezský) 1,07; Valašské Meziříčí (Zlínský) 1,06; Ostrava-Poruba ČHMÚ (Moravskoslezský) 1,05; Písek-Tylova (Jihočeský) 1,03
+STANICE nad limitem mimo MSK: Brumov-Bylnice 2,0; Kladno-Švermov 1,8; Jilemnice 1,7; Bludov-hřiště 1,6; Staňkov 1,5; Třešť 1,5; Broumov 1,3; Kamenický Šenov 1,1; Valašské Meziříčí 1,1; Písek-Tylova 1,0
+  stanice Brumov-Bylnice 2025 1,97 × model obce Brumov-Bylnice (2021–2025, vážený) 0,86, max buňka 1,0, obyv. 5 191, pevná paliva 40 %
+  stanice Kladno-Švermov 2025 1,76 × model obce Kladno (2021–2025, vážený) 0,76, max buňka 2,0, obyv. 67 756, pevná paliva 2 %
+  stanice Jilemnice 2025 1,66 × model obce Jilemnice (2021–2025, vážený) 0,72, max buňka 0,9, obyv. 5 247, pevná paliva 14 %
+  stanice Bludov-hřiště 2025 1,60 × model obce Bludov (2021–2025, vážený) 1,07, max buňka 1,2, obyv. 2 946, pevná paliva 33 %
+  stanice Staňkov 2025 1,50 × model obce Staňkov (2021–2025, vážený) 0,73, max buňka 1,1, obyv. 3 331, pevná paliva 31 %
+  stanice Třešť 2025 1,49 × model obce Třešť (2021–2025, vážený) 0,56, max buňka 0,7, obyv. 5 451, pevná paliva 16 %
+  stanice Broumov 2025 1,34 × model obce Broumov (2021–2025, vážený) 0,83, max buňka 1,1, obyv. 6 874, pevná paliva 23 %
+PDF: Plocha s nadlimitními koncentracemi benzo[a]pyrenu byla v roce 2025 vymezena na 1,1 % plochy území ČR, přičemž na tomto území žilo přibližně 6,5 % obyvatel.
+PDF: v aglomeraci Ostrava/Karviná/Frýdek-Místek nadlimitním koncentracím vystaveno 59 % obyvatel
+PDF: 103 tisíc vyměněných starých kotlů od roku 2015
+PDF: Od 1. září 2024 zákaz provozu starých kotlů na pevná paliva
+PDF: Stanice v aglomeraci O/K/F-M jsou dlouhodobě ovlivněny dálkovým transportem z Polska.
+REZZO 1 (velké zdroje) PM10 2005: MSK 3 238 t = 32 % ČR (ČR 10 084 t), pořadí MSK mezi kraji 1; nejvíc CZ080
+REZZO 1 (velké zdroje) PM10 2023: MSK 522 t = 16 % ČR (ČR 3 195 t), pořadí MSK mezi kraji 2; nejvíc CZ042
+REZZO 1 PM10 MSK 2005→2023 pokles 84 %
+STUDIE Dostál 2013: abstracted the medical records of 1878 children born in 2001– 2004
+STUDIE Dostál 2013: We report on the incidence of acute illnesses in 1535 children
+STUDIE Dostál 2013: In the first year of life, the incidence of URI in 183 children in the eastern area – 372 illnesses/100 children/year – was more than twice as high as in the other 3 areas
+STUDIE Dostál 2013: Most of the children in the eastern area were living in the city district Radvanice and Bartovice
+STUDIE Dostál 2013: The highest levels in the range 7.9 to 11.7 ng/m3 of B[a]P were recorded by the monitoring station in R&B
+STUDIE Dostál 2013: The most important industrial sources of air pollution are metallurgy, steel plants, coke ovens and power generating facilities
+STUDIE Dostál 2013, Tab. 4 – opakované pískoty (wheezing) do 5 let, % dětí: {'south': 10.0, 'east': 37.1, 'center': 10.7, 'west': 13.1} | východ / nejvyšší z ostatních 2,8×
+CLAIRO: V Ostravské aglomeraci 8-10% obyvatel vážně uvažuje o přestěhování se kvůli stavu ovzduší
+CLAIRO: Výběrový vzorek tvořilo 1207 respondentů (605 v r. 2020+ 602 v r. 2019)
+CLAIRO: Sběr dat proběhl: 15. 10. 2019 – 10. 11. 2019 a 5. 10. 2020 – 31. 10. 2020
+CLAIRO: S rostoucím věkem ochota stěhovat se (či o tom uvažovat) klesá
+VNITŘNÍ STĚHOVÁNÍ MSK 2000–2025: saldo každý rok záporné: True; součet -69 332, z toho 0–14 let -9 126, 15–64 -57 032, 65+ -3 174
+VNITŘNÍ STĚHOVÁNÍ součet salda 2000–2025 podle krajů: CZ080 -69 332; CZ010 -40 397; CZ041 -27 627; CZ042 -26 393; CZ063 -18 168; CZ071 -15 783; CZ072 -14 628; CZ052 -14 359; CZ051 -6 522; CZ064 -4 465; CZ053 -3 270; CZ031 3 214; CZ032 13 666; CZ020 224 064
+CELKOVÉ STĚHOVÁNÍ MSK 2003–2021 (vnitřní + zahraniční, před uprchlíky z Ukrajiny): saldo -36 814; 25–39 let -20 328 = 55 %, 0–14 let -4 562 = 12 %
+  celkové saldo MSK 2022: 15 834 (příchod uprchlíků z Ukrajiny)
+  celkové saldo MSK 2023: 3 576 (příchod uprchlíků z Ukrajiny)
+ASTMA dětí 0–14 (vykázaná J45) 2010: ČR 57,4 na 1 000 dětí; okresů 77; nejvíc Žďár nad Sázavou 119,6, Přerov 113,5, Trutnov 94,5, Kolín 87,5 | MSK: Nový Jičín 77,4 (9.), Ostrava-město 71,0 (14.), Karviná 64,4 (20.), Opava 47,5 (43.), Bruntál 37,4 (63.), Frýdek-Místek 37,1 (64.)
+ASTMA dětí 0–14 (vykázaná J45) 2025: ČR 48,2 na 1 000 dětí; okresů 77; nejvíc Jihlava 107,1, Přerov 99,2, Trutnov 80,7, Kroměříž 80,4 | MSK: Nový Jičín 77,8 (5.), Ostrava-město 67,7 (11.), Karviná 55,3 (24.), Frýdek-Místek 54,7 (25.), Opava 52,0 (29.), Bruntál 24,5 (71.)
+HOSPITALIZACE dětí 0–14, J00–J99, 2010: ČR 33,7 na 1 000; MSK 32,7 (10. ze 14); nejvíc CZ063 39,9
+HOSPITALIZACE dětí 0–14, J00–J99, 2025: ČR 20,6 na 1 000; MSK 23,2 (3. ze 14); nejvíc CZ042 26,1
+MAPA: obcí 6258 | v pásmech: (0.0, 0.75]: 5858, (0.75, 1.0]: 289, (1.0, 1.5]: 86, (1.5, 2.0]: 15, (2.0, 3.0]: 8, (3.0, 99.0]: 2 | stanic 41
+GRAF emise 2023 index oxid siřičitý 2.8
+GRAF emise 2023 index benzo[a]pyren 18.6
+GRAF emise BaP 2000 index 18.8
+GRAF SO2 Ústecký 1989 69.5 stanic 35 → 2025 3.9 stanic 11 poměr 17.8
+GRAF kraje Moravskoslezský 851183 73.3
+GRAF kraje Olomoucký 96388 15.5
+GRAF kraje Zlínský 45621 8.1
+GRAF kraje Ústecký 17708 2.2
+GRAF kraje Jihomoravský 6033 0.5
+GRAF kraje Pardubický 5027 1.0
+GRAF kraje Středočeský 4683 0.3
+GRAF kraje Královéhradecký 3870 0.7
+GRAF kraje Plzeňský 772 0.1
+GRAF kraje bez nadlimitních: Hlavní město Praha, Kraj Vysočina, Karlovarský kraj, Jihočeský kraj, Liberecký kraj
+GRAF pískoty east 37.1 170
+GRAF pískoty south 10.0 677
+GRAF pískoty center 10.7 289
+GRAF pískoty west 13.1 268

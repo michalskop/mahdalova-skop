@@ -1,0 +1,21 @@
+{
+  "_popis": "Jediný seznam kapitol speciálu Jací jsme byli, jací jsme (1989 × 2026). Zdroj kapitoly je běžná složka článku v app/clanek/_articles/<zdroj> (kontrola checkArticles, covery, grafy), veřejná adresa je /specialy/<speciál>/<kapitola>/. Čtou ho: stránky speciálu, getArticles (odkazy karet, RSS, related), clanek/[slug] (vynechání), generateSitemap.js a generateLlmsTxt.js.",
+  "slug": "jaci-jsme-byli-jaci-jsme-1989-2026",
+  "nazev": "Jací jsme byli, jací jsme",
+  "podtitul": "1989 × 2026",
+  "kapitoly": [
+    { "kapitola": "prehled", "zdroj": "analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes", "nazev": "Přehled" },
+    { "kapitola": "rodina", "zdroj": "analyza-2026-11-17-jaci-jsme-rodina", "nazev": "Rodina" },
+    { "kapitola": "zdravi", "zdroj": "analyza-2026-11-17-jaci-jsme-zdravi", "nazev": "Zdraví a délka života" },
+    { "kapitola": "dusevni-zdravi", "zdroj": "analyza-2026-11-17-jaci-jsme-dusevni-zdravi", "nazev": "Duševní zdraví" },
+    { "kapitola": "vzdelavani", "zdroj": "analyza-2026-11-17-jaci-jsme-vzdelavani", "nazev": "Vzdělávání" },
+    { "kapitola": "penize", "zdroj": "analyza-2026-11-17-jaci-jsme-penize", "nazev": "Peníze" },
+    { "kapitola": "bydleni", "zdroj": "analyza-2026-11-17-jaci-jsme-bydleni", "nazev": "Bydlení" },
+    { "kapitola": "doprava", "zdroj": "analyza-2026-11-17-jaci-jsme-doprava", "nazev": "Doprava" },
+    { "kapitola": "ovzdusi", "zdroj": "analyza-2026-11-17-jaci-jsme-ovzdusi", "nazev": "Ovzduší" },
+    { "kapitola": "kriminalita-a-bezpecnost", "zdroj": "analyza-2026-11-17-jaci-jsme-kriminalita-a-bezpecnost", "nazev": "Kriminalita a bezpečnost" },
+    { "kapitola": "politika", "zdroj": "analyza-2026-11-17-jaci-jsme-politika", "nazev": "Politika" },
+    { "kapitola": "svoboda", "zdroj": "analyza-2026-11-17-jaci-jsme-svoboda", "nazev": "Svoboda" },
+    { "kapitola": "volny-cas", "zdroj": "analyza-2026-11-17-jaci-jsme-volny-cas", "nazev": "Volný čas a spotřeba" }
+  ]
+}

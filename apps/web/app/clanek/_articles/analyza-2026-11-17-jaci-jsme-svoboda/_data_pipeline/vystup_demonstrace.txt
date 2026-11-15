@@ -1,0 +1,32 @@
+MAPA DEMONSTRACÍ 9. 11. – 26. 12. 1989 (území dnešní ČR)
+vstup: C:\Users\datov\Desktop\datatimes\csu-data\historie\demonstrace-1989\20261114\demonstrace_1989.csv
+řádků CZ celkem: 248, s pro_mapu = 1: 152, mimo období mapy: 0
+akcí na mapě (den × obec): 152, obcí: 56, dnů: 48
+akcí s číslem: 100, bez čísla: 52
+podle pramene (kdo odhadoval): FMV 92, IS 51, USD 8, USTR 1
+největší číslo: Praha 1989-11-25: 800,000 (USD), jiné odhady: FMV 750000–750000; USTR 750000–750000
+
+Teplice (předehra):
+  1989-11-11: 400 – „asi 400 osob“ (FMV, FMV ČSSR, Denní situační zpráva č. 173/1989)
+  1989-11-12: 500 – „asi 500 osob“ (FMV, FMV ČSSR, Denní situační zpráva č. 173/1989)
+  1989-11-13: 1000 – „asi 1 000 osob“ (FMV, FMV ČSSR, Denní situační zpráva č. 174/1989)
+  1989-11-14: 70 – „asi 70 osob“ (FMV, FMV ČSSR, Denní situační zpráva č. 175/1989)
+
+Praha 25. 11. (Letná), všechny řádky CSV:
+  USD: 800000–800000 „asi 800 tisíc lidí z celého Československa“ (Jiří Suk, Občanské fórum. Listopad–prosinec 1989)
+  FMV: 750000–750000 „kolem 750 000 obyvatel“ (FMV ČSSR, Denní situační zpráva č. 182/B/1989)
+  USTR: 750000–750000 „asi tři čtvrtě milionu lidí“ (ÚSTR, Listopad 1989 – Chronologie)
+  IS: – „“ (Informační servis č. 7 (uzávěrka 25. 11.))
+
+obcí s akcí v datech do 1989-11-16 včetně: 4
+obcí s akcí v datech do 1989-11-22 včetně: 21
+obcí s akcí v datech do 1989-11-26 včetně: 26
+obcí s akcí v datech do 1989-11-30 včetně: 41
+obcí s akcí v datech do 1989-12-26 včetně: 56
+nejvíc obcí v jednom dni: 1989-11-27 (16)
+27. 11. (generální stávka): obcí 16, z toho s číslem 2
+
+Pozn.: FMV, DSZ č. 182/B/1989, s. 2 (OCR pracovni/ocr_fmv/dsz182b-11-1989_p002.txt): „Demonstrace a shromáždění
+občanů se konala ve všech krajských a v 56 dalších městech ČSSR“ – města nejmenuje.
+
+zapsáno: demonstrace-1989.json (116 kB)

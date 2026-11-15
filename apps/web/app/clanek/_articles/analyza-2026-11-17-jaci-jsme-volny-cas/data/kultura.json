@@ -1,0 +1,491 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Kina ztratila {tři čtvrtiny návštěv|#de1743}, hrady a zámky jich mají víc",
+  "subtitle": "Návštěvy a výpůjčky za rok v milionech; modře 1989 (památky 1990), červeně poslední rok (muzea a památky 2025, ostatní 2024); v návštěvách jsou i turisté ze zahraničí"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "ukazatel": "Výpůjčky ve veřejných knihovnách",
+    "tehdy": 62.102,
+    "dnes": 41.551,
+    "t_tehdy": "62,1 mil. (1989)",
+    "t_dnes": "41,6 mil. (2024)",
+    "l_tehdy": "62,1",
+    "l_dnes": "41,6",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Návštěvy kin",
+    "tehdy": 51.45252,
+    "dnes": 13.041,
+    "t_tehdy": "51,5 mil. (1989)",
+    "t_dnes": "13,0 mil. (2024)",
+    "l_tehdy": "51,5",
+    "l_dnes": "13,0",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Návštěvy hradů, zámků a dalších památek",
+    "tehdy": 5.999,
+    "dnes": 15.452,
+    "t_tehdy": "6,0 mil. (1990)",
+    "t_dnes": "15,5 mil. (2025)",
+    "l_tehdy": "6,0",
+    "l_dnes": "15,5",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Návštěvy muzeí a galerií",
+    "tehdy": 13.815,
+    "dnes": 13.936,
+    "t_tehdy": "13,8 mil. (1989)",
+    "t_dnes": "13,9 mil. (2025)",
+    "l_tehdy": "13,8",
+    "l_dnes": "13,9",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Návštěvy státních, krajských a městských divadel",
+    "tehdy": 6.291,
+    "dnes": 3.305,
+    "t_tehdy": "6,3 mil. (1989)",
+    "t_dnes": "3,3 mil. (2024)",
+    "l_tehdy": "6,3",
+    "l_dnes": "3,3",
+    "vlevo_dnes": true
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -11,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "datum": -9,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     }
+    },
+    "text": {
+     "field": "ukazatel"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 3,
+    "color": "#bcbcb0"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ]
+     },
+     "field": "tehdy"
+    },
+    "x2": {
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ]
+     },
+     "field": "tehdy"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ]
+     },
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ]
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ]
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ]
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -9,
+       75
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60
+      ]
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  }
+ ],
+ "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 12.09](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes (NIK, Státní fond kinematografie)",
+ "height": {
+  "step": 52
+ }
+}

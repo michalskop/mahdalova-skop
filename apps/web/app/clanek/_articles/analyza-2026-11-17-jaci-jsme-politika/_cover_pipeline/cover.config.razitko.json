@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/images/cover-homepage.png",
+      "otisk": "3770251315709a74",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/cover.config.cjs": "27c9585ee976940a",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/motiv-homepage.svg": "6969619e3f8bb6ca"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/images/cover-og.jpg",
+      "otisk": "b67c98ec9c24dba1",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/cover.config.cjs": "27c9585ee976940a",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/motiv-og.svg": "95eaa242495ed821"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/images/cover-square.png",
+      "otisk": "b542eb89dca06b8f",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/cover.config.cjs": "27c9585ee976940a",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/motiv-square.svg": "0ced8a4e1ee11c9b"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/images/cover-instagram.png",
+      "otisk": "cda02cb12ff5bb88",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/cover.config.cjs": "27c9585ee976940a",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/motiv-instagram.svg": "9926e4135c3221a3"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/images/cover-story.png",
+      "otisk": "82790a0a195b152a",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/cover.config.cjs": "27c9585ee976940a",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/motiv-story.svg": "a2f3ab3f7fc401d9"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-14T23:22:33.965Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-politika/index.md",
+  "titulekClanku": "Ve Sněmovně sedí třetina žen, prezidentkou ani premiérkou se ale žádná nestala",
+  "texty": {
+    "stitek": "1989 × 2026 • Politika",
+    "nadtitulek": "",
+    "titulek": "Ženy tvoří třetinu Sněmovny",
+    "podtitulek": "Po volbách v roce 1990 jich bylo 26 z 200. Prezidentkou ani premiérkou se žádná nestala"
+  }
+}

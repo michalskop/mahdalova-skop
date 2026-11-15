@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/images/cover-homepage.png",
+      "otisk": "6e90aa5576a237d5",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/cover.config.cjs": "3cd75b605c50abf9",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/motiv-homepage.svg": "e7c71acc192fc5df"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/images/cover-og.jpg",
+      "otisk": "da3263ab6e9c68c6",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/cover.config.cjs": "3cd75b605c50abf9",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/motiv-og.svg": "65b4c61aec372d3a"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/images/cover-square.png",
+      "otisk": "f7f691c8629d702e",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/cover.config.cjs": "3cd75b605c50abf9",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/motiv-square.svg": "92e261f22552e49c"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/images/cover-instagram.png",
+      "otisk": "47ef7bebc9cb80e7",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/cover.config.cjs": "3cd75b605c50abf9",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/motiv-instagram.svg": "329667d2272b1407"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/images/cover-story.png",
+      "otisk": "5d7898d42889c3cb",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/cover.config.cjs": "3cd75b605c50abf9",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/motiv-story.svg": "fa0c20a7477b4107"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:12:55.014Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-rodina/index.md",
+  "titulekClanku": "Dětí se dnes rodí méně než v nejhorším roce 90. let",
+  "texty": {
+    "stitek": "1989 × 2026 • Rodina",
+    "nadtitulek": "",
+    "titulek": "Loni se narodilo nejméně dětí od revoluce",
+    "podtitulek": "O 50 tisíc méně než v roce 1989 a méně i než v nejhorším roce 90. let"
+  }
+}

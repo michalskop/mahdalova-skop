@@ -1,0 +1,34 @@
+WDI NY.GDP.PCAP.PP.CD, aktualizace 2026-11-11
+HDP PPP Česko: 1990 12848 $, 2025 60487 $, v % Rakouska 66.2 → 78.8, v % Německa 66.0 → 80.2
+HDP PPP Rakousko: 1990 19396 $, 2025 76778 $, v % Rakouska 100.0 → 100.0, v % Německa 99.6 → 101.8
+HDP PPP Německo: 1990 19468 $, 2025 75407 $, v % Rakouska 100.4 → 98.2, v % Německa 100.0 → 100.0
+HDP PPP Slovensko: 1990 8638 $, 2025 49309 $, v % Rakouska 44.5 → 64.2, v % Německa 44.4 → 65.4
+HDP PPP Polsko: 1990 6185 $, 2025 54262 $, v % Rakouska 31.9 → 70.7, v % Německa 31.8 → 72.0
+HDP PPP Maďarsko: 1990 9169 $, 2025 49838 $, v % Rakouska 47.3 → 64.9, v % Německa 47.1 → 66.1
+Česko v % Rakouska – minimum 2000: 55.9; 2010 67.5
+Eurostat nama_10_pc (aktualizace 2026-11-11T23:00:00+0100) – kontrola 2025: Česko v % Rakouska v PPS 78.1 (WDI 78.8)
+Eurostat 2025: HDP na obyvatele v PPS, EU27 = 100: Česko 92.3, Rakousko 118.3, Německo 116.4, Slovensko 75.8, Polsko 81.1, Maďarsko 76.2
+Eurostat demo_mlexpec aktualizace 2026-11-13T23:00:00+0100, demo_minfind 2026-11-13T23:00:00+0100, edat_lfse_03 2026-10-30T23:00:00+0100
+Naděje dožití Česko: 1990 71.5 → 2024 80.1 (+8.6 roku)
+Naděje dožití Rakousko: 1990 75.8 → 2024 82.1 (+6.3 roku)
+Naděje dožití Německo: 1990 75.4 → 2024 81.2 (+5.8 roku)
+Naděje dožití Slovensko: 1990 71.1 → 2024 78.4 (+7.3 roku)
+Naděje dožití Polsko: 1990 70.7 → 2024 78.5 (+7.8 roku)
+Naděje dožití Maďarsko: 1990 69.4 → 2024 76.8 (+7.4 roku)
+Kojenecká úmrtnost Česko: 1990 10.8 → 2024 2.3 ‰
+Kojenecká úmrtnost Rakousko: 1990 7.8 → 2024 3.1 ‰
+Kojenecká úmrtnost Německo: 1990 7.0 → 2024 3.3 ‰
+Kojenecká úmrtnost Slovensko: 1990 12.0 → 2024 5.9 ‰
+Kojenecká úmrtnost Polsko: 1990 19.4 → 2024 3.6 ‰
+Kojenecká úmrtnost Maďarsko: 1990 14.8 → 2024 3.8 ‰
+pořadí naděje dožití 2024 ['Rakousko', 'Německo', 'Česko', 'Polsko', 'Slovensko', 'Maďarsko']
+pořadí naděje dožití 1990 ['Rakousko', 'Německo', 'Česko', 'Slovensko', 'Polsko', 'Maďarsko']
+pořadí kojenecké úmrtnosti (nejnižší první) 2024 ['Česko', 'Rakousko', 'Německo', 'Polsko', 'Maďarsko', 'Slovensko']
+Česko – rozdíl naděje dožití proti Rakousku: 1990 4.3 → 2024 2.0 roku
+VŠ 25–64 Česko: 1998 10.6 → 2025 28.7 %
+VŠ 25–64 Rakousko: 1998 8.2 → 2025 37.6 %
+VŠ 25–64 Německo: 1998 None → 2025 35.4 %
+VŠ 25–64 Slovensko: 1998 10.3 → 2025 29.8 %
+VŠ 25–64 Polsko: 1998 10.7 → 2025 40.0 %
+VŠ 25–64 Maďarsko: 1998 13.1 → 2025 31.6 %
+pořadí VŠ 25–64 2025 ['Polsko', 'Rakousko', 'Německo', 'Maďarsko', 'Slovensko', 'Česko'] (řada má zlom 2014, ISCED 2011)

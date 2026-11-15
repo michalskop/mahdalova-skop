@@ -9,9 +9,15 @@ const articlesDir = path.join(__dirname, '../app/clanek/_articles');
 // folders are content sources only; their canonical page lives under
 // /specialy/, and /clanek/[slug] deliberately won't generate a static route
 // for them (output: export would 500 if it tried).
+// Speciál „Jací jsme byli, jací jsme“: kapitoly mají kanonickou adresu pod /specialy/ (seznam v kapitoly.json)
+const JACI_JSME = require('../app/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/kapitoly.json');
+const JACI_JSME_URLS = JACI_JSME.kapitoly
+  .filter(k => fs.existsSync(path.join(articlesDir, k.zdroj, 'index.md')))
+  .map(k => ({ zdroj: k.zdroj, url: `/specialy/${JACI_JSME.slug}/${k.kapitola}` }));
 const EXCLUDED_SLUGS = [
   'data-pro-budouci-premierku-02-demografie',
   'data-pro-budouci-premierku-02-demografie-plodnost',
+  ...JACI_JSME.kapitoly.map(k => k.zdroj),
 ];
 
 function getArticleSlugs() {
@@ -105,6 +111,16 @@ Mahdalová & Škop je projekt datové žurnalistiky zaměřený na politické a 
       });
       content += '\n';
     }
+  }
+
+  if (JACI_JSME_URLS.length) {
+    content += `### ${JACI_JSME.nazev} (${JACI_JSME.podtitul})\n`;
+    content += `- [Rozcestník speciálu](${baseUrl}/specialy/${JACI_JSME.slug})\n`;
+    JACI_JSME_URLS.forEach(({ zdroj, url }) => {
+      const k = JACI_JSME.kapitoly.find(x => x.zdroj === zdroj);
+      content += `- [${k.nazev}](${baseUrl}${url})\n`;
+    });
+    content += '\n';
   }
 
   content += `## Kontakt

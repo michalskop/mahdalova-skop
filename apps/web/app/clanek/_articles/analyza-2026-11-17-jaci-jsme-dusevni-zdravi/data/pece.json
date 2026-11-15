@@ -1,0 +1,292 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Psychiatrů {přibylo|#de1743}, psychiatrických lůžek {ubylo|#6267a3} o víc než třetinu",
+    "subtitle": "Změna počtu na 100 000 obyvatel v %; lékaři a zubaři fyzické osoby v praxi, hospitalizace 1989 a 2022 podle jiné metodiky"
+  },
+  "width": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "kat": "Psychiatři",
+        "zmena": 62.1,
+        "skup": "přibylo",
+        "popisek": "Psychiatři: 10,1 → 16,3 (1995–2024)",
+        "hodnota": "+62 %",
+        "t0": "10,1 (1995)",
+        "t1": "16,3 (2024)"
+      },
+      {
+        "kat": "Lékaři celkem",
+        "zmena": 57.7,
+        "skup": "přibylo",
+        "popisek": "Lékaři celkem: 272,1 → 429,2 (1989–2024)",
+        "hodnota": "+58 %",
+        "t0": "272,1 (1989)",
+        "t1": "429,2 (2024)"
+      },
+      {
+        "kat": "Zubní lékaři",
+        "zmena": 40.9,
+        "skup": "přibylo",
+        "popisek": "Zubní lékaři: 53,9 → 76,0 (1989–2024)",
+        "hodnota": "+41 %",
+        "t0": "53,9 (1989)",
+        "t1": "76,0 (2024)"
+      },
+      {
+        "kat": "Hospitalizace v psychiatrii",
+        "zmena": 6.4,
+        "skup": "přibylo",
+        "popisek": "Hospitalizace v psychiatrii: 490,0 → 521,1 (1989–2022)",
+        "hodnota": "+6 %",
+        "t0": "490,0 (1989)",
+        "t1": "521,1 (2022)"
+      },
+      {
+        "kat": "Psychiatrická lůžka",
+        "zmena": -38.1,
+        "skup": "ubylo",
+        "popisek": "Psychiatrická lůžka: 140,0 → 86,6 (1990–2024)",
+        "hodnota": "−38 %",
+        "t0": "140,0 (1990)",
+        "t1": "86,6 (2024)"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.55
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "field": "zmena",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -60,
+              95
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              -40,
+              -20,
+              0,
+              20,
+              40,
+              60,
+              80
+            ],
+            "labelExpr": "datum.value + ' %'",
+            "labelFontSize": 10.5
+          }
+        },
+        "x2": {
+          "datum": 0
+        },
+        "color": {
+          "field": "skup",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "přibylo",
+              "ubylo"
+            ],
+            "range": [
+              "#de1743",
+              "#6267a3"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Ukazatel"
+          },
+          {
+            "field": "t0",
+            "title": "Tehdy na 100 000"
+          },
+          {
+            "field": "t1",
+            "title": "Dnes na 100 000"
+          },
+          {
+            "field": "hodnota",
+            "title": "Změna"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zmena >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "field": "zmena",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "hodnota"
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Ukazatel"
+          },
+          {
+            "field": "t0",
+            "title": "Tehdy na 100 000"
+          },
+          {
+            "field": "t1",
+            "title": "Dnes na 100 000"
+          },
+          {
+            "field": "hodnota",
+            "title": "Změna"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.zmena < 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -5,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#101432"
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "field": "zmena",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "hodnota"
+        },
+        "tooltip": [
+          {
+            "field": "kat",
+            "title": "Ukazatel"
+          },
+          {
+            "field": "t0",
+            "title": "Tehdy na 100 000"
+          },
+          {
+            "field": "t1",
+            "title": "Dnes na 100 000"
+          },
+          {
+            "field": "hodnota",
+            "title": "Změna"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dy": -9,
+        "fontSize": 12,
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "kat",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.5,
+            "paddingOuter": 0.45
+          }
+        },
+        "x": {
+          "datum": -60,
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -60,
+              95
+            ]
+          }
+        },
+        "text": {
+          "field": "popisek"
+        }
+      }
+    }
+  ],
+  "_source": "OECD, ČSÚ, [ročenky ÚZIS](https://www.uzis.cz/index.php?pg=vystupy--statistika-vybranych-oboru-lekarske-pece--psychiatrie)",
+  "height": {
+    "step": 54
+  }
+}

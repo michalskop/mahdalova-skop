@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/images/cover-homepage.png",
+      "otisk": "793f041b354f74be",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/cover.config.cjs": "064a13175268e46e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/motiv-homepage.svg": "1cf7ef9221367b21"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/images/cover-og.jpg",
+      "otisk": "c25f4d89e4bca6ef",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/cover.config.cjs": "064a13175268e46e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/motiv-og.svg": "0354f70643878eed"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/images/cover-square.png",
+      "otisk": "da90dc388fd58a66",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/cover.config.cjs": "064a13175268e46e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/motiv-square.svg": "857a21f5f181dda3"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/images/cover-instagram.png",
+      "otisk": "ef2a9346f8915d80",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/cover.config.cjs": "064a13175268e46e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/motiv-instagram.svg": "34b320a3e418b710"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/images/cover-story.png",
+      "otisk": "3ab7fec14919dff9",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/cover.config.cjs": "064a13175268e46e",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/motiv-story.svg": "1640ad109ffce823"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:28:10.473Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-zdravi/index.md",
+  "titulekClanku": "Na nemoci srdce a cév umírá o 29 tisíc lidí ročně méně než v roce 1989",
+  "texty": {
+    "stitek": "1989 × 2026 • Zdraví a délka života",
+    "nadtitulek": "",
+    "titulek": "Na nemoci srdce a cév umírá o dvě pětiny lidí méně než v roce 1989",
+    "podtitulek": "Přestože Česko zestárlo. V roce 1989 jich zemřelo 72 tisíc, v roce 2024 43 tisíc"
+  }
+}

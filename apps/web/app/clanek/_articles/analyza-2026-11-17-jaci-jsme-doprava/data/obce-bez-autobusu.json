@@ -1,0 +1,495 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "V sobotu nejede autobus do {1 722 obcí|#de1743}, v roce 2000 jich bylo {2 441|#6267a3}",
+  "subtitle": "Počet obcí podle spojů veřejné linkové autobusové dopravy; v roce 2000 bylo obcí 6 169, v roce 2025 6 258. Obce včetně těch, kam jezdí vlak"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "ukazatel": "Obce bez autobusu v sobotu",
+    "tehdy": 2441.0,
+    "dnes": 1722.0,
+    "t_tehdy": "2 441 (2000)",
+    "t_dnes": "1 722 (2025)",
+    "l_tehdy": "2 441",
+    "l_dnes": "1 722",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Obce bez autobusu v neděli",
+    "tehdy": 1845.0,
+    "dnes": 1461.0,
+    "t_tehdy": "1 845 (2000)",
+    "t_dnes": "1 461 (2025)",
+    "l_tehdy": "1 845",
+    "l_dnes": "1 461",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Obce s nejvýš čtyřmi spoji v sobotu",
+    "tehdy": 3728.0,
+    "dnes": 2091.0,
+    "t_tehdy": "3 728 (2000)",
+    "t_dnes": "2 091 (2025)",
+    "l_tehdy": "3 728",
+    "l_dnes": "2 091",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Obce bez autobusu v pracovní den",
+    "tehdy": 57.0,
+    "dnes": 51.0,
+    "t_tehdy": "57 (2000)",
+    "t_dnes": "51 (2025)",
+    "l_tehdy": "57",
+    "l_dnes": "51",
+    "vlevo_dnes": true
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -11,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "datum": -600,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     }
+    },
+    "text": {
+     "field": "ukazatel"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 3,
+    "color": "#d4d4c8"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "x2": {
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -600,
+       4500
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       1000,
+       2000,
+       3000,
+       4000
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  }
+ ],
+ "_source": "[Ročenky dopravy MD 2006 a 2025](https://www.sydos.cz/cs/rocenky.htm)",
+ "height": {
+  "step": 52
+ }
+}

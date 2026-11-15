@@ -9,9 +9,15 @@ const articlesDir = path.join(__dirname, '../app/clanek/_articles');
 // folders are content sources only; their canonical page lives under
 // /specialy/, and /clanek/[slug] deliberately won't generate a static route
 // for them (output: export would 500 if it tried).
+// Speciál „Jací jsme byli, jací jsme“: kapitoly mají kanonickou adresu pod /specialy/ (seznam v kapitoly.json)
+const JACI_JSME = require('../app/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/kapitoly.json');
+const JACI_JSME_URLS = JACI_JSME.kapitoly
+  .filter(k => fs.existsSync(path.join(articlesDir, k.zdroj, 'index.md')))
+  .map(k => ({ zdroj: k.zdroj, url: `/specialy/${JACI_JSME.slug}/${k.kapitola}` }));
 const EXCLUDED_SLUGS = [
   'data-pro-budouci-premierku-02-demografie',
   'data-pro-budouci-premierku-02-demografie-plodnost',
+  ...JACI_JSME.kapitoly.map(k => k.zdroj),
 ];
 
 function getArticleSlugs() {
@@ -69,6 +75,26 @@ function generateSitemap() {
     xml += '  </url>\n';
   });
   
+  // Speciál „Jací jsme byli, jací jsme“ – rozcestník a kapitoly
+  if (JACI_JSME_URLS.length) {
+    xml += '  <url>\n';
+    xml += `    <loc>${baseUrl}/specialy/${JACI_JSME.slug}</loc>\n`;
+    xml += '    <changefreq>weekly</changefreq>\n';
+    xml += '    <priority>0.8</priority>\n';
+    xml += '  </url>\n';
+  }
+  JACI_JSME_URLS.forEach(({ zdroj, url }) => {
+    const lastmod = getArticleDate(zdroj);
+    xml += '  <url>\n';
+    xml += `    <loc>${baseUrl}${url}</loc>\n`;
+    if (lastmod) {
+      xml += `    <lastmod>${lastmod}</lastmod>\n`;
+    }
+    xml += '    <changefreq>monthly</changefreq>\n';
+    xml += '    <priority>0.7</priority>\n';
+    xml += '  </url>\n';
+  });
+
   // Articles
   slugs.forEach(slug => {
     const lastmod = getArticleDate(slug);

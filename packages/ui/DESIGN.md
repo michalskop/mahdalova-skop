@@ -29,6 +29,16 @@ and insert non-breaking spaces so that **one-letter prepositions/conjunctions**
 orphaned at a line edge (`( ` → `(&nbsp;`, ` )` → `&nbsp;)`). Only mdast `text`
 nodes are touched — code, raw HTML and URLs are left alone. These are hard
 rules: never ship copy with a dangling one-letter word or a lone bracket.
+Since 2026-11-14 the plugin also binds a **number to `%`/`‰`** („12,9 %“ wrapped
+before „%“ on mobile) and **thousands groups written with plain spaces**
+(„1 131 197“ never breaks inside the number; two years side by side stay apart).
+
+**Lesson (2026-11-14, Czech flag in the 1989 × 2026 special):** draw a flag as an
+exact shape (inline SVG / SVG data URI: white and red stripes, blue triangle from
+the hoist to the centre), never by stacking CSS gradients – two half-height
+gradients produced a wrong blue block instead of the wedge.
+A tricolour stripe (white–crimson–blue) placed on the light page background needs a thin
+ink edge under it, otherwise the white third disappears.
 
 ### Article layout (`apps/web`)
 
@@ -840,6 +850,119 @@ File: `apps/web/components/clanek/PreferredSource.tsx` (+ `.module.css`).
   `white-space: nowrap`, so an icon never wraps away from its word on mobile.
 - Hover: subtle `scale(1.015)`; disabled under `prefers-reduced-motion`.
   Marked `data-pagefind-ignore` so it doesn't pollute search.
+
+### Interaktivní prvky speciálu 1989 × 2026 (`apps/web`)
+
+Reader-interactive pieces for the special „Jací jsme byli, jací jsme – 1989 × 2026“,
+usable in any chapter (and any article). Files: `apps/web/components/specialy/jaciJsme/`
+(`Tipovacka.tsx`, `PosuvnikTehdyDnes.tsx`, `OdNarozeni.tsx`, shared `spolecne.tsx`).
+Registered in `ArticleRenderer`; the JSON is read at build time by `lib/articleData.ts`
+(`scope.jaciJsmeData`, keyed by `dataFile`) exactly like `ObceHodnotaMap`.
+
+```md
+<Tipovacka dataFile="data/tip-trestne-ciny.json" />
+<PosuvnikTehdyDnes dataFile="data/posuvnik-podily.json" />
+<OdNarozeni dataFile="data/od-narozeni.json" />
+```
+
+- **Look:** all three sit in `ChartCard` (title/subtitle from JSON, DataTimes.cz logo, footer
+  „autoři“ + „data“ from `zdroj`, which takes `[text](url)` links). Colours: tehdy `#6267a3`,
+  dnes `#de1743`, ink `#101432`, card `#f8f6f0`. Fonts via CSS variables only: Roboto Condensed
+  `var(--font-roboto-condensed)` for numbers/labels, IBM Plex Sans for questions and sentences
+  via `var(--mantine-font-family-headings)` (`--font-ibm-plex-sans` is **not** set on `<body>`,
+  a `var()` on it silently falls back to Roboto Condensed). Czech numbers through `num()` in
+  `spolecne.tsx` (nbsp thousands, decimal comma, nbsp before units); JSON texts go through
+  `fixCzechTypography`. Values > 55 % of the track are labelled inside the bar, otherwise
+  after it on a cream backing (a marker line never runs through the number).
+- **Data:** generate every JSON with a script in the article's `_data_pipeline/` from its
+  computed outputs, never type numbers by hand. Reference:
+  `analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/05_interaktivni.py`.
+- **Tipovacka** – „Tipněte si, než to ukážeme“: question, range slider + text field for the
+  guess, button **Ukázat** reveals three bars (tehdy / váš tip as a hatched outline / dnes), a
+  verdict (within 5 % = „Trefa!“, otherwise by how much and %) and the explanation. The tip
+  stays visible, slider locks, **Zkusit znovu** resets. Nothing is stored. JSON:
+  `{ title, subtitle?, otazka, jednotka, min, max, krok?, vychozi?, desetinna?,
+  tehdy: {rok, hodnota, popisek?}, dnes: {rok, hodnota, popisek?}, vysvetleni?, zdroj }`.
+  Put it **before** the paragraph that gives the answer; give the 1989 value in the question
+  as an anchor (nobody can guess an absolute count cold).
+- **PosuvnikTehdyDnes** – bars that pour from the 1989 values to today's while dragging; the
+  bar colour blends tehdy → dnes, the big year crossfades, buttons `1989` / `2025` play the
+  transition (instant under `prefers-reduced-motion`), a thin tehdy-coloured tick keeps the 1989
+  value visible. Screen readers get a hidden table with both states. JSON:
+  `{ title, subtitle, jednotka, max?, desetinna?, popisek_tehdy, popisek_dnes,
+  polozky: [{nazev, tehdy, dnes, rok_tehdy?, rok_dnes?, pozn?}], zdroj }` – row years that
+  differ from the labels (census 1991/2021) are printed after the name. Use `max: 100` for
+  shares so the scale doesn't change meaning.
+- **OdNarozeni** – „Česko od vašeho narození“: year input (number field + slider,
+  `rok_min`–`rok_max`, default `vychozi`), then one tile per indicator: value in the birth year
+  × the latest year, change, a mini line of the whole series with both years marked. Before a
+  series starts it uses the first year and says so („nejstarší údaj“ + one sentence above the
+  tiles); after it ends, the latest. JSON:
+  `{ title, subtitle, rok_min, rok_max, vychozi, ukazatele: [{nazev, jednotka, desetinna,
+  porovnani: "rozdil"|"pomer", jednotka_rozdil?, rada: {"1989": 68.139, …}, zdroj, pozn?}], zdroj }`.
+  `rozdil` prints „+9,4 roku“ (for `%` in „p. b.“), `pomer` „1,9krát víc“ / „o 40 % méně“.
+  Unit `"Kčs/Kč"` switches to Kčs up to 1992. Keep full precision in `rada` (rounding the series
+  first made 77,5 − 68,1 show as 9,3 instead of 9,4). Nominal money series need a `pozn`
+  pointing to the real-wage tile. Optional `podle_veku` adds the section „Lidé ve vašem věku
+  tehdy × dnes“ under the tiles: from the reader's age this year it picks the age group and shows
+  the same age at two censuses (two bars per indicator + change in p. b.):
+  `podle_veku: { title?, rok_tehdy: 1991, rok_dnes: 2021, skupiny: [{od, do, nazev,
+  ukazatele: [{nazev, tehdy, dnes, pozn?}]}], pozn?, zdroj? }` (shares in %). Outside the groups'
+  range it says which ages are covered. Generated by `06_stejne_stari.py` (run after
+  `05_interaktivni.py`, it adds the key to `od-narozeni.json`).
+- **OkresyMalemapy** – small multiples of districts (Zeit „A Nation Divided“ / Le Monde „9
+  cartes“): per indicator a pair of maps 1991 | 2021 (side by side, stacked under 520 px card
+  width), one **shared** stepped scale per indicator from the sequential brand ramp
+  (`#fff4f6 … #8b0e2b`, 7 classes; never red × green), legend under the pair, a one-line
+  finding (`zjisteni`) above and the comparability caveat (`proc`) below. Hover/tap an okres →
+  it is outlined in **all** maps and the tooltip (§10: colour strip with the okres name, ink
+  rows) shows both years and the change in p. b.; it is clamped inside the map. Hidden table per
+  indicator for screen readers. Geometry = today's 77 okresy (RÚIAN `OKRESY_P`, S-JTSK,
+  simplified to ~250 kB GeoJSON, id = LAU1 code) stored as `okresy-geo.json` at the article
+  root (copied to `public/` by `copyImages.js`; after adding it while `next dev` runs, copy it
+  by hand) and fetched from the URL in `geo`. `<OkresyMalemapy dataFile="data/okresy-1991-2021.json" />`;
+  JSON: `{ title, subtitle, zdroj, poznamka?, geo, roky: ["1991","2021"], okresy: {LAU1: název},
+  pozn_okres?: {LAU1: text}, ukazatele: [{id, nazev, popis?, zjisteni?, proc?, jednotka,
+  desetinna?, cr: [t, d], skala: {hranice: [...], barvy: [...]}, hodnoty: {LAU1: [t, d]}}] }`.
+  Rule (Le Monde): an indicator goes in only if ČSÚ published it for okresy in both censuses
+  with a comparable question – say why in `proc`. Jeseník (since 1996) gets the 1991 value of
+  old Šumperk; spread measures run on 76 okresy. Generated by `07_okresy.py`.
+- **Demonstrace1989Map** – animated bubble map of demonstrations 9. 11. – 26. 12. 1989 on
+  today's territory, day by day (`Demonstrace1989Map.tsx`; chapter Svoboda). Big date
+  (IBM Plex Sans 34/26 px) + weekday on top, one status line („Tento den: N obcí, z toho s počtem
+  účastníků M · od 9. listopadu celkem K obcí“), map, then controls **under** the map on every
+  width: ink button **Přehrát / Pauza** (44 px) + range slider of days (`accent-color` brand,
+  ticks 9. 11. / 17. 11. / 1. 12. / 26. 12.). Marks: event with a number = `#de1743` bubble,
+  fill-opacity 0.55, stroke brand.8 `#a81134`, **area ∝ participants** (sqrt scale, `rMax` =
+  7,5 % of map width for the largest value in the data, min. radius 2,5 px); a range uses its
+  upper bound. Event without a number = uniform `#6267a3` dot with a white ring. Earlier days
+  stay as a faint trace – per municipality only the **largest** event so far (fill 0.1, stroke
+  0.4; dashed when the town also has an event today), number-less towns as a 35 % blue dot – so
+  the spread is visible without piling up Prague's daily circles. Today's 4 largest events (2 on
+  mobile) are labelled „Praha 800 000“ on a cream halo, colliding labels are skipped. Tooltip
+  (§10 look; strip = mark colour, beige `#d4d4c8` with ink text for a trace): date · type,
+  „Účastníků“ (or „počet pramen neuvádí“), the source wording „v prameni: „…““, **who
+  estimated** („podle odhadu: policie (StB a VB) – denní situační zpráva FMV / opozice –
+  Informační servis NTS / historik Jiří Suk / ÚSTR“), other numeric estimates of the same event
+  from other sources („jiný odhad“), short source. Placed above the cursor, below it when there
+  is no room, clamped to the map (checked by script on 12 days × all marks at 311 and 704 px: 0
+  marks covered). Hit area ≥ 10 px radius; tap outside closes. Autoplay once when the map is
+  50 % in view (650 ms/day, 1,8 s hold on 17. 11. and on the day of the largest event); any
+  click/drag stops autoplay for good. `prefers-reduced-motion`: no autoplay, no pop-in
+  animation, the map opens on the **last day** with the full trace. Mobile (< 560 px): the map
+  bleeds over the card's 16 px padding to the full card width. Land `#e9e9dd`, white kraj
+  lines, outline `#bcbcb0`; no OSM basemap (country-wide view without zoom). Note under the map
+  from `poznamka` (`[text](url)` links allowed), hidden table of all events for screen readers.
+  `<Demonstrace1989Map dataFile="data/demonstrace-1989.json" />`; JSON (geometry included, ~115 kB):
+  `{ title, subtitle, zdroj, poznamka, dny: ["1989-11-09", …], kdo: {FMV|IS|USD|USTR: label},
+  obce: {kód obce: {n, x, y, kraj}}` (S-JTSK EPSG:5514) `, akce: [{d: index dne, o: kód obce,
+  min, max, v (size value or null), text, kdo, typ, zdroj, jine?: [{kdo, min, max, text,
+  zdroj}]}], kraje: FeatureCollection (S-JTSK), obrys: MultiLineString }`. Generated by
+  `analyza-2026-11-17-jaci-jsme-svoboda/_data_pipeline/demonstrace.py` from the archive CSV
+  `historie/demonstrace-1989/20261114/demonstrace_1989.csv` (rows `pro_mapu = 1`, one per day ×
+  municipality; numbers never filled in) and the kraj borders of the shared `obce-geo.json`
+  (Douglas–Peucker 600 m). Rule: never sum estimates from different sides, always say who
+  estimated, and say in the note that the town list is incomplete.
 
 ---
 

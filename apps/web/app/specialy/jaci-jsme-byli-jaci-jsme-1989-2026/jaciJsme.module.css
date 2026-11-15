@@ -1,0 +1,232 @@
+/* Speciál „Jací jsme byli, jací jsme – 1989 × 2026“. Trikolóra z palety:
+   ink #101432, karmínová #de1743 (brand.6), královská modrá #4a51ab (brandRoyalBlue.6), bílá. */
+
+.flag {
+  display: inline-block;
+  width: 27px;
+  height: 18px;
+  margin-right: 10px;
+  vertical-align: -3px;
+  border-radius: 2px;
+  /* vlajka ČR 3 : 2 – bílý a karmínový pruh, modrý klín od žerdi do středu */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 4'%3E%3Crect width='6' height='2' fill='%23fff'/%3E%3Crect y='2' width='6' height='2' fill='%23de1743'/%3E%3Cpath d='M0 0L3 2L0 4z' fill='%234a51ab'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  box-shadow: 0 0 0 1px rgba(16, 20, 50, 0.15);
+}
+
+/* ---------- lišta kapitol nad článkem ---------- */
+.bar {
+  background: #101432;
+  color: #ffffff;
+}
+.barInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+}
+.barBrand {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.barYears { color: #ffb3c0; font-weight: 600; }
+.barList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 13.5px;
+  min-width: 0;
+  /* na mobilu se lišta posouvá uvnitř sebe, nikdy nerozšíří stránku */
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+.barInner { max-width: min(1200px, 100vw); box-sizing: border-box; }
+.barList::-webkit-scrollbar { display: none; }
+.barItem, .barActive {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 3px 0;
+  border-bottom: 2px solid transparent;
+}
+.barItem:hover { color: #ffffff; }
+.barActive { color: #ffffff; font-weight: 700; border-bottom-color: #de1743; }
+
+/* ---------- předchozí / další ---------- */
+.prevNext {
+  max-width: 800px;
+  margin: 32px auto 0;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+}
+.pnLink {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  color: #101432;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f8f6f0;
+  min-width: 0;
+}
+.pnLink:hover { background: #efece2; }
+.pnRight { text-align: right; }
+.pnLabel { font-size: 12px; color: #4a51ab; }
+.pnTitle { font-weight: 700; font-size: 15px; }
+.pnHome { font-size: 13px; color: #101432; text-align: center; }
+@media (max-width: 600px) {
+  .prevNext { grid-template-columns: 1fr 1fr; }
+  .pnHome { grid-column: 1 / -1; grid-row: 2; }
+}
+
+/* ---------- rozcestník ---------- */
+.hero {
+  background: #101432;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+.eyebrow {
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffb3c0;
+  margin: 0 0 12px;
+}
+.heroTitle {
+  font-family: var(--font-ibm-plex-serif), 'IBM Plex Serif', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.05;
+  margin: 0;
+  text-wrap: balance;
+}
+.heroLead {
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 620px;
+  margin: 18px 0 0;
+}
+.years {
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(56px, 9vw, 112px);
+  line-height: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-variant-numeric: tabular-nums;
+}
+.y1989 { color: #899aeb; }
+.yTimes { color: rgba(255, 255, 255, 0.5); font-size: 0.4em; margin: 4px 0; }
+.y2026 { color: #ffffff; border-bottom: 10px solid #de1743; }
+/* trikolóra leží uvnitř tmavého hero: pod ní zůstává ink lem, jinak by bílá splynula se světlým
+   pozadím stránky pod hero */
+.stripe {
+  height: 10px;
+  background: linear-gradient(90deg, #ffffff 0 33.33%, #de1743 33.33% 66.66%, #4a51ab 66.66% 100%);
+  border-bottom: 6px solid #101432;
+  box-sizing: content-box;
+}
+@media (max-width: 760px) {
+  .heroInner { grid-template-columns: 1fr; padding: 32px 16px 40px; }
+  .years { flex-direction: row; align-items: baseline; gap: 12px; }
+  .yTimes { margin: 0; }
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px 24px;
+}
+.sectionTitle {
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #101432;
+  margin: 0 0 20px;
+}
+.sectionLead {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #101432;
+  max-width: 720px;
+  margin: -8px 0 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 16px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #101432;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(16, 20, 50, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(16, 20, 50, 0.12); }
+.cardImg { width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; display: block; background: #101432; }
+.cardPlaceholder {
+  aspect-ratio: 1200 / 630;
+  background: #101432;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  font-family: var(--font-ibm-plex-serif), 'IBM Plex Serif', Georgia, serif;
+  font-weight: 700;
+  font-size: 26px;
+  border-bottom: 6px solid #de1743;
+}
+.cardBody { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+.cardNum {
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #de1743;
+}
+.cardTitle {
+  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  text-wrap: balance;
+}
+.cardExcerpt { font-size: 15px; line-height: 1.5; color: #333333; margin: 0; }
+.cardSoon { opacity: 0.55; pointer-events: none; }

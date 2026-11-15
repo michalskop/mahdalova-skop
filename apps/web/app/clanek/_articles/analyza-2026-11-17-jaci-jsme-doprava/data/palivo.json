@@ -1,0 +1,492 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Na naftu jezdí {39 %|#de1743} aut, v roce 1997 to bylo {8 %|#6267a3}",
+  "subtitle": "Podíl registrovaných osobních aut podle paliva v %, 1997 a 2025; plug-in hybridy patří k benzinu a naftě"
+ },
+ "width": "container",
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "ukazatel": "Benzin",
+    "tehdy": 92.1,
+    "dnes": 57.9,
+    "t_tehdy": "92,1 % (1997)",
+    "t_dnes": "57,9 % (2025)",
+    "l_tehdy": "92,1 %",
+    "l_dnes": "57,9 %",
+    "vlevo_dnes": true
+   },
+   {
+    "ukazatel": "Nafta",
+    "tehdy": 7.6,
+    "dnes": 38.9,
+    "t_tehdy": "7,6 % (1997)",
+    "t_dnes": "38,9 % (2025)",
+    "l_tehdy": "7,6 %",
+    "l_dnes": "38,9 %",
+    "vlevo_dnes": false
+   },
+   {
+    "ukazatel": "Plyn, elektřina a ostatní",
+    "tehdy": 0.3,
+    "dnes": 3.2,
+    "t_tehdy": "0,3 % (1997)",
+    "t_dnes": "3,2 % (2025)",
+    "l_tehdy": "0,3 %",
+    "l_dnes": "3,2 %",
+    "vlevo_dnes": false
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "bottom",
+    "dy": -11,
+    "fontSize": 12,
+    "color": "#333333"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "datum": 0,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     }
+    },
+    "text": {
+     "field": "ukazatel"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 3,
+    "color": "#d4d4c8"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "x2": {
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "circle",
+    "size": 150,
+    "opacity": 1,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "dnes"
+    },
+    "tooltip": [
+     {
+      "field": "ukazatel",
+      "title": "Ukazatel"
+     },
+     {
+      "field": "t_tehdy",
+      "title": "Tehdy"
+     },
+     {
+      "field": "t_dnes",
+      "title": "Dnes"
+     }
+    ]
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "!datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": 10,
+    "fontSize": 11,
+    "color": "#6267a3"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "tehdy"
+    },
+    "text": {
+     "field": "l_tehdy"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": "datum.vlevo_dnes"
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "dx": -10,
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743"
+   },
+   "encoding": {
+    "y": {
+     "field": "ukazatel",
+     "type": "nominal",
+     "sort": null,
+     "axis": null,
+     "scale": {
+      "paddingInner": 0.55,
+      "paddingOuter": 0.6
+     }
+    },
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       100
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       20,
+       40,
+       60,
+       80,
+       100
+      ],
+      "labelExpr": "replace(format(datum.value, ',d'), ',', ' ')"
+     },
+     "field": "dnes"
+    },
+    "text": {
+     "field": "l_dnes"
+    }
+   }
+  }
+ ],
+ "_source": "[Ročenky dopravy MD 1998 a 2025](https://www.sydos.cz/cs/rocenky.htm)",
+ "height": {
+  "step": 52
+ }
+}

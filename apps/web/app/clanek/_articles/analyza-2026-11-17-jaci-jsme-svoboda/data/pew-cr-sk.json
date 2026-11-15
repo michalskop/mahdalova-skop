@@ -1,0 +1,401 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Češi schvalují změny po roce 1989 {víc|#de1743} než Slováci",
+  "subtitle": "Podíl dospělých, kteří přechod rozhodně nebo spíše schvalují, a kteří hodnotí ekonomickou situaci většiny lidí jako lepší než za komunismu, v %; rok 1991 = česká a slovenská část Československa, otázku na ekonomiku se Pew poprvé ptal v roce 2009"
+ },
+ "width": "container",
+ "height": 364,
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "r": 1,
+    "zeme": "Česko",
+    "rok": "1991",
+    "v": 80,
+    "popis": "Česko  1991",
+    "t": "80 %",
+    "barva": "#6267a3",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na systém více stran"
+   },
+   {
+    "r": 2,
+    "zeme": "Česko",
+    "rok": "2009",
+    "v": 80,
+    "popis": "2009",
+    "t": "80 %",
+    "barva": "#bcbcb0",
+    "txt": "#101432",
+    "otazka": "Schvaluje přechod na systém více stran"
+   },
+   {
+    "r": 3,
+    "zeme": "Česko",
+    "rok": "2019",
+    "v": 82,
+    "popis": "2019",
+    "t": "82 %",
+    "barva": "#de1743",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na systém více stran"
+   },
+   {
+    "r": 4,
+    "zeme": "Slovensko",
+    "rok": "1991",
+    "v": 70,
+    "popis": "Slovensko  1991",
+    "t": "70 %",
+    "barva": "#6267a3",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na systém více stran"
+   },
+   {
+    "r": 5,
+    "zeme": "Slovensko",
+    "rok": "2009",
+    "v": 71,
+    "popis": "2009",
+    "t": "71 %",
+    "barva": "#bcbcb0",
+    "txt": "#101432",
+    "otazka": "Schvaluje přechod na systém více stran"
+   },
+   {
+    "r": 6,
+    "zeme": "Slovensko",
+    "rok": "2019",
+    "v": 74,
+    "popis": "2019",
+    "t": "74 %",
+    "barva": "#de1743",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na systém více stran"
+   },
+   {
+    "r": 8.4,
+    "zeme": "Česko",
+    "rok": "1991",
+    "v": 87,
+    "popis": "Česko  1991",
+    "t": "87 %",
+    "barva": "#6267a3",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na tržní ekonomiku"
+   },
+   {
+    "r": 9.4,
+    "zeme": "Česko",
+    "rok": "2009",
+    "v": 79,
+    "popis": "2009",
+    "t": "79 %",
+    "barva": "#bcbcb0",
+    "txt": "#101432",
+    "otazka": "Schvaluje přechod na tržní ekonomiku"
+   },
+   {
+    "r": 10.4,
+    "zeme": "Česko",
+    "rok": "2019",
+    "v": 76,
+    "popis": "2019",
+    "t": "76 %",
+    "barva": "#de1743",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na tržní ekonomiku"
+   },
+   {
+    "r": 11.4,
+    "zeme": "Slovensko",
+    "rok": "1991",
+    "v": 69,
+    "popis": "Slovensko  1991",
+    "t": "69 %",
+    "barva": "#6267a3",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na tržní ekonomiku"
+   },
+   {
+    "r": 12.4,
+    "zeme": "Slovensko",
+    "rok": "2009",
+    "v": 66,
+    "popis": "2009",
+    "t": "66 %",
+    "barva": "#bcbcb0",
+    "txt": "#101432",
+    "otazka": "Schvaluje přechod na tržní ekonomiku"
+   },
+   {
+    "r": 13.4,
+    "zeme": "Slovensko",
+    "rok": "2019",
+    "v": 71,
+    "popis": "2019",
+    "t": "71 %",
+    "barva": "#de1743",
+    "txt": "#ffffff",
+    "otazka": "Schvaluje přechod na tržní ekonomiku"
+   },
+   {
+    "r": 15.8,
+    "zeme": "Česko",
+    "rok": "2009",
+    "v": 45,
+    "popis": "Česko  2009",
+    "t": "45 %",
+    "barva": "#bcbcb0",
+    "txt": "#101432",
+    "otazka": "Ekonomická situace je lepší než za komunismu"
+   },
+   {
+    "r": 16.8,
+    "zeme": "Česko",
+    "rok": "2019",
+    "v": 61,
+    "popis": "2019",
+    "t": "61 %",
+    "barva": "#de1743",
+    "txt": "#ffffff",
+    "otazka": "Ekonomická situace je lepší než za komunismu"
+   },
+   {
+    "r": 17.8,
+    "zeme": "Slovensko",
+    "rok": "2009",
+    "v": 29,
+    "popis": "Slovensko  2009",
+    "t": "29 %",
+    "barva": "#bcbcb0",
+    "txt": "#101432",
+    "otazka": "Ekonomická situace je lepší než za komunismu"
+   },
+   {
+    "r": 18.8,
+    "zeme": "Slovensko",
+    "rok": "2019",
+    "v": 45,
+    "popis": "2019",
+    "t": "45 %",
+    "barva": "#de1743",
+    "txt": "#ffffff",
+    "otazka": "Ekonomická situace je lepší než za komunismu"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": 14,
+    "cornerRadiusEnd": 2
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -46,
+       100
+      ],
+      "nice": false
+     },
+     "axis": null,
+     "field": "v"
+    },
+    "x2": {
+     "datum": 0
+    },
+    "y": {
+     "field": "r",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.6,
+       19.8
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null
+    },
+    "color": {
+     "field": "barva",
+     "type": "nominal",
+     "scale": null
+    },
+    "tooltip": [
+     {
+      "field": "otazka",
+      "title": "Otázka"
+     },
+     {
+      "field": "zeme",
+      "title": "Země"
+     },
+     {
+      "field": "rok",
+      "title": "Rok"
+     },
+     {
+      "field": "t",
+      "title": "Podíl"
+     }
+    ]
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "baseline": "middle",
+    "dx": -5,
+    "fontSize": 11.5,
+    "fontWeight": 700
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -46,
+       100
+      ],
+      "nice": false
+     },
+     "axis": null,
+     "field": "v"
+    },
+    "y": {
+     "field": "r",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.6,
+       19.8
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "t"
+    },
+    "color": {
+     "field": "txt",
+     "type": "nominal",
+     "scale": null
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 11.5,
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -46,
+       100
+      ],
+      "nice": false
+     },
+     "axis": null,
+     "datum": -46
+    },
+    "y": {
+     "field": "r",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.6,
+       19.8
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "popis"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "r": 0,
+      "text": "Schvaluje přechod na systém více stran"
+     },
+     {
+      "r": 7.4,
+      "text": "Schvaluje přechod na tržní ekonomiku"
+     },
+     {
+      "r": 14.8,
+      "text": "Ekonomická situace je lepší než za komunismu"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "baseline": "middle",
+    "fontSize": 12.5,
+    "fontWeight": 700,
+    "color": "#101432"
+   },
+   "encoding": {
+    "x": {
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -46,
+       100
+      ],
+      "nice": false
+     },
+     "axis": null,
+     "datum": -46
+    },
+    "y": {
+     "field": "r",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.6,
+       19.8
+      ],
+      "reverse": true,
+      "nice": false,
+      "zero": false
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  }
+ ],
+ "_source": "Pew Research Center, [topline 2019, Q15b, Q16b, Q17](https://www.pewresearch.org/global/2019/10/15/european-public-opinion-three-decades-after-the-fall-of-communism/)"
+}

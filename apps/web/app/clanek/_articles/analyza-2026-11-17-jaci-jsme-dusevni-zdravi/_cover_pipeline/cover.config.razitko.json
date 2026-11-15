@@ -1,0 +1,79 @@
+{
+  "formaty": {
+    "homepage": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/images/cover-homepage.png",
+      "otisk": "48b7625c16b0116b",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/cover.config.cjs": "04c4d419766ea949",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/motiv-homepage.svg": "3519f8d6ebed7e15"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "og": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/images/cover-og.jpg",
+      "otisk": "f2c11cb25380392c",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/cover.config.cjs": "04c4d419766ea949",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/motiv-og.svg": "5096ca9ada871aa3"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "square": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/images/cover-square.png",
+      "otisk": "88659ee0c2bab2ec",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/cover.config.cjs": "04c4d419766ea949",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/motiv-square.svg": "c2901fafebeebb50"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "instagram": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/images/cover-instagram.png",
+      "otisk": "6c48f6e3d98baa29",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/cover.config.cjs": "04c4d419766ea949",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/motiv-instagram.svg": "7c5730601f73b813"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    },
+    "story": {
+      "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/images/cover-story.png",
+      "otisk": "0192fa2e0b915138",
+      "vstupy": {
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/cover.config.cjs": "04c4d419766ea949",
+        "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/motiv-story.svg": "af0bbda08b456a01"
+      },
+      "kontrola": {
+        "chyby": [],
+        "upozorneni": [],
+        "upravy": []
+      }
+    }
+  },
+  "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/_cover_pipeline/cover.config.cjs",
+  "vyrenderovano": "2026-11-15T14:05:56.262Z",
+  "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-17-jaci-jsme-dusevni-zdravi/index.md",
+  "titulekClanku": "Česko spotřebuje 25krát víc antidepresiv než v roce 1989 a sebevražd je méně",
+  "texty": {
+    "stitek": "1989 × 2026 • Duševní zdraví",
+    "nadtitulek": "",
+    "titulek": "Česko spotřebuje 25krát víc antidepresiv než v roce 1989",
+    "podtitulek": "Sebevražednost je přitom o třetinu nižší"
+  }
+}

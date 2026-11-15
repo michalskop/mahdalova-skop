@@ -1,0 +1,85 @@
+== SEBEVRAŽDY (ČSÚ Tab. 01.01; do 1993 MKN-9, od 1994 MKN-10 X60–X84, Y87.0)
+sebevrazdy pocet 1989 1912 → 2024 1561 | 2023 1253 | skok 2023→2024 % 24.6
+sebevrazdy pokles 1989→2024 pocet % 18.4
+sebevrazdy minimum po 1989 (1191.0, 2019)
+sebevrazdy SDR (WHO HFA_176) 1989 18.27 → 2024 12.53 | 2023 10.11 | 2019 9.68 | pokles 1989→2024 % 31.4
+sebevrazdy SDR muzi 1989 28.86 → 2024 20.79 | zeny 9.56 → 4.78
+minimum SDR od 1989 (9.68, 2019)
+== NOVE ZJISTENE DUSEVNI PORUCHY (WHO HFA_387 z dat ÚZIS, na 100 000)
+incidence 1993 550.43 | 1994 (MKN-10) 748.98 | 2023 1140.4 | násobek 1993→2023 2.07 | 1994→2023 1.52
+prevalence lecenych % 2017 (srovnání s průzkumem NUDZ) 5.91
+prevalence lecenych % (HFA_391) 1998 3.29 → 2023 6.4 | násobek 1.95
+== ANTIDEPRESIVA (OECD, DDD na 1 000 obyvatel a den)
+N06A 1989 3.1 | 1993 3.2 | 1994 5.0 | 2000 9.7 | 2010 41.6 | 2024 78.8 | násobek 1989→2024 25.4
+N06A 2024 = denní dávka pro % obyvatel 7.9
+N06A roste každý rok od 1994: True | 1989–1993 [3.1, 3.1, 2.8, 3.1, 3.2]
+N05B anxiolytika 1989 16.3 → 2024 9.8
+N05C hypnotika a sedativa 1989 18.5 → 2024 21.4
+== PÉČE (OECD počet fyzických osob / lůžek ÷ ČSÚ obyvatelé k 31. 12. × 100 000)
+Psychiatři 1995 1039 (10.1/100k) → 2024 1780 (16.3/100k) | změna % 62.1
+Zubní lékaři 1989 5589 (53.9/100k) → 2024 8289 (76.0/100k) | změna % 40.9
+Lékaři celkem 1989 28200 (272.1/100k) → 2024 46827 (429.2/100k) | změna % 57.7
+Psychiatrická lůžka 1990 14510 (140.0/100k) → 2024 9447 (86.6/100k) | změna % -38.1
+ČSÚ 13.01 obyvatel na 1 zubaře 1993 1711.0 (= 58.4/100k) → 2024 1557 (= 64.2/100k) | OECD 1993 pro srovnání 57.0/100k
+RUČNĚ hosp_1989 50776
+RUČNĚ hosp_1989_100k 490.0
+RUČNĚ luzka_1990_lecebny 12859
+RUČNĚ luzka_1990_oddeleni 1649
+RUČNĚ amb_uvazky_1990 418.0
+RUČNĚ hosp_2022_dlouhodobe 25318
+RUČNĚ hosp_2022_akutni 31107
+RUČNĚ amb_uvazky_2022 726.0
+RUČNĚ amb_lekari_2022 1298
+RUČNĚ detsti_psych_lekari_2010 127
+RUČNĚ detsti_psych_lekari_2022 151
+RUČNĚ cdz_klienti_2022 6257
+RUČNĚ cdz_pocet_2021 29
+RUČNĚ obyv_na_klin_psychologa_2023 5548
+RUČNĚ nudz_2017 20.02
+RUČNĚ nudz_2020 29.63
+hospitalizace 1989 50776 (490.0/100k) → 2022 56425 (521.1/100k) | změna na 100k % 6.4
+lůžka 1990 ročenka (léčebny + oddělení) 14508 × OECD 14510
+ambulantní úvazky psychiatrů 1990 418.0 → 2022 726.0 | změna % 73.7
+== AMBULANTNÍ PSYCHIATRIE (NRHZS OIS-04-03, součet přes kraje poskytovatele)
+součet pacientů všech skupin 2010 498329 | 2023 676569 (6.21 % obyv.) | 2025 686718 (6.29 % obyv.)
+dg F84 Poruchy autistického spektra 2010 1818 (17.3/100k) → 2025 9946 (91.1/100k) | poměr na 100k 5.28 | poměr počtů 5.47
+dg F90 ADHD (hyperkinetické poruchy) 2010 11149 (105.9/100k) → 2025 26565 (243.4/100k) | poměr na 100k 2.3 | poměr počtů 2.38
+dg F42 Obsedantně-kompulzivní porucha 2010 4631 (44.0/100k) → 2025 9487 (86.9/100k) | poměr na 100k 1.98 | poměr počtů 2.05
+dg F00 a G30 Demence a organické poruchy 2010 62793 (596.2/100k) → 2025 97933 (897.2/100k) | poměr na 100k 1.5 | poměr počtů 1.56
+dg F50–F59 Poruchy příjmu potravy, spánku aj. 2010 16135 (153.2/100k) → 2025 24278 (222.4/100k) | poměr na 100k 1.45 | poměr počtů 1.5
+dg F40–F49 bez F42 Úzkostné a stresové poruchy 2010 176559 (1676.3/100k) → 2025 262178 (2401.8/100k) | poměr na 100k 1.43 | poměr počtů 1.48
+dg F11–F19 Drogy a jiné látky kromě alkoholu 2010 8289 (78.7/100k) → 2025 12446 (114.0/100k) | poměr na 100k 1.45 | poměr počtů 1.5
+dg F32–F33 Deprese 2010 78453 (744.8/100k) → 2025 91354 (836.9/100k) | poměr na 100k 1.12 | poměr počtů 1.16
+dg F20–F29 Schizofrenie a psychózy 2010 41964 (398.4/100k) → 2025 44263 (405.5/100k) | poměr na 100k 1.02 | poměr počtů 1.05
+dg F10 Alkohol 2010 20653 (196.1/100k) → 2025 18151 (166.3/100k) | poměr na 100k 0.85 | poměr počtů 0.88
+dg věk F84 0–17 2010 1546 → 2025 6857 | poměr 4.44
+dg věk F84 18+ 2010 272 → 2025 3089 | poměr 11.36
+dg věk F90 0–17 2010 10654 → 2025 18754 | poměr 1.76
+dg věk F90 18+ 2010 495 → 2025 7811 | poměr 15.78
+== LIDÉ S ANTIDEPRESIVY NA RECEPT (NRHZS OIS-04-16)
+antidepresiva osob 2010 605767 (5.75 %) → 2025 956268 (8.76 %)
+== PORUCHY PŘÍJMU POTRAVY (NRHZS NR-04-25)
+PPP dívky 0–18 2010 1199 → 2025 3858 | poměr 3.22
+PPP děti 0–18 celkem 2010 1513 → 2025 4407 | 2020 2439 | 2021 3608
+PPP všichni 2010 5566 → 2025 10193
+== DEMENCE (NRHZS OIS-04-02, osoby 50+ s léčbou)
+demence lecba 2010 61437 → 2025 143566 | poměr 2.34
+kontrola obyvatelé 1989/2024 (tis.) 10362.102 10909.5
+== GRAFY (grafy.py)
+graf diagnozy Poruchy autistického spektra 5.28 1818 9946
+graf diagnozy ADHD (hyperkinetické poruchy) 2.3 11149 26565
+graf diagnozy Obsedantně-kompulzivní porucha 1.98 4631 9487
+graf diagnozy Demence a organické poruchy 1.5 62793 97933
+graf diagnozy Poruchy příjmu potravy, spánku aj. 1.45 16135 24278
+graf diagnozy Drogy a jiné látky kromě alkoholu 1.45 8289 12446
+graf diagnozy Úzkostné a stresové poruchy 1.43 176559 262178
+graf diagnozy Deprese 1.12 78453 91354
+graf diagnozy Schizofrenie a psychózy 1.02 41964 44263
+graf diagnozy Alkohol 0.85 20653 18151
+graf antidepresiva 1989 3.1 2024 78.8 násobek 25.4
+graf sebevrazdy SDR 1989 18.27 min (9.68, 2019) 2024 12.53 pokles % 31.4
+graf pece {'nazev': 'Psychiatři', 'r0': 1995, 'v0': 10.1, 'r1': 2024, 'v1': 16.3, 'zmena': 62.1}
+graf pece {'nazev': 'Lékaři celkem', 'r0': 1989, 'v0': 272.1, 'r1': 2024, 'v1': 429.2, 'zmena': 57.7}
+graf pece {'nazev': 'Zubní lékaři', 'r0': 1989, 'v0': 53.9, 'r1': 2024, 'v1': 76.0, 'zmena': 40.9}
+graf pece {'nazev': 'Hospitalizace v psychiatrii', 'r0': 1989, 'v0': 490.0, 'r1': 2022, 'v1': 521.1, 'zmena': 6.4}
+graf pece {'nazev': 'Psychiatrická lůžka', 'r0': 1990, 'v0': 140.0, 'r1': 2024, 'v1': 86.6, 'zmena': -38.1}

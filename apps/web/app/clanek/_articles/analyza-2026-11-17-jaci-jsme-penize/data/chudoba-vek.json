@@ -1,0 +1,1006 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "title": {
+  "text": "Chudoba dnes hrozí {dětem a mladým|#de1743} víc než {seniorům|#6267a3}",
+  "subtitle": "Podíl lidí s příjmem pod hranicí ohrožení chudobou (60 % mediánu), podle věku, v %; šetření EU-SILC 2005–2025, příjmy vždy za předchozí rok"
+ },
+ "width": "container",
+ "height": 260,
+ "config": {
+  "view": {
+   "stroke": null
+  }
+ },
+ "data": {
+  "values": [
+   {
+    "rok": 2005,
+    "rada": "děti do 18 let",
+    "v": 17.6,
+    "t": "17,6 %"
+   },
+   {
+    "rok": 2006,
+    "rada": "děti do 18 let",
+    "v": 16.5,
+    "t": "16,5 %"
+   },
+   {
+    "rok": 2007,
+    "rada": "děti do 18 let",
+    "v": 16.6,
+    "t": "16,6 %"
+   },
+   {
+    "rok": 2008,
+    "rada": "děti do 18 let",
+    "v": 13.2,
+    "t": "13,2 %"
+   },
+   {
+    "rok": 2009,
+    "rada": "děti do 18 let",
+    "v": 13.3,
+    "t": "13,3 %"
+   },
+   {
+    "rok": 2010,
+    "rada": "děti do 18 let",
+    "v": 14.3,
+    "t": "14,3 %"
+   },
+   {
+    "rok": 2011,
+    "rada": "děti do 18 let",
+    "v": 15.2,
+    "t": "15,2 %"
+   },
+   {
+    "rok": 2012,
+    "rada": "děti do 18 let",
+    "v": 13.9,
+    "t": "13,9 %"
+   },
+   {
+    "rok": 2013,
+    "rada": "děti do 18 let",
+    "v": 11.3,
+    "t": "11,3 %"
+   },
+   {
+    "rok": 2014,
+    "rada": "děti do 18 let",
+    "v": 14.7,
+    "t": "14,7 %"
+   },
+   {
+    "rok": 2015,
+    "rada": "děti do 18 let",
+    "v": 14.7,
+    "t": "14,7 %"
+   },
+   {
+    "rok": 2016,
+    "rada": "děti do 18 let",
+    "v": 14.1,
+    "t": "14,1 %"
+   },
+   {
+    "rok": 2017,
+    "rada": "děti do 18 let",
+    "v": 11.6,
+    "t": "11,6 %"
+   },
+   {
+    "rok": 2018,
+    "rada": "děti do 18 let",
+    "v": 11.0,
+    "t": "11,0 %"
+   },
+   {
+    "rok": 2019,
+    "rada": "děti do 18 let",
+    "v": 11.2,
+    "t": "11,2 %"
+   },
+   {
+    "rok": 2020,
+    "rada": "děti do 18 let",
+    "v": 11.1,
+    "t": "11,1 %"
+   },
+   {
+    "rok": 2021,
+    "rada": "děti do 18 let",
+    "v": 11.4,
+    "t": "11,4 %"
+   },
+   {
+    "rok": 2022,
+    "rada": "děti do 18 let",
+    "v": 11.8,
+    "t": "11,8 %"
+   },
+   {
+    "rok": 2023,
+    "rada": "děti do 18 let",
+    "v": 12.4,
+    "t": "12,4 %"
+   },
+   {
+    "rok": 2024,
+    "rada": "děti do 18 let",
+    "v": 13.9,
+    "t": "13,9 %"
+   },
+   {
+    "rok": 2025,
+    "rada": "děti do 18 let",
+    "v": 13.7,
+    "t": "13,7 %"
+   },
+   {
+    "rok": 2005,
+    "rada": "mladí 18–24 let",
+    "v": 10.7,
+    "t": "10,7 %"
+   },
+   {
+    "rok": 2006,
+    "rada": "mladí 18–24 let",
+    "v": 12.0,
+    "t": "12,0 %"
+   },
+   {
+    "rok": 2007,
+    "rada": "mladí 18–24 let",
+    "v": 12.1,
+    "t": "12,1 %"
+   },
+   {
+    "rok": 2008,
+    "rada": "mladí 18–24 let",
+    "v": 11.6,
+    "t": "11,6 %"
+   },
+   {
+    "rok": 2009,
+    "rada": "mladí 18–24 let",
+    "v": 11.0,
+    "t": "11,0 %"
+   },
+   {
+    "rok": 2010,
+    "rada": "mladí 18–24 let",
+    "v": 11.2,
+    "t": "11,2 %"
+   },
+   {
+    "rok": 2011,
+    "rada": "mladí 18–24 let",
+    "v": 12.7,
+    "t": "12,7 %"
+   },
+   {
+    "rok": 2012,
+    "rada": "mladí 18–24 let",
+    "v": 13.4,
+    "t": "13,4 %"
+   },
+   {
+    "rok": 2013,
+    "rada": "mladí 18–24 let",
+    "v": 11.4,
+    "t": "11,4 %"
+   },
+   {
+    "rok": 2014,
+    "rada": "mladí 18–24 let",
+    "v": 10.7,
+    "t": "10,7 %"
+   },
+   {
+    "rok": 2015,
+    "rada": "mladí 18–24 let",
+    "v": 11.1,
+    "t": "11,1 %"
+   },
+   {
+    "rok": 2016,
+    "rada": "mladí 18–24 let",
+    "v": 12.8,
+    "t": "12,8 %"
+   },
+   {
+    "rok": 2017,
+    "rada": "mladí 18–24 let",
+    "v": 11.2,
+    "t": "11,2 %"
+   },
+   {
+    "rok": 2018,
+    "rada": "mladí 18–24 let",
+    "v": 10.3,
+    "t": "10,3 %"
+   },
+   {
+    "rok": 2019,
+    "rada": "mladí 18–24 let",
+    "v": 9.4,
+    "t": "9,4 %"
+   },
+   {
+    "rok": 2020,
+    "rada": "mladí 18–24 let",
+    "v": 9.1,
+    "t": "9,1 %"
+   },
+   {
+    "rok": 2021,
+    "rada": "mladí 18–24 let",
+    "v": 8.5,
+    "t": "8,5 %"
+   },
+   {
+    "rok": 2022,
+    "rada": "mladí 18–24 let",
+    "v": 10.3,
+    "t": "10,3 %"
+   },
+   {
+    "rok": 2023,
+    "rada": "mladí 18–24 let",
+    "v": 11.7,
+    "t": "11,7 %"
+   },
+   {
+    "rok": 2024,
+    "rada": "mladí 18–24 let",
+    "v": 13.2,
+    "t": "13,2 %"
+   },
+   {
+    "rok": 2025,
+    "rada": "mladí 18–24 let",
+    "v": 13.8,
+    "t": "13,8 %"
+   },
+   {
+    "rok": 2005,
+    "rada": "lidé nad 65 let",
+    "v": 5.3,
+    "t": "5,3 %"
+   },
+   {
+    "rok": 2006,
+    "rada": "lidé nad 65 let",
+    "v": 5.9,
+    "t": "5,9 %"
+   },
+   {
+    "rok": 2007,
+    "rada": "lidé nad 65 let",
+    "v": 5.5,
+    "t": "5,5 %"
+   },
+   {
+    "rok": 2008,
+    "rada": "lidé nad 65 let",
+    "v": 7.4,
+    "t": "7,4 %"
+   },
+   {
+    "rok": 2009,
+    "rada": "lidé nad 65 let",
+    "v": 7.2,
+    "t": "7,2 %"
+   },
+   {
+    "rok": 2010,
+    "rada": "lidé nad 65 let",
+    "v": 6.8,
+    "t": "6,8 %"
+   },
+   {
+    "rok": 2011,
+    "rada": "lidé nad 65 let",
+    "v": 6.6,
+    "t": "6,6 %"
+   },
+   {
+    "rok": 2012,
+    "rada": "lidé nad 65 let",
+    "v": 6.0,
+    "t": "6,0 %"
+   },
+   {
+    "rok": 2013,
+    "rada": "lidé nad 65 let",
+    "v": 5.8,
+    "t": "5,8 %"
+   },
+   {
+    "rok": 2014,
+    "rada": "lidé nad 65 let",
+    "v": 7.0,
+    "t": "7,0 %"
+   },
+   {
+    "rok": 2015,
+    "rada": "lidé nad 65 let",
+    "v": 7.4,
+    "t": "7,4 %"
+   },
+   {
+    "rok": 2016,
+    "rada": "lidé nad 65 let",
+    "v": 8.1,
+    "t": "8,1 %"
+   },
+   {
+    "rok": 2017,
+    "rada": "lidé nad 65 let",
+    "v": 10.7,
+    "t": "10,7 %"
+   },
+   {
+    "rok": 2018,
+    "rada": "lidé nad 65 let",
+    "v": 14.2,
+    "t": "14,2 %"
+   },
+   {
+    "rok": 2019,
+    "rada": "lidé nad 65 let",
+    "v": 16.6,
+    "t": "16,6 %"
+   },
+   {
+    "rok": 2020,
+    "rada": "lidé nad 65 let",
+    "v": 14.7,
+    "t": "14,7 %"
+   },
+   {
+    "rok": 2021,
+    "rada": "lidé nad 65 let",
+    "v": 10.5,
+    "t": "10,5 %"
+   },
+   {
+    "rok": 2022,
+    "rada": "lidé nad 65 let",
+    "v": 16.0,
+    "t": "16,0 %"
+   },
+   {
+    "rok": 2023,
+    "rada": "lidé nad 65 let",
+    "v": 14.3,
+    "t": "14,3 %"
+   },
+   {
+    "rok": 2024,
+    "rada": "lidé nad 65 let",
+    "v": 8.3,
+    "t": "8,3 %"
+   },
+   {
+    "rok": 2025,
+    "rada": "lidé nad 65 let",
+    "v": 8.4,
+    "t": "8,4 %"
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "color": {
+     "field": "rada",
+     "type": "nominal",
+     "legend": null,
+     "scale": {
+      "domain": [
+       "děti do 18 let",
+       "mladí 18–24 let",
+       "lidé nad 65 let"
+      ],
+      "range": [
+       "#de1743",
+       "#ff8099",
+       "#6267a3"
+      ]
+     }
+    },
+    "tooltip": [
+     {
+      "field": "rada",
+      "title": "Věk"
+     },
+     {
+      "field": "rok",
+      "title": "Rok šetření"
+     },
+     {
+      "field": "t",
+      "title": "Ohroženo chudobou"
+     }
+    ]
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2007,
+      "v": 16.6,
+      "text": "děti do 18 let"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": -12,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2020,
+      "v": 9.1,
+      "text": "18–24 let"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#ff4d70",
+    "dy": 16,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2006,
+      "v": 5.9,
+      "text": "nad 65 let"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#6267a3",
+    "dy": -10,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2019,
+      "v": 16.6,
+      "text": "2019: 16,6 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#6267a3",
+    "dy": -10,
+    "align": "center"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 13.8,
+      "text": "13,8 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#ff4d70",
+    "dy": -10,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 13.7,
+      "text": "13,7 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#de1743",
+    "dy": 14,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "rok": 2025,
+      "v": 8.4,
+      "text": "8,4 %"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "fontWeight": 700,
+    "color": "#6267a3",
+    "dy": 16,
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "rok",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       2005,
+       2025
+      ]
+     },
+     "axis": {
+      "title": null,
+      "format": "d",
+      "grid": false,
+      "domain": false,
+      "ticks": false,
+      "values": [
+       2005,
+       2010,
+       2015,
+       2020,
+       2025
+      ],
+      "labelFlush": true
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       20
+      ]
+     },
+     "axis": {
+      "title": null,
+      "grid": true,
+      "gridColor": "#d4d4c8",
+      "domain": false,
+      "ticks": false,
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20
+      ],
+      "labelExpr": "datum.value + ' %'"
+     }
+    },
+    "text": {
+     "field": "text"
+    }
+   }
+  }
+ ],
+ "_source": "Eurostat, [EU-SILC, ilc_li02](https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table)"
+}

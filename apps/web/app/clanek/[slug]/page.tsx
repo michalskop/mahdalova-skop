@@ -14,6 +14,7 @@ import ArticleRating from '@/components/common/ArticleRating';
 import { ArticleJsonLd } from '@/components/seo/ArticleJsonLd';
 import { resolveArticleOgImage } from '@/lib/coverMetadata';
 import { getAuthorKeys } from '@/lib/schema';
+import { JACI_JSME_ZDROJE } from '@/lib/jaciJsme';
 
 
 interface PageProps {
@@ -74,6 +75,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 const EXCLUDED_SLUGS = [
   'data-pro-budouci-premierku-02-demografie',
   'data-pro-budouci-premierku-02-demografie-plodnost',
+  // kapitoly speciálu „Jací jsme byli, jací jsme“ – kanonicky pod /specialy/jaci-jsme-byli-jaci-jsme-1989-2026/
+  ...JACI_JSME_ZDROJE,
 ];
 
 export async function generateStaticParams() {

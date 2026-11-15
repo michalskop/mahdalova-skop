@@ -10,7 +10,14 @@ import { remarkBoxPlugin } from './remark-box-plugin';
 import { remarkFlourishPlugin } from './remark-flourish-plugin';
 import { remarkGalleryPlugin } from './remark-gallery-plugin';
 import { remarkFlagPlugin } from './remark-flag-plugin';
-import { remarkCzechTypography } from './remark-czech-typography';
+import { remarkCzechTypography, fixCzechTypography } from './remark-czech-typography';
+
+function typografieVJson(v: any): any {
+  if (typeof v === 'string') return fixCzechTypography(v);
+  if (Array.isArray(v)) return v.map(typografieVJson);
+  if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, typografieVJson(x)]));
+  return v;
+}
 import type { ScrollyContent } from '@/types/scrolly';
 import type { TimelineContent } from '@/types/timeline';
 
@@ -140,6 +147,19 @@ export async function loadArticleData(content: string, frontmatter: Record<strin
     vegaChartData[f] = JSON.parse(await need(f, 'VegaChart dataFile'));
   }
 
+  // ObceHodnotaMap (kartogram obcí podle hodnoty, JSON ve složce článku)
+  const obceHodnotaData: Record<string, any> = {};
+  for (const f of filesOf(content, /<ObceHodnotaMap[^>]*dataFile="([^"]+)"[^>]*\/?>/g)) {
+    obceHodnotaData[f] = JSON.parse(await need(f, 'ObceHodnotaMap dataFile'));
+  }
+
+  // Interaktivní prvky speciálu Jací jsme (Tipovacka, PosuvnikTehdyDnes, OdNarozeni, OkresyMalemapy, Demonstrace1989Map) – JSON ve složce článku
+  const jaciJsmeData: Record<string, any> = {};
+  for (const f of filesOf(content, /<(?:Tipovacka|PosuvnikTehdyDnes|OdNarozeni|OkresyMalemapy|Demonstrace1989Map)\b[^>]*dataFile="([^"]+)"[^>]*\/?>/g)) {
+    // texty v JSON projdou stejnou českou typografií jako článek (jednopísmenné předložky, % a tisíce)
+    jaciJsmeData[f] = typografieVJson(JSON.parse(await need(f, 'Tipovacka/PosuvnikTehdyDnes/OdNarozeni dataFile')));
+  }
+
   // HtmlEmbed (only .html files)
   const htmlEmbedData: Record<string, string> = {};
   for (const f of filesOf(content, /<HtmlEmbed[^>]*file="([^"]+)"[^>]*\/?>/g)) {
@@ -167,7 +187,7 @@ export async function loadArticleData(content: string, frontmatter: Record<strin
   return {
     htmlContent,
     scrollyContent,
-    scope: { tableData, timelineData, keyNumbersData, styledTableData, htmlEmbedData, attendanceSwarmData, vegaChartData, personsData },
+    scope: { tableData, timelineData, keyNumbersData, styledTableData, htmlEmbedData, attendanceSwarmData, vegaChartData, obceHodnotaData, jaciJsmeData, personsData },
   };
 }
 

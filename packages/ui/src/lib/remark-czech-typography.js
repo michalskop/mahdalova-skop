@@ -36,6 +36,16 @@ export function fixCzechTypography(input) {
   //    bracket can't start a new line on its own.
   s = s.replace(/[ \t]+([)\]}])/g, `${NBSP}$1`);
 
+  // 4) Number + percent/per mille sign („12,9 %“, „2,5 ‰“) stays on one line
+  //    (added 2026-11-14: „12,9 %“ wrapped before „%“ on mobile).
+  s = s.replace(/(\d)[ \t]+([%‰])/g, `$1${NBSP}$2`);
+
+  // 5) Thousands separators written as plain spaces („77 636“, „1 131 197“)
+  //    never break a number across lines. Only a 3-digit group after 1–3
+  //    digits counts, so years next to each other („1989 2026“) stay apart.
+  s = s.replace(/(^|[^\d,])(\d{1,3})((?:[ \t]\d{3})+)(?![\d,])/g, (m, pre, head, groups) =>
+    `${pre}${head}${groups.replace(/[ \t]/g, NBSP)}`);
+
   return s;
 }
 

@@ -1,0 +1,55 @@
+Geometrie: 77 okresů, 275 kB, okresy-geo.json 254 kB
+Přesuny obcí k 1. 1. 2007 ve Středočeském kraji (tabulka ČSÚ): 36 obcí
+
+== Vysokoškoláci (podíl lidí s vysokou školou mezi obyvateli staršími 15 let)
+   ČR: 1991 7.2 %, 2021 17.6 %
+   1991: max Praha 16.0 %, min Sokolov 3.4 %, poměr max/min 4.67, rozpětí 12.6 p. b., variační koeficient 37.5 % (bez Prahy 31.3 %)
+   2021: max Praha 33.7 %, min Sokolov 7.5 %, poměr max/min 4.52, rozpětí 26.2 p. b., variační koeficient 32.8 % (bez Prahy 29.4 %)
+   Rozdíly mezi okresy se zmenšily (variační koeficient 37.5 → 32.8 %)
+   Změna hranic 2007 (Středočeský kraj): největší posun hodnoty 2021 v okrese Praha-východ o 0.77 p. b.
+   1991 nejvyšší: Praha 16.0, Brno-město 15.1, Plzeň-město 10.3, Hradec Králové 8.8, Ostrava-město 8.6 | nejnižší: Plzeň-jih 3.8, Chomutov 3.7, Plzeň-sever 3.6, Děčín 3.5, Sokolov 3.4
+   2021 nejvyšší: Praha 33.7, Brno-město 31.9, Praha-západ 27.9, Praha-východ 23.7, Plzeň-město 21.0 | nejnižší: Cheb 9.1, Chomutov 9.0, Děčín 8.6, Tachov 8.0, Sokolov 7.5
+   zjištění: Rozdíly mezi okresy se zmenšily: okres se od průměru typicky lišil o 37 % (1991), dnes o 33 %. Rozpětí 3,4–16,0 % proti 7,5–33,7 %.
+
+== Děti do 15 let (podíl dětí ve věku 0–14 let na všech obyvatelích)
+   ČR: 1991 21.0 %, 2021 16.1 %
+   1991: max Česká Lípa 24.1 %, min Praha 18.5 %, poměr max/min 1.30, rozpětí 5.6 p. b., variační koeficient 5.4 % (bez Prahy 5.2 %)
+   2021: max Praha-východ 21.1 %, min Karviná 14.7 %, poměr max/min 1.44, rozpětí 6.4 p. b., variační koeficient 6.6 % (bez Prahy 6.6 %)
+   Rozdíly mezi okresy se zvětšily (variační koeficient 5.4 → 6.6 %)
+   Změna hranic 2007 (Středočeský kraj): největší posun hodnoty 2021 v okrese Praha-východ o 0.34 p. b.
+   1991 nejvyšší: Česká Lípa 24.1, Český Krumlov 23.8, Bruntál 23.8, Chomutov 23.6, Tachov 23.5 | nejnižší: Brno-město 19.7, Kladno 19.7, Praha-západ 19.6, Plzeň-jih 19.3, Praha 18.5
+   2021 nejvyšší: Praha-východ 21.1, Praha-západ 20.6, Brno-venkov 18.4, Beroun 18.1, Nymburk 17.5 | nejnižší: Ostrava-město 14.9, Bruntál 14.9, Karlovy Vary 14.7, Hodonín 14.7, Karviná 14.7
+   zjištění: Rozdíly mezi okresy se zvětšily: okres se od průměru typicky lišil o 5 % (1991), dnes o 7 %. Rozpětí 18,5–24,1 % proti 14,7–21,1 %.
+
+== Věřící (podíl lidí, kteří uvedli víru (s církví i bez ní), na všech obyvatelích)
+   ČR: 1991 43.9 %, 2021 22.2 %
+   1991: max Vyškov 74.1 %, min Most 20.0 %, poměr max/min 3.71, rozpětí 54.1 p. b., variační koeficient 31.3 % (bez Prahy 31.3 %)
+   2021: max Uherské Hradiště 46.7 %, min Most 9.7 %, poměr max/min 4.83, rozpětí 37.1 p. b., variační koeficient 40.7 % (bez Prahy 41.0 %)
+   Rozdíly mezi okresy se zvětšily (variační koeficient 31.3 → 40.7 %)
+   Změna hranic 2007 (Středočeský kraj): největší posun hodnoty 2021 v okrese Benešov o 0.46 p. b.
+   1991 nejvyšší: Vyškov 74.1, Žďár nad Sázavou 68.7, Jihlava 68.2, Opava 67.0, Vsetín 66.4 | nejnižší: Chomutov 24.3, Rakovník 23.7, Ústí nad Labem 23.0, Kladno 22.5, Most 20.0
+   2021 nejvyšší: Uherské Hradiště 46.7, Hodonín 41.2, Žďár nad Sázavou 40.8, Opava 39.5, Zlín 38.5 | nejnižší: Plzeň-sever 11.1, Česká Lípa 10.5, Rakovník 10.1, Děčín 10.1, Most 9.7
+   zjištění: Rozdíly mezi okresy se zvětšily: okres se od průměru typicky lišil o 31 % (1991), dnes o 41 %. Rozpětí 20,0–74,1 % proti 9,7–46,7 %.
+
+== Nezaměstnaní (podíl nezaměstnaných (1991 „hledajících zaměstnání“) na ekonomicky aktivních)
+   ČR: 1991 2.3 %, 2021 4.9 %
+   1991: max Tachov 3.5 %, min Sokolov 0.7 %, poměr max/min 5.00, rozpětí 2.8 p. b., variační koeficient 28.4 % (bez Prahy 28.4 %)
+   2021: max Karviná 10.0 %, min Pelhřimov 2.6 %, poměr max/min 3.89, rozpětí 7.5 p. b., variační koeficient 34.4 % (bez Prahy 34.5 %)
+   Rozdíly mezi okresy se zvětšily (variační koeficient 28.4 → 34.4 %)
+   Změna hranic 2007 (Středočeský kraj): největší posun hodnoty 2021 v okrese Kolín o 0.07 p. b.
+   1991 nejvyšší: Tachov 3.5, Ostrava-město 3.3, Znojmo 3.2, Louny 3.1, Karviná 3.1 | nejnižší: Vyškov 1.2, Plzeň-jih 1.2, Pelhřimov 1.2, Mladá Boleslav 1.2, Sokolov 0.7
+   2021 nejvyšší: Karviná 10.0, Most 9.8, Sokolov 9.6, Karlovy Vary 8.3, Chomutov 8.3 | nejnižší: Ústí nad Orlicí 3.2, Praha-východ 3.2, Mladá Boleslav 2.9, Rychnov nad Kněžnou 2.8, Pelhřimov 2.6
+   zjištění: Rozdíly mezi okresy se zvětšily: okres se od průměru typicky lišil o 28 % (1991), dnes o 34 %. Rozpětí 0,7–3,5 % proti 2,6–10,0 %.
+
+== Moravská národnost (podíl lidí, kteří uvedli moravskou národnost)
+   ČR: 1991 13.2 %, 2021 5.3 %
+   1991: max Hodonín 64.6 %, min Plzeň-jih 0.1 %, poměr max/min 430.67, rozpětí 64.4 p. b., variační koeficient 169.0 % (bez Prahy 167.7 %)
+   2021: max Hodonín 26.9 %, min Plzeň-jih 0.1 %, poměr max/min 207.31, rozpětí 26.8 p. b., variační koeficient 163.3 % (bez Prahy 162.2 %)
+   Rozdíly mezi okresy se zmenšily (variační koeficient 169.0 → 163.3 %)
+   Změna hranic 2007 (Středočeský kraj): největší posun hodnoty 2021 v okrese Rakovník o 0.02 p. b.
+   1991 nejvyšší: Hodonín 64.6, Brno-venkov 62.4, Brno-město 60.9, Vyškov 59.0, Břeclav 57.5 | nejnižší: Mladá Boleslav 0.2, Jičín 0.2, Strakonice 0.2, Plzeň-sever 0.2, Plzeň-jih 0.1
+   2021 nejvyšší: Hodonín 26.9, Uherské Hradiště 23.8, Břeclav 23.6, Brno-venkov 23.2, Vyškov 23.0 | nejnižší: Domažlice 0.2, Most 0.2, Teplice 0.1, Plzeň-sever 0.1, Plzeň-jih 0.1
+   zjištění: Nejvíc v okrese Hodonín: 64,6 % (1991) a 26,9 % (2021). Pod 1 % je v 49 okresech (1991) a v 51 okresech (2021) ze 76.
+
+Obyvatelé 36 středočeských obcí, které 2007 změnily okres (sčítání 2021): 28995
+Jeseník 1991 = hodnota tehdejšího okresu Šumperk; míry rozptylu na 76 okresech (Šumperk + Jeseník sloučené).
