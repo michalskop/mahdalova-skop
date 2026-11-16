@@ -26,7 +26,21 @@ export type CisloKarta = {
 };
 
 const NBSP = ' ';
-const sZnakem = (t: string, znak: string) => (znak ? `${t}${NBSP}${znak}` : t);
+const desetin = (t: string) => (t.includes(',') ? t.length - t.indexOf(',') - 1 : 0);
+
+/** Hodnota zarovnaná doprava tak, aby desetinné čárky stály pod sebou: kratší desetinnou část
+ *  dorovná neviditelnými nulami (u „13“ proti „33,5“ skrytá „,0“). */
+function Hodnota({ text, znak, desetinMax }: { text: string; znak: string; desetinMax: number }) {
+  const chybi = desetinMax - desetin(text);
+  const vypln = chybi > 0 ? `${text.includes(',') ? '' : ','}${'0'.repeat(chybi)}` : '';
+  return (
+    <>
+      {text}
+      {vypln && <span className={s.vypln} aria-hidden>{vypln}</span>}
+      {znak && `${NBSP}${znak}`}
+    </>
+  );
+}
 
 /** Zkopíruje text do schránky; když Clipboard API chybí (http, starší prohlížeč), použije skryté textarea. */
 async function kopiruj(text: string): Promise<boolean> {
@@ -58,6 +72,7 @@ function Karta({ k }: { k: CisloKarta }) {
   const [stav, setStav] = useState<'' | 'ok' | 'chyba'>('');
   const [url, setUrl] = useState('');
   const kotva = `cislo-${k.cislo}`;
+  const desetinMax = Math.max(desetin(k.tehdy.text), desetin(k.dnes.text));
 
   const onKopiruj = async () => {
     const u = `${window.location.origin}${window.location.pathname}#${kotva}`;
@@ -82,11 +97,11 @@ function Karta({ k }: { k: CisloKarta }) {
       <dl className={s.cisla}>
         <div className={s.radek}>
           <dt className={s.rokTehdy}>{k.tehdy.rok}</dt>
-          <dd className={s.hodnotaTehdy}>{sZnakem(k.tehdy.text, k.znak)}</dd>
+          <dd className={s.hodnotaTehdy}><Hodnota text={k.tehdy.text} znak={k.znak} desetinMax={desetinMax} /></dd>
         </div>
         <div className={s.radek}>
           <dt className={s.rokDnes}>{k.dnes.rok}</dt>
-          <dd className={s.hodnotaDnes}>{sZnakem(k.dnes.text, k.znak)}</dd>
+          <dd className={s.hodnotaDnes}><Hodnota text={k.dnes.text} znak={k.znak} desetinMax={desetinMax} /></dd>
         </div>
       </dl>
       <p className={s.popis}>{typo(k.popis)}</p>

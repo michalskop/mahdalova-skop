@@ -8,6 +8,7 @@ import type { Metadata } from 'next';
 import SupportBanner from '@/components/common/SupportBanner';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { JACI_JSME, JACI_JSME_OG, JACI_JSME_PATH, hotoveKapitoly } from '@/lib/jaciJsme';
+import RokyPocitadlo from '@/components/specialy/jaciJsme/RokyPocitadlo';
 import CislaKarty, { type CisloKarta } from '@/components/specialy/jaciJsme/CislaKarty';
 import kartyData from './_data/karty.json';
 import s from './jaciJsme.module.css';
@@ -61,8 +62,7 @@ export default function JaciJsmePage() {
           </div>
           <div className={s.years} aria-label="1989 a 2026">
             <span className={s.y1989}>1989</span>
-            <span className={s.yTimes}>×</span>
-            <span className={s.y2026}>2026</span>
+            <RokyPocitadlo className={s.y2026} />
           </div>
         </div>
         <div className={s.stripe} aria-hidden />

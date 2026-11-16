@@ -87,7 +87,8 @@
   align-items: baseline;
   gap: 10px;
 }
-.radek dd { margin: 0; }
+.radek dd { margin: 0; text-align: right; } /* čísla zarovnaná doprava, desetinné čárky pod sebou */
+.vypln { visibility: hidden; }
 .rokTehdy, .rokDnes { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .rokTehdy { color: #6267a3; }
 .rokDnes { color: #de1743; }
