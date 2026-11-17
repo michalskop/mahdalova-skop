@@ -104,3 +104,5 @@ GRAF pískoty east 37.1 170
 GRAF pískoty south 10.0 677
 GRAF pískoty center 10.7 289
 GRAF pískoty west 13.1 268
+GRAF komin-a-dum SO2 2024 2.7 % roku 1990, pokles 97 %
+GRAF komin-a-dum BaP domácnosti 2023 49.2 % roku 1990, pokles 51 %

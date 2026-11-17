@@ -145,9 +145,56 @@ g4 = spec(f"Děti z {{nejznečištěnější části Ostravy|{CRIMSON}}} měly o
                "encoding": {"y": y4, "x": {"datum": 0, "type": "quantitative", "scale": {"domain": [0, 50]}}, "text": {"field": "oblast"}}},
           ], "Dostál a kol., [Environmental Health 2013](https://ehjournal.biomedcentral.com/articles/10.1186/1476-069X-12-74)", step=40)
 
+# ---------- Graf 5 (motiv coveru): síra ze všech zdrojů × benzo[a]pyren z domácností, 1990 = 100 ----------
+# Cover ukazuje dva oblaky po 100 tečkách (1 tečka = 1 % emisí roku 1990): síra 3, benzo[a]pyren z domácností 49.
+so2 = {int(k): v for k, v in C["so2_emise"].items()}
+bapd = {r["rok"]: r["BaP_domacnosti_t"] for r in em}
+S_SO2, S_BAP = "oxid siřičitý, všechny zdroje", "benzo[a]pyren z domácností"
+v5 = []
+for nazev, rada, jedn in [(S_SO2, so2, "tis. t"), (S_BAP, bapd, "t")]:
+    r0 = rada[1990]
+    for rok in sorted(rada):
+        idx = 100 * rada[rok] / r0
+        v5.append({"rok": rok, "rada": nazev, "index": round(idx, 1),
+                   "t": f"{cz(rada[rok], 1)} {jedn} ({cz(idx, 0)} % roku 1990)"})
+so2_kon, bap_kon = max(so2), max(bapd)
+i_so2 = 100 * so2[so2_kon] / so2[1990]
+i_bap = 100 * bapd[bap_kon] / bapd[1990]
+pokles_so2, pokles_bap = round(100 - i_so2), round(100 - i_bap)
+log("GRAF komin-a-dum SO2", so2_kon, round(i_so2, 1), "% roku 1990, pokles", pokles_so2, "%")
+log("GRAF komin-a-dum BaP domácnosti", bap_kon, round(i_bap, 1), "% roku 1990, pokles", pokles_bap, "%")
+assert round(i_so2) == 3 and round(i_bap) == 49, "počty nesedí s motivem coveru (3 a 49 teček)"
+lab5 = [{"rok": so2_kon, "index": round(i_so2, 1), "rada": S_SO2, "p": f"síra {cz(i_so2, 0)}{NB}%"},
+        {"rok": bap_kon, "index": round(i_bap, 1), "rada": S_BAP, "p": f"z domácností {cz(i_bap, 0)}{NB}%"}]
+col5 = {"field": "rada", "type": "nominal", "legend": None, "scale": {"domain": [S_SO2, S_BAP], "range": [BLUE, CRIMSON]}}
+x5 = {"field": "rok", "type": "quantitative", "scale": {"domain": [1990, so2_kon]},
+      "axis": {"title": None, "format": "d", "grid": False, "domain": False, "ticks": False, "values": [1990, 2000, 2010, so2_kon]}}
+y5 = {"field": "index", "type": "quantitative", "scale": {"domain": [0, 110]},
+      "axis": {"title": None, "grid": True, "gridColor": MUTED, "domain": False, "ticks": False, "values": [0, 25, 50, 75, 100],
+               "labelExpr": "datum.value + ' %'"}}
+g5 = spec(f"Emise oxidu siřičitého klesly o {{{pokles_so2}{NB}%|{BLUE}}}, benzo[a]pyrenu z domácích komínů o {{{pokles_bap}{NB}%|{CRIMSON}}}",
+          f"Roční emise v Česku v % roku 1990 (100 % = 1{NB}754 tis. t oxidu siřičitého ze všech zdrojů, "
+          f"{cz(bapd[1990], 1)} t benzo[a]pyrenu z vytápění domácností); oxid siřičitý 1990–{so2_kon}, benzo[a]pyren 1990–{bap_kon}",
+          v5, [
+              {"mark": {"type": "line", "strokeWidth": 2.5},
+               "encoding": {"x": x5, "y": y5, "color": col5,
+                            "tooltip": [{"field": "rada", "title": "Emise"}, {"field": "rok", "title": "Rok"}, {"field": "t", "title": "Množství"}]}},
+              {"data": {"values": lab5}, "mark": {"type": "circle", "size": 60, "opacity": 1},
+               "encoding": {"x": x5, "y": y5, "color": col5}},
+              # síra nad koncem čáry (u nuly je volno), domácnosti pod koncem čáry (nad ním běží řada 2010–2022 až k 70 %)
+              {"data": {"values": [lab5[0]]}, "mark": {"type": "text", "align": "right", "baseline": "bottom", "dy": -8, "fontSize": 12, "fontWeight": 700},
+               "encoding": {"x": x5, "y": y5, "text": {"field": "p"}, "color": col5}},
+              {"data": {"values": [lab5[1]]}, "mark": {"type": "text", "align": "right", "baseline": "top", "dy": 8, "fontSize": 12, "fontWeight": 700},
+               "encoding": {"x": x5, "y": y5, "text": {"field": "p"}, "color": col5}},
+          ], "ČSÚ, [Česko od roku 1989 v číslech, tab. 02.04](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026) "
+             "(oxid siřičitý); ČHMÚ, [emisní inventura](https://opendata.chmi.cz/air_quality/products/emissions/inventory/"
+             "CZ-Annex-I-rev18-11-1990-2023-v11.xlsx) (benzo[a]pyren); výpočet DataTimes", height=250)
+
 DATA.mkdir(exist_ok=True)
-for name, s in [("emise", g1), ("so2-ustecky", g2), ("kraje-bap", g3), ("ostrava-piskoty", g4)]:
+for name, s in [("emise", g1), ("so2-ustecky", g2), ("kraje-bap", g3), ("ostrava-piskoty", g4), ("komin-a-dum", g5)]:
     (DATA / f"{name}.json").write_text(json.dumps(s, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-with open(HERE / "vystup.txt", "a", encoding="utf-8") as f:
-    f.write("\n".join(out) + "\n")
+# řádky GRAF nahradí předchozí běh grafy.py (zbytek vystup.txt píše cisla.py)
+vy = HERE / "vystup.txt"
+puvodni = [r for r in vy.read_text(encoding="utf-8").splitlines() if not r.startswith("GRAF ")] if vy.exists() else []
+vy.write_text("\n".join(puvodni + out) + "\n", encoding="utf-8")
 print("\n".join(out))
