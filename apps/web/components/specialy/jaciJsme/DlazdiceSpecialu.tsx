@@ -15,7 +15,7 @@ import data from '@/app/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/_data/dlazdi
 import RokyHlavicka from './RokyHlavicka';
 import s from './RokyHlavicka.module.css';
 
-const ZAKLAD = 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-zaklad-v1.png';
+const ZAKLAD = 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-zaklad-v2.png';
 // Kateřina 17. 11. 2026: na dlaždici víc do běla – města bílá s růžovou září, rok 2026 růžový
 const BOD = '#ffffff', ZARE = '#ff8099';
 const OD_DNE = 8; // 17. 11. 1989 (den 0 = 9. 11.)
@@ -36,8 +36,6 @@ function stav(f: number) {
   return { t: DO_DNE + 1 + h * (data.dnu - DO_DNE - 1), zhasnuti: 0, vse: h > 0.98 };
 }
 const MAX_PRAHA = Math.max(...data.praha.map((p) => p[1]));
-const MESICE = ['listopadu', 'prosince'];
-const datum = (d: number) => (d < 22 ? `${9 + d}. ${MESICE[0]}` : `${d - 21}. ${MESICE[1]}`);
 const PRAHA = data.body.find((b) => b.n === 'Praha')!;
 
 /** Velikost Prahy v čase t (dny): každý den s číslem „blikne“ úměrně odmocnině počtu lidí a dozní. */
@@ -99,10 +97,6 @@ function Tecky() {
             </>
           )}
         </g>
-        <text x={60} y={72} fill="#ffffff" fillOpacity={0.75 * svit} fontSize={44} fontWeight={600}
-          fontFamily="var(--mantine-font-family-headings), 'IBM Plex Sans', Arial, sans-serif">
-          {vse || t > DO_DNE + 1 ? 'listopad–prosinec 1989' : `${datum(Math.floor(t))} 1989`}
-        </text>
       </svg>
     </div>
   );
@@ -117,7 +111,7 @@ export default function DlazdiceSpecialu() {
   return (
     <>
       {v === 'tecky' && <Tecky />}
-      <div style={{ position: 'absolute', left: 0, right: 0, top: '55%', containerType: 'inline-size', pointerEvents: 'none' }}>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: '54%', containerType: 'inline-size', pointerEvents: 'none' }}>
         <RokyHlavicka dlazdice staticke={v === 'tecky'} ruzova={v === 'tecky'} key={v} />
       </div>
     </>

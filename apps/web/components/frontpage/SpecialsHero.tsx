@@ -87,7 +87,7 @@ const KlimaIcon = () => (
 // Pokud coverImage chybí, zobrazí se SVG ikona (logoType).
 // description: popis speciálu pro OG / meta (na kartě se nezobrazuje).
 const TILES = [
-  { href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026', title: 'Jací jsme byli, jací jsme', bg: '#101432', external: false, logoType: 'flag', coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v3.png', roky: true },
+  { href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026', title: 'Jací jsme byli, jací jsme', bg: '#101432', external: false, logoType: 'flag', coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v4.png', roky: true },
   { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
   { href: '/specialy/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
   { href: '/specialy/komunalni-a-senatni-volby-2026', title: 'Komunální a senátní volby 2026', description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce', bg: '#101432', external: false, logoType: 'vk', coverImage: '/images/specials/volby-2026.svg?v=2026-10-14' },

@@ -111,7 +111,7 @@ const MAPA = {
   homepage: [1500, 1200, [40, 530, 1480, 1180]], og: [1200, 630, [322, 250, 1150, 650]],
   square: [1080, 1080, [20, 440, 1060, 1050]], instagram: [1080, 1350, [20, 560, 1060, 1230]],
   story: [1080, 1920, [20, 860, 1060, 1560]],
-  dlazdice: [1080, 1080, [50, 70, 1030, 560]], // dlaždice speciálu v3 (17. 11. 2026): mapa nahoře; animované letopočty pod ní a titulek dole dopisuje web (SpecialsHero)
+  dlazdice: [1080, 1080, [24, 20, 1180, 560]], // dlaždice speciálu v4 (17. 11. 2026: mapa větší, východ Slovenska smí přetéct): mapa nahoře; animované letopočty pod ní a titulek dole dopisuje web (SpecialsHero)
 };
 const PRAHA = body.find((b) => b.obec === 'Praha'), BA = body.find((b) => b.obec === 'Bratislava');
 

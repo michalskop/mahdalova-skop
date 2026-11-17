@@ -5,7 +5,7 @@
 const path = require('path');
 const fs = require('fs');
 const { chromium } = require(process.env.PW_PATH || 'playwright');
-const varianty = [['motiv-dlazdice.svg', 'dlazdice-v3.png'], ['motiv-dlazdice-zaklad.svg', 'dlazdice-zaklad-v1.png']];
+const varianty = [['motiv-dlazdice.svg', 'dlazdice-v4.png'], ['motiv-dlazdice-zaklad.svg', 'dlazdice-zaklad-v2.png']];
 // dlazdice-zaklad = jen tečková mřížka; města dokresluje animace DemonstraceDlazdice.tsx
 (async () => { for (const [motiv, png] of varianty) {
   const svg = fs.readFileSync(path.join(__dirname, motiv), 'utf8');

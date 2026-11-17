@@ -38,7 +38,7 @@
 /* menší verze na dlaždici speciálu v karuselu Speciály (SpecialsHero): letopočty vedle sebe,
    velikost podle šířky dlaždice (rodič má container-type: inline-size) */
 .dlazdice { justify-content: center; }
-.dlazdice .odometr { flex-direction: row; align-items: center; gap: 0.3em; font-size: 17cqw; }
+.dlazdice .odometr { flex-direction: row; align-items: center; gap: 0.3em; font-size: 18cqw; }
 .dlazdice .odoDnes { margin-top: 0; border-bottom-width: 0.08em; }
 /* malé dlaždice (mobil, ~100 px): letopočty menší a výš, ať se nepotkají s titulkem (Kateřina 17. 11. 2026: nechat je tam) */
 @container (max-width: 180px) {
