@@ -42,3 +42,6 @@
 .dlazdice .odoDnes { margin-top: 0; border-bottom-width: 0.08em; }
 /* na malých dlaždicích (mobil, ~100 px) by se letopočty tloukly s titulkem – tam jen mapa */
 @container (max-width: 180px) { .dlazdice { display: none; } }
+
+/* dlaždice s tečkami: rok 2026 růžově jako záře měst (Kateřina 17. 11. 2026) */
+.ruzova .odoDnes { color: #ff8099; }

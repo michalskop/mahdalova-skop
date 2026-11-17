@@ -15,7 +15,7 @@ const DO = 2026;
 const TRVANI = 2800; // ms
 const PRODLEVA = 400; // ms – ať čtenář zachytí výchozí 1989
 
-export default function RokyHlavicka({ dlazdice = false, staticke = false }: { dlazdice?: boolean; staticke?: boolean }) {
+export default function RokyHlavicka({ dlazdice = false, staticke = false, ruzova = false }: { dlazdice?: boolean; staticke?: boolean; ruzova?: boolean }) {
   const [cil, setCil] = useState(DO);
   const [jede, setJede] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -39,7 +39,7 @@ export default function RokyHlavicka({ dlazdice = false, staticke = false }: { d
     return { m, z, cifry };
   });
   return (
-    <div ref={ref} className={`${s.obal} ${dlazdice ? s.dlazdice : ''}`} role="img" aria-label="1989 a 2026">
+    <div ref={ref} className={`${s.obal} ${dlazdice ? s.dlazdice : ''} ${ruzova ? s.ruzova : ''}`} role="img" aria-label="1989 a 2026">
       <div className={s.odometr} aria-hidden>
         <div className={s.odoTehdy}>1989</div>
         <div className={s.odoDnes}><div className={s.okno}>
