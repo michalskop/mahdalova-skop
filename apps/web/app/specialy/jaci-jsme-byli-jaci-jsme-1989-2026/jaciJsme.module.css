@@ -135,18 +135,6 @@
   max-width: 620px;
   margin: 18px 0 0;
 }
-.years {
-  font-family: var(--font-ibm-plex-sans), 'IBM Plex Sans', Arial, sans-serif;
-  font-weight: 700;
-  font-size: clamp(56px, 9vw, 112px);
-  line-height: 0.95;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-variant-numeric: tabular-nums;
-}
-.y1989 { color: #899aeb; }
-.y2026 { color: #ffffff; border-bottom: 10px solid #de1743; margin-top: 8px; }
 /* trikolóra leží uvnitř tmavého hero: pod ní zůstává ink lem, jinak by bílá splynula se světlým
    pozadím stránky pod hero */
 .stripe {
@@ -157,8 +145,6 @@
 }
 @media (max-width: 760px) {
   .heroInner { grid-template-columns: 1fr; padding: 32px 16px 40px; }
-  .years { flex-direction: row; align-items: baseline; gap: 16px; }
-  .y2026 { margin-top: 0; }
 }
 
 .section {

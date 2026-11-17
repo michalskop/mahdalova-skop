@@ -97,7 +97,7 @@ const [u0, u1, v0, v1] = [Math.min(...vse.map((p) => p[0])), Math.max(...vse.map
 const BOD = '#de1743', ZARE = '#ff8099', REPUBLIKA = '#4c4f8e';
 // oblast mapy [x0, y0, x1, y1] v každém formátu
 const MAPA = {
-  homepage: [1500, 1200, [40, 530, 1480, 1180]], og: [1200, 630, [60, 200, 1140, 555]],
+  homepage: [1500, 1200, [40, 530, 1480, 1180]], og: [1200, 630, [322, 250, 1150, 650]],
   square: [1080, 1080, [20, 440, 1060, 1050]], instagram: [1080, 1350, [20, 560, 1060, 1230]],
   story: [1080, 1920, [20, 860, 1060, 1560]],
   dlazdice: [1080, 1080, [0, 40, 1080, 600]], // dlaždice speciálu (titulek dole dopisuje web)
