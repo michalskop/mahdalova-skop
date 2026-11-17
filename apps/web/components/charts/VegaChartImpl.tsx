@@ -65,7 +65,7 @@ const TOOLTIP_CSS = `
   line-height: 1.4;
   padding: 0;
   overflow: hidden;
-  max-width: 320px;
+  max-width: min(320px, calc(100vw - 16px));
   pointer-events: none;
   position: fixed;
   z-index: 9999;
@@ -76,7 +76,9 @@ const TOOLTIP_CSS = `
   font-weight: 700;
   font-size: 13.5px;
   padding: 5px 12px;
-  white-space: nowrap;
+  /* dlouhý název se zalomí, ne uřízne (17. 11. 2026: „hlavička není dotažená do konce“) */
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 #vg-tooltip-element.dpbp-theme table { border-collapse: collapse; margin: 6px 12px 8px; }
 #vg-tooltip-element.dpbp-theme table.dt-tt-list { margin: 2px 0 0; font-size: 12px; line-height: 1.3; }
@@ -196,10 +198,13 @@ function makeDpbpTooltipHandler(seriesColors: Record<string, string> = {}): Tool
     tip.style.maxWidth = html.includes('dt-tt-list') ? 'min(600px, calc(100vw - 16px))' : '';
     tip.innerHTML = html;
     tip.classList.add('visible');
-    const pad = 12;
+    const pad = 12, okraj = 8;
     const tw = tip.offsetWidth, th = tip.offsetHeight;
-    const x = event.clientX + pad + tw > window.innerWidth ? event.clientX - tw - pad : event.clientX + pad;
-    const y = event.clientY + pad + th > window.innerHeight ? event.clientY - th - pad : event.clientY + pad;
+    let x = event.clientX + pad + tw > window.innerWidth ? event.clientX - tw - pad : event.clientX + pad;
+    let y = event.clientY + pad + th > window.innerHeight ? event.clientY - th - pad : event.clientY + pad;
+    // nikdy přes okraj obrazovky (mobil: tooltip vyskakoval mimo displej)
+    x = Math.max(okraj, Math.min(x, window.innerWidth - tw - okraj));
+    y = Math.max(okraj, Math.min(y, window.innerHeight - th - okraj));
     tip.style.left = x + 'px';
     tip.style.top = y + 'px';
   };

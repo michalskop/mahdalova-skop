@@ -143,17 +143,19 @@ log(f"mimo manželství {mimo['rok_tehdy']}: {mimo_t:.2f} %, {mimo['rok_dnes']}:
 RADKY = []
 
 
-def radek(klic, veta_fn, r0, p0, r1, p1, kdo):
+def radek(klic, nadpis, zakl, r0, p0, r1, p1, kdo):
+    """nadpis = kdo je červený panáček (Kateřina 17. 11. 2026: místo dlouhé věty krátce „Starší 65 let, 13 ze 100“),
+    zakl = z kolika se počítá („ze 100 dospělých“)."""
     a, b = ze_sta(p0), ze_sta(p1)
-    RADKY.append(dict(klic=klic, veta=veta_fn(a, b), r0=r0, r1=r1, a=a, b=b, p0=p0, p1=p1, kdo=kdo))
+    RADKY.append(dict(klic=klic, nadpis=nadpis, zakl=zakl, r0=r0, r1=r1, a=a, b=b, p0=p0, p1=p1, kdo=kdo))
     log(f"MŘÍŽKA {klic}: {r0} {p0:.2f} % → {a} ze 100 | {r1} {p1:.2f} % → {b} ze 100")
 
 
-radek("vs", lambda a, b: f"Vysokou školu mělo {a} ze{NB}100 dospělých, v{NB}roce 2021 to bylo {b}", 1991, vs[1991], 2021, vs[2021], "dospělých")
-radek("vira", lambda a, b: f"K{NB}víře se hlásilo {a} ze{NB}100 lidí, v{NB}roce 2021 to bylo {b}", vira["rok_tehdy"], vira["tehdy"], vira["rok_dnes"], vira["dnes"], "obyvatel")
-radek("manzelstvi", lambda a, b: f"Ženatých a vdaných bylo {a} ze{NB}100 dospělých, v{NB}roce 2021 to bylo {b}", 1991, 100 * zenati91 / dosp91, 2021, 100 * zenati21 / dosp21, "dospělých")
-radek("seniori", lambda a, b: f"Starších 65{NB}let bylo {a} ze{NB}100 lidí, v{NB}roce 2021 to bylo {b}", 1991, 100 * seniori91 / celkem91, 2021, 100 * seniori21 / celkem21, "obyvatel")
-radek("mimo", lambda a, b: f"Mimo manželství se narodilo {a} ze{NB}100 dětí, loni {b}", mimo["rok_tehdy"], mimo_t, mimo["rok_dnes"], mimo_d, "dětí")
+radek("vs", "S vysokou školou", f"ze{NB}100 dospělých", 1991, vs[1991], 2021, vs[2021], "dospělých")
+radek("vira", "Věřící", f"ze{NB}100 lidí", vira["rok_tehdy"], vira["tehdy"], vira["rok_dnes"], vira["dnes"], "obyvatel")
+radek("manzelstvi", "Ženatí a vdané", f"ze{NB}100 dospělých", 1991, 100 * zenati91 / dosp91, 2021, 100 * zenati21 / dosp21, "dospělých")
+radek("seniori", f"Starší 65{NB}let", f"ze{NB}100 lidí", 1991, 100 * seniori91 / celkem91, 2021, 100 * seniori21 / celkem21, "obyvatel")
+radek("mimo", "Děti narozené mimo manželství", f"ze{NB}100 narozených dětí", mimo["rok_tehdy"], mimo_t, mimo["rok_dnes"], mimo_d, "dětí")
 
 # ---------- Vega-Lite ----------
 # Tabler icon „user“ (filled, viewBox 24) přepočtená do čtverce −1…1, jak ho chce Vega pro vlastní `shape`.
@@ -197,26 +199,26 @@ log("ikona (Tabler user filled, jednotkový čtverec):", IKONA)
 # Rozvržení v pixelech (osy bez škály): buňka = min(šířka/21, 16) px, dvě mřížky 10 × 10 vedle sebe
 # (vlevo tehdy, vpravo dnes, mezera jedna buňka). Blok = věta (2 řádky na mobilu) + roky + 10 řad.
 CELL = 16
-VETA_H, ROK_H = 40, 20
+VETA_H, ROK_H = 42, 20
 BLOK_H = VETA_H + ROK_H + 10 * CELL + 22
-body, texty = [], []
+body, texty, plochy = [], [], []
 for bi, r in enumerate(RADKY):
     y0 = bi * BLOK_H
-    texty.append(dict(typ="veta", blok=bi, y=y0 + 16, x=0, text=r["veta"], strana=0))
+    texty.append(dict(typ="nadpis", blok=bi, y=y0 + 10, text=r["nadpis"]))
+    texty.append(dict(typ="zakl", blok=bi, y=y0 + 28, text=r["zakl"]))
     for strana, rok, k in ((0, r["r0"], r["a"]), (1, r["r1"], r["b"])):
         texty.append(dict(typ="rok", blok=bi, y=y0 + VETA_H + 12, x=strana * 11, strana=strana,
                           text=f"{rok}: {k} ze{NB}100"))
         for i in range(100):
             body.append(dict(blok=bi, strana=strana, sl=strana * 11 + i % 10, rad=i // 10,
                              y=y0 + VETA_H + ROK_H + (i // 10) * CELL + CELL / 2,
-                             stav="ano" if i < k else "ne",
-                             t_veta=r["veta"], t_rok=str(rok), t_hodnota=f"{(r['p0'] if strana == 0 else r['p1']):.1f}".replace(".", ",") + f"{NB}% {r['kdo']}"))
+                             stav="ano" if i < k else "ne"))
+        # jeden tooltip na celou mřížku 10 × 10 (dřív na každém panáčkovi → problikával)
+        p = r["p0"] if strana == 0 else r["p1"]
+        plochy.append(dict(sl0=strana * 11, y1=y0 + VETA_H + ROK_H, y2=y0 + VETA_H + ROK_H + 10 * CELL,
+                           t_nadpis=f"{r['nadpis']} {rok}", t_ze100=f"{k} {r['zakl']}",
+                           t_presne=f"{p:.1f}".replace(".", ",") + f"{NB}%"))
 vyska = len(RADKY) * BLOK_H - 22
-# mobil: věty dělíme na dva řádky (Vega text nezalamuje sám)
-for t in texty:
-    if t["typ"] == "veta":
-        cast = t["text"].split(", ", 1)
-        t["radky"] = [cast[0] + ",", cast[1]]
 
 bunka = f"min(width / 21, {CELL})"
 spec = {
@@ -235,21 +237,30 @@ spec = {
              "x": {"field": "px", "type": "quantitative", "scale": None, "axis": None},
              "y": {"field": "y", "type": "quantitative", "scale": None, "axis": None},
              "color": {"field": "stav", "type": "nominal", "legend": None,
-                       "scale": {"domain": ["ano", "ne"], "range": [CRIMSON, MUTED]}},
-             "tooltip": [{"field": "t_veta", "title": "Kolik ze 100"}, {"field": "t_rok", "title": "Rok"},
-                         {"field": "t_hodnota", "title": "Podíl"}]}},
-        {"data": {"values": [t for t in texty if t["typ"] == "veta"]},
-         "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 14, "fontWeight": 700,
-                  "color": INK, "lineHeight": 17},
+                       "scale": {"domain": ["ano", "ne"], "range": [CRIMSON, MUTED]}}}},
+        {"data": {"values": [t for t in texty if t["typ"] == "nadpis"]},
+         "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 15, "fontWeight": 700, "color": CRIMSON},
          "encoding": {"x": {"datum": 0, "type": "quantitative", "scale": None},
                       "y": {"field": "y", "type": "quantitative", "scale": None},
-                      "text": {"condition": {"test": "width < 520", "field": "radky"}, "field": "text"}}},
+                      "text": {"field": "text"}}},
+        {"data": {"values": [t for t in texty if t["typ"] == "zakl"]},
+         "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#555555"},
+         "encoding": {"x": {"datum": 0, "type": "quantitative", "scale": None},
+                      "y": {"field": "y", "type": "quantitative", "scale": None},
+                      "text": {"field": "text"}}},
         {"data": {"values": [t for t in texty if t["typ"] == "rok"]},
          "transform": [{"calculate": f"datum.x * {bunka}", "as": "px"}],
          "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#333333"},
          "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None},
                       "y": {"field": "y", "type": "quantitative", "scale": None},
                       "text": {"field": "text"}}},
+        {"data": {"values": plochy},
+         "transform": [{"calculate": f"datum.sl0 * {bunka}", "as": "x1"}, {"calculate": f"(datum.sl0 + 10) * {bunka}", "as": "x2"}],
+         "mark": {"type": "rect", "color": CRIMSON, "opacity": 0},
+         "encoding": {"x": {"field": "x1", "type": "quantitative", "scale": None}, "x2": {"field": "x2"},
+                      "y": {"field": "y1", "type": "quantitative", "scale": None}, "y2": {"field": "y2"},
+                      "tooltip": [{"field": "t_nadpis", "title": "Kdo"}, {"field": "t_ze100", "title": "Počet"},
+                                  {"field": "t_presne", "title": "Přesně"}]}},
     ],
     "_source": "ČSÚ, [sčítání 1991](https://csu.gov.cz/obyvatelstvo1991) a [2021](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data), "
                "[Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes",
