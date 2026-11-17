@@ -5,8 +5,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const ZARI = '#ff1a4a'; // brand.4 (same as cover.config.cjs legend)
-const ZMIZELO = '#6267a3'; // same as the 'before duty' bars in chart 1
+// colours on the teal background (Kateřina 17. 11. 2026: not crimson × navy): September parcels brandYellow.6,
+// gone parcels brandTeal.5 outlines, tape strip brandYellow.9; same values as the legend in cover.config.cjs
+const ZARI = '#ffcf02';
+const ZMIZELO = '#1a9fbd';
+const PASKA = '#a47d03';
 const CERVEN = 136, ZBYLO = 26;
 
 // [width, height, box [x0, y0, x1, y1], columns]
@@ -24,7 +27,7 @@ function balik(x, y, a, barva, plny) {
   const r = a * 0.12;
   if (plny) {
     return `<rect x="${f(x)}" y="${f(y)}" width="${f(a)}" height="${f(a)}" rx="${f(r)}" fill="${barva}"/>` +
-      `<rect x="${f(x + a * 0.42)}" y="${f(y)}" width="${f(a * 0.16)}" height="${f(a)}" fill="#f8f6f0" opacity="0.85"/>` +
+      `<rect x="${f(x + a * 0.42)}" y="${f(y)}" width="${f(a * 0.16)}" height="${f(a)}" fill="${PASKA}" opacity="0.6"/>` +
       `<line x1="${f(x)}" y1="${f(y + a * 0.3)}" x2="${f(x + a)}" y2="${f(y + a * 0.3)}" stroke="#101432" stroke-opacity="0.35" stroke-width="${f(a * 0.05)}"/>`;
   }
   return `<rect x="${f(x + a * 0.03)}" y="${f(y + a * 0.03)}" width="${f(a * 0.94)}" height="${f(a * 0.94)}" rx="${f(r)}" fill="none" stroke="${barva}" stroke-width="${f(a * 0.06)}"/>` +
