@@ -9,8 +9,9 @@ module.exports = {
   // brand.4 září, #6267a3 obrysy (stejně jako motiv.cjs)
   legenda: [[null, 'Položky v zásilkách do 150 eur,<br>1 balíček = 100 000 položek'], ['#ff1a4a', 'září 2026: 2,6 milionu'], ['#6267a3', 'ubylo od června: 11 milionů']],
   legendaPodTextem: true,
-  // záře brand.9 × brandNavy.8, podtitulek brandNavy.1
-  barvy: { glowA: '#8b0e2b', glowB: '#272a59', kick: '#f8f6f0', sub: '#d2d8e9', stitek: '#de1743' },
+  // záře brandTeal.6 × brandTeal.8 (ne červeno-modrá: u Číny nevhodná a na homepage jí je moc, Kateřina 17. 11. 2026),
+  // podtitulek brandTeal.1; balíčky dál karmínové jako „po zavedení cla“ v grafech článku
+  barvy: { glowA: '#0e839e', glowB: '#044d5e', kick: '#f8f6f0', sub: '#b8eff6', stitek: '#de1743' },
   logo: 'vlevo',
   og: 'siroky', ogScrim: false,
   // OG: texty nahoře a vlevo dole, motiv vpravo dole uvnitř středního čtverce
