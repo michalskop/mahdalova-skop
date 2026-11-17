@@ -2,10 +2,10 @@
   "formaty": {
     "homepage": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-homepage.png",
-      "otisk": "b4219882ae4bc56c",
+      "otisk": "e3c765ff3024f331",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "e0dfe6b5936fc404",
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-homepage.svg": "7c0e693258b8c814"
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "19bca265970fab55",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-homepage.svg": "c58b6bd5ef658b98"
       },
       "kontrola": {
         "chyby": [],
@@ -15,10 +15,10 @@
     },
     "og": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-og.jpg",
-      "otisk": "5c301aec23c8ce94",
+      "otisk": "8c81e3090c39bcde",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "e0dfe6b5936fc404",
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-og.svg": "39c3c6c58b08e83a"
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "19bca265970fab55",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-og.svg": "bca799e1820201bd"
       },
       "kontrola": {
         "chyby": [],
@@ -28,10 +28,10 @@
     },
     "square": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-square.png",
-      "otisk": "1c15c3c943989aa3",
+      "otisk": "c6ef2a5d999d28d5",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "e0dfe6b5936fc404",
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-square.svg": "e94c867a12e70127"
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "19bca265970fab55",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-square.svg": "0ee23f8f432a0f98"
       },
       "kontrola": {
         "chyby": [],
@@ -41,10 +41,10 @@
     },
     "instagram": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-instagram.png",
-      "otisk": "f350856bf06dc284",
+      "otisk": "f171f3687abc76de",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "e0dfe6b5936fc404",
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-instagram.svg": "2313df2d88802ba9"
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "19bca265970fab55",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-instagram.svg": "6fe6021aa3e2ba6b"
       },
       "kontrola": {
         "chyby": [],
@@ -54,10 +54,10 @@
     },
     "story": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-story.png",
-      "otisk": "99f7c86e22d6566c",
+      "otisk": "09e26722c3ef0add",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "e0dfe6b5936fc404",
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-story.svg": "bf3bcb62a21e2649"
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "19bca265970fab55",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-story.svg": "6596bb2878fe8eed"
       },
       "kontrola": {
         "chyby": [],
@@ -67,7 +67,7 @@
     }
   },
   "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-11-17T12:13:11.178Z",
+  "vyrenderovano": "2026-11-17T12:50:24.455Z",
   "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/index.md",
   "titulekClanku": "Clo srazilo levné balíky z Číny na pětinu",
   "texty": {

@@ -6,8 +6,8 @@ const soubor = (k) => path.join(__dirname, `motiv-${k}.svg`);
 module.exports = {
   vystup: path.join(__dirname, '..', 'images'),
   kicker: { cervene: 'Balíky z Číny', dal: 'Clo' },
-  // brand.4 září, #6267a3 obrysy (stejně jako motiv.cjs)
-  legenda: [[null, 'Položky v zásilkách do 150 eur,<br>1 balíček = 100 000 položek'], ['#ff1a4a', 'září 2026: 2,6 milionu'], ['#6267a3', 'ubylo od června: 11 milionů']],
+  // brandYellow.6 září, brandTeal.5 obrysy (stejně jako motiv.cjs)
+  legenda: [[null, 'Položky v zásilkách do 150 eur,<br>1 balíček = 100 000 položek'], ['#ffcf02', 'září 2026: 2,6 milionu'], ['#1a9fbd', 'ubylo od června: 11 milionů']],
   legendaPodTextem: true,
   // záře brandTeal.6 × brandTeal.8 (ne červeno-modrá: u Číny nevhodná a na homepage jí je moc, Kateřina 17. 11. 2026),
   // podtitulek brandTeal.1; balíčky dál karmínové jako „po zavedení cla“ v grafech článku

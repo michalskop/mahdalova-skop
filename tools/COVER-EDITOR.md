@@ -267,8 +267,9 @@ formátu*):**
 - *17. 11. 2026 – barva pozadí podle tématu (clo na balíky z Číny).* Záře pozadí nejsou automaticky karmínová ×
   navy: na homepage jich pak bylo moc a u Číny červeno-modrá nesedí. Barvu záře volit podle tématu z palety, ne
   podle vlajky (Čína: tyrkysová brandTeal.6 `#0e839e` × brandTeal.8 `#044d5e`, podtitulek brandTeal.1). Akcent
-  motivu může zůstat karmínový, když nese stejný význam jako v grafech článku. Před renderem se podívat, jaké
-  barvy mají covery sousedních článků na homepage.
+  motivu ladit s pozadím: karmínové balíčky na tyrkysové Kateřina vzápětí vrátila, zůstaly žluté brandYellow.6
+  `#ffcf02` s obrysy brandTeal.5 `#1a9fbd` (páska brandYellow.9). Před renderem se podívat, jaké barvy mají
+  covery sousedních článků na homepage.
 - *1. 11. 2026 – první covery na CDN (osadníci na Západním břehu).* Covery se do gitu necommitují
   (`docs/technicke/media-cdn.md`): generátor je vyrobí do `images/` u článku, `.gitignore` článku tu složku
   i vykreslené motivy (`_cover_pipeline/*.svg`, `*.png`) vynechá, pět souborů se nahraje
