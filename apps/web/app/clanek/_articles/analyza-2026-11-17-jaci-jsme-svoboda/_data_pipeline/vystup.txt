@@ -32,3 +32,5 @@ GRAF CVVM svobody Svobodný přístup k informacím 2019 (73, 10) 2024 (64, 21)
 GRAF CVVM svobody Svobodně se účastnit veřejného života 2019 (67, 8) 2024 (61, 14)
 GRAF CVVM svobody Vyjádřit svůj názor 2019 (74, 10) 2024 (57, 21)
 GRAF CVVM svobody Ovlivňovat politická rozhodnutí 2019 (45, 16) 2024 (42, 27)
+GRAF CVVM svoboda projevu postavy 2019 lepší 74 stejná/neví 16 horší 10
+GRAF CVVM svoboda projevu postavy 2024 lepší 57 stejná/neví 22 horší 21

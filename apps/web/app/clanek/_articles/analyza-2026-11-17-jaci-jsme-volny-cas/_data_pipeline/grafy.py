@@ -542,8 +542,102 @@ for geo in ("CZ", "EU27_2020"):
     log(f"  {geo}: 0 minut 2014 {pohyb[(geo, 'MN0', '2014')]} 2019 {pohyb[(geo, 'MN0', '2019')]} | 150+ minut 2014 "
         f"{pohyb[(geo, 'MN_GE150', '2014')]} 2019 {pohyb[(geo, 'MN_GE150', '2019')]}")
 
+# =====================================================================
+# 9. Kinosál ze 100 sedadel (graf z coveru, _cover_pipeline/motiv.cjs)
+# =====================================================================
+# Celý sál = návštěvy kin v roce 1989, 1 sedadlo = 1 %; karmínová obsazená sedadla = návštěvy v posledním roce.
+# Řady 9–16 sedadel (dozadu se sál rozšiřuje), obsazená sedadla rozesetá stejným deterministickým losem jako na coveru.
+# Rozložení v pixelech (osy bez škály): šířka zadní řady = min(šířka karty − 8, max); na kartě široké aspoň 640 px
+# větší rozestupy řad (VegaChartImpl → _siroky).
+K_POSL = max(kina_nav)
+OBSAZENO = round(100 * kina_nav[K_POSL] / kina_nav[1989])
+RADY_KINO = [9, 10, 11, 12, 13, 14, 15, 16]
+assert sum(RADY_KINO) == 100
+log(f"== KINOSÁL == návštěvy 1989 {cz(kina_nav[1989])} tis. = 100 sedadel | {K_POSL} {cz(kina_nav[K_POSL])} tis. = {OBSAZENO} obsazených")
+
+
+def los_sedadel(n_obs):
+    """Stejný los jako motiv.cjs (Park–Miller, semínko 1989, Fisher–Yates)."""
+    s_ = 1989
+    idx = list(range(100))
+    for i in range(99, 0, -1):
+        s_ = (s_ * 16807) % 2147483647
+        j = int((s_ / 2147483647) * (i + 1))
+        idx[i], idx[j] = idx[j], idx[i]
+    return set(idx[:n_obs])
+
+
+PLNA_K = los_sedadel(OBSAZENO)
+# sedadlo: opěradlo + sedák v jednotkovém čtverci (tvar podle motivu coveru)
+SEDADLO = "M -0.86 -0.98 H 0.86 V 0.14 H -0.86 Z M -1 0.36 H 1 V 0.8 H -1 Z"
+MER = [0.6 + 0.4 * r / (len(RADY_KINO) - 1) for r in range(len(RADY_KINO))]
+
+
+def kinosal(sw_max, krok_rady):
+    sw = f"min(width - 8, {sw_max})"
+    krok_z = f"({sw} / {max(RADY_KINO)})"
+    ys, y = [], 30
+    for r, m_ in enumerate(MER):
+        y += krok_rady * m_
+        ys.append(round(y, 1))
+    body, i = [], 0
+    for r, pocet in enumerate(RADY_KINO):
+        for j in range(pocet):
+            body.append(dict(r=r, o=round(j - (pocet - 1) / 2, 2), m=round(MER[r], 4), y=ys[r],
+                             stav="dnes" if i in PLNA_K else "ubylo"))
+            i += 1
+    vyska = round(ys[-1] + krok_rady * 0.6)
+    vrstvy = [
+        {"data": {"values": body},
+         "transform": [{"calculate": f"width / 2 + datum.o * {krok_z} * datum.m", "as": "px"},
+                       {"calculate": f"pow(min({krok_z} * 0.72, {krok_rady * 0.78}) * datum.m, 2)", "as": "sz"}],
+         "mark": {"type": "point", "filled": True, "shape": SEDADLO, "strokeWidth": 0, "opacity": 1},
+         "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None, "axis": None},
+                      "y": {"field": "y", "type": "quantitative", "scale": None, "axis": None},
+                      "size": {"field": "sz", "type": "quantitative", "scale": None, "legend": None},
+                      "color": {"field": "stav", "type": "nominal", "legend": None,
+                                "scale": {"domain": ["dnes", "ubylo"], "range": [CRIMSON, BLUE]}}}},
+        # plátno před první řadou
+        {"data": {"values": [dict(t="plátno")]},
+         "transform": [{"calculate": f"width / 2 - {krok_z} * {MER[0]} * {RADY_KINO[0]} / 2", "as": "x1"},
+                       {"calculate": f"width / 2 + {krok_z} * {MER[0]} * {RADY_KINO[0]} / 2", "as": "x2"},
+                       {"calculate": "2", "as": "y1"}, {"calculate": "7", "as": "y2"}],
+         "mark": {"type": "rect", "color": MUTED, "cornerRadius": 2},
+         "encoding": {"x": {"field": "x1", "type": "quantitative", "scale": None}, "x2": {"field": "x2"},
+                      "y": {"field": "y1", "type": "quantitative", "scale": None}, "y2": {"field": "y2"}}},
+        {"data": {"values": [dict(t="plátno")]},
+         "transform": [{"calculate": "width / 2", "as": "px"}, {"calculate": "17", "as": "py"}],
+         "mark": {"type": "text", "align": "center", "baseline": "middle", "fontSize": 11, "color": "#555555"},
+         "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None},
+                      "y": {"field": "py", "type": "quantitative", "scale": None}, "text": {"field": "t"}}},
+        # jeden tooltip na celý sál
+        {"data": {"values": [dict(t_n="Návštěvy kin", t_a=f"{cz(kina_nav[1989] / 1000, 1)}{NBSP}mil. (100 sedadel)",
+                                  t_b=f"{cz(kina_nav[K_POSL] / 1000, 1)}{NBSP}mil. ({OBSAZENO} sedadel)")]},
+         "transform": [{"calculate": f"width / 2 - {sw} / 2", "as": "x1"}, {"calculate": f"width / 2 + {sw} / 2", "as": "x2"},
+                       {"calculate": "0", "as": "y1"}, {"calculate": str(vyska), "as": "y2"}],
+         "mark": {"type": "rect", "color": BLUE, "opacity": 0},
+         "encoding": {"x": {"field": "x1", "type": "quantitative", "scale": None}, "x2": {"field": "x2"},
+                      "y": {"field": "y1", "type": "quantitative", "scale": None}, "y2": {"field": "y2"},
+                      "tooltip": [{"field": "t_n", "title": "Ukazatel"}, {"field": "t_a", "title": "1989"},
+                                  {"field": "t_b", "title": str(K_POSL)}]}},
+    ]
+    return vrstvy, vyska
+
+
+uz_k, vy_uz_k = kinosal(520, 26)
+si_k, vy_si_k = kinosal(600, 40)
+g_kino = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "title": {"text": f"Ze 100 návštěv kina v roce 1989 jich v roce {K_POSL} zbylo {{{OBSAZENO}|{CRIMSON}}}",
+                    "subtitle": f"Kinosál ze 100 sedadel = návštěvy kin v roce 1989 ({cz(kina_nav[1989] / 1000, 1)}{NBSP}milionu), "
+                                f"1 sedadlo = 1{NBSP}%; karmínově obsazená v roce {K_POSL} ({cz(kina_nav[K_POSL] / 1000, 1)}{NBSP}milionu), "
+                                f"modře návštěvy, které ubyly"},
+          "width": "container", "height": vy_uz_k, "config": {"view": {"stroke": None}},
+          "layer": uz_k,
+          "_siroky": {"od": 640, "spec": {"height": vy_si_k, "layer": si_k}},
+          "_source": ZDROJ("12.09") + " (NIK, Státní fond kinematografie)"}
+
 OUT.mkdir(exist_ok=True)
-for name, s in [("co-jime", g_jidlo), ("kultura", g_kultura), ("kam-jezdime", g_kam), ("dovolena", g_dov)]:
+for name, s in [("co-jime", g_jidlo), ("kultura", g_kultura), ("kam-jezdime", g_kam), ("dovolena", g_dov), ("kinosal", g_kino)]:
     (OUT / f"{name}.json").write_text(json.dumps(s, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 (HERE / "vystup.txt").write_text("\n".join(vystup) + "\n", encoding="utf-8")
 print("\n".join(vystup))

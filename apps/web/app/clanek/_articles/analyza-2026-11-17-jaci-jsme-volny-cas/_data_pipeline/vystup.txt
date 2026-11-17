@@ -117,3 +117,4 @@
 == POHYB (EHIS, sport a jízda na kole mimo práci, minut týdně, 15+) ==
   CZ: 0 minut 2014 47.4 2019 51.9 | 150+ minut 2014 28.4 2019 25.1
   EU27_2020: 0 minut 2014 49.8 2019 47.3 | 150+ minut 2014 29.9 2019 32.7
+== KINOSÁL == návštěvy 1989 51 453 tis. = 100 sedadel | 2024 13 041 tis. = 25 obsazených
