@@ -1,18 +1,18 @@
 ---
-title: "Clo srazilo levné balíky z Číny o čtyři pětiny. Od listopadu přidává EU další 2 eura za každou položku"
+title: "Clo srazilo levné balíky z Číny na pětinu"
 date: "2026-11-09"
 author: "Kateřina Mahdalová"
 excerpt: "Loni přišlo do Česka v levných zásilkách ze zemí mimo EU zhruba 105 milionů položek, letos do května dalších 93 milionů. Po zavedení cla 3 eura za položku 1. července objem spadl: v září celníci napočítali 2,6 milionu položek, o 81 procent méně než v červnu. Od 1. listopadu přibývá manipulační poplatek 2 eura. U levných věcí tak poplatky mohou zdražit nákup i o víc než polovinu."
-coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-homepage.png"
-homepageImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-homepage.png"
-ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-og.jpg"
-squareImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-square.png"
-instagramImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-instagram.png"
-storyImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-story.png"
-coverTitulek: "Clo srazilo balíky<br>z Číny o čtyři pětiny"
+coverImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-homepage-v2.png"
+homepageImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-homepage-v2.png"
+ogImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-og-v2.jpg"
+squareImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-square-v2.png"
+instagramImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-instagram-v2.png"
+storyImage: "https://media.datatimes.org/datatimes-cz/articles/2026/11/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/cover-story-v2.png"
+coverTitulek: "Clo srazilo levné balíky<br>z Číny na pětinu"
 coverPodtitulek: "Od listopadu přibývá poplatek 2 eura<br>za každou položku"
 filter: ["analýza", "ekonomika"]
-tags: ["Temu", "Shein", "clo", "e-commerce", "Čína", "Evropská unie", "Celní správa", "zásilky"]
+tags: ["obchod", "Temu", "Shein", "clo", "e-commerce", "Čína", "Evropská unie", "Celní správa", "zásilky"]
 ---
 
 <RelatedArticles preset="sidebar" position="right" heading="🔻🔻🔻" slugs={["analyza-2025-03-04-trumpova-obchodni-valka"]} />V červnu 2026 přišlo do Česka v levných zásilkách ze zemí mimo Evropskou unii 13,6 milionu položek zboží. V září jich bylo 2,6 milionu, o 81 procent méně ([ČTK, 26. 10. 2026](https://www.ceskenoviny.cz/zpravy/2893157), data Celní správy ČR). Mezi tím začalo platit clo: od 1. července se v celé unii platí 3 eura za každou položku v zásilce do 150 eur. Od 1. listopadu k němu přibývá manipulační poplatek 2 eura za položku. Spočítali jsme, jak rychle levné nákupy z platforem jako Temu, Shein nebo AliExpress rostly, jak rychle spadly a kolik clo a poplatek přidají k běžnému nákupu.
