@@ -15,12 +15,12 @@ const DO = 2026;
 const TRVANI = 2800; // ms
 const PRODLEVA = 400; // ms – ať čtenář zachytí výchozí 1989
 
-export default function RokyHlavicka({ dlazdice = false }: { dlazdice?: boolean }) {
+export default function RokyHlavicka({ dlazdice = false, staticke = false }: { dlazdice?: boolean; staticke?: boolean }) {
   const [cil, setCil] = useState(DO);
   const [jede, setJede] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    if (staticke || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
     setCil(OD);
     let t = 0;
     const spust = () => { t = window.setTimeout(() => { setJede(true); setCil(DO); }, PRODLEVA); };
@@ -31,7 +31,7 @@ export default function RokyHlavicka({ dlazdice = false }: { dlazdice?: boolean 
     }, { threshold: 0.5 });
     io.observe(el);
     return () => { io.disconnect(); window.clearTimeout(t); };
-  }, []);
+  }, [staticke]);
   // řád m (tisíce … jednotky): váleček nese číslice od floor(OD/m) do floor(DO/m), poloha = floor(cil/m)
   const rady = [1000, 100, 10, 1].map((m) => {
     const z = Math.floor(OD / m), k = Math.floor(DO / m);

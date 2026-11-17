@@ -1,6 +1,6 @@
 'use client';
 
-import RokyHlavicka from '@/components/specialy/jaciJsme/RokyHlavicka';
+import DlazdiceSpecialu from '@/components/specialy/jaciJsme/DlazdiceSpecialu';
 import { Box, Group, Stack, Title, Paper } from '@mantine/core';
 import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react';
 import { Arrow } from '@repo/ui/components/Arrow';
@@ -144,6 +144,8 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage, roky }: 
     cursor: 'pointer',
     transition: 'transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
     aspectRatio: '1 / 1',
+    // titulek se zmenšuje podle šířky dlaždice (na mobilu ~100 px by jinak zakryl grafiku)
+    containerType: 'inline-size',
   };
 
   if (hasCover) {
@@ -160,13 +162,9 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage, roky }: 
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
         {/* Speciál 1989 × 2026: pod mapou na dlaždici se odvalí letopočty jako v hlavičce speciálu */}
-        {roky && (
-          <div style={{ position: 'absolute', left: 0, right: 0, top: '55%', containerType: 'inline-size', pointerEvents: 'none' }}>
-            <RokyHlavicka dlazdice />
-          </div>
-        )}
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px', pointerEvents: 'none' }}>
-          <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
+        {roky && <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}><DlazdiceSpecialu /></div>}
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(6px, 5cqw, 12px) clamp(8px, 6cqw, 16px) clamp(8px, 6cqw, 16px)', pointerEvents: 'none' }}>
+          <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'clamp(11px, 7.5cqw, var(--mantine-font-size-lg))', lineHeight: 1.25 }}>
             {renderSpecialTitle(title)}
           </Title>
         </div>
@@ -182,8 +180,8 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage, roky }: 
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', padding: isFullBleed ? 0 : '16px 16px 0', minHeight: 0 }}>
         <TileLogo type={logoType} />
       </div>
-      <div style={{ width: '100%', padding: '12px 16px 16px', background: 'rgba(0,0,0,0.28)', minHeight: 68, display: 'flex', alignItems: 'flex-start', flexShrink: 0 }}>
-        <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
+      <div style={{ width: '100%', padding: 'clamp(6px, 5cqw, 12px) clamp(8px, 6cqw, 16px) clamp(8px, 6cqw, 16px)', background: 'rgba(0,0,0,0.28)', minHeight: 'clamp(36px, 25cqw, 68px)', display: 'flex', alignItems: 'flex-start', flexShrink: 0 }}>
+        <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'clamp(11px, 7.5cqw, var(--mantine-font-size-lg))', lineHeight: 1.25 }}>
           {renderSpecialTitle(title)}
         </Title>
       </div>
