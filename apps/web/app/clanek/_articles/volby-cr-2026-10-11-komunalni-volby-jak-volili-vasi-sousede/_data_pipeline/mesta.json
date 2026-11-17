@@ -2346,6 +2346,141 @@
      "m": 1
     }
    ]
+  },
+  "Kladno": {
+   "mandatu": 33,
+   "okrsku": 57,
+   "ucast_2022": 0.3713152473188671,
+   "ucast_2026": 0.371594531693102,
+   "2026": [
+    {
+     "n": "VOLBA PRO KLADNO",
+     "p": 29.3,
+     "m": 11,
+     "okrsky": 34
+    },
+    {
+     "n": "KLADEŇÁCI",
+     "p": 28.6,
+     "m": 10,
+     "okrsky": 23
+    },
+    {
+     "n": "ANO 2011",
+     "p": 14.0,
+     "m": 5,
+     "okrsky": 0
+    },
+    {
+     "n": "Občanská demokratická strana",
+     "p": 13.3,
+     "m": 5,
+     "okrsky": 0
+    },
+    {
+     "n": "Unie pro sport a zdraví",
+     "p": 5.3,
+     "m": 2,
+     "okrsky": 0
+    },
+    {
+     "n": "Svoboda a přímá demokracie (SPD)",
+     "p": 3.9,
+     "m": 0,
+     "okrsky": 0
+    },
+    {
+     "n": "Za Kladno, které si můžeme dovolit! (sdružení KSČM, SOCDEM a nezávislých kandidátů )",
+     "p": 2.2,
+     "m": 0,
+     "okrsky": 0
+    },
+    {
+     "n": "Motoristé sobě",
+     "p": 1.9,
+     "m": 0,
+     "okrsky": 0
+    },
+    {
+     "n": "Svobodní",
+     "p": 1.4,
+     "m": 0,
+     "okrsky": 0
+    }
+   ],
+   "2022": [
+    {
+     "n": "VOLBA PRO KLADNO",
+     "p": 36.7,
+     "m": 14
+    },
+    {
+     "n": "Občanská demokratická strana",
+     "p": 16.9,
+     "m": 6
+    },
+    {
+     "n": "ANO 2011",
+     "p": 14.3,
+     "m": 5
+    },
+    {
+     "n": "OPRAVÍME KLADNO - PIRÁTI A STAROSTOVÉ",
+     "p": 13.7,
+     "m": 5
+    },
+    {
+     "n": "Svoboda a přímá demokracie (SPD)",
+     "p": 8.4,
+     "m": 3
+    },
+    {
+     "n": "Komunistická strana Čech a Moravy",
+     "p": 3.0,
+     "m": 0
+    },
+    {
+     "n": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+     "p": 2.9,
+     "m": 0
+    },
+    {
+     "n": "SPOLEČNĚ pro Kladno (koalice TOP 09 a KDU-ČSL)",
+     "p": 2.4,
+     "m": 0
+    },
+    {
+     "n": "Koalice pro Kladno (ČSSD a Zelení)",
+     "p": 1.7,
+     "m": 0
+    }
+   ],
+   "ano": {
+    "2022": {
+     "n": "ANO 2011",
+     "p": 14.3,
+     "m": 5
+    },
+    "2026": {
+     "n": "ANO 2011",
+     "p": 14.0,
+     "m": 5
+    }
+   },
+   "ods_2026": [
+    {
+     "n": "Občanská demokratická strana",
+     "p": 13.3,
+     "m": 5
+    }
+   ],
+   "ods_2022": [
+    {
+     "n": "Občanská demokratická strana",
+     "p": 16.9,
+     "m": 6
+    }
+   ]
   }
  },
  "celkem": {
