@@ -3,8 +3,10 @@
 // Dlaždice speciálu „Jací jsme byli, jací jsme“ v karuselu Speciály na titulce (SpecialsHero).
 // Dva návrhy ke schválení (Kateřina 17. 11. 2026), náhled ?dlazdice=roky|tecky:
 //   roky  = statická mapa (dlazdice-v3.png) a pod ní odometr 1989 → 2026,
-//   tecky = letopočty stojí, na mapě přibývají města s demonstracemi po dnech 9. 11. – 26. 12. 1989
+//   tecky = letopočty stojí, na mapě pomalu přibývají města s demonstracemi po dnech v týdnu 17.–25. 11. 1989
+//           (od Národní třídy po Letnou; města s akcí už před 17. 11., např. Teplice, svítí od začátku)
 //           a Praha pulzuje podle počtu účastníků (vrchol Letná 25. 11., až 800 000 lidí); pak cyklus znovu.
+//           Kateřina 17. 11. 2026: zpomalit, točit se jen ten jeden týden.
 // Data: app/specialy/jaci-jsme-byli-jaci-jsme-1989-2026/_data/dlazdice-demonstrace.json (generuje _cover_pipeline/motiv.cjs).
 
 import { useEffect, useRef, useState } from 'react';
@@ -14,10 +16,13 @@ import s from './RokyHlavicka.module.css';
 
 const ZAKLAD = 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-zaklad-v1.png';
 const BOD = '#de1743', ZARE = '#ff8099';
-const DEN_MS = 150; // jeden den listopadu–prosince 1989
-const DRZET_MS = 2600; // po 26. 12. chvíli stojí celá mapa
-const ZHASNOUT_MS = 700;
-const CYKLUS = data.dnu * DEN_MS + DRZET_MS + ZHASNOUT_MS;
+const OD_DNE = 8; // 17. 11. 1989 (den 0 = 9. 11.)
+const DO_DNE = 16; // 25. 11. 1989, Letná
+const DEN_MS = 1100; // jeden den
+const DRZET_MS = 3000; // po Letné chvíli stojí celá mapa
+const ZHASNOUT_MS = 900;
+const BEH_MS = (DO_DNE - OD_DNE + 1) * DEN_MS;
+const CYKLUS = BEH_MS + DRZET_MS + ZHASNOUT_MS;
 const MAX_PRAHA = Math.max(...data.praha.map((p) => p[1]));
 const MESICE = ['listopadu', 'prosince'];
 const datum = (d: number) => (d < 22 ? `${9 + d}. ${MESICE[0]}` : `${d - 21}. ${MESICE[1]}`);
@@ -28,14 +33,14 @@ function prahaSila(t: number) {
   let m = 0;
   for (const [d, v] of data.praha) {
     if (d > t) break;
-    m = Math.max(m, Math.sqrt(v / MAX_PRAHA) * Math.exp(-(t - d) / 1.1));
+    m = Math.max(m, Math.sqrt(v / MAX_PRAHA) * Math.exp(-(t - d) / 0.7));
   }
   return m;
 }
 
 function Tecky() {
   const ref = useRef<HTMLDivElement>(null);
-  const [t, setT] = useState(data.dnu); // server a reduced-motion: celá mapa
+  const [t, setT] = useState(DO_DNE + 0.99); // server a reduced-motion: stav po Letné
   const [zhasnuti, setZhasnuti] = useState(0);
   useEffect(() => {
     if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
@@ -43,9 +48,8 @@ function Tecky() {
     const krok = (cas: number) => {
       if (!start) start = cas;
       const f = (cas - start) % CYKLUS;
-      const den = f / DEN_MS;
-      setT(Math.min(den, data.dnu));
-      const z = f - data.dnu * DEN_MS - DRZET_MS;
+      setT(OD_DNE + Math.min(f, BEH_MS - 1) / DEN_MS);
+      const z = f - BEH_MS - DRZET_MS;
       setZhasnuti(z > 0 ? z / ZHASNOUT_MS : 0);
       if (vidim) raf = requestAnimationFrame(krok);
     };
@@ -70,7 +74,7 @@ function Tecky() {
         <g opacity={svit}>
           {data.body.map((b) => {
             if (b.d > t) return null;
-            const novy = Math.max(0, 1 - (t - b.d) / 2.5); // čerstvě přibylé město krátce zazáří
+            const novy = b.d < OD_DNE ? 0 : Math.max(0, 1 - (t - b.d) / 1.2); // čerstvě přibylé město krátce zazáří
             const r = data.r * (1 + 0.8 * novy);
             return (
               <g key={b.n} opacity={'sk' in b ? data.skOpacity : 1}>
@@ -88,7 +92,7 @@ function Tecky() {
         </g>
         <text x={60} y={72} fill="#ffffff" fillOpacity={0.75 * svit} fontSize={44} fontWeight={600}
           fontFamily="var(--mantine-font-family-headings), 'IBM Plex Sans', Arial, sans-serif">
-          {datum(Math.min(Math.floor(t), data.dnu - 1))} 1989
+          {datum(Math.min(Math.floor(t), DO_DNE))} 1989
         </text>
       </svg>
     </div>
