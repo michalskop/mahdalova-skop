@@ -1,0 +1,293 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "{Vysokoškolaček|#f76800} je skoro čtyřikrát víc než při sčítání 1991, {vysokoškoláků|#06677d} dvakrát",
+    "subtitle": "Obyvatelé starší 15 let s vysokoškolským vzděláním, sčítání lidu 1991 a 2021; v roce 2021 vzdělání neuvedlo 6 % lidí"
+  },
+  "width": "container",
+  "height": 260,
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "rok": "1991",
+        "pohlavi": "ženy",
+        "n": 217687,
+        "l": "218 tis."
+      },
+      {
+        "rok": "1991",
+        "pohlavi": "muži",
+        "n": 365162,
+        "l": "365 tis."
+      },
+      {
+        "rok": "2021",
+        "pohlavi": "ženy",
+        "n": 823196,
+        "l": "823 tis."
+      },
+      {
+        "rok": "2021",
+        "pohlavi": "muži",
+        "n": 729211,
+        "l": "729 tis."
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "nominal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelFontSize": 13,
+            "labelFontWeight": 700,
+            "labelExpr": "'Sčítání ' + datum.value"
+          },
+          "scale": {
+            "paddingInner": 0.3,
+            "paddingOuter": 0.15
+          }
+        },
+        "xOffset": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "sort": [
+            "ženy",
+            "muži"
+          ],
+          "scale": {
+            "paddingInner": 0.12
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              950000
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              200000,
+              400000,
+              600000,
+              800000
+            ],
+            "labelExpr": "datum.value == 0 ? '0' : (datum.value / 1000) + ' tis.'"
+          }
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 12,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "nominal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelFontSize": 13,
+            "labelFontWeight": 700,
+            "labelExpr": "'Sčítání ' + datum.value"
+          },
+          "scale": {
+            "paddingInner": 0.3,
+            "paddingOuter": 0.15
+          }
+        },
+        "xOffset": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "sort": [
+            "ženy",
+            "muži"
+          ],
+          "scale": {
+            "paddingInner": 0.12
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              950000
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              200000,
+              400000,
+              600000,
+              800000
+            ],
+            "labelExpr": "datum.value == 0 ? '0' : (datum.value / 1000) + ' tis.'"
+          }
+        },
+        "color": {
+          "field": "pohlavi",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "ženy",
+              "muži"
+            ],
+            "range": [
+              "#f76800",
+              "#06677d"
+            ]
+          }
+        },
+        "text": {
+          "field": "l"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "rok": "1991",
+            "top": 950000,
+            "t_nadpis": "Sčítání 1991",
+            "t_zeny": "217 687 (5,2 % žen 15+)",
+            "t_muzi": "365 162 (9,5 % mužů 15+)"
+          },
+          {
+            "rok": "2021",
+            "top": 950000,
+            "t_nadpis": "Sčítání 2021",
+            "t_zeny": "823 196 (19,1 % žen 15+)",
+            "t_muzi": "729 211 (18,1 % mužů 15+)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 1
+        },
+        "color": "#101432",
+        "opacity": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "rok",
+          "type": "nominal",
+          "axis": {
+            "title": null,
+            "domain": false,
+            "ticks": false,
+            "labelAngle": 0,
+            "labelFontSize": 13,
+            "labelFontWeight": 700,
+            "labelExpr": "'Sčítání ' + datum.value"
+          },
+          "scale": {
+            "paddingInner": 0.3,
+            "paddingOuter": 0.15
+          }
+        },
+        "y": {
+          "field": "top",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              950000
+            ]
+          },
+          "axis": null
+        },
+        "opacity": {
+          "condition": {
+            "param": "pas",
+            "empty": false,
+            "value": 0.06
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "t_nadpis",
+            "title": "Sčítání"
+          },
+          {
+            "field": "t_zeny",
+            "title": "ženy"
+          },
+          {
+            "field": "t_muzi",
+            "title": "muži"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "pas",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ],
+  "_source": "ČSÚ, [Česko od roku 1989 v číslech, Tab. 01.03](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026) (sčítání lidu)"
+}

@@ -140,3 +140,5 @@ GRAF uzivani: Družstevní byt 1991 18.8 → 2021 3.1
 GRAF Byt 60 m² v hrubých mzdách: 2019 68.2
 GRAF Byt 60 m² v hrubých mzdách: 2022 92.8
 GRAF Byt 60 m² v hrubých mzdách: 2025 89.3
+GRAF okna-vlastnici: 1991 37.7 % (1398191 z 3705681 obydlených bytů) → 38 oken ze 100
+GRAF okna-vlastnici: 2021 60.6 % (2717073 z 4480139 obydlených bytů) → 61 oken ze 100

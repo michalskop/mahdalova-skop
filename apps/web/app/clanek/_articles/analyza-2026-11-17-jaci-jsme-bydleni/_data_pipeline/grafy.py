@@ -111,8 +111,74 @@ g3 = sloupce("Byt 60 m² v hrubých mzdách", V.BYT60, {V.C["cena_rok_od"]: MUTE
 for y in (2019, 2022, 2025):  # zvýrazněné popisky: ověřit, že sedí s textem
     assert round(V.BYT60[y]) in (68, 93, 89)
 
+# ---------- Graf 4: okna, kde bydlí vlastník (graf z coveru, 1 okno = 1 % obydlených bytů) ----------
+# Stejné číslo jako motiv coveru (_cover_pipeline/motiv.cjs): byt ve vlastním domě + byt v osobním vlastnictví,
+# podíl ze všech obydlených bytů (2021 včetně 7,5 % nezjištěných). Pattern mřížky: pilot speciálu, 09_sto_lidi.py
+# (jeden tooltip na mřížku, _siroky pro široké karty).
+vl_abs = {1991: V.U91["ve vlastním domě"] + V.U91["v osobním vlastnictví"],
+          2021: V.uzi["ve vlastním domě"] + V.uzi["v osobním vlastnictví"]}
+vl_pct = {1991: V.C["vlastnicke_1991"], 2021: V.C["vlastnicke_2021"]}
+vl_celk = {1991: c91, 2021: c21}
+OKNA = {r: int(vl_pct[r] + 0.5) for r in vl_pct}
+for r in OKNA:
+    log.append(f"GRAF okna-vlastnici: {r} {vl_pct[r]} % ({vl_abs[r]} z {vl_celk[r]} obydlených bytů) → {OKNA[r]} oken ze 100")
+BARVA_ROK = {1991: BLUE, 2021: CRIMSON}
+
+
+def okna_vrstvy(sl_mrizky, rady, cell):
+    sloupcu = 2 * sl_mrizky + 1
+    rok_h = 22
+    body, texty, plochy = [], [], []
+    for strana, rok in enumerate((1991, 2021)):
+        sl0 = strana * (sl_mrizky + 1)
+        texty.append(dict(x=sl0, y=10, barva=BARVA_ROK[rok], text=f"{rok}: {OKNA[rok]} ze{NB}100"))
+        for i in range(100):
+            body.append(dict(sl=sl0 + i % sl_mrizky, y=rok_h + (i // sl_mrizky) * cell + cell / 2,
+                             barva=BARVA_ROK[rok] if i < OKNA[rok] else "#d4d4c8"))
+        plochy.append(dict(sl0=sl0, sl1=sl0 + sl_mrizky, y1=rok_h, y2=rok_h + rady * cell, barva=BARVA_ROK[rok],
+                           t_nadpis=f"Bydlí vlastník, {rok}", t_ze100=f"{OKNA[rok]} ze{NB}100 obydlených bytů",
+                           t_presne=f"{cz(vl_pct[rok])}{NB}% ({cz(vl_abs[rok], 0)} bytů)"))
+    bunka = f"min(width / {sloupcu}, {cell})"
+    vrstvy = [
+        {"data": {"values": body},
+         "transform": [{"calculate": f"datum.sl * {bunka} + {bunka} / 2", "as": "px"}],
+         "mark": {"type": "square", "filled": True, "opacity": 1, "strokeWidth": 0, "size": {"expr": f"pow({bunka} * 0.78, 2)"}},
+         "encoding": {
+             "x": {"field": "px", "type": "quantitative", "scale": None, "axis": None},
+             "y": {"field": "y", "type": "quantitative", "scale": None, "axis": None},
+             "color": {"field": "barva", "type": "nominal", "scale": None, "legend": None}}},
+        {"data": {"values": texty},
+         "transform": [{"calculate": f"datum.x * {bunka}", "as": "px"}],
+         "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 13, "fontWeight": 700},
+         "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None},
+                      "y": {"field": "y", "type": "quantitative", "scale": None}, "text": {"field": "text"},
+                      "color": {"field": "barva", "type": "nominal", "scale": None, "legend": None}}},
+        {"data": {"values": plochy},
+         "transform": [{"calculate": f"datum.sl0 * {bunka}", "as": "x1"}, {"calculate": f"datum.sl1 * {bunka}", "as": "x2"}],
+         "mark": {"type": "rect", "opacity": 0},
+         "encoding": {"x": {"field": "x1", "type": "quantitative", "scale": None}, "x2": {"field": "x2"},
+                      "y": {"field": "y1", "type": "quantitative", "scale": None}, "y2": {"field": "y2"},
+                      "color": {"field": "barva", "type": "nominal", "scale": None, "legend": None},
+                      "tooltip": [{"field": "t_nadpis", "title": "Kdo"}, {"field": "t_ze100", "title": "Počet"},
+                                  {"field": "t_presne", "title": "Přesně"}]}},
+    ]
+    return vrstvy, rok_h + rady * cell
+
+
+okna_uzke, okna_vyska_uzke = okna_vrstvy(10, 10, 16)
+okna_siroke, okna_vyska_siroke = okna_vrstvy(20, 5, 19)
+g4 = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": {"text": f"Vlastník bydlí v{NB}{{{OKNA[2021]}{NB}%|{CRIMSON}}} obydlených bytů, v roce {{1991|{BLUE}}} ve {OKNA[1991]}{NB}%",
+                "subtitle": f"Ze 100 obydlených bytů: barevně byty ve vlastním domě a byty v osobním vlastnictví, šedě ostatní; "
+                            f"sčítání lidu 1991 a 2021 (v{NB}roce 2021 u{NB}7,5{NB}% bytů důvod užívání nezjištěn, počítá se mezi ostatní)"},
+      "width": "container", "height": okna_vyska_uzke,
+      "config": {"view": {"stroke": None}},
+      "layer": okna_uzke,
+      "_siroky": {"od": 640, "spec": {"height": okna_vyska_siroke, "layer": okna_siroke}},
+      "_source": g2["_source"]}
+
 DATA.mkdir(exist_ok=True)
-for name, s in [("dokoncene-byty", g1), ("pravni-duvod-uzivani", g2), ("byt-v-mzdach", g3)]:
+for name, s in [("dokoncene-byty", g1), ("pravni-duvod-uzivani", g2), ("byt-v-mzdach", g3), ("okna-vlastnici", g4)]:
     (DATA / f"{name}.json").write_text(json.dumps(s, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (HERE / "vystup.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
 print("\n".join(l for l in log if l.startswith("GRAF")))

@@ -120,3 +120,8 @@ GRAF struktura-vzdelani: Vysokoškolské 1991 7.2 → 2021 18.7
 GRAF studenti: 1989 celkem 112980.0, Češi 110021.0, cizinci 2959.0
 GRAF studenti: 2010 celkem 395986.0, Češi 358489.0, cizinci 37497.0
 GRAF studenti: 2025 celkem 330547.0, Češi 271585.0, cizinci 58962.0
+GRAF vs-pocty: ženy 1991 217687 (5.2 %)
+GRAF vs-pocty: muži 1991 365162 (9.5 %)
+GRAF vs-pocty: ženy 2021 823196 (19.1 %)
+GRAF vs-pocty: muži 2021 729211 (18.1 %)
+GRAF vs-pocty: ženy ×3.78, muži ×2.0
