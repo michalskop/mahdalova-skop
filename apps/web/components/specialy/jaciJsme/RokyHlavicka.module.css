@@ -1,0 +1,102 @@
+/* Letopočty v hlavičce speciálu 1989 × 2026 – tři návrhy (RokyHlavicka.tsx).
+   Barvy: 1989 #899aeb (jako dosavadní hero), dnes bílá, karmínová brand.6 #de1743, ink brandNavy.9 #101432. */
+
+.obal {
+  font-family: var(--mantine-font-family-headings), 'IBM Plex Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  justify-content: flex-end;
+  color: #ffffff;
+}
+
+/* a) listovací kalendář */
+.kalendar { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: clamp(48px, 7.5vw, 92px); line-height: 1; }
+.kalRadek { display: flex; gap: 0.07em; perspective: 400px; }
+.destTehdy, .destDnes {
+  position: relative;
+  display: inline-block;
+  width: 0.78em;
+  padding: 0.08em 0 0.06em;
+  text-align: center;
+  border-radius: 0.08em;
+  overflow: hidden;
+}
+.destTehdy { color: #899aeb; background: rgba(137, 154, 235, 0.08); }
+.destDnes { color: #ffffff; background: rgba(255, 255, 255, 0.1); box-shadow: inset 0 -0.06em 0 #de1743; }
+/* pant uprostřed destičky */
+.destTehdy::after, .destDnes::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: #101432;
+  opacity: 0.85;
+}
+.klop { display: inline-block; transform-origin: 50% 50%; animation: klop 160ms ease-out; backface-visibility: hidden; }
+@keyframes klop {
+  from { transform: rotateX(-90deg); opacity: 0.3; }
+  to { transform: rotateX(0); opacity: 1; }
+}
+
+/* b) časová osa */
+.osa { width: min(100%, 420px); }
+.osaRoky { display: flex; justify-content: space-between; align-items: baseline; font-size: clamp(44px, 6.5vw, 84px); line-height: 1; }
+.osaTehdy { color: #899aeb; }
+.osaDnes { color: #ffffff; }
+.pravitko { position: relative; display: flex; justify-content: space-between; align-items: flex-end; height: 34px; margin-top: 18px; }
+.linka {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #de1743;
+  transform-origin: 0 50%;
+}
+.pravitko::before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255, 255, 255, 0.15); }
+.ryska { position: relative; width: 2px; height: 12px; background: rgba(255, 255, 255, 0.22); transition: background 120ms; }
+.ryskaDlouha { height: 24px; }
+.ryskaZa { background: #ff8099; }
+.bod {
+  position: absolute;
+  bottom: -5.5px;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: #de1743;
+  box-shadow: 0 0 0 4px rgba(222, 23, 67, 0.25), 0 0 16px rgba(222, 23, 67, 0.7);
+}
+.osaPopisky { position: relative; height: 18px; margin-top: 8px; font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.6); }
+.osaPopisky span { position: absolute; transform: translateX(-50%); }
+.osaPopisky span:first-child { transform: none; }
+.osaPopisky span:last-child { transform: translateX(-100%); }
+
+/* c) odometr */
+.odometr { display: flex; flex-direction: column; align-items: flex-end; font-size: clamp(56px, 9vw, 112px); line-height: 1; }
+.odoTehdy { color: #899aeb; }
+.odoDnes {
+  display: flex;
+  margin-top: 8px;
+  color: #ffffff;
+  border-bottom: 10px solid #de1743;
+}
+.okno {
+  display: flex;
+  /* válečky mizí nahoře a dole do tmy, jako by se točily pod sklem */
+  mask-image: linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%);
+  padding: 0.12em 0;
+}
+.valecek { display: inline-block; height: 1em; overflow: hidden; }
+.pas { display: flex; flex-direction: column; }
+.pas span { display: block; height: 1em; line-height: 1; }
+
+@media (max-width: 760px) {
+  .obal { justify-content: flex-start; }
+  .kalendar, .odometr { flex-direction: row; align-items: center; gap: 16px; }
+  .odoDnes { margin-top: 0; }
+}

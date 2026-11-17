@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import SupportBanner from '@/components/common/SupportBanner';
 import SubscribeNewsletter from '@/components/common/SubscribeNewsletter';
 import { JACI_JSME, JACI_JSME_OG, JACI_JSME_PATH, hotoveKapitoly } from '@/lib/jaciJsme';
-import RokyPocitadlo from '@/components/specialy/jaciJsme/RokyPocitadlo';
+import RokyHlavicka from '@/components/specialy/jaciJsme/RokyHlavicka';
 import CislaKarty, { type CisloKarta } from '@/components/specialy/jaciJsme/CislaKarty';
 import kartyData from './_data/karty.json';
 import s from './jaciJsme.module.css';
@@ -16,6 +16,7 @@ import s from './jaciJsme.module.css';
 // „37 let v 37 číslech“: karty generuje _data/karty.py z výstupů skriptů kapitol.
 // Na rozcestníku jen karty kapitol, které už existují (odkaz nesmí vést na 404).
 const KARTY = kartyData.karty as unknown as CisloKarta[];
+const ZOBRAZIT_CISLA = false;
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mahdalova-skop.cz';
 const TITLE = `${JACI_JSME.nazev} – ${JACI_JSME.podtitul}`;
@@ -60,10 +61,7 @@ export default function JaciJsmePage() {
               za výplatu, kde a jak bydlíme, čím jezdíme, co dýcháme a jak svobodně se cítíme.
             </p>
           </div>
-          <div className={s.years} aria-label="1989 a 2026">
-            <span className={s.y1989}>1989</span>
-            <RokyPocitadlo className={s.y2026} />
-          </div>
+          <RokyHlavicka />
         </div>
         <div className={s.stripe} aria-hidden />
       </header>
@@ -98,14 +96,18 @@ export default function JaciJsmePage() {
         </div>
       </section>
 
+      {/* Karty „37 let v 37 číslech“ zatím skryté (Kateřina 17. 11. 2026: při publikaci jen karty článků).
+          Vrátit: ZOBRAZIT_CISLA = true. */}
+      {ZOBRAZIT_CISLA && (
       <section className={s.section} id="37-cisel" aria-labelledby="37-cisel-nadpis">
-        <h2 id="37-cisel-nadpis" className={s.sectionTitle}>37 let v 37 číslech</h2>
-        <p className={s.sectionLead}>
-          Co se v Česku změnilo od sametové revoluce, v číslech z kapitol speciálu. Každá karta má vlastní
-          odkaz, takže ji můžete poslat dál samostatně.
-        </p>
-        <CislaKarty karty={KARTY.filter((k) => hotove.has(k.kapitola))} />
-      </section>
+          <h2 id="37-cisel-nadpis" className={s.sectionTitle}>37 let v 37 číslech</h2>
+          <p className={s.sectionLead}>
+            Co se v Česku změnilo od sametové revoluce, v číslech z kapitol speciálu. Každá karta má vlastní
+            odkaz, takže ji můžete poslat dál samostatně.
+          </p>
+          <CislaKarty karty={KARTY.filter((k) => hotove.has(k.kapitola))} />
+        </section>
+      )}
 
       <SupportBanner />
       <SubscribeNewsletter actionUrl="https://mahdalovaskop.ecomailapp.cz/public/subscribe/1/43c2cd496486bcc27217c3e790fb4088" />
