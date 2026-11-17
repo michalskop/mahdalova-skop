@@ -137,6 +137,7 @@ GRAF uzivani: Byt ve vlastním domě 1991 36.9 → 2021 35.6
 GRAF uzivani: Byt v osobním vlastnictví 1991 0.8 → 2021 25.0
 GRAF uzivani: Nájemní byt 1991 39.5 → 2021 19.9
 GRAF uzivani: Družstevní byt 1991 18.8 → 2021 3.1
+GRAF uzivani-skladane: vlastník bydlí 1991 37.7 %, 2021 60.6 %
 GRAF Byt 60 m² v hrubých mzdách: 2019 68.2
 GRAF Byt 60 m² v hrubých mzdách: 2022 92.8
 GRAF Byt 60 m² v hrubých mzdách: 2025 89.3

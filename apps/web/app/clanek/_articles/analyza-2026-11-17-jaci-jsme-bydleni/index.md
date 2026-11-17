@@ -15,7 +15,7 @@ filter: ["analýza"]
 tags: ["Jací jsme byli, jací jsme", "1989", "bydlení", "byty", "ceny nemovitostí", "sametová revoluce", "ČSÚ"]
 ---
 
-Při sčítání lidu v březnu 1991 bylo v Česku 31 164 bytů v osobním vlastnictví, 0,8 % všech obydlených bytů. Při sčítání 2021 jich bylo 1 121 375, čtvrtina, [podle otevřených dat sčítání 2021 ČSÚ](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data). Spolu s byty ve vlastních domech bydleli vlastníci v 61 % obydlených bytů, v roce 1991 ve 38 %. Tržní ceny bytů z doby před revolucí neexistují, protože se byty z velké části neprodávaly. Porovnat se dá, kdo v bytech bydlí, kolik stojí postavit dům a jak velké a vybavené byty jsou.
+Při sčítání lidu v březnu 1991 bylo v Česku 31 164 bytů v osobním vlastnictví, 0,8 % všech obydlených bytů. Při sčítání 2021 jich bylo 1 121 375, čtvrtina, [podle otevřených dat sčítání 2021 ČSÚ](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data). Spolu s byty ve vlastních domech bydleli vlastníci v 61 % obydlených bytů, v roce 1991 ve 38 %. Byt ve vlastním domě znamená, že domácnost vlastní dům, ve kterém bydlí, většinou rodinný. Byt v osobním vlastnictví je vlastní jednotka v činžáku nebo paneláku. Počítají se obydlené byty, ne lidé. Tržní ceny bytů z doby před revolucí neexistují, protože se byty z velké části neprodávaly. Porovnat se dá, kdo v bytech bydlí, kolik stojí postavit dům a jak velké a vybavené byty jsou.
 
 ## Byty se přidělovaly z pořadníků
 
@@ -24,8 +24,6 @@ Do konce roku 1991 platil [zákon o hospodaření s byty z roku 1964](https://ww
 <SupportBanner />
 
 Sčítání 1991 zachytilo výsledek: nájemní byty tvořily 39,5 % obydlených bytů, byty ve vlastním domě 36,9 % a družstevní 18,8 %. Pak bytový fond podle [rozboru ČSÚ ke sčítání 2001](https://csu.gov.cz/docs/107508/8a0750a4-e62a-62a4-1128-88168cf3c560/text_cast_iii.pdf) přeměnily restituce, převody a prodeje bytů do soukromého vlastnictví. Nájemních bytů ubylo do roku 2021 z 1 465 231 na 890 802 a družstevních ze 697 829 na 140 821.
-
-<VegaChart dataFile="data/okna-vlastnici.json" />
 
 <VegaChart dataFile="data/pravni-duvod-uzivani.json" />
 

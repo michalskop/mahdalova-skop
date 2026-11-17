@@ -275,6 +275,18 @@ UZIV = [  # pro graf: popisek, 1991, 2021
     ("Družstevní byt", U91["družstevní (stavební bytová družstva)"], uzi["družstevní"]),
 ]
 UZIV_CELK = (CELK91, CELK21)
+# všechny důvody užívání (dohromady 100 % obydlených bytů) pro skládaný pruh 1991 × 2021 (Kateřina 17. 11. 2026:
+# činkový graf nedával dohromady celek, nebylo jasné, co je „byt ve vlastním domě“ a co „v osobním vlastnictví“)
+UZIV_VSE = [  # klíč, popisek, 1991, 2021
+    ("dum", "Vlastní dům", U91["ve vlastním domě"], uzi["ve vlastním domě"]),
+    ("byt", "Vlastní byt", U91["v osobním vlastnictví"], uzi["v osobním vlastnictví"]),
+    ("najem", "Nájem", U91["nájemní (vč. lidových bytových družstev)"], uzi["nájemní/pronajatý"]),
+    ("druzstvo", "Družstvo", U91["družstevní (stavební bytová družstva)"], uzi["družstevní"]),
+    ("jinak", "Jinak", U91["jiné bezplatné užívání"] + U91["domovnický, služební, naturální"] + U91["jiný důvod"],
+     uzi["jiné bezplatné užívání"] + uzi["jiný důvod"]),
+    ("nezj", "Nezjištěno", U91["nezjištěno"], uzi["nezjištěno"]),
+]
+assert sum(r[2] for r in UZIV_VSE) == CELK91 and sum(r[3] for r in UZIV_VSE) == CELK21, "důvody užívání nedávají 100 %"
 
 (HERE / "cisla.json").write_text(json.dumps(C, ensure_ascii=False, indent=1), encoding="utf-8")
 if __name__ == "__main__":

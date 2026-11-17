@@ -87,20 +87,45 @@ def lab2(filt, pole, align, dx, barva, tucne):
             "encoding": {"y": y2, "x": {**x2, "field": pole}, "text": {"field": "l_" + pole}}}
 
 
-g2 = spec(f"Byty v osobním vlastnictví tvořily v roce {{1991|{BLUE}}} necelé procento, v roce {{2021|{CRIMSON}}} čtvrtinu",
-          f"Obydlené byty podle právního důvodu užívání v % všech obydlených bytů, sčítání lidu; v roce 2021 u 7,5{NB}% bytů důvod nezjištěn",
-          vals2, [
-              {"mark": {"type": "text", "align": "left", "baseline": "bottom", "dy": -11, "fontSize": 12, "color": "#333333"},
-               "encoding": {"y": y2, "x": {"datum": 0, "type": "quantitative", "scale": {"domain": osa}}, "text": {"field": "ukazatel"}}},
-              {"mark": {"type": "rule", "strokeWidth": 3, "color": GREY}, "encoding": {"y": y2, "x": {**x2, "field": "tehdy"}, "x2": {"field": "dnes"}, "tooltip": tt2}},
-              sipka("!datum.vlevo_dnes", "triangle-right", -14), sipka("datum.vlevo_dnes", "triangle-left", 14),
-              {"mark": {"type": "circle", "size": 150, "opacity": 1, "color": BLUE}, "encoding": {"y": y2, "x": {**x2, "field": "tehdy"}, "tooltip": tt2}},
-              {"mark": {"type": "circle", "size": 150, "opacity": 1, "color": CRIMSON}, "encoding": {"y": y2, "x": {**x2, "field": "dnes"}, "tooltip": tt2}},
-              lab2("!datum.vlevo_dnes", "tehdy", "right", -10, BLUE, False), lab2("!datum.vlevo_dnes", "dnes", "left", 10, CRIMSON, True),
-              lab2("datum.vlevo_dnes", "tehdy", "left", 10, BLUE, False), lab2("datum.vlevo_dnes", "dnes", "right", -10, CRIMSON, True),
-          ], step=52,
+# Skládaný pruh: každý rok = 100 % obydlených bytů. Vlastník bydlí = vlastní dům + vlastní byt.
+BARVY_UZIV = {"dum": "#a81134", "byt": "#ff8099", "najem": BLUE, "druzstvo": "#8f9dc9", "jinak": GREY, "nezj": "#e9ecf4"}
+vals_s = []
+for klic, lab, a91, a21 in V.UZIV_VSE:
+    for rok, n, c in ((1991, a91, V.UZIV_CELK[0]), (2021, a21, V.UZIV_CELK[1])):
+        pct_ = 100 * n / c
+        vals_s.append(dict(rok=str(rok), klic=klic, kategorie=lab, podil=round(pct_, 2),
+                           l=f"{cz(pct_, 0)}{NB}%" if pct_ >= 6 else "", t_podil=f"{cz(pct_)}{NB}%", t_bytu=f"{cz(n, 0)}",
+                           poradi=[k for k, *_ in V.UZIV_VSE].index(klic)))
+vlast = {r: sum(v["podil"] for v in vals_s if v["rok"] == r and v["klic"] in ("dum", "byt")) for r in ("1991", "2021")}
+log.append(f"GRAF uzivani-skladane: vlastník bydlí 1991 {vlast['1991']:.1f} %, 2021 {vlast['2021']:.1f} %")
+assert round(vlast["1991"]) == 38 and round(vlast["2021"]) == 61  # sedí s textem a coverem
+dom = [k for k, *_ in V.UZIV_VSE]
+barvy = [BARVY_UZIV[k] for k in dom]
+popisky = [lab for _, lab, *_ in V.UZIV_VSE]
+yS = {"field": "rok", "type": "nominal", "sort": ["1991", "2021"], "title": None,
+      "axis": {"domain": False, "ticks": False, "labelFontSize": 15, "labelFontWeight": 700, "labelPadding": 8}}
+xS = {"field": "podil", "type": "quantitative", "stack": "zero", "scale": {"domain": [0, 100]}, "axis": None}
+g2 = spec(f"Vlastník bydlí v 61{NB}% obydlených bytů, v roce {{1991|{BLUE}}} ve 38{NB}%",
+          f"Obydlené byty (kde někdo trvale bydlí, včetně rodinných domů) podle sčítání lidu, v %. Vlastní dům = domácnost vlastní "
+          f"dům, ve kterém bydlí, většinou rodinný. Vlastní byt = jednotka v činžáku nebo paneláku zapsaná v katastru. "
+          f"Jinak = zdarma u příbuzných, služební byt aj.",
+          vals_s, [
+              {"mark": {"type": "bar", "height": {"band": 0.72}, "stroke": "#f8f6f0", "strokeWidth": 1.5},
+               "encoding": {"y": yS, "x": xS, "order": {"field": "poradi"},
+                            "color": {"field": "kategorie", "type": "nominal", "scale": {"domain": popisky, "range": barvy},
+                                      "legend": None},
+                            "tooltip": [{"field": "kategorie", "title": "Kategorie"}, {"field": "rok", "title": "Sčítání"},
+                                        {"field": "t_podil", "title": "Podíl"}, {"field": "t_bytu", "title": "Bytů"}]}},
+              {"mark": {"type": "text", "dx": -5, "align": "right", "fontSize": 12, "fontWeight": 700},
+               "encoding": {"y": yS, "x": xS, "order": {"field": "poradi"},
+                            "color": {"condition": {"test": "indexof(['byt', 'druzstvo', 'jinak', 'nezj'], datum.klic) >= 0", "value": INK}, "value": "#ffffff"},
+                            "detail": {"field": "kategorie"}, "text": {"field": "l"}}},
+          ], step=64,
           source="ČSÚ, [sčítání 1991, Tab. 3.2.1](https://csu.gov.cz/docs/107508/b6572b80-7764-9edc-4de2-fb29747532a8/4131_3_2_1.pdf) "
-                 "a [sčítání 2021, otevřená data](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data); výpočet DataTimes")
+                 "a [sčítání 2021, otevřená data](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data); "
+                 "definice: [metodické vysvětlivky Sčítání 2021](https://csu.gov.cz/metodicke-vysvetlivky-vysledky-scitani-2021); výpočet DataTimes")
+g2["_toggle_legend"] = True  # sdílená legenda webu (ChartLegend) místo legendy Vega; čte top-level encoding.color
+g2["encoding"] = {"color": {"field": "kategorie", "type": "nominal", "scale": {"domain": popisky, "range": barvy}, "legend": None}}
 
 # ---------- Graf 3: byt 60 m² v hrubých mzdách ----------
 g3 = sloupce("Byt 60 m² v hrubých mzdách", V.BYT60, {V.C["cena_rok_od"]: MUTED, 2022: MUTED, 2025: CRIMSON}, [0, 25, 50, 75, 100], [0, 110],
