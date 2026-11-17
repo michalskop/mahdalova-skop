@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Ve Sněmovně je {třetina žen|#de1743}, nejvíc od {roku 1989|#6267a3}",
+    "text": "Ve Sněmovně je {třetina žen|#de1743}, nejvíc od roku {1989|#6267a3}",
     "subtitle": "Podíl žen mezi zvolenými poslanci v %; ČNR = Česká národní rada, PS = Poslanecká sněmovna. *Nesvobodná ČNR zvolená v roce 1986 na jednotné kandidátce Národní fronty, stav k 17. 11. 1989"
   },
   "width": "container",

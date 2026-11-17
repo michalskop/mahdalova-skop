@@ -264,6 +264,7 @@ function stripMeta(spec: Record<string, unknown>): Record<string, unknown> {
     _reveal_sequence: _rs,
     _click_detail: _cd,
     _facet_fill: _ff,
+    _siroky: _sir,
     _tooltip_colors: _tc,
     ...rest
   } = spec as Record<string, unknown>;
@@ -543,7 +544,9 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   // `_facet_fill`: šířka karty zaokrouhlená na 10 px; při změně (otočení mobilu, skrytý panel,
   // změna okna) se mřížka překreslí s novým počtem sloupců a šířkou dlaždic.
   const [fillWidth, setFillWidth] = useState(0);
-  const hasFacetFill = Boolean(spec?._facet_fill);
+  // `_siroky: {od: px, spec: {...}}`: na kartě široké aspoň `od` px se přes spec přepíšou klíče ze `spec`
+  // (jiné rozložení, např. 20 panáčků v řadě místo 10; Kateřina 17. 11. 2026). Hlídá stejný ResizeObserver.
+  const hasFacetFill = Boolean(spec?._facet_fill || spec?._siroky);
   useEffect(() => {
     const el = containerRef.current;
     if (!hasFacetFill || !el || typeof ResizeObserver === 'undefined') return;
@@ -689,8 +692,11 @@ export default function VegaChartImpl({ chartId, spec: propSpec, mini = false, b
   useEffect(() => {
     if (!spec || !containerRef.current) return;
 
-    const hasPointerTooltip = Boolean(pointerTooltipAt(spec, 0));
-    const stripped = hasPointerTooltip ? stripVegaTooltips(stripMeta(spec)) : stripMeta(spec);
+    const sir = spec._siroky as { od?: number; spec?: Record<string, unknown> } | undefined;
+    const sirka = containerRef.current.getBoundingClientRect().width;
+    const zdroj = sir?.spec && sirka >= (sir.od ?? 600) ? { ...spec, ...sir.spec } : spec;
+    const hasPointerTooltip = Boolean(pointerTooltipAt(zdroj, 0));
+    const stripped = hasPointerTooltip ? stripVegaTooltips(stripMeta(zdroj)) : stripMeta(zdroj);
     const hideMode = spec._legend_hide_mode === 'filter' ? 'filter' : 'opacity';
     const base = toggleLegend ? applyHiddenSeriesOpacity(stripped, toggleLegend.field, hiddenSeries, hideMode) : stripped;
     let final: Record<string, unknown>;

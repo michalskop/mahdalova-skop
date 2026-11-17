@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "K volbám v {roce 1990|#6267a3} přišlo 97 % voličů, {loni|#de1743} 69 %",
+    "text": "K volbám v roce {1990|#6267a3} přišlo 97 % voličů, {loni|#de1743} 69 %",
     "subtitle": "Volební účast ve volbách do České národní rady (1990, 1992) a do Poslanecké sněmovny (od 1996), v %"
   },
   "width": "container",

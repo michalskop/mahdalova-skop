@@ -231,7 +231,7 @@ for druh, styl in [("nadpis", {"fontSize": 12.5, "fontWeight": 700, "color": INK
 r_alk, r_cig = max(C["pivo"]), max(C["cigarety"])
 pivo_zm = 100 * (1 - C["pivo"][r_alk] / C["pivo"][1989])
 vino_zm = 100 * (C["vino"][r_alk] / C["vino"][1989] - 1)
-g3 = base(f"Piva vypijeme o sedminu méně, vína skoro o polovinu víc než v {{roce 1989|{BLUE}}}",
+g3 = base(f"Piva vypijeme o sedminu méně, vína skoro o polovinu víc než v roce {{1989|{BLUE}}}",
           f"Spotřeba za rok na obyvatele včetně dětí; alkohol {r_alk}, cigarety {r_cig} (novější údaj ČSÚ nevydal); šedá = rozdíl",
           f"ČSÚ, [Česko od roku 1989 v číslech]({PUB}); ikony Tabler",
           lay3, height=int(ymax * 26) + 20)

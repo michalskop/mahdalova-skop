@@ -155,7 +155,7 @@ v4 = [{"rok": str(y), "v": v, "l": f"{cz(v)} %",
        "skup": "1991" if y == 1991 else ("2021" if y == 2021 else "jiný")} for y, v in sorted(DJ.items())]
 xb = {"field": "rok", "type": "ordinal", "axis": {"title": None, "domain": False, "ticks": False, "labelAngle": 0, "labelFontSize": 11}}
 yb = {"field": "v", "type": "quantitative", "scale": {"domain": [0, 48]}, "axis": None}
-g4 = base(f"Skoro {{dvě z pěti|{CRIMSON}}} domácností tvoří jeden člověk, v {{roce 1991|{BLUE}}} to byla čtvrtina",
+g4 = base(f"Skoro {{dvě z pěti|{CRIMSON}}} domácností tvoří jeden člověk, v roce {{1991|{BLUE}}} to byla čtvrtina",
           "Podíl domácností jednotlivců mezi hospodařícími domácnostmi v %, sčítání lidu 1961–2021",
           f"ČSÚ, sčítání lidu ([Tab. 11.03]({PUB}))",
           [{"mark": {"type": "bar", "cornerRadiusEnd": 3, "width": {"band": 0.62}},

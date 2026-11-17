@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Žijeme déle a všechno {dnes|#de1743} děláme později než v {roce 1989|#6267a3}",
+    "text": "Žijeme déle a všechno {dnes|#de1743} děláme později než v roce {1989|#6267a3}",
     "subtitle": "Průměrný věk v letech; naděje dožití při narození"
   },
   "width": "container",

@@ -246,7 +246,7 @@ y1 = {"field": "radek", "type": "nominal", "sort": None, "axis": None, "scale": 
 xq = lambda: {"field": "x", "type": "quantitative", "scale": {"domain": [0, 1]},
               "axis": {**AX_NONE, "orient": "top", "grid": False, "values": list(XP.values()), "labelFontSize": 13,
                        "labelFontWeight": 700, "labelColor": INK, "labelExpr": "datum.value < 0.9 ? '1989' : 'dnes'"}}
-g1 = spec(f"Volných dnů je {{dnes|{CRIMSON}}} třináct, v {{roce 1989|{BLUE}}} jich bylo sedm",
+g1 = spec(f"Volných dnů je {{dnes|{CRIMSON}}} třináct, v roce {{1989|{BLUE}}} jich bylo sedm",
           "Plné kolečko = den pracovního klidu (státní nebo jiný svátek), prázdné = den, který stát připomínal, ale pracovalo se",
           v1, [
               {"transform": [{"filter": "datum.sloupec == '1989' && datum.typ != 'hlavicka'"}],
@@ -273,7 +273,7 @@ x2 = {"field": "rok", "type": "ordinal", "axis": {**AX_NONE, "labelAngle": 0, "l
                                                    "labelExpr": "datum.value == 1990 || datum.value == 2002 || datum.value == 2025 || datum.value == 2010 ? datum.value : \"'\" + slice(datum.value + '', 2)"}}
 y2 = {"field": "u", "type": "quantitative", "scale": {"domain": [0, 110]}, "axis": None}
 c2 = {"field": "c", "type": "nominal", "legend": None, "scale": {"domain": ["t", "m", "d"], "range": [BLUE, GREY, CRIMSON]}}
-g2 = spec(f"K volbám v {{roce 1990|{BLUE}}} přišlo 97{NBSP}% voličů, {{loni|{CRIMSON}}} 69{NBSP}%",
+g2 = spec(f"K volbám v roce {{1990|{BLUE}}} přišlo 97{NBSP}% voličů, {{loni|{CRIMSON}}} 69{NBSP}%",
           "Volební účast ve volbách do České národní rady (1990, 1992) a do Poslanecké sněmovny (od 1996), v %",
           v2, [
               {"mark": {"type": "bar", "cornerRadiusEnd": 2, "width": {"band": 0.7}},
@@ -302,7 +302,7 @@ dom4 = [0, 100]
 x4 = {"type": "quantitative", "scale": {"domain": dom4},
       "axis": {**AX_NONE, "grid": True, "gridColor": MUTED, "values": [0, 25, 50, 75, 100], "labelExpr": "datum.value + ' %'"}}
 tt4 = [{"field": "oblast", "title": "Oblast"}, {"field": "t_t", "title": str(R_A)}, {"field": "t_d", "title": str(R_B)}]
-g4 = spec(f"Svobodu projevu hodnotí lidé {{v roce {R_B}|{CRIMSON}}} lépe než před rokem 1989 méně často než {{v roce {R_A}|{BLUE}}}",
+g4 = spec(f"Svobodu projevu hodnotí lidé v roce {{{R_B}|{CRIMSON}}} lépe než před rokem 1989 méně často než v roce {{{R_A}|{BLUE}}}",
           f"Podíl lidí, podle nichž je dnes situace lidí jako oni v dané oblasti „mnohem či trochu lepší“ než před rokem 1989, v %",
           v4, [
               {"mark": {"type": "text", "align": "left", "baseline": "bottom", "dy": -9, "fontSize": 12, "color": "#333333"},

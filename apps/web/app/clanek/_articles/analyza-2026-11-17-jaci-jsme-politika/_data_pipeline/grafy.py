@@ -59,7 +59,7 @@ x1 = {"field": "pct", "type": "quantitative", "scale": {"domain": [0, 62]},
       "axis": {"title": None, "grid": True, "gridColor": MUTED, "domain": False, "ticks": False,
                "values": [0, 10, 20, 30], "labelExpr": "datum.value + ' %'"}}
 tt1 = [{"field": "volby", "title": "Volby"}, {"field": "t", "title": "Ženy"}, {"field": "pozn", "title": "Kdo"}]
-g1 = spec(f"Ve Sněmovně je {{třetina žen|{CRIMSON}}}, nejvíc od {{roku 1989|{BLUE}}}",
+g1 = spec(f"Ve Sněmovně je {{třetina žen|{CRIMSON}}}, nejvíc od roku {{1989|{BLUE}}}",
           "Podíl žen mezi zvolenými poslanci v %; ČNR = Česká národní rada, PS = Poslanecká sněmovna. "
           "*Nesvobodná ČNR zvolená v roce 1986 na jednotné kandidátce Národní fronty, stav k 17. 11. 1989",
           v1, [

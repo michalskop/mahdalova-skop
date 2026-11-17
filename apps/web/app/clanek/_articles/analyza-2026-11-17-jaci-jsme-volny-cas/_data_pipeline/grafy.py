@@ -482,7 +482,7 @@ x3 = {"type": "quantitative", "scale": {"domain": dom3},
 tt3 = [{"field": "zeme", "title": "Země"}, {"field": "t_t", "title": str(Y0)}, {"field": "t_d", "title": str(Y1)}]
 GREY = "#bcbcb0"
 g_kam = spec(
-    f"Nejvíc delších cest vedlo {{v roce {Y1}|{CRIMSON}}} do Itálie, {{v roce {Y0}|{BLUE}}} do Chorvatska",
+    f"Nejvíc delších cest vedlo v roce {{{Y1}|{CRIMSON}}} do Itálie, v roce {{{Y0}|{BLUE}}} do Chorvatska",
     f"Podíl země na delších cestách do zahraničí (4 a více nocí, lidé od 15 let) v letech {Y0} a {Y1}, v %",
     v3, [
         {"mark": {"type": "text", "align": "left", "baseline": "bottom", "dy": -9, "fontSize": 12, "color": "#333333"},

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Skoro {dvě z pěti|#de1743} domácností tvoří jeden člověk, v {roce 1991|#6267a3} to byla čtvrtina",
+    "text": "Skoro {dvě z pěti|#de1743} domácností tvoří jeden člověk, v roce {1991|#6267a3} to byla čtvrtina",
     "subtitle": "Podíl domácností jednotlivců mezi hospodařícími domácnostmi v %, sčítání lidu 1961–2021"
   },
   "width": "container",

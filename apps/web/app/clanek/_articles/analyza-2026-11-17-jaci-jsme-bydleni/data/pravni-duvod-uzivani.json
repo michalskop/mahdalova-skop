@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Byty v osobním vlastnictví tvořily v {roce 1991|#6267a3} necelé procento, v {roce 2021|#de1743} čtvrtinu",
+    "text": "Byty v osobním vlastnictví tvořily v roce {1991|#6267a3} necelé procento, v roce {2021|#de1743} čtvrtinu",
     "subtitle": "Obydlené byty podle právního důvodu užívání v % všech obydlených bytů, sčítání lidu; v roce 2021 u 7,5 % bytů důvod nezjištěn"
   },
   "width": "container",

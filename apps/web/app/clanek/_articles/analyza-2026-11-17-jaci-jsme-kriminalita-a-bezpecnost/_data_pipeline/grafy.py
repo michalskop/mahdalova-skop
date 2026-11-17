@@ -300,7 +300,7 @@ y1 = {"field": "tc", "type": "quantitative", "scale": {"domain": [0, 480000]},
       "axis": {**AX_NONE, "grid": True, "gridColor": MUTED, "values": [0, 100000, 200000, 300000, 400000],
                "labelExpr": "datum.value == 0 ? '0' : format(datum.value / 1000, 'd') + ' tis.'"}}
 tt1 = [{"field": "rok", "title": "Rok"}, {"field": "t", "title": "Zjištěno"}, {"field": "ob", "title": "Objasněnost"}]
-g1 = spec(f"Policie {{dnes|{CRIMSON}}} registruje o 60{NBSP}% méně trestných činů než v roce 1999, ale víc než v {{roce 1989|{BLUE}}}",
+g1 = spec(f"Policie {{dnes|{CRIMSON}}} registruje o 60{NBSP}% méně trestných činů než v roce 1999, ale víc než v roce {{1989|{BLUE}}}",
           f"Trestné činy zjištěné policií v Česku za rok, 1973–{R1}; do roku 1989 je registrovala Veřejná bezpečnost podle tehdejšího trestního zákona",
           v1, [
               {"mark": {"type": "area", "color": INK, "opacity": 0.08, "line": {"color": INK, "strokeWidth": 2.2}},
@@ -373,7 +373,7 @@ y3 = {"field": "n", "type": "quantitative", "scale": {"domain": [0, 270]},
       "axis": {**AX_NONE, "grid": True, "gridColor": MUTED, "values": [0, 50, 100, 150, 200, 250]}}
 enc_b = {"x": {"field": "rok", "type": "quantitative"}, "y": {"field": "n", "type": "quantitative"}}
 col_b = {"field": "c", "type": "nominal", "legend": None, "scale": {"domain": ["t", "v", "d"], "range": [BLUE, INK, CRIMSON]}}
-g3 = spec(f"Po amnestii v roce 1990 vězňů ubylo skoro o dvě třetiny, za devět let jich bylo víc než {{v roce 1989|{BLUE}}}",
+g3 = spec(f"Po amnestii v roce 1990 vězňů ubylo skoro o dvě třetiny, za devět let jich bylo víc než v roce {{1989|{BLUE}}}",
           f"Vězni (obvinění ve vazbě a odsouzení) na 100{NBSP}000 obyvatel k 31. prosinci, 1989–{max(vez)}; od roku 2010 včetně chovanců v zabezpečovací detenci",
           v3, [
               {"mark": {"type": "line", "color": INK, "strokeWidth": 2.2, "point": False},

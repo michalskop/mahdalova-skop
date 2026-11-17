@@ -198,70 +198,75 @@ log("ikona (Tabler user filled, jednotkový čtverec):", IKONA)
 
 # Rozvržení v pixelech (osy bez škály): buňka = min(šířka/21, 16) px, dvě mřížky 10 × 10 vedle sebe
 # (vlevo tehdy, vpravo dnes, mezera jedna buňka). Blok = věta (2 řádky na mobilu) + roky + 10 řad.
-CELL = 16
-VETA_H, ROK_H = 42, 20
-BLOK_H = VETA_H + ROK_H + 10 * CELL + 22
-body, texty, plochy = [], [], []
-for bi, r in enumerate(RADKY):
-    y0 = bi * BLOK_H
-    texty.append(dict(typ="nadpis", blok=bi, y=y0 + 10, text=r["nadpis"]))
-    texty.append(dict(typ="zakl", blok=bi, y=y0 + 28, text=r["zakl"]))
-    for strana, rok, k in ((0, r["r0"], r["a"]), (1, r["r1"], r["b"])):
-        texty.append(dict(typ="rok", blok=bi, y=y0 + VETA_H + 12, x=strana * 11, strana=strana,
-                          text=f"{rok}: {k} ze{NB}100"))
-        for i in range(100):
-            body.append(dict(blok=bi, strana=strana, sl=strana * 11 + i % 10, rad=i // 10,
-                             y=y0 + VETA_H + ROK_H + (i // 10) * CELL + CELL / 2,
-                             stav="ano" if i < k else "ne"))
-        # jeden tooltip na celou mřížku 10 × 10 (dřív na každém panáčkovi → problikával)
-        p = r["p0"] if strana == 0 else r["p1"]
-        plochy.append(dict(sl0=strana * 11, y1=y0 + VETA_H + ROK_H, y2=y0 + VETA_H + ROK_H + 10 * CELL,
-                           t_nadpis=f"{r['nadpis']} {rok}", t_ze100=f"{k} {r['zakl']}",
-                           t_presne=f"{p:.1f}".replace(".", ",") + f"{NB}%"))
-vyska = len(RADKY) * BLOK_H - 22
-
-bunka = f"min(width / 21, {CELL})"
-spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": f"Česko jako 100 lidí: {{dnes|{CRIMSON}}} víc vysokoškoláků a seniorů, méně věřících a manželství",
-              "subtitle": f"Kolik ze 100 lidí (dospělých = 15 a více let, u porodů ze 100 dětí); sčítání lidu 1991 a 2021, porody 1989 a 2025. "
-                          f"Víru v{NB}roce 2021 nevyplnilo 30{NB}% lidí"},
-    "width": "container", "height": vyska,
-    "config": {"view": {"stroke": None}},
-    "layer": [
+def rozlozeni(sl_mrizky, rady, cell, cell_max):
+    """Vrstvy a výška grafu pro mřížky `sl_mrizky` × `rady` (vlevo tehdy, vpravo dnes, mezera jedna buňka).
+    Úzký displej: 10 × 10; široký: 20 × 5 (Kateřina 17. 11. 2026: na širokém graf zbytečně uzoučký)."""
+    sloupcu = 2 * sl_mrizky + 1
+    veta_h, rok_h = 42, 20
+    blok_h = veta_h + rok_h + rady * cell + 22
+    body, texty, plochy = [], [], []
+    for bi, r in enumerate(RADKY):
+        y0 = bi * blok_h
+        texty.append(dict(typ="nadpis", blok=bi, y=y0 + 10, text=r["nadpis"]))
+        texty.append(dict(typ="zakl", blok=bi, y=y0 + 28, text=r["zakl"]))
+        for strana, rok, k in ((0, r["r0"], r["a"]), (1, r["r1"], r["b"])):
+            sl0 = strana * (sl_mrizky + 1)
+            texty.append(dict(typ="rok", blok=bi, y=y0 + veta_h + 12, x=sl0, strana=strana, text=f"{rok}: {k} ze{NB}100"))
+            for i in range(100):
+                body.append(dict(sl=sl0 + i % sl_mrizky, y=y0 + veta_h + rok_h + (i // sl_mrizky) * cell + cell / 2,
+                                 stav="ano" if i < k else "ne"))
+            # jeden tooltip na celou mřížku (dřív na každém panáčkovi → problikával)
+            p = r["p0"] if strana == 0 else r["p1"]
+            plochy.append(dict(sl0=sl0, sl1=sl0 + sl_mrizky, y1=y0 + veta_h + rok_h, y2=y0 + veta_h + rok_h + rady * cell,
+                               t_nadpis=f"{r['nadpis']} {rok}", t_ze100=f"{k} {r['zakl']}",
+                               t_presne=f"{p:.1f}".replace(".", ",") + f"{NB}%"))
+    bunka = f"min(width / {sloupcu}, {cell_max})"
+    vrstvy = [
         {"data": {"values": body},
          "transform": [{"calculate": f"datum.sl * {bunka} + {bunka} / 2", "as": "px"}],
          "mark": {"type": "point", "filled": True, "shape": IKONA, "strokeWidth": 0,
-                  "size": {"expr": f"pow({bunka} * 1.05, 2)"}},
+                  "size": {"expr": f"pow(min({bunka}, {cell}) * 1.05, 2)"}},
          "encoding": {
              "x": {"field": "px", "type": "quantitative", "scale": None, "axis": None},
              "y": {"field": "y", "type": "quantitative", "scale": None, "axis": None},
              "color": {"field": "stav", "type": "nominal", "legend": None,
                        "scale": {"domain": ["ano", "ne"], "range": [CRIMSON, MUTED]}}}},
-        {"data": {"values": [t for t in texty if t["typ"] == "nadpis"]},
+        {"data": {"values": [x for x in texty if x["typ"] == "nadpis"]},
          "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 15, "fontWeight": 700, "color": CRIMSON},
          "encoding": {"x": {"datum": 0, "type": "quantitative", "scale": None},
-                      "y": {"field": "y", "type": "quantitative", "scale": None},
-                      "text": {"field": "text"}}},
-        {"data": {"values": [t for t in texty if t["typ"] == "zakl"]},
+                      "y": {"field": "y", "type": "quantitative", "scale": None}, "text": {"field": "text"}}},
+        {"data": {"values": [x for x in texty if x["typ"] == "zakl"]},
          "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#555555"},
          "encoding": {"x": {"datum": 0, "type": "quantitative", "scale": None},
-                      "y": {"field": "y", "type": "quantitative", "scale": None},
-                      "text": {"field": "text"}}},
-        {"data": {"values": [t for t in texty if t["typ"] == "rok"]},
+                      "y": {"field": "y", "type": "quantitative", "scale": None}, "text": {"field": "text"}}},
+        {"data": {"values": [x for x in texty if x["typ"] == "rok"]},
          "transform": [{"calculate": f"datum.x * {bunka}", "as": "px"}],
          "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#333333"},
          "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None},
-                      "y": {"field": "y", "type": "quantitative", "scale": None},
-                      "text": {"field": "text"}}},
+                      "y": {"field": "y", "type": "quantitative", "scale": None}, "text": {"field": "text"}}},
         {"data": {"values": plochy},
-         "transform": [{"calculate": f"datum.sl0 * {bunka}", "as": "x1"}, {"calculate": f"(datum.sl0 + 10) * {bunka}", "as": "x2"}],
+         "transform": [{"calculate": f"datum.sl0 * {bunka}", "as": "x1"}, {"calculate": f"datum.sl1 * {bunka}", "as": "x2"}],
          "mark": {"type": "rect", "color": CRIMSON, "opacity": 0},
          "encoding": {"x": {"field": "x1", "type": "quantitative", "scale": None}, "x2": {"field": "x2"},
                       "y": {"field": "y1", "type": "quantitative", "scale": None}, "y2": {"field": "y2"},
                       "tooltip": [{"field": "t_nadpis", "title": "Kdo"}, {"field": "t_ze100", "title": "Počet"},
                                   {"field": "t_presne", "title": "Přesně"}]}},
-    ],
+    ]
+    return vrstvy, len(RADKY) * blok_h - 22
+
+
+uzke, vyska_uzke = rozlozeni(10, 10, 16, 16)
+siroke, vyska_siroke = rozlozeni(20, 5, 19, 19)
+spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": f"Česko jako 100 lidí: {{dnes|{CRIMSON}}} víc vysokoškoláků a seniorů, méně věřících a manželství",
+              "subtitle": f"Kolik ze 100 lidí (dospělých = 15 a více let, u porodů ze 100 dětí); sčítání lidu 1991 a 2021, porody 1989 a 2025. "
+                          f"Víru v{NB}roce 2021 nevyplnilo 30{NB}% lidí"},
+    "width": "container", "height": vyska_uzke,
+    "config": {"view": {"stroke": None}},
+    "layer": uzke,
+    # na kartě široké aspoň 640 px: mřížky 20 × 5 vedle sebe (VegaChartImpl → _siroky)
+    "_siroky": {"od": 640, "spec": {"height": vyska_siroke, "layer": siroke}},
     "_source": "ČSÚ, [sčítání 1991](https://csu.gov.cz/obyvatelstvo1991) a [2021](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data), "
                "[Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes",
 }

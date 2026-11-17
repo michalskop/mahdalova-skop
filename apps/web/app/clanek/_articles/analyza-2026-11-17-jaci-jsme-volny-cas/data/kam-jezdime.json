@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "title": {
-  "text": "Nejvíc delších cest vedlo {v roce 2025|#de1743} do Itálie, {v roce 2011|#6267a3} do Chorvatska",
+  "text": "Nejvíc delších cest vedlo v roce {2025|#de1743} do Itálie, v roce {2011|#6267a3} do Chorvatska",
   "subtitle": "Podíl země na delších cestách do zahraničí (4 a více nocí, lidé od 15 let) v letech 2011 a 2025, v %"
  },
  "width": "container",

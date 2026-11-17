@@ -87,7 +87,7 @@ g1 = cinka("roky", [
     ("Věk nevěsty při první svatbě", *par(D["Věk svobodných nevěst"])),
     ("Věk matky při prvním dítěti", *par(D["Věk matky při prvním dítěti"])),
 ], [15, 90], "let",
-    f"Žijeme déle a všechno {{dnes|{CRIMSON}}} děláme později než v {{roce 1989|{BLUE}}}",
+    f"Žijeme déle a všechno {{dnes|{CRIMSON}}} děláme později než v roce {{1989|{BLUE}}}",
     "Průměrný věk v letech; naděje dožití při narození",
     "ČSÚ, [Česko od roku 1989 v číslech, Tab. 01.01](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026); výpočet DataTimes")
 
@@ -105,7 +105,7 @@ g2 = cinka("podily", [
     pp("Lidé, kteří se hlásí k víře", X["Věřící (všichni, kdo víru uvedli)"]),
     pp("Lidé starší 65 let", D["Podíl lidí 65+"]),
 ], [-12, 104], "%",
-    f"Skoro polovina dětí se {{dnes|{CRIMSON}}} rodí mimo manželství, v {{roce 1989|{BLUE}}} to bylo 8 %",
+    f"Skoro polovina dětí se {{dnes|{CRIMSON}}} rodí mimo manželství, v roce {{1989|{BLUE}}} to bylo 8 %",
     "Podíl v %; víra podle sčítání 1991 a 2021, volební účast 1990 (Česká národní rada) a 2025",
     "ČSÚ, [Česko od roku 1989 v číslech](https://csu.gov.cz/produkty/cesko-od-roku-1989-v-cislech-aktualizace-27-8-2026), "
     "[sčítání 2021](https://csu.gov.cz/produkty/vysledky-scitani-2021-otevrena-data), "

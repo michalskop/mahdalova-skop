@@ -52,7 +52,7 @@ def sloupce(nazev, rada, zvyraznit, ypopisky, ydomena, title, subtitle, source, 
 
 # ---------- Graf 1: dokončené byty ----------
 g1 = sloupce("Dokončené byty", V.BYTY_RADA, {1989: BLUE, V.POSL: CRIMSON}, [0, 20000, 40000, 60000], [0, 62000],
-             f"V {{roce 2024|{CRIMSON}}} se dokončilo o {round(-V.C['byty_zmena_pct'])}{NB}% méně bytů než v {{roce 1989|{BLUE}}}",
+             f"V roce {{2024|{CRIMSON}}} se dokončilo o {round(-V.C['byty_zmena_pct'])}{NB}% méně bytů než v roce {{1989|{BLUE}}}",
              f"Počet dokončených bytů za rok, 1989–{V.PRED}; {V.PRED} předběžně (nově z registru RÚIAN)",
              f"ČSÚ, [Česko od roku 1989 v číslech, Tab. 11.01]({ZDROJ})", predbezne=(V.PRED,), jednotka="bytů")
 
@@ -87,7 +87,7 @@ def lab2(filt, pole, align, dx, barva, tucne):
             "encoding": {"y": y2, "x": {**x2, "field": pole}, "text": {"field": "l_" + pole}}}
 
 
-g2 = spec(f"Byty v osobním vlastnictví tvořily v {{roce 1991|{BLUE}}} necelé procento, v {{roce 2021|{CRIMSON}}} čtvrtinu",
+g2 = spec(f"Byty v osobním vlastnictví tvořily v roce {{1991|{BLUE}}} necelé procento, v roce {{2021|{CRIMSON}}} čtvrtinu",
           f"Obydlené byty podle právního důvodu užívání v % všech obydlených bytů, sčítání lidu; v roce 2021 u 7,5{NB}% bytů důvod nezjištěn",
           vals2, [
               {"mark": {"type": "text", "align": "left", "baseline": "bottom", "dy": -11, "fontSize": 12, "color": "#333333"},

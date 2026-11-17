@@ -97,7 +97,7 @@ g1 = spec(f"Od roku {V.C['vsps_zeny_predstihly_podil']} mají vysokou školu ča
 g2 = cinka("struktura-vzdelani",
            [(lab, (1991, V.C[f"{k}_1991"]), (2021, V.C[f"{k}_2021"])) for lab, k in V.SCITANI_STRUKTURA],
            [0, 50], "%",
-           f"Vysokou školu mělo v {{roce 1991|{BLUE}}} {round(V.C['sc_vs_celkem_1991'])}{NB}% dospělých, v {{roce 2021|{CRIMSON}}} {round(V.C['sc_vs_celkem_2021'])}{NB}%",
+           f"Vysokou školu mělo v roce {{1991|{BLUE}}} {round(V.C['sc_vs_celkem_1991'])}{NB}% dospělých, v roce {{2021|{CRIMSON}}} {round(V.C['sc_vs_celkem_2021'])}{NB}%",
            f"Nejvyšší ukončené vzdělání obyvatel starších 15 let v %, sčítání lidu; podíly ze zjištěných hodnot (nezjištěno 1991: 1{NB}%, 2021: 6{NB}%)",
            f"ČSÚ, [Česko od roku 1989 v číslech, Tab. 01.03]({ZDROJ}) (sčítání lidu)")
 

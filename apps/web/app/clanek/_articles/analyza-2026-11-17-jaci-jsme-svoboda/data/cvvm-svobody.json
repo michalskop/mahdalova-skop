@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Svobodu projevu hodnotí lidé {v roce 2024|#de1743} lépe než před rokem 1989 méně často než {v roce 2019|#6267a3}",
+    "text": "Svobodu projevu hodnotí lidé v roce {2024|#de1743} lépe než před rokem 1989 méně často než v roce {2019|#6267a3}",
     "subtitle": "Podíl lidí, podle nichž je dnes situace lidí jako oni v dané oblasti „mnohem či trochu lepší“ než před rokem 1989, v %"
   },
   "width": "container",
