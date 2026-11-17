@@ -40,8 +40,11 @@
 .dlazdice { justify-content: center; }
 .dlazdice .odometr { flex-direction: row; align-items: center; gap: 0.3em; font-size: 17cqw; }
 .dlazdice .odoDnes { margin-top: 0; border-bottom-width: 0.08em; }
-/* na malých dlaždicích (mobil, ~100 px) by se letopočty tloukly s titulkem – tam jen mapa */
-@container (max-width: 180px) { .dlazdice { display: none; } }
+/* malé dlaždice (mobil, ~100 px): letopočty menší a výš, ať se nepotkají s titulkem (Kateřina 17. 11. 2026: nechat je tam) */
+@container (max-width: 180px) {
+  .dlazdice { transform: translateY(-9cqw); }
+  .dlazdice .odometr { font-size: 14cqw; }
+}
 
 /* dlaždice s tečkami: rok 2026 růžově jako záře měst (Kateřina 17. 11. 2026) */
 .ruzova .odoDnes { color: #ff8099; }

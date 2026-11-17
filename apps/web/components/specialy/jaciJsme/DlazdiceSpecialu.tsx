@@ -109,7 +109,7 @@ function Tecky() {
 }
 
 export default function DlazdiceSpecialu() {
-  const [v, setV] = useState<'roky' | 'tecky'>('roky');
+  const [v, setV] = useState<'roky' | 'tecky'>('tecky');
   useEffect(() => {
     const q = new URLSearchParams(window.location.search).get('dlazdice');
     if (q === 'roky' || q === 'tecky') setV(q);
