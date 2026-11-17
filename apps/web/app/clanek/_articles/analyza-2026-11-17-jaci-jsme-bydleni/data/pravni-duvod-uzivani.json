@@ -23,7 +23,8 @@
         "l_dnes": "35,6",
         "t_tehdy": "36,9 % (1 367 027 bytů, 1991)",
         "t_dnes": "35,6 % (1 595 698 bytů, 2021)",
-        "vlevo_dnes": true
+        "vlevo_dnes": true,
+        "sipka": false
       },
       {
         "ukazatel": "Byt v osobním vlastnictví",
@@ -33,7 +34,8 @@
         "l_dnes": "25,0",
         "t_tehdy": "0,8 % (31 164 bytů, 1991)",
         "t_dnes": "25,0 % (1 121 375 bytů, 2021)",
-        "vlevo_dnes": false
+        "vlevo_dnes": false,
+        "sipka": true
       },
       {
         "ukazatel": "Nájemní byt",
@@ -43,7 +45,8 @@
         "l_dnes": "19,9",
         "t_tehdy": "39,5 % (1 465 231 bytů, 1991)",
         "t_dnes": "19,9 % (890 802 bytů, 2021)",
-        "vlevo_dnes": true
+        "vlevo_dnes": true,
+        "sipka": true
       },
       {
         "ukazatel": "Družstevní byt",
@@ -53,7 +56,8 @@
         "l_dnes": "3,1",
         "t_tehdy": "18,8 % (697 829 bytů, 1991)",
         "t_dnes": "3,1 % (140 821 bytů, 2021)",
-        "vlevo_dnes": true
+        "vlevo_dnes": true,
+        "sipka": true
       }
     ]
   },
@@ -153,6 +157,114 @@
             "title": "2021"
           }
         ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sipka && (!datum.vlevo_dnes)"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "triangle-right",
+        "filled": true,
+        "size": 110,
+        "color": "#bcbcb0",
+        "opacity": 1,
+        "xOffset": -14
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "dnes"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.sipka && (datum.vlevo_dnes)"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "triangle-left",
+        "filled": true,
+        "size": 110,
+        "color": "#bcbcb0",
+        "opacity": 1,
+        "xOffset": 14
+      },
+      "encoding": {
+        "y": {
+          "field": "ukazatel",
+          "type": "nominal",
+          "sort": null,
+          "axis": null,
+          "scale": {
+            "paddingInner": 0.55,
+            "paddingOuter": 0.6
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              50
+            ]
+          },
+          "axis": {
+            "title": null,
+            "grid": true,
+            "gridColor": "#d4d4c8",
+            "domain": false,
+            "ticks": false,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            "labelExpr": "datum.value + ' %'"
+          },
+          "field": "dnes"
+        }
       }
     },
     {

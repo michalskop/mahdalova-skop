@@ -63,7 +63,7 @@ for lab, a, b in V.UZIV:
     p0, p1 = 100 * a / c91, 100 * b / c21
     vals2.append(dict(ukazatel=lab, tehdy=round(p0, 1), dnes=round(p1, 1), l_tehdy=cz(p0), l_dnes=cz(p1),
                       t_tehdy=f"{cz(p0)}{NB}% ({cz(a, 0)} bytů, 1991)", t_dnes=f"{cz(p1)}{NB}% ({cz(b, 0)} bytů, 2021)",
-                      vlevo_dnes=p1 < p0))
+                      vlevo_dnes=p1 < p0, sipka=abs(p1 - p0) >= 4))
     log.append(f"GRAF uzivani: {lab} 1991 {round(p0, 1)} → 2021 {round(p1, 1)}")
 osa = [0, 50]
 y2 = {"field": "ukazatel", "type": "nominal", "sort": None, "axis": None, "scale": {"paddingInner": 0.55, "paddingOuter": 0.6}}
@@ -71,6 +71,14 @@ x2 = {"type": "quantitative", "scale": {"domain": osa},
       "axis": {"title": None, "grid": True, "gridColor": "#d4d4c8", "domain": False, "ticks": False,
                "values": [0, 10, 20, 30, 40, 50], "labelExpr": f"datum.value + '{NB}%'"}}
 tt2 = [{"field": "ukazatel", "title": "Právní důvod"}, {"field": "t_tehdy", "title": "1991"}, {"field": "t_dnes", "title": "2021"}]
+
+
+def sipka(filt, tvar, posun):
+    """Hrot šipky na spojnici těsně před červeným (novějším) bodem; jen kde jsou body dost daleko od sebe
+    (Kateřina 17. 11. 2026: šipka ukáže směr změny, u blízkých bodů žádná)."""
+    return {"transform": [{"filter": f"datum.sipka && ({filt})"}],
+            "mark": {"type": "point", "shape": tvar, "filled": True, "size": 110, "color": GREY, "opacity": 1, "xOffset": posun},
+            "encoding": {"y": y2, "x": {**x2, "field": "dnes"}}}
 
 
 def lab2(filt, pole, align, dx, barva, tucne):
@@ -85,6 +93,7 @@ g2 = spec(f"Byty v osobním vlastnictví tvořily v {{roce 1991|{BLUE}}} necelé
               {"mark": {"type": "text", "align": "left", "baseline": "bottom", "dy": -11, "fontSize": 12, "color": "#333333"},
                "encoding": {"y": y2, "x": {"datum": 0, "type": "quantitative", "scale": {"domain": osa}}, "text": {"field": "ukazatel"}}},
               {"mark": {"type": "rule", "strokeWidth": 3, "color": GREY}, "encoding": {"y": y2, "x": {**x2, "field": "tehdy"}, "x2": {"field": "dnes"}, "tooltip": tt2}},
+              sipka("!datum.vlevo_dnes", "triangle-right", -14), sipka("datum.vlevo_dnes", "triangle-left", 14),
               {"mark": {"type": "circle", "size": 150, "opacity": 1, "color": BLUE}, "encoding": {"y": y2, "x": {**x2, "field": "tehdy"}, "tooltip": tt2}},
               {"mark": {"type": "circle", "size": 150, "opacity": 1, "color": CRIMSON}, "encoding": {"y": y2, "x": {**x2, "field": "dnes"}, "tooltip": tt2}},
               lab2("!datum.vlevo_dnes", "tehdy", "right", -10, BLUE, False), lab2("!datum.vlevo_dnes", "dnes", "left", 10, CRIMSON, True),
