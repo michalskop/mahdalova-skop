@@ -302,7 +302,7 @@ dom4 = [0, 100]
 x4 = {"type": "quantitative", "scale": {"domain": dom4},
       "axis": {**AX_NONE, "grid": True, "gridColor": MUTED, "values": [0, 25, 50, 75, 100], "labelExpr": "datum.value + ' %'"}}
 tt4 = [{"field": "oblast", "title": "Oblast"}, {"field": "t_t", "title": str(R_A)}, {"field": "t_d", "title": str(R_B)}]
-g4 = spec(f"Svobodu projevu hodnotí lidé v roce {{{R_B}|{CRIMSON}}} lépe než před rokem 1989 méně často než v roce {{{R_A}|{BLUE}}}",
+g4 = spec(f"Všech pět svobod chválí lidé v roce {{{R_B}|{CRIMSON}}} méně často než v roce {{{R_A}|{BLUE}}}",
           f"Podíl lidí, podle nichž je dnes situace lidí jako oni v dané oblasti „mnohem či trochu lepší“ než před rokem 1989, v %",
           v4, [
               {"mark": {"type": "text", "align": "left", "baseline": "bottom", "dy": -9, "fontSize": 12, "color": "#333333"},
@@ -321,8 +321,87 @@ g4 = spec(f"Svobodu projevu hodnotí lidé v roce {{{R_B}|{CRIMSON}}} lépe než
           step=46)
 assert all(d["vlevo"] for d in v4), "popisky G4 počítají s poklesem ve všech oblastech"
 
+# --- G5 CVVM: svoboda projevu 2019 × 2024 jako 2 × 100 postav (graf z coveru, _cover_pipeline/motiv.cjs)
+# 1 postava = 1 % dotázaných; pořadí po řádcích: lepší (brandNavy.6), stejná / neví (prázdný obrys brandNavy.7),
+# horší (brand.6) dole. Rozložení v pixelech jako graf „Česko jako 100 lidí“ v úvodní kapitole speciálu
+# (analyza-2026-11-17-jaci-jsme-byli-jaci-jsme-1989-a-dnes/_data_pipeline/09_sto_lidi.py): dvě mřížky 10 × 10 vedle sebe,
+# buňka = min(šířka / 21, max), na kartě široké aspoň 640 px větší buňka (VegaChartImpl → _siroky).
+STEJNE = "#4c4f8e"
+# Tabler icon „user“ (filled) v jednotkovém čtverci – stejná ikona jako v 09_sto_lidi.py
+IKONA = ("M 0 -0.8333 a 0.4167 0.4167 0 1 1 -0.4167 0.4167 l 0.0004 -0.0181 a 0.4167 0.4167 0 0 1 0.4163 -0.3986 z "
+         "M 0.1667 0.1667 a 0.4167 0.4167 0 0 1 0.4167 0.4167 v 0.0833 a 0.1667 0.1667 0 0 1 -0.1667 0.1667 h -0.8333 "
+         "a 0.1667 0.1667 0 0 1 -0.1667 -0.1667 v -0.0833 a 0.4167 0.4167 0 0 1 0.4167 -0.4167 h 0.3333 z")
+NAZOR = "Možnost vyjádřit svůj názor"
+mrizky = []
+for strana, r_ in enumerate((R_A, R_B)):
+    lep, hor = tab4[NAZOR][r_]
+    stej = 100 - lep - hor
+    mrizky.append(dict(strana=strana, rok=r_, lepsi=lep, horsi=hor, stejne=stej))
+    log("GRAF CVVM svoboda projevu postavy", r_, "lepší", lep, "stejná/neví", stej, "horší", hor)
+
+
+def postavy(cell_max):
+    rok_h, rady = 22, 10
+    bunka = f"min(width / 21, {cell_max})"
+    body, roky_t, plochy = [], [], []
+    for m_ in mrizky:
+        sl0 = m_["strana"] * 11
+        roky_t.append(dict(x=sl0, text=str(m_["rok"])))
+        for i in range(100):
+            stav = "lepší" if i < m_["lepsi"] else ("stejná / neví" if i < m_["lepsi"] + m_["stejne"] else "horší")
+            body.append(dict(sl=sl0 + i % 10, r=i // 10, stav=stav))
+        plochy.append(dict(sl0=sl0, sl1=sl0 + 10, t_rok=f"CVVM {m_['rok']}", t_l=f"{m_['lepsi']}{NBSP}%",
+                           t_s=f"{m_['stejne']}{NBSP}%", t_h=f"{m_['horsi']}{NBSP}%"))
+    py = f"{rok_h} + datum.r * {bunka} + {bunka} / 2"
+    znacka = lambda plna: {"type": "point", "shape": IKONA, "filled": plna, "strokeWidth": 0 if plna else 1.3,
+                           "size": {"expr": f"pow({bunka} * {1.0 if plna else 0.85}, 2)"}}
+    vrstvy = [
+        {"data": {"values": [b for b in body if b["stav"] != "stejná / neví"]},
+         "transform": [{"calculate": f"datum.sl * {bunka} + {bunka} / 2", "as": "px"}, {"calculate": py, "as": "py"}],
+         "mark": {**znacka(True), "opacity": 1},
+         "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None, "axis": None},
+                      "y": {"field": "py", "type": "quantitative", "scale": None, "axis": None},
+                      "color": {"field": "stav", "type": "nominal", "legend": None,
+                                "scale": {"domain": ["lepší", "horší"], "range": [BLUE, CRIMSON]}}}},
+        {"data": {"values": [b for b in body if b["stav"] == "stejná / neví"]},
+         "transform": [{"calculate": f"datum.sl * {bunka} + {bunka} / 2", "as": "px"}, {"calculate": py, "as": "py"}],
+         "mark": {**znacka(False), "color": STEJNE, "opacity": 1},
+         "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None, "axis": None},
+                      "y": {"field": "py", "type": "quantitative", "scale": None, "axis": None}}},
+        {"data": {"values": roky_t},
+         "transform": [{"calculate": f"datum.x * {bunka}", "as": "px"}, {"calculate": "8", "as": "py"}],
+         "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 14, "fontWeight": 700, "color": INK},
+         "encoding": {"x": {"field": "px", "type": "quantitative", "scale": None},
+                      "y": {"field": "py", "type": "quantitative", "scale": None}, "text": {"field": "text"}}},
+        # jeden tooltip na celou mřížku
+        {"data": {"values": plochy},
+         "transform": [{"calculate": f"datum.sl0 * {bunka}", "as": "x1"}, {"calculate": f"datum.sl1 * {bunka}", "as": "x2"},
+                       {"calculate": "0", "as": "y1"}, {"calculate": f"{rok_h} + {rady} * {bunka}", "as": "y2"}],
+         "mark": {"type": "rect", "color": BLUE, "opacity": 0},
+         "encoding": {"x": {"field": "x1", "type": "quantitative", "scale": None}, "x2": {"field": "x2"},
+                      "y": {"field": "y1", "type": "quantitative", "scale": None}, "y2": {"field": "y2"},
+                      "tooltip": [{"field": "t_rok", "title": "Šetření"}, {"field": "t_l", "title": "Lepší než před rokem 1989"},
+                                  {"field": "t_s", "title": "Stejná nebo neví"}, {"field": "t_h", "title": "Horší"}]}},
+    ]
+    return vrstvy, rok_h + rady * cell_max + 4
+
+
+uz5, vy_uz5 = postavy(16)
+si5, vy_si5 = postavy(30)
+m19, m24 = mrizky
+g5 = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": {"text": f"Svobodu projevu chválí {{{m24['lepsi']}{NBSP}%|{BLUE}}} lidí, za horší ji má {{{m24['horsi']}{NBSP}%|{CRIMSON}}}, "
+                        f"dvakrát víc než v roce {R_A}",
+                "subtitle": f"Je dnes možnost vyjádřit svůj názor lepší, nebo horší než před rokem 1989? 1 postava = 1{NBSP}% dotázaných; "
+                            f"modře lepší, karmínově horší, prázdná postava = stejná nebo neví"},
+      "width": "container", "height": vy_uz5, "config": {"view": {"stroke": None}},
+      "layer": uz5,
+      "_siroky": {"od": 640, "spec": {"height": vy_si5, "layer": si5}},
+      "_source": f"CVVM SOÚ AV ČR, [Třicet pět let od sametové revoluce](https://cvvm.soc.cas.cz/images/articles/files/5889/pd241111.pdf), tab. 4"}
+assert m24["horsi"] >= 2 * m19["horsi"], "titulek G5 tvrdí „dvakrát víc“"
+
 DATA.mkdir(exist_ok=True)
-for name, sp_ in [("svatky", g1), ("volebni-ucast", g2), ("cvvm-svobody", g4)]:
+for name, sp_ in [("svatky", g1), ("volebni-ucast", g2), ("cvvm-svobody", g4), ("svoboda-projevu", g5)]:
     (DATA / f"{name}.json").write_text(json.dumps(sp_, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (HERE / "vystup.txt").write_text("\n".join(out) + "\n", encoding="utf-8")
 print("\n".join(out))
