@@ -1,5 +1,6 @@
 'use client';
 
+import RokyHlavicka from '@/components/specialy/jaciJsme/RokyHlavicka';
 import { Box, Group, Stack, Title, Paper } from '@mantine/core';
 import { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react';
 import { Arrow } from '@repo/ui/components/Arrow';
@@ -86,7 +87,7 @@ const KlimaIcon = () => (
 // Pokud coverImage chybí, zobrazí se SVG ikona (logoType).
 // description: popis speciálu pro OG / meta (na kartě se nezobrazuje).
 const TILES = [
-  { href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026', title: 'Jací jsme byli, jací jsme', bg: '#101432', external: false, logoType: 'flag', coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v2.png' },
+  { href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026', title: 'Jací jsme byli, jací jsme', bg: '#101432', external: false, logoType: 'flag', coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v3.png', roky: true },
   { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
   { href: '/specialy/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
   { href: '/specialy/komunalni-a-senatni-volby-2026', title: 'Komunální a senátní volby 2026', description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce', bg: '#101432', external: false, logoType: 'vk', coverImage: '/images/specials/volby-2026.svg?v=2026-10-14' },
@@ -129,7 +130,7 @@ function TileLogo({ type }: { type: string }) {
 }
 
 /* ── Tile ─────────────────────────────────────────────────────────── */
-function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof TILES[0]) {
+function SpecialTile({ href, title, bg, external, logoType, coverImage, roky }: typeof TILES[number] & { roky?: boolean }) {
   const hasCover = Boolean(coverImage);
   const isFullBleed = logoType === 'media' || hasCover;
 
@@ -158,6 +159,12 @@ function SpecialTile({ href, title, bg, external, logoType, coverImage }: typeof
         <img src={coverImage} alt={title} draggable={false}
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)' }} />
+        {/* Speciál 1989 × 2026: pod mapou na dlaždici se odvalí letopočty jako v hlavičce speciálu */}
+        {roky && (
+          <div style={{ position: 'absolute', left: 0, right: 0, top: '55%', containerType: 'inline-size', pointerEvents: 'none' }}>
+            <RokyHlavicka dlazdice />
+          </div>
+        )}
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px 16px', pointerEvents: 'none' }}>
           <Title order={3} style={{ color: WHITE, fontFamily: "'Roboto Slab', Georgia, serif", fontWeight: 500, fontSize: 'var(--mantine-font-size-lg)', lineHeight: 1.35 }}>
             {renderSpecialTitle(title)}

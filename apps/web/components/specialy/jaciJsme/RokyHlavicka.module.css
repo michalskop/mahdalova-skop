@@ -34,3 +34,11 @@
   .odometr { flex-direction: row; align-items: center; gap: 16px; }
   .odoDnes { margin-top: 0; }
 }
+
+/* menší verze na dlaždici speciálu v karuselu Speciály (SpecialsHero): letopočty vedle sebe,
+   velikost podle šířky dlaždice (rodič má container-type: inline-size) */
+.dlazdice { justify-content: center; }
+.dlazdice .odometr { flex-direction: row; align-items: center; gap: 0.3em; font-size: 17cqw; }
+.dlazdice .odoDnes { margin-top: 0; border-bottom-width: 0.08em; }
+/* na malých dlaždicích (mobil, ~100 px) by se letopočty tloukly s titulkem – tam jen mapa */
+@container (max-width: 180px) { .dlazdice { display: none; } }

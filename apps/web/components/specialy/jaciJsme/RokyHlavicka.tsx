@@ -4,8 +4,10 @@
 // Pod pevným 1989 se číslice plynule odvalí jako na počítadle kilometrů a zastaví se na 2026.
 // Kateřina 17. 11. 2026 vybrala ze tří návrhů (kalendář s klapkami, časová osa, odometr) odometr.
 // Server a čtečky obrazovky dostanou rovnou 2026; při prefers-reduced-motion se nic nehýbe.
+// Odometr se rozjede, až je vidět (IntersectionObserver). `dlazdice` = menší verze vedle sebe
+// pro dlaždici speciálu v karuselu Speciály na titulce (SpecialsHero), velikost podle šířky dlaždice.
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import s from './RokyHlavicka.module.css';
 
 const OD = 1989;
@@ -13,14 +15,22 @@ const DO = 2026;
 const TRVANI = 2800; // ms
 const PRODLEVA = 400; // ms – ať čtenář zachytí výchozí 1989
 
-export default function RokyHlavicka() {
+export default function RokyHlavicka({ dlazdice = false }: { dlazdice?: boolean }) {
   const [cil, setCil] = useState(DO);
   const [jede, setJede] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
     setCil(OD);
-    const t = window.setTimeout(() => { setJede(true); setCil(DO); }, PRODLEVA);
-    return () => window.clearTimeout(t);
+    let t = 0;
+    const spust = () => { t = window.setTimeout(() => { setJede(true); setCil(DO); }, PRODLEVA); };
+    const el = ref.current;
+    if (!el || !('IntersectionObserver' in window)) { spust(); return () => window.clearTimeout(t); }
+    const io = new IntersectionObserver((zaznamy) => {
+      if (zaznamy.some((z) => z.isIntersecting)) { io.disconnect(); spust(); }
+    }, { threshold: 0.5 });
+    io.observe(el);
+    return () => { io.disconnect(); window.clearTimeout(t); };
   }, []);
   // řád m (tisíce … jednotky): váleček nese číslice od floor(OD/m) do floor(DO/m), poloha = floor(cil/m)
   const rady = [1000, 100, 10, 1].map((m) => {
@@ -29,7 +39,7 @@ export default function RokyHlavicka() {
     return { m, z, cifry };
   });
   return (
-    <div className={s.obal} role="img" aria-label="1989 a 2026">
+    <div ref={ref} className={`${s.obal} ${dlazdice ? s.dlazdice : ''}`} role="img" aria-label="1989 a 2026">
       <div className={s.odometr} aria-hidden>
         <div className={s.odoTehdy}>1989</div>
         <div className={s.odoDnes}><div className={s.okno}>

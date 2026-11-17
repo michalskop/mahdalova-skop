@@ -12,7 +12,7 @@ export const JACI_JSME_PATH = `/specialy/${JACI_JSME.slug}`;
 const CDN = 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026';
 export const JACI_JSME_OG = `${CDN}/cover-og.jpg`;
 export const JACI_JSME_COVER = `${CDN}/cover-homepage.png`;
-export const JACI_JSME_DLAZDICE = `${CDN}/dlazdice-v2.png`;
+export const JACI_JSME_DLAZDICE = `${CDN}/dlazdice-v3.png`;
 
 const ARTICLES_DIR = path.join(process.cwd(), 'app/clanek/_articles');
 
