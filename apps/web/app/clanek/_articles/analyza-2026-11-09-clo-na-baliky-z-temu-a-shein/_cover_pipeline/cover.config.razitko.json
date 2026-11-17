@@ -2,9 +2,9 @@
   "formaty": {
     "homepage": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-homepage.png",
-      "otisk": "e99fae7e07d3fb08",
+      "otisk": "c557c62c3a7ee547",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "8fbd3bacc5652081",
         "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-homepage.svg": "7c0e693258b8c814"
       },
       "kontrola": {
@@ -15,9 +15,9 @@
     },
     "og": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-og.jpg",
-      "otisk": "5f6e5109a790d111",
+      "otisk": "182e028b8370ebba",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "8fbd3bacc5652081",
         "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-og.svg": "39c3c6c58b08e83a"
       },
       "kontrola": {
@@ -28,9 +28,9 @@
     },
     "square": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-square.png",
-      "otisk": "ff0727c8253de383",
+      "otisk": "20e5a5500e760145",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "8fbd3bacc5652081",
         "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-square.svg": "e94c867a12e70127"
       },
       "kontrola": {
@@ -41,9 +41,9 @@
     },
     "instagram": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-instagram.png",
-      "otisk": "054f1009dccfb73b",
+      "otisk": "57e30bd1ed946ae2",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "8fbd3bacc5652081",
         "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-instagram.svg": "2313df2d88802ba9"
       },
       "kontrola": {
@@ -54,9 +54,9 @@
     },
     "story": {
       "soubor": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/images/cover-story.png",
-      "otisk": "bca3c8043b19d9e4",
+      "otisk": "d25646347f9ce610",
       "vstupy": {
-        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "bd54475bb7fd6fd4",
+        "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs": "8fbd3bacc5652081",
         "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/motiv-story.svg": "bf3bcb62a21e2649"
       },
       "kontrola": {
@@ -67,13 +67,13 @@
     }
   },
   "konfigurace": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/_cover_pipeline/cover.config.cjs",
-  "vyrenderovano": "2026-11-09T11:43:25.364Z",
+  "vyrenderovano": "2026-11-17T11:32:27.961Z",
   "clanek": "apps/web/app/clanek/_articles/analyza-2026-11-09-clo-na-baliky-z-temu-a-shein/index.md",
-  "titulekClanku": "Clo srazilo levné balíky z Číny o čtyři pětiny. Od listopadu přidává EU další 2 eura za každou položku",
+  "titulekClanku": "Clo srazilo levné balíky z Číny na pětinu",
   "texty": {
     "stitek": "Balíky z Číny • Clo",
     "nadtitulek": "",
-    "titulek": "Clo srazilo balíky z Číny o čtyři pětiny",
+    "titulek": "Clo srazilo levné balíky z Číny na pětinu",
     "podtitulek": "Od listopadu přibývá poplatek 2 eura za každou položku"
   }
 }

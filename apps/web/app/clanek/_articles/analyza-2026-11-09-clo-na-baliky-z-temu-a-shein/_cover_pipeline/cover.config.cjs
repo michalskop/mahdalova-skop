@@ -15,6 +15,6 @@ module.exports = {
   og: 'siroky', ogScrim: false,
   // OG: texty nahoře a vlevo dole, motiv vpravo dole uvnitř středního čtverce
   rozlozeni: { og: [{ prvky: ['kicker', 'titulek', 'pod'], x: 320, y: 48 }, { prvky: ['legenda', 'logo'], x: 320, y: 584, dole: true }] },
-  format: { og: { t: 50 }, homepage: { t: 76 }, story: { t: 92 } },
+  format: { og: { t: 47 }, homepage: { t: 67 }, square: { t: 74 }, instagram: { t: 74 }, story: { t: 76 } },
   motiv: { typ: 'svg', opacityOg: 1, soubory: Object.fromEntries(['homepage', 'og', 'square', 'instagram', 'story'].map((k) => [k, soubor(k)])) },
 };
