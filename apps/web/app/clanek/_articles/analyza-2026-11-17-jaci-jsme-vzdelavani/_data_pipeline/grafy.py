@@ -133,8 +133,49 @@ for r in (1989, V.C["vs_studenti_vrchol_rok"], R):
     c, z = V.VS_RADA[r]
     log.append(f"GRAF studenti: {r} celkem {c + z}, Češi {c}, cizinci {z}")
 
+# ---------- Graf 4: počty vysokoškolaček a vysokoškoláků, sčítání 1991 × 2021 (graf z coveru) ----------
+# Stejná čísla jako motiv coveru (_cover_pipeline/motiv.cjs, 1 postava = 20 000 lidí): lidé 15+ s VŠ podle sčítání.
+TOP4 = 950000
+v4, pasy = [], []
+for rok in (1991, 2021):
+    radky = {}
+    for pohl, k in (("ženy", "ženy"), ("muži", "muži")):
+        n, p = V.C[f"sc_vs_{k}_{rok}_abs"], V.C[f"sc_vs_{k}_{rok}"]
+        v4.append(dict(rok=str(rok), pohlavi=pohl, n=n, l=f"{round(n / 1000)}{NB}tis."))
+        radky[pohl] = f"{cz(n, 0)} ({cz(p)}{NB}% {'žen' if pohl == 'ženy' else 'mužů'} 15+)"
+        log.append(f"GRAF vs-pocty: {pohl} {rok} {n} ({p} %)")
+    pasy.append(dict(rok=str(rok), top=TOP4, t_nadpis=f"Sčítání {rok}", t_zeny=radky["ženy"], t_muzi=radky["muži"]))
+pom_z, pom_m = V.C["sc_vs_zeny_pomer"], V.C["sc_vs_muzi_pomer"]
+log.append(f"GRAF vs-pocty: ženy ×{pom_z}, muži ×{pom_m}")
+assert 3.5 < pom_z < 4 and round(pom_m, 1) == 2.0  # titulek: „skoro čtyřikrát“, „dvakrát“
+x4 = {"field": "rok", "type": "nominal", "axis": {"title": None, "domain": False, "ticks": False, "labelAngle": 0,
+                                                  "labelFontSize": 13, "labelFontWeight": 700, "labelExpr": "'Sčítání ' + datum.value"},
+      "scale": {"paddingInner": 0.3, "paddingOuter": 0.15}}
+y4 = {"field": "n", "type": "quantitative", "scale": {"domain": [0, TOP4]},
+      "axis": {"title": None, "grid": True, "gridColor": "#d4d4c8", "domain": False, "ticks": False,
+               "values": [0, 200000, 400000, 600000, 800000], "labelExpr": f"datum.value == 0 ? '0' : (datum.value / 1000) + '{NB}tis.'"}}
+barva4 = {"field": "pohlavi", "type": "nominal", "legend": None, "scale": {"domain": ["ženy", "muži"], "range": [ZENY, MUZI]}}
+off4 = {"field": "pohlavi", "type": "nominal", "sort": ["ženy", "muži"], "scale": {"paddingInner": 0.12}}
+g4 = spec(f"{{Vysokoškolaček|{ZENY}}} je skoro čtyřikrát víc než při sčítání 1991, {{vysokoškoláků|{MUZI}}} dvakrát",
+          f"Obyvatelé starší 15 let s{NB}vysokoškolským vzděláním, sčítání lidu 1991 a 2021; v{NB}roce 2021 vzdělání neuvedlo 6{NB}% lidí",
+          v4, [
+              {"mark": {"type": "bar", "cornerRadiusEnd": 2},
+               "encoding": {"x": x4, "xOffset": off4, "y": y4, "color": barva4}},
+              {"mark": {"type": "text", "baseline": "bottom", "dy": -4, "fontSize": 12, "fontWeight": 700},
+               "encoding": {"x": x4, "xOffset": off4, "y": y4, "color": barva4, "text": {"field": "l"}}},
+              {"data": {"values": pasy},
+               "mark": {"type": "bar", "width": {"band": 1}, "color": INK, "opacity": 0},
+               "encoding": {"x": x4, "y": {"field": "top", "type": "quantitative", "scale": {"domain": [0, TOP4]}, "axis": None},
+                            "opacity": {"condition": {"param": "pas", "empty": False, "value": 0.06}, "value": 0},
+                            "tooltip": [{"field": "t_nadpis", "title": "Sčítání"}, {"field": "t_zeny", "title": "ženy"},
+                                        {"field": "t_muzi", "title": "muži"}]},
+               "params": [{"name": "pas", "select": {"type": "point", "on": "pointerover", "clear": "pointerout"}}]},
+          ], height=260,
+          source=f"ČSÚ, [Česko od roku 1989 v číslech, Tab. 01.03]({ZDROJ}) (sčítání lidu)")
+
 DATA.mkdir(exist_ok=True)
-for name, s in [("vysokoskolacky-a-vysokoskolaci", g1), ("struktura-vzdelani", g2), ("studenti-vs", g3)]:
+for name, s in [("vysokoskolacky-a-vysokoskolaci", g1), ("struktura-vzdelani", g2), ("studenti-vs", g3),
+                ("vs-pocty-zeny-muzi", g4)]:
     (DATA / f"{name}.json").write_text(json.dumps(s, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (HERE / "vystup.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
 print("\n".join(l for l in log if l.startswith("GRAF")))
