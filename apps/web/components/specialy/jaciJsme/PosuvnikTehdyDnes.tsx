@@ -1,8 +1,8 @@
 'use client';
 
-// Posuvník mezi dvěma stavy pruhového grafu (1989 × dnes): při tažení se pruhy plynule přelijí
-// z hodnot tehdy na dnešní, barva přechází z šedomodré (tehdy) do karmínové (dnes), velký rok
-// ukazuje, ke kterému stavu má graf blíž. Tlačítka 1989 / dnes stav přehrají animací.
+// Přepínač mezi dvěma stavy pruhového grafu (1989 × dnes): dvě výrazná tlačítka s roky, po kliknutí
+// se pruhy animací přelijí do hodnot vybraného roku a barva přejde z šedomodré (tehdy) do karmínové (dnes).
+// Kateřina 17. 11. 2026: posuvník byl zbytečný prvek, stačí přepínač roků (název komponenty zůstal).
 // Data = JSON ve složce článku (`dataFile`), scope.jaciJsmeData (lib/articleData.ts).
 // Formát: typ PosuvnikData níže; vzor: …-1989-a-dnes/_data_pipeline/05_interaktivni.py.
 
@@ -79,35 +79,20 @@ export default function PosuvnikTehdyDnes({ data, dataFile, title, subtitle, sou
       ? ` (${p.rok_tehdy ?? pT} → ${p.rok_dnes ?? pD})`
       : '';
 
-  const tlac = (aktivni: boolean): CSSProperties => ({
-    fontFamily: FONT, fontSize: 15, fontWeight: 700, minHeight: 40, padding: '6px 14px', borderRadius: 4,
-    cursor: 'pointer', border: `2px solid ${aktivni ? INK : '#c9c9bd'}`, background: aktivni ? '#d4d4c8' : 'transparent', color: INK,
+  const tlac = (aktivni: boolean, barvaRoku: string, radius: string): CSSProperties => ({
+    flex: '1 1 0', fontFamily: FONT_PLEX, fontSize: 28, fontWeight: 700, lineHeight: 1, minHeight: 56, padding: '10px 18px',
+    borderRadius: radius, cursor: aktivni ? 'default' : 'pointer', border: `2px solid ${barvaRoku}`,
+    background: aktivni ? barvaRoku : 'transparent', color: aktivni ? '#ffffff' : barvaRoku,
+    transition: 'background 200ms, color 200ms', fontVariantNumeric: 'tabular-nums',
   });
 
   return (
     <ChartCard title={title ?? data.title} subtitle={subtitle ?? data.subtitle} source={source ?? data.zdroj}>
       <div style={{ fontFamily: FONT, color: INK }}>
-        {/* Velký rok: prolnutí popisku tehdy a dnes */}
-        <div aria-hidden style={{ position: 'relative', height: 58, fontFamily: FONT_PLEX, fontWeight: 700, fontSize: 52, lineHeight: '58px' }}>
-          <span style={{ position: 'absolute', left: 0, top: 0, color: TEHDY, opacity: 1 - t }}>{pT}</span>
-          <span style={{ position: 'absolute', left: 0, top: 0, color: DNES, opacity: t }}>{pD}</span>
-        </div>
-
-        {/* Ovládání */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '6px 0 16px' }}>
-          <button type="button" onClick={() => prehraj(0)} style={tlac(t < 0.5)} aria-label={`Ukázat stav ${pT}`}>{pT}</button>
-          <input
-            type="range"
-            min={0}
-            max={1000}
-            step={1}
-            value={Math.round(t * 1000)}
-            aria-label={`Posunout graf mezi ${pT} a ${pD}`}
-            aria-valuetext={stav}
-            onChange={(e) => { if (anim.current) cancelAnimationFrame(anim.current); setT(Number(e.target.value) / 1000); }}
-            style={{ flex: '1 1 auto', minWidth: 0, height: 32, accentColor: barva, cursor: 'pointer' }}
-          />
-          <button type="button" onClick={() => prehraj(1)} style={tlac(t >= 0.5)} aria-label={`Ukázat stav ${pD}`}>{pD}</button>
+        {/* Přepínač roků: dvě výrazná tlačítka, aktivní plné v barvě svého roku */}
+        <div role="group" aria-label="Vyberte rok" style={{ display: 'flex', gap: 0, margin: '4px 0 18px', maxWidth: 360 }}>
+          <button type="button" onClick={() => prehraj(0)} style={tlac(t < 0.5, TEHDY, '6px 0 0 6px')} aria-pressed={t < 0.5}>{pT}</button>
+          <button type="button" onClick={() => prehraj(1)} style={tlac(t >= 0.5, DNES, '0 6px 6px 0')} aria-pressed={t >= 0.5}>{pD}</button>
         </div>
 
         {/* Pruhy */}

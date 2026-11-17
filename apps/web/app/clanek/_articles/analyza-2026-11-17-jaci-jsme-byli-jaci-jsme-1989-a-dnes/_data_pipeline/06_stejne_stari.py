@@ -348,7 +348,7 @@ def main():
     DATA_OUT.mkdir(exist_ok=True)
     stejne = {
         "title": "Dnešní třicátníci mají častěji vysokou školu a méně často jsou v manželství",
-        "subtitle": "Lidé ve věku 30–39 let při sčítání 1991 a 2021, podíl v %. Posuňte jezdcem z roku 1991 do roku 2021.",
+        "subtitle": "Lidé ve věku 30–39 let při sčítání 1991 a 2021, podíl v %. Přepněte rok tlačítkem.",
         "jednotka": "%",
         "max": 100,
         "desetinna": 1,

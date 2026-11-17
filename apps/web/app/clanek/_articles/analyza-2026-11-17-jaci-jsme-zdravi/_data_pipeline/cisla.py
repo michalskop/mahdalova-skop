@@ -97,6 +97,8 @@ R = {
     "obeh_mkn10": radek("0101", "IX. Nemoci oběhové soustavy"),
     "infarkt_mkn9": radek("0101", "Akutní infarkt myokardu (410)"),
     "infarkt_mkn10": radek("0101", "Akutní infarkt myokardu (I21"),
+    "dych_mkn9": radek("0101", "VIII. Nemoci ústrojí dýchacího"),
+    "dych_mkn10": radek("0101", "X. Nemoci dýchací soustavy"),
     "sebevrazdy_mkn9": radek("0101", "Sebevraždy a sebepoškození"),
     "sebevrazdy_mkn10": radek("0101", "Úmyslné sebepoškození"),
     "pocet_obyvatel_tis": radek("0101", "Počet obyvatel"),
@@ -121,6 +123,7 @@ R = {
 R["novotvary"] = spoj(R["novotvary_mkn9"], R["novotvary_mkn10"])
 R["obeh"] = spoj(R["obeh_mkn9"], R["obeh_mkn10"])
 R["infarkt"] = spoj(R["infarkt_mkn9"], R["infarkt_mkn10"])
+R["dych"] = spoj(R["dych_mkn9"], R["dych_mkn10"])
 R["sebevrazdy"] = spoj(R["sebevrazdy_mkn9"], R["sebevrazdy_mkn10"])
 assert max(R["obeh_mkn9"]) == 1993 and min(R["obeh_mkn10"]) == 1994
 assert R["pivo"][1989] == 151 and R["cigarety"][1989] == 1776
@@ -186,7 +189,7 @@ log("")
 log("== PŘÍČINY SMRTI (MKN-9 do 1993, MKN-10 od 1994) ==")
 Zm = R["zemreli"]
 posl = max(R["obeh"])
-for k, nazev in [("obeh", "oběhová soustava"), ("novotvary", "novotvary"), ("infarkt", "akutní infarkt"), ("sebevrazdy", "sebevraždy")]:
+for k, nazev in [("obeh", "oběhová soustava"), ("novotvary", "novotvary"), ("infarkt", "akutní infarkt"), ("sebevrazdy", "sebevraždy"), ("dych", "dýchací soustava")]:
     s = R[k]
     log(f"{nazev}: 1989 {s[1989]:.0f} ({100 * s[1989] / Zm[1989]:.1f} % zemřelých) → {posl} {s[posl]:.0f} ({100 * s[posl] / Zm[posl]:.1f} %); "
         f"šev 1993 {s[1993]:.0f} / 1994 {s[1994]:.0f}")
@@ -198,6 +201,9 @@ O, I = R["obeh"], R["infarkt"]
 log(f"oběhová: úbytek 1989→{posl} o {O[1989] - O[posl]:.0f} úmrtí ({100 * (1 - O[posl] / O[1989]):.0f} %)")
 log(f"infarkt: 1994 {I[1994]:.0f} → {posl} {I[posl]:.0f} (jen MKN-10, pokles o {100 * (1 - I[posl] / I[1994]):.0f} %)")
 log(f"infarkt: 1989 {I[1989]:.0f} → {posl} {I[posl]:.0f} (přes šev, pokles o {100 * (1 - I[posl] / I[1989]):.0f} %)")
+D_ = R["dych"]
+log(f"dýchací soustava: 1989 {D_[1989]:.0f} → {posl} {D_[posl]:.0f} (+{100 * (D_[posl] / D_[1989] - 1):.0f} %), "
+    f"maximum {max(D_, key=D_.get)} = {max(D_.values()):.0f}; 2019 {D_[2019]:.0f}")
 rok_nad = [y for y in O if R["novotvary"][y] > O[y]]
 log(f"roky, kdy nádory zabily víc lidí než oběhová soustava: {rok_nad or 'žádný'}")
 log(f"oběhová / novotvary {posl}: {O[posl] / R['novotvary'][posl]:.2f}; 1989: {O[1989] / R['novotvary'][1989]:.2f}")

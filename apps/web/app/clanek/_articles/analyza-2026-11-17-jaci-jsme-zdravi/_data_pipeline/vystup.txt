@@ -50,12 +50,14 @@ oběhová soustava: 1989 71842 (56.2 % zemřelých) → 2024 42611 (38.0 %); še
 novotvary: 1989 28007 (21.9 % zemřelých) → 2024 28064 (25.0 %); šev 1993 28102 / 1994 28327
 akutní infarkt: 1989 17244 (13.5 % zemřelých) → 2024 2575 (2.3 %); šev 1993 16323 / 1994 14834
 sebevraždy: 1989 1912 (1.5 % zemřelých) → 2024 1561 (1.4 %); šev 1993 1917 / 1994 1872
+dýchací soustava: 1989 6027 (4.7 % zemřelých) → 2024 8680 (7.7 %); šev 1993 4808 / 1994 4636
 podíl lidí 65+: 1989 12.5 %, 2024 20.7 %, 2025 20.8 %
 oběhová 1989→2000: 71842 → 58192 (−19 %)
 zemřelí celkem 1989 127747, 2024 112211
 oběhová: úbytek 1989→2024 o 29231 úmrtí (41 %)
 infarkt: 1994 14834 → 2024 2575 (jen MKN-10, pokles o 83 %)
 infarkt: 1989 17244 → 2024 2575 (přes šev, pokles o 85 %)
+dýchací soustava: 1989 6027 → 2024 8680 (+44 %), maximum 2024 = 8680; 2019 8192
 roky, kdy nádory zabily víc lidí než oběhová soustava: žádný
 oběhová / novotvary 2024: 1.52; 1989: 2.57
 sebevraždy 1989: 1912, ≈ 18.5 na 100 000 obyvatel (průměr stavů k 31. 12.)
@@ -81,12 +83,3 @@ alkohol_cisty_lih: 1989 8.20 l → 2024 8.85 l; maximum 2007 = 10.40; změna +8 
 cigarety: 1989 1776 ks → 2020 1894 ks (poslední rok s údajem; 2021–2023 „-“, 2024 „.“); maximum 1997 = 2354
 cigarety 2020 v krabičkách po 20: 95 (1989: 89); denně 5.2 ks na obyvatele (1989: 4.9)
 pivo v půllitrech: 1989 302, 2024 261
-
-== GRAFY ==
-G1 dožití muži 68.1393371006 75.7075451827 2014 74.0931411952 77.492443162 ženy 75.4629650588 83.1945822813
-G2 příčiny oběh 71842.0 42611.0 −40.7 % nádory 28007.0 28064.0 infarkt 17244.0 2575.0
-G3 piktogram pivo 1989 151.0 15 ikon → 2024 130.52 13 ikon
-G3 piktogram vino 1989 13.5 14 ikon → 2024 19.45 19 ikon
-G3 piktogram lihoviny 1989 6.3 6 ikon → 2024 6.05 6 ikon
-G3 piktogram cigarety 1989 1776.0 18 ikon → 2020 1894.0 19 ikon
-G3 změny pivo −13.6 % víno +44.1 %

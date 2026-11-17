@@ -85,7 +85,7 @@ for nazev, d, pozn in POSUVNIK:
 roky_dnes = sorted({p["rok_dnes"] for p in polozky})
 uloz("posuvnik-podily.json", {
     "title": "Česko zestárlo a přestalo spěchat k oltáři",
-    "subtitle": "Podíl v %; posuňte jezdcem z roku 1989 do dneška. Víra podle sčítání 1991 a 2021.",
+    "subtitle": "Podíl v %; přepněte rok tlačítkem. Víra podle sčítání 1991 a 2021.",
     "jednotka": "%",
     "max": 100,
     "desetinna": 1,
