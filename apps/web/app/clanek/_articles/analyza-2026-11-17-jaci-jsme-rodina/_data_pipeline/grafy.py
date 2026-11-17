@@ -90,7 +90,7 @@ nar = {y: v / 1000 for y, v in C["narozeni"].items()}
 sn = {y: v / 1000 for y, v in C["snatky"].items()}
 v1 = rada("Živě narozené děti", nar, 1, " tis.") + rada("Sňatky", sn, 1, " tis.")
 yd, yv = (0, 150), (0, 40, 80, 120)
-g1 = base(f"Dětí ubylo ve dvou vlnách: {{v 90. letech|{BLUE}}} a {{po roce 2021|{CRIMSON}}}",
+g1 = base(f"Dětí ubylo ve dvou vlnách: v {{90. letech|{BLUE}}} a po roce {{2021|{CRIMSON}}}",
           "Živě narozené děti a sňatky za rok v tisících, 1989–2025",
           ZDROJ_0101,
           pas(1990, 1999, BLUE, "1990–1999", 148) + pas(2021, 2025, CRIMSON, "2021–25", 148) + [

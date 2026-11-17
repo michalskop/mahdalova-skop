@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Dětí ubylo ve dvou vlnách: {v 90. letech|#6267a3} a {po roce 2021|#de1743}",
+    "text": "Dětí ubylo ve dvou vlnách: v {90. letech|#6267a3} a po roce {2021|#de1743}",
     "subtitle": "Živě narozené děti a sňatky za rok v tisících, 1989–2025"
   },
   "width": "container",
