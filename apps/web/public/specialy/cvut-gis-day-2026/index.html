@@ -56,11 +56,15 @@ h2 em{font-style:normal;color:var(--brand)}
 
 /* citát */
 .quote{background:var(--ink);color:#fff}
-.quote blockquote{margin:0;font:600 clamp(36px,5.4vw,72px)/1.08 var(--sans);letter-spacing:-.01em}
+.quote blockquote{margin:0;font:600 clamp(32px,4.4vw,60px)/1.08 var(--sans);letter-spacing:-.01em}
+.quote p{margin:16px 0 0}
 .quote blockquote::before{content:"„";color:var(--brand)}
 .quote blockquote::after{content:"“";color:var(--brand)}
 .quote p{color:#c9cbe6;font-size:21px;max-width:760px;margin-top:28px}
 .quote .note{color:#9da1d0}
+.citace{list-style:none;padding:0;margin:26px 0 0;font:500 clamp(22px,2.2vw,30px)/1.3 var(--sans);color:#ffb3c0}
+.citace li{margin-bottom:6px}
+.nums2{grid-template-columns:repeat(2,1fr)}
 
 /* scrolly */
 .scrolly{position:relative;padding:0 24px}
@@ -165,6 +169,20 @@ h2 em{font-style:normal;color:var(--brand)}
   </div>
 </section>
 
+<!-- 1b · PROČ NA GIS DAY -->
+<section class="slide" id="proc-gis">
+  <div class="wrap">
+    <span class="kicker">Proč volby na&nbsp;GIS Day</span>
+    <h2>GIS: informace, které mají své <em>místo na&nbsp;mapě</em></h2>
+    <p class="lead">Geographic Information System, zjednodušeně: máte nějaké informace a&nbsp;jedna jejich část je mapa. Volby jsou přesně takové. 14&nbsp;711 okrsků, každý na&nbsp;svém místě.</p>
+    <div class="cards">
+      <div class="card"><div class="n">1</div><h3>Sčítání má geografii</h3><p>Malé vesnice na&nbsp;Vysočině a&nbsp;ve&nbsp;středních Čechách jsou sečtené hned. Praha naskakuje až na&nbsp;konci. Na&nbsp;mapě je to vidět.</p></div>
+      <div class="card"><div class="n">2</div><h3>Predikce má geografii</h3><p>Když je sečtená polovina malých vesnic, jejich hlasy beru dvakrát. Když je sečtené 1&nbsp;% Prahy, beru je stokrát. To je ten princip v&nbsp;nejjednodušší podobě.</p></div>
+      <div class="card"><div class="n">3</div><h3>Proto víme dřív</h3><p>Výsledek se dá odhadnout dlouho předtím, než se sečte Praha. A&nbsp;volební studio se může bavit o&nbsp;reálných scénářích místo spekulací.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- 2 · TAK, JAK TO ZNÁTE -->
 <section class="slide" id="sloupce">
   <div class="wrap">
@@ -180,7 +198,26 @@ h2 em{font-style:normal;color:var(--brand)}
   <div class="narrow">
     <blockquote>Počkejme, až se sečtou velká města.</blockquote>
     <p>Všichni vědí, že s&nbsp;přibývajícími výsledky z&nbsp;velkých měst ANO slábne a&nbsp;Spolu, STAN a&nbsp;Piráti sílí. Jenže velká města se nesčítají později. Sčítají všichni od&nbsp;14&nbsp;hodin, jen velké okrsky to dělají déle.</p>
-    <p class="note">Proč? Podívejme se na&nbsp;mapu.</p>
+    <ul class="citace">
+      <li>„Nemám křišťálovou kouli.“</li>
+      <li>„Nevíme, jak to dopadne.“</li>
+      <li>„Je sečteno teprve málo hlasů.“</li>
+    </ul>
+    <p>Autentické citace z&nbsp;volebních studií. Zaznívají v&nbsp;nejsledovanější chvíli celého večera, kdy už se dá mluvit o&nbsp;tom, co reálně nastane.</p>
+  </div>
+</section>
+
+<!-- 3b · POČASÍ -->
+<section class="slide" id="pocasi">
+  <div class="wrap">
+    <span class="kicker">Přirovnání</span>
+    <h2>V&nbsp;5 ráno je 5&nbsp;°C. <em>Bude tak celý den?</em></h2>
+    <div class="nums nums2">
+      <div class="num"><b>5:00</b><span>Vyrážíte do&nbsp;práce, venku je 5&nbsp;°C. Berete si čepici.</span></div>
+      <div class="num"><b>14:00</b><span>Nikdo nečeká, že bude pořád 5&nbsp;°C. Odpoledne bude tepleji, zvlášť když vysvitne slunce.</span></div>
+    </div>
+    <p class="lead" style="margin-top:28px">Na&nbsp;předpověď ČHMÚ se díváme a&nbsp;věříme jí, protože už se tolikrát osvědčila. Nikoho nepřekvapí, že v&nbsp;5 ráno víme, co bude ve&nbsp;2 odpoledne.</p>
+    <p class="lead">Průběžné sčítání je ranní teplota. Predikce je předpověď na&nbsp;celý den. Proč? Podívejme se na&nbsp;mapu.</p>
   </div>
 </section>
 
