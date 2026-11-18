@@ -189,7 +189,7 @@ h2 em{font-style:normal;color:var(--brand)}
 <section class="slide" id="sloupce">
   <div class="wrap">
     <span class="kicker">Volební noc v&nbsp;televizi</span>
-    <h2>Tohle znáte: <em>sloupce</em> a&nbsp;„sečteno 9&nbsp;% okrsků“</h2>
+    <h2 id="sloupce-h2">Tohle znáte: <em>sloupce</em> a&nbsp;„sečteno 7&nbsp;% okrsků“</h2>
     <p class="lead" id="sloupce-lead">Sněmovní volby 2025, sobota 4.&nbsp;října. Takhle vypadají průběžné výsledky krátce po&nbsp;uzavření místností.</p>
     <div id="sloupce-graf" style="margin-top:26px"></div>
   </div>
@@ -515,7 +515,8 @@ h2 em{font-style:normal;color:var(--brand)}
       el("rect",{x:n*cw+cw*.18,y:bh-40-h,width:cw*.64,height:h,fill:COL[k],rx:3},sv);
       const t=el("text",{x:n*cw+cw/2,y:bh-48-h,"text-anchor":"middle","font-size":26,"font-weight":700,fill:"#101432","font-family":"IBM Plex Sans"},sv);t.textContent=fmt(v)+" %";
       const l=el("text",{x:n*cw+cw/2,y:bh-12,"text-anchor":"middle","font-size":18,"font-weight":600,fill:"#101432","font-family":"IBM Plex Sans"},sv);l.textContent=NAZEV[k]||k;});
-    document.getElementById("sloupce-lead").innerHTML=`Sněmovní volby 2025, sobota 4.&nbsp;října, ${hhmm(S.t[j])}. Sečteno ${fmt(S.okrsky[j])}&nbsp;% okrsků.`;
+    document.getElementById("sloupce-lead").innerHTML=`Sněmovní volby 2025, sobota 4.&nbsp;října, ${hhmm(S.t[j])}, hodinu po&nbsp;uzavření místností. Sečteno ${fmt(S.okrsky[j])}&nbsp;% okrsků, ale jen ${fmt(S.hlasy[j])}&nbsp;% hlasů.`;
+    document.getElementById("sloupce-h2").innerHTML=`Tohle znáte: <em>sloupce</em> a&nbsp;„sečteno ${Math.round(S.okrsky[j])}&nbsp;% okrsků“`;
   } else {
     sb.innerHTML='<div class="missing">Sloupce průběžného sčítání doplníme z dat sčítání (data-scitani.js).</div>';
   }
