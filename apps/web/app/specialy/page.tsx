@@ -29,7 +29,7 @@ const TILES = [
     bg: '#101432',
     external: false,
     logo: 'flag',
-    coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/karta-v2.png',
+    coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/karta-v3.png',
   },
   {
     href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026',
