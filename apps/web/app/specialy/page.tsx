@@ -33,7 +33,7 @@ const TILES = [
     // Statická scrolly prezentace (apps/web/public/specialy/cvut-gis-day-2026/index.html), přednáška GIS Day FSv ČVUT 18. 11. 2026.
     // Záměrně jen tady, ne v karuselu na titulce (SpecialsHero). Umístění: hned před Komunální a senátní volby.
     href: '/specialy/cvut-gis-day-2026/',
-    title: 'Volební noc na mapě (GIS Day ČVUT 2026)',
+    title: 'Volební noc (v Česku volební odpoledne)',
     description: 'Velikost okrsků, pořadí sčítání a princip volební predikce',
     bg: '#101432',
     external: false,
