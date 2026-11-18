@@ -151,6 +151,22 @@ h2 em{font-style:normal;color:var(--brand)}
 .end .credits{font:400 14px/1.6 var(--sans);color:#9da1d0;margin-top:40px}
 .end .credits a{color:#fff}
 
+/* podpůrný banner (vzhled jako SupportBanner na webu) + QR na Stripe 199 Kč */
+.support{padding:28px 24px;scroll-snap-align:none}
+.support a{position:relative;display:flex;align-items:center;gap:28px;max-width:1180px;margin:0 auto;padding:22px 28px;background:#0d1438;border-radius:10px;overflow:hidden;text-decoration:none;color:#fff}
+.support a::before,.support a::after{content:"";position:absolute;left:0;width:100%;height:4px}
+.support a::before{top:0;background:linear-gradient(to right,#de1743 0%,#f76800 52%,#ffcf02 100%)}
+.support a::after{bottom:0;background:linear-gradient(to right,#ffcf02 0%,#f76800 48%,#de1743 100%)}
+.support .sb-brand{font:700 26px/1 "Roboto Slab",Georgia,serif;letter-spacing:-.02em;white-space:nowrap}
+.support .sb-brand b{color:#de1743}.support .sb-brand i{font-style:normal;color:#ffcf02}
+.support p{margin:0;flex:1;font:400 clamp(16px,1.5vw,20px)/1.4 var(--sans)}
+.support .sb-cta{flex:none;background:#f01952;border-radius:999px;padding:12px 26px;font:700 18px/1 "Roboto Slab",Georgia,serif;white-space:nowrap}
+.support .sb-qr{flex:none;background:#fff;border-radius:8px;padding:6px;text-align:center}
+.support .sb-qr img{width:clamp(96px,14vh,190px);height:clamp(96px,14vh,190px);display:block}
+.support .sb-qr span{display:block;font:600 11px/1.2 var(--sans);color:var(--ink);margin-top:2px}
+.end .qr-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:860px){.support a{flex-direction:column;align-items:flex-start;gap:14px;padding:20px 16px}}
+
 @media (max-width:860px){
   body{font-size:17px}
   .hero-grid{grid-template-columns:1fr}
@@ -343,6 +359,14 @@ h2 em{font-style:normal;color:var(--brand)}
   </div>
 </section>
 
+<!-- PODPORA 1 -->
+<div class="support"><a href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer" aria-label="Podpořit DataTimes přes Stripe">
+  <span class="sb-brand"><b>Data</b><i>Times</i></span>
+  <p>Veřejný prostor i&nbsp;politiku zaplavují hlouposti, fake news a&nbsp;propaganda. Pomozte nám šířit ověřená fakta a&nbsp;hledat kontext. Za&nbsp;cenu jednoho oběda.</p>
+  <span class="sb-cta">Jdu do toho</span>
+  <span class="sb-qr"><img src="https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/qr-podpora.svg" alt="QR kód: podpořit DataTimes (199 Kč)"><span>Podpořte nás</span></span>
+</a></div>
+
 <!-- 6 · KARTOGRAM -->
 <section class="slide" id="kartogram">
   <div class="wrap">
@@ -385,6 +409,14 @@ h2 em{font-style:normal;color:var(--brand)}
     <p class="note">Videa: Michal Škop &amp; Kateřina Mahdalová, DataTimes.cz. Data ČSÚ, průběžné dávky výsledků 4.&nbsp;10.&nbsp;2025. Kliknutím na&nbsp;video ho zastavíte.</p>
   </div>
 </section>
+
+<!-- PODPORA 2 -->
+<div class="support"><a href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer" aria-label="Podpořit DataTimes přes Stripe">
+  <span class="sb-brand"><b>Data</b><i>Times</i></span>
+  <p>Líbí se vám predikce, mapy a&nbsp;tahle videa? Podpořte naši práci. Za&nbsp;cenu jednoho oběda.</p>
+  <span class="sb-cta">Jdu do toho</span>
+  <span class="sb-qr"><img src="https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/qr-podpora.svg" alt="QR kód: podpořit DataTimes (199 Kč)"><span>Podpořte nás</span></span>
+</a></div>
 
 <!-- 8 · GRAF: SČÍTÁNÍ VS. PREDIKCE (scrolly) -->
 <section class="scrolly" id="prubeh">
@@ -442,7 +474,10 @@ h2 em{font-style:normal;color:var(--brand)}
       </ol>
       <p class="credits">Kateřina Mahdalová &amp; Michal Škop · <a href="https://www.mahdalova-skop.cz/">DataTimes.cz</a><br>Data: Český statistický úřad (volby.cz), predikce DataTimes.cz, vlastní výpočty.</p>
     </div>
-    <div class="hero-qr"><img src="https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/qr.svg" alt="QR kód na tuto stránku"><span>mahdalova-skop.cz/specialy/<br>cvut-gis-day-2026</span></div>
+    <div class="qr-pair">
+      <div class="hero-qr"><img src="https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/qr.svg" alt="QR kód na tuto stránku"><span>Celá prezentace</span></div>
+      <a class="hero-qr" href="https://buy.stripe.com/cNicN6damdlO7rY1x93ks0a" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:var(--ink)"><img src="https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/qr-podpora.svg" alt="QR kód: podpořit DataTimes (199 Kč)"><span>Podpořte nás</span></a>
+    </div>
   </div>
 </section>
 
