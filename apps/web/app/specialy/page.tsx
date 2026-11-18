@@ -21,17 +21,6 @@ const WHITE = '#ffffff';
 
 const TILES = [
   {
-    // Statická scrolly prezentace (apps/web/public/specialy/cvut-gis-day-2026/index.html), přednáška GIS Day FSv ČVUT 18. 11. 2026.
-    // Záměrně jen tady, ne v karuselu na titulce (SpecialsHero).
-    href: '/specialy/cvut-gis-day-2026/',
-    title: 'Volební noc na mapě (GIS Day ČVUT 2026)',
-    description: 'Velikost okrsků, pořadí sčítání a princip volební predikce',
-    bg: '#101432',
-    external: false,
-    logo: 'flag',
-    coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/karta-v5.png',
-  },
-  {
     href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026',
     title: 'Jací jsme byli, jací jsme',
     description: 'Česko 1989 × 2026 ve 13 kapitolách: od rodiny a zdraví po svobodu',
@@ -39,6 +28,17 @@ const TILES = [
     external: false,
     logo: 'flag',
     coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v2.png',
+  },
+  {
+    // Statická scrolly prezentace (apps/web/public/specialy/cvut-gis-day-2026/index.html), přednáška GIS Day FSv ČVUT 18. 11. 2026.
+    // Záměrně jen tady, ne v karuselu na titulce (SpecialsHero). Umístění: hned před Komunální a senátní volby.
+    href: '/specialy/cvut-gis-day-2026/',
+    title: 'Volební noc na mapě (GIS Day ČVUT 2026)',
+    description: 'Velikost okrsků, pořadí sčítání a princip volební predikce',
+    bg: '#101432',
+    external: false,
+    logo: 'flag',
+    coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/karta-v5.png',
   },
   {
     href: '/specialy/komunalni-a-senatni-volby-2026',
