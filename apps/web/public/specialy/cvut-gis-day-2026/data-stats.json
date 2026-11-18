@@ -1,0 +1,154 @@
+{
+  "zdroj": "ČSÚ, volby.cz – PS 2025, pst4.csv (PS2025data20251005_csv.zip); geometrie okrsků KV 2026",
+  "parovani": {
+    "okrsku_ps2025_bez_zahranici": 14711,
+    "sparovano_s_geometrii": 14543,
+    "nesparovano": 168,
+    "nesparovano_volicu": 82252,
+    "nesparovane_umisteny_do_teziste_obce": 163,
+    "nesparovane_bez_polohy": 5,
+    "polygony_2026_bez_dat_ps2025": 8
+  },
+  "cr": {
+    "okrsku": 14711,
+    "volicu": 8215662,
+    "median_volicu": 544.0,
+    "prumer_volicu": 558.5,
+    "odevzdane_obalky": 5657267
+  },
+  "mesta": {
+    "Praha": {
+      "okrsku": 1119,
+      "volicu": 898829,
+      "median_volicu": 751.0,
+      "prumer_volicu": 803.2,
+      "odevzdane_obalky": 641352
+    },
+    "Brno": {
+      "okrsku": 352,
+      "volicu": 301281,
+      "median_volicu": 774.0,
+      "prumer_volicu": 855.9,
+      "odevzdane_obalky": 200597
+    },
+    "Ostrava": {
+      "okrsku": 268,
+      "volicu": 222190,
+      "median_volicu": 777.5,
+      "prumer_volicu": 829.1,
+      "odevzdane_obalky": 139093
+    },
+    "Pardubice": {
+      "okrsku": 92,
+      "volicu": 66266,
+      "median_volicu": 653.5,
+      "prumer_volicu": 720.3,
+      "odevzdane_obalky": 45393
+    }
+  },
+  "podle_velikosti_obce": {
+    "obce_pod_500_volicu": {
+      "okrsku": 4120,
+      "volicu": 893486,
+      "median_volicu": 194.5,
+      "prumer_volicu": 216.9,
+      "odevzdane_obalky": 650974
+    },
+    "obce_500_az_5000_volicu": {
+      "okrsku": 4519,
+      "volicu": 2750972,
+      "median_volicu": 611.0,
+      "prumer_volicu": 608.8,
+      "odevzdane_obalky": 1945645
+    },
+    "obce_nad_5000_volicu": {
+      "okrsku": 6072,
+      "volicu": 4571204,
+      "median_volicu": 731.0,
+      "prumer_volicu": 752.8,
+      "odevzdane_obalky": 3060648
+    }
+  },
+  "podil_volicu_v_okrscich_nad_1000": 0.2604,
+  "podil_okrsku_nad_1000": 0.1158,
+  "praha_vs_cr": {
+    "okrsku_praha": 1119,
+    "okrsku_cr": 14711,
+    "podil_okrsku": 0.0761,
+    "volicu_praha": 898829,
+    "volicu_cr": 8215662,
+    "podil_volicu": 0.1094
+  },
+  "nejvetsi_okrsky": [
+    {
+      "obec": "Brno-střed",
+      "mesto": "Brno",
+      "okrsek": "23001",
+      "volicu": 14449
+    },
+    {
+      "obec": "Brno-střed",
+      "mesto": "Brno",
+      "okrsek": "23018",
+      "volicu": 13386
+    },
+    {
+      "obec": "Ostrava-Jih",
+      "mesto": "Ostrava",
+      "okrsek": "11001",
+      "volicu": 4935
+    },
+    {
+      "obec": "Kladno",
+      "mesto": "Kladno",
+      "okrsek": "17",
+      "volicu": 4775
+    },
+    {
+      "obec": "Olomouc",
+      "mesto": "Olomouc",
+      "okrsek": "2",
+      "volicu": 3749
+    }
+  ],
+  "nejmensi_okrsky": [
+    {
+      "obec": "Vysoká Lhota",
+      "mesto": "Vysoká Lhota",
+      "okrsek": "1",
+      "volicu": 18
+    },
+    {
+      "obec": "Hořiněves",
+      "mesto": "Hořiněves",
+      "okrsek": "3",
+      "volicu": 20
+    },
+    {
+      "obec": "Zbiroh",
+      "mesto": "Zbiroh",
+      "okrsek": "3",
+      "volicu": 23
+    },
+    {
+      "obec": "Blatná",
+      "mesto": "Blatná",
+      "okrsek": "11",
+      "volicu": 24
+    },
+    {
+      "obec": "Hřebečníky",
+      "mesto": "Hřebečníky",
+      "okrsek": "2",
+      "volicu": 25
+    }
+  ],
+  "tridy_mapy_velikost": [
+    "do 149",
+    "150–299",
+    "300–499",
+    "500–749",
+    "750–999",
+    "1 000 a víc"
+  ]
+}
