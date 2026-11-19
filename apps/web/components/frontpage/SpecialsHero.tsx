@@ -90,6 +90,8 @@ const TILES = [
   { href: '/specialy/jaci-jsme-byli-jaci-jsme-1989-2026', title: 'Jací jsme byli, jací jsme', bg: '#101432', external: false, logoType: 'flag', coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v4.png', roky: true },
   { href: '/specialy/data-pro-budouci-premierku', title: 'Data pro budoucí premiérku', bg: '#ff3f30', external: false, logoType: 'dpbp', coverImage: '/images/specials/data-pro-budouci-premierku.svg' },
   { href: '/specialy/svobodna-media', title: 'Svobodná média', bg: '#812840', external: false, logoType: 'media', coverImage: '/images/specials/svobodna-media.svg' },
+  // statická scrolly prezentace z přednášky GIS Day FSv ČVUT 18. 11. 2026 (apps/web/public/specialy/cvut-gis-day-2026/)
+  { href: '/specialy/cvut-gis-day-2026/', title: 'Volební noc (v Česku volební odpoledne)', bg: '#101432', external: false, logoType: 'flag', coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/karta-v5.png' },
   { href: '/specialy/komunalni-a-senatni-volby-2026', title: 'Komunální a senátní volby 2026', description: 'Vše podstatné o letošních volbách, data & kontext, Volební kalkulačky, analýzy, predikce', bg: '#101432', external: false, logoType: 'vk', coverImage: '/images/specials/volby-2026.svg?v=2026-10-14' },
   { href: '/specialy/klima', title: 'Data o klimatu', bg: 'linear-gradient(135deg, #2a3f04, #639e0a)', external: false, logoType: 'klima', coverImage: '/images/specials/klima.svg' },
   { href: '/specialy/investigace', title: 'M & Š investigace', bg: '#351040', external: false, logoType: 'lupa', coverImage: '/images/specials/investigace.svg' },

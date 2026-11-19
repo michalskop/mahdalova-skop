@@ -8,7 +8,7 @@
 <meta property="og:title" content="Volební noc (v Česku volební odpoledne)">
 <meta property="og:description" content="Velikost okrsků, pořadí sčítání a princip volební predikce. GIS Day 2026, FSv ČVUT.">
 <meta property="og:url" content="https://www.mahdalova-skop.cz/specialy/cvut-gis-day-2026/">
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap&subset=latin-ext" rel="stylesheet">
@@ -27,7 +27,12 @@ a{color:var(--brand)}
 
 /* pevné prvky: značka, postup, QR */
 .brandbar{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 20px;font:600 13px/1 var(--sans);letter-spacing:.02em;color:var(--ink);background:linear-gradient(var(--bg) 60%,transparent);pointer-events:none}
-.brandbar .dot{width:10px;height:10px;border-radius:50%;background:var(--brand)}
+.brandbar a{pointer-events:auto;color:var(--ink);text-decoration:none}
+.brandbar .home{display:inline-flex;align-items:center;gap:8px;font-weight:700}
+.brandbar .home img{display:block}
+.brandbar .home-link{margin-left:auto;font-weight:500;color:var(--muted)}
+.brandbar a:hover{color:var(--brand)}
+@media (max-width:860px){.brandbar .sub{display:none}}
 .brandbar .sub{font-weight:400;color:var(--muted)}
 .progress{position:fixed;top:0;left:0;height:3px;background:var(--brand);z-index:50;width:0}
 /* QR v rohu roste s výškou obrazovky (na plátně je čitelný ze sálu); Q = QR přes celou obrazovku */
@@ -187,7 +192,7 @@ h2 em{font-style:normal;color:var(--brand)}
 </head>
 <body>
 <div class="progress" id="progress"></div>
-<div class="brandbar"><span class="dot"></span>DataTimes.cz <span class="sub">· Mahdalová &amp; Škop · GIS Day 2026, FSv ČVUT</span></div>
+<div class="brandbar"><a class="home" href="https://www.mahdalova-skop.cz/" title="Na úvodní stránku DataTimes.cz"><img src="/favicon.svg" alt="" width="20" height="20">DataTimes.cz</a> <span class="sub">· Mahdalová &amp; Škop · GIS Day 2026, FSv ČVUT</span><a class="home-link" href="https://www.mahdalova-skop.cz/specialy">Všechny speciály →</a></div>
 <div id="qr-full" role="dialog" aria-label="QR kód přes celou obrazovku"><img src="https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/qr.svg" alt="QR kód na tuto stránku"><p>Celá prezentace: mahdalova-skop.cz/specialy/cvut-gis-day-2026</p></div>
 <a class="qr" href="#start" title="Zvětšit QR kód (klávesa Q)"><img src="https://media.datatimes.org/datatimes-cz/articles/2026/11/cvut-gis-day-2026/qr.svg" alt="QR kód: mahdalova-skop.cz/specialy/cvut-gis-day-2026"><span>Celá prezentace<br><i>mahdalova-skop.cz</i></span></a>
 

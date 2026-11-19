@@ -3,6 +3,7 @@ import { Box, Group, Stack, Title, Paper, SimpleGrid, Container } from '@mantine
 import type { Metadata } from 'next';
 import { Arrow } from '@repo/ui/components/Arrow';
 import SupportBanner from '@/components/common/SupportBanner';
+import DlazdiceSpecialu from '@/components/specialy/jaciJsme/DlazdiceSpecialu';
 
 export const metadata: Metadata = {
   title: 'Speciály',
@@ -27,11 +28,13 @@ const TILES = [
     bg: '#101432',
     external: false,
     logo: 'flag',
-    coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v2.png',
+    // stejná dlaždice jako v karuselu na titulce (SpecialsHero): dlazdice-v4 + animované letopočty
+    coverImage: 'https://media.datatimes.org/datatimes-cz/articles/2026/11/jaci-jsme-byli-jaci-jsme-1989-2026/dlazdice-v4.png',
+    roky: true,
   },
   {
     // Statická scrolly prezentace (apps/web/public/specialy/cvut-gis-day-2026/index.html), přednáška GIS Day FSv ČVUT 18. 11. 2026.
-    // Záměrně jen tady, ne v karuselu na titulce (SpecialsHero). Umístění: hned před Komunální a senátní volby.
+    // Je i v karuselu na titulce (SpecialsHero), tam mezi Svobodnými médii a Komunálními volbami.
     href: '/specialy/cvut-gis-day-2026/',
     title: 'Volební noc (v Česku volební odpoledne)',
     description: 'Velikost okrsků, pořadí sčítání a princip volební predikce',
@@ -122,7 +125,7 @@ function renderSpecialTitle(title: string) {
 }
 
 /* ── Tile ─────────────────────────────────────────────────────────── */
-function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES[0]) {
+function SpecialPageTile({ href, title, bg, external, coverImage, roky }: typeof TILES[number] & { roky?: boolean }) {
   return (
     <a
       href={href}
@@ -139,12 +142,15 @@ function SpecialPageTile({ href, title, bg, external, coverImage }: typeof TILES
         background: bg,
         transition: 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         cursor: 'pointer',
+        containerType: 'inline-size',
       }}
     >
       {coverImage && (
         <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
       )}
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 50%, transparent 100%)' }} />
+      {/* Speciál 1989 × 2026: animované letopočty jako v karuselu na titulce */}
+      {roky && <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}><DlazdiceSpecialu /></div>}
       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 20px 18px', minHeight: 72, display: 'flex', alignItems: 'flex-start' }}>
         <Title order={3} style={{
           color: WHITE,
